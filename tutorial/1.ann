@@ -1,0 +1,18 @@
+T1	Character 37 41	bull
+T2	Place 59 65	meadow
+T3	Sound_Effect 46 53	feeding
+E1	Sound_Effect:T3 CausedBy:T1 HappensIn:T2
+T4	Character 488 491	Ann
+A1	Gender T4 Female
+A2	Age T4 Young
+T5	Character 509 513	Bill
+A3	Gender T5 Male
+A4	Age T5 Young
+T6	Place 540 544	road
+T7	Sound_Effect 525 532	playing
+E2	Sound_Effect:T7 CausedBy:T4 CausedBy2:T5 HappensIn:T6
+T8	Sound_Effect 863 872	flew open
+E3	Sound_Effect:T8 CausedBy:T9
+T9	Object 851 862	cellar-door
+T10	Sound_Effect 880 893	booming sound
+E4	Sound_Effect:T10 CausedBy:E3

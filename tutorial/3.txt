@@ -1,0 +1,14 @@
+Thank you for following the tutorial. Some final words:
+
+1. Changes are automatically saved, no need for you to do anything.
+
+2. Some things might be annotated already, you can skip them, or you can correct them if you think they are wrong.
+
+3. Every annotation supports Notes (double click them), which is a handy way to add "comments" for other annotators to see.
+
+4. Make sure you have "autorefresh" on. Go to the top of the window -> Options, and select Autorefresh under "Network options". This lets you see the changes by other people at real time.
+
+Next step is to go to the top of the window, choose Collections and choose from your user's directory to annotate. There are 36 short fables in each directory.
+
+
+

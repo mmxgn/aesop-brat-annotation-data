@@ -1,0 +1,31 @@
+In this part we learn how to annotate character lines and anaphora.
+
+This is actually quite simple. You annotate the relevant text as a Character_Line, then annotate the verb that shows that someone says something as "Says",
+
+Finally you drag from the "Says" entity to the Character and the Character line.
+
+Try it now:
+
+
+The boy said: "I do not know, Sir!"
+
+
+The boy said: "I do not know, Sir!"
+
+
+There are cases that instead of the character's or object's or even place's name, we have anaphora such as "he", "it", or "there". 
+
+To annotate as such, annotate the anaphora text as either character, object, or place (depending what the original entity it refers to is).
+
+Then click and drag from it to the entity it refers to.
+
+
+Annabelle was kind, but she was not naive. She said: "I have to refuse".
+
+
+Annabelle was kind, but she was not naive. She said: "I have to refuse".
+
+
+Please proceed to the next and final part of the tutorial.
+
+

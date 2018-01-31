@@ -1,0 +1,16 @@
+T1	Character 326 329	boy
+A1	Gender T1 Male
+A2	Age T1 Young
+T2	Character_Line 337 356	I do not know, Sir!
+T3	Says 330 334	said
+E1	Says:T3 WHO:T1 WHAT:T2
+T4	Character 730 739	Annabelle
+A3	Gender T4 Female
+T5	Character 754 757	she
+A4	Gender T5 Female
+*	RefersToCharacter T5 T4 T6
+T6	Character 773 776	She
+A5	Gender T6 Female
+T7	Says 777 781	said
+E2	Says:T7 WHO:T6 WHAT:T8
+T8	Character_Line 784 800	I have to refuse

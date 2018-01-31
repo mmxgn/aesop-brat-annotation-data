@@ -1,0 +1,56 @@
+Welcome to the "Aesop's fable audible annotation project".
+
+You will be asked to annotate some text, please take a little while
+
+to read this tutorial. You can go forward or backward using the blue arrows
+
+at the top of the page. Note that you need to be logged in. If you are not, please do so now.
+
+
+The goal is to annotate text that points to events that produce sounds, and the agents
+
+that contribute to these events.
+
+
+Let's start with a simple example:
+
+
+A bull was feeding in a meadow.
+
+
+Here we have a Character: "bull", and a Place: "meadow". To annotate them
+
+as such, select the text "bull" below and select Character from the pop up window. 
+
+Do the same for "meadow" and Place. Try that to the text below:
+
+
+A bull was feeding in a meadow.
+
+
+Characters can also have age and gender. To annotate as such, annotate the character, and choose
+
+the correct attributes from the pop up window:
+
+
+Oliver Twist was a young boy.
+
+
+Oliver Twist was a young boy.
+
+
+Note: If you do a mistake, you can double click an annotation, choose "delete" and
+
+redo it. You can also annotate Objects as such:
+
+
+In the old cellar, there was a rusty door.
+
+
+In the old cellar, there was a rusty door.
+
+
+Please press "next" from the arrows at the top to proceed to the next part.
+
+
+

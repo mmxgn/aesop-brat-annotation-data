@@ -1,0 +1,45 @@
+Let's revisit our first example:
+
+
+A bull was feeding in a meadow.
+
+
+We expect feeding to produce some kind of sound. To annotate that, we select "feeding", and then "Sound_Effect".
+
+Then we click and drag the mouse from the annotation of "feeding" to the annotation of "bull". We
+
+do the same from "feeding" to "meadow". Try that below:
+
+
+A bull was feeding in a meadow.
+
+
+Note that there might be multiple agents (objects or characters) contributing to a sound.
+
+
+There was a boy named Ann, and a boy named Bill. They were playing on the road with their ball.
+
+
+There was a boy named Ann, and a boy named Bill. They were playing on the road with their ball.
+
+
+In case there is a description of a sound that modifies or adds to the perceived sound, annotate it as "Sound_Effect"
+
+as well and then link the two "Sound_Effect" entities together.
+
+
+The cellar-door flew open with a booming sound.
+
+
+The cellar-door flew open with a booming sound.
+
+
+
+Please proceed to the next document.
+
+
+
+
+
+
+
