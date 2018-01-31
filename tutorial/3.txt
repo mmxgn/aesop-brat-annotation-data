@@ -1,4 +1,20 @@
-Thank you for following the tutorial. Some final words:
+Annotating all the characters/places/lines/sound effects in the stories
+
+can be quite cumbersome. At this point I only need annotations relating to
+
+sound. A good strategy for fast annotations is:
+
+* Figure out where character lines are and annotate them.
+
+* Figure out where possible sound effects are and annotate them.
+
+* Go "backwards" annotating Characters and Places relating directly to the above
+
+* Link the characters and places with the sound effects and character lines.
+
+
+
+Thank you for following the tutorial, some final words:
 
 1. Changes are automatically saved, no need for you to do anything.
 
