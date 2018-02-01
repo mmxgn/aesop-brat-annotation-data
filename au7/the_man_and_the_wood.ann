@@ -1,0 +1,8 @@
+T1	Character 224 227	man
+A1	Gender T1 Male
+T2	Sound_Effect 281 288	cutting
+E1	Sound_Effect:T2 CausedBy:T1 CausedBy2:E3
+T3	Sound_Effect 251 254	axe
+E2	Sound_Effect:T3 CausedBy:E1
+T4	Sound_Effect 294 298	tree
+E3	Sound_Effect:T4 

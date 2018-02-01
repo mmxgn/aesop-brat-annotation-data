@@ -1,0 +1,4 @@
+T1	Character 120 123	man
+A1	Gender T1 Male
+T2	Sound_Effect 359 363	blow
+E1	Sound_Effect:T2 

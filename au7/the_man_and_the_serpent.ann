@@ -1,0 +1,34 @@
+T1	Character 44 51	serpent
+T2	Sound_Effect 77 80	bit
+E1	Sound_Effect:T2 CausedBy:T1
+T3	Character 16 19	son
+A1	Gender T3 Male
+A2	Age T3 Young
+T4	Sound_Effect 32 36	trod
+E2	Sound_Effect:T4 CausedBy:T3
+T5	Sound_Effect 130 133	axe
+E3	Sound_Effect:T5 
+T6	Sound_Effect 159 162	cut
+E4	Sound_Effect:T6 CausedBy:E3 CausedBy2:T7
+T7	Character 105 111	father
+A3	Gender T7 Male
+A4	Age T7 Old
+T8	Sound_Effect 216 224	stinging
+E5	Sound_Effect:T8 CausedBy:T1
+T9	Character 2 12	countryman
+A5	Gender T9 Male
+A6	Age T9 Old
+*	RefersToCharacter T7 T9 T10
+T10	Character 293 299	farmer
+A7	Gender T10 Male
+A8	Age T10 Old
+T11	Character_Line 414 439	let 's forget and forgive
+T12	Says 403 407	said
+E6	Says:T12 WHAT:T11 WHO:T10 WHAT2:T13 WHAT3:T14
+T13	Character_Line 440 559	perhaps you were right to punish my son and take vengeance on my cattle but surely i was right in trying to revenge him
+T14	Character_Line 560 625	now that we are both satisfied why should not we be friends again
+T15	Says 632 636	said
+E7	Says:T15 WHAT:T16 WHAT2:T17 WHAT3:T18 WHO:T1
+T16	Character_Line 626 631	no no
+T17	Character_Line 649 669	take away your gifts
+T18	Character_Line 670 738	you can never forget the death of your son nor i the loss of my tail

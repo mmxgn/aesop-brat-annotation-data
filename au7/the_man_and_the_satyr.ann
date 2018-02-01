@@ -1,0 +1,24 @@
+T1	Character 2 5	man
+A1	Gender T1 Male
+T2	Place 28 32	wood
+T4	Sound_Effect 329 336	blowing
+E2	Sound_Effect:T4 CausedBy:T1 HappensIn:T2
+T3	Character_Line 345 368	what do you do that for
+T5	Says 369 373	said
+E1	Says:T5 WHAT:T3 WHO:T6 HappensIn:T2
+T6	Character 378 383	satyr
+A2	Gender T6 Male
+T7	Character_Line 384 415	my hands are numb with the cold
+T8	Says 416 420	said
+E3	Says:T8 WHAT:T7 WHO:T1 WHAT2:T9 HappensIn:T2
+T9	Character_Line 429 453	and my breath warms them
+T10	Sound_Effect 616 623	blowing
+E4	Sound_Effect:T10 CausedBy:T1 HappensIn:T11
+T11	Place 494 498	home
+T12	Character_Line 632 659	and what do you do that for
+T13	Says 660 664	said
+E5	Says:T13 WHAT:T12 WHO:T6 HappensIn:T11
+T14	Character_Line 726 736	out you go
+T15	Says 737 741	said
+E6	Says:T15 WHO:T6 HappensIn:T11 WHAT:T14 WHAT2:T16
+T16	Character_Line 752 834	i will have nought to do with a man who can blow hot and cold with the same breath
