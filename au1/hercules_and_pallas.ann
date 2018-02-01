@@ -1,0 +1,17 @@
+T1	Sound_Effect 171 176	blows
+E1	Sound_Effect:T1 CausedBy:E2 HappensIn:T4
+T2	Sound_Effect 186 190	club
+E2	Sound_Effect:T2 CausedBy:T3
+T3	Character 0 8	hercules
+A1	Gender T3 Male
+T4	Place 40 47	roadway
+T5	Sound_Effect 394 399	blows
+E3	Sound_Effect:T5 CausedBy:T3 HappensIn:T4
+T6	Character_Line 610 623	stop hercules
+T7	Character 574 580	pallas
+A2	Gender T7 Female
+T8	Says 624 628	said
+E4	Says:T8 WHAT:T6 WHO:T7 WHAT2:T9 WHAT3:T11 WHAT4:T10
+T9	Character_Line 633 649	cease your blows
+T10	Character_Line 650 679	the monster 's name is strife
+T11	Character_Line 680 745	let it alone and it will soon become as little as it was at first
