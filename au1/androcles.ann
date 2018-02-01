@@ -1,0 +1,14 @@
+T2	Character 14 23	androcles
+A1	Gender T2 Male
+T1	Sound_Effect 29 36	escaped
+E1	Sound_Effect:T1 
+T4	Place 69 75	forest
+T5	Sound_Effect 86 95	wandering
+E3	Sound_Effect:T5 
+T3	Sound_Effect 57 61	fled
+E2	Sound_Effect:T3 
+T6	Sound_Effect 139 146	moaning
+E4	Sound_Effect:T6 
+T7	Sound_Effect 151 159	groaning
+E5	Sound_Effect:T7 
+T8	Character 123 127	lion
