@@ -20,7 +20,10 @@ if __name__ == "__main__":
     # Parse senments to EnhancedDependencies++ and OpeniE
     # Convert to problog predicates
     def sanitize(text):
-        return text.replace(' ', '_').replace('\'','')
+        if text == 'ROOT':
+            return root
+        else:
+            return text.replace(' ', '_').replace('\'','')
 
     # Knowledge base to store
     KB = []
@@ -34,7 +37,7 @@ if __name__ == "__main__":
 
         for dep in output['sentences'][0]['enhancedPlusPlusDependencies']:
             KB.append(
-                '{}({},{},{})'.format('root' if dep['dep'] == 'ROOT' else dep['dep'], sent_no, dep['governorGloss'], dep['dependentGloss'])
+                '{}({},{},{})'.format(sanitize(dep['dep']), sent_no, dep['governorGloss'], dep['dependentGloss'])
             )
         for rel in output['sentences'][0]['openie']:
             KB.append(
