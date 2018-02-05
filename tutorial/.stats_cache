@@ -1,11 +1,11 @@
 (lp1
 (lp2
-I4
+I12
 aI0
-aI0
-aI0
+aI8
+aI2
 aa(lp3
-I0
+I8
 aI0
 aI0
 aI0
@@ -15,8 +15,8 @@ aI1
 aI2
 aI0
 aa(lp5
-I6
+I0
 aI0
-aI4
-aI1
+aI0
+aI0
 aa.

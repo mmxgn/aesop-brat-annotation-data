@@ -1,0 +1,30 @@
+T1	Character_Line 135 182	you fools what is a donkey for but to ride upon
+T2	Says 130 134	said
+E1	Says:T2 WHO:T3 WHAT:T1
+T3	Character 103 113	countryman
+T4	Character_Line 300 362	see that lazy youngster he lets his father walk while he rides
+T5	Character 279 294	men one of whom
+T6	Says 295 299	said
+E2	Says:T6 WHO:T5 WHAT:T4
+T7	Character 467 484	women one of whom
+A1	Gender T7 Female
+T8	Character_Line 503 566	shame on that lazy lout to let his poor little son trudge along
+T9	Says 485 489	said
+E3	Says:T9 WHO:T7 WHAT:T8
+T10	Place 694 698	town
+T11	Character 707 717	passers-by
+T12	Sound_Effect 727 731	jeer
+E4	Sound_Effect:T12 CausedBy:T11 HappensIn:T10
+T13	Says 811 815	said
+E5	Says:T13 WHO:T11 WHAT:T14
+T14	Character_Line 816 910	are n't you ashamed of yourself for overloading that poor donkey with you and your hulking son
+T15	Sound_Effect 1013 1021	cut down
+E6	Sound_Effect:T15 CausedBy:T17 CausedBy2:T16 HappensIn:T10
+T16	Character 915 918	man
+T17	Character 923 926	boy
+A2	Gender T17 Male
+A3	Age T17 Young
+A4	Gender T16 Male
+A5	Age T16 Old
+T18	Sound_Effect 1138 1146	laughter
+E7	Sound_Effect:T18 HappensIn:T10

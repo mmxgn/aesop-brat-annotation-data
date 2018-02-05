@@ -1,14 +1,27 @@
 T2	Character 14 23	androcles
 A1	Gender T2 Male
-T1	Sound_Effect 29 36	escaped
-E1	Sound_Effect:T1 
 T4	Place 69 75	forest
 T5	Sound_Effect 86 95	wandering
-E3	Sound_Effect:T5 
+E3	Sound_Effect:T5 CausedBy:T2 HappensIn:T4
 T3	Sound_Effect 57 61	fled
-E2	Sound_Effect:T3 
+E2	Sound_Effect:T3 CausedBy:T2 HappensIn:T4
 T6	Sound_Effect 139 146	moaning
-E4	Sound_Effect:T6 
+E4	Sound_Effect:T6 CausedBy:T8 HappensIn:T4
 T7	Sound_Effect 151 159	groaning
-E5	Sound_Effect:T7 
+E5	Sound_Effect:T7 CausedBy:T8 HappensIn:T4
 T8	Character 123 127	lion
+T1	Sound_Effect 512 516	lick
+E1	Sound_Effect:T1 CausedBy:T9 HappensIn:T4
+T9	Character 477 481	lion
+*	RefersToCharacter T9 T8
+T10	Sound_Effect 428 438	pulled out
+E6	Sound_Effect:T10 CausedBy:T2 HappensIn:T4
+T11	Sound_Effect 989 997	bounding
+E7	Sound_Effect:T11 CausedBy:T9 HappensIn:T13
+T12	Sound_Effect 1002 1009	roaring
+E8	Sound_Effect:T12 CausedBy:T9 HappensIn:T13
+T13	Place 931 936	arena
+T14	Sound_Effect 1119 1125	licked
+E9	Sound_Effect:T14 CausedBy:T9 HappensIn:T13 CausedBy2:E10
+T15	Sound_Effect 1143 1155	friendly dog
+E10	Sound_Effect:T15 

@@ -4,9 +4,3 @@ T3	Character 903 915	Oliver Twist
 A1	Gender T3 Male
 A2	Age T3 Young
 T4	Object 1132 1142	rusty door
-T5	Character 724 728	bull
-T6	Place 746 752	meadow
-T7	Character 935 947	Oliver Twist
-A3	Gender T7 Male
-A4	Age T7 Young
-T8	Object 1177 1187	rusty door

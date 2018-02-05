@@ -1,0 +1,17 @@
+T1	Character 167 178	young mouse
+A1	Age T1 Young
+A2	Gender T1 Male
+T2	Says 277 281	said
+E1	Says:T2 WHAT:T3 WHO:T1 WHAT2:T4 WHAT3:T5 WHAT4:T6 WHAT5:T7
+T3	Character_Line 258 276	you will all agree
+T4	Character_Line 285 382	that our chief danger consists in the sly and treacherous manner in which the enemy approaches us
+T5	Character_Line 383 466	now if we could receive some signal of her approach we could easily escape from her
+T6	Character_Line 467 578	i venture therefore to propose that a small bell be procured and attached by a ribbon round the neck of the cat
+T7	Character_Line 579 692	by this means we should always know when she was about and could easily retire while she was in the neighbourhood
+T8	Sound_Effect 724 732	applause
+E2	Sound_Effect:T8 
+T9	Character 742 751	old mouse
+T10	Character_Line 768 816	that is all very well but who is to bell the cat
+T11	Says 763 767	said
+E3	Says:T11 WHO:T9 WHAT:T10
+A3	Age T9 Old

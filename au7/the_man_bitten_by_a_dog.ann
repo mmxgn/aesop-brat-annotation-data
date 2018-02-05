@@ -1,0 +1,13 @@
+T1	Character 87 93	friend
+T2	Says 134 138	said
+E1	Says:T2 WHAT:T3 WHO:T1
+T3	Character_Line 139 265	if you would be cured take a piece of bread and dip it in the blood from your wound and go and give it to the dog that bit you
+T4	Character 270 273	man
+A1	Gender T4 Male
+T5	Says 321 325	said
+E2	Says:T5 WHO:T4 WHAT:T7 WHAT2:T8 WHAT3:T9
+T6	Sound_Effect 294 301	laughed
+E3	Sound_Effect:T6 CausedBy:T4
+T7	Character_Line 326 329	why
+T8	Character_Line 330 411	if i should do so it would be as if i should beg every dog in the town to bite me
+T9	Character_Line 412 489	benefits bestowed upon the evil-disposed increase their means of injuring you

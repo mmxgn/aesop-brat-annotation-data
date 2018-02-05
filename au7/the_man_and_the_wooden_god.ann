@@ -1,4 +1,10 @@
 T1	Character 120 123	man
 A1	Gender T1 Male
 T2	Sound_Effect 359 363	blow
-E1	Sound_Effect:T2 
+E1	Sound_Effect:T2 CausedBy:T1
+T4	Object 400 404	idol
+T5	Sound_Effect 405 410	broke
+E3	Sound_Effect:T5 CausedBy:T4
+T3	Object 459 464	coins
+T6	Sound_Effect 465 471	flying
+E2	Sound_Effect:T6 CausedBy:T3

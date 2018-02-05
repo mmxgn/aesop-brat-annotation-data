@@ -1,0 +1,12 @@
+T1	Character 16 19	man
+A1	Gender T1 Male
+T2	Sound_Effect 47 54	pursued
+E1	Sound_Effect:T2 CausedBy:T1
+T3	Sound_Effect 184 191	climbed
+E2	Sound_Effect:T3 CausedBy:T1
+T4	Sound_Effect 177 183	afraid
+E3	Sound_Effect:T4 CausedBy:T1
+T5	Sound_Effect 279 286	alarmed
+E4	Sound_Effect:T5 CausedBy:T1
+T6	Sound_Effect 290 318	threw himself into the river
+E5	Sound_Effect:T6 CausedBy:T1
