@@ -123,7 +123,7 @@ det(4,dream,a).
 amod(4,dream,lying).
 case(4,father,of).
 nmod:poss(4,father,my).
-nmod:'s(4,dream,father).
+nmod:s(4,dream,father).
 dobj(4,saw,father).
 case(4,father,'s).
 ref(4,father,which).

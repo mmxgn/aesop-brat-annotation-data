@@ -21,7 +21,7 @@ if __name__ == "__main__":
     # Convert to problog predicates
     def sanitize(text):
         if text == 'ROOT':
-            return root
+            return 'root'
         else:
             return text.replace(' ', '_').replace('\'','')
 
