@@ -18,9 +18,9 @@ case(0,child,like).
 det(0,child,a).
 nmod:like(0,utter,child).
 % relations.
-utter_like(0,hare,child).
-sob(0,hare,very_much).
-sob(0,hare,much).
+aos(0,utter_like,hare,child).
+aos(0,sob,hare,very_much).
+aos(0,sob,hare,much).
 %% a sparrow upbraided her and said.
 % dependencies.
 root(1,root,upbraid).
@@ -31,7 +31,7 @@ dobj(1,upbraid,she).
 cc(1,upbraid,and).
 conj:and(1,upbraid,say).
 % relations.
-upbraid(1,sparrow,she).
+aos(1,upbraid,sparrow,she).
 %% where now is thy remarkable swiftness of foot.
 % dependencies.
 root(2,root,be).
@@ -71,9 +71,9 @@ ccomp(4,speak,kill).
 conj:and(4,seize,kill).
 dobj(4,kill,he).
 % relations.
-seize(4,hawk,he).
-kill(4,hawk,he).
-suddenly_seize(4,hawk,he).
+aos(4,seize,hawk,he).
+aos(4,kill,hawk,he).
+aos(4,suddenly_seize,hawk,he).
 %% the hare was comforted in her death and expiring said.
 % dependencies.
 root(5,root,say).
@@ -116,8 +116,8 @@ det(7,misfortune,a).
 amod(7,misfortune,similar).
 dobj(7,deplore,misfortune).
 % relations.
-exult_over(7,yourself,my_calamity).
-so_suppose(7,you,yourself_exult).
-so_suppose(7,you,yourself_exult_over_my_calamity).
-suppose(7,you,yourself_exult).
-suppose(7,you,yourself_exult_over_my_calamity).
+aos(7,exult_over,yourself,my_calamity).
+aos(7,so_suppose,you,yourself_exult).
+aos(7,so_suppose,you,yourself_exult_over_my_calamity).
+aos(7,suppose,you,yourself_exult).
+aos(7,suppose,you,yourself_exult_over_my_calamity).

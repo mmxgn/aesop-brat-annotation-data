@@ -21,9 +21,9 @@ case(0,axe,for).
 nmod:poss(0,axe,he).
 nmod:for(0,handle,axe).
 % relations.
-come_into(0,man,forest).
-ask(0,man,tree).
-handle_for(0,he,he_axe).
+aos(0,come_into,man,forest).
+aos(0,ask,man,tree).
+aos(0,handle_for,he,he_axe).
 %% the trees consented to his request and gave him a young ash-tree.
 % dependencies.
 root(1,root,consent).
@@ -40,10 +40,10 @@ det(1,ash-tree,a).
 amod(1,ash-tree,young).
 dobj(1,give,ash-tree).
 % relations.
-give(1,tree,he).
-consent_to(1,tree,he_request).
-give(1,tree,ash-tree).
-give(1,tree,young_ash-tree).
+aos(1,give,tree,he).
+aos(1,consent_to,tree,he_request).
+aos(1,give,tree,ash-tree).
+aos(1,give,tree,young_ash-tree).
 %% no sooner had the man fitted a new handle to his axe from it than he began to use it and quickly felled with his strokes the noblest giants of the forest.
 % dependencies.
 root(2,root,have).
@@ -82,10 +82,10 @@ case(2,forest,of).
 det(2,forest,the).
 nmod:of(2,giant,forest).
 % relations.
-handle_to(2,new,he_axe).
-fell_with(2,he,he_stroke).
-quickly_fell_with(2,he,he_stroke).
-use(2,he,it).
+aos(2,handle_to,new,he_axe).
+aos(2,fell_with,he,he_stroke).
+aos(2,quickly_fell_with,he,he_stroke).
+aos(2,use,he,it).
 %% an old oak lamenting when too late the destruction of his companions said to a neighboring cedar.
 % dependencies.
 root(3,root,oak).
@@ -106,12 +106,12 @@ det(3,cedar,a).
 amod(3,cedar,neighbor).
 nmod:to(3,say,cedar).
 % relations.
-say_to(3,destruction,cedar).
-late_say_to(3,destruction,cedar).
-say_to(3,destruction,neighbor_cedar).
-too_late_say_to(3,destruction,neighbor_cedar).
-late_say_to(3,destruction,neighbor_cedar).
-too_late_say_to(3,destruction,cedar).
+aos(3,say_to,destruction,cedar).
+aos(3,late_say_to,destruction,cedar).
+aos(3,say_to,destruction,neighbor_cedar).
+aos(3,too_late_say_to,destruction,neighbor_cedar).
+aos(3,late_say_to,destruction,neighbor_cedar).
+aos(3,too_late_say_to,destruction,cedar).
 %% the first step has lost us all.
 % dependencies.
 root(4,root,lose).
@@ -122,8 +122,8 @@ aux(4,lose,have).
 nsubj(4,all,we).
 xcomp(4,lose,all).
 % relations.
-have_lose(4,first_step,we_all).
-have_lose(4,step,we_all).
+aos(4,have_lose,first_step,we_all).
+aos(4,have_lose,step,we_all).
 %% if we had not given up the rights of the ash we might yet have retained our own privileges and have stood for ages.
 % dependencies.
 root(5,root,give).
@@ -152,4 +152,4 @@ conj:and(5,give,stand).
 case(5,age,for).
 nmod:for(5,stand,age).
 % relations.
-stand_for(5,we,age).
+aos(5,stand_for,we,age).

@@ -29,10 +29,10 @@ compound:prt(0,pick,up).
 nmod:poss(0,food,they).
 dobj(0,pick,food).
 % relations.
-pick_up(0,other_bird,they_food).
-pick_up(0,bird,they_food).
-sowing(0,countryman,hemp_seed).
-is_in(0,hemp_seed,field).
+aos(0,pick_up,other_bird,they_food).
+aos(0,pick_up,bird,they_food).
+aos(0,sowing,countryman,hemp_seed).
+aos(0,is_in,hemp_seed,field).
 %% beware of that man.
 % dependencies.
 root(1,root,beware).
@@ -70,7 +70,7 @@ nsubj(5,sowing,he).
 cop(5,sowing,be).
 acl:relcl(5,seed,sowing).
 % relations.
-be(5,he,sowing).
+aos(5,be,he,sowing).
 %% be careful to pick up every one of the seeds or else you will repent it.
 % dependencies.
 root(6,root,careful).
@@ -91,7 +91,7 @@ aux(6,repent,will).
 ccomp(6,careful,repent).
 dobj(6,repent,it).
 % relations.
-repent(6,you,it).
+aos(6,repent,you,it).
 %% the birds paid no heed to the swallow 's words and by and by the hemp grew up and was made into cord and of the cords nets were made and many a bird that had despised the swallow 's advice was caught in nets made out of that very hemp.
 % dependencies.
 root(7,root,pay).
@@ -153,8 +153,8 @@ det(7,very,that).
 nmod:of(7,make,very).
 nmod:to(7,heed,hemp).
 % relations.
-be(7,cord_net,make).
-heed_to(7,no,hemp).
+aos(7,be,cord_net,make).
+aos(7,heed_to,no,hemp).
 %% what did i tell you.
 % dependencies.
 root(8,root,tell).
@@ -163,11 +163,11 @@ aux(8,tell,do).
 nsubj(8,tell,i).
 dobj(8,tell,you).
 % relations.
-do_tell(8,i,you).
+aos(8,do_tell,i,you).
 %% said the swallow.
 % dependencies.
 root(9,root,say).
 dobj(9,say,the).
 nsubj(9,say,swallow).
 % relations.
-say(9,swallow,the).
+aos(9,say,swallow,the).

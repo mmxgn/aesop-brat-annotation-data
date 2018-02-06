@@ -9,9 +9,9 @@ case(0,jupiter,to).
 nmod:to(0,present,jupiter).
 acl(0,jupiter,say).
 % relations.
-present(0,oak,complaint).
-present_complaint_to(0,oak,jupiter).
-present_complaint_to(0,oak,jupiter_say).
+aos(0,present,oak,complaint).
+aos(0,present_complaint_to,oak,jupiter).
+aos(0,present_complaint_to,oak,jupiter_say).
 %% we bear for no purpose the burden of life as of all the trees that grow we are the most continually in peril of the axe.
 % dependencies.
 root(1,root,bear).
@@ -47,7 +47,7 @@ root(2,root,make).
 nsubj(2,make,jupiter).
 dobj(2,make,answer).
 % relations.
-make(2,jupiter,answer).
+aos(2,make,jupiter,answer).
 %% you have only to thank yourselves for the misfortunes to which you are exposed for if you did not make such excellent pillars and posts and prove yourselves so serviceable to the carpenters and the farmers the axe would not so frequently be laid to your roots.
 % dependencies.
 root(3,root,have).
@@ -104,10 +104,10 @@ case(3,root,to).
 nmod:poss(3,root,you).
 nmod:to(3,lay,root).
 % relations.
-prove(3,you,yourselve_so_serviceable).
-serviceable_to(3,yourselve,carpenter).
-prove(3,you,yourselve_serviceable_to_carpenter).
-prove(3,you,yourselve_so_serviceable_to_carpenter).
-thank(3,you,yourselve).
-prove(3,you,yourselve_serviceable).
-so_serviceable_to(3,yourselve,carpenter).
+aos(3,prove,you,yourselve_so_serviceable).
+aos(3,serviceable_to,yourselve,carpenter).
+aos(3,prove,you,yourselve_serviceable_to_carpenter).
+aos(3,prove,you,yourselve_so_serviceable_to_carpenter).
+aos(3,thank,you,yourselve).
+aos(3,prove,you,yourselve_serviceable).
+aos(3,so_serviceable_to,yourselve,carpenter).

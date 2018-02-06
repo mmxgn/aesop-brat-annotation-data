@@ -25,22 +25,22 @@ conj:and(0,neptune,house).
 case(0,minerva,by).
 nmod:agent(0,make,minerva).
 % relations.
-be_make_by(0,first_man,neptune).
-be(0,man,make_by_jupiter_by_minerva).
-be(0,man,make_by_neptune_by_minerva).
-be(0,first_man,make_by_jupiter_by_neptune_by_minerva).
-be_make_by(0,first_man,jupiter).
-be(0,first_man,make_by_jupiter_by_minerva).
-be_make_by(0,man,minerva).
-be_make_by(0,man,neptune).
-be(0,man,make_by_jupiter_by_neptune).
-be_make_by(0,man,jupiter).
-be(0,man,make).
-be(0,man,make_by_jupiter_by_neptune_by_minerva).
-be(0,first_man,make_by_jupiter_by_neptune).
-be_make_by(0,first_man,minerva).
-be(0,first_man,make).
-be(0,first_man,make_by_neptune_by_minerva).
+aos(0,be_make_by,first_man,neptune).
+aos(0,be,man,make_by_jupiter_by_minerva).
+aos(0,be,man,make_by_neptune_by_minerva).
+aos(0,be,first_man,make_by_jupiter_by_neptune_by_minerva).
+aos(0,be_make_by,first_man,jupiter).
+aos(0,be,first_man,make_by_jupiter_by_minerva).
+aos(0,be_make_by,man,minerva).
+aos(0,be_make_by,man,neptune).
+aos(0,be,man,make_by_jupiter_by_neptune).
+aos(0,be_make_by,man,jupiter).
+aos(0,be,man,make).
+aos(0,be,man,make_by_jupiter_by_neptune_by_minerva).
+aos(0,be,first_man,make_by_jupiter_by_neptune).
+aos(0,be_make_by,first_man,minerva).
+aos(0,be,first_man,make).
+aos(0,be,first_man,make_by_neptune_by_minerva).
 %% on the completion of their labors a dispute arose as to which had made the most perfect work.
 % dependencies.
 root(1,root,arise).
@@ -62,8 +62,8 @@ advmod(1,perfect,most).
 amod(1,work,perfect).
 dobj(1,make,work).
 % relations.
-arise_on(1,dispute,completion).
-arise_on(1,dispute,completion_of_they_labor).
+aos(1,arise_on,dispute,completion).
+aos(1,arise_on,dispute,completion_of_they_labor).
 %% they agreed to appoint momus as judge and to abide by his decision.
 % dependencies.
 root(2,root,agree).
@@ -81,7 +81,7 @@ case(2,decision,by).
 nmod:poss(2,decision,he).
 nmod:by(2,abide,decision).
 % relations.
-abide_by(2,momus,he_decision).
+aos(2,abide_by,momus,he_decision).
 %% momus however being very envious of the handicraft of each found fault with all.
 % dependencies.
 root(3,root,momus).
@@ -131,7 +131,7 @@ advmod(4,strike,where).
 mark(4,strike,to).
 xcomp(4,see,strike).
 % relations.
-horn_of(4,he,bull).
+aos(4,horn_of,he,bull).
 %% he then condemned the work of jupiter because he had not placed the heart of man on the outside that everyone might read the thoughts of the evil disposed and take precautions against the intended mischief.
 % dependencies.
 root(5,root,condemn).
@@ -173,7 +173,7 @@ det(5,mischief,the).
 amod(5,mischief,intended).
 nmod:against(5,take,mischief).
 % relations.
-heart_of(5,he,man).
+aos(5,heart_of,he,man).
 %% and lastly he inveighed against minerva because she had not contrived iron wheels in the foundation of her house so its inhabitants might more easily remove if a neighbor proved unpleasant.
 % dependencies.
 root(6,root,lastly).
@@ -208,11 +208,11 @@ nsubj(6,prove,neighbor).
 advcl:if(6,remove,prove).
 xcomp(6,prove,unpleasant).
 % relations.
-might_easily_remove(6,its_inhabitant,neighbor_prove).
-might_remove(6,its_inhabitant,neighbor_prove).
-prove(6,neighbor,unpleasant).
-might_more_easily_remove(6,its_inhabitant,neighbor_prove).
-inveigh_against(6,he,minerva).
+aos(6,might_easily_remove,its_inhabitant,neighbor_prove).
+aos(6,might_remove,its_inhabitant,neighbor_prove).
+aos(6,prove,neighbor,unpleasant).
+aos(6,might_more_easily_remove,its_inhabitant,neighbor_prove).
+aos(6,inveigh_against,he,minerva).
 %% jupiter indignant at such inveterate faultfinding drove him from his office of judge and expelled him from the mansions of olympus.
 % dependencies.
 root(7,root,drive).
@@ -238,11 +238,11 @@ nmod:from(7,expel,mansion).
 case(7,olympus,of).
 nmod:of(7,mansion,olympus).
 % relations.
-indignant_at(7,jupiter,inveterate_faultfinding).
-expel(7,jupiter,he).
-expel(7,jupiter_indignant,he).
-indignant_at(7,jupiter,such_inveterate_faultfinding).
-drive(7,jupiter_indignant,he).
-indignant_at(7,jupiter,such_faultfinding).
-indignant_at(7,jupiter,faultfinding).
-drive(7,jupiter,he).
+aos(7,indignant_at,jupiter,inveterate_faultfinding).
+aos(7,expel,jupiter,he).
+aos(7,expel,jupiter_indignant,he).
+aos(7,indignant_at,jupiter,such_inveterate_faultfinding).
+aos(7,drive,jupiter_indignant,he).
+aos(7,indignant_at,jupiter,such_faultfinding).
+aos(7,indignant_at,jupiter,faultfinding).
+aos(7,drive,jupiter,he).

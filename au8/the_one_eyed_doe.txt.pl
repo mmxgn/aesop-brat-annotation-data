@@ -35,14 +35,14 @@ nmod:poss(0,safety,she).
 amod(0,safety,greater).
 dobj(0,secure,safety).
 % relations.
-be_accustom(0,doe,graze).
-be_accustom(0,doe,graze_as).
-be(0,doe,accustom).
-graze(0,doe,she_possibly_could).
-graze_as(0,doe,she_possibly_could).
-graze(0,doe,she_could).
-graze_as(0,doe,she_could).
-is_in(0,one-eyed_doe,hope_secure).
+aos(0,be_accustom,doe,graze).
+aos(0,be_accustom,doe,graze_as).
+aos(0,be,doe,accustom).
+aos(0,graze,doe,she_possibly_could).
+aos(0,graze_as,doe,she_possibly_could).
+aos(0,graze,doe,she_could).
+aos(0,graze_as,doe,she_could).
+aos(0,is_in,one-eyed_doe,hope_secure).
 %% she turned her sound eye towards the land that she might get the earliest tidings of the approach of hunter or hound and her injured eye towards the sea from whence she entertained no anticipation of danger.
 % dependencies.
 root(1,root,turn).
@@ -85,18 +85,18 @@ dobj(1,entertain,anticipation).
 case(1,danger,of).
 nmod:of(1,anticipation,danger).
 % relations.
-get(1,she,earliest_tiding).
-get(1,she,earliest_tiding_of_approach).
-tiding_of(1,she,approach_of_hunter).
-tiding_of(1,she,approach).
-get(1,she,tiding_of_approach).
-earliest_tiding_of(1,she,approach).
-get(1,she,tiding_of_approach_of_hunter).
-earliest_tiding_of(1,she,approach_of_hunter).
-turn(1,she,she_sound_eye).
-get(1,she,earliest_tiding_of_approach_of_hunter).
-get(1,she,tiding).
-turn_towards(1,she,land).
+aos(1,get,she,earliest_tiding).
+aos(1,get,she,earliest_tiding_of_approach).
+aos(1,tiding_of,she,approach_of_hunter).
+aos(1,tiding_of,she,approach).
+aos(1,get,she,tiding_of_approach).
+aos(1,earliest_tiding_of,she,approach).
+aos(1,get,she,tiding_of_approach_of_hunter).
+aos(1,earliest_tiding_of,she,approach_of_hunter).
+aos(1,turn,she,she_sound_eye).
+aos(1,get,she,earliest_tiding_of_approach_of_hunter).
+aos(1,get,she,tiding).
+aos(1,turn_towards,she,land).
 %% some boatmen sailing by saw her and taking a successful aim mortally wounded her.
 % dependencies.
 root(2,root,wound).
@@ -115,7 +115,7 @@ dobj(2,take,aim).
 advmod(2,take,mortally).
 dobj(2,wound,she).
 % relations.
-wound(2,boatmen_sailing,she).
+aos(2,wound,boatmen_sailing,she).
 %% yielding up her last breath she gasped forth this lament.
 % dependencies.
 root(3,root,yield).

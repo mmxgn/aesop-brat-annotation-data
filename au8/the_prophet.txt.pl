@@ -49,16 +49,16 @@ auxpass(0,steal,be).
 ccomp(0,announce,steal).
 conj:and(0,break,steal).
 % relations.
-sit_in(0,wizard,marketplace).
-sit_in(0,wizard_fortune,marketplace).
-announce_to(0,person,he).
-be(0,he_goods,be_steal).
-be_tell(0,wizard,fortune).
-be(0,goods,be_steal).
-be(0,door,break).
-run_up_in(0,person,great_haste).
-be_break(0,door,open).
-run_up_in(0,person,haste).
+aos(0,sit_in,wizard,marketplace).
+aos(0,sit_in,wizard_fortune,marketplace).
+aos(0,announce_to,person,he).
+aos(0,be,he_goods,be_steal).
+aos(0,be_tell,wizard,fortune).
+aos(0,be,goods,be_steal).
+aos(0,be,door,break).
+aos(0,run_up_in,person,great_haste).
+aos(0,be_break,door,open).
+aos(0,run_up_in,person,haste).
 %% he sighed heavily and hastened away as fast as he could run.
 % dependencies.
 root(1,root,sigh).
@@ -75,11 +75,11 @@ nsubj(1,run,he).
 aux(1,run,could).
 advcl:as(1,hasten,run).
 % relations.
-hasten(1,he,he_could_run).
-hasten_fast(1,he,he_could_run).
-hasten_away_fast(1,he,he_could_run).
-hasten_as_fast(1,he,he_could_run).
-hasten_away_as_fast(1,he,he_could_run).
+aos(1,hasten,he,he_could_run).
+aos(1,hasten_fast,he,he_could_run).
+aos(1,hasten_away_fast,he,he_could_run).
+aos(1,hasten_as_fast,he,he_could_run).
+aos(1,hasten_away_as_fast,he,he_could_run).
 %% a neighbor saw him running and said.
 % dependencies.
 root(2,root,see).

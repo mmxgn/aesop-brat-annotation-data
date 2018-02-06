@@ -29,8 +29,8 @@ det(1,sun,the).
 nsubj(1,say,sun).
 conj:and(1,see,say).
 % relations.
-see(1,they,traveller).
-suddenly_see(1,they,traveller).
+aos(1,see,they,traveller).
+aos(1,suddenly_see,they,traveller).
 %% i see a way to decide our dispute.
 % dependencies.
 root(2,root,see).
@@ -93,16 +93,16 @@ case(5,traveller,upon).
 det(5,traveller,the).
 nmod:upon(5,blow,traveller).
 % relations.
-begin(5,wind,blow_upon_traveller).
-begin(5,wind,blow).
-begin(5,wind,blow_as_hard_upon_traveller).
-blow_as_hard_upon(5,wind,traveller).
-retire_behind(5,sun,cloud).
-begin(5,wind,blow_as_hard).
-blow_upon(5,wind,traveller).
-begin(5,wind,blow_hard).
-blow_hard_upon(5,wind,traveller).
-begin(5,wind,blow_hard_upon_traveller).
+aos(5,begin,wind,blow_upon_traveller).
+aos(5,begin,wind,blow).
+aos(5,begin,wind,blow_as_hard_upon_traveller).
+aos(5,blow_as_hard_upon,wind,traveller).
+aos(5,retire_behind,sun,cloud).
+aos(5,begin,wind,blow_as_hard).
+aos(5,blow_upon,wind,traveller).
+aos(5,begin,wind,blow_hard).
+aos(5,blow_hard_upon,wind,traveller).
+aos(5,begin,wind,blow_hard_upon_traveller).
 %% but the harder he blew the more closely did the traveller wrap his cloak round him till at last the wind had to give up in despair.
 % dependencies.
 root(6,root,blow).
@@ -164,4 +164,4 @@ nmod:poss(7,cloak,he).
 nmod:on(7,walk,cloak).
 case(7,cloak,on).
 % relations.
-is_in(7,shone,he_glory).
+aos(7,is_in,shone,he_glory).

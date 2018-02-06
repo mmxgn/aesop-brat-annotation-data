@@ -42,10 +42,10 @@ nsubj(1,catch,reed).
 acl:relcl(1,bird-limed,catch).
 dobj(1,catch,she).
 % relations.
-observe(1,fowler,she_staying).
-observe_and(1,fowler,she_staying).
-observe_long_and(1,fowler,she_staying).
-observe_so_long_and(1,fowler,she_staying).
+aos(1,observe,fowler,she_staying).
+aos(1,observe_and,fowler,she_staying).
+aos(1,observe_long_and,fowler,she_staying).
+aos(1,observe_so_long_and,fowler,she_staying).
 %% the thrush being at the point of death exclaimed.
 % dependencies.
 root(2,root,exclaim).
@@ -86,4 +86,4 @@ case(4,life,of).
 nmod:poss(4,life,my).
 nmod:of(4,deprive,life).
 % relations.
-have_deprive(4,i,myself).
+aos(4,have_deprive,i,myself).

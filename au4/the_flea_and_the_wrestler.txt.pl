@@ -25,17 +25,17 @@ nmod:upon(0,loudly,hercule).
 case(0,help,for).
 nmod:for(0,call,help).
 % relations.
-settle_upon(0,flea,bare_foot_of_wrestler).
-man(0,cause,call_loudly).
-man(0,cause,call).
-man(0,cause,call_loudly_upon_hercule_for_help).
-man(0,cause,call_loudly_for_help).
-man(0,cause,call_for_help).
-settle_upon(0,flea,bare_foot).
-settle_upon(0,flea,foot_of_wrestler).
-settle(0,flea,he).
-man(0,cause,call_loudly_upon_hercule).
-settle_upon(0,flea,foot).
+aos(0,settle_upon,flea,bare_foot_of_wrestler).
+aos(0,man,cause,call_loudly).
+aos(0,man,cause,call).
+aos(0,man,cause,call_loudly_upon_hercule_for_help).
+aos(0,man,cause,call_loudly_for_help).
+aos(0,man,cause,call_for_help).
+aos(0,settle_upon,flea,bare_foot).
+aos(0,settle_upon,flea,foot_of_wrestler).
+aos(0,settle,flea,he).
+aos(0,man,cause,call_loudly_upon_hercule).
+aos(0,settle_upon,flea,foot).
 %% when the flea a second time hopped upon his foot he groaned and said.
 % dependencies.
 root(1,root,hop).

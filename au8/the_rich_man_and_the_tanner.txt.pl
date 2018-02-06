@@ -47,7 +47,7 @@ aux(1,leave,would).
 ccomp(1,say,leave).
 advmod(1,leave,soon).
 % relations.
-put_off(1,tanner,he_departure).
+aos(1,put_off,tanner,he_departure).
 %% but as he still continued to stay as time went on the rich man became accustomed to the smell and feeling no manner of inconvenience made no further complaints.
 % dependencies.
 root(2,root,continue).
@@ -82,6 +82,6 @@ neg(2,complaint,no).
 amod(2,complaint,further).
 dobj(2,make,complaint).
 % relations.
-continue(2,he,stay).
-stay(2,he,time_go).
-still_continue(2,he,stay).
+aos(2,continue,he,stay).
+aos(2,stay,he,time_go).
+aos(2,still_continue,he,stay).

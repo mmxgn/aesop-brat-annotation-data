@@ -22,9 +22,9 @@ compound:prt(0,go,out).
 case(0,battle,to).
 nmod:to(0,go,battle).
 % relations.
-be(0,charger,send).
-infirmity_of(0,feel,age).
-be_send(0,charger,work).
+aos(0,be,charger,send).
+aos(0,infirmity_of,feel,age).
+aos(0,be_send,charger,work).
 %% but when he was compelled to grind instead of serving in the wars he bewailed his change of fortune and called to mind his former state saying.
 % dependencies.
 root(1,root,compel).
@@ -58,12 +58,12 @@ amod(1,state,former).
 dobj(1,mind,state).
 acl(1,state,say).
 % relations.
-grind(1,he,serve).
-bewail(1,he,he_change_of_fortune).
-be(1,he,compel).
-be_compel(1,he,grind).
-be(1,he,when_compel).
-bewail(1,he,he_change).
+aos(1,grind,he,serve).
+aos(1,bewail,he,he_change_of_fortune).
+aos(1,be,he,compel).
+aos(1,be_compel,he,grind).
+aos(1,be,he,when_compel).
+aos(1,bewail,he,he_change).
 %% ah.
 % dependencies.
 root(2,root,ah).
@@ -98,22 +98,22 @@ mark(3,groom,to).
 xcomp(3,go,groom).
 dobj(3,groom,I).
 % relations.
-go_campaigning(3,i,barb_to_tail).
-go(3,i,barb).
-be_barb_from(3,i,counter).
-go_campaigning(3,i,barb).
-go(3,i,barb_from_counter).
-groom(3,man,I).
-go_campaigning(3,i,barb_from_counter_to_tail).
-have(3,i,go).
-have_indeed(3,i,go).
-be(3,i,barb).
-go(3,i,barb_from_counter_to_tail).
-go(3,i,campaigning).
-be_barb_to(3,i,tail).
-go(3,i,barb_to_tail).
-go_campaigning(3,i,barb_from_counter).
-be(3,i,barb_from_counter_to_tail).
+aos(3,go_campaigning,i,barb_to_tail).
+aos(3,go,i,barb).
+aos(3,be_barb_from,i,counter).
+aos(3,go_campaigning,i,barb).
+aos(3,go,i,barb_from_counter).
+aos(3,groom,man,I).
+aos(3,go_campaigning,i,barb_from_counter_to_tail).
+aos(3,have,i,go).
+aos(3,have_indeed,i,go).
+aos(3,be,i,barb).
+aos(3,go,i,barb_from_counter_to_tail).
+aos(3,go,i,campaigning).
+aos(3,be_barb_to,i,tail).
+aos(3,go,i,barb_to_tail).
+aos(3,go_campaigning,i,barb_from_counter).
+aos(3,be,i,barb_from_counter_to_tail).
 %% and now i can not understand what ailed me to prefer the mill before the battle.
 % dependencies.
 root(4,root,now).
@@ -173,5 +173,5 @@ conj:and(7,up,downs).
 case(7,fortune,of).
 nmod:of(7,up,fortune).
 % relations.
-be(7,it,lot).
-be(7,it,common_lot).
+aos(7,be,it,lot).
+aos(7,be,it,common_lot).

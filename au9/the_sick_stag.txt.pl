@@ -16,14 +16,14 @@ case(0,pasture-ground,of).
 nmod:poss(0,pasture-ground,its).
 nmod:of(0,corner,pasture-ground).
 % relations.
-lay_down_in(0,stag,corner_of_its_pasture-ground).
-lay_down_in(0,sick_stag,corner_of_its_pasture-ground).
-lay_down_in(0,sick_stag,quiet_corner_of_its_pasture-ground).
-lay_down_in(0,stag,corner).
-lay_down_in(0,stag,quiet_corner_of_its_pasture-ground).
-lay_down_in(0,sick_stag,quiet_corner).
-lay_down_in(0,sick_stag,corner).
-lay_down_in(0,stag,quiet_corner).
+aos(0,lay_down_in,stag,corner_of_its_pasture-ground).
+aos(0,lay_down_in,sick_stag,corner_of_its_pasture-ground).
+aos(0,lay_down_in,sick_stag,quiet_corner_of_its_pasture-ground).
+aos(0,lay_down_in,stag,corner).
+aos(0,lay_down_in,stag,quiet_corner_of_its_pasture-ground).
+aos(0,lay_down_in,sick_stag,quiet_corner).
+aos(0,lay_down_in,sick_stag,corner).
+aos(0,lay_down_in,stag,quiet_corner).
 %% his companions came in great numbers to inquire after his health and each one helped himself to a share of the food which had been placed for his use.
 % dependencies.
 root(1,root,come).
@@ -59,9 +59,9 @@ case(1,use,for).
 nmod:poss(1,use,he).
 nmod:for(1,place,use).
 % relations.
-come_in(1,he_companion,number).
-come_in(1,he_companion,great_number).
-come(1,he_companion,inquire).
+aos(1,come_in,he_companion,number).
+aos(1,come_in,he_companion,great_number).
+aos(1,come,he_companion,inquire).
 %% so that he died not from his sickness but from the failure of the means of living.
 % dependencies.
 root(2,root,so).

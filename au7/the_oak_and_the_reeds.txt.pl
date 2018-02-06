@@ -16,12 +16,12 @@ case(0,stream,across).
 det(0,stream,a).
 nmod:across(0,throw,stream).
 % relations.
-be(0,large_oak,uproot).
-be_uproot_by(0,oak,wind).
-throw_across(0,large_oak,stream).
-be_uproot_by(0,large_oak,wind).
-be(0,oak,uproot).
-throw_across(0,oak,stream).
+aos(0,be,large_oak,uproot).
+aos(0,be_uproot_by,oak,wind).
+aos(0,throw_across,large_oak,stream).
+aos(0,be_uproot_by,large_oak,wind).
+aos(0,be,oak,uproot).
+aos(0,throw_across,oak,stream).
 %% it fell among some reeds which it thus addressed.
 % dependencies.
 root(1,root,fall).
@@ -34,7 +34,7 @@ nsubj(1,address,it).
 advmod(1,address,thus).
 ccomp(1,fall,address).
 % relations.
-fall_among(1,it,reed).
+aos(1,fall_among,it,reed).
 %% i wonder how you who are so light and weak are not entirely crushed by these strong winds.
 % dependencies.
 root(2,root,wonder).
@@ -80,9 +80,9 @@ nsubjpass(4,destroy,you).
 auxpass(4,destroy,be).
 conj:and(4,fight,destroy).
 % relations.
-be(4,you,consequently_destroy).
-be(4,you,destroy).
-fight_with(4,you,wind).
+aos(4,be,you,consequently_destroy).
+aos(4,be,you,destroy).
+aos(4,fight_with,you,wind).
 %% while we on the contrary bend before the least breath of air and therefore remain unbroken and escape.
 % dependencies.
 root(5,root,bend).
@@ -106,8 +106,8 @@ cc(5,unbroken,and).
 xcomp(5,remain,escape).
 conj:and(5,unbroken,escape).
 % relations.
-remain(5,we,unbroken).
-therefore_remain(5,we,unbroken).
+aos(5,remain,we,unbroken).
+aos(5,therefore_remain,we,unbroken).
 %% stoop to conquer.
 % dependencies.
 root(6,root,stoop).

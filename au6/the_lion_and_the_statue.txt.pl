@@ -19,16 +19,16 @@ conj:and(0,man,lion).
 case(0,general,in).
 advcl:in(0,discuss,general).
 % relations.
-be_discuss(0,lion,strength).
-be_discuss(0,lion,relative_strength).
-be_discuss(0,man,relative_strength).
-be_discuss(0,lion,strength_of_man).
-be_discuss_strength_in(0,man,general).
-be_discuss(0,man,strength_of_man).
-be_discuss(0,man,strength).
-be_discuss(0,man,relative_strength_of_man).
-be_discuss(0,lion,relative_strength_of_man).
-be_discuss_strength_in(0,lion,general).
+aos(0,be_discuss,lion,strength).
+aos(0,be_discuss,lion,relative_strength).
+aos(0,be_discuss,man,relative_strength).
+aos(0,be_discuss,lion,strength_of_man).
+aos(0,be_discuss_strength_in,man,general).
+aos(0,be_discuss,man,strength_of_man).
+aos(0,be_discuss,man,strength).
+aos(0,be_discuss,man,relative_strength_of_man).
+aos(0,be_discuss,lion,relative_strength_of_man).
+aos(0,be_discuss_strength_in,lion,general).
 %% the man contended that he and his fellows were stronger than lions by reason of their greater intelligence.
 % dependencies.
 root(1,root,contend).
@@ -51,26 +51,26 @@ nmod:poss(1,intelligence,they).
 amod(1,intelligence,greater).
 nmod:of(1,reason,intelligence).
 % relations.
-be_stronger_by(1,he_fellow,reason).
-be(1,he_fellow,stronger_than_lion_by_reason_of_they_greater_intelligence).
-be(1,he,stronger_by_reason).
-be(1,he,stronger_than_lion_by_reason_of_they_greater_intelligence).
-be(1,he,stronger_than_lion_by_reason).
-be(1,he,stronger_by_reason_of_they_greater_intelligence).
-be(1,he_fellow,stronger_than_lion_by_reason).
-be(1,he,stronger_than_lion_by_reason_of_they_intelligence).
-be_stronger_by(1,he,reason_of_they_greater_intelligence).
-be(1,he_fellow,stronger_than_lion_by_reason_of_they_intelligence).
-be_stronger_than(1,he_fellow,lion).
-be(1,he,stronger).
-be(1,he,stronger_by_reason_of_they_intelligence).
-be_stronger_by(1,he,reason).
-be(1,he,stronger_than_lion).
-be(1,he_fellow,stronger).
-be_stronger_by(1,he_fellow,reason_of_they_greater_intelligence).
-be_stronger_than(1,he,lion).
-be_stronger_by(1,he_fellow,reason_of_they_intelligence).
-be_stronger_by(1,he,reason_of_they_intelligence).
+aos(1,be_stronger_by,he_fellow,reason).
+aos(1,be,he_fellow,stronger_than_lion_by_reason_of_they_greater_intelligence).
+aos(1,be,he,stronger_by_reason).
+aos(1,be,he,stronger_than_lion_by_reason_of_they_greater_intelligence).
+aos(1,be,he,stronger_than_lion_by_reason).
+aos(1,be,he,stronger_by_reason_of_they_greater_intelligence).
+aos(1,be,he_fellow,stronger_than_lion_by_reason).
+aos(1,be,he,stronger_than_lion_by_reason_of_they_intelligence).
+aos(1,be_stronger_by,he,reason_of_they_greater_intelligence).
+aos(1,be,he_fellow,stronger_than_lion_by_reason_of_they_intelligence).
+aos(1,be_stronger_than,he_fellow,lion).
+aos(1,be,he,stronger).
+aos(1,be,he,stronger_by_reason_of_they_intelligence).
+aos(1,be_stronger_by,he,reason).
+aos(1,be,he,stronger_than_lion).
+aos(1,be,he_fellow,stronger).
+aos(1,be_stronger_by,he_fellow,reason_of_they_greater_intelligence).
+aos(1,be_stronger_than,he,lion).
+aos(1,be_stronger_by,he_fellow,reason_of_they_intelligence).
+aos(1,be_stronger_by,he,reason_of_they_intelligence).
 %% come now with me.
 % dependencies.
 root(2,root,come).
@@ -126,11 +126,11 @@ dobj(5,tear,mouth).
 case(5,two,in).
 nmod:in(5,tear,two).
 % relations.
-take(5,he,he).
-show(5,he,he_statue).
-show(5,he,he_statue_of_hercule).
-statue_of(5,he,hercule).
-tear(5,lion,he_mouth).
+aos(5,take,he,he).
+aos(5,show,he,he_statue).
+aos(5,show,he,he_statue_of_hercule).
+aos(5,statue_of,he,hercule).
+aos(5,tear,lion,he_mouth).
 %% that is all very well.
 % dependencies.
 root(6,root,be).

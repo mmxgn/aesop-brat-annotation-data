@@ -19,11 +19,11 @@ case(0,tooth,with).
 nmod:poss(0,tooth,they).
 nmod:with(0,piece,tooth).
 % relations.
-skin_of(0,find,lion).
-find(0,dog,skin).
-tear(0,dog,it).
-find(0,dog,skin_of_lion).
-is_with(0,piece,they_tooth).
+aos(0,skin_of,find,lion).
+aos(0,find,dog,skin).
+aos(0,tear,dog,it).
+aos(0,find,dog,skin_of_lion).
+aos(0,is_with,piece,they_tooth).
 %% a fox seeing them said.
 % dependencies.
 root(1,root,say).
@@ -53,6 +53,6 @@ case(2,tooth,than).
 nmod:poss(2,tooth,you).
 nmod:than(2,stronger,tooth).
 % relations.
-be_stronger_than(2,he_claw,you_tooth).
-be(2,lion,alive).
-be(2,he_claw,stronger).
+aos(2,be_stronger_than,he_claw,you_tooth).
+aos(2,be,lion,alive).
+aos(2,be,he_claw,stronger).

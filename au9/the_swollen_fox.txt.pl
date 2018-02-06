@@ -30,16 +30,16 @@ det(0,meal,a).
 amod(0,meal,hearty).
 dobj(0,make,meal).
 % relations.
-creep_into(0,hungry_fox,hole).
-leave_by(0,bread_meat,shepherd_hollow).
-make(0,hungry_fox,meal).
-make(0,fox,hearty_meal).
-is_in(0,shepherd,hollow_of_oak).
-make(0,fox,meal).
-make(0,hungry_fox,hearty_meal).
-creep_into(0,fox,hole).
-leave_by(0,bread_meat,shepherd).
-leave_by(0,bread_meat,shepherd_hollow_oak).
+aos(0,creep_into,hungry_fox,hole).
+aos(0,leave_by,bread_meat,shepherd_hollow).
+aos(0,make,hungry_fox,meal).
+aos(0,make,fox,hearty_meal).
+aos(0,is_in,shepherd,hollow_of_oak).
+aos(0,make,fox,meal).
+aos(0,make,hungry_fox,hearty_meal).
+aos(0,creep_into,fox,hole).
+aos(0,leave_by,bread_meat,shepherd).
+aos(0,leave_by,bread_meat,shepherd_hollow_oak).
 %% when he finished he was so full that he was not able to get out and began to groan and lament his fate.
 % dependencies.
 root(1,root,finish).
@@ -70,7 +70,7 @@ conj:and(1,groan,lament).
 nmod:poss(1,fate,he).
 dobj(1,lament,fate).
 % relations.
-begin(1,he,groan).
+aos(1,begin,he,groan).
 %% another fox passing by heard his cries and coming up inquired the cause of his complaining.
 % dependencies.
 root(2,root,inquire).
@@ -103,7 +103,7 @@ ccomp(3,happen,say).
 case(3,he,to).
 nmod:to(3,say,he).
 % relations.
-say_to(3,he,he).
+aos(3,say_to,he,he).
 %% ah you will have to remain there my friend until you become such as you were when you crept in and then you will easily get out.
 % dependencies.
 root(4,root,have).
@@ -135,9 +135,9 @@ advmod(4,get,easily).
 conj:and(4,have,get).
 compound:prt(4,get,out).
 % relations.
-become(4,you,you_be).
-ah_will_have(4,you,remain).
-ah_will_have(4,you,you_become).
-will_have(4,you,you_become).
-will_have(4,you,remain).
-remain(4,you,my_friend).
+aos(4,become,you,you_be).
+aos(4,ah_will_have,you,remain).
+aos(4,ah_will_have,you,you_become).
+aos(4,will_have,you,you_become).
+aos(4,will_have,you,remain).
+aos(4,remain,you,my_friend).

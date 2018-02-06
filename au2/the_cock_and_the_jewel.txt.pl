@@ -19,10 +19,10 @@ dobj(0,find,stone).
 cc(0,find,and).
 conj:and(0,find,exclaim).
 % relations.
-scratch_for(0,cock,food_himself).
-find(0,cock,precious_stone).
-find(0,cock,stone).
-scratch_for(0,cock,food).
+aos(0,scratch_for,cock,food_himself).
+aos(0,find,cock,precious_stone).
+aos(0,find,cock,stone).
+aos(0,scratch_for,cock,food).
 %% if your owner had found thee and not i he would have taken thee up and have set thee in thy first estate.
 % dependencies.
 root(1,root,find).
@@ -51,8 +51,8 @@ nmod:poss(1,estate,thy).
 amod(1,estate,first).
 nmod:in(1,set,estate).
 % relations.
-set(1,he,thee).
-have_find(1,you_owner,thee).
+aos(1,set,he,thee).
+aos(1,have_find,you_owner,thee).
 %% but i have found thee for no purpose.
 % dependencies.
 root(2,root,find).
@@ -80,5 +80,5 @@ case(3,world,in).
 det(3,world,the).
 nmod:in(3,jewel,world).
 % relations.
-would_have(3,i,one_barleycorn_than_jewel_in_world).
-would_rather_have(3,i,one_barleycorn_than_jewel_in_world).
+aos(3,would_have,i,one_barleycorn_than_jewel_in_world).
+aos(3,would_rather_have,i,one_barleycorn_than_jewel_in_world).

@@ -21,9 +21,9 @@ cc(0,egg,and).
 xcomp(0,find,glittering).
 conj:and(0,egg,glittering).
 % relations.
-find(0,countryman,egg).
-go_to(0,countryman,nest).
-go_to(0,countryman,nest_he_goose).
+aos(0,find,countryman,egg).
+aos(0,go_to,countryman,nest).
+aos(0,go_to,countryman,nest_he_goose).
 %% when he took it up it was as heavy as lead and he was going to throw it away because he thought a trick had been played upon him.
 % dependencies.
 root(1,root,take).
@@ -58,11 +58,11 @@ ccomp(1,think,play).
 case(1,he,upon).
 nmod:upon(1,play,he).
 % relations.
-be(1,it,heavy).
-throw_away(1,he,it).
-take(1,he,it).
-be_heavy_as(1,it,lead).
-throw(1,he,it).
+aos(1,be,it,heavy).
+aos(1,throw_away,he,it).
+aos(1,take,he,it).
+aos(1,be_heavy_as,it,lead).
+aos(1,throw,he,it).
 %% but he took it home on second thoughts and soon found to his delight that it was an egg of pure gold.
 % dependencies.
 root(2,root,take).
@@ -90,10 +90,10 @@ case(2,gold,of).
 amod(2,gold,pure).
 nmod:of(2,egg,gold).
 % relations.
-be_egg_of(2,it,gold).
-take(2,he,it).
-be_egg_of(2,it,pure_gold).
-be(2,it,egg).
+aos(2,be_egg_of,it,gold).
+aos(2,take,he,it).
+aos(2,be_egg_of,it,pure_gold).
+aos(2,be,it,egg).
 %% every morning the same thing occurred and he soon became rich by selling his eggs.
 % dependencies.
 root(3,root,morning).
@@ -123,8 +123,8 @@ nsubj(4,grow,he).
 ccomp(4,rich,grow).
 xcomp(4,grow,greedy).
 % relations.
-grow(4,he,greedy).
-grow(4,he,rich).
+aos(4,grow,he,greedy).
+aos(4,grow,he,rich).
 %% and thinking to get at once all the gold the goose could give he killed it and opened it only to find nothing.
 % dependencies.
 root(5,root,think).

@@ -17,10 +17,10 @@ det(0,time,a).
 amod(0,time,long).
 xcomp(0,sit,time).
 % relations.
-sit(0,gnat,long_time).
-settle_on(0,gnat,horn).
-settle_on(0,gnat,horn_of_bull).
-sit(0,gnat,time).
+aos(0,sit,gnat,long_time).
+aos(0,settle_on,gnat,horn).
+aos(0,settle_on,gnat,horn_of_bull).
+aos(0,sit,gnat,time).
 %% just as he was about to fly off he made a buzzing noise and inquired of the bull if he would like him to go.
 % dependencies.
 root(1,root,just).
@@ -100,6 +100,6 @@ case(4,neighbor,of).
 nmod:poss(4,neighbor,they).
 nmod:of(4,eye,neighbor).
 % relations.
-be_of(4,man,consequence_in_they_own_eye_than_in_eye_of_they_neighbor).
-be_of(4,man,more_consequence_in_they_own_eye_than_in_eye_of_they_neighbor).
-is_in(4,more_consequence,they_own_eye).
+aos(4,be_of,man,consequence_in_they_own_eye_than_in_eye_of_they_neighbor).
+aos(4,be_of,man,more_consequence_in_they_own_eye_than_in_eye_of_they_neighbor).
+aos(4,is_in,more_consequence,they_own_eye).

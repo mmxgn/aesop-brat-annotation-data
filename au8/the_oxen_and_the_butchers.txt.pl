@@ -22,7 +22,7 @@ case(0,race,to).
 nmod:poss(0,race,they).
 nmod:to(0,destructive,race).
 % relations.
-destructive_to(0,trade,they_race).
+aos(0,destructive_to,trade,they_race).
 %% they assembled on a certain day to carry out their purpose and sharpened their horns for the contest.
 % dependencies.
 root(1,root,assemble).
@@ -46,10 +46,10 @@ case(1,contest,for).
 det(1,contest,the).
 nmod:for(1,sharpen,contest).
 % relations.
-assemble_on(1,they,day).
-sharpen(1,they,they_horn).
-carry_out(1,they,they_purpose).
-assemble_on(1,they,certain_day).
+aos(1,assemble_on,they,day).
+aos(1,sharpen,they,they_horn).
+aos(1,carry_out,they,they_purpose).
+aos(1,assemble_on,they,certain_day).
 %% but one of them who was exceedingly old ( for many a field had he plowed ) thus spoke.
 % dependencies.
 root(2,root,they).

@@ -13,12 +13,12 @@ det(0,animal,the).
 amod(0,animal,other).
 nmod:before(0,boast,animal).
 % relations.
-be_once_boast_before(0,hare,other_animal).
-be_once_boast_of(0,hare,he_speed).
-be_boast_of(0,hare,he_speed).
-be_boast_before(0,hare,other_animal).
-be_once_boast_before(0,hare,animal).
-be_boast_before(0,hare,animal).
+aos(0,be_once_boast_before,hare,other_animal).
+aos(0,be_once_boast_of,hare,he_speed).
+aos(0,be_boast_of,hare,he_speed).
+aos(0,be_boast_before,hare,other_animal).
+aos(0,be_once_boast_before,hare,animal).
+aos(0,be_boast_before,hare,animal).
 %% i have never yet been beaten.
 % dependencies.
 root(1,root,beat).
@@ -43,10 +43,10 @@ nmod:poss(3,speed,my).
 amod(3,speed,full).
 dobj(3,put,speed).
 % relations.
-put_forth(3,i,my_speed).
-put_forth(3,i,my_full_speed).
-put(3,i,my_full_speed).
-put(3,i,my_speed).
+aos(3,put_forth,i,my_speed).
+aos(3,put_forth,i,my_full_speed).
+aos(3,put,i,my_full_speed).
+aos(3,put,i,my_speed).
 %% i challenge any one here to race with me.
 % dependencies.
 root(4,root,challenge).
@@ -59,7 +59,7 @@ nmod:to(4,challenge,race).
 case(4,I,with).
 nmod:with(4,race,I).
 % relations.
-is_with(4,race,I).
+aos(4,is_with,race,I).
 %% the tortoise said quietly.
 % dependencies.
 root(5,root,say).
@@ -82,7 +82,7 @@ cop(7,joke,be).
 det(7,joke,a).
 amod(7,joke,good).
 % relations.
-be(7,that,good).
+aos(7,be,that,good).
 %% said the hare.
 % dependencies.
 root(8,root,say).
@@ -136,8 +136,8 @@ auxpass(13,make,be).
 ccomp(13,so,make).
 conj:and(13,fix,make).
 % relations.
-be(13,start,make).
-be(13,course,fix).
+aos(13,be,start,make).
+aos(13,be,course,fix).
 %% the hare darted almost out of sight at once but soon stopped and to show his contempt for the tortoise lay down to have a nap.
 % dependencies.
 root(14,root,dart).
@@ -168,10 +168,10 @@ xcomp(14,lay,have).
 det(14,nap,a).
 dobj(14,have,nap).
 % relations.
-dart_almost_of(14,hare,sight).
-dart_of(14,hare,sight).
-dart_almost_of(14,hare,sight_at_once).
-dart_of(14,hare,sight_at_once).
+aos(14,dart_almost_of,hare,sight).
+aos(14,dart_of,hare,sight).
+aos(14,dart_almost_of,hare,sight_at_once).
+aos(14,dart_of,hare,sight_at_once).
 %% the tortoise plodded on and plodded on and when the hare awoke from his nap he saw the tortoise just near the winning-post and could not run up in time to save the race.
 % dependencies.
 root(15,root,plod).
@@ -213,4 +213,4 @@ xcomp(15,run,save).
 det(15,race,the).
 dobj(15,save,race).
 % relations.
-awake_from(15,hare,he_nap).
+aos(15,awake_from,hare,he_nap).

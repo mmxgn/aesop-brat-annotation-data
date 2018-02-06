@@ -9,7 +9,7 @@ nmod:with(0,mule,pack).
 aux(0,trudge,be).
 advmod(0,trudge,along).
 % relations.
-is_with(0,two_mule_well-laden,pack).
+aos(0,is_with,two_mule_well-laden,pack).
 %% one carried panniers filled with money the other sacks weighted with grain.
 % dependencies.
 root(1,root,carry).
@@ -25,15 +25,15 @@ acl(1,sack,weight).
 case(1,grain,with).
 nmod:with(1,weight,grain).
 % relations.
-weight_with(1,sack,grain).
-fill(1,pannier,other_sack).
-fill(1,pannier,other_sack_weight).
-weight_with(1,other_sack,grain).
-fill(1,pannier,sack_weight_with_grain).
-fill(1,pannier,sack_weight).
-fill_sack_with(1,pannier,money).
-fill(1,pannier,sack).
-fill(1,pannier,other_sack_weight_with_grain).
+aos(1,weight_with,sack,grain).
+aos(1,fill,pannier,other_sack).
+aos(1,fill,pannier,other_sack_weight).
+aos(1,weight_with,other_sack,grain).
+aos(1,fill,pannier,sack_weight_with_grain).
+aos(1,fill,pannier,sack_weight).
+aos(1,fill_sack_with,pannier,money).
+aos(1,fill,pannier,sack).
+aos(1,fill,pannier,other_sack_weight_with_grain).
 %% the mule carrying the treasure walked with head erect as if conscious of the value of his burden and tossed up and down the clear-toned bells fastened to his neck.
 % dependencies.
 root(2,root,walk).
@@ -68,7 +68,7 @@ case(2,neck,to).
 nmod:poss(2,neck,he).
 nmod:to(2,fasten,neck).
 % relations.
-walk_with(2,mule,head).
+aos(2,walk_with,mule,head).
 %% his companion followed with quiet and easy step.
 % dependencies.
 root(3,root,follow).
@@ -81,8 +81,8 @@ conj:and(3,quiet,easy).
 amod(3,step,easy).
 nmod:with(3,follow,step).
 % relations.
-follow_with(3,he_companion,quiet_step).
-follow_with(3,he_companion,step).
+aos(3,follow_with,he_companion,quiet_step).
+aos(3,follow_with,he_companion,step).
 %% all of a sudden robbers rushed upon them from their hiding-places and in the scuffle with their owners wounded with a sword the mule carrying the treasure which they greedily seized while taking no notice of the grain.
 % dependencies.
 root(4,root,rush).
@@ -127,7 +127,7 @@ case(4,grain,of).
 det(4,grain,the).
 nmod:of(4,notice,grain).
 % relations.
-is_with(4,scuffle,they_owner_wound).
+aos(4,is_with,scuffle,they_owner_wound).
 %% the mule which had been robbed and wounded bewailed his misfortunes.
 % dependencies.
 root(5,root,bewail).
@@ -178,8 +178,8 @@ case(7,wound,with).
 det(7,wound,any).
 nmod:with(7,hurt,wound).
 % relations.
-be(7,i,glad).
-be(7,i,think_so_little).
-be(7,i,think_little).
-be(7,i,think).
-be(7,i,indeed_glad).
+aos(7,be,i,glad).
+aos(7,be,i,think_so_little).
+aos(7,be,i,think_little).
+aos(7,be,i,think).
+aos(7,be,i,indeed_glad).

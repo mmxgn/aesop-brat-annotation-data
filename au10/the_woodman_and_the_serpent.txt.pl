@@ -21,9 +21,9 @@ case(0,snow,on).
 det(0,snow,the).
 nmod:on(0,lie,snow).
 % relations.
-see(0,he,something_lie).
-lie_on(0,something,snow).
-see(0,he,something_lie_on_snow).
+aos(0,see,he,something_lie).
+aos(0,lie_on,something,snow).
+aos(0,see,he,something_lie_on_snow).
 %% when he came closer he saw it was a serpent to all appearance dead.
 % dependencies.
 root(1,root,come).
@@ -41,7 +41,7 @@ det(1,appearance,all).
 nmod:to(1,serpent,appearance).
 amod(1,appearance,dead).
 % relations.
-be_serpent_to(1,it,appearance_dead).
+aos(1,be_serpent_to,it,appearance_dead).
 %% but he took it up and put it in his bosom to warm while he hurried home.
 % dependencies.
 root(2,root,take).
@@ -63,8 +63,8 @@ nsubj(2,hurry,he).
 advcl:while(2,warm,hurry).
 dobj(2,hurry,home).
 % relations.
-take_up(2,he,it).
-put(2,he,it).
+aos(2,take_up,he,it).
+aos(2,put,he,it).
 %% as soon as he got indoors he put the serpent down on the hearth before the fire.
 % dependencies.
 root(3,root,soon).
@@ -85,9 +85,9 @@ case(3,fire,before).
 det(3,fire,the).
 nmod:before(3,hearth,fire).
 % relations.
-put_serpent_down_on(3,he,hearth_before_fire).
-put_down(3,he,serpent).
-put_serpent_down_on(3,he,hearth).
+aos(3,put_serpent_down_on,he,hearth_before_fire).
+aos(3,put_down,he,serpent).
+aos(3,put_serpent_down_on,he,hearth).
 %% the children watched it and saw it slowly come to life again.
 % dependencies.
 root(4,root,watch).
@@ -104,11 +104,11 @@ case(4,life,to).
 nmod:to(4,come,life).
 advmod(4,come,again).
 % relations.
-slowly_come_again_to(4,it,life).
-slowly_come_to(4,it,life).
-come_again_to(4,it,life).
-watch(4,child,it).
-come_to(4,it,life).
+aos(4,slowly_come_again_to,it,life).
+aos(4,slowly_come_to,it,life).
+aos(4,come_again_to,it,life).
+aos(4,watch,child,it).
+aos(4,come_to,it,life).
 %% then one of them stooped down to stroke it but thc serpent raised its head and put out its fangs and was about to sting the child to death.
 % dependencies.
 root(5,root,stoop).
@@ -144,8 +144,8 @@ dobj(5,sting,child).
 case(5,death,to).
 nmod:to(5,sting,death).
 % relations.
-put_out(5,it,its_fang).
-raise(5,it,its_head).
+aos(5,put_out,it,its_fang).
+aos(5,raise,it,its_head).
 %% so the woodman seized his axe and with one stroke cut the serpent in two.
 % dependencies.
 root(6,root,seize).
@@ -164,11 +164,11 @@ dobj(6,cut,serpent).
 case(6,two,in).
 nmod:in(6,cut,two).
 % relations.
-seize(6,woodman,he_axe).
-cut(6,one_stroke,serpent).
-cut_serpent_in(6,one_stroke,two).
-cut_serpent_in(6,stroke,two).
-cut(6,stroke,serpent).
+aos(6,seize,woodman,he_axe).
+aos(6,cut,one_stroke,serpent).
+aos(6,cut_serpent_in,one_stroke,two).
+aos(6,cut_serpent_in,stroke,two).
+aos(6,cut,stroke,serpent).
 %% ah.
 % dependencies.
 root(7,root,ah).

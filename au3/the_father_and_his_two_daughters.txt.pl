@@ -19,8 +19,8 @@ case(0,tile-maker,to).
 det(0,tile-maker,a).
 nmod:to(0,marry,tile-maker).
 % relations.
-marry_to(0,one,tile-maker).
-marry_to(0,one,gardener).
+aos(0,marry_to,one,tile-maker).
+aos(0,marry_to,one,gardener).
 %% after a time he went to the daughter who had married the gardener and inquired how she was and how all things went with her.
 % dependencies.
 root(1,root,go).
@@ -52,8 +52,8 @@ conj:and(1,be,go).
 case(1,she,with).
 nmod:with(1,go,she).
 % relations.
-go_after(1,he,time).
-go_with(1,thing,she).
+aos(1,go_after,he,time).
+aos(1,go_with,thing,she).
 %% she said.
 % dependencies.
 root(2,root,say).
@@ -92,11 +92,11 @@ auxpass(3,water,be).
 advmod(3,water,well).
 ccomp(3,have,water).
 % relations.
-have(3,i,only_one_wish).
-be_prosper_with(3,thing,I).
-be(3,plant,well_water).
-have(3,i,one_wish).
-be(3,plant,water).
+aos(3,have,i,only_one_wish).
+aos(3,be_prosper_with,thing,I).
+aos(3,be,plant,well_water).
+aos(3,have,i,one_wish).
+aos(3,be,plant,water).
 %% not long after he went to the daughter who had married the tilemaker and likewise inquired of her how she fared.
 % dependencies.
 root(4,root,long).
@@ -124,8 +124,8 @@ advmod(4,fare,how).
 nsubj(4,fare,she).
 ccomp(4,go,fare).
 % relations.
-likewise_inquire_of(4,tilemaker,she).
-inquire_of(4,tilemaker,she).
+aos(4,likewise_inquire_of,tilemaker,she).
+aos(4,inquire_of,tilemaker,she).
 %% she replied.
 % dependencies.
 root(5,root,reply).
@@ -166,11 +166,11 @@ aux(6,dry,might).
 auxpass(6,dry,be).
 advcl:so_that(6,shine,dry).
 % relations.
-want_for(6,wish,nothing).
-shine(6,sun,hot).
-might(6,brick,might_dry).
-shine(6,sun,might_dry).
-want_for(6,one_wish,nothing).
+aos(6,want_for,wish,nothing).
+aos(6,shine,sun,hot).
+aos(6,might,brick,might_dry).
+aos(6,shine,sun,might_dry).
+aos(6,want_for,one_wish,nothing).
 %% he said to her.
 % dependencies.
 root(7,root,say).
@@ -178,7 +178,7 @@ nsubj(7,say,he).
 case(7,she,to).
 nmod:to(7,say,she).
 % relations.
-say_to(7,he,she).
+aos(7,say_to,he,she).
 %% if your sister wishes for rain and you for dry weather with which of the two am i to join my wishes.
 % dependencies.
 root(8,root,wish).
@@ -204,5 +204,5 @@ acl:to(8,i,join).
 nmod:poss(8,wish,my).
 dobj(8,join,wish).
 % relations.
-wish_for(8,you_sister,rain).
-is_with(8,dry_weather,which).
+aos(8,wish_for,you_sister,rain).
+aos(8,is_with,dry_weather,which).

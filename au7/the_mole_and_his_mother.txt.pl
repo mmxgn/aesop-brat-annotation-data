@@ -13,11 +13,11 @@ case(0,mother,to).
 nmod:poss(0,mother,he).
 nmod:to(0,say,mother).
 % relations.
-say_to(0,creature,he_mother).
-say_to(0,creature_blind,he_mother).
-once_say_to(0,creature_blind,he_mother).
-blind_from(0,creature,birth).
-once_say_to(0,creature,he_mother).
+aos(0,say_to,creature,he_mother).
+aos(0,say_to,creature_blind,he_mother).
+aos(0,once_say_to,creature_blind,he_mother).
+aos(0,blind_from,creature,birth).
+aos(0,once_say_to,creature,he_mother).
 %% i am sure than i can see mother.
 % dependencies.
 root(1,root,sure).
@@ -29,8 +29,8 @@ aux(1,see,can).
 ccomp(1,sure,see).
 dobj(1,see,mother).
 % relations.
-see(1,i,mother).
-be(1,i,sure).
+aos(1,see,i,mother).
+aos(1,be,i,sure).
 %% in the desire to prove to him his mistake his mother placed before him a few grains of frankincense and asked.
 % dependencies.
 root(2,root,desire).
@@ -57,13 +57,13 @@ cc(2,place,and).
 acl:relcl(2,mistake,ask).
 conj:and(2,place,ask).
 % relations.
-few_grain_of(2,he_mother,frankincense).
-grain_of(2,he_mother,frankincense).
-place_grain_before(2,he_mother,he).
-place(2,he_mother,few_grain_of_frankincense).
-place(2,he_mother,few_grain).
-place(2,he_mother,grain_of_frankincense).
-place(2,he_mother,grain).
+aos(2,few_grain_of,he_mother,frankincense).
+aos(2,grain_of,he_mother,frankincense).
+aos(2,place_grain_before,he_mother,he).
+aos(2,place,he_mother,few_grain_of_frankincense).
+aos(2,place,he_mother,few_grain).
+aos(2,place,he_mother,grain_of_frankincense).
+aos(2,place,he_mother,grain).
 %% what is it.
 % dependencies.
 root(3,root,what).
@@ -85,7 +85,7 @@ nsubj(5,pebble,it).
 cop(5,pebble,be).
 det(5,pebble,a).
 % relations.
-be(5,it,pebble).
+aos(5,be,it,pebble).
 %% his mother exclaimed.
 % dependencies.
 root(6,root,exclaim).
@@ -117,5 +117,5 @@ dobj(7,lose,sense).
 case(7,smell,of).
 nmod:of(7,sense,smell).
 % relations.
-have_lose(7,you,you_sense).
-have_lose(7,you,you_sense_of_smell).
+aos(7,have_lose,you,you_sense).
+aos(7,have_lose,you,you_sense_of_smell).

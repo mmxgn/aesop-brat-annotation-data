@@ -24,8 +24,8 @@ case(0,talon,in).
 nmod:poss(0,talon,he).
 nmod:in(0,carry,talon).
 % relations.
-carry(0,eagle,he).
-seize_upon(0,eagle,lamb).
+aos(0,carry,eagle,he).
+aos(0,seize_upon,eagle,lamb).
 %% a jackdaw who witnessed the capture of the lamb was stirred with envy and determined to emulate the strength and flight of the eagle.
 % dependencies.
 root(1,root,stir).
@@ -57,7 +57,7 @@ case(1,eagle,of).
 det(1,eagle,the).
 nmod:of(1,strength,eagle).
 % relations.
-strength_of(1,flight,eagle).
+aos(1,strength_of,flight,eagle).
 %% he flew around with a great whir of his wings and settled upon a large ram with the intention of carrying him off but his claws became entangled in the ram 's fleece and he was not able to release himself although he fluttered with his feathers as much as he could.
 % dependencies.
 root(2,root,fly).
@@ -115,11 +115,11 @@ mark(2,could,as).
 nsubj(2,could,he).
 advcl:as(2,flutter,could).
 % relations.
-become(2,he_claw,entangled).
-settle_upon(2,he,large_ram).
-settle_upon(2,he,ram).
-become_in(2,he_claw,ram_'s_fleece).
-in(2,ram,fleece).
+aos(2,become,he_claw,entangled).
+aos(2,settle_upon,he,large_ram).
+aos(2,settle_upon,he,ram).
+aos(2,become_in,he_claw,ram_'s_fleece).
+aos(2,in,ram,fleece).
 %% the shepherd seeing what had happened ran up and caught him.
 % dependencies.
 root(3,root,run).
@@ -135,7 +135,7 @@ cc(3,run,and).
 conj:and(3,run,catch).
 dobj(3,catch,he).
 % relations.
-catch(3,shepherd,he).
+aos(3,catch,shepherd,he).
 %% he at once clipped the jackdaw 's wings and taking him home at night gave him to his children.
 % dependencies.
 root(4,root,clip).
@@ -159,11 +159,11 @@ case(4,child,to).
 nmod:poss(4,child,he).
 nmod:to(4,give,child).
 % relations.
-once_clip(4,he,jackdaw_'s_wing).
-home_give(4,he,he).
-has(4,jackdaw,wing).
-clip(4,he,jackdaw_'s_wing).
-give(4,he,he).
+aos(4,once_clip,he,jackdaw_'s_wing).
+aos(4,home_give,he,he).
+aos(4,has,jackdaw,wing).
+aos(4,clip,he,jackdaw_'s_wing).
+aos(4,give,he,he).
 %% on their saying.
 % dependencies.
 root(5,root,they).
@@ -197,9 +197,9 @@ nsubj(8,daw,he).
 cop(8,daw,be).
 det(8,daw,a).
 % relations.
-be_daw_to(8,he,my_certain_knowledge).
-be(8,he,daw).
-be_daw_to(8,he,my_knowledge).
+aos(8,be_daw_to,he,my_certain_knowledge).
+aos(8,be,he,daw).
+aos(8,be_daw_to,he,my_knowledge).
 %% but he would like you to think an eagle.
 % dependencies.
 root(9,root,like).
@@ -213,5 +213,5 @@ xcomp(9,like,think).
 det(9,eagle,a).
 dobj(9,think,eagle).
 % relations.
-would_like(9,he,you).
-think(9,you,eagle).
+aos(9,would_like,he,you).
+aos(9,think,you,eagle).

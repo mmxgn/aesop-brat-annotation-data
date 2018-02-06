@@ -29,7 +29,7 @@ case(0,garden,in).
 nmod:poss(0,garden,he).
 nmod:in(0,tree,garden).
 % relations.
-is_in(0,tree,he_garden).
+aos(0,is_in,tree,he_garden).
 %% but every week he used to go and dig it up and gloat over his gains.
 % dependencies.
 root(1,root,week).
@@ -97,11 +97,11 @@ det(3,hole,the).
 amod(3,hole,empty).
 nmod:but(3,nothing,hole).
 % relations.
-nothing_but(3,he,hole).
-nothing_but(3,he,empty_hole).
-find(3,he,nothing_but_empty_hole).
-find(3,he,nothing).
-find(3,he,nothing_but_hole).
+aos(3,nothing_but,he,hole).
+aos(3,nothing_but,he,empty_hole).
+aos(3,find,he,nothing_but_empty_hole).
+aos(3,find,he,nothing).
+aos(3,find,he,nothing_but_hole).
 %% he tore his hair and raised such an outcry that all the neighbours came around him and he told them how he used to come and visit his gold.
 % dependencies.
 root(4,root,tear).
@@ -139,10 +139,10 @@ conj:and(4,come,visit).
 nmod:poss(4,gold,he).
 dobj(4,come,gold).
 % relations.
-come_around(4,neighbour,he).
-tear(4,he,he_hair).
-come(4,he,he_gold).
-tell(4,he,they).
+aos(4,come_around,neighbour,he).
+aos(4,tear,he,he_hair).
+aos(4,come,he,he_gold).
+aos(4,tell,he,they).
 %% did you ever take any of it out.
 % dependencies.
 root(5,root,do).
@@ -154,10 +154,10 @@ case(5,it,of).
 nmod:of(5,any,it).
 compound:prt(5,take,out).
 % relations.
-take_out(5,you,any).
-ever_take_out(5,you,any_of_it).
-take_out(5,you,any_of_it).
-ever_take_out(5,you,any).
+aos(5,take_out,you,any).
+aos(5,ever_take_out,you,any_of_it).
+aos(5,take_out,you,any_of_it).
+aos(5,ever_take_out,you,any).
 %% asked one of them.
 % dependencies.
 root(6,root,ask).
@@ -185,11 +185,11 @@ xcomp(9,come,look).
 case(9,it,at).
 nmod:at(9,look,it).
 % relations.
-come(9,i,look_at_it).
-only_come(9,i,look).
-look_at(9,i,it).
-only_come(9,i,look_at_it).
-come(9,i,look).
+aos(9,come,i,look_at_it).
+aos(9,only_come,i,look).
+aos(9,look_at,i,it).
+aos(9,only_come,i,look_at_it).
+aos(9,come,i,look).
 %% then come again and look at the hole.
 % dependencies.
 root(10,root,come).
@@ -218,12 +218,12 @@ advmod(12,much,as).
 nmod:npmod(12,good,much).
 xcomp(12,do,good).
 % relations.
-will_do(12,it,you_as_much_good).
-will_do(12,it,you_good).
-will_do(12,it,you_just_much_good).
-good(12,you,just_as_much).
-will_do(12,it,you_just_as_much_good).
-good(12,you,as_much).
-good(12,you,much).
-will_do(12,it,you_much_good).
-good(12,you,just_much).
+aos(12,will_do,it,you_as_much_good).
+aos(12,will_do,it,you_good).
+aos(12,will_do,it,you_just_much_good).
+aos(12,good,you,just_as_much).
+aos(12,will_do,it,you_just_as_much_good).
+aos(12,good,you,as_much).
+aos(12,good,you,much).
+aos(12,will_do,it,you_much_good).
+aos(12,good,you,just_much).

@@ -7,8 +7,8 @@ advmod(0,address,thus).
 det(0,sheepdog,the).
 dobj(0,address,sheepdog).
 % relations.
-address(0,wolf,sheepdog).
-thus_address(0,wolf,sheepdog).
+aos(0,address,wolf,sheepdog).
+aos(0,thus_address,wolf,sheepdog).
 %% why should you who are like us in so many things not be entirely of one mind with us and live with us as brothers should.
 % dependencies.
 root(1,root,mind).
@@ -40,7 +40,7 @@ mark(1,should,as).
 nsubj(1,should,brother).
 advcl:as(1,live,should).
 % relations.
-is_with(1,should_one_mind,we).
+aos(1,is_with,should_one_mind,we).
 %% we differ from you in one point only.
 % dependencies.
 root(2,root,differ).
@@ -52,10 +52,10 @@ nummod(2,point,one).
 nmod:in(2,you,point).
 advmod(2,differ,only).
 % relations.
-differ_from(2,we,you_in_one_point).
-differ_from(2,we,you).
-differ_only_from(2,we,you).
-differ_only_from(2,we,you_in_one_point).
+aos(2,differ_from,we,you_in_one_point).
+aos(2,differ_from,we,you).
+aos(2,differ_only_from,we,you).
+aos(2,differ_only_from,we,you_in_one_point).
 %% we live in freedom but you bow down to and slave for men who in return for your services flog you with whips and put collars on your necks.
 % dependencies.
 root(3,root,live).
@@ -91,9 +91,9 @@ case(3,neck,on).
 nmod:poss(3,neck,you).
 nmod:on(3,put,neck).
 % relations.
-put_collar_on(3,slave,you_neck).
-put(3,slave,collar).
-live_in(3,we,freedom).
+aos(3,put_collar_on,slave,you_neck).
+aos(3,put,slave,collar).
+aos(3,live_in,we,freedom).
 %% they make you also guard their sheep and while they eat the mutton throw only the bones to you.
 % dependencies.
 root(4,root,make).
@@ -117,14 +117,14 @@ dobj(4,throw,bone).
 case(4,you,to).
 nmod:to(4,bone,you).
 % relations.
-only_bone_to(4,mutton,you).
-throw(4,mutton,bone).
-throw(4,mutton,only_bone).
-throw(4,mutton,only_bone_to_you).
-bone_to(4,mutton,you).
-throw(4,mutton,bone_to_you).
-also_guard(4,you,they_sheep).
-guard(4,you,they_sheep).
+aos(4,only_bone_to,mutton,you).
+aos(4,throw,mutton,bone).
+aos(4,throw,mutton,only_bone).
+aos(4,throw,mutton,only_bone_to_you).
+aos(4,bone_to,mutton,you).
+aos(4,throw,mutton,bone_to_you).
+aos(4,also_guard,you,they_sheep).
+aos(4,guard,you,they_sheep).
 %% if you will be persuaded by us you will give us the sheep and we will enjoy them in common till we all are surfeited.
 % dependencies.
 root(5,root,persuade).
@@ -154,12 +154,12 @@ advmod(5,surfeited,all).
 cop(5,surfeited,be).
 advcl:till(5,enjoy,surfeited).
 % relations.
-will_give(5,you,sheep).
-will_enjoy(5,we,they).
-be(5,we,all_surfeited).
-will(5,you,will_persuade).
-be(5,we,surfeited).
-will_give(5,you,we).
+aos(5,will_give,you,sheep).
+aos(5,will_enjoy,we,they).
+aos(5,be,we,all_surfeited).
+aos(5,will,you,will_persuade).
+aos(5,be,we,surfeited).
+aos(5,will_give,you,we).
 %% the dogs listened favorably to these proposals and entering the den of the wolves they were set upon and torn to pieces.
 % dependencies.
 root(6,root,listen).
@@ -187,9 +187,9 @@ conj:and(6,listen,tear).
 case(6,piece,to).
 nmod:to(6,tear,piece).
 % relations.
-listen_to(6,dog,proposal).
-be(6,they,set_upon).
-enter(6,dog,den).
-listen_favorably_to(6,dog,proposal).
-be(6,they,set).
-tear_to(6,dog,piece).
+aos(6,listen_to,dog,proposal).
+aos(6,be,they,set_upon).
+aos(6,enter,dog,den).
+aos(6,listen_favorably_to,dog,proposal).
+aos(6,be,they,set).
+aos(6,tear_to,dog,piece).

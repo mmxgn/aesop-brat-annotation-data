@@ -38,7 +38,7 @@ case(0,chase,in).
 det(0,chase,the).
 nmod:in(0,boar,chase).
 % relations.
-is_in(0,boar,chase).
+aos(0,is_in,boar,chase).
 %% he seized him boldly by the ear but could not retain his hold because of the decay of his teeth so that the boar escaped.
 % dependencies.
 root(1,root,seize).
@@ -86,11 +86,11 @@ conj:and(2,disappointed,abuse).
 det(2,dog,the).
 dobj(2,abuse,dog).
 % relations.
-be(2,he_master,much_disappointed).
-fiercely_abuse(2,he_master,dog).
-abuse(2,he_master,dog).
-be(2,he_master,very_much_disappointed).
-be(2,he_master,disappointed).
+aos(2,be,he_master,much_disappointed).
+aos(2,fiercely_abuse,he_master,dog).
+aos(2,abuse,he_master,dog).
+aos(2,be,he_master,very_much_disappointed).
+aos(2,be,he_master,disappointed).
 %% the hound looked up and said.
 % dependencies.
 root(3,root,look).

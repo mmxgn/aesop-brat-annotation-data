@@ -30,13 +30,13 @@ nsubj(0,house,himself).
 det(0,house,a).
 xcomp(0,make,house).
 % relations.
-curl_up_on_account_of(0,dog_'s_house,cold_determine).
-has(0,dog,house_in_wintertime).
-curl_up_on_account_of(0,dog_'s_house,cold).
-curl_up_as(0,dog_'s_house,possible).
-curl_up_in(0,dog_'s_house,in_space).
-is_in(0,dog_'s_house,wintertime).
-curl_up_in(0,dog_'s_house,in_small_space).
+aos(0,curl_up_on_account_of,dog_'s_house,cold_determine).
+aos(0,has,dog,house_in_wintertime).
+aos(0,curl_up_on_account_of,dog_'s_house,cold).
+aos(0,curl_up_as,dog_'s_house,possible).
+aos(0,curl_up_in,dog_'s_house,in_space).
+aos(0,is_in,dog_'s_house,wintertime).
+aos(0,curl_up_in,dog_'s_house,in_small_space).
 %% however when the summer returned again he lay asleep stretched at his full length and appeared to himself to be of a great size.
 % dependencies.
 root(1,root,however).
@@ -67,10 +67,10 @@ det(1,size,a).
 amod(1,size,great).
 xcomp(1,appear,size).
 % relations.
-lay(1,he,asleep).
-appear(1,he,size).
-appear_to(1,he,himself).
-appear(1,he,great_size).
+aos(1,lay,he,asleep).
+aos(1,appear,he,size).
+aos(1,appear_to,he,himself).
+aos(1,appear,he,great_size).
 %% now he considered that it would be neither an easy nor a necessary work to make himself such a house as would accommodate him.
 % dependencies.
 root(2,root,consider).
@@ -101,6 +101,6 @@ aux(2,accommodate,would).
 advcl:as(2,make,accommodate).
 dobj(2,accommodate,he).
 % relations.
-accommodate(2,work,he).
-accommodate(2,necessary_work,he).
-be(2,it,easy).
+aos(2,accommodate,work,he).
+aos(2,accommodate,necessary_work,he).
+aos(2,be,it,easy).

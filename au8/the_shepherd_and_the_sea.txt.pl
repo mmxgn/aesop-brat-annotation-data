@@ -33,10 +33,10 @@ nmod:with(0,make,view).
 case(0,commerce,to).
 nmod:to(0,view,commerce).
 % relations.
-see(0,shepherd_keep_watch,sea_calm).
-see(0,shepherd_keep_watch,sea_very_calm).
-see(0,shepherd_watch,sea_calm).
-see(0,shepherd_watch,sea_very_calm).
+aos(0,see,shepherd_keep_watch,sea_calm).
+aos(0,see,shepherd_keep_watch,sea_very_calm).
+aos(0,see,shepherd_watch,sea_calm).
+aos(0,see,shepherd_watch,sea_very_calm).
 %% he sold all his flock invested it in a cargo of dates and set sail.
 % dependencies.
 root(1,root,sell).
@@ -56,8 +56,8 @@ amod(1,sail,set).
 nmod:of(1,cargo,sail).
 conj:and(1,date,sail).
 % relations.
-invest(1,flock,it).
-invest(1,he_flock,it).
+aos(1,invest,flock,it).
+aos(1,invest,he_flock,it).
 %% but a very great tempest came on and the ship being in danger of sinking he threw all his merchandise overboard and barely escaped with his life in the empty ship.
 % dependencies.
 root(2,root,come).
@@ -94,18 +94,18 @@ det(2,ship,the).
 amod(2,ship,empty).
 nmod:in(2,life,ship).
 % relations.
-is_in(2,he_life,empty_ship).
-be_in(2,ship,danger_sink).
-escape_with(2,he,he_life_in_empty_ship).
-throw_overboard(2,he,merchandise).
-escape_with(2,he,he_life_in_ship).
-escape_with(2,he,he_life).
-throw_overboard(2,he,he_merchandise).
-throw(2,he,merchandise).
-throw(2,he,he_merchandise).
-barely_escape_with(2,he,he_life).
-barely_escape_with(2,he,he_life_in_empty_ship).
-barely_escape_with(2,he,he_life_in_ship).
+aos(2,is_in,he_life,empty_ship).
+aos(2,be_in,ship,danger_sink).
+aos(2,escape_with,he,he_life_in_empty_ship).
+aos(2,throw_overboard,he,merchandise).
+aos(2,escape_with,he,he_life_in_ship).
+aos(2,escape_with,he,he_life).
+aos(2,throw_overboard,he,he_merchandise).
+aos(2,throw,he,merchandise).
+aos(2,throw,he,he_merchandise).
+aos(2,barely_escape_with,he,he_life).
+aos(2,barely_escape_with,he,he_life_in_empty_ship).
+aos(2,barely_escape_with,he,he_life_in_ship).
 %% not long afterwards when someone passed by and observed the unruffled calm of the sea he interrupted him and said.
 % dependencies.
 root(3,root,long).
@@ -132,10 +132,10 @@ cc(3,interrupt,and).
 dep(3,long,say).
 conj:and(3,interrupt,say).
 % relations.
-observe(3,he,calm).
-observe(3,he,unruffled_calm_of_sea).
-observe(3,he,unruffled_calm).
-observe(3,he,calm_of_sea).
+aos(3,observe,he,calm).
+aos(3,observe,he,unruffled_calm_of_sea).
+aos(3,observe,he,unruffled_calm).
+aos(3,observe,he,calm_of_sea).
 %% it is again in want of dates and therefore looks quiet.
 % dependencies.
 root(4,root,want).
@@ -151,9 +151,9 @@ advmod(4,look,therefore).
 conj:and(4,want,look).
 xcomp(4,look,quiet).
 % relations.
-be(4,it,want).
-be_want_of(4,it,date).
-look(4,it,quiet).
-be_again_want_of(4,it,date).
-be(4,it,again_want).
-therefore_look(4,it,quiet).
+aos(4,be,it,want).
+aos(4,be_want_of,it,date).
+aos(4,look,it,quiet).
+aos(4,be_again_want_of,it,date).
+aos(4,be,it,again_want).
+aos(4,therefore_look,it,quiet).

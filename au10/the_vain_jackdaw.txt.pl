@@ -45,12 +45,12 @@ cop(0,ruler,be).
 nmod:poss(0,ruler,they).
 acl:relcl(0,beautiful,ruler).
 % relations.
-appear_before(0,they,he_throne).
-appoint(0,he,king).
-be(0,they,appear_before_he_throne).
-appoint(0,he,king_over_bird).
-be(0,they,appear).
-be(0,all,they_ruler).
+aos(0,appear_before,they,he_throne).
+aos(0,appoint,he,king).
+aos(0,be,they,appear_before_he_throne).
+aos(0,appoint,he,king_over_bird).
+aos(0,be,they,appear).
+aos(0,be,all,they_ruler).
 %% wishing to look their best on the occasion they repaired to the banks of a stream where they busied themselves in washing and preening their feathers.
 % dependencies.
 root(1,root,wish).
@@ -81,10 +81,10 @@ conj:and(1,wash,preen).
 nmod:poss(1,feather,they).
 dobj(1,wash,feather).
 % relations.
-wash(1,they,they_feather).
-repair_to(1,they,bank).
-busy(1,they,themselves).
-repair_to(1,they,bank_of_stream).
+aos(1,wash,they,they_feather).
+aos(1,repair_to,they,bank).
+aos(1,busy,they,themselves).
+aos(1,repair_to,they,bank_of_stream).
 %% the jackdaw was there along with the rest and realized that with his ugly plumage he would have no chance of being chosen as he was so he waited till they were all gone and then picked up the most gaudy of the feathers they had dropped and fastened them about his own body with the result that he looked gayer than any of them.
 % dependencies.
 root(2,root,rest).
@@ -158,8 +158,8 @@ nmod:than(2,look,any).
 case(2,they,of).
 nmod:of(2,any,they).
 % relations.
-be_with(2,jackdaw,there_along_rest).
-be_with(2,jackdaw,rest).
+aos(2,be_with,jackdaw,there_along_rest).
+aos(2,be_with,jackdaw,rest).
 %% when the appointed day came the birds assembled before jupiter 's throne.
 % dependencies.
 root(3,root,come).
@@ -175,13 +175,13 @@ nmod:poss(3,throne,jupiter).
 case(3,jupiter,'s).
 nmod:before(3,assemble,throne).
 % relations.
-come(3,day,bird).
-come(3,appoint_day,bird_assemble_before_jupiter_'s_throne).
-come(3,day,bird_assemble_before_jupiter_'s_throne).
-come(3,appoint_day,bird_assemble).
-before(3,jupiter,throne).
-come(3,appoint_day,bird).
-come(3,day,bird_assemble).
+aos(3,come,day,bird).
+aos(3,come,appoint_day,bird_assemble_before_jupiter_'s_throne).
+aos(3,come,day,bird_assemble_before_jupiter_'s_throne).
+aos(3,come,appoint_day,bird_assemble).
+aos(3,before,jupiter,throne).
+aos(3,come,appoint_day,bird).
+aos(3,come,day,bird_assemble).
 %% after passing them in review he was about to make the jackdaw king when all the rest set upon the king-select stripped him of his borrowed plumes and exposed him for the jackdaw that he was.
 % dependencies.
 root(4,root,pass).

@@ -22,8 +22,8 @@ case(0,chase,in).
 det(0,chase,the).
 nmod:in(0,assist,chase).
 % relations.
-enter_into(0,fox,agreement).
-enter_into(0,ass,agreement).
+aos(0,enter_into,fox,agreement).
+aos(0,enter_into,ass,agreement).
 %% having secured a large booty the lion on their return from the forest asked the ass to allot his due portion to each of the three partners in the treaty.
 % dependencies.
 root(1,root,secure).
@@ -83,20 +83,20 @@ det(2,choice,the).
 amod(2,choice,first).
 dobj(2,make,choice).
 % relations.
-make(2,two_other,choice).
-carefully_divide_into(2,ass,three_share).
-divide_spoil_into(2,ass,three_share).
-divide_into(2,ass,three_equal_share).
-make(2,two_other,first_choice).
-divide_into(2,ass,three_share).
-carefully_divide(2,ass,spoil).
-modestly_request(2,ass,two_other).
-divide_spoil_into(2,ass,three_equal_share).
-divide(2,ass,spoil).
-request(2,ass,two_other).
-carefully_divide_spoil_into(2,ass,three_equal_share).
-carefully_divide_spoil_into(2,ass,three_share).
-carefully_divide_into(2,ass,three_equal_share).
+aos(2,make,two_other,choice).
+aos(2,carefully_divide_into,ass,three_share).
+aos(2,divide_spoil_into,ass,three_share).
+aos(2,divide_into,ass,three_equal_share).
+aos(2,make,two_other,first_choice).
+aos(2,divide_into,ass,three_share).
+aos(2,carefully_divide,ass,spoil).
+aos(2,modestly_request,ass,two_other).
+aos(2,divide_spoil_into,ass,three_equal_share).
+aos(2,divide,ass,spoil).
+aos(2,request,ass,two_other).
+aos(2,carefully_divide_spoil_into,ass,three_equal_share).
+aos(2,carefully_divide_spoil_into,ass,three_share).
+aos(2,carefully_divide_into,ass,three_equal_share).
 %% the lion bursting out into a great rage devoured the ass.
 % dependencies.
 root(3,root,devour).
@@ -111,7 +111,7 @@ nmod:into(3,burst,rage).
 det(3,ass,the).
 dobj(3,devour,ass).
 % relations.
-devour(3,lion,ass).
+aos(3,devour,lion,ass).
 %% then he requested the fox to do him the favor to make a division.
 % dependencies.
 root(4,root,request).
@@ -154,9 +154,9 @@ amod(5,morsel,smallest).
 amod(5,morsel,possible).
 dobj(5,kill,morsel).
 % relations.
-kill(5,they,smallest_possible_morsel).
-leave_to(5,they,himself).
-kill(5,they,possible_morsel).
+aos(5,kill,they,smallest_possible_morsel).
+aos(5,leave_to,they,himself).
+aos(5,kill,they,possible_morsel).
 %% the lion said.
 % dependencies.
 root(6,root,say).
@@ -187,8 +187,8 @@ case(8,fraction,to).
 det(8,fraction,a).
 nmod:to(8,perfect,fraction).
 % relations.
-be(8,you,perfect).
-be_perfect_to(8,you,fraction).
+aos(8,be,you,perfect).
+aos(8,be_perfect_to,you,fraction).
 %% he replied.
 % dependencies.
 root(9,root,reply).
@@ -207,5 +207,5 @@ advcl:by(10,learn,witness).
 nmod:poss(10,fate,he).
 dobj(10,witness,fate).
 % relations.
-learn(10,i,it).
-witness(10,i,he_fate).
+aos(10,learn,i,it).
+aos(10,witness,i,he_fate).

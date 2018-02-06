@@ -14,13 +14,13 @@ det(0,night,the).
 compound(0,night,summer).
 nmod:throughout(0,listen,night).
 % relations.
-to(0,nightingale,song).
-listen_to(0,labourer,nightingale_'s_song).
-lay(0,labourer,listen_to_nightingale_'s_song).
-listen_throughout(0,labourer,summer_night).
-lay(0,labourer,listen_throughout_summer_night).
-lay(0,labourer,listen).
-lay(0,labourer,listen_to_nightingale_'s_song_throughout_summer_night).
+aos(0,to,nightingale,song).
+aos(0,listen_to,labourer,nightingale_'s_song).
+aos(0,lay,labourer,listen_to_nightingale_'s_song).
+aos(0,listen_throughout,labourer,summer_night).
+aos(0,lay,labourer,listen_throughout_summer_night).
+aos(0,lay,labourer,listen).
+aos(0,lay,labourer,listen_to_nightingale_'s_song_throughout_summer_night).
 %% so pleased was he with it that the next night he set a trap for it and captured it.
 % dependencies.
 root(1,root,he).
@@ -45,11 +45,11 @@ ccomp(1,he,capture).
 conj:and(1,set,capture).
 nsubj(1,he,it).
 % relations.
-be_he_with(1,it,it).
-set_trap_at_time(1,he,night).
-set_trap_at_time(1,he,next_night).
-set(1,he,trap).
-set_trap_for(1,he,it).
+aos(1,be_he_with,it,it).
+aos(1,set_trap_at_time,he,night).
+aos(1,set_trap_at_time,he,next_night).
+aos(1,set,he,trap).
+aos(1,set_trap_for,he,it).
 %% now that i have caught thee.
 % dependencies.
 root(2,root,now).
@@ -73,8 +73,8 @@ advmod(4,sing,always).
 case(4,I,to).
 nmod:to(4,sing,I).
 % relations.
-shalt_sing_to(4,thou,I).
-shalt_always_sing_to(4,thou,I).
+aos(4,shalt_sing_to,thou,I).
+aos(4,shalt_always_sing_to,thou,I).
 %% we nightingales never sing in a cage.
 % dependencies.
 root(5,root,nightingale).
@@ -156,24 +156,24 @@ nmod:poss(12,body,my).
 amod(12,body,poor).
 nmod:than(12,worth,body).
 % relations.
-will_tell(12,i,far_worth_than_my_body).
-will_tell(12,i,far_better_worth_than_my_poor_body).
-will_tell(12,i,three_thing_far_worth).
-will_tell(12,i,three_thing_far_better_worth_than_my_body).
-will_tell(12,i,three_thing_far_worth_than_my_poor_body).
-will_tell(12,i,better_worth).
-will_tell(12,i,three_thing_far_better_worth).
-will_tell(12,i,worth_than_my_body).
-will_tell(12,i,better_worth_than_my_poor_body).
-will_tell(12,i,far_worth).
-will_tell(12,i,better_worth_than_my_body).
-will_tell(12,i,far_better_worth_than_my_body).
-will_tell(12,i,worth).
-will_tell(12,i,far_better_worth).
-will_tell(12,i,worth_than_my_poor_body).
-will_tell(12,i,far_worth_than_my_poor_body).
-will_tell(12,i,three_thing_far_worth_than_my_body).
-will_tell(12,i,three_thing_far_better_worth_than_my_poor_body).
+aos(12,will_tell,i,far_worth_than_my_body).
+aos(12,will_tell,i,far_better_worth_than_my_poor_body).
+aos(12,will_tell,i,three_thing_far_worth).
+aos(12,will_tell,i,three_thing_far_better_worth_than_my_body).
+aos(12,will_tell,i,three_thing_far_worth_than_my_poor_body).
+aos(12,will_tell,i,better_worth).
+aos(12,will_tell,i,three_thing_far_better_worth).
+aos(12,will_tell,i,worth_than_my_body).
+aos(12,will_tell,i,better_worth_than_my_poor_body).
+aos(12,will_tell,i,far_worth).
+aos(12,will_tell,i,better_worth_than_my_body).
+aos(12,will_tell,i,far_better_worth_than_my_body).
+aos(12,will_tell,i,worth).
+aos(12,will_tell,i,far_better_worth).
+aos(12,will_tell,i,worth_than_my_poor_body).
+aos(12,will_tell,i,far_worth_than_my_poor_body).
+aos(12,will_tell,i,three_thing_far_worth_than_my_body).
+aos(12,will_tell,i,three_thing_far_better_worth_than_my_poor_body).
 %% the labourer let him loose and he flew up to a branch of a tree and said.
 % dependencies.
 root(13,root,let).
@@ -197,8 +197,8 @@ cc(13,fly,and).
 conj:and(13,loose,say).
 conj:and(13,fly,say).
 % relations.
-fly_up_to(13,he,branch).
-fly_up_to(13,he,branch_of_tree).
+aos(13,fly_up_to,he,branch).
+aos(13,fly_up_to,he,branch_of_tree).
 %% never believe a captive 's promise.
 % dependencies.
 root(14,root,believe).
@@ -208,7 +208,7 @@ nmod:poss(14,promise,captive).
 case(14,captive,'s).
 dobj(14,believe,promise).
 % relations.
-has(14,captive,promise).
+aos(14,has,captive,promise).
 %% that 's one thing.
 % dependencies.
 root(15,root,thing).
@@ -216,7 +216,7 @@ nsubj(15,thing,that).
 cop(15,thing,be).
 nummod(15,thing,one).
 % relations.
-has(15,that,one_thing).
+aos(15,has,that,one_thing).
 %% then again keep what you have.
 % dependencies.
 root(16,root,keep).

@@ -36,16 +36,16 @@ det(1,spot,the).
 amod(1,spot,same).
 nmod:in(1,puppy,spot).
 % relations.
-be_grant_permission_to(1,she_request,rear_she_puppy).
-is_in(1,rear_she_puppy,same_spot).
-be_grant_permission_to(1,she_request,she_puppy).
-be_grant_permission_to(1,she_request,she_puppy_in_same_spot).
-be_grant_permission_to(1,she_request,she_puppy_in_spot).
-be_grant_permission_to(1,she_request,rear_she_puppy_in_same_spot).
-be_grant_permission_to(1,she_request,rear_she_puppy_in_spot).
-be_grant(1,she_request,she).
-be_grant(1,she_request,besought_permission).
-be_grant(1,she_request,permission).
+aos(1,be_grant_permission_to,she_request,rear_she_puppy).
+aos(1,is_in,rear_she_puppy,same_spot).
+aos(1,be_grant_permission_to,she_request,she_puppy).
+aos(1,be_grant_permission_to,she_request,she_puppy_in_same_spot).
+aos(1,be_grant_permission_to,she_request,she_puppy_in_spot).
+aos(1,be_grant_permission_to,she_request,rear_she_puppy_in_same_spot).
+aos(1,be_grant_permission_to,she_request,rear_she_puppy_in_spot).
+aos(1,be_grant,she_request,she).
+aos(1,be_grant,she_request,besought_permission).
+aos(1,be_grant,she_request,permission).
 %% the shepherd again consented.
 % dependencies.
 root(2,root,consent).

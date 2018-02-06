@@ -15,7 +15,7 @@ case(0,river,in).
 det(0,river,a).
 nmod:in(0,steep,river).
 % relations.
-famish_with(0,dog,hunger).
+aos(0,famish_with,dog,hunger).
 %% not being able to reach them they agreed to drink up the river but it happened that they burst themselves with drinking long before they reached the hides.
 % dependencies.
 root(1,root,able).

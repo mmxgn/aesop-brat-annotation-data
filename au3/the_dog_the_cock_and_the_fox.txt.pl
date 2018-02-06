@@ -16,10 +16,10 @@ mark(0,travel,to).
 xcomp(0,agree,travel).
 advmod(0,travel,together).
 % relations.
-agree(0,dog,travel_together).
-agree(0,cock,travel_together).
-agree(0,cock,travel).
-agree(0,dog,travel).
+aos(0,agree,dog,travel_together).
+aos(0,agree,cock,travel_together).
+aos(0,agree,cock,travel).
+aos(0,agree,dog,travel).
 %% at nightfall they took shelter in a thick wood.
 % dependencies.
 root(1,root,take).
@@ -32,10 +32,10 @@ det(1,wood,a).
 amod(1,wood,thick).
 nmod:in(1,take,wood).
 % relations.
-take(1,they,shelter).
-take_shelter_in(1,they,wood).
-take_shelter_in(1,they,thick_wood).
-take_shelter_at(1,they,nightfall).
+aos(1,take,they,shelter).
+aos(1,take_shelter_in,they,wood).
+aos(1,take_shelter_in,they,thick_wood).
+aos(1,take_shelter_at,they,nightfall).
 %% the cock flying up perched himself on the branches of a tree while the dog found a bed beneath in the hollow trunk.
 % dependencies.
 root(2,root,cock).
@@ -62,9 +62,9 @@ det(2,trunk,the).
 amod(2,trunk,hollow).
 nmod:in(2,find,trunk).
 % relations.
-find_bed_beneath(2,dog,beneath_trunk).
-find_bed_beneath(2,dog,beneath_hollow_trunk).
-find(2,dog,bed).
+aos(2,find_bed_beneath,dog,beneath_trunk).
+aos(2,find_bed_beneath,dog,beneath_hollow_trunk).
+aos(2,find,dog,bed).
 %% when the morning dawned the cock as usual crowed very loudly several times.
 % dependencies.
 root(3,root,dawn).
@@ -81,27 +81,27 @@ advmod(3,crow,loudly).
 amod(3,time,several).
 nmod:tmod(3,crow,time).
 % relations.
-dawn_cock_as(3,morning,usual_crow_loudly_time).
-dawn_cock_as(3,morning,usual).
-dawn_as(3,morning,usual_crow).
-dawn_cock_as(3,morning,usual_crow_time).
-dawn_as(3,morning,usual_crow_loudly).
-dawn_cock_as(3,morning,usual_crow_loudly_several_time).
-dawn(3,morning,cock).
-dawn_cock_as(3,morning,usual_crow_very_loudly).
-dawn_cock_as(3,morning,usual_crow_several_time).
-dawn_cock_as(3,morning,usual_crow_loudly).
-dawn_as(3,morning,usual_crow_loudly_several_time).
-dawn_as(3,morning,usual_crow_several_time).
-dawn_as(3,morning,usual_crow_time).
-dawn_cock_as(3,morning,usual_crow_very_loudly_several_time).
-dawn_as(3,morning,usual_crow_loudly_time).
-dawn_cock_as(3,morning,usual_crow_very_loudly_time).
-dawn_as(3,morning,usual_crow_very_loudly_several_time).
-dawn_as(3,morning,usual).
-dawn_as(3,morning,usual_crow_very_loudly).
-dawn_cock_as(3,morning,usual_crow).
-dawn_as(3,morning,usual_crow_very_loudly_time).
+aos(3,dawn_cock_as,morning,usual_crow_loudly_time).
+aos(3,dawn_cock_as,morning,usual).
+aos(3,dawn_as,morning,usual_crow).
+aos(3,dawn_cock_as,morning,usual_crow_time).
+aos(3,dawn_as,morning,usual_crow_loudly).
+aos(3,dawn_cock_as,morning,usual_crow_loudly_several_time).
+aos(3,dawn,morning,cock).
+aos(3,dawn_cock_as,morning,usual_crow_very_loudly).
+aos(3,dawn_cock_as,morning,usual_crow_several_time).
+aos(3,dawn_cock_as,morning,usual_crow_loudly).
+aos(3,dawn_as,morning,usual_crow_loudly_several_time).
+aos(3,dawn_as,morning,usual_crow_several_time).
+aos(3,dawn_as,morning,usual_crow_time).
+aos(3,dawn_cock_as,morning,usual_crow_very_loudly_several_time).
+aos(3,dawn_as,morning,usual_crow_loudly_time).
+aos(3,dawn_cock_as,morning,usual_crow_very_loudly_time).
+aos(3,dawn_as,morning,usual_crow_very_loudly_several_time).
+aos(3,dawn_as,morning,usual).
+aos(3,dawn_as,morning,usual_crow_very_loudly).
+aos(3,dawn_cock_as,morning,usual_crow).
+aos(3,dawn_as,morning,usual_crow_very_loudly_time).
 %% a fox heard the sound and wishing to make a breakfast on him came and stood under the branches saying how earnestly he desired to make the acquaintance of the owner of so magnificent a voice.
 % dependencies.
 root(4,root,hear).
@@ -145,9 +145,9 @@ amod(4,voice,magnificent).
 det(4,voice,a).
 nmod:of(4,owner,voice).
 % relations.
-stand_under(4,fox,branch).
-hear(4,fox,sound).
-stand(4,fox,say).
+aos(4,stand_under,fox,branch).
+aos(4,hear,fox,sound).
+aos(4,stand,fox,say).
 %% the cock suspecting his civilities said.
 % dependencies.
 root(5,root,say).
@@ -196,19 +196,19 @@ conj:and(6,open,let).
 dobj(6,let,you).
 nmod(6,let,in).
 % relations.
-let(6,he,you).
-do(6,you,favor_go_around_to_hollow_trunk).
-do(6,you,favor_go).
-do(6,you,favor_go_to_trunk).
-may_open(6,he,door).
-do(6,you,I).
-do(6,you,favor_go_to_hollow_trunk).
-do(6,you,favor_go_around_to_hollow_trunk_below_I).
-do(6,you,favor_go_around).
-do(6,you,favor_go_around_to_trunk).
-do(6,you,favor_go_around_to_trunk_below_I).
-do(6,you,favor_go_to_hollow_trunk_below_I).
-do(6,you,favor_go_to_trunk_below_I).
+aos(6,let,he,you).
+aos(6,do,you,favor_go_around_to_hollow_trunk).
+aos(6,do,you,favor_go).
+aos(6,do,you,favor_go_to_trunk).
+aos(6,may_open,he,door).
+aos(6,do,you,I).
+aos(6,do,you,favor_go_to_hollow_trunk).
+aos(6,do,you,favor_go_around_to_hollow_trunk_below_I).
+aos(6,do,you,favor_go_around).
+aos(6,do,you,favor_go_around_to_trunk).
+aos(6,do,you,favor_go_around_to_trunk_below_I).
+aos(6,do,you,favor_go_to_hollow_trunk_below_I).
+aos(6,do,you,favor_go_to_trunk_below_I).
 %% when the fox approached the tree the dog sprang out and caught him and tore him to pieces.
 % dependencies.
 root(7,root,approach).
@@ -233,6 +233,6 @@ dobj(7,tear,he).
 case(7,piece,to).
 nmod:to(7,tear,piece).
 % relations.
-approach(7,fox,tree).
-tear(7,fox,he).
-catch(7,dog,he).
+aos(7,approach,fox,tree).
+aos(7,tear,fox,he).
+aos(7,catch,dog,he).

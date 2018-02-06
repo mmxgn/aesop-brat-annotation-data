@@ -20,10 +20,10 @@ compound:prt(0,give,up).
 det(0,chase,the).
 dobj(0,give,chase).
 % relations.
-hare_after(0,chase,run).
-hare_from(0,chase,he_lair).
-give_up(0,hare,chase).
-hare_after(0,chase,long_run).
+aos(0,hare_after,chase,run).
+aos(0,hare_from,chase,he_lair).
+aos(0,give_up,hare,chase).
+aos(0,hare_after,chase,long_run).
 %% a goat-herd seeing him stop mocked him saying.
 % dependencies.
 root(1,root,mock).
@@ -48,10 +48,10 @@ case(2,two,of).
 det(2,two,the).
 nmod:of(2,runner,two).
 % relations.
-be(2,little_one,runner).
-be_runner_of(2,little_one,two).
-be(2,little_one,best_runner).
-be_best_runner_of(2,little_one,two).
+aos(2,be,little_one,runner).
+aos(2,be_runner_of,little_one,two).
+aos(2,be,little_one,best_runner).
+aos(2,be_best_runner_of,little_one,two).
 %% the hound replied.
 % dependencies.
 root(3,root,reply).

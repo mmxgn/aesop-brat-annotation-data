@@ -61,11 +61,11 @@ nmod:poss(1,deprivation,he).
 amod(1,deprivation,own).
 nmod:for(1,make,deprivation).
 % relations.
-be_thus_make_up_for(1,burden,he_deprivation).
-be_make_up_for(1,burden,he_deprivation).
-be_thus_make_up_for(1,burden,he_own_deprivation).
-be(1,he,expose).
-be_make_up_for(1,burden,he_own_deprivation).
+aos(1,be_thus_make_up_for,burden,he_deprivation).
+aos(1,be_make_up_for,burden,he_deprivation).
+aos(1,be_thus_make_up_for,burden,he_own_deprivation).
+aos(1,be,he,expose).
+aos(1,be_make_up_for,burden,he_own_deprivation).
 %% he assembled a good many foxes and publicly advised them to cut off their tails saying that they would not only look much better without them but that they would get rid of the weight of the brush which was a very great inconvenience.
 % dependencies.
 root(2,root,assemble).
@@ -117,13 +117,13 @@ advmod(2,great,very).
 amod(2,inconvenience,great).
 acl:relcl(2,brush,inconvenience).
 % relations.
-assemble(2,he,good_fox).
-assemble(2,he,many_fox).
-assemble(2,he,good_many_fox).
-assemble(2,he,fox).
-advise(2,he,they).
-publicly_advise(2,he,they).
-cut_off(2,they,they_tail).
+aos(2,assemble,he,good_fox).
+aos(2,assemble,he,many_fox).
+aos(2,assemble,he,good_many_fox).
+aos(2,assemble,he,fox).
+aos(2,advise,he,they).
+aos(2,publicly_advise,he,they).
+aos(2,cut_off,they,they_tail).
 %% one of them interrupting him said.
 % dependencies.
 root(3,root,say).
@@ -133,7 +133,7 @@ nsubj(3,interrupt,they).
 acl:of(3,one,interrupt).
 dobj(3,interrupt,he).
 % relations.
-interrupt(3,they,he).
+aos(3,interrupt,they,he).
 %% if you had not yourself lost your tail my friend you would not thus counsel us.
 % dependencies.
 root(4,root,have).

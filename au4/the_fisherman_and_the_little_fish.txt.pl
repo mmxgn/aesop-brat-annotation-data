@@ -27,7 +27,7 @@ nmod:poss(0,labor,day).
 case(0,day,'s).
 nmod:of(0,result,labor).
 % relations.
-of(0,day,labor).
+aos(0,of,day,labor).
 %% the fish panting convulsively thus entreated for his life.
 % dependencies.
 root(1,root,entreat).
@@ -40,10 +40,10 @@ case(1,life,for).
 nmod:poss(1,life,he).
 nmod:for(1,entreat,life).
 % relations.
-entreat_for(1,fish_panting,he_life).
-thus_entreat_for(1,fish_panting,he_life).
-convulsively_entreat_for(1,fish_panting,he_life).
-convulsively_thus_entreat_for(1,fish_panting,he_life).
+aos(1,entreat_for,fish_panting,he_life).
+aos(1,thus_entreat_for,fish_panting,he_life).
+aos(1,convulsively_entreat_for,fish_panting,he_life).
+aos(1,convulsively_thus_entreat_for,fish_panting,he_life).
 %% o sir what good can i be to you and how little am i worth.
 % dependencies.
 root(2,root,sir).
@@ -90,7 +90,7 @@ case(4,sea,into).
 det(4,sea,the).
 nmod:into(4,spare,sea).
 % relations.
-spare(4,pray,my_life).
+aos(4,spare,pray,my_life).
 %% i shall soon become a large fish fit for the tables of the rich and then you can catch me again and make a handsome profit of me.
 % dependencies.
 root(5,root,become).
@@ -124,22 +124,22 @@ dobj(5,make,profit).
 case(5,I,of).
 nmod:of(5,profit,I).
 % relations.
-shall_become(5,i,large_fish_fit).
-shall_become_for(5,i,table).
-can_catch(5,you,I).
-make(5,you,handsome_profit).
-shall_soon_become(5,i,large_fish_fit).
-make(5,you,profit_of_I).
-shall_become(5,i,fish_fit).
-shall_soon_become_for(5,i,table_of_rich).
-shall_become_for(5,i,table_of_rich).
-profit_of(5,make,I).
-can_catch_again(5,you,I).
-shall_soon_become_for(5,i,table).
-make(5,you,profit).
-make(5,you,handsome_profit_of_I).
-shall_soon_become(5,i,fish_fit).
-handsome_profit_of(5,make,I).
+aos(5,shall_become,i,large_fish_fit).
+aos(5,shall_become_for,i,table).
+aos(5,can_catch,you,I).
+aos(5,make,you,handsome_profit).
+aos(5,shall_soon_become,i,large_fish_fit).
+aos(5,make,you,profit_of_I).
+aos(5,shall_become,i,fish_fit).
+aos(5,shall_soon_become_for,i,table_of_rich).
+aos(5,shall_become_for,i,table_of_rich).
+aos(5,profit_of,make,I).
+aos(5,can_catch_again,you,I).
+aos(5,shall_soon_become_for,i,table).
+aos(5,make,you,profit).
+aos(5,make,you,handsome_profit_of_I).
+aos(5,shall_soon_become,i,fish_fit).
+aos(5,handsome_profit_of,make,I).
 %% the fisherman replied.
 % dependencies.
 root(6,root,reply).
@@ -175,16 +175,16 @@ amod(7,gain,present).
 amod(7,gain,certain).
 dobj(7,forego,gain).
 % relations.
-should(7,i,should_very_simple_fellow).
-should(7,i,should_fellow).
-be(7,i,simple).
-should(7,i,should_simple_fellow).
-be_for(7,i,chance_of_uncertain_profit).
-should(7,i,should_indeed_very_simple_fellow).
-should(7,i,should_indeed_simple_fellow).
-forego(7,i,my_present_gain).
-forego(7,i,my_gain).
-forego(7,i,my_certain_gain).
-be_for(7,i,chance).
-forego(7,i,my_present_certain_gain).
-should(7,i,should_indeed_fellow).
+aos(7,should,i,should_very_simple_fellow).
+aos(7,should,i,should_fellow).
+aos(7,be,i,simple).
+aos(7,should,i,should_simple_fellow).
+aos(7,be_for,i,chance_of_uncertain_profit).
+aos(7,should,i,should_indeed_very_simple_fellow).
+aos(7,should,i,should_indeed_simple_fellow).
+aos(7,forego,i,my_present_gain).
+aos(7,forego,i,my_gain).
+aos(7,forego,i,my_certain_gain).
+aos(7,be_for,i,chance).
+aos(7,forego,i,my_present_certain_gain).
+aos(7,should,i,should_indeed_fellow).

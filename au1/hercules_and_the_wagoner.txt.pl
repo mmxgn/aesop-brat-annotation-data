@@ -20,11 +20,11 @@ case(0,rut,into).
 det(0,rut,a).
 nmod:into(0,sink,rut).
 % relations.
-sink_into(0,wheel,rut).
-be_drive(0,carter,wagon_along_country_lane).
-sink_deep_into(0,wheel,rut).
-sink_down_deep_into(0,wheel,rut).
-be_drive(0,carter,wagon).
+aos(0,sink_into,wheel,rut).
+aos(0,be_drive,carter,wagon_along_country_lane).
+aos(0,sink_deep_into,wheel,rut).
+aos(0,sink_down_deep_into,wheel,rut).
+aos(0,be_drive,carter,wagon).
 %% the rustic driver stupefied and aghast stood looking at the wagon and did nothing but utter loud cries to hercules to come and help him.
 % dependencies.
 root(1,root,stupefy).
@@ -59,13 +59,13 @@ xcomp(1,cry,help).
 conj:and(1,come,help).
 dobj(1,come,he).
 % relations.
-do(1,aghast,nothing).
-cry(1,utter,come).
-come(1,utter,he).
-loud_cry_to(1,utter,hercule).
-look_at(1,aghast,wagon).
-loud_cry(1,utter,come).
-cry_to(1,utter,hercule).
+aos(1,do,aghast,nothing).
+aos(1,cry,utter,come).
+aos(1,come,utter,he).
+aos(1,loud_cry_to,utter,hercule).
+aos(1,look_at,aghast,wagon).
+aos(1,loud_cry,utter,come).
+aos(1,cry_to,utter,hercule).
 %% hercules it is said appeared and thus addressed him.
 % dependencies.
 root(2,root,say).
@@ -90,7 +90,7 @@ nmod:to(3,put,wheel).
 nmod:poss(3,man,my).
 nsubj(3,put,man).
 % relations.
-put(3,my_man,you_shoulder).
+aos(3,put,my_man,you_shoulder).
 %% goad on your bullocks and never more pray to me for help until you have done your best to help yourself or depend upon it you will henceforth pray in vain.
 % dependencies.
 root(4,root,pray).
@@ -127,8 +127,8 @@ advmod(4,pray,henceforth).
 case(4,vain,in).
 nmod:in(4,pray,vain).
 % relations.
-will_henceforth_pray_in(4,goad,vain).
-will_pray_in(4,goad,vain).
+aos(4,will_henceforth_pray_in,goad,vain).
+aos(4,will_pray_in,goad,vain).
 %% self-help is the best help.
 % dependencies.
 root(5,root,help).
@@ -137,5 +137,5 @@ cop(5,help,be).
 det(5,help,the).
 amod(5,help,best).
 % relations.
-be(5,self-help,help).
-be(5,self-help,best_help).
+aos(5,be,self-help,help).
+aos(5,be,self-help,best_help).

@@ -40,10 +40,10 @@ case(1,companion,from).
 nmod:poss(1,companion,he).
 nmod:from(1,ring,companion).
 % relations.
-ring_from(1,laugh,he_companion).
-ring_forth_from(1,laugh,he_companion).
-ring_forth_from(1,loud_laugh,he_companion).
-ring_from(1,loud_laugh,he_companion).
+aos(1,ring_from,laugh,he_companion).
+aos(1,ring_forth_from,laugh,he_companion).
+aos(1,ring_forth_from,loud_laugh,he_companion).
+aos(1,ring_from,loud_laugh,he_companion).
 %% he pulled up his horse and with great glee joined in the joke by saying.
 % dependencies.
 root(2,root,pull).
@@ -63,11 +63,11 @@ nmod:in(2,join,joke).
 mark(2,say,by).
 advcl:by(2,join,say).
 % relations.
-join(2,he,say).
-join_with(2,he,glee).
-join_with(2,he,great_glee).
-pull_up(2,he,he_horse).
-join_in(2,he,joke).
+aos(2,join,he,say).
+aos(2,join_with,he,glee).
+aos(2,join_with,he,great_glee).
+aos(2,pull_up,he,he_horse).
+aos(2,join_in,he,joke).
 %% what a marvel it is that hairs which are not mine should fly from me when they have forsaken even the man on whose head they grew.
 % dependencies.
 root(3,root,marvel).

@@ -32,9 +32,9 @@ case(1,lake,into).
 det(1,lake,the).
 nmod:into(1,cast,lake).
 % relations.
-cast_down_log_into(1,he,lake).
-cast_down(1,he,log).
-cast_down(1,he,huge_log).
+aos(1,cast_down_log_into,he,lake).
+aos(1,cast_down,he,log).
+aos(1,cast_down,he,huge_log).
 %% the frogs were terrified at the splash occasioned by its fall and hid themselves in the depths of the pool.
 % dependencies.
 root(2,root,terrify).
@@ -59,11 +59,11 @@ case(2,pool,of).
 det(2,pool,the).
 nmod:of(2,depths,pool).
 % relations.
-be(2,frog,terrify).
-be_terrify_at(2,frog,splash).
-be_terrify_at(2,frog,splash_occasion_by_its_fall).
-be_terrify_at(2,frog,splash_occasion).
-hide(2,frog,themselves).
+aos(2,be,frog,terrify).
+aos(2,be_terrify_at,frog,splash).
+aos(2,be_terrify_at,frog,splash_occasion_by_its_fall).
+aos(2,be_terrify_at,frog,splash_occasion).
+aos(2,hide,frog,themselves).
 %% but as soon as they realized that the huge log was motionless they swam again to the top of the water dismissed their fears climbed up and began squatting on it in contempt.
 % dependencies.
 root(3,root,soon).
@@ -102,14 +102,14 @@ nmod:on(3,squat,it).
 case(3,contempt,in).
 nmod:in(3,squat,contempt).
 % relations.
-swim_to(3,they,top).
-be(3,log,motionless).
-be(3,huge_log,motionless).
-begin(3,they_fear,squat).
-begin(3,they_fear,squat_on_it_in_contempt).
-swim_again_to(3,they,top).
-begin(3,they_fear,squat_in_contempt).
-begin(3,they_fear,squat_on_it).
+aos(3,swim_to,they,top).
+aos(3,be,log,motionless).
+aos(3,be,huge_log,motionless).
+aos(3,begin,they_fear,squat).
+aos(3,begin,they_fear,squat_on_it_in_contempt).
+aos(3,swim_again_to,they,top).
+aos(3,begin,they_fear,squat_in_contempt).
+aos(3,begin,they_fear,squat_on_it).
 %% after some time they began to think themselves ill-treated in the appointment of so inert a ruler and sent a second deputation to jupiter to pray that he would set over them another sovereign.
 % dependencies.
 root(4,root,begin).
@@ -149,22 +149,22 @@ nmod:over(4,set,they).
 det(4,sovereign,another).
 nmod:tmod(4,set,sovereign).
 % relations.
-ill-treated_in(4,themselves,appointment_of_so_inert_ruler).
-ill-treated_in(4,themselves,appointment_of_inert_ruler).
-set_over(4,he,they).
-think(4,they,themselves_ill-treated_in_appointment_of_so_inert_ruler).
-think(4,they,themselves_ill-treated_in_appointment).
-send_deputation(4,they,pray).
-think(4,they,themselves_ill-treated_in_appointment_of_ruler).
-send(4,they,deputation).
-think(4,they,themselves_ill-treated).
-think(4,they,themselves_ill-treated_in_appointment_of_inert_ruler).
-begin_after(4,they,time).
-ill-treated_in(4,themselves,appointment).
-send(4,they,second_deputation).
-send_deputation_to(4,they,jupiter).
-ill-treated_in(4,themselves,appointment_of_ruler).
-begin(4,they,think).
+aos(4,ill-treated_in,themselves,appointment_of_so_inert_ruler).
+aos(4,ill-treated_in,themselves,appointment_of_inert_ruler).
+aos(4,set_over,he,they).
+aos(4,think,they,themselves_ill-treated_in_appointment_of_so_inert_ruler).
+aos(4,think,they,themselves_ill-treated_in_appointment).
+aos(4,send_deputation,they,pray).
+aos(4,think,they,themselves_ill-treated_in_appointment_of_ruler).
+aos(4,send,they,deputation).
+aos(4,think,they,themselves_ill-treated).
+aos(4,think,they,themselves_ill-treated_in_appointment_of_inert_ruler).
+aos(4,begin_after,they,time).
+aos(4,ill-treated_in,themselves,appointment).
+aos(4,send,they,second_deputation).
+aos(4,send_deputation_to,they,jupiter).
+aos(4,ill-treated_in,themselves,appointment_of_ruler).
+aos(4,begin,they,think).
 %% he then gave them an eel to govern them.
 % dependencies.
 root(5,root,give).
@@ -177,7 +177,7 @@ mark(5,govern,to).
 acl:to(5,eel,govern).
 dobj(5,govern,they).
 % relations.
-give(5,he,they).
+aos(5,give,he,they).
 %% when the frogs discovered his easy good nature they sent yet a third time to jupiter to beg him to choose for them still another king.
 % dependencies.
 root(6,root,discover).
@@ -209,13 +209,13 @@ advmod(6,choose,still).
 det(6,king,another).
 nmod:npmod(6,still,king).
 % relations.
-discover(6,frog,he_nature).
-discover(6,frog,he_easy_nature).
-beg(6,they,he).
-discover(6,frog,he_easy_good_nature).
-choose_still_for(6,he,they).
-discover(6,frog,he_good_nature).
-choose_for(6,he,they).
+aos(6,discover,frog,he_nature).
+aos(6,discover,frog,he_easy_nature).
+aos(6,beg,they,he).
+aos(6,discover,frog,he_easy_good_nature).
+aos(6,choose_still_for,he,they).
+aos(6,discover,frog,he_good_nature).
+aos(6,choose_for,he,they).
 %% jupiter displeased with all their complaints sent a heron who preyed upon the frogs day by day till there were none left to croak upon the lake.
 % dependencies.
 root(7,root,jupiter).

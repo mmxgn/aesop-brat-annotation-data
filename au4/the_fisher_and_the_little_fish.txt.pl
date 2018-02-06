@@ -15,10 +15,10 @@ det(0,fish,a).
 amod(0,fish,little).
 dobj(0,catch,fish).
 % relations.
-catch(0,fisher,fish).
-catch(0,fisher,only_little_fish).
-catch(0,fisher,only_fish).
-catch(0,fisher,little_fish).
+aos(0,catch,fisher,fish).
+aos(0,catch,fisher,only_little_fish).
+aos(0,catch,fisher,only_fish).
+aos(0,catch,fisher,little_fish).
 %% pray let me go master.
 % dependencies.
 root(1,root,pray).
@@ -27,7 +27,7 @@ nsubj(1,go,I).
 ccomp(1,let,go).
 dobj(1,go,master).
 % relations.
-go(1,I,master).
+aos(1,go,I,master).
 %% said the fish.
 % dependencies.
 root(2,root,say).
@@ -47,18 +47,18 @@ nmod:for(3,much,eating).
 advmod(3,much,just).
 nsubj(3,much,now).
 % relations.
-am_much_small_for(3,now,you_eating).
-much_for(3,now,you_eating).
-am_much_small_just_for(3,now,you_eating).
-much_small_for(3,now,you_eating).
-much_small_just_for(3,now,you_eating).
-am_much_too_small_just_for(3,now,you_eating).
-am_much_for(3,now,you_eating).
-am_much_too_small_for(3,now,you_eating).
-much_just_for(3,now,you_eating).
-am_much_just_for(3,now,you_eating).
-much_too_small_just_for(3,now,you_eating).
-much_too_small_for(3,now,you_eating).
+aos(3,am_much_small_for,now,you_eating).
+aos(3,much_for,now,you_eating).
+aos(3,am_much_small_just_for,now,you_eating).
+aos(3,much_small_for,now,you_eating).
+aos(3,much_small_just_for,now,you_eating).
+aos(3,am_much_too_small_just_for,now,you_eating).
+aos(3,am_much_for,now,you_eating).
+aos(3,am_much_too_small_for,now,you_eating).
+aos(3,much_just_for,now,you_eating).
+aos(3,am_much_just_for,now,you_eating).
+aos(3,much_too_small_just_for,now,you_eating).
+aos(3,much_too_small_for,now,you_eating).
 %% if you put me back into the river i shall soon grow then you can make a fine meal off me.
 % dependencies.
 root(4,root,put).
@@ -83,11 +83,11 @@ dobj(4,make,meal).
 case(4,I,off).
 nmod:off(4,make,I).
 % relations.
-put(4,you,I).
-make_meal_off(4,you,I).
-put_back(4,you,I).
-make(4,you,fine_meal).
-make(4,you,meal).
+aos(4,put,you,I).
+aos(4,make_meal_off,you,I).
+aos(4,put_back,you,I).
+aos(4,make,you,fine_meal).
+aos(4,make,you,meal).
 %% nay nay my little fish.
 % dependencies.
 root(5,root,nay).
@@ -109,8 +109,8 @@ advmod(7,have,i).
 dobj(7,have,you).
 nsubj(7,have,now).
 % relations.
-have(7,now,you).
-i_have(7,now,you).
+aos(7,have,now,you).
+aos(7,i_have,now,you).
 %% i may not catch you hereafter.
 % dependencies.
 root(8,root,catch).
@@ -137,15 +137,15 @@ nmod:than(9,worth,thing).
 case(9,prospect,in).
 nmod:in(9,thing,prospect).
 % relations.
-be_worth_than(9,little_thing,thing).
-be_worth_than(9,thing,thing).
-be_worth_than(9,little_thing,thing_in_prospect).
-be(9,little_thing,worth).
-be_worth_than(9,thing,great_thing).
-be_in(9,great_thing,prospect).
-be_in(9,little_thing,hand).
-be_worth_than(9,little_thing,great_thing_in_prospect).
-be(9,thing,worth).
-be_worth_than(9,little_thing,great_thing).
-be_worth_than(9,thing,great_thing_in_prospect).
-be_worth_than(9,thing,thing_in_prospect).
+aos(9,be_worth_than,little_thing,thing).
+aos(9,be_worth_than,thing,thing).
+aos(9,be_worth_than,little_thing,thing_in_prospect).
+aos(9,be,little_thing,worth).
+aos(9,be_worth_than,thing,great_thing).
+aos(9,be_in,great_thing,prospect).
+aos(9,be_in,little_thing,hand).
+aos(9,be_worth_than,little_thing,great_thing_in_prospect).
+aos(9,be,thing,worth).
+aos(9,be_worth_than,little_thing,great_thing).
+aos(9,be_worth_than,thing,great_thing_in_prospect).
+aos(9,be_worth_than,thing,thing_in_prospect).

@@ -19,10 +19,10 @@ mark(0,eat,for).
 advcl:for(0,find,eat).
 dobj(0,eat,he).
 % relations.
-find(0,he,excuse).
-catch(0,cat,cock).
-find(0,he,reasonable_excuse).
-eat(0,he,he).
+aos(0,find,he,excuse).
+aos(0,catch,cat,cock).
+aos(0,find,he,reasonable_excuse).
+aos(0,eat,he,he).
 %% he accused him of being a nuisance to men by crowing in the nighttime and not permitting them to sleep.
 % dependencies.
 root(1,root,accuse).
@@ -48,9 +48,9 @@ nsubj:xsubj(1,sleep,they).
 mark(1,sleep,to).
 xcomp(1,permit,sleep).
 % relations.
-accuse(1,he,he).
-be_nuisance_to(1,he,man).
-be(1,he,nuisance).
+aos(1,accuse,he,he).
+aos(1,be_nuisance_to,he,man).
+aos(1,be,he,nuisance).
 %% the cock defended himself by saying that he did this for the benefit of men that they might rise in time for their labors.
 % dependencies.
 root(2,root,defend).
@@ -78,7 +78,7 @@ case(2,labor,for).
 nmod:poss(2,labor,they).
 nmod:for(2,time,labor).
 % relations.
-defend(2,cock,himself).
+aos(2,defend,cock,himself).
 %% the cat replied.
 % dependencies.
 root(3,root,reply).
@@ -109,5 +109,5 @@ dobj(5,make,meal).
 case(5,he,of).
 nmod:of(5,meal,he).
 % relations.
-make(5,he,meal).
-make(5,he,meal_of_he).
+aos(5,make,he,meal).
+aos(5,make,he,meal_of_he).

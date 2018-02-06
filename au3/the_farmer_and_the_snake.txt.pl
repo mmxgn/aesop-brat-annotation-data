@@ -32,8 +32,8 @@ case(1,bosom,in).
 nmod:poss(1,bosom,he).
 nmod:in(1,place,bosom).
 % relations.
-have(1,he,compassion).
-have(1,he,compassion_on_it).
+aos(1,have,he,compassion).
+aos(1,have,he,compassion_on_it).
 %% the snake was quickly revived by the warmth and resuming its natural instincts bit its benefactor inflicting on him a mortal wound.
 % dependencies.
 root(2,root,bite).
@@ -61,11 +61,11 @@ det(2,wound,a).
 amod(2,wound,mortal).
 nsubj(2,bite,wound).
 % relations.
-resume(2,snake,its_natural_instinct).
-bite(2,mortal_wound,its_benefactor).
-inflict_on(2,its_benefactor,he).
-resume(2,snake,its_instinct).
-bite(2,wound,its_benefactor).
+aos(2,resume,snake,its_natural_instinct).
+aos(2,bite,mortal_wound,its_benefactor).
+aos(2,inflict_on,its_benefactor,he).
+aos(2,resume,snake,its_instinct).
+aos(2,bite,wound,its_benefactor).
 %% oh.
 % dependencies.
 root(3,root,oh).
@@ -80,7 +80,7 @@ nmod:poss(4,breath,he).
 amod(4,breath,last).
 nmod:with(4,farmer,breath).
 % relations.
-is_with(4,farmer,he_last_breath).
+aos(4,is_with,farmer,he_last_breath).
 %% i am rightly served for pitying a scoundrel.
 % dependencies.
 root(5,root,serve).
@@ -92,6 +92,6 @@ advcl:for(5,serve,pity).
 det(5,scoundrel,a).
 dobj(5,pity,scoundrel).
 % relations.
-pity(5,i,scoundrel).
-be(5,i,serve).
-be(5,i,rightly_serve).
+aos(5,pity,i,scoundrel).
+aos(5,be,i,serve).
+aos(5,be,i,rightly_serve).

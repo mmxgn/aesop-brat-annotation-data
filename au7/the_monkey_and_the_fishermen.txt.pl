@@ -23,12 +23,12 @@ conj:and(0,see,watch).
 nmod:poss(0,proceedings,they).
 dobj(0,watch,proceedings).
 % relations.
-perch_upon(0,monkey,lofty_tree).
-see(0,monkey,fisherman).
-cast(0,fisherman,they_net).
-perch_upon(0,monkey,tree).
-narrowly_watch(0,monkey,they_proceedings).
-watch(0,monkey,they_proceedings).
+aos(0,perch_upon,monkey,lofty_tree).
+aos(0,see,monkey,fisherman).
+aos(0,cast,fisherman,they_net).
+aos(0,perch_upon,monkey,tree).
+aos(0,narrowly_watch,monkey,they_proceedings).
+aos(0,watch,monkey,they_proceedings).
 %% the fishermen after a while gave up fishing and on going home to dinner left their nets upon the bank.
 % dependencies.
 root(1,root,leave).
@@ -53,7 +53,7 @@ case(1,bank,upon).
 det(1,bank,the).
 nmod:upon(1,leave,bank).
 % relations.
-leave(1,fisherman,they_net).
+aos(1,leave,fisherman,they_net).
 %% the monkey who is the most imitative of animals descended from the treetop and endeavored to do as they had done.
 % dependencies.
 root(2,root,descend).
@@ -106,9 +106,9 @@ cc(3,throw,and).
 acl:relcl(3,net,drown).
 conj:but(3,throw,drown).
 % relations.
-become(3,he,tangled).
-throw(3,he,it).
-become_in(3,he,mesh).
+aos(3,become,he,tangled).
+aos(3,throw,he,it).
+aos(3,become_in,he,mesh).
 %% with his last breath he said to himself.
 % dependencies.
 root(4,root,say).
@@ -120,9 +120,9 @@ nsubj(4,say,he).
 case(4,himself,to).
 nmod:to(4,say,himself).
 % relations.
-say_with(4,he,he_last_breath).
-say_to(4,he,himself).
-say_with(4,he,he_breath).
+aos(4,say_with,he,he_last_breath).
+aos(4,say_to,he,himself).
+aos(4,say_with,he,he_breath).
 %% i am rightly served.
 % dependencies.
 root(5,root,serve).
@@ -130,8 +130,8 @@ nsubjpass(5,serve,i).
 auxpass(5,serve,be).
 advmod(5,serve,rightly).
 % relations.
-be(5,i,serve).
-be(5,i,rightly_serve).
+aos(5,be,i,serve).
+aos(5,be,i,rightly_serve).
 %% for what business had i who had never handled a net to try and catch fish.
 % dependencies.
 root(6,root,have).

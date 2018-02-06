@@ -43,9 +43,9 @@ nsubj(0,like,he).
 cop(0,like,be).
 ccomp(0,see,like).
 % relations.
-be(0,he,allow).
-take(0,he,he).
-take_home(0,he,he).
+aos(0,be,he,allow).
+aos(0,take,he,he).
+aos(0,take_home,he,he).
 %% when he reached home he put him into his stable along with the other asses.
 % dependencies.
 root(1,root,reach).
@@ -64,7 +64,7 @@ det(1,ass,the).
 amod(1,ass,other).
 nmod:along_with(1,put,ass).
 % relations.
-put(1,he,he).
+aos(1,put,he,he).
 %% the newcomer took a look round and immediately went and chose a place next to the laziest and greediest beast in the stable.
 % dependencies.
 root(2,root,take).
@@ -94,14 +94,14 @@ case(2,stable,in).
 det(2,stable,the).
 nmod:in(2,beast,stable).
 % relations.
-take(2,newcomer,look_round).
-take_look_round_next_to(2,newcomer,beast).
-take_look_round_next_to(2,newcomer,beast_in_stable).
-immediately_go(2,newcomer,place).
-go(2,newcomer,place).
-take_look_round_next_to(2,newcomer,laziest_beast).
-take_look_round_next_to(2,newcomer,laziest_beast_in_stable).
-is_in(2,laziest_beast,stable).
+aos(2,take,newcomer,look_round).
+aos(2,take_look_round_next_to,newcomer,beast).
+aos(2,take_look_round_next_to,newcomer,beast_in_stable).
+aos(2,immediately_go,newcomer,place).
+aos(2,go,newcomer,place).
+aos(2,take_look_round_next_to,newcomer,laziest_beast).
+aos(2,take_look_round_next_to,newcomer,laziest_beast_in_stable).
+aos(2,is_in,laziest_beast,stable).
 %% when the master saw this he put a halter on him at once and led him off and handed him over to his owner again.
 % dependencies.
 root(3,root,see).
@@ -133,12 +133,12 @@ nmod:poss(3,owner,he).
 nmod:to(3,hand,owner).
 advmod(3,hand,again).
 % relations.
-put(3,he,halter).
-lead_off(3,he,he).
-hand(3,master,he).
-put_halter_at(3,he,once).
-put_halter_on(3,he,he).
-hand_again(3,master,he).
+aos(3,put,he,halter).
+aos(3,lead_off,he,he).
+aos(3,hand,master,he).
+aos(3,put_halter_at,he,once).
+aos(3,put_halter_on,he,he).
+aos(3,hand_again,master,he).
 %% the latter was a good deal surprised to seem him back so soon and said.
 % dependencies.
 root(4,root,deal).
@@ -158,9 +158,9 @@ cc(4,surprise,and).
 acl:relcl(4,deal,say).
 conj:and(4,surprise,say).
 % relations.
-be_deal(4,latter,surprise).
-be_good_deal(4,latter,surprise).
-be(4,latter,good).
+aos(4,be_deal,latter,surprise).
+aos(4,be_good_deal,latter,surprise).
+aos(4,be,latter,good).
 %% why do you mean to say you have tested him already.
 % dependencies.
 root(5,root,mean).
@@ -176,7 +176,7 @@ ccomp(5,say,test).
 xcomp(5,test,he).
 advmod(5,he,already).
 % relations.
-do_mean(5,you,say).
+aos(5,do_mean,you,say).
 %% i do n't want to put him through any more tests.
 % dependencies.
 root(6,root,want).
@@ -217,4 +217,4 @@ acl:relcl(8,companion,choose).
 case(8,himself,for).
 nmod:for(8,choose,himself).
 % relations.
-choose_for(8,he,himself).
+aos(8,choose_for,he,himself).

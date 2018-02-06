@@ -18,19 +18,19 @@ case(0,kite,with).
 det(0,kite,a).
 nmod:with(0,sit,kite).
 % relations.
-overwhelm(0,eagle,sorrow_sit_upon_branch_of_tree_with_kite).
-sit_upon(0,sorrow,branch).
-overwhelm(0,eagle,sorrow_sit).
-sit_with(0,sorrow,kite).
-sit_upon(0,sorrow,branch_of_tree).
-overwhelm(0,eagle,sorrow_sit_upon_branch_with_kite).
-overwhelm(0,eagle,sorrow_sit_with_kite).
-is_in(0,tree,company).
-sit_upon(0,sorrow,branch_of_tree_in_company).
-overwhelm(0,eagle,sorrow_sit_upon_branch_of_tree_in_company_with_kite).
-overwhelm(0,eagle,sorrow_sit_upon_branch_of_tree).
-overwhelm(0,eagle,sorrow_sit_upon_branch).
-overwhelm(0,eagle,sorrow_sit_upon_branch_of_tree_in_company).
+aos(0,overwhelm,eagle,sorrow_sit_upon_branch_of_tree_with_kite).
+aos(0,sit_upon,sorrow,branch).
+aos(0,overwhelm,eagle,sorrow_sit).
+aos(0,sit_with,sorrow,kite).
+aos(0,sit_upon,sorrow,branch_of_tree).
+aos(0,overwhelm,eagle,sorrow_sit_upon_branch_with_kite).
+aos(0,overwhelm,eagle,sorrow_sit_with_kite).
+aos(0,is_in,tree,company).
+aos(0,sit_upon,sorrow,branch_of_tree_in_company).
+aos(0,overwhelm,eagle,sorrow_sit_upon_branch_of_tree_in_company_with_kite).
+aos(0,overwhelm,eagle,sorrow_sit_upon_branch_of_tree).
+aos(0,overwhelm,eagle,sorrow_sit_upon_branch).
+aos(0,overwhelm,eagle,sorrow_sit_upon_branch_of_tree_in_company).
 %% why.
 % dependencies.
 root(1,root,why).
@@ -53,7 +53,7 @@ det(3,look,a).
 amod(3,look,rueful).
 nmod:with(3,see,look).
 % relations.
-see(3,i,you).
+aos(3,see,i,you).
 %% '.
 % dependencies.
 root(4,root,').
@@ -123,9 +123,9 @@ case(11,plunder,by).
 nmod:poss(11,plunder,you).
 nmod:by(11,able,plunder).
 % relations.
-be_able_by(11,you,you_plunder).
-secure(11,you,means_of_living).
-secure(11,you,means).
+aos(11,be_able_by,you,you_plunder).
+aos(11,secure,you,means_of_living).
+aos(11,secure,you,means).
 %% '.
 % dependencies.
 root(12,root,').
@@ -146,7 +146,7 @@ case(13,talon,in).
 nmod:poss(13,talon,my).
 nmod:in(13,ostrich,talon).
 % relations.
-is_in(13,ostrich,my_talon).
+aos(13,is_in,ostrich,my_talon).
 %% the eagle persuaded by these words accepted him as her mate.
 % dependencies.
 root(14,root,accept).
@@ -161,7 +161,7 @@ case(14,mate,as).
 nmod:poss(14,mate,she).
 nmod:as(14,accept,mate).
 % relations.
-accept(14,eagle,he).
+aos(14,accept,eagle,he).
 %% shortly after the nuptials the eagle said.
 % dependencies.
 root(15,root,say).
@@ -172,8 +172,8 @@ nmod:after(15,say,nuptials).
 det(15,eagle,the).
 nsubj(15,say,eagle).
 % relations.
-say_after(15,eagle,nuptials).
-say_after(15,eagle,shortly_nuptials).
+aos(15,say_after,eagle,nuptials).
+aos(15,say_after,eagle,shortly_nuptials).
 %% fly off and bring me back the ostrich you promised me.
 % dependencies.
 root(16,root,fly).
@@ -188,8 +188,8 @@ nsubj(16,promise,you).
 dep(16,back,promise).
 dobj(16,promise,I).
 % relations.
-back(16,I,ostrich).
-promise(16,you,I).
+aos(16,back,I,ostrich).
+aos(16,promise,you,I).
 %% the kite soaring aloft into the air brought back the shabbiest possible mouse stinking from the length of time it had lain about the fields.
 % dependencies.
 root(17,root,bring).
@@ -218,15 +218,15 @@ case(17,field,about).
 det(17,field,the).
 nmod:about(17,lie,field).
 % relations.
-bring_back(17,kite,possible_mouse_stink_from_length).
-bring_back(17,kite,shabbiest_possible_mouse).
-soar_into(17,kite,air).
-bring_back(17,kite,shabbiest_possible_mouse_stink).
-bring_back(17,kite,possible_mouse_stink).
-soar_aloft_into(17,kite,air).
-bring_back(17,kite,possible_mouse).
-bring_back(17,kite,shabbiest_possible_mouse_stink_from_length).
-have_lie_about(17,it,field).
+aos(17,bring_back,kite,possible_mouse_stink_from_length).
+aos(17,bring_back,kite,shabbiest_possible_mouse).
+aos(17,soar_into,kite,air).
+aos(17,bring_back,kite,shabbiest_possible_mouse_stink).
+aos(17,bring_back,kite,possible_mouse_stink).
+aos(17,soar_aloft_into,kite,air).
+aos(17,bring_back,kite,possible_mouse).
+aos(17,bring_back,kite,shabbiest_possible_mouse_stink_from_length).
+aos(17,have_lie_about,it,field).
 %% is this.
 % dependencies.
 root(18,root,this).
@@ -287,5 +287,5 @@ case(22,performance,in).
 det(22,performance,the).
 nmod:in(22,fail,performance).
 % relations.
-might_attain(22,i,you_hand).
-might_attain(22,i,you_royal_hand).
+aos(22,might_attain,i,you_hand).
+aos(22,might_attain,i,you_royal_hand).

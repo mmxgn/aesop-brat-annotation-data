@@ -25,12 +25,12 @@ case(0,woman,of).
 det(0,woman,a).
 nmod:of(0,form,woman).
 % relations.
-change(0,cat,she).
-fall_in(0,cat,love).
-fall_with(0,cat,man).
-fall_with(0,cat,young_man).
-fall_with(0,cat,handsome_man).
-fall_with(0,cat,handsome_young_man).
+aos(0,change,cat,she).
+aos(0,fall_in,cat,love).
+aos(0,fall_with,cat,man).
+aos(0,fall_with,cat,young_man).
+aos(0,fall_with,cat,handsome_man).
+aos(0,fall_with,cat,handsome_young_man).
 %% venus consented to her request and transformed her into a beautiful damsel so that the youth saw her and loved her and took her home as his bride.
 % dependencies.
 root(1,root,consent).
@@ -66,11 +66,11 @@ case(1,bride,as).
 nmod:poss(1,bride,he).
 nmod:as(1,take,bride).
 % relations.
-see(1,youth,she).
-consent_to(1,venus,she_request).
-transform(1,venus,she).
-take(1,she,she_home).
-love(1,youth,she).
+aos(1,see,youth,she).
+aos(1,consent_to,venus,she_request).
+aos(1,transform,venus,she).
+aos(1,take,she,she_home).
+aos(1,love,youth,she).
 %% while the two were reclining in their chamber venus wishing to discover if the cat in her change of shape had also altered her habits of life let down a mouse in the middle of the room.
 % dependencies.
 root(2,root,recline).
@@ -111,15 +111,15 @@ case(2,room,of).
 det(2,room,the).
 nmod:of(2,middle,room).
 % relations.
-let_down(2,she_habit,mouse_in_middle).
-mouse_in(2,she_habit,middle_of_room).
-mouse_in(2,she_habit,middle).
-is_in(2,mouse,middle_of_room).
-let_down(2,she_habit,mouse_in_middle_of_room).
-is_in(2,cat,she_change_of_shape).
-be_recline_in(2,two,they_chamber_venus).
-be_recline_in(2,two,they_chamber_venus_wish).
-let_down(2,she_habit,mouse).
+aos(2,let_down,she_habit,mouse_in_middle).
+aos(2,mouse_in,she_habit,middle_of_room).
+aos(2,mouse_in,she_habit,middle).
+aos(2,is_in,mouse,middle_of_room).
+aos(2,let_down,she_habit,mouse_in_middle_of_room).
+aos(2,is_in,cat,she_change_of_shape).
+aos(2,be_recline_in,two,they_chamber_venus).
+aos(2,be_recline_in,two,they_chamber_venus_wish).
+aos(2,let_down,she_habit,mouse).
 %% the cat quite forgetting her present condition started up from the couch and pursued the mouse wishing to eat it.
 % dependencies.
 root(3,root,start).
@@ -144,13 +144,13 @@ mark(3,eat,to).
 xcomp(3,wish,eat).
 dobj(3,eat,it).
 % relations.
-forget(3,cat,she_condition).
-pursue(3,cat,mouse).
-pursue(3,cat,mouse_wish).
-quite_forget(3,cat,she_present_condition).
-quite_forget(3,cat,she_condition).
-forget(3,cat,she_present_condition).
-start_up_from(3,cat,couch).
+aos(3,forget,cat,she_condition).
+aos(3,pursue,cat,mouse).
+aos(3,pursue,cat,mouse_wish).
+aos(3,quite_forget,cat,she_present_condition).
+aos(3,quite_forget,cat,she_condition).
+aos(3,forget,cat,she_present_condition).
+aos(3,start_up_from,cat,couch).
 %% venus was much disappointed and again caused her to return to her former shape.
 % dependencies.
 root(4,root,disappointed).
@@ -170,8 +170,8 @@ nmod:poss(4,shape,she).
 amod(4,shape,former).
 nmod:to(4,return,shape).
 % relations.
-cause(4,venus,she).
-be(4,venus,disappointed).
-be(4,venus,much_disappointed).
-again_cause(4,venus,she).
-return_to(4,she,she_former_shape).
+aos(4,cause,venus,she).
+aos(4,be,venus,disappointed).
+aos(4,be,venus,much_disappointed).
+aos(4,again_cause,venus,she).
+aos(4,return_to,she,she_former_shape).

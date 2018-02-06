@@ -8,10 +8,10 @@ auxpass(0,overrun,be).
 case(0,mouse,with).
 nmod:with(0,overrun,mouse).
 % relations.
-be(0,house,overrun).
-be_overrun_with(0,certain_house,mouse).
-be(0,certain_house,overrun).
-be_overrun_with(0,house,mouse).
+aos(0,be,house,overrun).
+aos(0,be_overrun_with,certain_house,mouse).
+aos(0,be,certain_house,overrun).
+aos(0,be_overrun_with,house,mouse).
 %% a cat discovering this made her way into it and began to catch and eat them one by one.
 % dependencies.
 root(1,root,make).
@@ -37,7 +37,7 @@ nmod:by(1,catch,one).
 case(1,one,by).
 dep(1,one,one).
 % relations.
-make(1,cat,she_way).
+aos(1,make,cat,she_way).
 %% fearing for their lives the mice kept themselves close in their holes.
 % dependencies.
 root(2,root,fear).
@@ -53,8 +53,8 @@ case(2,hole,in).
 nmod:poss(2,hole,they).
 nmod:in(2,close,hole).
 % relations.
-keep(2,mouse,themselves_close_in_they_hole).
-keep(2,mouse,themselves_close).
+aos(2,keep,mouse,themselves_close_in_they_hole).
+aos(2,keep,mouse,themselves_close).
 %% the cat was no longer able to get at them and perceived that she must tempt them forth by some device.
 % dependencies.
 root(3,root,able).
@@ -81,10 +81,10 @@ case(3,device,by).
 det(3,device,some).
 nmod:by(3,forth,device).
 % relations.
-tempt(3,she,they).
-be(3,cat,able).
-tempt_forth(3,she,they).
-get_at(3,cat,they).
+aos(3,tempt,she,they).
+aos(3,be,cat,able).
+aos(3,tempt_forth,she,they).
+aos(3,get_at,cat,they).
 %% for this purpose she jumped upon a peg and suspending herself from it pretended to be dead.
 % dependencies.
 root(4,root,jump).
@@ -106,8 +106,8 @@ mark(4,dead,to).
 cop(4,dead,be).
 xcomp(4,pretend,dead).
 % relations.
-jump_for(4,she,purpose).
-jump(4,she,peg).
+aos(4,jump_for,she,purpose).
+aos(4,jump,she,peg).
 %% one of the mice peeping stealthily out saw her and said.
 % dependencies.
 root(5,root,see).

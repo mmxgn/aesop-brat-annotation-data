@@ -22,11 +22,11 @@ mark(0,lame,to).
 cop(0,lame,be).
 xcomp(0,pretend,lame).
 % relations.
-see(0,ass_feeding,wolf_approach).
-see(0,ass_feeding,wolf).
-pretend(0,ass_feeding,lame).
-immediately_pretend(0,ass_feeding,lame).
-is_in(0,ass_feeding,meadow).
+aos(0,see,ass_feeding,wolf_approach).
+aos(0,see,ass_feeding,wolf).
+aos(0,pretend,ass_feeding,lame).
+aos(0,immediately_pretend,ass_feeding,lame).
+aos(0,is_in,ass_feeding,meadow).
 %% the wolf coming up inquired the cause of his lameness.
 % dependencies.
 root(1,root,inquire).
@@ -40,8 +40,8 @@ case(1,lameness,of).
 nmod:poss(1,lameness,he).
 nmod:of(1,cause,lameness).
 % relations.
-inquire(1,wolf,cause_of_he_lameness).
-inquire(1,wolf,cause).
+aos(1,inquire,wolf,cause_of_he_lameness).
+aos(1,inquire,wolf,cause).
 %% the ass replied that passing through a hedge he had trod with his foot upon a sharp thorn.
 % dependencies.
 root(2,root,reply).
@@ -63,9 +63,9 @@ det(2,thorn,a).
 amod(2,thorn,sharp).
 nmod:upon(2,tread,thorn).
 % relations.
-have_tread_upon(2,he,thorn).
-have_tread_upon(2,he,sharp_thorn).
-have_tread_with(2,he,he_foot).
+aos(2,have_tread_upon,he,thorn).
+aos(2,have_tread_upon,he,sharp_thorn).
+aos(2,have_tread_with,he,he_foot).
 %% he requested that the wolf pull it out lest when he ate him it should injure his throat.
 % dependencies.
 root(3,root,request).
@@ -87,9 +87,9 @@ advcl:lest(3,pull,injure).
 nmod:poss(3,throat,he).
 dobj(3,injure,throat).
 % relations.
-pull_out(3,wolf,it).
-eat(3,he,he).
-should_injure(3,it,he_throat).
+aos(3,pull_out,wolf,it).
+aos(3,eat,he,he).
+aos(3,should_injure,it,he_throat).
 %% the wolf consented and lifted up the foot and was giving his whole mind to the discovery of the thorn when the ass with his heels kicked his teeth into his mouth and galloped away.
 % dependencies.
 root(4,root,consent).
@@ -132,12 +132,12 @@ acl:relcl(4,thorn,gallop).
 conj:and(4,kick,gallop).
 advmod(4,gallop,away).
 % relations.
-is_with(4,ass,he_heel).
-give(4,foot,he_mind).
-lift_up(4,wolf,foot).
-give(4,foot,he_whole_mind).
-kick(4,ass,he_tooth).
-ass_with(4,he_tooth,he_heel).
+aos(4,is_with,ass,he_heel).
+aos(4,give,foot,he_mind).
+aos(4,lift_up,wolf,foot).
+aos(4,give,foot,he_whole_mind).
+aos(4,kick,ass,he_tooth).
+aos(4,ass_with,he_tooth,he_heel).
 %% the wolf being thus fearfully mauled said.
 % dependencies.
 root(5,root,say).
@@ -175,11 +175,11 @@ case(6,butcher,of).
 det(6,butcher,a).
 nmod:of(6,trade,butcher).
 % relations.
-teach(6,my_father,I_trade_of_butcher).
-trade_of(6,I,butcher).
-be(6,i,serve).
-art_of(6,i,healing).
-teach(6,my_father,I_trade).
-be(6,i,rightly_serve).
-only_teach(6,my_father,I_trade).
-only_teach(6,my_father,I_trade_of_butcher).
+aos(6,teach,my_father,I_trade_of_butcher).
+aos(6,trade_of,I,butcher).
+aos(6,be,i,serve).
+aos(6,art_of,i,healing).
+aos(6,teach,my_father,I_trade).
+aos(6,be,i,rightly_serve).
+aos(6,only_teach,my_father,I_trade).
+aos(6,only_teach,my_father,I_trade_of_butcher).

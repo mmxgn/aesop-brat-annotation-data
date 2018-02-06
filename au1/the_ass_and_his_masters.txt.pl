@@ -37,14 +37,14 @@ case(0,master,with).
 det(0,master,another).
 nmod:with(0,provide,master).
 % relations.
-make_petition_to(0,ass,jupiter).
-be_release_from(0,ass,he_service).
-make_petition(0,ass,release).
-be(0,ass,release).
-be_release_from(0,ass,he_present_service).
-make_petition(0,ass,release_from_he_service).
-make_petition(0,ass,release_from_he_present_service).
-make(0,ass,petition).
+aos(0,make_petition_to,ass,jupiter).
+aos(0,be_release_from,ass,he_service).
+aos(0,make_petition,ass,release).
+aos(0,be,ass,release).
+aos(0,be_release_from,ass,he_present_service).
+aos(0,make_petition,ass,release_from_he_service).
+aos(0,make_petition,ass,release_from_he_present_service).
+aos(0,make,ass,petition).
 %% jupiter after warning him that he would repent his request caused him to be sold to a tile-maker.
 % dependencies.
 root(1,root,cause).
@@ -67,9 +67,9 @@ case(1,tile-maker,to).
 det(1,tile-maker,a).
 nmod:to(1,sell,tile-maker).
 % relations.
-be_sell_to(1,he,tile-maker).
-be(1,he,sell).
-repent(1,he,he_request).
+aos(1,be_sell_to,he,tile-maker).
+aos(1,be,he,sell).
+aos(1,repent,he,he_request).
 %% shortly afterwards finding that he had heavier loads to carry and harder work in the brick-field he petitioned for another change of master.
 % dependencies.
 root(2,root,find).
@@ -97,15 +97,15 @@ nmod:for(2,petition,change).
 case(2,master,of).
 nmod:of(2,change,master).
 % relations.
-is_in(2,harder_work,brick-field).
-have(2,he,work).
-load(2,work,carry).
-heavier_load(2,work,carry).
-have(2,he,harder_work).
-have(2,he,load_carry).
-load(2,harder_work,carry).
-heavier_load(2,harder_work,carry).
-have(2,he,heavier_load_carry).
+aos(2,is_in,harder_work,brick-field).
+aos(2,have,he,work).
+aos(2,load,work,carry).
+aos(2,heavier_load,work,carry).
+aos(2,have,he,harder_work).
+aos(2,have,he,load_carry).
+aos(2,load,harder_work,carry).
+aos(2,heavier_load,harder_work,carry).
+aos(2,have,he,heavier_load_carry).
 %% jupiter telling him that it would be the last time that he could grant his request ordained that he be sold to a tanner.
 % dependencies.
 root(3,root,ordain).
@@ -133,11 +133,11 @@ case(3,tanner,to).
 det(3,tanner,a).
 nmod:to(3,sell,tanner).
 % relations.
-be_sell_to(3,he,tanner).
-be(3,it,last_time).
-grant(3,he,he_request).
-be(3,he,sell).
-be(3,it,time).
+aos(3,be_sell_to,he,tanner).
+aos(3,be,it,last_time).
+aos(3,grant,he,he_request).
+aos(3,be,he,sell).
+aos(3,be,it,time).
 %% the ass found that he had fallen into worse hands and noting his master 's occupation said groaning.
 % dependencies.
 root(4,root,find).
@@ -160,9 +160,9 @@ ccomp(4,find,say).
 conj:and(4,fall,say).
 xcomp(4,say,groan).
 % relations.
-has(4,master,occupation).
-fall_into(4,he,hand).
-fall_into(4,he,worse_hand).
+aos(4,has,master,occupation).
+aos(4,fall_into,he,hand).
+aos(4,fall_into,he,worse_hand).
 %% it would have been better for me to have been either starved by the one or to have been overworked by the other of my former masters than to have been bought by my present owner who will even after i am dead tan my hide and make me useful to him.
 % dependencies.
 root(5,root,better).
@@ -223,19 +223,19 @@ xcomp(5,make,useful).
 case(5,he,to).
 nmod:to(5,useful,he).
 % relations.
-be_dead_tan(5,i,my_hide).
-even_be_dead_tan(5,i,my_hide).
-even_be_tan(5,i,my_hide).
-be_overwork_by(5,I,other).
-would(5,it,would_have_better).
-be(5,I,starve).
-be(5,I,either_starve).
-be_tan(5,i,my_hide).
-make(5,my,I_useful).
-be_starve_by(5,I,one).
-be_overwork(5,I,have_buy).
-be_overwork_by(5,I,other_of_my_former_master).
-be(5,I,overwork).
-be_either_starve_by(5,I,one).
-useful_to(5,I,he).
-make(5,my,I_useful_to_he).
+aos(5,be_dead_tan,i,my_hide).
+aos(5,even_be_dead_tan,i,my_hide).
+aos(5,even_be_tan,i,my_hide).
+aos(5,be_overwork_by,I,other).
+aos(5,would,it,would_have_better).
+aos(5,be,I,starve).
+aos(5,be,I,either_starve).
+aos(5,be_tan,i,my_hide).
+aos(5,make,my,I_useful).
+aos(5,be_starve_by,I,one).
+aos(5,be_overwork,I,have_buy).
+aos(5,be_overwork_by,I,other_of_my_former_master).
+aos(5,be,I,overwork).
+aos(5,be_either_starve_by,I,one).
+aos(5,useful_to,I,he).
+aos(5,make,my,I_useful_to_he).

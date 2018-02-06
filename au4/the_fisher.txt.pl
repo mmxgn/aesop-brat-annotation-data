@@ -26,9 +26,9 @@ det(0,rise,the).
 compound(0,rise,fish).
 dobj(0,make,rise).
 % relations.
-once_take(0,fisher,he_bagpipe).
-take(0,fisher,he_bagpipe).
-play_upon(0,fisher,they).
+aos(0,once_take,fisher,he_bagpipe).
+aos(0,take,fisher,he_bagpipe).
+aos(0,play_upon,fisher,they).
 %% but never a one put his nose out of the water.
 % dependencies.
 root(1,root,put).
@@ -64,9 +64,9 @@ ccomp(2,draw,fill).
 case(2,fish,with).
 nmod:with(2,fill,fish).
 % relations.
-cast(2,he,he_net).
-fill_with(2,it,fish).
-forth_fill_with(2,it,fish).
+aos(2,cast,he,he_net).
+aos(2,fill_with,it,fish).
+aos(2,forth_fill_with,it,fish).
 %% then he took his bagpipes again and as he played the fish leapt up in the net.
 % dependencies.
 root(3,root,take).
@@ -87,10 +87,10 @@ case(3,net,in).
 det(3,net,the).
 nmod:in(3,leap,net).
 % relations.
-take(3,he,he_bagpipe).
-take_again(3,he,he_bagpipe).
-leap_up(3,fish,he_play).
-leap_up_in(3,fish,net).
+aos(3,take,he,he_bagpipe).
+aos(3,take_again,he,he_bagpipe).
+aos(3,leap_up,fish,he_play).
+aos(3,leap_up_in,fish,net).
 %% ah you dance now when i play.
 % dependencies.
 root(4,root,dance).

@@ -22,10 +22,10 @@ mark(0,reach,of).
 acl:of(0,chance,reach).
 dobj(0,reach,she).
 % relations.
-see(0,wolf,goat_feeding).
-see_goat_feeding_at(0,wolf,summit).
-see_goat_feeding_at(0,wolf,summit_of_steep_precipice).
-see_goat_feeding_at(0,wolf,summit_of_precipice).
+aos(0,see,wolf,goat_feeding).
+aos(0,see_goat_feeding_at,wolf,summit).
+aos(0,see_goat_feeding_at,wolf,summit_of_steep_precipice).
+aos(0,see_goat_feeding_at,wolf,summit_of_precipice).
 %% he called to her and earnestly begged her to come lower down lest she fall by some mishap.
 % dependencies.
 root(1,root,call).
@@ -49,14 +49,14 @@ case(1,mishap,by).
 det(1,mishap,some).
 nmod:by(1,fall,mishap).
 % relations.
-come_lower(1,she,she_fall_by_mishap).
-fall_by(1,she,mishap).
-earnestly_beg(1,he,she).
-call_to(1,he,she).
-beg(1,he,she).
-come(1,she,she_fall).
-come_lower(1,she,she_fall).
-come(1,she,she_fall_by_mishap).
+aos(1,come_lower,she,she_fall_by_mishap).
+aos(1,fall_by,she,mishap).
+aos(1,earnestly_beg,he,she).
+aos(1,call_to,he,she).
+aos(1,beg,he,she).
+aos(1,come,she,she_fall).
+aos(1,come_lower,she,she_fall).
+aos(1,come,she,she_fall_by_mishap).
 %% and he added that the meadows lay where he was standing and that the herbage was most tender.
 % dependencies.
 root(2,root,add).
@@ -79,8 +79,8 @@ advmod(2,tender,most).
 ccomp(2,add,tender).
 conj:and(2,lay,tender).
 % relations.
-be(2,herbage,tender).
-be(2,herbage,most_tender).
+aos(2,be,herbage,tender).
+aos(2,be,herbage,most_tender).
 %% she replied.
 % dependencies.
 root(3,root,reply).
@@ -113,4 +113,4 @@ acl:relcl(4,yourself,in).
 case(4,food,of).
 nmod:of(4,want,food).
 % relations.
-invite(4,you,I).
+aos(4,invite,you,I).

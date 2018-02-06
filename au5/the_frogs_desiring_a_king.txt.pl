@@ -18,9 +18,9 @@ advmod(0,suit,just).
 acl(0,that,suit).
 nsubj(0,swamp,they).
 % relations.
-swamp(0,they,that_suit).
-swamp(0,they,that_just_suit).
-swamp(0,they,that).
+aos(0,swamp,they,that_suit).
+aos(0,swamp,they,that_just_suit).
+aos(0,swamp,they,that).
 %% they went splashing about caring for nobody and nobody troubling with them.
 % dependencies.
 root(1,root,go).
@@ -37,11 +37,11 @@ amod(1,nobody,troubling).
 case(1,they,with).
 nmod:with(1,troubling,they).
 % relations.
-splash(1,they,care_for_nobody).
-splash(1,they,care_for_nobody_troubling_with_they).
-splash(1,they,care_for_nobody_troubling).
-splash(1,they,care).
-go(1,they,splash).
+aos(1,splash,they,care_for_nobody).
+aos(1,splash,they,care_for_nobody_troubling_with_they).
+aos(1,splash,they,care_for_nobody_troubling).
+aos(1,splash,they,care).
+aos(1,go,they,splash).
 %% but some of them thought that this was not right that they should have a king and a proper constitution so they determined to send up a petition to jove to give them what they wanted.
 % dependencies.
 root(2,root,think).
@@ -170,19 +170,19 @@ det(7,monster,the).
 amod(7,monster,horrible).
 nmod:at(7,look,monster).
 % relations.
-all_rush(7,frog,look).
-be_frighten_out_of(7,frog,they_life).
-all_rush(7,frog,look_at_monster).
-all_rush_to(7,frog,bank).
-rush_to(7,frog,bank).
-rush(7,frog,look_at_horrible_monster).
-rush(7,frog,look).
-rush(7,frog,look_at_monster).
-be_frighten_out_of(7,frog,they_life_by_commotion_make_in_they_midst).
-be_frighten_out_of(7,frog,they_life_by_commotion_make).
-be_frighten_out_of(7,frog,they_life_by_commotion).
-be(7,frog,frighten).
-all_rush(7,frog,look_at_horrible_monster).
+aos(7,all_rush,frog,look).
+aos(7,be_frighten_out_of,frog,they_life).
+aos(7,all_rush,frog,look_at_monster).
+aos(7,all_rush_to,frog,bank).
+aos(7,rush_to,frog,bank).
+aos(7,rush,frog,look_at_horrible_monster).
+aos(7,rush,frog,look).
+aos(7,rush,frog,look_at_monster).
+aos(7,be_frighten_out_of,frog,they_life_by_commotion_make_in_they_midst).
+aos(7,be_frighten_out_of,frog,they_life_by_commotion_make).
+aos(7,be_frighten_out_of,frog,they_life_by_commotion).
+aos(7,be,frog,frighten).
+aos(7,all_rush,frog,look_at_horrible_monster).
 %% but after a time seeing that it did not move one or two of the boldest of them ventured out towards the log and even dared to touch it.
 % dependencies.
 root(8,root,venture).
@@ -218,7 +218,7 @@ mark(8,touch,to).
 xcomp(8,dare,touch).
 dobj(8,touch,it).
 % relations.
-venture_out_towards(8,time,log).
+aos(8,venture_out_towards,time,log).
 %% still it did not move.
 % dependencies.
 root(9,root,still).
@@ -261,9 +261,9 @@ conj:and(10,come,do).
 det(10,same,the).
 dobj(10,do,same).
 % relations.
-do(10,frog,same).
-jump_upon(10,hero,log).
-jump_upon(10,greatest_hero,log).
+aos(10,do,frog,same).
+aos(10,jump_upon,hero,log).
+aos(10,jump_upon,greatest_hero,log).
 %% and for some time the frogs went about their business every day without taking the slightest notice of their new king log lying in their midst.
 % dependencies.
 root(11,root,and).
@@ -293,20 +293,20 @@ case(11,midst,in).
 nmod:poss(11,midst,they).
 nmod:in(11,lie,midst).
 % relations.
-take(11,frog,slightest_notice_of_they_new_king_log).
-take(11,frog,notice_of_they_new_king_log_lie_in_they_midst).
-take(11,frog,slightest_notice_of_they_new_king_log_lie).
-take(11,frog,notice_of_they_king_log_lie_in_they_midst).
-take(11,frog,slightest_notice).
-take(11,frog,notice_of_they_king_log_lie).
-take(11,frog,slightest_notice_of_they_new_king_log_lie_in_they_midst).
-take(11,frog,slightest_notice_of_they_king_log_lie).
-take(11,frog,notice_of_they_king_log).
-take(11,frog,notice_of_they_new_king_log_lie).
-take(11,frog,notice).
-take(11,frog,slightest_notice_of_they_king_log).
-take(11,frog,slightest_notice_of_they_king_log_lie_in_they_midst).
-take(11,frog,notice_of_they_new_king_log).
+aos(11,take,frog,slightest_notice_of_they_new_king_log).
+aos(11,take,frog,notice_of_they_new_king_log_lie_in_they_midst).
+aos(11,take,frog,slightest_notice_of_they_new_king_log_lie).
+aos(11,take,frog,notice_of_they_king_log_lie_in_they_midst).
+aos(11,take,frog,slightest_notice).
+aos(11,take,frog,notice_of_they_king_log_lie).
+aos(11,take,frog,slightest_notice_of_they_new_king_log_lie_in_they_midst).
+aos(11,take,frog,slightest_notice_of_they_king_log_lie).
+aos(11,take,frog,notice_of_they_king_log).
+aos(11,take,frog,notice_of_they_new_king_log_lie).
+aos(11,take,frog,notice).
+aos(11,take,frog,slightest_notice_of_they_king_log).
+aos(11,take,frog,slightest_notice_of_they_king_log_lie_in_they_midst).
+aos(11,take,frog,notice_of_they_new_king_log).
 %% but this did not suit them so they sent another petition to jove and said to him.
 % dependencies.
 root(12,root,suit).
@@ -337,8 +337,8 @@ det(13,king,a).
 amod(13,king,real).
 dobj(13,want,king).
 % relations.
-want(13,we,king).
-want(13,we,real_king).
+aos(13,want,we,king).
+aos(13,want,we,real_king).
 %% one that will really rule over us.
 % dependencies.
 root(14,root,one).

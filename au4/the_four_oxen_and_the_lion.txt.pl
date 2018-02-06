@@ -18,9 +18,9 @@ acl:relcl(0,field,use).
 mark(0,dwell,to).
 xcomp(0,use,dwell).
 % relations.
-use_to(0,lion,prowl).
-use(0,ox,dwell).
-use(0,four_ox,dwell).
+aos(0,use_to,lion,prowl).
+aos(0,use,ox,dwell).
+aos(0,use,four_ox,dwell).
 %% many a time he tried to attack them.
 % dependencies.
 root(1,root,time).
@@ -33,7 +33,7 @@ mark(1,attack,to).
 xcomp(1,try,attack).
 dobj(1,attack,they).
 % relations.
-attack(1,he,they).
+aos(1,attack,he,they).
 %% but whenever he came near they turned their tails to one another so that whichever way he approached them he was met by the horns of one of them.
 % dependencies.
 root(2,root,come).
@@ -66,13 +66,13 @@ det:qmod(2,they,one).
 mwe(2,one,of).
 nmod(2,horn,they).
 % relations.
-turn(2,they,meet_by_horn).
-come(2,he,they_turn).
-turn(2,they,they_tail).
-approach(2,he,they).
-turn(2,they,meet).
-be_meet_by(2,he,horn).
-be(2,he,meet).
+aos(2,turn,they,meet_by_horn).
+aos(2,come,he,they_turn).
+aos(2,turn,they,they_tail).
+aos(2,approach,he,they).
+aos(2,turn,they,meet).
+aos(2,be_meet_by,he,horn).
+aos(2,be,he,meet).
 %% at last however they fell a-quarrelling among themselves and each went off to pasture alone in a separate corner of the field.
 % dependencies.
 root(3,root,last).
@@ -99,28 +99,28 @@ case(3,field,of).
 det(3,field,the).
 nmod:of(3,corner,field).
 % relations.
-however_fall_among(3,they,themselves).
-go_off_alone_in(3,each,separate_corner_of_field).
-go_alone_in(3,each,corner).
-go_off_in(3,each,separate_corner_of_field).
-go_alone_in(3,each,separate_corner).
-however_fall_a-quarrelling_among(3,they,themselves).
-go_off_in(3,each,corner).
-go_off_alone_in(3,each,corner).
-however_fall(3,they,a-quarrelling).
-go_off_alone_in(3,each,corner_of_field).
-go_in(3,each,separate_corner).
-go_in(3,each,corner_of_field).
-go_in(3,each,separate_corner_of_field).
-fall_among(3,they,themselves).
-go_off_in(3,each,separate_corner).
-go_off_alone_in(3,each,separate_corner).
-go_alone_in(3,each,separate_corner_of_field).
-fall_a-quarrelling_among(3,they,themselves).
-go_alone_in(3,each,corner_of_field).
-go_in(3,each,corner).
-fall(3,they,a-quarrelling).
-go_off_in(3,each,corner_of_field).
+aos(3,however_fall_among,they,themselves).
+aos(3,go_off_alone_in,each,separate_corner_of_field).
+aos(3,go_alone_in,each,corner).
+aos(3,go_off_in,each,separate_corner_of_field).
+aos(3,go_alone_in,each,separate_corner).
+aos(3,however_fall_a-quarrelling_among,they,themselves).
+aos(3,go_off_in,each,corner).
+aos(3,go_off_alone_in,each,corner).
+aos(3,however_fall,they,a-quarrelling).
+aos(3,go_off_alone_in,each,corner_of_field).
+aos(3,go_in,each,separate_corner).
+aos(3,go_in,each,corner_of_field).
+aos(3,go_in,each,separate_corner_of_field).
+aos(3,fall_among,they,themselves).
+aos(3,go_off_in,each,separate_corner).
+aos(3,go_off_alone_in,each,separate_corner).
+aos(3,go_alone_in,each,separate_corner_of_field).
+aos(3,fall_a-quarrelling_among,they,themselves).
+aos(3,go_alone_in,each,corner_of_field).
+aos(3,go_in,each,corner).
+aos(3,fall,they,a-quarrelling).
+aos(3,go_off_in,each,corner_of_field).
 %% then the lion attacked them one by one and soon made an end of all four.
 % dependencies.
 root(4,root,lion).

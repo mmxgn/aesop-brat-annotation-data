@@ -66,8 +66,8 @@ case(0,ocean,of).
 det(0,ocean,the).
 nmod:of(0,inhabitant,ocean).
 % relations.
-see(0,lion_roaming,dolphin_lift).
-see_dolphin_lift_out_of(0,lion_roaming,wave).
+aos(0,see,lion_roaming,dolphin_lift).
+aos(0,see_dolphin_lift_out_of,lion_roaming,wave).
 %% the dolphin gladly consented to this request.
 % dependencies.
 root(1,root,consent).
@@ -78,8 +78,8 @@ case(1,request,to).
 det(1,request,this).
 nmod:to(1,consent,request).
 % relations.
-gladly_consent_to(1,dolphin,request).
-consent_to(1,dolphin,request).
+aos(1,gladly_consent_to,dolphin,request).
+aos(1,consent_to,dolphin,request).
 %% not long afterwards the lion had a combat with a wild bull and called on the dolphin to help him.
 % dependencies.
 root(2,root,long).
@@ -106,16 +106,16 @@ mark(2,help,to).
 xcomp(2,call,help).
 dobj(2,help,he).
 % relations.
-is_with(2,combat,wild_bull).
-afterwards_have(2,lion,combat).
-combat_with(2,lion,wild_bull).
-combat_with(2,lion,bull).
-call_on(2,lion,dolphin).
-have(2,lion,combat_with_wild_bull).
-afterwards_have(2,lion,combat_with_bull).
-afterwards_have(2,lion,combat_with_wild_bull).
-have(2,lion,combat).
-have(2,lion,combat_with_bull).
+aos(2,is_with,combat,wild_bull).
+aos(2,afterwards_have,lion,combat).
+aos(2,combat_with,lion,wild_bull).
+aos(2,combat_with,lion,bull).
+aos(2,call_on,lion,dolphin).
+aos(2,have,lion,combat_with_wild_bull).
+aos(2,afterwards_have,lion,combat_with_bull).
+aos(2,afterwards_have,lion,combat_with_wild_bull).
+aos(2,have,lion,combat).
+aos(2,have,lion,combat_with_bull).
 %% the dolphin though quite willing to give him assistance was unable to do so as he could not by any means reach the land.
 % dependencies.
 root(3,root,dolphin).
@@ -154,7 +154,7 @@ case(4,traitor,as).
 det(4,traitor,a).
 nmod:as(4,abuse,traitor).
 % relations.
-abuse(4,lion,he).
+aos(4,abuse,lion,he).
 %% the dolphin replied.
 % dependencies.
 root(5,root,reply).
@@ -193,6 +193,6 @@ case(6,land,upon).
 det(6,land,the).
 nmod:upon(6,live,land).
 % relations.
-give(6,I,I).
-give(6,I,sovereignty_of_sea).
-give(6,I,sovereignty).
+aos(6,give,I,I).
+aos(6,give,I,sovereignty_of_sea).
+aos(6,give,I,sovereignty).

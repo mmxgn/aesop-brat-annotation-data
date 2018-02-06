@@ -31,9 +31,9 @@ xcomp(0,resort,ensure).
 nmod:poss(0,destruction,he).
 dobj(0,ensure,destruction).
 % relations.
-resort_to(0,lion,trick).
-resort(0,lion,ensure).
-ensure(0,lion,he_destruction).
+aos(0,resort_to,lion,trick).
+aos(0,resort,lion,ensure).
+aos(0,ensure,lion,he_destruction).
 %% he approached the bull and said.
 % dependencies.
 root(1,root,approach).
@@ -44,7 +44,7 @@ dobj(1,approach,bull).
 cc(1,approach,and).
 conj:and(1,approach,say).
 % relations.
-approach(1,he,bull).
+aos(1,approach,he,bull).
 %% i have slain a fine sheep my friend.
 % dependencies.
 root(2,root,slay).
@@ -56,10 +56,10 @@ dobj(2,slay,sheep).
 nmod:poss(2,friend,my).
 nsubj(2,slay,friend).
 % relations.
-i_have_slay(2,my_friend,fine_sheep).
-i_have_slay(2,my_friend,sheep).
-have_slay(2,my_friend,sheep).
-have_slay(2,my_friend,fine_sheep).
+aos(2,i_have_slay,my_friend,fine_sheep).
+aos(2,i_have_slay,my_friend,sheep).
+aos(2,have_slay,my_friend,sheep).
+aos(2,have_slay,my_friend,fine_sheep).
 %% and if you will come home and partake of him with me i shall be delighted to have your company.
 % dependencies.
 root(3,root,come).
@@ -85,10 +85,10 @@ xcomp(3,delighted,have).
 nmod:poss(3,company,you).
 dobj(3,have,company).
 % relations.
-will_come(3,you,home).
-shall(3,i,shall_delighted).
-partake_of(3,you,he).
-have(3,i,you_company).
+aos(3,will_come,you,home).
+aos(3,shall,i,shall_delighted).
+aos(3,partake_of,you,he).
+aos(3,have,i,you_company).
 %% the lion said this in the hope that as the bull was in the act of reclining to eat he might attack him to advantage and make his meal on him.
 % dependencies.
 root(4,root,say).
@@ -125,13 +125,13 @@ dobj(4,make,meal).
 case(4,he,on).
 nmod:on(4,make,he).
 % relations.
-make(4,he,he_meal).
-say(4,lion,this_in_hope).
-recline(4,bull,eat).
-say_in(4,lion,act_recline).
-attack(4,he,he).
-say(4,lion,this).
-be_in(4,bull,act_recline).
+aos(4,make,he,he_meal).
+aos(4,say,lion,this_in_hope).
+aos(4,recline,bull,eat).
+aos(4,say_in,lion,act_recline).
+aos(4,attack,he,he).
+aos(4,say,lion,this).
+aos(4,be_in,bull,act_recline).
 %% the bull on approaching the lion 's den saw the huge spits and giant caldrons and no sign whatever of the sheep and without saying a word quietly took his departure.
 % dependencies.
 root(5,root,see).
@@ -169,7 +169,7 @@ acl:relcl(5,sign,take).
 nmod:poss(5,departure,he).
 dobj(5,take,departure).
 % relations.
-has(5,lion,den).
+aos(5,has,lion,den).
 %% the lion inquired why he went off so abruptly without a word of salutation to his host who had not given him any cause for offense.
 % dependencies.
 root(6,root,inquire).
@@ -200,18 +200,18 @@ dobj(6,give,cause).
 case(6,offense,for).
 nmod:for(6,cause,offense).
 % relations.
-go_off_so_without(6,he,word_of_salutation).
-go_without(6,he,abruptly_word).
-go_so_without(6,he,abruptly_word_of_salutation).
-go_without(6,he,word).
-go_off_so_without(6,he,abruptly_word_of_salutation).
-go_so_without(6,he,abruptly_word).
-go_off_so_without(6,he,abruptly_word).
-go_without(6,he,abruptly_word_of_salutation).
-go_so_without(6,he,word).
-go_off_so_without(6,he,word).
-go_without(6,he,word_of_salutation).
-go_so_without(6,he,word_of_salutation).
+aos(6,go_off_so_without,he,word_of_salutation).
+aos(6,go_without,he,abruptly_word).
+aos(6,go_so_without,he,abruptly_word_of_salutation).
+aos(6,go_without,he,word).
+aos(6,go_off_so_without,he,abruptly_word_of_salutation).
+aos(6,go_so_without,he,abruptly_word).
+aos(6,go_off_so_without,he,abruptly_word).
+aos(6,go_without,he,abruptly_word_of_salutation).
+aos(6,go_so_without,he,word).
+aos(6,go_off_so_without,he,word).
+aos(6,go_without,he,word_of_salutation).
+aos(6,go_so_without,he,word_of_salutation).
 %% i have reasons enough.
 % dependencies.
 root(7,root,have).
@@ -219,8 +219,8 @@ advmod(7,have,i).
 dobj(7,have,reason).
 nsubj(7,have,enough).
 % relations.
-i_have(7,enough,reason).
-have(7,enough,reason).
+aos(7,i_have,enough,reason).
+aos(7,have,enough,reason).
 %% said the bull.
 % dependencies.
 root(8,root,say).

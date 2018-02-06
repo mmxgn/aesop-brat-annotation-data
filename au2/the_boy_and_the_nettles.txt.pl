@@ -8,8 +8,8 @@ case(0,nettle,by).
 det(0,nettle,a).
 nmod:agent(0,sting,nettle).
 % relations.
-be(0,boy,sting).
-be_sting_by(0,boy,nettle).
+aos(0,be,boy,sting).
+aos(0,be_sting_by,boy,nettle).
 %% he ran home and told his mother saying.
 % dependencies.
 root(1,root,run).
@@ -22,8 +22,8 @@ nmod:poss(1,mother,he).
 dobj(1,tell,mother).
 xcomp(1,tell,say).
 % relations.
-run(1,he,home).
-tell(1,he,he_mother).
+aos(1,run,he,home).
+aos(1,tell,he,he_mother).
 %% although it hurts me very much i only touched it gently.
 % dependencies.
 root(2,root,hurt).
@@ -38,14 +38,14 @@ xcomp(2,hurt,touch).
 dobj(2,touch,it).
 advmod(2,touch,gently).
 % relations.
-touch_gently(2,i,it).
-only_touch(2,I,it).
-touch(2,i,it).
-only_touch_gently(2,I,it).
-touch_gently(2,I,it).
-only_touch_gently(2,i,it).
-only_touch(2,i,it).
-touch(2,I,it).
+aos(2,touch_gently,i,it).
+aos(2,only_touch,I,it).
+aos(2,touch,i,it).
+aos(2,only_touch_gently,I,it).
+aos(2,touch_gently,I,it).
+aos(2,only_touch_gently,i,it).
+aos(2,only_touch,i,it).
+aos(2,touch,I,it).
 %% that was just why it stung you.
 % dependencies.
 root(3,root,be).
@@ -56,7 +56,7 @@ nsubj(3,sting,it).
 advcl(3,be,sting).
 dobj(3,sting,you).
 % relations.
-sting(3,it,you).
+aos(3,sting,it,you).
 %% said his mother.
 % dependencies.
 root(4,root,say).

@@ -35,7 +35,7 @@ det(0,branch,a).
 amod(0,branch,lofty).
 nmod:over(0,train,branch).
 % relations.
-has(0,hot_summer,day).
+aos(0,has,hot_summer,day).
 %% just the thing to quench my thirst.
 % dependencies.
 root(1,root,thing).
@@ -74,10 +74,10 @@ conj:and(3,take,miss).
 det(3,bunch,the).
 dobj(3,miss,bunch).
 % relations.
-take(3,he,run).
-just_miss(3,he,bunch).
-take(3,he,jump).
-miss(3,he,bunch).
+aos(3,take,he,run).
+aos(3,just_miss,he,bunch).
+aos(3,take,he,jump).
+aos(3,miss,he,bunch).
 %% turning round again with a one two three he jumped up but with no greater success.
 % dependencies.
 root(4,root,turn).
@@ -131,14 +131,14 @@ det(5,air,the).
 nmod:in(5,walk,air).
 acl(5,air,say).
 % relations.
-give_up(5,morsel,it).
-walk_away_with(5,morsel,he_nose).
-walk_away_in(5,tempting_morsel,air).
-walk_away_in(5,morsel,air_say).
-give_up(5,tempting_morsel,it).
-walk_away_with(5,tempting_morsel,he_nose).
-walk_away_in(5,tempting_morsel,air_say).
-walk_away_in(5,morsel,air).
+aos(5,give_up,morsel,it).
+aos(5,walk_away_with,morsel,he_nose).
+aos(5,walk_away_in,tempting_morsel,air).
+aos(5,walk_away_in,morsel,air_say).
+aos(5,give_up,tempting_morsel,it).
+aos(5,walk_away_with,tempting_morsel,he_nose).
+aos(5,walk_away_in,tempting_morsel,air_say).
+aos(5,walk_away_in,morsel,air).
 %% i am sure they are sour.
 % dependencies.
 root(6,root,sure).
@@ -148,5 +148,5 @@ nsubj(6,sour,they).
 cop(6,sour,be).
 ccomp(6,sure,sour).
 % relations.
-be(6,i,sure).
-be(6,they,sour).
+aos(6,be,i,sure).
+aos(6,be,they,sour).

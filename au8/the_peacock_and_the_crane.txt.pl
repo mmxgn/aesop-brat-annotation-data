@@ -24,8 +24,8 @@ cc(0,ridicule,and).
 advcl:by(0,pass,say).
 conj:and(0,ridicule,say).
 % relations.
-spread(0,peacock,its_gorgeous_tail).
-spread(0,peacock,its_tail).
+aos(0,spread,peacock,its_gorgeous_tail).
+aos(0,spread,peacock,its_tail).
 %% i am robed like a king in gold and purple and all the colors of the rainbow.
 % dependencies.
 root(1,root,robe).
@@ -48,8 +48,8 @@ case(1,rainbow,of).
 det(1,rainbow,the).
 nmod:of(1,color,rainbow).
 % relations.
-be(1,i,robe).
-is_in(1,king,gold).
+aos(1,be,i,robe).
+aos(1,is_in,king,gold).
 %% while you have not a bit of color on your wings.
 % dependencies.
 root(2,root,have).

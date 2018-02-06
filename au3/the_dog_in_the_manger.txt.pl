@@ -24,11 +24,11 @@ case(0,straw,upon).
 det(0,straw,the).
 nmod:upon(0,cosily,straw).
 % relations.
-cosily_upon(0,lay,straw).
-lay(0,dog,cosily_upon_straw).
-jump_into(0,dog,manger_of_ox).
-jump_into(0,dog,manger).
-lay(0,dog,cosily).
+aos(0,cosily_upon,lay,straw).
+aos(0,lay,dog,cosily_upon_straw).
+aos(0,jump_into,dog,manger_of_ox).
+aos(0,jump_into,dog,manger).
+aos(0,lay,dog,cosily).
 %% but soon the ox returning from its afternoon work came up to the manger and wanted to eat some of the straw.
 % dependencies.
 root(1,root,come).
@@ -56,9 +56,9 @@ mwe(1,some,of).
 det(1,straw,the).
 dobj(1,eat,straw).
 % relations.
-return_from(1,ox,its_afternoon_work).
-soon_come_up_to(1,ox,manger).
-come_up_to(1,ox,manger).
+aos(1,return_from,ox,its_afternoon_work).
+aos(1,soon_come_up_to,ox,manger).
+aos(1,come_up_to,ox,manger).
 %% the dog in a rage being awakened from its slumber stood up and barked at the ox and whenever it came near attempted to bite it.
 % dependencies.
 root(2,root,dog).
@@ -90,8 +90,8 @@ mark(2,bite,to).
 xcomp(2,attempt,bite).
 dobj(2,bite,it).
 % relations.
-is_in(2,dog,rage_awaken_from_its_slumber).
-come(2,it,attempt).
+aos(2,is_in,dog,rage_awaken_from_its_slumber).
+aos(2,come,it,attempt).
 %% at last the ox had to give up the hope of getting at the straw and went away muttering.
 % dependencies.
 root(3,root,have).
@@ -116,11 +116,11 @@ conj:and(3,have,go).
 advmod(3,go,away).
 xcomp(3,go,mutter).
 % relations.
-give_up(3,ox,hope_get_at_straw).
-have_at(3,ox,last).
-go(3,ox,mutter).
-go_away(3,ox,mutter).
-give_up(3,ox,hope_get).
+aos(3,give_up,ox,hope_get_at_straw).
+aos(3,have_at,ox,last).
+aos(3,go,ox,mutter).
+aos(3,go_away,ox,mutter).
+aos(3,give_up,ox,hope_get).
 %% ah people often grudge others what they can not enjoy themselves.
 % dependencies.
 root(4,root,grudge).

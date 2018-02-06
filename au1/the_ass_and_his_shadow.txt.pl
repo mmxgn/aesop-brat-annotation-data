@@ -48,11 +48,11 @@ case(1,ass,of).
 det(1,ass,the).
 nmod:of(1,shadow,ass).
 % relations.
-seek_shelter_from(1,traveler,heat).
-stop(1,traveler,rest).
-seek(1,traveler,shelter).
-seek_shelter_under(1,traveler,shadow_of_ass).
-seek_shelter_under(1,traveler,shadow).
+aos(1,seek_shelter_from,traveler,heat).
+aos(1,stop,traveler,rest).
+aos(1,seek,traveler,shelter).
+aos(1,seek_shelter_under,traveler,shadow_of_ass).
+aos(1,seek_shelter_under,traveler,shadow).
 %% as this afforded only protection for one and as the traveler and the owner of the ass both claimed it a violent dispute arose between them as to which of them had the right to the shadow.
 % dependencies.
 root(2,root,afford).
@@ -97,7 +97,7 @@ case(2,shadow,to).
 det(2,shadow,the).
 nmod:to(2,right,shadow).
 % relations.
-claim(2,protection,it).
+aos(2,claim,protection,it).
 %% the owner maintained that he had let the ass only and not his shadow.
 % dependencies.
 root(3,root,maintain).

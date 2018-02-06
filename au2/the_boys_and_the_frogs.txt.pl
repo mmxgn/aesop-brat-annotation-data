@@ -24,7 +24,7 @@ dobj(0,pelt,they).
 case(0,stone,with).
 nmod:with(0,pelt,stone).
 % relations.
-is_in(0,frog,water).
+aos(0,is_in,frog,water).
 %% they killed several of them when one of the frogs lifting his head out of the water cried out.
 % dependencies.
 root(1,root,kill).

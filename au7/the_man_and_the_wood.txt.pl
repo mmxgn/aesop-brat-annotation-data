@@ -36,15 +36,15 @@ det(0,purpose,a).
 amod(0,purpose,particular).
 nmod:for(0,want,purpose).
 % relations.
-want_for(0,he,purpose).
-come_into(0,man,wood).
-is_in(0,axe,he_hand).
-come_into(0,man,wood_one_day).
-give(0,tree,he).
-beg(0,man,tree).
-come_with(0,man,axe).
-come_with(0,man,axe_in_he_hand).
-want_for(0,he,particular_purpose).
+aos(0,want_for,he,purpose).
+aos(0,come_into,man,wood).
+aos(0,is_in,axe,he_hand).
+aos(0,come_into,man,wood_one_day).
+aos(0,give,tree,he).
+aos(0,beg,man,tree).
+aos(0,come_with,man,axe).
+aos(0,come_with,man,axe_in_he_hand).
+aos(0,want_for,he,particular_purpose).
 %% the trees were good-natured and gave him one of their branches.
 % dependencies.
 root(1,root,good-natured).
@@ -60,10 +60,10 @@ case(1,branch,of).
 nmod:poss(1,branch,they).
 nmod:of(1,one,branch).
 % relations.
-give(1,tree,he).
-give(1,tree,one_of_they_branch).
-be(1,tree,good-natured).
-give(1,tree,one_they_branch).
+aos(1,give,tree,he).
+aos(1,give,tree,one_of_they_branch).
+aos(1,be,tree,good-natured).
+aos(1,give,tree,one_they_branch).
 %% what did the man do but fix it into the axe head and soon set to work cutting down tree after tree.
 % dependencies.
 root(2,root,fix).
@@ -91,8 +91,8 @@ dobj(2,cut,tree).
 case(2,tree,after).
 nmod:after(2,cut,tree).
 % relations.
-soon_set(2,man,work).
-set(2,man,work).
+aos(2,soon_set,man,work).
+aos(2,set,man,work).
 %% then the trees saw how foolish they had been in giving their enemy the means of destroying themselves.
 % dependencies.
 root(3,root,see).

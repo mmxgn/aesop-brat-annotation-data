@@ -29,8 +29,8 @@ nsubj(0,moult,they).
 aux(0,moult,be).
 advcl(0,fall,moult).
 % relations.
-venture_into(0,jay,yard).
-find(0,peacock,number).
+aos(0,venture_into,jay,yard).
+aos(0,find,peacock,number).
 %% he tied them all to his tail and strutted down towards the peacocks.
 % dependencies.
 root(1,root,tie).
@@ -48,7 +48,7 @@ case(1,peacock,towards).
 det(1,peacock,the).
 nmod:towards(1,strut,peacock).
 % relations.
-strut_down_towards(1,he,peacock).
+aos(1,strut_down_towards,he,peacock).
 %% when he came near them they soon discovered the cheat and striding up to him pecked at him and plucked away his borrowed plumes.
 % dependencies.
 root(2,root,come).
@@ -79,9 +79,9 @@ nmod:poss(2,plume,he).
 amod(2,plume,borrow).
 dobj(2,pluck,plume).
 % relations.
-pluck_away(2,they,he_borrow_plume).
-come_near(2,he,they).
-pluck_away(2,they,he_plume).
+aos(2,pluck_away,they,he_borrow_plume).
+aos(2,come_near,he,they).
+aos(2,pluck_away,they,he_plume).
 %% so the jay could do no better than go back to the other jays who had watched his behaviour from a distance.
 % dependencies.
 root(3,root,do).
@@ -108,4 +108,4 @@ case(3,distance,from).
 det(3,distance,a).
 nmod:from(3,do,distance).
 % relations.
-could_do(3,jay,he_behaviour).
+aos(3,could_do,jay,he_behaviour).

@@ -36,7 +36,7 @@ det(1,catch,a).
 amod(1,catch,large).
 dobj(1,take,catch).
 % relations.
-dance_about(1,they,about_joy).
+aos(1,dance_about,they,about_joy).
 %% when they had dragged the nets to the shore they found but few fish the nets were full of sand and stones and the men were beyond measure cast downso much at the disappointment which had befallen them but because they had formed such very different expectations.
 % dependencies.
 root(2,root,find).
@@ -90,17 +90,17 @@ advmod(2,different,very).
 amod(2,expectation,different).
 dobj(2,form,expectation).
 % relations.
-cast(2,man,much).
-cast(2,man,downso_much).
-have_form(2,they,such_expectation).
-have_form(2,they,such_very_different_expectation).
-have_drag_net_to(2,they,shore).
-have_form(2,they,very_different_expectation).
-have_drag(2,they,net).
-have_form(2,they,such_different_expectation).
-have_form(2,they,different_expectation).
-be_beyond(2,man,measure).
-have_form(2,they,expectation).
+aos(2,cast,man,much).
+aos(2,cast,man,downso_much).
+aos(2,have_form,they,such_expectation).
+aos(2,have_form,they,such_very_different_expectation).
+aos(2,have_drag_net_to,they,shore).
+aos(2,have_form,they,very_different_expectation).
+aos(2,have_drag,they,net).
+aos(2,have_form,they,such_different_expectation).
+aos(2,have_form,they,different_expectation).
+aos(2,be_beyond,man,measure).
+aos(2,have_form,they,expectation).
 %% one of their company an old man said.
 % dependencies.
 root(3,root,say).
@@ -135,32 +135,32 @@ advcl:for(4,cease,sister).
 case(4,joy,of).
 nmod:of(4,sister,joy).
 % relations.
-be_always_sister_of(4,sorrow,joy).
-be_always_sister(4,sorrow,it_seem).
-cease(4,we,always_sister_of_joy).
-cease(4,we,sister).
-cease(4,we,always_twin_sister_of_joy).
-be(4,sorrow,always_sister).
-be_twin_sister(4,sorrow,it_seem_to_I).
-cease(4,we,always_twin_sister).
-seem_to(4,it,I).
-be_always_sister(4,sorrow,it_seem_to_I).
-be_sister(4,sorrow,it_seem_to_I).
-be_always_twin_sister_of(4,sorrow,joy).
-be_sister(4,sorrow,it_seem).
-be_twin_sister(4,sorrow,it_seem).
-cease(4,we,twin_sister_of_joy).
-be(4,sorrow,always_twin_sister).
-be_sister_of(4,sorrow,joy).
-cease(4,we,always_sister).
-be_twin_sister_of(4,sorrow,joy).
-cease(4,we,sister_of_joy).
-be(4,sorrow,sister).
-be_always_twin_sister(4,sorrow,it_seem).
-lament(4,we,my_mate).
-cease(4,we,twin_sister).
-be(4,sorrow,twin_sister).
-be_always_twin_sister(4,sorrow,it_seem_to_I).
+aos(4,be_always_sister_of,sorrow,joy).
+aos(4,be_always_sister,sorrow,it_seem).
+aos(4,cease,we,always_sister_of_joy).
+aos(4,cease,we,sister).
+aos(4,cease,we,always_twin_sister_of_joy).
+aos(4,be,sorrow,always_sister).
+aos(4,be_twin_sister,sorrow,it_seem_to_I).
+aos(4,cease,we,always_twin_sister).
+aos(4,seem_to,it,I).
+aos(4,be_always_sister,sorrow,it_seem_to_I).
+aos(4,be_sister,sorrow,it_seem_to_I).
+aos(4,be_always_twin_sister_of,sorrow,joy).
+aos(4,be_sister,sorrow,it_seem).
+aos(4,be_twin_sister,sorrow,it_seem).
+aos(4,cease,we,twin_sister_of_joy).
+aos(4,be,sorrow,always_twin_sister).
+aos(4,be_sister_of,sorrow,joy).
+aos(4,cease,we,always_sister).
+aos(4,be_twin_sister_of,sorrow,joy).
+aos(4,cease,we,sister_of_joy).
+aos(4,be,sorrow,sister).
+aos(4,be_always_twin_sister,sorrow,it_seem).
+aos(4,lament,we,my_mate).
+aos(4,cease,we,twin_sister).
+aos(4,be,sorrow,twin_sister).
+aos(4,be_always_twin_sister,sorrow,it_seem_to_I).
 %% and it was only to be looked for that we who just now were over-rejoiced should next have something to make us sad.
 % dependencies.
 root(5,root,be).
@@ -189,6 +189,6 @@ advcl:to(5,have,make).
 nsubj(5,sad,we).
 xcomp(5,make,sad).
 % relations.
-be(5,it,look).
-be_only(5,it,look).
-be(5,it,look).
+aos(5,be,it,look).
+aos(5,be_only,it,look).
+aos(5,be,it,look).

@@ -14,22 +14,22 @@ advmod(0,muddy,very).
 amod(0,way,muddy).
 nmod:along(0,load,way).
 % relations.
-be_once_drive(0,waggoner,heavy_load_along_very_muddy_way).
-be_drive(0,waggoner,heavy_load).
-be_drive(0,waggoner,load_along_way).
-be_once_drive(0,waggoner,load_along_very_muddy_way).
-be_once_drive(0,waggoner,heavy_load).
-be_drive(0,waggoner,load).
-be_once_drive(0,waggoner,heavy_load_along_way).
-be_once_drive(0,waggoner,load_along_way).
-be_once_drive(0,waggoner,load).
-be_drive(0,waggoner,heavy_load_along_very_muddy_way).
-be_drive(0,waggoner,load_along_muddy_way).
-be_drive(0,waggoner,heavy_load_along_way).
-be_drive(0,waggoner,heavy_load_along_muddy_way).
-be_drive(0,waggoner,load_along_very_muddy_way).
-be_once_drive(0,waggoner,load_along_muddy_way).
-be_once_drive(0,waggoner,heavy_load_along_muddy_way).
+aos(0,be_once_drive,waggoner,heavy_load_along_very_muddy_way).
+aos(0,be_drive,waggoner,heavy_load).
+aos(0,be_drive,waggoner,load_along_way).
+aos(0,be_once_drive,waggoner,load_along_very_muddy_way).
+aos(0,be_once_drive,waggoner,heavy_load).
+aos(0,be_drive,waggoner,load).
+aos(0,be_once_drive,waggoner,heavy_load_along_way).
+aos(0,be_once_drive,waggoner,load_along_way).
+aos(0,be_once_drive,waggoner,load).
+aos(0,be_drive,waggoner,heavy_load_along_very_muddy_way).
+aos(0,be_drive,waggoner,load_along_muddy_way).
+aos(0,be_drive,waggoner,heavy_load_along_way).
+aos(0,be_drive,waggoner,heavy_load_along_muddy_way).
+aos(0,be_drive,waggoner,load_along_very_muddy_way).
+aos(0,be_once_drive,waggoner,load_along_muddy_way).
+aos(0,be_once_drive,waggoner,heavy_load_along_muddy_way).
 %% at last he came to a part of the road where the wheels sank half-way into the mire and the more the horses pulled the deeper sank the wheels.
 % dependencies.
 root(1,root,come).
@@ -63,12 +63,12 @@ ccomp(1,pull,sink).
 det(1,wheel,the).
 dobj(1,sink,wheel).
 % relations.
-come_to(1,he,part_of_road).
-sink_half-way_into(1,wheel,mire).
-come_at(1,he,last).
-sink(1,deeper,wheel).
-come_to(1,he,part).
-sink(1,wheel,half-way).
+aos(1,come_to,he,part_of_road).
+aos(1,sink_half-way_into,wheel,mire).
+aos(1,come_at,he,last).
+aos(1,sink,deeper,wheel).
+aos(1,come_to,he,part).
+aos(1,sink,wheel,half-way).
 %% so the waggoner threw down his whip and knelt down and prayed to hercules the strong.
 % dependencies.
 root(2,root,throw).
@@ -90,7 +90,7 @@ xcomp(2,pray,hercule).
 det(2,strong,the).
 dobj(2,hercule,strong).
 % relations.
-throw_down(2,waggoner,he_whip).
+aos(2,throw_down,waggoner,he_whip).
 %% o hercules help me in this my hour of distress.
 % dependencies.
 root(3,root,help).
@@ -104,7 +104,7 @@ nmod:in(3,help,hour).
 case(3,distress,of).
 nmod:of(3,hour,distress).
 % relations.
-help(3,o_hercule,I).
+aos(3,help,o_hercule,I).
 %% quoth he.
 % dependencies.
 root(4,root,he).
@@ -121,7 +121,7 @@ nmod:to(5,appear,he).
 cc(5,appear,and).
 conj:and(5,appear,say).
 % relations.
-appear_to(5,hercule,he).
+aos(5,appear_to,hercule,he).
 %% tut man do n't sprawl there.
 % dependencies.
 root(6,root,do).

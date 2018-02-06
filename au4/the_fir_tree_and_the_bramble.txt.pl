@@ -8,8 +8,8 @@ case(0,bramble,to).
 det(0,bramble,the).
 nmod:to(0,say,bramble).
 % relations.
-say_boastingly_to(0,fir-tree,bramble).
-say_to(0,fir-tree,bramble).
+aos(0,say_boastingly_to,fir-tree,bramble).
+aos(0,say_to,fir-tree,bramble).
 %% you are useful for nothing at all.
 % dependencies.
 root(1,root,useful).
@@ -20,10 +20,10 @@ nmod:for(1,useful,nothing).
 case(1,all,at).
 nmod:at(1,useful,all).
 % relations.
-be(1,you,useful).
-be(1,you,useful_for_nothing_at_all).
-be_useful_at(1,you,all).
-be_useful_for(1,you,nothing).
+aos(1,be,you,useful).
+aos(1,be,you,useful_for_nothing_at_all).
+aos(1,be_useful_at,you,all).
+aos(1,be_useful_for,you,nothing).
 %% while i am everywhere used for roofs and houses.
 % dependencies.
 root(2,root,use).
@@ -37,10 +37,10 @@ cc(2,roof,and).
 nmod:for(2,use,house).
 conj:and(2,roof,house).
 % relations.
-be(2,i,use).
-be_use_for(2,i,roof).
-be(2,i,everywhere_use).
-be_everywhere_use_for(2,i,roof).
+aos(2,be,i,use).
+aos(2,be_use_for,i,roof).
+aos(2,be,i,everywhere_use).
+aos(2,be_everywhere_use_for,i,roof).
 %% the bramble answered 'you poor creature if you would only call to mind the axes and saws which are about to hew you down you would have reason to wish that you had grown up a bramble not a fir-tree.
 % dependencies.
 root(3,root,answer).
@@ -91,4 +91,4 @@ neg(3,fir-tree,not).
 det(3,fir-tree,a).
 nmod(3,grow,fir-tree).
 % relations.
-answer(3,bramble,you).
+aos(3,answer,bramble,you).

@@ -11,8 +11,8 @@ case(0,forest,through).
 det(0,forest,the).
 nmod:through(0,travel,forest).
 % relations.
-travel_together_through(0,man,forest).
-travel_through(0,man,forest).
+aos(0,travel_together_through,man,forest).
+aos(0,travel_through,man,forest).
 %% they soon began to boast of their respective superiority to each other in strength and prowess.
 % dependencies.
 root(1,root,begin).
@@ -34,14 +34,14 @@ cc(1,strength,and).
 nmod:in(1,other,prowess).
 conj:and(1,strength,prowess).
 % relations.
-soon_begin(1,they,boast).
-begin(1,they,boast_of_they_superiority).
-begin(1,they,boast_of_they_respective_superiority).
-begin(1,they,boast).
-soon_begin(1,they,boast_of_they_respective_superiority).
-soon_begin(1,they,boast_of_they_superiority).
-boast_of(1,they,they_superiority).
-boast_of(1,they,they_respective_superiority).
+aos(1,soon_begin,they,boast).
+aos(1,begin,they,boast_of_they_superiority).
+aos(1,begin,they,boast_of_they_respective_superiority).
+aos(1,begin,they,boast).
+aos(1,soon_begin,they,boast_of_they_respective_superiority).
+aos(1,soon_begin,they,boast_of_they_superiority).
+aos(1,boast_of,they,they_superiority).
+aos(1,boast_of,they,they_respective_superiority).
 %% as they were disputing they passed a statue carved in stone which represented.
 % dependencies.
 root(2,root,dispute).
@@ -68,7 +68,7 @@ case(3,man,by).
 det(3,man,a).
 nmod:by(3,strangle,man).
 % relations.
-strangle_by(3,lion,man).
+aos(3,strangle_by,lion,man).
 %% the traveler pointed to it and said.
 % dependencies.
 root(4,root,point).
@@ -80,7 +80,7 @@ nmod:to(4,point,it).
 cc(4,point,and).
 conj:and(4,point,say).
 % relations.
-point_to(4,traveler,it).
+aos(4,point_to,traveler,it).
 %% see there.
 % dependencies.
 root(5,root,see).
@@ -103,10 +103,10 @@ nmod:over(6,prevail,king).
 case(6,beast,of).
 nmod:of(6,king,beast).
 % relations.
-prevail_over(6,we,even_king).
-prevail_over(6,we,king).
-prevail_over(6,we,king_of_beast).
-prevail_over(6,we,even_king_of_beast).
+aos(6,prevail_over,we,even_king).
+aos(6,prevail_over,we,king).
+aos(6,prevail_over,we,king_of_beast).
+aos(6,prevail_over,we,even_king_of_beast).
 %% the lion replied.
 % dependencies.
 root(7,root,reply).
@@ -125,9 +125,9 @@ case(8,man,of).
 dep(8,man,you).
 nmod:of(8,one,man).
 % relations.
-be_make_by(8,statue,one_of_man).
-be_make_by(8,statue,one_man).
-be(8,statue,make).
+aos(8,be_make_by,statue,one_of_man).
+aos(8,be_make_by,statue,one_man).
+aos(8,be,statue,make).
 %% if we lions knew how to erect statues you would see the man placed under the paw of the lion.
 % dependencies.
 root(9,root,know).
@@ -151,7 +151,7 @@ case(9,lion,of).
 det(9,lion,the).
 nmod:of(9,paw,lion).
 % relations.
-would_see(9,you,man_place_under_paw_of_lion).
-would_see(9,you,man_place).
-would_see(9,you,man_place_under_paw).
-would_see(9,you,man).
+aos(9,would_see,you,man_place_under_paw_of_lion).
+aos(9,would_see,you,man_place).
+aos(9,would_see,you,man_place_under_paw).
+aos(9,would_see,you,man).

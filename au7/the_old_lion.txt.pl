@@ -25,7 +25,7 @@ nmod:at(0,lay,point).
 case(0,death,of).
 nmod:of(0,point,death).
 % relations.
-wear_out_with(0,lion,year).
+aos(0,wear_out_with,lion,year).
 %% a boar rushed upon him and avenged with a stroke of his tusks a long-remembered injury.
 % dependencies.
 root(1,root,rush).
@@ -46,9 +46,9 @@ det(1,injury,a).
 amod(1,injury,long-remembered).
 dep(1,tusk,injury).
 % relations.
-avenge_with(1,boar,stroke).
-rush_upon(1,boar,he).
-avenge_with(1,boar,stroke_of_he_tusk).
+aos(1,avenge_with,boar,stroke).
+aos(1,rush_upon,boar,he).
+aos(1,avenge_with,boar,stroke_of_he_tusk).
 %% shortly afterwards the bull with his horns gored him as if he were an enemy.
 % dependencies.
 root(2,root,gore).
@@ -67,7 +67,7 @@ cop(2,enemy,be).
 det(2,enemy,a).
 dep(2,gore,enemy).
 % relations.
-be(2,he,enemy).
+aos(2,be,he,enemy).
 %% when the ass saw that the huge beast could be assailed with impunity he let drive at his forehead with his heels.
 % dependencies.
 root(3,root,see).
@@ -93,13 +93,13 @@ case(3,heel,with).
 nmod:poss(3,heel,he).
 nmod:with(3,let,heel).
 % relations.
-let_drive_with(3,he,he_heel).
-let(3,he,drive).
-be(3,huge_beast,assail).
-let_at(3,he,he_forehead).
-let_with(3,he,he_heel).
-be(3,beast,assail).
-let_drive_at(3,he,he_forehead).
+aos(3,let_drive_with,he,he_heel).
+aos(3,let,he,drive).
+aos(3,be,huge_beast,assail).
+aos(3,let_at,he,he_forehead).
+aos(3,let_with,he,he_heel).
+aos(3,be,beast,assail).
+aos(3,let_drive_at,he,he_forehead).
 %% the expiring lion said.
 % dependencies.
 root(4,root,say).
@@ -141,5 +141,5 @@ det(5,death,a).
 amod(5,death,double).
 dobj(5,die,death).
 % relations.
-die(5,disgrace,death).
-die(5,disgrace,double_death).
+aos(5,die,disgrace,death).
+aos(5,die,disgrace,double_death).

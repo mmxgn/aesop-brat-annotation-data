@@ -49,12 +49,12 @@ case(1,movement,over).
 nmod:poss(1,movement,he).
 nmod:over(1,keep,movement).
 % relations.
-stand_on(1,shepherd,he_guard).
-stand_as(1,shepherd,as_enemy).
-keep(1,shepherd,strict_watch).
-keep(1,shepherd,watch).
-stand_on(1,shepherd,he_guard_against_he).
-keep_watch_over(1,shepherd,he_movement).
+aos(1,stand_on,shepherd,he_guard).
+aos(1,stand_as,shepherd,as_enemy).
+aos(1,keep,shepherd,strict_watch).
+aos(1,keep,shepherd,watch).
+aos(1,stand_on,shepherd,he_guard_against_he).
+aos(1,keep_watch_over,shepherd,he_movement).
 %% but when the wolf day after day kept in the company of the sheep and did not make the slightest effort to seize them the shepherd began to look upon him as a guardian of his flock rather than as a plotter of evil against it.
 % dependencies.
 root(2,root,keep).
@@ -130,12 +130,12 @@ case(3,charge,in).
 nmod:poss(3,charge,he).
 nmod:in(3,leave,charge).
 % relations.
-leave_entirely(3,he,sheep).
-leave(3,he,sheep).
-leave_sheep_entirely_in(3,he,he_charge).
-leave_sheep_in(3,he,he_charge).
-call_at_time(3,occasion,one_day).
-call(3,occasion,he).
+aos(3,leave_entirely,he,sheep).
+aos(3,leave,he,sheep).
+aos(3,leave_sheep_entirely_in,he,he_charge).
+aos(3,leave_sheep_in,he,he_charge).
+aos(3,call_at_time,occasion,one_day).
+aos(3,call,occasion,he).
 %% the wolf now that he had the opportunity fell upon the sheep and destroyed the greater part of the flock.
 % dependencies.
 root(4,root,now).
@@ -175,7 +175,7 @@ ccomp(5,find,destroy).
 nsubj(5,exclaim,he).
 ccomp(5,destroy,exclaim).
 % relations.
-return(5,shepherd,find).
+aos(5,return,shepherd,find).
 %% i have been rightly served.
 % dependencies.
 root(6,root,serve).
@@ -184,8 +184,8 @@ aux(6,serve,have).
 auxpass(6,serve,be).
 advmod(6,serve,rightly).
 % relations.
-have(6,i,have_rightly_serve).
-have(6,i,have_serve).
+aos(6,have,i,have_rightly_serve).
+aos(6,have,i,have_serve).
 %% why did i trust my sheep to a wolf.
 % dependencies.
 root(7,root,do).

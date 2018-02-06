@@ -16,18 +16,18 @@ nmod:agent(0,drag,team).
 case(0,oxen,of).
 nmod:of(0,team,oxen).
 % relations.
-be(0,wagon,be_drag_by_team).
-be(0,heavy_wagon,be_drag_along_country_lane).
-be(0,heavy_wagon,be_drag_along_country_lane_by_team).
-be(0,wagon,be_drag_along_country_lane).
-be(0,wagon,be_drag_along_country_lane_by_team_of_oxen).
-be(0,wagon,be_drag_by_team_of_oxen).
-be(0,heavy_wagon,be_drag_by_team_of_oxen).
-be(0,heavy_wagon,be_drag_by_team).
-be(0,wagon,be_drag_along_country_lane_by_team).
-be(0,heavy_wagon,be_drag_along_country_lane_by_team_of_oxen).
-be(0,heavy_wagon,be_drag).
-be(0,wagon,be_drag).
+aos(0,be,wagon,be_drag_by_team).
+aos(0,be,heavy_wagon,be_drag_along_country_lane).
+aos(0,be,heavy_wagon,be_drag_along_country_lane_by_team).
+aos(0,be,wagon,be_drag_along_country_lane).
+aos(0,be,wagon,be_drag_along_country_lane_by_team_of_oxen).
+aos(0,be,wagon,be_drag_by_team_of_oxen).
+aos(0,be,heavy_wagon,be_drag_by_team_of_oxen).
+aos(0,be,heavy_wagon,be_drag_by_team).
+aos(0,be,wagon,be_drag_along_country_lane_by_team).
+aos(0,be,heavy_wagon,be_drag_along_country_lane_by_team_of_oxen).
+aos(0,be,heavy_wagon,be_drag).
+aos(0,be,wagon,be_drag).
 %% the axle-trees groaned and creaked terribly.
 % dependencies.
 root(1,root,groan).
@@ -50,9 +50,9 @@ acl:relcl(2,whereupon,address).
 det(2,wheel,the).
 dobj(2,address,wheel).
 % relations.
-turn(2,oxen,round).
-address(2,oxen,wheel).
-turn_thus(2,oxen,round).
+aos(2,turn,oxen,round).
+aos(2,address,oxen,wheel).
+aos(2,turn_thus,oxen,round).
 %% hullo there.
 % dependencies.
 root(3,root,hullo).
@@ -68,9 +68,9 @@ advmod(4,much,so).
 amod(4,noise,much).
 dobj(4,make,noise).
 % relations.
-do_make(4,you,so_much_noise).
-do_make(4,you,much_noise).
-do_make(4,you,noise).
+aos(4,do_make,you,so_much_noise).
+aos(4,do_make,you,much_noise).
+aos(4,do_make,you,noise).
 %% we bear all the labor and we not you ought to cry out.
 % dependencies.
 root(5,root,bear).
@@ -89,5 +89,5 @@ mark(5,cry,to).
 xcomp(5,ought,cry).
 compound:prt(5,cry,out).
 % relations.
-bear(5,we,labor).
-bear(5,we,we).
+aos(5,bear,we,labor).
+aos(5,bear,we,we).

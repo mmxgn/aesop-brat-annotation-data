@@ -18,8 +18,8 @@ mark(0,capture,to).
 xcomp(0,try,capture).
 dobj(0,capture,he).
 % relations.
-be(0,bull,bite).
-be_bite_by(0,bull,mouse).
+aos(0,be,bull,bite).
+aos(0,be_bite_by,bull,mouse).
 %% but the mouse reached his hole in safety.
 % dependencies.
 root(1,root,reach).
@@ -31,7 +31,7 @@ dobj(1,reach,hole).
 case(1,safety,in).
 nmod:in(1,reach,safety).
 % relations.
-reach(1,mouse,he_hole).
+aos(1,reach,mouse,he_hole).
 %% though the bull dug into the walls with his horns he tired before he could rout out the mouse and crouching down went to sleep outside the hole.
 % dependencies.
 root(2,root,dig).
@@ -64,12 +64,12 @@ case(2,hole,outside).
 det(2,hole,the).
 nmod:outside(2,sleep,hole).
 % relations.
-tire(2,he,he_could_rout).
-dig_into(2,bull,wall_with_he_horn).
-dig_into(2,bull,wall).
-could_rout_out(2,he,mouse).
-tire(2,he,he_could_rout_out_mouse).
-is_with(2,wall,he_horn).
+aos(2,tire,he,he_could_rout).
+aos(2,dig_into,bull,wall_with_he_horn).
+aos(2,dig_into,bull,wall).
+aos(2,could_rout_out,he,mouse).
+aos(2,tire,he,he_could_rout_out_mouse).
+aos(2,is_with,wall,he_horn).
 %% the mouse peeped out crept furtively up his flank and again biting him retreated to his hole.
 % dependencies.
 root(3,root,peep).
@@ -91,7 +91,7 @@ case(3,hole,to).
 nmod:poss(3,hole,he).
 nmod:to(3,retreat,hole).
 % relations.
-retreat_to(3,he,he_hole).
+aos(3,retreat_to,he,he_hole).
 %% the bull rising up and not knowing what to do was sadly perplexed.
 % dependencies.
 root(4,root,perplexed).
@@ -109,7 +109,7 @@ ccomp(4,know,do).
 cop(4,perplexed,be).
 advmod(4,perplexed,sadly).
 % relations.
-be(4,bull,sadly_perplexed).
+aos(4,be,bull,sadly_perplexed).
 %% at which the mouse said.
 % dependencies.
 root(5,root,say).
@@ -145,8 +145,8 @@ mark(7,do,to).
 dep(7,strongest,do).
 dobj(7,do,mischief).
 % relations.
-be(7,lowly,when_strongest).
-be(7,lowly,strongest).
-do(7,lowly,mischief).
-be(7,small,strongest).
-be(7,small,when_strongest).
+aos(7,be,lowly,when_strongest).
+aos(7,be,lowly,strongest).
+aos(7,do,lowly,mischief).
+aos(7,be,small,strongest).
+aos(7,be,small,when_strongest).

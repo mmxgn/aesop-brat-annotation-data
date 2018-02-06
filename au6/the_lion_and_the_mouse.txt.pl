@@ -88,9 +88,9 @@ mwe(4,some,of).
 det(4,day,these).
 nmod:tmod(4,do,day).
 % relations.
-do(4,i,turn).
-do(4,i,you).
-be(4,i,may_able).
+aos(4,do,i,turn).
+aos(4,do,i,you).
+aos(4,be,i,may_able).
 %% the lion was so tickled at the idea of the mouse being able to help him that he lifted up his paw and let him go.
 % dependencies.
 root(5,root,tickled).
@@ -123,13 +123,13 @@ conj:and(5,help,let).
 nsubj(5,go,he).
 ccomp(5,let,go).
 % relations.
-be(5,lion,so_tickled).
-be(5,idea,able).
-be_so_tickled(5,lion,able).
-lift_up(5,he,he_paw).
-help(5,idea,he).
-be_tickled(5,lion,able).
-be(5,lion,tickled).
+aos(5,be,lion,so_tickled).
+aos(5,be,idea,able).
+aos(5,be_so_tickled,lion,able).
+aos(5,lift_up,he,he_paw).
+aos(5,help,idea,he).
+aos(5,be_tickled,lion,able).
+aos(5,be,lion,tickled).
 %% some time after the lion was caught in a trap and the hunters who desired to carry him alive to the king tied him to a tree while they went in search of a waggon to carry him on.
 % dependencies.
 root(6,root,tie).
@@ -176,11 +176,11 @@ xcomp(6,go,carry).
 dobj(6,carry,he).
 nmod(6,carry,on).
 % relations.
-be(6,lion,catch).
-go_in(6,they,search_of_waggon).
-go_in(6,they,search).
-carry(6,they,he).
-be_catch_in(6,lion,trap).
+aos(6,be,lion,catch).
+aos(6,go_in,they,search_of_waggon).
+aos(6,go_in,they,search).
+aos(6,carry,they,he).
+aos(6,be_catch_in,lion,trap).
 %% just then the little mouse happened to pass by and seeing the sad plight in which the lion was went up to him and soon gnawed away the ropes that bound the king of the beasts.
 % dependencies.
 root(7,root,happen).
@@ -226,11 +226,11 @@ case(7,beast,of).
 det(7,beast,the).
 nmod:of(7,king,beast).
 % relations.
-happen(7,mouse,pass).
-happen(7,little_mouse,pass_by).
-be_go_up_to(7,lion,he).
-happen(7,mouse,pass_by).
-happen(7,little_mouse,pass).
+aos(7,happen,mouse,pass).
+aos(7,happen,little_mouse,pass_by).
+aos(7,be_go_up_to,lion,he).
+aos(7,happen,mouse,pass_by).
+aos(7,happen,little_mouse,pass).
 %% was i not right.
 % dependencies.
 root(8,root,be).

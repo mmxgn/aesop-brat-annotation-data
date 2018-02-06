@@ -29,12 +29,12 @@ cc(0,will,and).
 dobj(0,come,testament).
 conj:and(0,will,testament).
 % relations.
-be(0,he,death).
-be(0,he,sick_unto_death).
-be(0,he,sick_death).
-be(0,he,unto_death).
-summon(0,he,animal).
-summon_animal(0,he,come).
+aos(0,be,he,death).
+aos(0,be,he,sick_unto_death).
+aos(0,be,he,sick_death).
+aos(0,be,he,unto_death).
+aos(0,summon,he,animal).
+aos(0,summon_animal,he,come).
 %% so the goat came to the lion 's cave and stopped there listening for a long time.
 % dependencies.
 root(1,root,come).
@@ -56,10 +56,10 @@ det(1,time,a).
 amod(1,time,long).
 nmod:for(1,listen,time).
 % relations.
-listen_for(1,stop,long_time).
-come_to(1,goat,lion_'s_cave).
-to(1,lion,cave).
-listen_for(1,stop,time).
+aos(1,listen_for,stop,long_time).
+aos(1,come_to,goat,lion_'s_cave).
+aos(1,to,lion,cave).
+aos(1,listen_for,stop,time).
 %% then a sheep went in and before she came out a calf came up to receive the last wishes of the lord of the beasts.
 % dependencies.
 root(2,root,sheep).
@@ -90,12 +90,12 @@ case(2,beast,of).
 det(2,beast,the).
 nmod:of(2,lord,beast).
 % relations.
-receive(2,calf,wish_of_lord_of_beast).
-receive(2,calf,last_wish_of_lord).
-receive(2,calf,last_wish).
-receive(2,calf,wish_of_lord).
-receive(2,calf,last_wish_of_lord_of_beast).
-receive(2,calf,wish).
+aos(2,receive,calf,wish_of_lord_of_beast).
+aos(2,receive,calf,last_wish_of_lord).
+aos(2,receive,calf,last_wish).
+aos(2,receive,calf,wish_of_lord).
+aos(2,receive,calf,last_wish_of_lord_of_beast).
+aos(2,receive,calf,wish).
 %% but soon the lion seemed to recover and came to the mouth of his cave and saw the fox who had been waiting outside for some time.
 % dependencies.
 root(3,root,seem).
@@ -130,10 +130,10 @@ case(3,time,for).
 det(3,time,some).
 nmod:for(3,wait,time).
 % relations.
-come_to(3,lion,mouth_of_he_cave).
-soon_seem(3,lion,recover).
-seem(3,lion,recover).
-come_to(3,lion,mouth).
+aos(3,come_to,lion,mouth_of_he_cave).
+aos(3,soon_seem,lion,recover).
+aos(3,seem,lion,recover).
+aos(3,come_to,lion,mouth).
 %% why do you not come to pay your respects to me.
 % dependencies.
 root(4,root,come).
@@ -149,7 +149,7 @@ dobj(4,pay,respects).
 case(4,I,to).
 nmod:to(4,pay,I).
 % relations.
-pay(4,you,you_respects).
+aos(4,pay,you,you_respects).
 %% said the lion to the fox.
 % dependencies.
 root(5,root,say).
@@ -168,7 +168,7 @@ nmod:poss(6,pardon,majesty).
 case(6,majesty,'s).
 dobj(6,beg,pardon).
 % relations.
-has(6,majesty,pardon).
+aos(6,has,majesty,pardon).
 %% said the fox.
 % dependencies.
 root(7,root,say).
@@ -193,7 +193,7 @@ acl:relcl(8,animal,come).
 case(8,you,to).
 nmod:to(8,come,you).
 % relations.
-notice(8,i,track).
+aos(8,notice,i,track).
 %% and while i see many hoof-marks going in i see none coming out.
 % dependencies.
 root(9,root,see).
@@ -210,8 +210,8 @@ dobj(9,see,none).
 acl(9,none,come).
 compound:prt(9,come,out).
 % relations.
-go_in(9,hoof-mark,i).
-go_in(9,many_hoof-mark,i).
+aos(9,go_in,hoof-mark,i).
+aos(9,go_in,many_hoof-mark,i).
 %% till the animals that have entered your cave come out again i prefer to remain in the open air.
 % dependencies.
 root(10,root,animal).
@@ -236,8 +236,8 @@ det(10,air,the).
 amod(10,air,open).
 nmod:in(10,remain,air).
 % relations.
-prefer(10,i,remain).
-remain_in(10,i,air).
-remain_in(10,i,open_air).
-prefer(10,i,remain_in_air).
-prefer(10,i,remain_in_open_air).
+aos(10,prefer,i,remain).
+aos(10,remain_in,i,air).
+aos(10,remain_in,i,open_air).
+aos(10,prefer,i,remain_in_air).
+aos(10,prefer,i,remain_in_open_air).

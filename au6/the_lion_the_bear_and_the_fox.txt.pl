@@ -21,14 +21,14 @@ case(0,possession,for).
 nmod:poss(0,possession,its).
 nmod:for(0,fight,possession).
 % relations.
-seize(0,lion,kid).
-seize_kid_at(0,lion,same_moment).
-seize_kid_at(0,lion,moment).
-seize_kid_at(0,bear,same_moment).
-seize(0,bear,kid).
-fight_fiercely_for(0,bear,its_possession).
-seize_kid_at(0,bear,moment).
-fight_for(0,bear,its_possession).
+aos(0,seize,lion,kid).
+aos(0,seize_kid_at,lion,same_moment).
+aos(0,seize_kid_at,lion,moment).
+aos(0,seize_kid_at,bear,same_moment).
+aos(0,seize,bear,kid).
+aos(0,fight_fiercely_for,bear,its_possession).
+aos(0,seize_kid_at,bear,moment).
+aos(0,fight_for,bear,its_possession).
 %% when they had fearfully lacerated each other and were faint from the long combat they lay down exhausted with fatigue.
 % dependencies.
 root(1,root,lacerate).
@@ -53,7 +53,7 @@ dep(1,lay,exhaust).
 case(1,fatigue,with).
 nmod:with(1,exhaust,fatigue).
 % relations.
-exhaust_with(1,they,fatigue).
+aos(1,exhaust_with,they,fatigue).
 %% a fox who had gone round them at a distance several times saw them both stretched on the ground with the kid lying untouched in the middle.
 % dependencies.
 root(2,root,see).
@@ -85,13 +85,13 @@ case(2,middle,in).
 det(2,middle,the).
 nmod:in(2,untouched,middle).
 % relations.
-stretch_on(2,they,ground_with_kid_lie).
-is_with(2,ground,kid_lie).
-stretch_on(2,they,ground_with_kid).
-stretch_on(2,they,ground).
-both_stretch_on(2,they,ground_with_kid_lie).
-both_stretch_on(2,they,ground).
-both_stretch_on(2,they,ground_with_kid).
+aos(2,stretch_on,they,ground_with_kid_lie).
+aos(2,is_with,ground,kid_lie).
+aos(2,stretch_on,they,ground_with_kid).
+aos(2,stretch_on,they,ground).
+aos(2,both_stretch_on,they,ground_with_kid_lie).
+aos(2,both_stretch_on,they,ground).
+aos(2,both_stretch_on,they,ground_with_kid).
 %% he ran in between them and seizing the kid scampered off as fast as he could.
 % dependencies.
 root(3,root,run).
@@ -112,9 +112,9 @@ mark(3,could,as).
 nsubj(3,could,he).
 advcl:as(3,scamper,could).
 % relations.
-scamper_off_fast(3,kid,he_could).
-scamper_off(3,kid,he_could).
-run_in(3,he,in_they).
+aos(3,scamper_off_fast,kid,he_could).
+aos(3,scamper_off,kid,he_could).
+aos(3,run_in,he,in_they).
 %% the lion and the bear saw him but not being able to get up said.
 % dependencies.
 root(4,root,see).
@@ -134,8 +134,8 @@ xcomp(4,able,get).
 compound:prt(4,get,up).
 dep(4,see,say).
 % relations.
-see(4,lion,he).
-see(4,bear,he).
+aos(4,see,lion,he).
+aos(4,see,bear,he).
 %% woe be to us that we should have fought and belabored ourselves only to serve the turn of a fox.
 % dependencies.
 root(5,root,woe).
@@ -161,7 +161,7 @@ case(5,fox,of).
 det(5,fox,a).
 nmod:of(5,turn,fox).
 % relations.
-belabor(5,we,ourselves).
+aos(5,belabor,we,ourselves).
 %% it sometimes happens that one man has all the toil and another all the profit.
 % dependencies.
 root(6,root,happen).

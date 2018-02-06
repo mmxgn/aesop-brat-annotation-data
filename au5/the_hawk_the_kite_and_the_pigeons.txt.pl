@@ -17,10 +17,10 @@ mark(0,defend,to).
 xcomp(0,call,defend).
 dobj(0,defend,they).
 % relations.
-terrify_by(0,pigeon,appearance_of_kite_call_upon_hawk).
-terrify_by(0,pigeon,appearance_of_kite_call).
-terrify_by(0,pigeon,appearance).
-terrify_by(0,pigeon,appearance_of_kite).
+aos(0,terrify_by,pigeon,appearance_of_kite_call_upon_hawk).
+aos(0,terrify_by,pigeon,appearance_of_kite_call).
+aos(0,terrify_by,pigeon,appearance).
+aos(0,terrify_by,pigeon,appearance_of_kite).
 %% he at once consented.
 % dependencies.
 root(1,root,consent).
@@ -68,4 +68,4 @@ det(2,year,a).
 amod(2,year,whole).
 nmod:upon(2,pounce,year).
 % relations.
-have_admit(2,they,he).
+aos(2,have_admit,they,he).

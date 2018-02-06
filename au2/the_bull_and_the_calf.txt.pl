@@ -52,10 +52,10 @@ dep(1,way,manage).
 mark(1,pass,to).
 xcomp(1,manage,pass).
 % relations.
-offer(1,calf,go_before).
-offer(1,young_calf,go).
-offer(1,calf,go).
-offer(1,young_calf,go_before).
+aos(1,offer,calf,go_before).
+aos(1,offer,young_calf,go).
+aos(1,offer,calf,go).
+aos(1,offer,young_calf,go_before).
 %% save yourself the trouble.
 % dependencies.
 root(2,root,trouble).
@@ -81,10 +81,10 @@ nsubjpass(4,bear,you).
 auxpass(4,bear,be).
 advcl:before(4,know,bear).
 % relations.
-know_way(4,i,bear).
-know_way(4,i,long_bear).
-know(4,i,long_bear).
-know(4,i,way).
-be(4,you,long_bear).
-know(4,i,bear).
-be(4,you,bear).
+aos(4,know_way,i,bear).
+aos(4,know_way,i,long_bear).
+aos(4,know,i,long_bear).
+aos(4,know,i,way).
+aos(4,be,you,long_bear).
+aos(4,know,i,bear).
+aos(4,be,you,bear).

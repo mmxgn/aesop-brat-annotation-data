@@ -14,7 +14,7 @@ acl(0,plowland,sow).
 case(0,wheat,with).
 nmod:with(0,sow,wheat).
 % relations.
-make(0,crane,they_feeding_grounds).
+aos(0,make,crane,they_feeding_grounds).
 %% for a long time the farmer brandishing an empty sling chased them away by the terror he inspired.
 % dependencies.
 root(1,root,time).
@@ -36,9 +36,9 @@ nmod:by(1,chase,terror).
 nsubj(1,inspire,he).
 acl:relcl(1,time,inspire).
 % relations.
-brandish(1,farmer,sling).
-chase_away(1,farmer,they).
-brandish(1,farmer,empty_sling).
+aos(1,brandish,farmer,sling).
+aos(1,chase_away,farmer,they).
+aos(1,brandish,farmer,empty_sling).
 %% but when the birds found that the sling was only swung in the air they ceased to take any notice of it and would not move.
 % dependencies.
 root(2,root,find).
@@ -71,9 +71,9 @@ neg(2,move,not).
 acl:relcl(2,air,move).
 conj:and(2,cease,move).
 % relations.
-be(2,sling,swing).
-take(2,they,notice_of_it).
-be(2,sling,only_swing).
+aos(2,be,sling,swing).
+aos(2,take,they,notice_of_it).
+aos(2,be,sling,only_swing).
 %% the farmer on seeing this charged his sling with stones and killed a great number.
 % dependencies.
 root(3,root,charge).
@@ -108,10 +108,10 @@ case(4,other,to).
 det(4,other,each).
 nmod:to(4,cry,other).
 % relations.
-once_forsake(4,remain_bird,he_field).
-forsake(4,bird,he_field).
-once_forsake(4,bird,he_field).
-forsake(4,remain_bird,he_field).
+aos(4,once_forsake,remain_bird,he_field).
+aos(4,forsake,bird,he_field).
+aos(4,once_forsake,bird,he_field).
+aos(4,forsake,remain_bird,he_field).
 %% it is time for us to be off to liliput for this man is no longer content to scare us but begins to show us in earnest what he can do.
 % dependencies.
 root(5,root,time).
@@ -151,9 +151,9 @@ nsubj(5,do,he).
 aux(5,do,can).
 acl:relcl(5,earnest,do).
 % relations.
-be_time(5,it,be).
-be(5,it,time_for_we_be_off).
-be(5,man,content).
-be(5,it,time_for_we_be).
-scare(5,man,we).
-be_time(5,it,be_off).
+aos(5,be_time,it,be).
+aos(5,be,it,time_for_we_be_off).
+aos(5,be,man,content).
+aos(5,be,it,time_for_we_be).
+aos(5,scare,man,we).
+aos(5,be_time,it,be_off).

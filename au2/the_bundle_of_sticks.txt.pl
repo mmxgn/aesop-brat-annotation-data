@@ -20,12 +20,12 @@ det(0,advice,some).
 compound(0,advice,parting).
 dobj(0,give,advice).
 % relations.
-give(0,man,they).
-give(0,old_man,they).
-give(0,old_man,parting_advice).
-give(0,man,parting_advice).
-summon(0,man,he_son).
-summon(0,old_man,he_son).
+aos(0,give,man,they).
+aos(0,give,old_man,they).
+aos(0,give,old_man,parting_advice).
+aos(0,give,man,parting_advice).
+aos(0,summon,man,he_son).
+aos(0,summon,old_man,he_son).
 %% he ordered his servants to bring in a faggot of sticks and said to his eldest son.
 % dependencies.
 root(1,root,order).
@@ -48,11 +48,11 @@ nmod:poss(1,son,he).
 amod(1,son,eldest).
 nmod:to(1,say,son).
 % relations.
-bring_in(1,he_servant,faggot).
-bring_in(1,he_servant,faggot_of_stick).
-say_to(1,he,he_son).
-say_to(1,he,he_eldest_son).
-order(1,he,he_servant).
+aos(1,bring_in,he_servant,faggot).
+aos(1,bring_in,he_servant,faggot_of_stick).
+aos(1,say_to,he,he_son).
+aos(1,say_to,he,he_eldest_son).
+aos(1,order,he,he_servant).
 %% break it.
 % dependencies.
 root(2,root,break).
@@ -79,7 +79,7 @@ xcomp(3,unable,break).
 det(3,bundle,the).
 dobj(3,break,bundle).
 % relations.
-is_with(3,son_strain,effort).
+aos(3,is_with,son_strain,effort).
 %% the other sons also tried but none of them was successful.
 % dependencies.
 root(4,root,try).
@@ -94,7 +94,7 @@ nmod:of(4,none,they).
 cop(4,successful,be).
 ccomp(4,try,successful).
 % relations.
-be(4,none,successful).
+aos(4,be,none,successful).
 %% untie the faggots.
 % dependencies.
 root(5,root,untie).
@@ -130,8 +130,8 @@ compound:prt(8,call,out).
 case(8,they,to).
 nmod:to(8,call,they).
 % relations.
-call_out_to(8,he,they).
-so_call_out_to(8,he,they).
+aos(8,call_out_to,he,they).
+aos(8,so_call_out_to,he,they).
 %% now break.
 % dependencies.
 root(9,root,break).
@@ -153,7 +153,7 @@ nsubj(11,see,you).
 nmod:poss(11,meaning,my).
 dobj(11,see,meaning).
 % relations.
-see(11,you,my_meaning).
+aos(11,see,you,my_meaning).
 %% said their father.
 % dependencies.
 root(12,root,say).

@@ -31,8 +31,8 @@ det(0,point,the).
 case(0,drown,of).
 nmod:of(0,point,drown).
 % relations.
-be_on(0,ant,point_of_drown).
-be_on(0,ant,point).
+aos(0,be_on,ant,point_of_drown).
+aos(0,be_on,ant,point).
 %% a dove sitting on a tree overhanging the water plucked a leaf and let it fall into the stream close to her.
 % dependencies.
 root(1,root,pluck).
@@ -59,9 +59,9 @@ nmod:into(1,fall,close).
 case(1,she,to).
 nmod:to(1,fall,she).
 % relations.
-fall_to(1,it,she).
-fall_into(1,it,stream_close).
-pluck(1,dive,leaf).
+aos(1,fall_to,it,she).
+aos(1,fall_into,it,stream_close).
+aos(1,pluck,dive,leaf).
 %% the ant climbed onto it and floated in safety to the bank.
 % dependencies.
 root(2,root,climb).
@@ -78,9 +78,9 @@ case(2,bank,to).
 det(2,bank,the).
 nmod:to(2,float,bank).
 % relations.
-float_to(2,ant,bank).
-climb_onto(2,ant,it).
-float_in(2,ant,safety).
+aos(2,float_to,ant,bank).
+aos(2,climb_onto,ant,it).
+aos(2,float_in,ant,safety).
 %% shortly afterwards a birdcatcher came and stood under the tree and laid his lime-twigs for the dove which sat in the branches.
 % dependencies.
 root(3,root,come).
@@ -119,8 +119,8 @@ case(4,foot,in).
 det(4,foot,the).
 nmod:in(4,sting,foot).
 % relations.
-perceive(4,ant,he_design).
-sting(4,ant,he).
+aos(4,perceive,ant,he_design).
+aos(4,sting,ant,he).
 %% in pain the birdcatcher threw down the twigs and the noise made the dove take wing.
 % dependencies.
 root(5,root,throw).
@@ -141,6 +141,6 @@ amod(5,the,dive).
 ccomp(5,make,take).
 dobj(5,take,wing).
 % relations.
-throw_down_in(5,birdcatcher,pain).
-take(5,the_dive,wing).
-take(5,the,wing).
+aos(5,throw_down_in,birdcatcher,pain).
+aos(5,take,the_dive,wing).
+aos(5,take,the,wing).

@@ -16,7 +16,7 @@ mark(0,catch,to).
 xcomp(0,go,catch).
 dobj(0,catch,bird).
 % relations.
-catch(0,fowler,bird).
+aos(0,catch,fowler,bird).
 %% seeing a thrush sitting upon a tree he wished to take it and fitting his twigs to a proper length watched intently having his whole thoughts directed towards the sky.
 % dependencies.
 root(1,root,see).
@@ -52,13 +52,13 @@ case(1,sky,towards).
 det(1,sky,the).
 nmod:towards(1,direct,sky).
 % relations.
-watch(1,fitting_he_twig,intently_have).
-direct_towards(1,he_thought,sky).
-watch(1,fitting_he_twig,have).
-take(1,he,it).
-direct_towards(1,he_whole_thought,sky).
-watch(1,he_twig,have).
-watch(1,he_twig,intently_have).
+aos(1,watch,fitting_he_twig,intently_have).
+aos(1,direct_towards,he_thought,sky).
+aos(1,watch,fitting_he_twig,have).
+aos(1,take,he,it).
+aos(1,direct_towards,he_whole_thought,sky).
+aos(1,watch,he_twig,have).
+aos(1,watch,he_twig,intently_have).
 %% while thus looking upwards he unknowingly trod upon a viper asleep just before his feet.
 % dependencies.
 root(2,root,look).
@@ -77,14 +77,14 @@ case(2,foot,before).
 nmod:poss(2,foot,he).
 nmod:before(2,tread,foot).
 % relations.
-tread_before(2,he,he_foot).
-unknowingly_tread_before(2,he,he_foot).
-tread_before(2,he,just_he_foot).
-unknowingly_tread_upon(2,he,viper).
-tread_upon(2,he,viper_asleep).
-unknowingly_tread_upon(2,he,viper_asleep).
-tread_upon(2,he,viper).
-unknowingly_tread_before(2,he,just_he_foot).
+aos(2,tread_before,he,he_foot).
+aos(2,unknowingly_tread_before,he,he_foot).
+aos(2,tread_before,he,just_he_foot).
+aos(2,unknowingly_tread_upon,he,viper).
+aos(2,tread_upon,he,viper_asleep).
+aos(2,unknowingly_tread_upon,he,viper_asleep).
+aos(2,tread_upon,he,viper).
+aos(2,unknowingly_tread_before,he,just_he_foot).
 %% the viper turning about stung him and falling into a swoon the man said to himself.
 % dependencies.
 root(3,root,viper).
@@ -105,14 +105,14 @@ acl:relcl(3,swoon,say).
 case(3,himself,to).
 nmod:to(3,say,himself).
 % relations.
-say_to(3,man,himself).
+aos(3,say_to,man,himself).
 %% woe is me.
 % dependencies.
 root(4,root,I).
 nsubj(4,I,woe).
 cop(4,I,be).
 % relations.
-be(4,woe,I).
+aos(4,be,woe,I).
 %% that while i purposed to hunt another i am myself fallen unawares into the snares of death.
 % dependencies.
 root(5,root,fall).

@@ -24,12 +24,12 @@ case(0,enemy,from).
 det(0,enemy,the).
 nmod:from(0,protect,enemy).
 % relations.
-be(0,its_inhabitant,call_together).
-be(0,great_city,besiege).
-be_call_together(0,its_inhabitant,consider).
-be(0,its_inhabitant,call).
-be_call(0,its_inhabitant,consider).
-be(0,city,besiege).
+aos(0,be,its_inhabitant,call_together).
+aos(0,be,great_city,besiege).
+aos(0,be_call_together,its_inhabitant,consider).
+aos(0,be,its_inhabitant,call).
+aos(0,be_call,its_inhabitant,consider).
+aos(0,be,city,besiege).
 %% a bricklayer earnestly recommended bricks as affording the best material for an effective resistance.
 % dependencies.
 root(1,root,recommend).
@@ -47,14 +47,14 @@ det(1,resistance,a).
 amod(1,resistance,effective).
 nmod:for(1,material,resistance).
 % relations.
-afford(1,bricklayer,material_for_effective_resistance).
-afford(1,bricklayer,best_material_for_resistance).
-afford(1,bricklayer,best_material).
-afford(1,bricklayer,material).
-afford(1,bricklayer,material_for_resistance).
-afford(1,bricklayer,best_material_for_effective_resistance).
-recommend(1,bricklayer,brick).
-earnestly_recommend(1,bricklayer,brick).
+aos(1,afford,bricklayer,material_for_effective_resistance).
+aos(1,afford,bricklayer,best_material_for_resistance).
+aos(1,afford,bricklayer,best_material).
+aos(1,afford,bricklayer,material).
+aos(1,afford,bricklayer,material_for_resistance).
+aos(1,afford,bricklayer,best_material_for_effective_resistance).
+aos(1,recommend,bricklayer,brick).
+aos(1,earnestly_recommend,bricklayer,brick).
 %% a carpenter with equal enthusiasm proposed timber as a preferable method of defense.
 % dependencies.
 root(2,root,propose).
@@ -71,12 +71,12 @@ nmod:as(2,propose,method).
 case(2,defense,of).
 nmod:of(2,method,defense).
 % relations.
-propose_timber_as(2,carpenter,preferable_method).
-propose_timber_as(2,carpenter,method_of_defense).
-is_with(2,carpenter,equal_enthusiasm).
-propose(2,carpenter,timber).
-propose_timber_as(2,carpenter,preferable_method_of_defense).
-propose_timber_as(2,carpenter,method).
+aos(2,propose_timber_as,carpenter,preferable_method).
+aos(2,propose_timber_as,carpenter,method_of_defense).
+aos(2,is_with,carpenter,equal_enthusiasm).
+aos(2,propose,carpenter,timber).
+aos(2,propose_timber_as,carpenter,preferable_method_of_defense).
+aos(2,propose_timber_as,carpenter,method).
 %% upon which a currier stood up and said.
 % dependencies.
 root(3,root,stand).
@@ -110,8 +110,8 @@ nmod:to(4,equal,covering).
 case(4,hide,of).
 nmod:of(4,covering,hide).
 % relations.
-differ_altogether_from(4,i,you).
-differ_from(4,i,you).
+aos(4,differ_altogether_from,i,you).
+aos(4,differ_from,i,you).
 %% and nothing so good as leather.
 % dependencies.
 root(5,root,nothing).

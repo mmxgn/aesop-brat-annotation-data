@@ -60,15 +60,15 @@ case(1,work,of).
 det(1,work,the).
 nmod:of(1,share,work).
 % relations.
-take(1,belly,its_share).
-take(1,belly,its_share_of_work).
-strike(1,long_discussion,work).
-take(1,belly,its_proper_share_of_work).
-hold(1,they,meeting).
-strike_work(1,discussion,belly_consent).
-take(1,belly,its_proper_share).
-strike(1,discussion,work).
-strike_work(1,long_discussion,belly_consent).
+aos(1,take,belly,its_share).
+aos(1,take,belly,its_share_of_work).
+aos(1,strike,long_discussion,work).
+aos(1,take,belly,its_proper_share_of_work).
+aos(1,hold,they,meeting).
+aos(1,strike_work,discussion,belly_consent).
+aos(1,take,belly,its_proper_share).
+aos(1,strike,discussion,work).
+aos(1,strike_work,long_discussion,belly_consent).
 %% so for a day or two the hands refused to take the food the mouth refused to receive it and the teeth had no work to do.
 % dependencies.
 root(2,root,so).
@@ -103,7 +103,7 @@ dobj(2,have,work).
 mark(2,do,to).
 acl:to(2,work,do).
 % relations.
-receive(2,mouth,it).
+aos(2,receive,mouth,it).
 %% but after a day or two the members began to find that they themselves were not in a very active condition the hands could hardly move and the mouth was all parched and dry while the legs were unable to support the rest.
 % dependencies.
 root(3,root,begin).
@@ -155,10 +155,10 @@ xcomp(3,unable,support).
 det(3,rest,the).
 dobj(3,support,rest).
 % relations.
-support(3,leg,rest).
-be(3,leg,unable).
-be_parched(3,mouth,unable).
-be(3,mouth,parched).
+aos(3,support,leg,rest).
+aos(3,be,leg,unable).
+aos(3,be_parched,mouth,unable).
+aos(3,be,mouth,parched).
 %% so thus they found that even the belly in its dull quiet way was doing necessary work for the body and that all must work together or the body will go to pieces.
 % dependencies.
 root(4,root,so).
@@ -197,24 +197,24 @@ conj:or(4,find,go).
 case(4,piece,to).
 nmod:to(4,go,piece).
 % relations.
-is_in(4,belly,its_dull_quiet_way).
-even_belly_in(4,work,its_dull_quiet_way).
-belly_in(4,work,its_quiet_way).
-do(4,belly,work).
-belly_in(4,work,its_way).
-do_work_for(4,belly,body).
-belly_in(4,necessary_work,its_dull_quiet_way).
-belly_in(4,necessary_work,its_way).
-belly_in(4,necessary_work,its_dull_way).
-even_belly_in(4,necessary_work,its_dull_way).
-belly_in(4,work,its_dull_way).
-even_belly_in(4,necessary_work,its_quiet_way).
-even_belly_in(4,necessary_work,its_dull_quiet_way).
-even_belly_in(4,work,its_quiet_way).
-do(4,belly,necessary_work).
-even_belly_in(4,necessary_work,its_way).
-will_go_to(4,body,piece).
-even_belly_in(4,work,its_way).
-even_belly_in(4,work,its_dull_way).
-belly_in(4,work,its_dull_quiet_way).
-belly_in(4,necessary_work,its_quiet_way).
+aos(4,is_in,belly,its_dull_quiet_way).
+aos(4,even_belly_in,work,its_dull_quiet_way).
+aos(4,belly_in,work,its_quiet_way).
+aos(4,do,belly,work).
+aos(4,belly_in,work,its_way).
+aos(4,do_work_for,belly,body).
+aos(4,belly_in,necessary_work,its_dull_quiet_way).
+aos(4,belly_in,necessary_work,its_way).
+aos(4,belly_in,necessary_work,its_dull_way).
+aos(4,even_belly_in,necessary_work,its_dull_way).
+aos(4,belly_in,work,its_dull_way).
+aos(4,even_belly_in,necessary_work,its_quiet_way).
+aos(4,even_belly_in,necessary_work,its_dull_quiet_way).
+aos(4,even_belly_in,work,its_quiet_way).
+aos(4,do,belly,necessary_work).
+aos(4,even_belly_in,necessary_work,its_way).
+aos(4,will_go_to,body,piece).
+aos(4,even_belly_in,work,its_way).
+aos(4,even_belly_in,work,its_dull_way).
+aos(4,belly_in,work,its_dull_quiet_way).
+aos(4,belly_in,necessary_work,its_quiet_way).

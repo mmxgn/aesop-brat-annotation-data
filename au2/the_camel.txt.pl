@@ -22,12 +22,12 @@ nsubj(0,run,he).
 ccomp(0,frightened,run).
 advmod(0,run,away).
 % relations.
-be(0,he,frightened).
-be_so_frightened_at(0,he,he_vast_size).
-be(0,he,so_frightened).
-be_frightened_at(0,he,he_size).
-be_so_frightened_at(0,he,he_size).
-be_frightened_at(0,he,he_vast_size).
+aos(0,be,he,frightened).
+aos(0,be_so_frightened_at,he,he_vast_size).
+aos(0,be,he,so_frightened).
+aos(0,be_frightened_at,he,he_size).
+aos(0,be_so_frightened_at,he,he_size).
+aos(0,be_frightened_at,he,he_vast_size).
 %% after a time perceiving the meekness and gentleness of the beast 's temper he summoned courage enough to approach him.
 % dependencies.
 root(1,root,time).
@@ -52,10 +52,10 @@ mark(1,approach,to).
 dep(1,enough,approach).
 dobj(1,approach,he).
 % relations.
-of(1,beast,temper).
-perceive(1,time,gentleness).
-summon_enough(1,he,courage).
-summon(1,he,courage).
+aos(1,of,beast,temper).
+aos(1,perceive,time,gentleness).
+aos(1,summon_enough,he,courage).
+aos(1,summon,he,courage).
 %% soon afterwards observing that he was an animal altogether deficient in spirit he assumed such boldness as to put a bridle in his mouth and to let a child drive him.
 % dependencies.
 root(2,root,observe).
@@ -91,8 +91,8 @@ compound(2,drive,child).
 nsubj(2,he,drive).
 xcomp(2,let,he).
 % relations.
-is_in(2,bridle,he_mouth).
-be(2,he,deficient).
-assume(2,he,boldness).
-assume(2,he,such_boldness).
-let(2,bridle,child_drive_he).
+aos(2,is_in,bridle,he_mouth).
+aos(2,be,he,deficient).
+aos(2,assume,he,boldness).
+aos(2,assume,he,such_boldness).
+aos(2,let,bridle,child_drive_he).

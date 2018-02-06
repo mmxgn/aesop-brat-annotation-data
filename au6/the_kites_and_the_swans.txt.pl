@@ -43,11 +43,11 @@ mark(1,imitate,to).
 xcomp(1,try,imitate).
 dobj(1,imitate,it).
 % relations.
-be(1,they,enchanted).
-imitate(1,they,it).
-be_enchanted_with(1,they,sound).
-be(1,they,so_enchanted).
-be_so_enchanted_with(1,they,sound).
+aos(1,be,they,enchanted).
+aos(1,imitate,they,it).
+aos(1,be_enchanted_with,they,sound).
+aos(1,be,they,so_enchanted).
+aos(1,be_so_enchanted_with,they,sound).
 %% and in trying to neigh they forgot how to sing.
 % dependencies.
 root(2,root,and).
@@ -76,9 +76,9 @@ case(3,blessing,of).
 amod(3,blessing,present).
 nmod:of(3,loss,blessing).
 % relations.
-often_involve(3,desire,loss_of_blessing).
-often_involve(3,desire,loss).
-involve(3,desire,loss_of_present_blessing).
-involve(3,desire,loss_of_blessing).
-involve(3,desire,loss).
-often_involve(3,desire,loss_of_present_blessing).
+aos(3,often_involve,desire,loss_of_blessing).
+aos(3,often_involve,desire,loss).
+aos(3,involve,desire,loss_of_present_blessing).
+aos(3,involve,desire,loss_of_blessing).
+aos(3,involve,desire,loss).
+aos(3,often_involve,desire,loss_of_present_blessing).

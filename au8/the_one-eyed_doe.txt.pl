@@ -25,9 +25,9 @@ case(0,side,on).
 det(0,side,that).
 nmod:on(0,approach,side).
 % relations.
-lose(0,doe,one_she_eye).
-lose(0,doe,one_of_she_eye).
-have_have(0,doe,misfortune).
+aos(0,lose,doe,one_she_eye).
+aos(0,lose,doe,one_of_she_eye).
+aos(0,have_have,doe,misfortune).
 %% so to avoid any danger she always used to feed on a high cliff near the sea with her sound eye looking towards the land.
 % dependencies.
 root(1,root,so).
@@ -79,7 +79,7 @@ case(2,this,by).
 nmod:by(2,escape,this).
 dep(2,this,mean).
 % relations.
-approach(2,hunter,she).
+aos(2,approach,hunter,she).
 %% but the hunters found out that she was blind of one eye and hiring a boat rowed under the cliff where she used to feed and shot her from the sea.
 % dependencies.
 root(3,root,hunter).
@@ -119,12 +119,12 @@ case(3,sea,from).
 det(3,sea,the).
 nmod:from(3,shoot,sea).
 % relations.
-be_blind_of(3,she,one_eye).
-be(3,she,blind).
-shoot(3,she,she).
-hire(3,she,boat).
-use(3,she,feed).
-hire(3,she,boat_row).
+aos(3,be_blind_of,she,one_eye).
+aos(3,be,she,blind).
+aos(3,shoot,she,she).
+aos(3,hire,she,boat).
+aos(3,use,she,feed).
+aos(3,hire,she,boat_row).
 %% ah.
 % dependencies.
 root(4,root,ah).

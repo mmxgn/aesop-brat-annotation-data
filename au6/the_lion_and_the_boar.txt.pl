@@ -35,20 +35,20 @@ nmod:to(0,come,well).
 mark(0,drink,to).
 xcomp(0,come,drink).
 % relations.
-induce(0,great_heat,thirst).
-come_at(0,boar,same_moment).
-come_to(0,boar,small_well).
-come(0,boar,drink).
-come_to(0,lion,well).
-come_to(0,lion,small_well).
-induce(0,heat,thirst).
-come_to(0,boar,well).
-induce(0,heat,general_thirst).
-come_at(0,lion,moment).
-induce(0,great_heat,general_thirst).
-come_at(0,lion,same_moment).
-come(0,lion,drink).
-come_at(0,boar,moment).
+aos(0,induce,great_heat,thirst).
+aos(0,come_at,boar,same_moment).
+aos(0,come_to,boar,small_well).
+aos(0,come,boar,drink).
+aos(0,come_to,lion,well).
+aos(0,come_to,lion,small_well).
+aos(0,induce,heat,thirst).
+aos(0,come_to,boar,well).
+aos(0,induce,heat,general_thirst).
+aos(0,come_at,lion,moment).
+aos(0,induce,great_heat,general_thirst).
+aos(0,come_at,lion,same_moment).
+aos(0,come,lion,drink).
+aos(0,come_at,boar,moment).
 %% they fiercely disputed which of them should drink first and were soon engaged in the agonies of a mortal combat.
 % dependencies.
 root(1,root,dispute).
@@ -73,14 +73,14 @@ det(1,combat,a).
 amod(1,combat,mortal).
 nmod:of(1,agony,combat).
 % relations.
-be_soon_engage_in(1,they,agony).
-be_engage_in(1,they,agony_of_combat).
-be_soon_engage_in(1,they,agony_of_combat).
-be(1,they,soon_engage).
-be_soon_engage_in(1,they,agony_of_mortal_combat).
-be(1,they,engage).
-be_engage_in(1,they,agony_of_mortal_combat).
-be_engage_in(1,they,agony).
+aos(1,be_soon_engage_in,they,agony).
+aos(1,be_engage_in,they,agony_of_combat).
+aos(1,be_soon_engage_in,they,agony_of_combat).
+aos(1,be,they,soon_engage).
+aos(1,be_soon_engage_in,they,agony_of_mortal_combat).
+aos(1,be,they,engage).
+aos(1,be_engage_in,they,agony_of_mortal_combat).
+aos(1,be_engage_in,they,agony).
 %% when they stopped suddenly to catch their breath for a fiercer renewal of the fight they saw some vultures waiting in the distance to feast on the one that should fall first.
 % dependencies.
 root(2,root,stop).
@@ -118,10 +118,10 @@ aux(2,fall,should).
 acl:relcl(2,one,fall).
 advmod(2,fall,first).
 % relations.
-catch(2,they,they_breath).
-see(2,they,vulture_wait).
-see(2,they,vulture).
-see(2,they,vulture_wait_in_distance).
+aos(2,catch,they,they_breath).
+aos(2,see,they,vulture_wait).
+aos(2,see,they,vulture).
+aos(2,see,they,vulture_wait_in_distance).
 %% they at once made up their quarrel saying.
 % dependencies.
 root(3,root,they).

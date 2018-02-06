@@ -13,7 +13,7 @@ det(0,oak,a).
 amod(0,oak,lofty).
 nmod:of(0,top,oak).
 % relations.
-make(0,eagle,she_nest).
+aos(0,make,eagle,she_nest).
 %% a cat having found a convenient hole moved into the middle of the trunk.
 % dependencies.
 root(1,root,move).
@@ -31,8 +31,8 @@ case(1,trunk,of).
 det(1,trunk,the).
 nmod:of(1,middle,trunk).
 % relations.
-move_into(1,cat,middle_of_trunk).
-move_into(1,cat,middle).
+aos(1,move_into,cat,middle_of_trunk).
+aos(1,move_into,cat,middle).
 %% and a wild sow with her young took shelter in a hollow at its foot.
 % dependencies.
 root(2,root,wild).
@@ -51,10 +51,10 @@ case(2,foot,at).
 nmod:poss(2,foot,its).
 nmod:at(2,take,foot).
 % relations.
-take(2,sow,shelter).
-sow_with(2,shelter,she_young).
-take_shelter_in(2,sow,hollow).
-take_shelter_at(2,sow,its_foot).
+aos(2,take,sow,shelter).
+aos(2,sow_with,shelter,she_young).
+aos(2,take_shelter_in,sow,hollow).
+aos(2,take_shelter_at,sow,its_foot).
 %% the cat cunningly resolved to destroy this chance-made colony.
 % dependencies.
 root(3,root,resolve).
@@ -68,8 +68,8 @@ det(3,colony,this).
 amod(3,colony,chance-made).
 dobj(3,destroy,colony).
 % relations.
-destroy(3,cat,chance-made_colony).
-destroy(3,cat,colony).
+aos(3,destroy,cat,chance-made_colony).
+aos(3,destroy,cat,colony).
 %% to carry out her design she climbed to the nest of the eagle and said.
 % dependencies.
 root(4,root,carry).
@@ -90,8 +90,8 @@ cc(4,climb,and).
 acl:relcl(4,design,say).
 conj:and(4,climb,say).
 % relations.
-climb_to(4,she,nest).
-climb_to(4,she,nest_of_eagle).
+aos(4,climb_to,she,nest).
+aos(4,climb_to,she,nest_of_eagle).
 %% destruction is preparing for you and for me too unfortunately.
 % dependencies.
 root(5,root,prepare).
@@ -140,9 +140,9 @@ case(6,young,for).
 nmod:poss(6,young,she).
 nmod:for(6,food,young).
 % relations.
-uproot(6,daily_digging,oak).
-may_seize(6,she,we_family).
-uproot(6,digging,oak).
+aos(6,uproot,daily_digging,oak).
+aos(6,may_seize,she,we_family).
+aos(6,uproot,digging,oak).
 %% having thus frightened the eagle out of her senses she crept down to the cave of the sow and said.
 % dependencies.
 root(7,root,frighten).
@@ -168,8 +168,8 @@ cc(7,creep,and).
 acl:relcl(7,sens,say).
 conj:and(7,creep,say).
 % relations.
-creep_down_to(7,she,cave).
-creep_down_to(7,she,cave_of_the).
+aos(7,creep_down_to,she,cave).
+aos(7,creep_down_to,she,cave_of_the).
 %% your children are in great danger.
 % dependencies.
 root(8,root,danger).
@@ -179,8 +179,8 @@ cop(8,danger,be).
 case(8,danger,in).
 amod(8,danger,great).
 % relations.
-be_in(8,you_child,danger).
-be_in(8,you_child,great_danger).
+aos(8,be_in,you_child,danger).
+aos(8,be_in,you_child,great_danger).
 %% for as soon as you go out with your litter to find food the eagle is prepared to pounce upon one of your little pigs.
 % dependencies.
 root(9,root,prepare).
@@ -210,16 +210,16 @@ nmod:poss(9,pig,you).
 amod(9,pig,little).
 nmod:of(9,one,pig).
 % relations.
-be(9,eagle,prepare).
-be_prepare(9,eagle,pounce_upon_one_you_pig).
-be_prepare(9,eagle,pounce_upon_one_of_you_pig).
-pounce_upon(9,eagle,one_of_you_pig).
-be_prepare(9,eagle,pounce).
-pounce_upon(9,eagle,one_you_pig).
-be_prepare(9,eagle,pounce_upon_one_you_little_pig).
-be_prepare(9,eagle,pounce_upon_one_of_you_little_pig).
-pounce_upon(9,eagle,one_you_little_pig).
-pounce_upon(9,eagle,one_of_you_little_pig).
+aos(9,be,eagle,prepare).
+aos(9,be_prepare,eagle,pounce_upon_one_you_pig).
+aos(9,be_prepare,eagle,pounce_upon_one_of_you_pig).
+aos(9,pounce_upon,eagle,one_of_you_pig).
+aos(9,be_prepare,eagle,pounce).
+aos(9,pounce_upon,eagle,one_you_pig).
+aos(9,be_prepare,eagle,pounce_upon_one_you_little_pig).
+aos(9,be_prepare,eagle,pounce_upon_one_of_you_little_pig).
+aos(9,pounce_upon,eagle,one_you_little_pig).
+aos(9,pounce_upon,eagle,one_of_you_little_pig).
 %% having instilled these fears into the sow she went and pretended to hide herself in the hollow of the tree.
 % dependencies.
 root(10,root,instil).
@@ -283,15 +283,15 @@ case(11,day,through).
 det(11,day,the).
 nmod:through(11,keep,day).
 % relations.
-keep(11,she,lookout).
-go_forth_with(11,she,foot).
-go_with(11,she,silent_foot).
-obtain_food_for(11,she,herself).
-keep_lookout_through(11,she,day).
-feign(11,food,afraid).
-obtain(11,she,food).
-go_forth_with(11,she,silent_foot).
-go_with(11,she,foot).
+aos(11,keep,she,lookout).
+aos(11,go_forth_with,she,foot).
+aos(11,go_with,she,silent_foot).
+aos(11,obtain_food_for,she,herself).
+aos(11,keep_lookout_through,she,day).
+aos(11,feign,food,afraid).
+aos(11,obtain,she,food).
+aos(11,go_forth_with,she,silent_foot).
+aos(11,go_with,she,foot).
 %% meanwhile the eagle full of fear of the sow sat still on the branches and the sow terrified by the eagle did not dare to go out from her cave.
 % dependencies.
 root(12,root,eagle).
@@ -352,8 +352,8 @@ nmod:poss(13,kitten,she).
 nmod:for(13,afford,kitten).
 conj:and(13,cat,kitten).
 % relations.
-perish_from(13,they,hunger).
-afford(13,they,ample_provision).
-thus_perish_from(13,they,hunger).
-afford(13,they,provision).
-afford_provision_for(13,they,cat).
+aos(13,perish_from,they,hunger).
+aos(13,afford,they,ample_provision).
+aos(13,thus_perish_from,they,hunger).
+aos(13,afford,they,provision).
+aos(13,afford_provision_for,they,cat).

@@ -22,10 +22,10 @@ conj:and(0,brood,they).
 case(0,death,to).
 nmod:to(0,tread,death).
 % relations.
-tread_on(0,ox_drinking,brood_of_frog).
-tread_to(0,ox_drinking,death).
-tread_on(0,ox_drinking,brood).
-tread_on(0,ox_drinking,brood_of_young_frog).
+aos(0,tread_on,ox_drinking,brood_of_frog).
+aos(0,tread_to,ox_drinking,death).
+aos(0,tread_on,ox_drinking,brood).
+aos(0,tread_on,ox_drinking,brood_of_young_frog).
 %% the mother coming up and missing one of her sons inquired of his brothers what had become of him.
 % dependencies.
 root(1,root,inquire).
@@ -58,10 +58,10 @@ cop(2,mother,be).
 amod(2,mother,dead).
 amod(2,mother,dear).
 % relations.
-be(2,he,dead_mother).
-be(2,he,dead_dear_mother).
-be(2,he,mother).
-be(2,he,dear_mother).
+aos(2,be,he,dead_mother).
+aos(2,be,he,dead_dear_mother).
+aos(2,be,he,mother).
+aos(2,be,he,dear_mother).
 %% for just now a very huge beast with four great feet came to the pool and crushed him to death with his cloven heel.
 % dependencies.
 root(3,root,come).
@@ -90,7 +90,7 @@ nmod:poss(3,heel,he).
 amod(3,heel,cloven).
 nmod:with(3,crush,heel).
 % relations.
-be_with(3,huge_beast,four_great_foot).
+aos(3,be_with,huge_beast,four_great_foot).
 %% the frog puffing herself out inquired.
 % dependencies.
 root(4,root,frog).
@@ -113,12 +113,12 @@ nmod:as(5,big,that).
 case(5,size,in).
 nmod:in(5,that,size).
 % relations.
-be(5,beast,big).
-be_big_as(5,beast,that_in_size).
-be_as_big_as(5,beast,that_in_size).
-be_big_as(5,beast,that).
-be(5,beast,as_big).
-be_as_big_as(5,beast,that).
+aos(5,be,beast,big).
+aos(5,be_big_as,beast,that_in_size).
+aos(5,be_as_big_as,beast,that_in_size).
+aos(5,be_big_as,beast,that).
+aos(5,be,beast,as_big).
+aos(5,be_as_big_as,beast,that).
 %% cease mother to puff yourself out.
 % dependencies.
 root(6,root,cease).
@@ -161,7 +161,7 @@ case(9,monster,of).
 det(9,monster,that).
 nmod:of(9,hugeness,monster).
 % relations.
-would_assure(9,i,sooner_burst).
-would_assure(9,i,you).
-would_assure(9,i,burst).
-would_assure_burst_for(9,i,you).
+aos(9,would_assure,i,sooner_burst).
+aos(9,would_assure,i,you).
+aos(9,would_assure,i,burst).
+aos(9,would_assure_burst_for,i,you).

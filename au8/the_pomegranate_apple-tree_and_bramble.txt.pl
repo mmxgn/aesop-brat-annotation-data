@@ -41,11 +41,11 @@ det(1,tone,a).
 amod(1,tone,boastful).
 nmod:in(1,say,tone).
 % relations.
-say_in(1,bramble,tone).
-say_in(1,bramble,boastful_tone).
-bramble_from(1,its_voice,hedge).
-lift_up(1,bramble,its_voice).
-bramble_from(1,its_voice,neighbor_hedge).
+aos(1,say_in,bramble,tone).
+aos(1,say_in,bramble,boastful_tone).
+aos(1,bramble_from,its_voice,hedge).
+aos(1,lift_up,bramble,its_voice).
+aos(1,bramble_from,its_voice,neighbor_hedge).
 %% pray my dear friends in my presence at least cease from such vain disputings.
 % dependencies.
 root(2,root,pray).

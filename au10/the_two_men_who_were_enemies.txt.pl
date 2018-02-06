@@ -14,8 +14,8 @@ det(0,vessel,the).
 amod(0,vessel,same).
 nmod:in(0,sailing,vessel).
 % relations.
-deadly(0,enemy,two_man).
-is_in(0,sailing,same_vessel).
+aos(0,deadly,enemy,two_man).
+aos(0,is_in,sailing,same_vessel).
 %% determined to keep as far apart as possible the one seated himself in the stern and the other in the prow of the ship.
 % dependencies.
 root(1,root,determine).
@@ -82,7 +82,7 @@ acl:relcl(2,pilot,go).
 compound:prt(2,go,down).
 advmod(2,go,first).
 % relations.
-is_in(2,vessel,great_danger_sink).
+aos(2,is_in,vessel,great_danger_sink).
 %% on his replying that he supposed it would be the prow the man said.
 % dependencies.
 root(3,root,reply).

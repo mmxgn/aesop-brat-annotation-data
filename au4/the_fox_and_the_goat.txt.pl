@@ -40,8 +40,8 @@ acl:relcl(1,fox,do).
 advmod(1,there,down).
 advmod(1,do,there).
 % relations.
-pass_afterwards_by(1,goat,shortly).
-pass_by(1,goat,shortly).
+aos(1,pass_afterwards_by,goat,shortly).
+aos(1,pass_by,goat,shortly).
 %% oh have you not heard.
 % dependencies.
 root(2,root,have).
@@ -82,9 +82,9 @@ dobj(4,have,water).
 case(4,I,by).
 nmod:by(4,have,I).
 % relations.
-jump(4,i,sure).
-jump_here(4,i,sure).
-jump_down_here(4,i,sure).
+aos(4,jump,i,sure).
+aos(4,jump_here,i,sure).
+aos(4,jump_down_here,i,sure).
 %% why do n't you come down too.
 % dependencies.
 root(5,root,do).
@@ -112,9 +112,9 @@ case(6,well,into).
 det(6,well,the).
 nmod:into(6,jump,well).
 % relations.
-think_of(6,goat,advice).
-think_well_of(6,goat,advice).
-jump_down_into(6,goat,well).
+aos(6,think_of,goat,advice).
+aos(6,think_well_of,goat,advice).
+aos(6,jump_down_into,goat,well).
 %% but the fox immediately jumped on her back and by putting his foot on her long horns managed to jump up to the edge of the well.
 % dependencies.
 root(7,root,jump).
@@ -147,10 +147,10 @@ case(7,well,of).
 det(7,well,the).
 nmod:of(7,edge,well).
 % relations.
-jump_up_to(7,he_foot,edge_of_well).
-immediately_jump_on(7,fox,she_back).
-jump_up_to(7,he_foot,edge).
-jump_on(7,fox,she_back).
+aos(7,jump_up_to,he_foot,edge_of_well).
+aos(7,immediately_jump_on,fox,she_back).
+aos(7,jump_up_to,he_foot,edge).
+aos(7,jump_on,fox,she_back).
 %% good-bye friend.
 % dependencies.
 root(8,root,friend).

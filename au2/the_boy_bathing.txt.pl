@@ -13,9 +13,9 @@ mark(0,drown,of).
 auxpass(0,drown,be).
 acl:of(0,danger,drown).
 % relations.
-is_in(0,boy_bathing,river).
-be_in(0,boy_bathing,danger_drown).
-be(0,boy_bathing,drown).
+aos(0,is_in,boy_bathing,river).
+aos(0,be_in,boy_bathing,danger_drown).
+aos(0,be,boy_bathing,drown).
 %% he called out to a passing traveler for help but instead of holding out a helping hand the man stood by unconcernedly and scolded the boy for his imprudence.
 % dependencies.
 root(1,root,call).
@@ -50,13 +50,13 @@ case(1,imprudence,for).
 nmod:poss(1,imprudence,he).
 nmod:for(1,scold,imprudence).
 % relations.
-call_out_to(1,he,traveler_for_help).
-scold(1,he,boy).
-call_out_to(1,he,traveler).
-scold_boy_for(1,he,he_imprudence).
-call_out_to(1,he,pass_traveler).
-stand_by(1,man,unconcernedly).
-call_out_to(1,he,pass_traveler_for_help).
+aos(1,call_out_to,he,traveler_for_help).
+aos(1,scold,he,boy).
+aos(1,call_out_to,he,traveler).
+aos(1,scold_boy_for,he,he_imprudence).
+aos(1,call_out_to,he,pass_traveler).
+aos(1,stand_by,man,unconcernedly).
+aos(1,call_out_to,he,pass_traveler_for_help).
 %% oh sir.
 % dependencies.
 root(2,root,oh).
@@ -80,5 +80,5 @@ conj:and(4,help,scold).
 dobj(4,scold,I).
 advmod(4,scold,afterwards).
 % relations.
-scold(4,I,I).
-scold_afterwards(4,I,I).
+aos(4,scold,I,I).
+aos(4,scold_afterwards,I,I).

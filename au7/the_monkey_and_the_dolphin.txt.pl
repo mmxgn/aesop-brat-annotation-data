@@ -59,10 +59,10 @@ case(1,life,for).
 nmod:poss(1,life,they).
 nmod:for(1,swim,life).
 % relations.
-be_oblige(1,crew,swim_for_they_life).
-swim_for(1,crew,they_life).
-be(1,crew,oblige).
-be_oblige(1,crew,swim).
+aos(1,be_oblige,crew,swim_for_they_life).
+aos(1,swim_for,crew,they_life).
+aos(1,be,crew,oblige).
+aos(1,be_oblige,crew,swim).
 %% a dolphin saw the monkey contending with the waves and supposing him to be a man ( whom he is always said to befriend ) came and placed himself under him to convey him on his back in safety to the shore.
 % dependencies.
 root(2,root,see).
@@ -113,11 +113,11 @@ case(2,shore,to).
 det(2,shore,the).
 nmod:to(2,convey,shore).
 % relations.
-be(2,he,man).
-be(2,he,always_say).
-be_in(2,he_back,safety).
-place(2,monkey,himself).
-be(2,he,say).
+aos(2,be,he,man).
+aos(2,be,he,always_say).
+aos(2,be_in,he_back,safety).
+aos(2,place,monkey,himself).
+aos(2,be,he,say).
 %% when the dolphin arrived with his burden in sight of land not far from athens he asked the monkey if he were an athenian.
 % dependencies.
 root(3,root,arrive).
@@ -145,16 +145,16 @@ cop(3,athenian,be).
 det(3,athenian,a).
 advcl:if(3,ask,athenian).
 % relations.
-arrive_far_with(3,dolphin,he_burden).
-arrive_far_with(3,dolphin,he_burden_in_sight_of_land).
-ask(3,he,monkey).
-be_in(3,he_burden,sight_of_land).
-arrive_with(3,dolphin,he_burden_in_sight_of_land).
-arrive_with(3,dolphin,he_burden_in_sight).
-arrive_with(3,dolphin,he_burden).
-be(3,he,athenian).
-ask_monkey(3,he,athenian).
-arrive_far_with(3,dolphin,he_burden_in_sight).
+aos(3,arrive_far_with,dolphin,he_burden).
+aos(3,arrive_far_with,dolphin,he_burden_in_sight_of_land).
+aos(3,ask,he,monkey).
+aos(3,be_in,he_burden,sight_of_land).
+aos(3,arrive_with,dolphin,he_burden_in_sight_of_land).
+aos(3,arrive_with,dolphin,he_burden_in_sight).
+aos(3,arrive_with,dolphin,he_burden).
+aos(3,be,he,athenian).
+aos(3,ask_monkey,he,athenian).
+aos(3,arrive_far_with,dolphin,he_burden_in_sight).
 %% the latter replied that he was and that he was descended from one of the most noble families in that city.
 % dependencies.
 root(4,root,reply).
@@ -180,8 +180,8 @@ case(4,city,in).
 det(4,city,that).
 nmod:in(4,family,city).
 % relations.
-be_in(4,noble_family,city).
-be(4,he,descend).
+aos(4,be_in,noble_family,city).
+aos(4,be,he,descend).
 %% the dolphin then inquired if he knew the piraeus ( the famous harbor of athens ).
 % dependencies.
 root(5,root,inquire).
@@ -201,8 +201,8 @@ case(5,athen,of).
 nmod:of(5,harbor,athen).
 punct(5,harbor,-RRB-).
 % relations.
-inquire(5,dolphin,he_know).
-know(5,he,piraeus).
+aos(5,inquire,dolphin,he_know).
+aos(5,know,he,piraeus).
 %% supposing that a man was meant the monkey answered that he knew him very well and that he was an intimate friend.
 % dependencies.
 root(6,root,suppose).
@@ -229,7 +229,7 @@ amod(6,friend,intimate).
 ccomp(6,answer,friend).
 conj:and(6,know,friend).
 % relations.
-be(6,he,intimate).
+aos(6,be,he,intimate).
 %% the dolphin indignant at these falsehoods dipped the monkey under the water and drowned him.
 % dependencies.
 root(7,root,dip).
@@ -249,6 +249,6 @@ cc(7,dip,and).
 conj:and(7,dip,drown).
 dobj(7,drown,he).
 % relations.
-drown(7,dolphin_indignant,he).
-dip(7,dolphin_indignant,monkey).
-dip_monkey_under(7,dolphin_indignant,water).
+aos(7,drown,dolphin_indignant,he).
+aos(7,dip,dolphin_indignant,monkey).
+aos(7,dip_monkey_under,dolphin_indignant,water).

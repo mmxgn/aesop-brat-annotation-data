@@ -52,7 +52,7 @@ case(1,root,at).
 nmod:poss(1,root,its).
 nmod:at(1,make,root).
 % relations.
-cut(1,he,it).
+aos(1,cut,he,it).
 %% the grasshoppers and sparrows entreated him not to cut down the tree that sheltered them but to spare it and they would sing to him and lighten his labors.
 % dependencies.
 root(2,root,grasshopper).
@@ -90,9 +90,9 @@ conj:and(2,sing,lighten).
 nmod:poss(2,labor,he).
 dobj(2,lighten,labor).
 % relations.
-lighten(2,they,he_labor).
-sing_to(2,it,he).
-sing_to(2,they,he).
+aos(2,lighten,they,he_labor).
+aos(2,sing_to,it,he).
+aos(2,sing_to,they,he).
 %% he paid no attention to their request but gave the tree a second and a third blow with his axe.
 % dependencies.
 root(3,root,pay).
@@ -118,11 +118,11 @@ case(3,axe,with).
 nmod:poss(3,axe,he).
 nmod:with(3,give,axe).
 % relations.
-give(3,he,third_blow).
-give(3,he,tree).
-give(3,he,second).
-give(3,he,blow).
-give_blow_with(3,he,he_axe).
+aos(3,give,he,third_blow).
+aos(3,give,he,tree).
+aos(3,give,he,second).
+aos(3,give,he,blow).
+aos(3,give_blow_with,he,he_axe).
 %% when he reached the hollow of the tree he found a hive full of honey.
 % dependencies.
 root(4,root,reach).
@@ -141,11 +141,11 @@ dobj(4,find,full).
 case(4,honey,of).
 nmod:of(4,full,honey).
 % relations.
-find(4,he,full).
-find(4,he,hive_full).
-find(4,he,full_of_honey).
-reach(4,he,hollow).
-find(4,he,hive_full_of_honey).
+aos(4,find,he,full).
+aos(4,find,he,hive_full).
+aos(4,find,he,full_of_honey).
+aos(4,reach,he,hollow).
+aos(4,find,he,hive_full_of_honey).
 %% having tasted the honeycomb he threw down his axe and looking on the tree as sacred took great care of it.
 % dependencies.
 root(5,root,taste).
@@ -170,10 +170,10 @@ dobj(5,take,care).
 case(5,it,of).
 nmod:of(5,care,it).
 % relations.
-great_care_of(5,sacred,it).
-take(5,sacred,care).
-take(5,sacred,great_care_of_it).
-throw_down(5,he,he_axe).
-take(5,sacred,great_care).
-care_of(5,sacred,it).
-take(5,sacred,care_of_it).
+aos(5,great_care_of,sacred,it).
+aos(5,take,sacred,care).
+aos(5,take,sacred,great_care_of_it).
+aos(5,throw_down,he,he_axe).
+aos(5,take,sacred,great_care).
+aos(5,care_of,sacred,it).
+aos(5,take,sacred,care_of_it).

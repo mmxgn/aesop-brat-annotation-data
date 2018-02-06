@@ -27,9 +27,9 @@ nmod:poss(0,maintenance,they).
 amod(0,maintenance,plentiful).
 dobj(0,share,maintenance).
 % relations.
-is_in(0,dove,cote_abundantly_provide).
-join(0,jackdaw,they).
-paint(0,jackdaw,himself_white).
+aos(0,is_in,dove,cote_abundantly_provide).
+aos(0,join,jackdaw,they).
+aos(0,paint,jackdaw,himself_white).
 %% the doves as long as he was silent supposed him to be one of themselves and admitted him to their cote.
 % dependencies.
 root(1,root,dove).
@@ -88,12 +88,12 @@ case(2,beak,with).
 nmod:poss(2,beak,they).
 nmod:with(2,peck,beak).
 % relations.
-discover(2,they,he_character).
-discover(2,they,he_true_character).
-drive_forth(2,they,he).
-peck(2,he,he).
-forget(2,he,himself).
-drive(2,they,he).
+aos(2,discover,they,he_character).
+aos(2,discover,they,he_true_character).
+aos(2,drive_forth,they,he).
+aos(2,peck,he,he).
+aos(2,forget,he,himself).
+aos(2,drive,they,he).
 %% failing to obtain food among the doves he returned to the jackdaws.
 % dependencies.
 root(3,root,fail).
@@ -109,7 +109,7 @@ case(3,jackdaw,to).
 det(3,jackdaw,the).
 nmod:to(3,return,jackdaw).
 % relations.
-return_to(3,he,jackdaw).
+aos(3,return_to,he,jackdaw).
 %% they too not recognizing him on account of his color.
 % dependencies.
 root(4,root,they).
@@ -132,7 +132,7 @@ advcl:from(5,expel,live).
 nmod(5,live,with).
 nsubj(5,expel,they).
 % relations.
-expel(5,they,he).
+aos(5,expel,they,he).
 %% so desiring two ends he obtained neither.
 % dependencies.
 root(6,root,desire).
@@ -143,4 +143,4 @@ nsubj(6,obtain,he).
 acl:relcl(6,end,obtain).
 xcomp(6,obtain,neither).
 % relations.
-obtain(6,he,neither).
+aos(6,obtain,he,neither).

@@ -7,8 +7,8 @@ advmod(0,question,thus).
 det(0,ox,a).
 dobj(0,question,ox).
 % relations.
-thus_question(0,flea,ox).
-question(0,flea,ox).
+aos(0,thus_question,flea,ox).
+aos(0,question,flea,ox).
 %% what ails you that being so huge and strong you submit to the wrongs you receive from men and slave for them day by day while i being so small a creature mercilessly feed on their flesh and drink their blood without stint.
 % dependencies.
 root(1,root,huge).
@@ -58,15 +58,15 @@ dobj(1,drink,blood).
 case(1,stint,without).
 nmod:without(1,drink,stint).
 % relations.
-receive_at_time(1,you,day).
-receive_from(1,you,man).
-drink(1,creature,they_blood).
-feed_on(1,creature,they_flesh).
-be(1,day,so_small).
-mercilessly_feed_on(1,creature,they_flesh).
-receive_from(1,you,man_for_they).
-receive(1,you,small).
-be(1,day,small).
+aos(1,receive_at_time,you,day).
+aos(1,receive_from,you,man).
+aos(1,drink,creature,they_blood).
+aos(1,feed_on,creature,they_flesh).
+aos(1,be,day,so_small).
+aos(1,mercilessly_feed_on,creature,they_flesh).
+aos(1,receive_from,you,man_for_they).
+aos(1,receive,you,small).
+aos(1,be,day,small).
 %% ' the ox replied.
 % dependencies.
 root(2,root,reply).
@@ -139,4 +139,4 @@ nmod:poss(6,destruction,my).
 amod(6,destruction,inevitable).
 dep(6,it,destruction).
 % relations.
-happen_to(6,it,I).
+aos(6,happen_to,it,I).

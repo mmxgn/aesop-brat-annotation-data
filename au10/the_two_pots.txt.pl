@@ -20,20 +20,20 @@ conj:and(0,bank,one).
 case(0,earthenware,of).
 acl:of(0,one,earthenware).
 % relations.
-have(0,pot,have_leave_on_bank).
-have(0,pot,have_leave_on_bank_of_river_one).
-have(0,pot,have_leave_on_bank_of_river_one_brass).
-have(0,two_pot,have_leave_on_bank_of_river_one).
-have(0,pot,have_leave).
-have(0,two_pot,have_leave_on_bank).
-have(0,pot,have_leave_on_bank_of_brass).
-have(0,two_pot,have_leave_on_bank_of_river_one_of_brass).
-have(0,two_pot,have_leave_on_bank_brass).
-have(0,two_pot,have_leave_on_bank_of_brass).
-have(0,pot,have_leave_on_bank_of_river_one_of_brass).
-have(0,pot,have_leave_on_bank_brass).
-have(0,two_pot,have_leave).
-have(0,two_pot,have_leave_on_bank_of_river_one_brass).
+aos(0,have,pot,have_leave_on_bank).
+aos(0,have,pot,have_leave_on_bank_of_river_one).
+aos(0,have,pot,have_leave_on_bank_of_river_one_brass).
+aos(0,have,two_pot,have_leave_on_bank_of_river_one).
+aos(0,have,pot,have_leave).
+aos(0,have,two_pot,have_leave_on_bank).
+aos(0,have,pot,have_leave_on_bank_of_brass).
+aos(0,have,two_pot,have_leave_on_bank_of_river_one_of_brass).
+aos(0,have,two_pot,have_leave_on_bank_brass).
+aos(0,have,two_pot,have_leave_on_bank_of_brass).
+aos(0,have,pot,have_leave_on_bank_of_river_one_of_brass).
+aos(0,have,pot,have_leave_on_bank_brass).
+aos(0,have,two_pot,have_leave).
+aos(0,have,two_pot,have_leave_on_bank_of_river_one_brass).
 %% when the tide rose they both floated off down the stream.
 % dependencies.
 root(1,root,rise).
@@ -91,8 +91,8 @@ nmod:in(4,come,contact).
 case(4,you,with).
 nmod:with(4,come,you).
 % relations.
-may_come_with(4,i,you).
-may_come_in(4,i,contact).
+aos(4,may_come_with,i,you).
+aos(4,may_come_in,i,contact).
 %% said the other.
 % dependencies.
 root(5,root,say).
@@ -125,5 +125,5 @@ dep(7,hit,suffer).
 case(7,it,for).
 nmod:for(7,suffer,it).
 % relations.
-hit(7,you,I).
-hit(7,you,I).
+aos(7,hit,you,I).
+aos(7,hit,you,I).

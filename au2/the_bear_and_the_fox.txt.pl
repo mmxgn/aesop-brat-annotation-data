@@ -55,8 +55,8 @@ case(1,bear,to).
 det(1,bear,the).
 nmod:to(1,say,bear).
 % relations.
-say_with(1,word,smile).
-say_to(1,word,bear).
+aos(1,say_with,word,smile).
+aos(1,say_to,word,bear).
 %% oh.
 % dependencies.
 root(2,root,oh).

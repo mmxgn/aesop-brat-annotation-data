@@ -49,9 +49,9 @@ case(1,back,on).
 nmod:poss(1,back,he).
 nmod:on(1,side,back).
 % relations.
-cross(1,she,river).
-take(1,scorpion,she).
-cross(1,she,challenging_river).
+aos(1,cross,she,river).
+aos(1,take,scorpion,she).
+aos(1,cross,she,challenging_river).
 %% he had come to care for her and promised he would never harm her.
 % dependencies.
 root(2,root,come).
@@ -71,9 +71,9 @@ neg(2,harm,never).
 ccomp(2,promise,harm).
 dobj(2,harm,she).
 % relations.
-have_come(2,he,care).
-have_come(2,he,care_for_she).
-care_for(2,he,she).
+aos(2,have_come,he,care).
+aos(2,have_come,he,care_for_she).
+aos(2,care_for,he,she).
 %% but safely across the river he allowed his tail to dip upon her with its venomous sting.
 % dependencies.
 root(3,root,but).
@@ -94,12 +94,12 @@ nmod:poss(3,sting,its).
 amod(3,sting,venomous).
 nmod:with(3,dip,sting).
 % relations.
-allow(3,he,he_tail_dip_with_its_sting).
-allow(3,he,he_tail_dip_upon_she_with_its_venomous_sting).
-allow(3,he,he_tail_dip).
-allow(3,he,he_tail_dip_upon_she).
-allow(3,he,he_tail_dip_upon_she_with_its_sting).
-allow(3,he,he_tail_dip_with_its_venomous_sting).
+aos(3,allow,he,he_tail_dip_with_its_sting).
+aos(3,allow,he,he_tail_dip_upon_she_with_its_venomous_sting).
+aos(3,allow,he,he_tail_dip).
+aos(3,allow,he,he_tail_dip_upon_she).
+aos(3,allow,he,he_tail_dip_upon_she_with_its_sting).
+aos(3,allow,he,he_tail_dip_with_its_venomous_sting).
 %% as she lay in greatest pain she said.
 % dependencies.
 root(4,root,lay).
@@ -111,8 +111,8 @@ nmod:in(4,say,pain).
 nsubj(4,say,she).
 ccomp(4,lay,say).
 % relations.
-say_in(4,she,greatest_pain).
-say_in(4,she,pain).
+aos(4,say_in,she,greatest_pain).
+aos(4,say_in,she,pain).
 %% but you promised.
 % dependencies.
 root(5,root,promise).
@@ -140,7 +140,7 @@ nsubj(8,nature,it).
 cop(8,nature,be).
 nmod:poss(8,nature,my).
 % relations.
-be(8,it,my_nature).
+aos(8,be,it,my_nature).
 %% regardless of our wishes or even our intent it is to our nature alone that we will be faithful.
 % dependencies.
 root(9,root,intent).
@@ -164,6 +164,6 @@ aux(9,faithful,will).
 cop(9,faithful,be).
 dep(9,nature,faithful).
 % relations.
-will(9,we,will_faithful).
-be_to(9,it,we_nature).
-will(9,we,alone_will_faithful).
+aos(9,will,we,will_faithful).
+aos(9,be_to,it,we_nature).
+aos(9,will,we,alone_will_faithful).

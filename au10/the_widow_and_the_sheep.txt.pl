@@ -9,14 +9,14 @@ nummod(0,sheep,one).
 amod(0,sheep,solitary).
 dobj(0,have,sheep).
 % relations.
-have(0,poor_widow,one_solitary_sheep).
-have(0,certain_poor_widow,one_solitary_sheep).
-have(0,poor_widow,one_sheep).
-have(0,widow,one_sheep).
-have(0,certain_widow,one_solitary_sheep).
-have(0,certain_widow,one_sheep).
-have(0,certain_poor_widow,one_sheep).
-have(0,widow,one_solitary_sheep).
+aos(0,have,poor_widow,one_solitary_sheep).
+aos(0,have,certain_poor_widow,one_solitary_sheep).
+aos(0,have,poor_widow,one_sheep).
+aos(0,have,widow,one_sheep).
+aos(0,have,certain_widow,one_solitary_sheep).
+aos(0,have,certain_widow,one_sheep).
+aos(0,have,certain_poor_widow,one_sheep).
+aos(0,have,widow,one_solitary_sheep).
 %% at shearing time wishing to take his fleece and to avoid expense she sheared him herself but used the shears so unskillfully that with the fleece she sheared the flesh.
 % dependencies.
 root(1,root,time).
@@ -52,13 +52,13 @@ dep(1,use,shear).
 det(1,flesh,the).
 dobj(1,shear,flesh).
 % relations.
-use(1,she,shears).
-use_so(1,she,shears).
-unskillfully_shear_flesh_with(1,she,fleece).
-shear_flesh_with(1,she,fleece).
-shear(1,she,he_herself).
-unskillfully_shear(1,she,flesh).
-shear(1,she,flesh).
+aos(1,use,she,shears).
+aos(1,use_so,she,shears).
+aos(1,unskillfully_shear_flesh_with,she,fleece).
+aos(1,shear_flesh_with,she,fleece).
+aos(1,shear,she,he_herself).
+aos(1,unskillfully_shear,she,flesh).
+aos(1,shear,she,flesh).
 %% the sheep writhing with pain said.
 % dependencies.
 root(2,root,say).
@@ -78,7 +78,7 @@ dobj(3,hurt,I).
 mark(3,mistress,so).
 advcl:so(3,hurt,mistress).
 % relations.
-do_hurt(3,you,I).
+aos(3,do_hurt,you,I).
 %% what weight can my blood add to the wool.
 % dependencies.
 root(4,root,add).

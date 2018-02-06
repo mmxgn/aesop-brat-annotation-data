@@ -15,9 +15,9 @@ case(0,flock,to).
 nmod:poss(0,flock,he).
 nmod:to(0,bring,flock).
 % relations.
-bring_back(0,goatherd,goat).
-bring_back_goat_to(0,goatherd,he_flock).
-bring_back(0,goatherd,stray_goat).
+aos(0,bring_back,goatherd,goat).
+aos(0,bring_back_goat_to,goatherd,he_flock).
+aos(0,bring_back,goatherd,stray_goat).
 %% he whistled and sounded his horn in vain.
 % dependencies.
 root(1,root,whistle).
@@ -30,7 +30,7 @@ dobj(1,sound,horn).
 case(1,vain,in).
 nmod:in(1,sound,vain).
 % relations.
-sound(1,he,he_horn).
+aos(1,sound,he,he_horn).
 %% the straggler paid no attention to the summons.
 % dependencies.
 root(2,root,pay).
@@ -64,8 +64,8 @@ acl:to(3,goat,tell).
 nmod:poss(3,master,he).
 dobj(3,tell,master).
 % relations.
-throw(3,last_goatherd,stone).
-throw(3,goatherd,stone).
+aos(3,throw,last_goatherd,stone).
+aos(3,throw,goatherd,stone).
 %% the goat replied.
 % dependencies.
 root(4,root,reply).
@@ -87,5 +87,5 @@ nsubj(5,silent,i).
 cop(5,silent,be).
 advcl:though(5,speak,silent).
 % relations.
-be(5,i,silent).
-will_speak(5,horn,silent).
+aos(5,be,i,silent).
+aos(5,will_speak,horn,silent).

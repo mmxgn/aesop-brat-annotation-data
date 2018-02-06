@@ -14,14 +14,14 @@ det(0,road,the).
 amod(0,road,same).
 nmod:on(0,travel,road).
 % relations.
-be_travel_on(0,fox,road).
-be_travel_together_on(0,monkey,road).
-be_travel_on(0,monkey,road).
-be_travel_together_on(0,monkey,same_road).
-be_travel_together_on(0,fox,same_road).
-be_travel_on(0,monkey,same_road).
-be_travel_on(0,fox,same_road).
-be_travel_together_on(0,fox,road).
+aos(0,be_travel_on,fox,road).
+aos(0,be_travel_together_on,monkey,road).
+aos(0,be_travel_on,monkey,road).
+aos(0,be_travel_together_on,monkey,same_road).
+aos(0,be_travel_together_on,fox,same_road).
+aos(0,be_travel_on,monkey,same_road).
+aos(0,be_travel_on,fox,same_road).
+aos(0,be_travel_together_on,fox,road).
 %% as they journeyed they passed through a cemetery full of monuments.
 % dependencies.
 root(1,root,journey).
@@ -36,8 +36,8 @@ case(1,monument,full).
 case(1,monument,of).
 nmod:of(1,cemetery,monument).
 % relations.
-pass_through(1,they,cemetery_full_of_monument).
-pass_through(1,they,cemetery).
+aos(1,pass_through,they,cemetery_full_of_monument).
+aos(1,pass_through,they,cemetery).
 %% all these monuments which you see.
 % dependencies.
 root(2,root,monument).
@@ -77,7 +77,7 @@ case(4,renown,of).
 amod(4,renown,great).
 nmod:of(4,freedman,renown).
 % relations.
-be(4,freedman,erect).
+aos(4,be,freedman,erect).
 %% the fox replied.
 % dependencies.
 root(5,root,reply).
@@ -112,13 +112,13 @@ mark(6,contradict,to).
 xcomp(6,able,contradict).
 dobj(6,contradict,you).
 % relations.
-have_choose(6,you,most_appropriate_subject).
-have_choose(6,you,appropriate_subject_for_you_falsehood).
-have_choose_subject(6,you,sure).
-be(6,i,sure).
-have_choose(6,you,subject_for_you_falsehood).
-have_choose(6,you,most_appropriate_subject_for_you_falsehood).
-have_choose(6,you,subject).
-be(6,none,able).
-have_choose(6,you,appropriate_subject).
-contradict(6,none,you).
+aos(6,have_choose,you,most_appropriate_subject).
+aos(6,have_choose,you,appropriate_subject_for_you_falsehood).
+aos(6,have_choose_subject,you,sure).
+aos(6,be,i,sure).
+aos(6,have_choose,you,subject_for_you_falsehood).
+aos(6,have_choose,you,most_appropriate_subject_for_you_falsehood).
+aos(6,have_choose,you,subject).
+aos(6,be,none,able).
+aos(6,have_choose,you,appropriate_subject).
+aos(6,contradict,none,you).

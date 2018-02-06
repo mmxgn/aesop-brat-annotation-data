@@ -17,9 +17,9 @@ case(0,vine,of).
 det(0,vine,a).
 nmod:of(0,leaf,vine).
 % relations.
-hide(0,hart,himself).
-press_in(0,hart,chase).
-hard_press_in(0,hart,chase).
+aos(0,hide,hart,himself).
+aos(0,press_in,hart,chase).
+aos(0,hard_press_in,hart,chase).
 %% the huntsmen in their haste overshot the place of his concealment.
 % dependencies.
 root(1,root,overshoot).
@@ -34,9 +34,9 @@ case(1,concealment,of).
 nmod:poss(1,concealment,he).
 nmod:of(1,place,concealment).
 % relations.
-overshoot(1,huntsman,place_of_he_concealment).
-is_in(1,huntsman,they_haste).
-overshoot(1,huntsman,place).
+aos(1,overshoot,huntsman,place_of_he_concealment).
+aos(1,is_in,huntsman,they_haste).
+aos(1,overshoot,huntsman,place).
 %% supposing all danger to have passed the hart began to nibble the tendrils of the vine.
 % dependencies.
 root(2,root,suppose).
@@ -88,8 +88,8 @@ cc(3,look,and).
 conj:and(3,look,strike).
 dobj(3,strike,it).
 % relations.
-shoot(3,hart,arrow).
-shoot_arrow_from(3,hart,he_bow).
+aos(3,shoot,hart,arrow).
+aos(3,shoot_arrow_from,hart,he_bow).
 %% the hart at the point of death groaned.
 % dependencies.
 root(4,root,groan).
@@ -120,7 +120,7 @@ ref(5,vine,that).
 acl:relcl(5,vine,save).
 nsubj(5,maltreat,I).
 % relations.
-be_serve_for(5,i,i).
-be(5,i,serve).
-be(5,i,rightly_serve).
-be_rightly_serve_for(5,i,i).
+aos(5,be_serve_for,i,i).
+aos(5,be,i,serve).
+aos(5,be,i,rightly_serve).
+aos(5,be_rightly_serve_for,i,i).

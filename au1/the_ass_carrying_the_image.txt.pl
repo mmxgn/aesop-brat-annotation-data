@@ -38,7 +38,7 @@ case(1,image,before).
 det(1,image,the).
 nmod:before(1,make,image).
 % relations.
-pass_along(1,he,crowd).
+aos(1,pass_along,he,crowd).
 %% the ass thinking that they bowed their heads in token of respect for himself bristled up with pride gave himself airs and refused to move another step.
 % dependencies.
 root(2,root,give).

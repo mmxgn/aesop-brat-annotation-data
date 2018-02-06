@@ -28,13 +28,13 @@ advcl:in(0,torment,compel).
 case(0,labor,to).
 nmod:to(0,compel,labor).
 % relations.
-torment(0,heifer,he).
-see(0,heifer,ox).
-see_hard(0,heifer,ox).
-see_ox_hard_at(0,heifer,work).
-see_ox_at(0,heifer,work).
-see_ox_hard_at(0,heifer,work_harness).
-see_ox_at(0,heifer,work_harness).
+aos(0,torment,heifer,he).
+aos(0,see,heifer,ox).
+aos(0,see_hard,heifer,ox).
+aos(0,see_ox_hard_at,heifer,work).
+aos(0,see_ox_at,heifer,work).
+aos(0,see_ox_hard_at,heifer,work_harness).
+aos(0,see_ox_at,heifer,work_harness).
 %% shortly afterwards at the harvest festival the owner released the ox from his yoke but bound the heifer with cords and led him away to the altar to be slain in honor of the occasion.
 % dependencies.
 root(1,root,release).
@@ -75,16 +75,16 @@ case(1,occasion,of).
 det(1,occasion,the).
 nmod:of(1,honor,occasion).
 % relations.
-release_ox_at(1,owner,shortly_harvest_festival).
-bind_heifer_with(1,owner,cord).
-lead(1,owner,he).
-release_ox_at(1,owner,harvest_festival).
-bind_with(1,owner,cord).
-bind(1,owner,heifer).
-lead_away(1,owner,he).
-release(1,owner,ox).
-release_ox_at(1,owner,shortly_afterwards_harvest_festival).
-release_ox_at(1,owner,afterwards_harvest_festival).
+aos(1,release_ox_at,owner,shortly_harvest_festival).
+aos(1,bind_heifer_with,owner,cord).
+aos(1,lead,owner,he).
+aos(1,release_ox_at,owner,harvest_festival).
+aos(1,bind_with,owner,cord).
+aos(1,bind,owner,heifer).
+aos(1,lead_away,owner,he).
+aos(1,release,owner,ox).
+aos(1,release_ox_at,owner,shortly_afterwards_harvest_festival).
+aos(1,release_ox_at,owner,afterwards_harvest_festival).
 %% the ox saw what was being done and said with a smile to the heifer.
 % dependencies.
 root(2,root,see).
@@ -104,8 +104,8 @@ case(2,heifer,to).
 det(2,heifer,the).
 nmod:to(2,say,heifer).
 % relations.
-say_to(2,ox,heifer).
-say_with(2,ox,smile).
+aos(2,say_to,ox,heifer).
+aos(2,say_with,ox,smile).
 %% for this you were allowed to live in idleness because you were presently to be sacrificed.
 % dependencies.
 root(3,root,allow).
@@ -127,10 +127,10 @@ mark(3,sacrifice,to).
 auxpass(3,sacrifice,be).
 xcomp(3,be,sacrifice).
 % relations.
-be(3,you,allow).
-live(3,you,be_presently).
-be_allow(3,you,live_in_idleness).
-live_in(3,you,idleness).
-live(3,you,be).
-be_allow(3,you,live).
-be_allow_for(3,you,this).
+aos(3,be,you,allow).
+aos(3,live,you,be_presently).
+aos(3,be_allow,you,live_in_idleness).
+aos(3,live_in,you,idleness).
+aos(3,live,you,be).
+aos(3,be_allow,you,live).
+aos(3,be_allow_for,you,this).

@@ -21,9 +21,9 @@ nmod:poss(0,advantage,they).
 amod(0,advantage,mutual).
 nmod:to(0,make,advantage).
 % relations.
-entreat(0,eagle,lion).
-is_with(0,alliance,he).
-stay(0,eagle,he_flight).
+aos(0,entreat,eagle,lion).
+aos(0,is_with,alliance,he).
+aos(0,stay,eagle,he_flight).
 %% the lion replied.
 % dependencies.
 root(1,root,reply).
@@ -76,8 +76,8 @@ advmod(2,please,whenever).
 nsubj(2,please,he).
 advcl(2,fly,please).
 % relations.
-must_excuse(2,you,I).
-require(2,you,you).
-find(2,you,surety_for_you_faith).
-find(2,you,surety_for_you_good_faith).
-find(2,you,surety).
+aos(2,must_excuse,you,I).
+aos(2,require,you,you).
+aos(2,find,you,surety_for_you_faith).
+aos(2,find,you,surety_for_you_good_faith).
+aos(2,find,you,surety).

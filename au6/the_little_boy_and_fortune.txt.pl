@@ -52,7 +52,7 @@ advmod(1,address,thus).
 acl(1,slumber,address).
 dobj(1,address,he).
 % relations.
-appear_to(1,it,he).
+aos(1,appear_to,it,he).
 %% little boy pray wake up for had you fallen into the well the blame will be thrown on me and i shall get an ill name among mortals.
 % dependencies.
 root(2,root,boy).
@@ -115,7 +115,7 @@ dobj(3,bring,they).
 case(3,themselves,on).
 nmod:on(3,bring,themselves).
 % relations.
-blame(3,man,they_calamity).
-have_really_bring(3,they,they).
-be(3,man,sure).
-have_bring(3,they,they).
+aos(3,blame,man,they_calamity).
+aos(3,have_really_bring,they,they).
+aos(3,be,man,sure).
+aos(3,have_bring,they,they).

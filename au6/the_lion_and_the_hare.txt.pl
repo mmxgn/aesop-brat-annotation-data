@@ -79,12 +79,12 @@ case(3,hare,upon).
 det(3,hare,the).
 nmod:upon(3,feed,hare).
 % relations.
-be(3,lion,unable).
-catch(3,lion,hart).
-be_unable_after(3,lion,chase).
-return(3,lion,feed).
-be_unable_after(3,lion,long_chase).
-return(3,lion,feed_upon_hare).
+aos(3,be,lion,unable).
+aos(3,catch,lion,hart).
+aos(3,be_unable_after,lion,chase).
+aos(3,return,lion,feed).
+aos(3,be_unable_after,lion,long_chase).
+aos(3,return,lion,feed_upon_hare).
 %% on finding that the hare also had run off he said.
 % dependencies.
 root(4,root,find).
@@ -99,8 +99,8 @@ mark(4,say,off).
 nsubj(4,say,he).
 advcl:off(4,run,say).
 % relations.
-run(4,hare,he_say).
-also_run(4,hare,he_say).
+aos(4,run,hare,he_say).
+aos(4,also_run,hare,he_say).
 %% i am rightly served for having let go of the food that i had in my hand for the chance of obtaining more.
 % dependencies.
 root(5,root,serve).
@@ -128,8 +128,8 @@ mark(5,obtain,of).
 acl:of(5,chance,obtain).
 dobj(5,obtain,more).
 % relations.
-be_serve(5,i,have).
-be(5,i,serve).
-be_rightly_serve(5,i,have).
-be(5,i,rightly_serve).
-have_in(5,i,my_hand).
+aos(5,be_serve,i,have).
+aos(5,be,i,serve).
+aos(5,be_rightly_serve,i,have).
+aos(5,be,i,rightly_serve).
+aos(5,have_in,i,my_hand).

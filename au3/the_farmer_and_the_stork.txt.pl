@@ -25,9 +25,9 @@ compound:prt(0,pick,up).
 nmod:poss(0,seed,he).
 dobj(0,pick,seed).
 % relations.
-place_net_on(0,farmer,he_plowland).
-place(0,farmer,net).
-place_net_on(0,farmer,he_newly-sown_plowland).
+aos(0,place_net_on,farmer,he_plowland).
+aos(0,place,farmer,net).
+aos(0,place_net_on,farmer,he_newly-sown_plowland).
 %% with them he trapped a stork that had fractured his leg in the net and was earnestly beseeching the farmer to spare his life.
 % dependencies.
 root(1,root,trap).
@@ -79,7 +79,7 @@ xcomp(4,go,free).
 det(4,once,this).
 dep(4,free,once).
 % relations.
-go(4,I,free).
+aos(4,go,I,free).
 %% my broken limb should excite your pity.
 % dependencies.
 root(5,root,excite).
@@ -90,8 +90,8 @@ aux(5,excite,should).
 nmod:poss(5,pity,you).
 dobj(5,excite,pity).
 % relations.
-should_excite(5,my_broken_limb,you_pity).
-should_excite(5,my_limb,you_pity).
+aos(5,should_excite,my_broken_limb,you_pity).
+aos(5,should_excite,my_limb,you_pity).
 %% besides i am no crane i am a stork a bird of excellent character.
 % dependencies.
 root(6,root,crane).
@@ -186,6 +186,6 @@ case(10,company,in).
 nmod:poss(10,company,they).
 nmod:in(10,die,company).
 % relations.
-must_die_in(10,you,they_company).
-may(10,it,may_all).
-take(10,i,you).
+aos(10,must_die_in,you,they_company).
+aos(10,may,it,may_all).
+aos(10,take,i,you).

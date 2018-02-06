@@ -20,11 +20,11 @@ case(0,other,near).
 det(0,other,each).
 nmod:near(0,live,other).
 % relations.
-form(0,eagle,friendship).
-form(0,eagle,intimate_friendship).
-form(0,fox,intimate_friendship).
-form(0,fox,friendship).
-decide(0,fox,live).
+aos(0,form,eagle,friendship).
+aos(0,form,eagle,intimate_friendship).
+aos(0,form,fox,intimate_friendship).
+aos(0,form,fox,friendship).
+aos(0,decide,fox,live).
 %% the eagle built her nest in the branches of a tall tree while the fox crept into the underwood and there produced her young.
 % dependencies.
 root(1,root,build).
@@ -54,10 +54,10 @@ conj:and(1,creep,produce).
 nmod:poss(1,young,she).
 dobj(1,produce,young).
 % relations.
-creep_into(1,fox,underwood).
-produce(1,fox,she_young).
-build(1,eagle,she_nest).
-there_produce(1,fox,she_young).
+aos(1,creep_into,fox,underwood).
+aos(1,produce,fox,she_young).
+aos(1,build,eagle,she_nest).
+aos(1,there_produce,fox,she_young).
 %% not long after they had agreed upon this plan the eagle being in want of provision for her young ones swooped down while the fox was out seized upon one of the little cubs and feasted herself and her brood.
 % dependencies.
 root(2,root,long).
@@ -104,11 +104,11 @@ nmod:poss(2,brood,she).
 nmod:upon(2,agree,brood).
 conj:and(2,plan,brood).
 % relations.
-swoop_down(2,eagle,out_seize).
-be(2,fox,seize).
-feast(2,fox,herself).
-be(2,fox,out_seize).
-swoop_down(2,eagle,seize).
+aos(2,swoop_down,eagle,out_seize).
+aos(2,be,fox,seize).
+aos(2,feast,fox,herself).
+aos(2,be,fox,out_seize).
+aos(2,swoop_down,eagle,seize).
 %% the fox on her return discovered what had happened but was less grieved for the death of her young than for her inability to avenge them.
 % dependencies.
 root(3,root,discover).
@@ -151,8 +151,8 @@ case(4,eagle,upon).
 det(4,eagle,the).
 nmod:upon(4,fall,eagle).
 % relations.
-fall_upon(4,retribution,eagle).
-quickly_fall_upon(4,retribution,eagle).
+aos(4,fall_upon,retribution,eagle).
+aos(4,quickly_fall_upon,retribution,eagle).
 %% while hovering near an altar on which some villagers were sacrificing a goat she suddenly seized a piece of the flesh and carried it along with a burning cinder to her nest.
 % dependencies.
 root(5,root,hover).
@@ -191,12 +191,12 @@ case(5,nest,to).
 nmod:poss(5,nest,she).
 nmod:to(5,carry,nest).
 % relations.
-piece_of(5,she,flesh).
-carry(5,she,it).
-seize(5,she,piece_of_flesh).
-seize(5,she,piece).
-suddenly_seize(5,she,piece).
-suddenly_seize(5,she,piece_of_flesh).
+aos(5,piece_of,she,flesh).
+aos(5,carry,she,it).
+aos(5,seize,she,piece_of_flesh).
+aos(5,seize,she,piece).
+aos(5,suddenly_seize,she,piece).
+aos(5,suddenly_seize,she,piece_of_flesh).
 %% a strong breeze soon fanned the spark into a flame and the eaglets as yet unfledged and helpless were roasted in their nest and dropped down dead at the bottom of the tree.
 % dependencies.
 root(6,root,fan).
@@ -236,18 +236,18 @@ case(6,tree,of).
 det(6,tree,the).
 nmod:of(6,bottom,tree).
 % relations.
-drop_at(6,breeze,bottom).
-drop_dead_at(6,strong_breeze,bottom).
-drop_at(6,breeze,bottom_of_tree).
-drop_at(6,strong_breeze,bottom).
-fan(6,breeze,the).
-fan(6,strong_breeze,the).
-soon_fan(6,strong_breeze,the).
-drop_dead_at(6,breeze,bottom_of_tree).
-drop_dead_at(6,breeze,bottom).
-drop_dead_at(6,strong_breeze,bottom_of_tree).
-drop_at(6,strong_breeze,bottom_of_tree).
-soon_fan(6,breeze,the).
+aos(6,drop_at,breeze,bottom).
+aos(6,drop_dead_at,strong_breeze,bottom).
+aos(6,drop_at,breeze,bottom_of_tree).
+aos(6,drop_at,strong_breeze,bottom).
+aos(6,fan,breeze,the).
+aos(6,fan,strong_breeze,the).
+aos(6,soon_fan,strong_breeze,the).
+aos(6,drop_dead_at,breeze,bottom_of_tree).
+aos(6,drop_dead_at,breeze,bottom).
+aos(6,drop_dead_at,strong_breeze,bottom_of_tree).
+aos(6,drop_at,strong_breeze,bottom_of_tree).
+aos(6,soon_fan,breeze,the).
 %% there in the sight of the eagle the fox gobbled them up.
 % dependencies.
 root(7,root,there).

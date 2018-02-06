@@ -46,10 +46,10 @@ nmod:from(0,receive,sum).
 case(0,money,of).
 nmod:of(0,sum,money).
 % relations.
-receive_from(0,he,she_sum).
-receive_from(0,he,she_sum_of_money).
-is_with(0,bargain,he).
-should_cure(0,he,she_blindness).
+aos(0,receive_from,he,she_sum).
+aos(0,receive_from,he,she_sum_of_money).
+aos(0,is_with,bargain,he).
+aos(0,should_cure,he,she_blindness).
 %% but if her infirmity remained she should give him nothing.
 % dependencies.
 root(1,root,remain).
@@ -63,8 +63,8 @@ ccomp(1,remain,give).
 iobj(1,give,he).
 dobj(1,give,nothing).
 % relations.
-give(1,she,nothing).
-give(1,she,he).
+aos(1,give,she,nothing).
+aos(1,give,she,he).
 %% this agreement being made the physician time after time applied his salve to her eyes and on every visit took something away stealing all her property little by little.
 % dependencies.
 root(2,root,take).
@@ -100,19 +100,19 @@ advmod(2,steal,little).
 case(2,little,by).
 nmod:by(2,steal,little).
 % relations.
-away_steal_little(2,something,property).
-steal_property_by(2,something,little).
-away_steal_little(2,something,she_property).
-steal_little(2,something,property).
-away_steal(2,something,she_property).
-steal(2,something,property).
-steal_property_little_by(2,something,little).
-away_steal_property_by(2,something,little).
-take(2,agreement,something).
-away_steal(2,something,property).
-away_steal_property_little_by(2,something,little).
-steal(2,something,she_property).
-steal_little(2,something,she_property).
+aos(2,away_steal_little,something,property).
+aos(2,steal_property_by,something,little).
+aos(2,away_steal_little,something,she_property).
+aos(2,steal_little,something,property).
+aos(2,away_steal,something,she_property).
+aos(2,steal,something,property).
+aos(2,steal_property_little_by,something,little).
+aos(2,away_steal_property_by,something,little).
+aos(2,take,agreement,something).
+aos(2,away_steal,something,property).
+aos(2,away_steal_property_little_by,something,little).
+aos(2,steal,something,she_property).
+aos(2,steal_little,something,she_property).
 %% and when he had got all she had he healed her and demanded the promised payment.
 % dependencies.
 root(3,root,get).
@@ -134,9 +134,9 @@ det(3,payment,the).
 amod(3,payment,promise).
 dobj(3,demand,payment).
 % relations.
-demand(3,he,promise_payment).
-heal(3,he,she).
-demand(3,he,payment).
+aos(3,demand,he,promise_payment).
+aos(3,heal,he,she).
+aos(3,demand,he,payment).
 %% the old woman when she recovered her sight and saw none of her goods in her house would give him nothing.
 % dependencies.
 root(4,root,give).
@@ -163,10 +163,10 @@ aux(4,give,would).
 iobj(4,give,he).
 dobj(4,give,nothing).
 % relations.
-see(4,she,none).
-see_none_in(4,she,she_house).
-recover(4,she,she_sight).
-see(4,she,none_of_she_goods).
+aos(4,see,she,none).
+aos(4,see_none_in,she,she_house).
+aos(4,recover,she,she_sight).
+aos(4,see,she,none_of_she_goods).
 %% the physician insisted on his claim and.
 % dependencies.
 root(5,root,insist).
@@ -177,7 +177,7 @@ nmod:poss(5,claim,he).
 nmod:on(5,insist,claim).
 cc(5,claim,and).
 % relations.
-insist_on(5,physician,he_claim).
+aos(5,insist_on,physician,he_claim).
 %% as she still refused summoned her before the judge.
 % dependencies.
 root(6,root,refuse).
@@ -249,13 +249,13 @@ xcomp(9,be,give).
 iobj(9,give,he).
 dobj(9,give,nothing).
 % relations.
-give(9,i,nothing).
-continue(9,i,blind).
-do(9,i,promise).
-give(9,i,sum_of_money).
-give(9,i,he).
-give(9,i,he).
-give(9,i,sum).
+aos(9,give,i,nothing).
+aos(9,continue,i,blind).
+aos(9,do,i,promise).
+aos(9,give,i,sum_of_money).
+aos(9,give,i,he).
+aos(9,give,i,he).
+aos(9,give,i,sum).
 %% now he declares that i am healed.
 % dependencies.
 root(10,root,declare).
@@ -266,7 +266,7 @@ nsubjpass(10,heal,i).
 auxpass(10,heal,be).
 ccomp(10,declare,heal).
 % relations.
-be(10,i,heal).
+aos(10,be,i,heal).
 %% i on the contrary affirm that i am still blind.
 % dependencies.
 root(11,root,i).
@@ -281,8 +281,8 @@ cop(11,blind,be).
 advmod(11,blind,still).
 acl:relcl(11,affirm,blind).
 % relations.
-be(11,i,blind).
-be(11,i,still_blind).
+aos(11,be,i,blind).
+aos(11,be,i,still_blind).
 %% for when i lost the use of my eyes i saw in my house various chattels and valuable goods but now though he swears i am cured of my blindness i am not able to see a single thing in it.
 % dependencies.
 root(12,root,able).
@@ -329,10 +329,10 @@ dobj(12,see,thing).
 case(12,it,in).
 nmod:in(12,see,it).
 % relations.
-lose(12,i,use_of_my_eye).
-lose_use(12,i,he_swear).
-be(12,i,cure).
-lose_use(12,i,now_he_swear).
-is_in(12,saw,my_house_various_chattel).
-be_cure_of(12,i,my_blindness).
-lose(12,i,use).
+aos(12,lose,i,use_of_my_eye).
+aos(12,lose_use,i,he_swear).
+aos(12,be,i,cure).
+aos(12,lose_use,i,now_he_swear).
+aos(12,is_in,saw,my_house_various_chattel).
+aos(12,be_cure_of,i,my_blindness).
+aos(12,lose,i,use).

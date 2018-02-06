@@ -18,8 +18,8 @@ advmod(0,dejected,terribly).
 xcomp(0,meet,dejected).
 conj:and(0,alone,dejected).
 % relations.
-meet(0,wayfaring_man,woman_standing_alone).
-meet(0,man,woman_standing_alone).
+aos(0,meet,wayfaring_man,woman_standing_alone).
+aos(0,meet,man,woman_standing_alone).
 %% he inquired of her.
 % dependencies.
 root(1,root,inquire).
@@ -27,7 +27,7 @@ nsubj(1,inquire,he).
 case(1,she,of).
 nmod:of(1,inquire,she).
 % relations.
-inquire_of(1,he,she).
+aos(1,inquire_of,he,she).
 %% who art thou.
 % dependencies.
 root(2,root,thou).
@@ -41,7 +41,7 @@ nmod:poss(3,name,my).
 nsubj(3,truth,name).
 cop(3,truth,be).
 % relations.
-be(3,my_name,truth).
+aos(3,be,my_name,truth).
 %% she replied.
 % dependencies.
 root(4,root,reply).
@@ -74,18 +74,18 @@ case(7,wilderness,in).
 det(7,wilderness,the).
 nmod:in(7,leave,wilderness).
 % relations.
-leave(7,you,city).
-leave_city_in(7,you,wilderness).
-leave_city_to(7,you,dwell).
-leave_city_in(7,you,alone_here_wilderness).
-leave_city_in(7,you,here_wilderness).
+aos(7,leave,you,city).
+aos(7,leave_city_in,you,wilderness).
+aos(7,leave_city_to,you,dwell).
+aos(7,leave_city_in,you,alone_here_wilderness).
+aos(7,leave_city_in,you,here_wilderness).
 %% she made answer.
 % dependencies.
 root(8,root,make).
 nsubj(8,make,she).
 dobj(8,make,answer).
 % relations.
-make(8,she,answer).
+aos(8,make,she,answer).
 %% because in former times falsehood was with few but is now with all men.
 % dependencies.
 root(9,root,few).
@@ -103,5 +103,5 @@ case(9,man,with).
 det(9,man,all).
 conj:but(9,few,man).
 % relations.
-be_with(9,falsehood,man).
-be_with(9,falsehood,now_man).
+aos(9,be_with,falsehood,man).
+aos(9,be_with,falsehood,now_man).

@@ -31,10 +31,10 @@ amod(0,dish,flat).
 compound(0,dish,stone).
 nmod:into(0,pour,dish).
 % relations.
-invite(0,fox,crane).
-provide(0,fox,nothing).
-invite_crane_to(0,fox,supper).
-provide_nothing_for(0,fox,he_entertainment).
+aos(0,invite,fox,crane).
+aos(0,provide,fox,nothing).
+aos(0,invite_crane_to,fox,supper).
+aos(0,provide_nothing_for,fox,he_entertainment).
 %% the soup fell out of the long bill of the crane at every mouthful and his vexation at not being able to eat afforded the fox much amusement.
 % dependencies.
 root(1,root,fall).
@@ -111,19 +111,19 @@ case(2,leisure,at).
 nmod:poss(2,leisure,he).
 nmod:at(2,enjoy,leisure).
 % relations.
-set_before(2,crane,she_flagon_with_long_narrow_mouth).
-could_easily_insert(2,he,he_neck).
-could_insert(2,he,he_neck).
-set_before(2,crane,she_flagon_with_long_mouth).
-ask(2,crane,fox).
-ask_fox_to(2,crane,sup).
-set_before(2,crane,she_flagon_with_mouth).
-set_before(2,crane,she_flagon).
-is_with(2,she_flagon,long_narrow_mouth).
-ask_fox_with(2,crane,he).
-enjoy(2,he,its_contents).
-set_before(2,crane,she_flagon_with_narrow_mouth).
-is_in(2,crane,he_turn).
+aos(2,set_before,crane,she_flagon_with_long_narrow_mouth).
+aos(2,could_easily_insert,he,he_neck).
+aos(2,could_insert,he,he_neck).
+aos(2,set_before,crane,she_flagon_with_long_mouth).
+aos(2,ask,crane,fox).
+aos(2,ask_fox_to,crane,sup).
+aos(2,set_before,crane,she_flagon_with_mouth).
+aos(2,set_before,crane,she_flagon).
+aos(2,is_with,she_flagon,long_narrow_mouth).
+aos(2,ask_fox_with,crane,he).
+aos(2,enjoy,he,its_contents).
+aos(2,set_before,crane,she_flagon_with_narrow_mouth).
+aos(2,is_in,crane,he_turn).
 %% the fox unable even to taste it met with a fitting requital after the fashion of her own hospitality.
 % dependencies.
 root(3,root,meet).
@@ -146,13 +146,13 @@ nmod:poss(3,hospitality,she).
 amod(3,hospitality,own).
 nmod:of(3,fashion,hospitality).
 % relations.
-meet_with(3,fox,requital).
-meet_with(3,fox,fitting_requital).
-meet_after(3,fox,fashion_of_she_own_hospitality).
-meet_with(3,fox_unable,fitting_requital).
-meet_after(3,fox_unable,fashion).
-meet_after(3,fox_unable,fashion_of_she_own_hospitality).
-meet_after(3,fox_unable,fashion_of_she_hospitality).
-meet_with(3,fox_unable,requital).
-meet_after(3,fox,fashion).
-meet_after(3,fox,fashion_of_she_hospitality).
+aos(3,meet_with,fox,requital).
+aos(3,meet_with,fox,fitting_requital).
+aos(3,meet_after,fox,fashion_of_she_own_hospitality).
+aos(3,meet_with,fox_unable,fitting_requital).
+aos(3,meet_after,fox_unable,fashion).
+aos(3,meet_after,fox_unable,fashion_of_she_own_hospitality).
+aos(3,meet_after,fox_unable,fashion_of_she_hospitality).
+aos(3,meet_with,fox_unable,requital).
+aos(3,meet_after,fox,fashion).
+aos(3,meet_after,fox,fashion_of_she_hospitality).

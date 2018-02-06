@@ -32,10 +32,10 @@ auxpass(0,know,be).
 neg(0,know,not).
 acl:relcl(0,town,know).
 % relations.
-make(0,living,desperate).
-make_by(0,living,poverty).
-practice(0,cobbler,medicine).
-practice(0,cobbler_unable,medicine).
+aos(0,make,living,desperate).
+aos(0,make_by,living,poverty).
+aos(0,practice,cobbler,medicine).
+aos(0,practice,cobbler_unable,medicine).
 %% he sold a drug pretending that it was an antidote to all poisons and obtained a great name for himself by long-winded puffs and advertisements.
 % dependencies.
 root(1,root,sell).
@@ -67,14 +67,14 @@ cc(1,puff,and).
 nmod:by(1,obtain,advertisement).
 conj:and(1,puff,advertisement).
 % relations.
-obtain(1,it,name).
-obtain_name_by(1,it,long-winded_puff).
-obtain(1,it,great_name).
-sell(1,he,drug).
-be_antidote_to(1,it,poison).
-obtain_name_by(1,it,puff).
-obtain(1,it,great_name_for_himself).
-obtain(1,it,name_for_himself).
+aos(1,obtain,it,name).
+aos(1,obtain_name_by,it,long-winded_puff).
+aos(1,obtain,it,great_name).
+aos(1,sell,he,drug).
+aos(1,be_antidote_to,it,poison).
+aos(1,obtain_name_by,it,puff).
+aos(1,obtain,it,great_name_for_himself).
+aos(1,obtain,it,name_for_himself).
 %% when the cobbler happened to fall sick himself of a serious illness the governor of the town determined to test his skill.
 % dependencies.
 root(2,root,happen).
@@ -102,9 +102,9 @@ xcomp(2,determine,test).
 nmod:poss(2,skill,he).
 dobj(2,test,skill).
 % relations.
-happen(2,cobbler,fall).
-test(2,governor,he_skill).
-fall(2,cobbler,sick).
+aos(2,happen,cobbler,fall).
+aos(2,test,governor,he_skill).
+aos(2,fall,cobbler,sick).
 %% for this purpose he called for a cup and while filling it with water pretended to mix poison with the cobbler 's antidote commanding him to drink it on the promise of a reward.
 % dependencies.
 root(3,root,purpose).
@@ -143,9 +143,9 @@ case(3,reward,of).
 det(3,reward,a).
 nmod:of(3,promise,reward).
 % relations.
-with(3,cobbler,antidote).
-call_for(3,he,cup).
-drink(3,he,it).
+aos(3,with,cobbler,antidote).
+aos(3,call_for,he,cup).
+aos(3,drink,he,it).
 %% the cobbler under the fear of death confessed that he had no knowledge of medicine and was only made famous by the stupid clamors of the crowd.
 % dependencies.
 root(4,root,confess).
@@ -178,18 +178,18 @@ case(4,crowd,of).
 det(4,crowd,the).
 nmod:of(4,clamor,crowd).
 % relations.
-be(4,he,make).
-be_make(4,he,famous).
-be_make_by(4,he,stupid_clamor_of_crowd).
-be(4,he,only_make).
-be_make_by(4,he,clamor).
-be_only_make_by(4,he,stupid_clamor).
-be_make_by(4,he,stupid_clamor).
-be_only_make_by(4,he,clamor).
-be_only_make_by(4,he,clamor_of_crowd).
-be_make_by(4,he,clamor_of_crowd).
-be_only_make_by(4,he,stupid_clamor_of_crowd).
-be_only_make(4,he,famous).
+aos(4,be,he,make).
+aos(4,be_make,he,famous).
+aos(4,be_make_by,he,stupid_clamor_of_crowd).
+aos(4,be,he,only_make).
+aos(4,be_make_by,he,clamor).
+aos(4,be_only_make_by,he,stupid_clamor).
+aos(4,be_make_by,he,stupid_clamor).
+aos(4,be_only_make_by,he,clamor).
+aos(4,be_only_make_by,he,clamor_of_crowd).
+aos(4,be_make_by,he,clamor_of_crowd).
+aos(4,be_only_make_by,he,stupid_clamor_of_crowd).
+aos(4,be_only_make,he,famous).
 %% the governor then called a public assembly and addressed the citizens.
 % dependencies.
 root(5,root,call).
@@ -205,9 +205,9 @@ conj:and(5,call,address).
 det(5,citizen,the).
 dobj(5,address,citizen).
 % relations.
-call(5,governor,public_assembly).
-call(5,governor,assembly).
-address(5,governor,citizen).
+aos(5,call,governor,public_assembly).
+aos(5,call,governor,assembly).
+aos(5,address,governor,citizen).
 %% of what folly have you been guilty.
 % dependencies.
 root(6,root,guilty).
@@ -218,7 +218,7 @@ aux(6,guilty,have).
 nsubj(6,guilty,you).
 cop(6,guilty,be).
 % relations.
-have(6,you,have_guilty).
+aos(6,have,you,have_guilty).
 %% you have not hesitated to entrust your heads to a man whom no one could employ to make even the shoes for their feet.
 % dependencies.
 root(7,root,hesitate).

@@ -24,22 +24,22 @@ xcomp(0,condemn,execute).
 case(0,it,for).
 nmod:for(0,execute,it).
 % relations.
-have(0,man,have_catch).
-have(0,man,have_catch_in_daring_act_of_theft).
-be(0,young_man,condemn).
-be_condemn(0,man,execute).
-have(0,young_man,have_catch).
-be_condemn(0,man,execute_for_it).
-have(0,man,have_catch_in_act).
-have(0,young_man,have_catch_in_act).
-be(0,man,condemn).
-have(0,young_man,have_catch_in_daring_act).
-have(0,young_man,have_catch_in_act_of_theft).
-have(0,man,have_catch_in_act_of_theft).
-have(0,man,have_catch_in_daring_act).
-have(0,young_man,have_catch_in_daring_act_of_theft).
-be_condemn(0,young_man,execute).
-be_condemn(0,young_man,execute_for_it).
+aos(0,have,man,have_catch).
+aos(0,have,man,have_catch_in_daring_act_of_theft).
+aos(0,be,young_man,condemn).
+aos(0,be_condemn,man,execute).
+aos(0,have,young_man,have_catch).
+aos(0,be_condemn,man,execute_for_it).
+aos(0,have,man,have_catch_in_act).
+aos(0,have,young_man,have_catch_in_act).
+aos(0,be,man,condemn).
+aos(0,have,young_man,have_catch_in_daring_act).
+aos(0,have,young_man,have_catch_in_act_of_theft).
+aos(0,have,man,have_catch_in_act_of_theft).
+aos(0,have,man,have_catch_in_daring_act).
+aos(0,have,young_man,have_catch_in_daring_act_of_theft).
+aos(0,be_condemn,young_man,execute).
+aos(0,be_condemn,young_man,execute_for_it).
 %% he expressed his desire to see his mother and to speak with her before he was led to execution and of course this was granted.
 % dependencies.
 root(1,root,express).
@@ -70,13 +70,13 @@ auxpass(1,grant,be).
 advcl:before(1,speak,grant).
 conj:and(1,lead,grant).
 % relations.
-speak(1,he_mother,lead).
-speak_with(1,he_mother,she).
-be_lead_to(1,he,execution).
-speak(1,he_mother,lead_to_execution).
-be(1,he,lead).
-express(1,he,he_desire).
-be_grant_of(1,this,course).
+aos(1,speak,he_mother,lead).
+aos(1,speak_with,he_mother,she).
+aos(1,be_lead_to,he,execution).
+aos(1,speak,he_mother,lead_to_execution).
+aos(1,be,he,lead).
+aos(1,express,he,he_desire).
+aos(1,be_grant_of,this,course).
 %% when his mother came to him he said.
 % dependencies.
 root(2,root,come).
@@ -88,7 +88,7 @@ nmod:to(2,come,he).
 nsubj(2,say,he).
 ccomp(2,come,say).
 % relations.
-come_to(2,he_mother,he).
+aos(2,come_to,he_mother,he).
 %% i want to whisper to you.
 % dependencies.
 root(3,root,want).
@@ -99,9 +99,9 @@ xcomp(3,want,whisper).
 case(3,you,to).
 nmod:to(3,whisper,you).
 % relations.
-whisper_to(3,i,you).
-want(3,i,whisper).
-want(3,i,whisper_to_you).
+aos(3,whisper_to,i,you).
+aos(3,want,i,whisper).
+aos(3,want,i,whisper_to_you).
 %% and when she brought her ear near him he nearly bit it off.
 % dependencies.
 root(4,root,bring).
@@ -118,8 +118,8 @@ acl:relcl(4,ear,bite).
 dobj(4,bite,it).
 compound:prt(4,bite,off).
 % relations.
-bite_off(4,he,it).
-nearly_bite_off(4,he,it).
+aos(4,bite_off,he,it).
+aos(4,nearly_bite_off,he,it).
 %% all the bystanders were horrified and asked him what he could mean by such brutal and inhuman conduct.
 % dependencies.
 root(5,root,horrify).
@@ -143,8 +143,8 @@ amod(5,conduct,inhuman).
 nmod:by(5,mean,conduct).
 conj:and(5,brutal,conduct).
 % relations.
-ask(5,bystander,he).
-be(5,bystander,horrify).
+aos(5,ask,bystander,he).
+aos(5,be,bystander,horrify).
 %% it is to punish her.
 % dependencies.
 root(6,root,be).
@@ -154,7 +154,7 @@ mark(6,punish,to).
 xcomp(6,be,punish).
 dobj(6,punish,she).
 % relations.
-punish(6,it,she).
+aos(6,punish,it,she).
 %% he said.
 % dependencies.
 root(7,root,say).
@@ -181,12 +181,12 @@ advmod(8,bring,home).
 case(8,mother,to).
 nmod:to(8,home,mother).
 % relations.
-be(8,i,when_young).
-be(8,i,young).
-bring_home(8,i,they).
-steal(8,i,thing).
-bring(8,i,they).
-steal(8,i,little_thing).
+aos(8,be,i,when_young).
+aos(8,be,i,young).
+aos(8,bring_home,i,they).
+aos(8,steal,i,thing).
+aos(8,bring,i,they).
+aos(8,steal,i,little_thing).
 %% instead of rebuking and punishing me she laughed and said.
 % dependencies.
 root(9,root,rebuke).
@@ -224,8 +224,8 @@ cop(11,to-day,be).
 advmod(11,to-day,here).
 acl:relcl(11,she,to-day).
 % relations.
-be(11,i,here_to-day).
-be(11,i,to-day).
+aos(11,be,i,here_to-day).
+aos(11,be,i,to-day).
 %% he is right woman.
 % dependencies.
 root(12,root,woman).
@@ -233,8 +233,8 @@ nsubj(12,woman,he).
 cop(12,woman,be).
 amod(12,woman,right).
 % relations.
-be(12,he,woman).
-be(12,he,right_woman).
+aos(12,be,he,woman).
+aos(12,be,he,right_woman).
 %% said the priest.
 % dependencies.
 root(13,root,say).
@@ -261,7 +261,7 @@ nsubj(15,go,he).
 aux(15,go,should).
 acl:relcl(15,way,go).
 % relations.
-be_in(15,child,way).
+aos(15,be_in,child,way).
 %% and when he is old he will not depart therefrom.
 % dependencies.
 root(16,root,old).

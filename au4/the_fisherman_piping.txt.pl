@@ -16,11 +16,11 @@ case(0,seashore,to).
 det(0,seashore,the).
 nmod:to(0,take,seashore).
 % relations.
-skilled_in(0,fisherman,music).
-take(0,fisherman_skilled,he_net).
-take(0,fisherman,he_flute).
-take(0,fisherman_skilled,he_flute).
-take(0,fisherman,he_net).
+aos(0,skilled_in,fisherman,music).
+aos(0,take,fisherman_skilled,he_net).
+aos(0,take,fisherman,he_flute).
+aos(0,take,fisherman_skilled,he_flute).
+aos(0,take,fisherman,he_net).
 %% standing on a projecting rock he played several tunes in the hope that the fish attracted by his melody would of their own accord dance into his net which he had placed below.
 % dependencies.
 root(1,root,stand).
@@ -59,10 +59,10 @@ aux(1,place,have).
 acl:relcl(1,net,place).
 case(1,which,below).
 % relations.
-attract_by(1,fish,he_melody).
-play_tune_in(1,he,hope).
-play(1,he,several_tune).
-play(1,he,tune).
+aos(1,attract_by,fish,he_melody).
+aos(1,play_tune_in,he,hope).
+aos(1,play,he,several_tune).
+aos(1,play,he,tune).
 %% at last having long waited in vain he laid aside his flute and casting his net into the sea made an excellent haul of fish.
 % dependencies.
 root(2,root,wait).
@@ -92,13 +92,13 @@ dobj(2,make,haul).
 case(2,fish,of).
 nmod:of(2,haul,fish).
 % relations.
-cast(2,last,he_net).
-make(2,sea,haul).
-make(2,sea,excellent_haul).
-make(2,sea,excellent_haul_of_fish).
-lay_aside(2,he,he_flute).
-make(2,sea,haul_of_fish).
-lay(2,he,he_flute).
+aos(2,cast,last,he_net).
+aos(2,make,sea,haul).
+aos(2,make,sea,excellent_haul).
+aos(2,make,sea,excellent_haul_of_fish).
+aos(2,lay_aside,he,he_flute).
+aos(2,make,sea,haul_of_fish).
+aos(2,lay,he,he_flute).
 %% when he saw them leaping about in the net upon the rock he said.
 % dependencies.
 root(3,root,see).

@@ -29,10 +29,10 @@ nmod:poss(0,contents,its).
 amod(0,contents,former).
 nmod:of(0,smell,contents).
 % relations.
-find(0,old_woman,jar).
-find(0,woman,jar).
-find(0,old_woman,empty_jar).
-find(0,woman,empty_jar).
+aos(0,find,old_woman,jar).
+aos(0,find,woman,jar).
+aos(0,find,old_woman,empty_jar).
+aos(0,find,woman,empty_jar).
 %% she greedily placed it several times to her nose and drawing it backwards and forwards said.
 % dependencies.
 root(1,root,place).
@@ -53,8 +53,8 @@ advmod(1,draw,forwards).
 conj:and(1,backwards,forwards).
 conj:and(1,place,say).
 % relations.
-place(1,she,it).
-greedily_place(1,she,it).
+aos(1,place,she,it).
+aos(1,greedily_place,she,it).
 %% o most delicious.
 % dependencies.
 root(2,root,o).
@@ -88,4 +88,4 @@ xcomp(3,contain,sweet).
 det(3,perfume,a).
 dep(3,wine,perfume).
 % relations.
-wine(3,nice,itself_have_be).
+aos(3,wine,nice,itself_have_be).

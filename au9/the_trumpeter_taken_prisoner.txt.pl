@@ -17,10 +17,10 @@ conj:and(0,venture,capture).
 case(0,they,by).
 nmod:agent(0,capture,they).
 % relations.
-venture_near(0,trumpeter,enemy).
-be_capture_by(0,trumpeter,they).
-venture_too_near(0,trumpeter,enemy).
-be(0,trumpeter,capture).
+aos(0,venture_near,trumpeter,enemy).
+aos(0,be_capture_by,trumpeter,they).
+aos(0,venture_too_near,trumpeter,enemy).
+aos(0,be,trumpeter,capture).
 %% they were about to proceed to put him to death when he begged them to hear his plea for mercy.
 % dependencies.
 root(1,root,about).
@@ -46,9 +46,9 @@ dobj(1,hear,plea).
 case(1,mercy,for).
 nmod:for(1,hear,mercy).
 % relations.
-hear(1,they,he_plea).
-be(1,they,about).
-beg(1,he,they).
+aos(1,hear,they,he_plea).
+aos(1,be,they,about).
+aos(1,beg,he,they).
 %% i do not fight.
 % dependencies.
 root(2,root,fight).
@@ -93,7 +93,7 @@ aux(6,kill,should).
 nsubj(6,kill,you).
 dobj(6,kill,I).
 % relations.
-should_kill(6,you,I).
+aos(6,should_kill,you,I).
 %% you may not fight yourself.
 % dependencies.
 root(7,root,fight).
@@ -122,4 +122,4 @@ case(9,fight,to).
 det(9,fight,the).
 nmod:to(9,encourage,fight).
 % relations.
-encourage(9,you,you_man).
+aos(9,encourage,you,you_man).

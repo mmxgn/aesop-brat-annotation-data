@@ -23,10 +23,10 @@ nmod:into(0,go,forest).
 case(0,hunt,to).
 nmod:to(0,go,hunt).
 % relations.
-go_out_into(0,fox,forest).
-go_out_to(0,ass,hunt).
-go_out_into(0,ass,forest).
-go_out_to(0,fox,hunt).
+aos(0,go_out_into,fox,forest).
+aos(0,go_out_to,ass,hunt).
+aos(0,go_out_into,ass,forest).
+aos(0,go_out_to,fox,hunt).
 %% they had not proceeded far when they met a lion.
 % dependencies.
 root(1,root,proceed).
@@ -76,10 +76,10 @@ acl:to(2,capture,harm).
 det(2,fox,the).
 dobj(2,harm,fox).
 % relations.
-approach(2,fox,lion).
-see(2,fox,danger).
-would_pledge(2,lion,he_word).
-see(2,fox,imminent_danger).
+aos(2,approach,fox,lion).
+aos(2,see,fox,danger).
+aos(2,would_pledge,lion,he_word).
+aos(2,see,fox,imminent_danger).
 %% then upon assuring the ass that he would not be injured the fox led him to a deep pit and arranged that he should fall into it.
 % dependencies.
 root(3,root,then).
@@ -135,6 +135,6 @@ case(4,leisure,at).
 nmod:poss(4,leisure,he).
 nmod:at(4,attack,leisure).
 % relations.
-be(4,ass,secure).
-attack_ass_at(4,fox,he_leisure).
-attack(4,fox,ass).
+aos(4,be,ass,secure).
+aos(4,attack_ass_at,fox,he_leisure).
+aos(4,attack,fox,ass).

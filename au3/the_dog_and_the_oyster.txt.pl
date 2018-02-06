@@ -33,11 +33,11 @@ cop(0,egg,be).
 det(0,egg,a).
 xcomp(0,suppose,egg).
 % relations.
-suppose(0,it,egg).
-swallow_down(0,dog,it).
-suppose(0,it,it).
-see(0,egg,oyster).
-be(0,it,egg).
+aos(0,suppose,it,egg).
+aos(0,swallow_down,dog,it).
+aos(0,suppose,it,it).
+aos(0,see,egg,oyster).
+aos(0,be,it,egg).
 %% soon afterwards suffering great pain in his stomach he said.
 % dependencies.
 root(1,root,suffer).
@@ -71,8 +71,8 @@ cop(2,egg,be).
 det(2,egg,a).
 ccomp(2,think,egg).
 % relations.
-torment(2,this,think).
-torment_for(2,this,my_folly).
+aos(2,torment,this,think).
+aos(2,torment_for,this,my_folly).
 %% they who act without sufficient thought will often fall into unsuspected danger.
 % dependencies.
 root(3,root,fall).

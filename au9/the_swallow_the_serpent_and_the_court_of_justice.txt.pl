@@ -34,16 +34,16 @@ nummod(0,bird,seven).
 amod(0,bird,young).
 dobj(0,hatch,bird).
 % relations.
-build(0,man,herself_nest_in_wall_of_court).
-build(0,man,herself_nest_in_wall).
-build(0,man,herself_nest).
-hatch(0,man,seven_bird).
-nest_in(0,herself,wall_of_court).
-nest_in(0,herself,wall).
-nest_in(0,herself,wall_of_court_of_justice).
-is_in(0,herself_nest,wall_of_court_of_justice).
-build(0,man,herself_nest_in_wall_of_court_of_justice).
-hatch(0,man,seven_young_bird).
+aos(0,build,man,herself_nest_in_wall_of_court).
+aos(0,build,man,herself_nest_in_wall).
+aos(0,build,man,herself_nest).
+aos(0,hatch,man,seven_bird).
+aos(0,nest_in,herself,wall_of_court).
+aos(0,nest_in,herself,wall).
+aos(0,nest_in,herself,wall_of_court_of_justice).
+aos(0,is_in,herself_nest,wall_of_court_of_justice).
+aos(0,build,man,herself_nest_in_wall_of_court_of_justice).
+aos(0,hatch,man,seven_young_bird).
 %% a serpent gliding past the nest from its hole in the wall ate up the young unfledged nestlings.
 % dependencies.
 root(1,root,eat).
@@ -65,14 +65,14 @@ amod(1,nestling,young).
 amod(1,nestling,unfledged).
 dobj(1,eat,nestling).
 % relations.
-eat_up(1,serpent,young_nestling).
-eat_up(1,serpent,young_unfledged_nestling).
-eat_up(1,serpent,nestling).
-glide_nest_from(1,serpent,its_hole).
-glide_nest_from(1,serpent,its_hole_wall).
-is_in(1,its_hole,wall).
-eat_up(1,serpent,unfledged_nestling).
-glide(1,serpent,nest).
+aos(1,eat_up,serpent,young_nestling).
+aos(1,eat_up,serpent,young_unfledged_nestling).
+aos(1,eat_up,serpent,nestling).
+aos(1,glide_nest_from,serpent,its_hole).
+aos(1,glide_nest_from,serpent,its_hole_wall).
+aos(1,is_in,its_hole,wall).
+aos(1,eat_up,serpent,unfledged_nestling).
+aos(1,glide,serpent,nest).
 %% the swallow finding her nest empty lamented greatly and exclaimed.
 % dependencies.
 root(2,root,lament).
@@ -114,9 +114,9 @@ aux(4,suffer,should).
 ccomp(4,protect,suffer).
 xcomp(4,suffer,wrong).
 % relations.
-suffer(4,i,wrong).
-be(4,other_'_rights,protect).
-be(4,rights,where_protect).
-be(4,other_'_rights,where_protect).
-alone_suffer(4,i,wrong).
-be(4,rights,protect).
+aos(4,suffer,i,wrong).
+aos(4,be,other_'_rights,protect).
+aos(4,be,rights,where_protect).
+aos(4,be,other_'_rights,where_protect).
+aos(4,alone_suffer,i,wrong).
+aos(4,be,rights,protect).

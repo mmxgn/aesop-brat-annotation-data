@@ -18,11 +18,11 @@ case(0,den,in).
 nmod:poss(0,den,he).
 nmod:in(0,fall,den).
 % relations.
-fall_fast_in(0,lion,he_den).
-fatigue_by(0,lion,heat).
-of(0,summer,day).
-fall_in(0,lion,he_den).
-fatigue_by(0,lion,heat_summer_day).
+aos(0,fall_fast_in,lion,he_den).
+aos(0,fatigue_by,lion,heat).
+aos(0,of,summer,day).
+aos(0,fall_in,lion,he_den).
+aos(0,fatigue_by,lion,heat_summer_day).
 %% a mouse ran over his mane and ears and woke him from his slumbers.
 % dependencies.
 root(1,root,run).
@@ -42,8 +42,8 @@ case(1,slumber,from).
 nmod:poss(1,slumber,he).
 nmod:from(1,wake,slumber).
 % relations.
-wake(1,mouse,he).
-run_over(1,mouse,he_mane).
+aos(1,wake,mouse,he).
+aos(1,run_over,mouse,he_mane).
 %% he rose up and shook himself in great wrath and searched every corner of his den to find the mouse.
 % dependencies.
 root(2,root,rise).
@@ -69,7 +69,7 @@ acl:to(2,den,find).
 det(2,mouse,the).
 dobj(2,find,mouse).
 % relations.
-shake(2,he,himself).
+aos(2,shake,he,himself).
 %% a fox seeing him said.
 % dependencies.
 root(3,root,say).
@@ -93,8 +93,8 @@ case(4,mouse,of).
 det(4,mouse,a).
 nmod:of(4,lion,mouse).
 % relations.
-be(4,you,frighten).
-be(4,you,frighten).
+aos(4,be,you,frighten).
+aos(4,be,you,frighten).
 %% 't is not the mouse i fear.
 % dependencies.
 root(5,root,mouse).
@@ -122,4 +122,4 @@ dobj(7,resent,familiarity).
 cc(7,resent,and).
 conj:and(7,resent,ill-breeding).
 % relations.
-resent(7,i,he_familiarity).
+aos(7,resent,i,he_familiarity).

@@ -12,8 +12,8 @@ advmod(0,have,entirely).
 case(0,himself,to).
 nmod:to(0,entirely,himself).
 % relations.
-have_entirely(0,horse,plain).
-have(0,horse,plain).
+aos(0,have_entirely,horse,plain).
+aos(0,have,horse,plain).
 %% then a stag intruded into his domain and shared his pasture.
 % dependencies.
 root(1,root,stag).
@@ -56,10 +56,10 @@ advcl:in(2,help,punish).
 det(2,stag,the).
 dobj(2,punish,stag).
 % relations.
-ask_man(2,horse,willing).
-help(2,he,he).
-ask(2,horse,man).
-be(2,he,willing).
+aos(2,ask_man,horse,willing).
+aos(2,help,he,he).
+aos(2,ask,horse,man).
+aos(2,be,he,willing).
 %% the man replied that if the horse would receive a bit in his mouth and agree to carry him he would contrive effective weapons against the stag.
 % dependencies.
 root(3,root,reply).
@@ -93,13 +93,13 @@ case(3,stag,against).
 det(3,stag,the).
 nmod:against(3,contrive,stag).
 % relations.
-is_in(3,bit,he_mouth).
-contrive(3,he,effective_weapon).
-would_receive(3,horse,bit).
-bit_in(3,horse,he_mouth).
-contrive_weapon_against(3,he,stag).
-contrive(3,he,weapon).
-would_receive(3,horse,bit_in_he_mouth).
+aos(3,is_in,bit,he_mouth).
+aos(3,contrive,he,effective_weapon).
+aos(3,would_receive,horse,bit).
+aos(3,bit_in,horse,he_mouth).
+aos(3,contrive_weapon_against,he,stag).
+aos(3,contrive,he,weapon).
+aos(3,would_receive,horse,bit_in_he_mouth).
 %% the horse consented and allowed the man to mount him.
 % dependencies.
 root(4,root,consent).
@@ -139,7 +139,7 @@ nmod:to(5,enslave,service).
 case(5,man,of).
 nmod:of(5,service,man).
 % relations.
-obtain_revenge_on(5,he,stag).
-find_from(5,he,hour).
-obtain(5,he,revenge).
-enslave(5,he,himself).
+aos(5,obtain_revenge_on,he,stag).
+aos(5,find_from,he,hour).
+aos(5,obtain,he,revenge).
+aos(5,enslave,he,himself).

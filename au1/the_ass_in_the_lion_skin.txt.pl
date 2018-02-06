@@ -30,8 +30,8 @@ case(0,wanderings,in).
 nmod:poss(0,wanderings,he).
 nmod:in(0,meet,wanderings).
 % relations.
-on(0,lion,skin).
-amuse(0,ass,himself).
+aos(0,on,lion,skin).
+aos(0,amuse,ass,himself).
 %% at last coming upon a fox he tried to frighten him also but the fox no sooner heard the sound of his voice than he exclaimed.
 % dependencies.
 root(1,root,last).
@@ -63,12 +63,12 @@ mark(1,exclaim,than).
 nsubj(1,exclaim,he).
 advcl:than(1,hear,exclaim).
 % relations.
-hear(1,fox,sound_of_he_voice).
-hear(1,fox,sound).
-hear_sound(1,fox,he_exclaim).
-frighten(1,he,he).
-frighten_also(1,he,he).
-sound_of(1,fox,he_voice).
+aos(1,hear,fox,sound_of_he_voice).
+aos(1,hear,fox,sound).
+aos(1,hear_sound,fox,he_exclaim).
+aos(1,frighten,he,he).
+aos(1,frighten_also,he,he).
+aos(1,sound_of,fox,he_voice).
 %% i might possibly have been frightened myself if i had not heard your bray.
 % dependencies.
 root(2,root,frightened).

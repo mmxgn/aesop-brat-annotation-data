@@ -44,7 +44,7 @@ nmod:poss(0,fault,he).
 amod(0,fault,own).
 nmod:with(0,fill,fault).
 % relations.
-be_with(0,two_bag,two_bag_suspend_from_he_neck).
+aos(0,be_with,two_bag,two_bag_suspend_from_he_neck).
 %% hence it is that men are quick to see the faults of others and yet are often blind to their own failings.
 % dependencies.
 root(1,root,be).
@@ -73,6 +73,6 @@ nmod:poss(1,failing,they).
 amod(1,failing,own).
 nmod:to(1,blind,failing).
 % relations.
-be(1,man,quick).
-see(1,man,fault).
-see(1,man,fault_of_other).
+aos(1,be,man,quick).
+aos(1,see,man,fault).
+aos(1,see,man,fault_of_other).

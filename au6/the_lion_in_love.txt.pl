@@ -18,14 +18,14 @@ case(0,parent,to).
 nmod:poss(0,parent,she).
 nmod:to(0,propose,parent).
 % relations.
-once_fall_with(0,lion,maiden).
-propose(0,lion,marriage).
-fall_in(0,lion,love).
-fall_with(0,lion,beautiful_maiden).
-once_fall_in(0,lion,love).
-fall_with(0,lion,maiden).
-once_fall_with(0,lion,beautiful_maiden).
-propose_marriage_to(0,lion,she_parent).
+aos(0,once_fall_with,lion,maiden).
+aos(0,propose,lion,marriage).
+aos(0,fall_in,lion,love).
+aos(0,fall_with,lion,beautiful_maiden).
+aos(0,once_fall_in,lion,love).
+aos(0,fall_with,lion,maiden).
+aos(0,once_fall_with,lion,beautiful_maiden).
+aos(0,propose_marriage_to,lion,she_parent).
 %% the old people did not know what to say.
 % dependencies.
 root(1,root,know).
@@ -65,9 +65,9 @@ dobj(2,enrage,king).
 case(2,beast,of).
 nmod:of(2,king,beast).
 % relations.
-enrage(2,they,king_of_beast).
-give_daughter_to(2,they,lion).
-enrage(2,they,king).
+aos(2,enrage,they,king_of_beast).
+aos(2,give_daughter_to,they,lion).
+aos(2,enrage,they,king).
 %% at last the father said.
 % dependencies.
 root(3,root,say).
@@ -76,7 +76,7 @@ nmod:at(3,say,last).
 det(3,father,the).
 nsubj(3,say,father).
 % relations.
-say_at(3,father,last).
+aos(3,say_at,father,last).
 %% we feel highly honoured by your majesty 's proposal but you see our daughter is a tender young thing and we fear that in the vehemence of your affection you might possibly do her some injury.
 % dependencies.
 root(4,root,feel).
@@ -116,22 +116,22 @@ dep(4,do,she).
 det(4,injury,some).
 dobj(4,do,injury).
 % relations.
-feel(4,we,highly_honour_by_you_majesty_'s_proposal).
-possibly_do(4,you,injury).
-do_injury_in(4,you,vehemence_of_you_affection).
-be(4,daughter,young).
-feel(4,we,highly_honour).
-be(4,we_daughter,tender_thing).
-do(4,you,injury).
-honour_by(4,we,you_majesty_'s_proposal).
-feel(4,we,honour).
-feel(4,we,honour_by_you_majesty_'s_proposal).
-possibly_do_injury_in(4,you,vehemence).
-highly_honour_by(4,we,you_majesty_'s_proposal).
-be(4,we_daughter,tender_young_thing).
-do_injury_in(4,you,vehemence).
-possibly_do_injury_in(4,you,vehemence_of_you_affection).
-by(4,majesty,proposal).
+aos(4,feel,we,highly_honour_by_you_majesty_'s_proposal).
+aos(4,possibly_do,you,injury).
+aos(4,do_injury_in,you,vehemence_of_you_affection).
+aos(4,be,daughter,young).
+aos(4,feel,we,highly_honour).
+aos(4,be,we_daughter,tender_thing).
+aos(4,do,you,injury).
+aos(4,honour_by,we,you_majesty_'s_proposal).
+aos(4,feel,we,honour).
+aos(4,feel,we,honour_by_you_majesty_'s_proposal).
+aos(4,possibly_do_injury_in,you,vehemence).
+aos(4,highly_honour_by,we,you_majesty_'s_proposal).
+aos(4,be,we_daughter,tender_young_thing).
+aos(4,do_injury_in,you,vehemence).
+aos(4,possibly_do_injury_in,you,vehemence_of_you_affection).
+aos(4,by,majesty,proposal).
 %% might i venture to suggest that your majesty should have your claws removed and your teeth extracted then we would gladly consider your proposal again.
 % dependencies.
 root(5,root,might).
@@ -163,10 +163,10 @@ nmod:poss(5,proposal,you).
 dobj(5,consider,proposal).
 advmod(5,consider,again).
 % relations.
-gladly_consider_again(5,we,you_proposal).
-consider_again(5,we,you_proposal).
-gladly_consider(5,we,you_proposal).
-consider(5,we,you_proposal).
+aos(5,gladly_consider_again,we,you_proposal).
+aos(5,consider_again,we,you_proposal).
+aos(5,gladly_consider,we,you_proposal).
+aos(5,consider,we,you_proposal).
 %% the lion was so much in love that he had his claws trimmed and his big teeth taken out.
 % dependencies.
 root(6,root,much).
@@ -190,14 +190,14 @@ conj:and(6,claw,tooth).
 acl(6,tooth,take).
 compound:prt(6,take,out).
 % relations.
-be(6,lion,much).
-be_much_in(6,lion,love).
-have(6,he,he_claw).
-have(6,he,he_tooth).
-have(6,he,he_claw_trim).
-be_so_much_in(6,lion,love).
-be(6,lion,so_much).
-have(6,he,he_big_tooth).
+aos(6,be,lion,much).
+aos(6,be_much_in,lion,love).
+aos(6,have,he,he_claw).
+aos(6,have,he,he_tooth).
+aos(6,have,he,he_claw_trim).
+aos(6,be_so_much_in,lion,love).
+aos(6,be,lion,so_much).
+aos(6,have,he,he_big_tooth).
 %% but when he came again to the parents of the young girl they simply laughed in his face and bade him do his worst.
 % dependencies.
 root(7,root,come).
@@ -227,8 +227,8 @@ ccomp(7,bid,do).
 nmod:poss(7,worst,he).
 dobj(7,do,worst).
 % relations.
-come_again_to(7,he,parent).
-laugh_in(7,they,he_face).
-do(7,he,he_worst).
-come_to(7,he,parent).
-simply_laugh_in(7,they,he_face).
+aos(7,come_again_to,he,parent).
+aos(7,laugh_in,they,he_face).
+aos(7,do,he,he_worst).
+aos(7,come_to,he,parent).
+aos(7,simply_laugh_in,they,he_face).

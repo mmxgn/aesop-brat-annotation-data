@@ -30,10 +30,10 @@ nsubj(0,ripen,fig).
 aux(0,ripen,would).
 ccomp(0,wait,ripen).
 % relations.
-wait_in(0,jackdaw,hope).
-seat(0,jackdaw,himself).
-wait_in(0,half-famished_jackdaw,hope).
-seat(0,half-famished_jackdaw,himself).
+aos(0,wait_in,jackdaw,hope).
+aos(0,seat,jackdaw,himself).
+aos(0,wait_in,half-famished_jackdaw,hope).
+aos(0,seat,half-famished_jackdaw,himself).
 %% a fox seeing him sitting so long and learning the reason of his doing so said to him.
 % dependencies.
 root(1,root,say).
@@ -57,13 +57,13 @@ advmod(1,do,so).
 case(1,he,to).
 nmod:to(1,say,he).
 % relations.
-learn(1,he,reason_of_he_do).
-learn(1,he,reason_of_he_do_so).
-say_to(1,fox,he).
-learn(1,he,reason_do).
-learn(1,he,reason).
-learn(1,he,reason_do_so).
-learn(1,he,reason_of_he).
+aos(1,learn,he,reason_of_he_do).
+aos(1,learn,he,reason_of_he_do_so).
+aos(1,say_to,fox,he).
+aos(1,learn,he,reason_do).
+aos(1,learn,he,reason).
+aos(1,learn,he,reason_do_so).
+aos(1,learn,he,reason_of_he).
 %% you are indeed sir sadly deceiving yourself.
 % dependencies.
 root(2,root,sir).
@@ -74,10 +74,10 @@ advmod(2,sir,sadly).
 dep(2,sir,deceive).
 dobj(2,deceive,yourself).
 % relations.
-be(2,you,indeed_sir).
-be(2,you,sir).
-be(2,you,sir_sadly).
-be(2,you,indeed_sir_sadly).
+aos(2,be,you,indeed_sir).
+aos(2,be,you,sir).
+aos(2,be,you,sir_sadly).
+aos(2,be,you,indeed_sir_sadly).
 %% you are indulging a hope strong enough to cheat you but which will never reward you with enjoyment.
 % dependencies.
 root(3,root,indulge).
@@ -99,6 +99,6 @@ dobj(3,reward,you).
 case(3,enjoyment,with).
 nmod:with(3,reward,enjoyment).
 % relations.
-be_indulge(3,you,hope).
-be_indulge(3,you,hope_strong_enough).
-be_indulge(3,you,hope_strong).
+aos(3,be_indulge,you,hope).
+aos(3,be_indulge,you,hope_strong_enough).
+aos(3,be_indulge,you,hope_strong).

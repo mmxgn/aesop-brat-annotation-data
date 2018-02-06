@@ -15,7 +15,7 @@ acl:relcl(0,son,quarrel).
 case(0,themselves,among).
 nmod:among(0,quarrel,themselves).
 % relations.
-have(0,father,family).
+aos(0,have,father,family).
 %% when he failed to heal their disputes by his exhortations he determined to give them a practical illustration of the evils of disunion.
 % dependencies.
 root(1,root,fail).
@@ -44,18 +44,18 @@ nmod:of(1,illustration,evil).
 case(1,disunion,of).
 nmod:of(1,evil,disunion).
 % relations.
-give(1,he,illustration).
-give(1,he,practical_illustration).
-give(1,he,they).
-practical_illustration_of(1,they,evil).
-practical_illustration_of(1,they,evil_of_disunion).
-give(1,he,illustration_of_evil_of_disunion).
-give(1,he,illustration_of_evil).
-give(1,he,practical_illustration_of_evil_of_disunion).
-heal(1,he,they_dispute).
-illustration_of(1,they,evil).
-give(1,he,practical_illustration_of_evil).
-illustration_of(1,they,evil_of_disunion).
+aos(1,give,he,illustration).
+aos(1,give,he,practical_illustration).
+aos(1,give,he,they).
+aos(1,practical_illustration_of,they,evil).
+aos(1,practical_illustration_of,they,evil_of_disunion).
+aos(1,give,he,illustration_of_evil_of_disunion).
+aos(1,give,he,illustration_of_evil).
+aos(1,give,he,practical_illustration_of_evil_of_disunion).
+aos(1,heal,he,they_dispute).
+aos(1,illustration_of,they,evil).
+aos(1,give,he,practical_illustration_of_evil).
+aos(1,illustration_of,they,evil_of_disunion).
 %% and for this purpose he one day told them to bring him a bundle of sticks.
 % dependencies.
 root(2,root,and).
@@ -76,10 +76,10 @@ dobj(2,bring,bundle).
 case(2,stick,of).
 nmod:of(2,bundle,stick).
 % relations.
-bring(2,they,bundle).
-bring(2,they,he).
-bring(2,they,bundle_of_stick).
-tell(2,he,they).
+aos(2,bring,they,bundle).
+aos(2,bring,they,he).
+aos(2,bring,they,bundle_of_stick).
+aos(2,tell,he,they).
 %% when they had done so he placed the faggot into the hands of each of them in succession and ordered them to break it in pieces.
 % dependencies.
 root(3,root,do).
@@ -112,18 +112,18 @@ dobj(3,break,it).
 case(3,piece,in).
 nmod:in(3,break,piece).
 % relations.
-so_place(3,he,faggot).
-so_place_faggot_into(3,he,hand_of_each).
-so_place_faggot_into(3,he,hand_of_each_of_they).
-place_faggot_into(3,he,hand_of_each).
-place_faggot_into(3,he,hand_of_each_of_they).
-place_faggot_into(3,he,hand).
-place(3,he,faggot).
-place_faggot_in(3,he,succession).
-so_place_faggot_in(3,he,succession).
-break(3,they,it).
-so_place_faggot_into(3,he,hand).
-order(3,he,they).
+aos(3,so_place,he,faggot).
+aos(3,so_place_faggot_into,he,hand_of_each).
+aos(3,so_place_faggot_into,he,hand_of_each_of_they).
+aos(3,place_faggot_into,he,hand_of_each).
+aos(3,place_faggot_into,he,hand_of_each_of_they).
+aos(3,place_faggot_into,he,hand).
+aos(3,place,he,faggot).
+aos(3,place_faggot_in,he,succession).
+aos(3,so_place_faggot_in,he,succession).
+aos(3,break,they,it).
+aos(3,so_place_faggot_into,he,hand).
+aos(3,order,he,they).
 %% they tried with all their strength and were not able to do it.
 % dependencies.
 root(4,root,try).
@@ -173,12 +173,12 @@ advcl:upon(5,put,break).
 dobj(5,break,they).
 advmod(5,break,easily).
 % relations.
-take(5,faggot,stick).
-take_separately(5,faggot,stick).
-put(5,he,they).
-break_easily(5,they,they).
-again_put(5,he,they).
-break(5,they,they).
+aos(5,take,faggot,stick).
+aos(5,take_separately,faggot,stick).
+aos(5,put,he,they).
+aos(5,break_easily,they,they).
+aos(5,again_put,he,they).
+aos(5,break,they,they).
 %% he then addressed them in these words.
 % dependencies.
 root(6,root,address).
@@ -189,7 +189,7 @@ case(6,word,in).
 det(6,word,these).
 nmod:in(6,address,word).
 % relations.
-address(6,he,they).
+aos(6,address,he,they).
 %% my sons if you are of one mind and unite to assist each other you will be as this faggot uninjured by all the attempts of your enemies.
 % dependencies.
 root(7,root,son).
@@ -224,10 +224,10 @@ case(7,enemy,of).
 nmod:poss(7,enemy,you).
 nmod:of(7,attempt,enemy).
 % relations.
-be_of(7,you,one_mind).
-will_as(7,you,will_faggot_uninjured_by_attempt_of_enemy).
-will_as(7,you,will_faggot_uninjured_by_attempt_of_you_enemy).
-will_as(7,you,will_faggot).
+aos(7,be_of,you,one_mind).
+aos(7,will_as,you,will_faggot_uninjured_by_attempt_of_enemy).
+aos(7,will_as,you,will_faggot_uninjured_by_attempt_of_you_enemy).
+aos(7,will_as,you,will_faggot).
 %% but if you are divided among yourselves you will be broken as easily as these sticks.
 % dependencies.
 root(8,root,divide).
@@ -247,10 +247,10 @@ case(8,stick,as).
 det(8,stick,these).
 nmod:as(8,break,stick).
 % relations.
-will(8,you,will_break_as_stick).
-will(8,you,will_break).
-be(8,you,divide).
-will(8,you,will_break_as_easily).
-will(8,you,will_break_easily_as_stick).
-will(8,you,will_break_easily).
-will(8,you,will_break_as_easily_as_stick).
+aos(8,will,you,will_break_as_stick).
+aos(8,will,you,will_break).
+aos(8,be,you,divide).
+aos(8,will,you,will_break_as_easily).
+aos(8,will,you,will_break_easily_as_stick).
+aos(8,will,you,will_break_easily).
+aos(8,will,you,will_break_as_easily_as_stick).

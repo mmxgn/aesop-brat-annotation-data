@@ -15,9 +15,9 @@ case(0,feed,of).
 nmod:poss(0,feed,he).
 nmod:of(0,portion,feed).
 % relations.
-horse(0,beseech,spare).
-small_portion_of(0,he,he_feed).
-portion_of(0,he,he_feed).
+aos(0,horse,beseech,spare).
+aos(0,small_portion_of,he,he_feed).
+aos(0,portion_of,he,he_feed).
 %% yes.
 % dependencies.
 root(1,root,yes).
@@ -79,16 +79,16 @@ case(3,barley,full).
 case(3,barley,of).
 nmod:of(3,sack,barley).
 % relations.
-little_sack_full(3,i,full_barley).
-give(3,i,it).
-will_give(3,i,little_sack_full_of_barley).
-will_give(3,i,you).
-sack_full(3,i,full_barley).
-will_give(3,i,sack_full_of_barley).
-give(3,i,you).
-reach(3,i,my_own).
-will_give(3,i,sack).
-will_give(3,i,little_sack).
+aos(3,little_sack_full,i,full_barley).
+aos(3,give,i,it).
+aos(3,will_give,i,little_sack_full_of_barley).
+aos(3,will_give,i,you).
+aos(3,sack_full,i,full_barley).
+aos(3,will_give,i,sack_full_of_barley).
+aos(3,give,i,you).
+aos(3,reach,i,my_own).
+aos(3,will_give,i,sack).
+aos(3,will_give,i,little_sack).
 %% the ass replied.
 % dependencies.
 root(4,root,reply).
@@ -131,5 +131,5 @@ det(7,benefit,a).
 amod(7,benefit,greater).
 nsubj(7,confer,benefit).
 % relations.
-will_confer_on(7,benefit,I).
-will_confer_on(7,greater_benefit,I).
+aos(7,will_confer_on,benefit,I).
+aos(7,will_confer_on,greater_benefit,I).

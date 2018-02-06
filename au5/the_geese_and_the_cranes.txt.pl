@@ -24,11 +24,11 @@ case(0,net,in).
 nmod:poss(0,net,he).
 nmod:in(0,ensnare,net).
 % relations.
-be_feed_in(0,crane,meadow).
-be_feed_in(0,goose,meadow).
-ensnare(0,birdcatcher,they).
-be_feed_in(0,goose,same_meadow).
-be_feed_in(0,crane,same_meadow).
+aos(0,be_feed_in,crane,meadow).
+aos(0,be_feed_in,goose,meadow).
+aos(0,ensnare,birdcatcher,they).
+aos(0,be_feed_in,goose,same_meadow).
+aos(0,be_feed_in,crane,same_meadow).
 %% the cranes being light of wing fled away at his approach.
 % dependencies.
 root(1,root,flee).
@@ -43,8 +43,8 @@ case(1,approach,at).
 nmod:poss(1,approach,he).
 nmod:at(1,flee,approach).
 % relations.
-flee_away_at(1,crane,he_approach).
-flee_at(1,crane,he_approach).
+aos(1,flee_away_at,crane,he_approach).
+aos(1,flee_at,crane,he_approach).
 %% while the geese being slower of flight and heavier in their bodies were captured.
 % dependencies.
 root(2,root,capture).
@@ -63,4 +63,4 @@ nmod:poss(2,body,they).
 nmod:in(2,slower,body).
 auxpass(2,capture,be).
 % relations.
-be(2,goose,capture).
+aos(2,be,goose,capture).

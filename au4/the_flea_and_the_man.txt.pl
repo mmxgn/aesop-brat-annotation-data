@@ -16,12 +16,12 @@ nmod:at(0,catch,last).
 cc(0,catch,and).
 conj:and(0,catch,say).
 % relations.
-annoyed_with(0,man,flea).
-catch(0,man,he).
-catch(0,man_much_annoyed,he).
-catch(0,man_much,he).
-annoyed_with(0,man_much,flea).
-catch(0,man_annoyed,he).
+aos(0,annoyed_with,man,flea).
+aos(0,catch,man,he).
+aos(0,catch,man_much_annoyed,he).
+aos(0,catch,man_much,he).
+aos(0,annoyed_with,man_much,flea).
+aos(0,catch,man_annoyed,he).
 %% who are you who dare to feed on my limbs and to cost me so much trouble in catching you.
 % dependencies.
 root(1,root,who).
@@ -46,8 +46,8 @@ mark(1,catch,in).
 acl:in(1,trouble,catch).
 dobj(1,catch,you).
 % relations.
-catch(1,trouble,you).
-catch(1,much_trouble,you).
+aos(1,catch,trouble,you).
+aos(1,catch,much_trouble,you).
 %% ' the flea replied.
 % dependencies.
 root(2,root,reply).

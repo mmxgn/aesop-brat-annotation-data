@@ -14,7 +14,7 @@ xcomp(0,go,observe).
 det(0,star,the).
 dobj(0,observe,star).
 % relations.
-go_out_at(0,astronomer,night).
+aos(0,go_out_at,astronomer,night).
 %% one evening as he wandered through the suburbs with his whole attention fixed on the sky he fell accidentally into a deep well.
 % dependencies.
 root(1,root,evening).
@@ -41,15 +41,15 @@ dep(1,well,a).
 advmod(1,well,deep).
 advcl:into(1,fall,well).
 % relations.
-wander_with(1,he,he_whole_attention).
-wander_through(1,he,suburb).
-fall_into(1,he,deep_well).
-wander_with(1,he,he_attention).
-wander_with(1,he,he_attention_fix).
-fall_accidentally_into(1,he,well).
-fall_into(1,he,well).
-fall_accidentally_into(1,he,deep_well).
-wander_with(1,he,he_whole_attention_fix).
+aos(1,wander_with,he,he_whole_attention).
+aos(1,wander_through,he,suburb).
+aos(1,fall_into,he,deep_well).
+aos(1,wander_with,he,he_attention).
+aos(1,wander_with,he,he_attention_fix).
+aos(1,fall_accidentally_into,he,well).
+aos(1,fall_into,he,well).
+aos(1,fall_accidentally_into,he,deep_well).
+aos(1,wander_with,he,he_whole_attention_fix).
 %% while he lamented and bewailed his sores and bruises and cried loudly for help a neighbor ran to the well and learning what had happened said.
 % dependencies.
 root(2,root,lament).
@@ -83,8 +83,8 @@ ccomp(2,learn,happen).
 dep(2,cry,say).
 conj:and(2,run,say).
 % relations.
-lament(2,he,he_sore).
-lament(2,he,bruise).
+aos(2,lament,he,he_sore).
+aos(2,lament,he,bruise).
 %% hark ye old fellow why in striving to pry into what is in heaven do you not manage to see what is on earth.
 % dependencies.
 root(3,root,hark).

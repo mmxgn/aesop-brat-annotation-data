@@ -24,10 +24,10 @@ cop(0,surety,be).
 nmod:poss(0,surety,he).
 ccomp(0,say,surety).
 % relations.
-lend(0,sheep,measure_of_wheat).
-ask(0,stag,sheep).
-lend(0,sheep,measure).
-lend(0,sheep,he).
+aos(0,lend,sheep,measure_of_wheat).
+aos(0,ask,stag,sheep).
+aos(0,lend,sheep,measure).
+aos(0,lend,sheep,he).
 %% the sheep fearing some fraud was intended excused herself saying.
 % dependencies.
 root(1,root,intend).
@@ -41,7 +41,7 @@ dep(1,intend,excuse).
 nsubj(1,say,herself).
 dep(1,excuse,say).
 % relations.
-be(1,sheep,intend).
+aos(1,be,sheep,intend).
 %% the wolf is accustomed to seize what he wants and to run off.
 % dependencies.
 root(2,root,accustom).
@@ -59,7 +59,7 @@ ccomp(2,accustom,run).
 conj:and(2,seize,run).
 compound:prt(2,run,off).
 % relations.
-be(2,wolf,accustom).
+aos(2,be,wolf,accustom).
 %% and you too can quickly outstrip me in your rapid flight.
 % dependencies.
 root(3,root,outstrip).
@@ -74,10 +74,10 @@ nmod:poss(3,flight,you).
 amod(3,flight,rapid).
 nmod:in(3,outstrip,flight).
 % relations.
-too_can_outstrip(3,you,I).
-can_outstrip(3,you,I).
-can_quickly_outstrip(3,you,I).
-too_can_quickly_outstrip(3,you,I).
+aos(3,too_can_outstrip,you,I).
+aos(3,can_outstrip,you,I).
+aos(3,can_quickly_outstrip,you,I).
+aos(3,too_can_quickly_outstrip,you,I).
 %% how then shall i be able to find you when the day of payment comes.
 % dependencies.
 root(4,root,shall).

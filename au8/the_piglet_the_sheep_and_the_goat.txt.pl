@@ -17,10 +17,10 @@ det(0,sheep,a).
 nmod:with(0,shut,sheep).
 conj:and(0,goat,sheep).
 % relations.
-be_shut_up_with(0,pig,goat).
-be_shut_up_with(0,young_pig,goat).
-be_shut_up_in(0,young_pig,fold-yard).
-be_shut_up_in(0,pig,fold-yard).
+aos(0,be_shut_up_with,pig,goat).
+aos(0,be_shut_up_with,young_pig,goat).
+aos(0,be_shut_up_in,young_pig,fold-yard).
+aos(0,be_shut_up_in,pig,fold-yard).
 %% on one occasion when the shepherd laid hold of him he grunted and squeaked and resisted violently.
 % dependencies.
 root(1,root,occasion).
@@ -45,7 +45,7 @@ acl:relcl(1,occasion,resist).
 conj:and(1,lay,resist).
 advmod(1,resist,violently).
 % relations.
-hold(1,shepherd,he_grunt).
+aos(1,hold,shepherd,he_grunt).
 %% the sheep and the goat complained of his distressing cries saying.
 % dependencies.
 root(2,root,complain).
@@ -95,12 +95,12 @@ cop(5,thing,be).
 advmod(5,different,very).
 amod(5,thing,different).
 % relations.
-be(5,mine,thing).
-be(5,mine,very_different_thing).
-be(5,you_handling,thing).
-be(5,mine,different_thing).
-be(5,you_handling,very_different_thing).
-be(5,you_handling,different_thing).
+aos(5,be,mine,thing).
+aos(5,be,mine,very_different_thing).
+aos(5,be,you_handling,thing).
+aos(5,be,mine,different_thing).
+aos(5,be,you_handling,very_different_thing).
+aos(5,be,you_handling,different_thing).
 %% he catches you only for your wool or your milk but he lays hold on me for my very life.
 % dependencies.
 root(6,root,catch).
@@ -125,6 +125,6 @@ nmod:poss(6,very,my).
 nmod:for(6,hold,very).
 nmod:tmod(6,lay,life).
 % relations.
-hold_for(6,he,my_very).
-catch(6,he,you).
-hold_on(6,he,I).
+aos(6,hold_for,he,my_very).
+aos(6,catch,he,you).
+aos(6,hold_on,he,I).

@@ -13,10 +13,10 @@ case(0,mother,to).
 nmod:poss(0,mother,he).
 nmod:to(0,say,mother).
 % relations.
-say_to(0,sick_death,he_mother).
-say_to(0,death,he_mother).
-say_to(0,sick_unto_death,he_mother).
-say_to(0,unto_death,he_mother).
+aos(0,say_to,sick_death,he_mother).
+aos(0,say_to,death,he_mother).
+aos(0,say_to,sick_unto_death,he_mother).
+aos(0,say_to,unto_death,he_mother).
 %% o mother.
 % dependencies.
 root(1,root,mother).
@@ -109,6 +109,6 @@ dobj(7,have,help).
 nmod(7,have,in).
 dep(7,make,adversity).
 % relations.
-must_make(7,we,friend).
-would_have(7,we,they_help).
-must_make_friend_in(7,we,prosperity).
+aos(7,must_make,we,friend).
+aos(7,would_have,we,they_help).
+aos(7,must_make_friend_in,we,prosperity).

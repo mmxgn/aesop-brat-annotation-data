@@ -30,10 +30,10 @@ xcomp(0,enable,pay).
 nmod:poss(0,reckoning,he).
 dobj(0,pay,reckoning).
 % relations.
-hire(0,thief,room).
-hire_room_in(0,thief,tavern).
-stay(0,thief,while).
-pay(0,he,he_reckoning).
+aos(0,hire,thief,room).
+aos(0,hire_room_in,thief,tavern).
+aos(0,stay,thief,while).
+aos(0,pay,he,he_reckoning).
 %% when he had waited some days in vain he saw the innkeeper dressed in a new and handsome coat and sitting before his door.
 % dependencies.
 root(1,root,wait).
@@ -64,10 +64,10 @@ case(1,door,before).
 nmod:poss(1,door,he).
 nmod:before(1,sit,door).
 % relations.
-sit_before(1,innkeeper,he_door).
-dress_in(1,innkeeper,coat).
-dress_in(1,innkeeper,new_coat).
-have_wait_at_time(1,he,day).
+aos(1,sit_before,innkeeper,he_door).
+aos(1,dress_in,innkeeper,coat).
+aos(1,dress_in,innkeeper,new_coat).
+aos(1,have_wait_at_time,he,day).
 %% the thief sat down beside him and talked with him.
 % dependencies.
 root(2,root,sit).
@@ -82,7 +82,7 @@ conj:and(2,sit,talk).
 case(2,he,with).
 nmod:with(2,talk,he).
 % relations.
-talk_with(2,thief,he).
+aos(2,talk_with,thief,he).
 %% as the conversation began to flag the thief yawned terribly and at the same time howled like a wolf.
 % dependencies.
 root(3,root,begin).
@@ -107,12 +107,12 @@ case(3,wolf,like).
 det(3,wolf,a).
 nmod:like(3,howl,wolf).
 % relations.
-begin_at(3,conversation,same_time_howl).
-begin_at(3,conversation,time_howl_like_wolf).
-begin_at(3,conversation,time_howl).
-begin_at(3,conversation,same_time_howl_like_wolf).
-begin_at(3,conversation,time).
-begin_at(3,conversation,same_time).
+aos(3,begin_at,conversation,same_time_howl).
+aos(3,begin_at,conversation,time_howl_like_wolf).
+aos(3,begin_at,conversation,time_howl).
+aos(3,begin_at,conversation,same_time_howl_like_wolf).
+aos(3,begin_at,conversation,time).
+aos(3,begin_at,conversation,same_time).
 %% the innkeeper said.
 % dependencies.
 root(4,root,say).
@@ -139,7 +139,7 @@ nsubj(7,tell,i).
 aux(7,tell,will).
 dobj(7,tell,you).
 % relations.
-will_tell(7,i,you).
+aos(7,will_tell,i,you).
 %% said the thief.
 % dependencies.
 root(8,root,say).
@@ -168,9 +168,9 @@ dobj(9,tear,they).
 case(9,piece,to).
 nmod:to(9,tear,piece).
 % relations.
-tear(9,i,they).
-tear(9,my_clothes,they).
-ask(9,I,you).
+aos(9,tear,i,they).
+aos(9,tear,my_clothes,they).
+aos(9,ask,I,you).
 %% i know not sir when i got this habit of yawning nor whether these attacks of howling were inflicted on me as a judgment for my crimes or for any other cause.
 % dependencies.
 root(10,root,know).
@@ -210,13 +210,13 @@ det(10,cause,any).
 amod(10,cause,other).
 nmod:for(10,inflict,cause).
 % relations.
-be(10,attack,inflict_on_I_as_judgment_for_other_cause).
-be(10,attack,inflict_as_judgment_for_other_cause).
-be(10,attack,inflict_on_I_for_other_cause).
-be(10,attack,inflict_as_judgment_for_my_crime_for_other_cause).
-be_inflict_for(10,attack,other_cause).
-be(10,attack,inflict_on_I_as_judgment_for_my_crime_for_other_cause).
-get(10,i,habit_of_yawn).
+aos(10,be,attack,inflict_on_I_as_judgment_for_other_cause).
+aos(10,be,attack,inflict_as_judgment_for_other_cause).
+aos(10,be,attack,inflict_on_I_for_other_cause).
+aos(10,be,attack,inflict_as_judgment_for_my_crime_for_other_cause).
+aos(10,be_inflict_for,attack,other_cause).
+aos(10,be,attack,inflict_on_I_as_judgment_for_my_crime_for_other_cause).
+aos(10,get,i,habit_of_yawn).
 %% but this i do know that when i yawn for the third time i actually turn into a wolf and attack men.
 % dependencies.
 root(11,root,know).
@@ -243,8 +243,8 @@ conj:and(11,wolf,attack).
 compound(11,man,attack).
 nmod:into(11,turn,man).
 % relations.
-actually_turn_into(11,i_yawn,wolf_man).
-turn_into(11,i_yawn,wolf_man).
+aos(11,actually_turn_into,i_yawn,wolf_man).
+aos(11,turn_into,i_yawn,wolf_man).
 %% with this speech he commenced a second fit of yawning and again howled like a wolf as he had at first.
 % dependencies.
 root(12,root,commence).
@@ -270,16 +270,16 @@ advcl:as(12,commence,have).
 case(12,first,at).
 nmod:at(12,have,first).
 % relations.
-again_howl_like(12,he,wolf).
-commence(12,he,second_fit_of_yawn).
-howl_like(12,he,wolf).
-commence_fit(12,he,he_have_at_first).
-commence(12,he,fit).
-commence(12,he,second_fit).
-commence_fit(12,he,he_have).
-have_at(12,he,first).
-commence(12,he,fit_of_yawn).
-commence_fit_with(12,he,speech).
+aos(12,again_howl_like,he,wolf).
+aos(12,commence,he,second_fit_of_yawn).
+aos(12,howl_like,he,wolf).
+aos(12,commence_fit,he,he_have_at_first).
+aos(12,commence,he,fit).
+aos(12,commence,he,second_fit).
+aos(12,commence_fit,he,he_have).
+aos(12,have_at,he,first).
+aos(12,commence,he,fit_of_yawn).
+aos(12,commence_fit_with,he,speech).
 %% the innkeeper.
 % dependencies.
 root(13,root,innkeeper).
@@ -327,10 +327,10 @@ mark(15,stop,to).
 xcomp(15,entreat,stop).
 xcomp(15,stop,say).
 % relations.
-lay(15,thief,hold).
-stop(15,he,say).
-entreat(15,thief,he).
-lay(15,thief,hold_of_he_coat).
+aos(15,lay,thief,hold).
+aos(15,stop,he,say).
+aos(15,entreat,thief,he).
+aos(15,lay,thief,hold_of_he_coat).
 %% pray wait sir and hold my clothes or i shall tear them to pieces in my fury when i turn into a wolf.
 % dependencies.
 root(16,root,pray).
@@ -359,10 +359,10 @@ case(16,wolf,into).
 det(16,wolf,a).
 nmod:into(16,turn,wolf).
 % relations.
-tear(16,i,they).
-turn_into(16,i,wolf).
-is_in(16,piece,my_fury).
-tear(16,my_clothes,they).
+aos(16,tear,i,they).
+aos(16,turn_into,i,wolf).
+aos(16,is_in,piece,my_fury).
+aos(16,tear,my_clothes,they).
 %% at the same moment he yawned the third time and set up a terrible howl.
 % dependencies.
 root(17,root,yawn).
@@ -382,12 +382,12 @@ det(17,howl,a).
 amod(17,howl,terrible).
 dobj(17,set,howl).
 % relations.
-set_up(17,he,howl).
-yawn(17,he,time).
-yawn_time_at(17,he,same_moment).
-yawn(17,he,third_time).
-set_up(17,he,terrible_howl).
-yawn_time_at(17,he,moment).
+aos(17,set_up,he,howl).
+aos(17,yawn,he,time).
+aos(17,yawn_time_at,he,same_moment).
+aos(17,yawn,he,third_time).
+aos(17,set_up,he,terrible_howl).
+aos(17,yawn_time_at,he,moment).
 %% the innkeeper frightened lest he should be attacked left his new coat in the thief 's hand and ran as fast as he could into the inn for safety.
 % dependencies.
 root(18,root,leave).
@@ -421,8 +421,8 @@ nmod:into(18,could,inn).
 case(18,safety,for).
 nmod:for(18,inn,safety).
 % relations.
-should(18,he,should_attack).
-in(18,thief,hand).
+aos(18,should,he,should_attack).
+aos(18,in,thief,hand).
 %% the thief made off with the coat and did not return again to the inn.
 % dependencies.
 root(19,root,make).

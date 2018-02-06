@@ -16,8 +16,8 @@ det(0,draught-mule,the).
 nsubj(0,say,draught-mule).
 ccomp(0,address,say).
 % relations.
-sit_on(0,fly,axle-tree).
-sit_on(0,fly,axle-tree_of_chariot).
+aos(0,sit_on,fly,axle-tree).
+aos(0,sit_on,fly,axle-tree_of_chariot).
 %% how slow you are.
 % dependencies.
 root(1,root,be).

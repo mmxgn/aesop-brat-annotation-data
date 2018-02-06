@@ -8,10 +8,10 @@ case(0,marsh,in).
 det(0,marsh,a).
 nmod:in(0,live,marsh).
 % relations.
-live_in(0,frog,marsh).
-live_together_in(0,frog,marsh).
-live_in(0,two_frog,marsh).
-live_together_in(0,two_frog,marsh).
+aos(0,live_in,frog,marsh).
+aos(0,live_together_in,frog,marsh).
+aos(0,live_in,two_frog,marsh).
+aos(0,live_together_in,two_frog,marsh).
 %% but one hot summer the marsh dried up and they left it to look for another place to live in for frogs like damp places if they can get them.
 % dependencies.
 root(1,root,dry).
@@ -46,11 +46,11 @@ aux(1,get,can).
 advcl:if(1,live,get).
 dobj(1,get,they).
 % relations.
-dry_up_at_time(1,marsh,one_summer).
-dry_at_time(1,marsh,one_hot_summer).
-leave(1,they,it).
-dry_at_time(1,marsh,one_summer).
-dry_up_at_time(1,marsh,one_hot_summer).
+aos(1,dry_up_at_time,marsh,one_summer).
+aos(1,dry_at_time,marsh,one_hot_summer).
+aos(1,leave,they,it).
+aos(1,dry_at_time,marsh,one_summer).
+aos(1,dry_up_at_time,marsh,one_hot_summer).
 %% by and by they came to a deep well and one of them looked down into it and said to the other.
 % dependencies.
 root(2,root,by).
@@ -79,8 +79,8 @@ case(2,other,to).
 det(2,other,the).
 nmod:to(2,say,other).
 % relations.
-come_to(2,they,deep_well).
-come_to(2,they,well).
+aos(2,come_to,they,deep_well).
+aos(2,come_to,they,well).
 %% this looks a nice cool place.
 % dependencies.
 root(3,root,look).

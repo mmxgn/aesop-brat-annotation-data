@@ -19,10 +19,10 @@ xcomp(0,possible,change).
 nmod:poss(0,nature,its).
 dobj(0,change,nature).
 % relations.
-be_possible_for(0,it,living_be).
-be_possible_for(0,it,living).
-be(0,it,possible).
-change(0,it,its_nature).
+aos(0,be_possible_for,it,living_be).
+aos(0,be_possible_for,it,living).
+aos(0,be,it,possible).
+aos(0,change,it,its_nature).
 %% jupiter said.
 % dependencies.
 root(1,root,say).
@@ -69,10 +69,10 @@ case(5,wife,for).
 det(5,wife,a).
 nmod:for(5,man,wife).
 % relations.
-turn_cat_into(5,question_jupiter,maiden).
-turn_into(5,question_jupiter,maiden).
-turn(5,question_jupiter,cat).
-give(5,question_jupiter,she).
+aos(5,turn_cat_into,question_jupiter,maiden).
+aos(5,turn_into,question_jupiter,maiden).
+aos(5,turn,question_jupiter,cat).
+aos(5,give,question_jupiter,she).
 %% the wedding was duly performed and the young couple sat down to the wedding-feast.
 % dependencies.
 root(6,root,perform).
@@ -90,8 +90,8 @@ case(6,wedding-feast,to).
 det(6,wedding-feast,the).
 nmod:to(6,down,wedding-feast).
 % relations.
-be(6,wedding,duly_perform).
-be(6,wedding,perform).
+aos(6,be,wedding,duly_perform).
+aos(6,be,wedding,perform).
 %% see.
 % dependencies.
 root(7,root,see).
@@ -123,8 +123,8 @@ case(10,cat,but).
 det(10,cat,a).
 ccomp(10,tell,cat).
 % relations.
-be_but(10,she,yesterday_cat).
-be_but(10,she,cat).
+aos(10,be_but,she,yesterday_cat).
+aos(10,be_but,she,cat).
 %% surely her nature is changed.
 % dependencies.
 root(11,root,nature).
@@ -152,7 +152,7 @@ case(13,room,into).
 det(13,room,the).
 nmod:into(13,mouse,room).
 % relations.
-reply(13,mouse,venus_loose).
+aos(13,reply,mouse,venus_loose).
 %% no sooner did the bride see this than she jumped up from her seat and tried to pounce upon the mouse.
 % dependencies.
 root(14,root,see).
@@ -180,8 +180,8 @@ case(14,mouse,upon).
 det(14,mouse,the).
 nmod:upon(14,pounce,mouse).
 % relations.
-try(14,she,pounce_upon_mouse).
-try(14,she,pounce).
+aos(14,try,she,pounce_upon_mouse).
+aos(14,try,she,pounce).
 %% ah you see.
 % dependencies.
 root(15,root,ah).

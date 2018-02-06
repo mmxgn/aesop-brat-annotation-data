@@ -15,8 +15,8 @@ case(0,path,on).
 nmod:poss(0,path,they).
 nmod:on(0,meet,path).
 % relations.
-meet(0,bear,they).
-suddenly_meet(0,bear,they).
+aos(0,meet,bear,they).
+aos(0,suddenly_meet,bear,they).
 %% one of them climbed up quickly into a tree and concealed himself in the branches.
 % dependencies.
 root(1,root,climb).
@@ -90,12 +90,12 @@ mark(2,could,as).
 nsubj(2,could,he).
 advcl:as(2,much,could).
 % relations.
-be(2,he,attack).
-feign(2,other,appearance).
-feel(2,bear,he).
-feel_with(2,bear,he_snout).
-hold(2,other,he_breath).
-smell(2,he,he).
+aos(2,be,he,attack).
+aos(2,feign,other,appearance).
+aos(2,feel,bear,he).
+aos(2,feel_with,bear,he_snout).
+aos(2,hold,other,he_breath).
+aos(2,smell,he,he).
 %% the bear soon left him for it is said he will not touch a dead body.
 % dependencies.
 root(3,root,leave).
@@ -115,8 +115,8 @@ det(3,body,a).
 amod(3,body,dead).
 dobj(3,touch,body).
 % relations.
-soon_leave(3,bear,he).
-leave(3,bear,he).
+aos(3,soon_leave,bear,he).
+aos(3,leave,bear,he).
 %% when he was quite gone the other traveler descended from the tree and jocularly inquired of his friend what it was the bear had whispered in his ear.
 % dependencies.
 root(4,root,go).
@@ -151,14 +151,14 @@ case(4,ear,in).
 nmod:poss(4,ear,he).
 nmod:in(4,whisper,ear).
 % relations.
-be(4,he,when_quite_go).
-be(4,he,when_go).
-descend_from(4,other_traveler,tree).
-be_bear(4,it,have_whisper).
-be(4,he,quite_go).
-be_bear(4,it,have_whisper_in_he_ear).
-be(4,he,go).
-descend_from(4,traveler,tree).
+aos(4,be,he,when_quite_go).
+aos(4,be,he,when_go).
+aos(4,descend_from,other_traveler,tree).
+aos(4,be_bear,it,have_whisper).
+aos(4,be,he,quite_go).
+aos(4,be_bear,it,have_whisper_in_he_ear).
+aos(4,be,he,go).
+aos(4,descend_from,traveler,tree).
 %% he gave me this advice.
 % dependencies.
 root(5,root,give).
@@ -167,8 +167,8 @@ iobj(5,give,I).
 det(5,advice,this).
 dobj(5,give,advice).
 % relations.
-give(5,he,I).
-give(5,he,advice).
+aos(5,give,he,I).
+aos(5,give,he,advice).
 %% his companion replied.
 % dependencies.
 root(6,root,reply).

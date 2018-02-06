@@ -20,17 +20,17 @@ dobj(0,capture,haul).
 case(0,fish,of).
 nmod:of(0,haul,fish).
 % relations.
-capture(0,cast,haul).
-capture(0,cast,haul_of_fish).
-capture(0,cast,great_haul).
-capture(0,successful_cast,great_haul).
-engage(0,fisherman,he_call).
-capture(0,successful_cast,haul_of_fish).
-capture(0,cast,great_haul_of_fish).
-capture(0,successful_cast,haul).
-haul_of(0,capture,fish).
-great_haul_of(0,capture,fish).
-capture(0,successful_cast,great_haul_of_fish).
+aos(0,capture,cast,haul).
+aos(0,capture,cast,haul_of_fish).
+aos(0,capture,cast,great_haul).
+aos(0,capture,successful_cast,great_haul).
+aos(0,engage,fisherman,he_call).
+aos(0,capture,successful_cast,haul_of_fish).
+aos(0,capture,cast,great_haul_of_fish).
+aos(0,capture,successful_cast,haul).
+aos(0,haul_of,capture,fish).
+aos(0,great_haul_of,capture,fish).
+aos(0,capture,successful_cast,great_haul_of_fish).
 %% he managed by a skillful handling of his net to retain all the large fish and to draw them to the shore.
 % dependencies.
 root(1,root,manage).
@@ -57,11 +57,11 @@ case(1,shore,to).
 det(1,shore,the).
 nmod:to(1,draw,shore).
 % relations.
-manage_by(1,he,skillful_handling).
-manage_by(1,he,skillful_handling_of_he_net).
-manage_by(1,he,handling_of_he_net).
-manage_by(1,he,handling).
-draw(1,large_fish,they).
+aos(1,manage_by,he,skillful_handling).
+aos(1,manage_by,he,skillful_handling_of_he_net).
+aos(1,manage_by,he,handling_of_he_net).
+aos(1,manage_by,he,handling).
+aos(1,draw,large_fish,they).
 %% but he could not prevent the smaller fish from falling back through the meshes of the net into the sea.
 % dependencies.
 root(2,root,prevent).

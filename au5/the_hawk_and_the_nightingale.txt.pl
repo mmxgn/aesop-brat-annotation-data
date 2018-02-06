@@ -34,8 +34,8 @@ acl:relcl(0,hawk,seize).
 conj:and(0,swoop,seize).
 dobj(0,seize,he).
 % relations.
-seize(0,need,he).
-be(0,nightingale,see).
+aos(0,seize,need,he).
+aos(0,be,nightingale,see).
 %% the nightingale about to lose his life earnestly begged the hawk to let him go saying that he was not big enough to satisfy the hunger of a hawk who if he wanted food ought to pursue the larger birds.
 % dependencies.
 root(1,root,nightingale).
@@ -124,7 +124,7 @@ acl:relcl(3,bird,even).
 case(3,sight,within).
 nmod:within(3,even,sight).
 % relations.
-should_let(3,i,go).
-ready_in(3,food,my_hand).
-go(3,i,food_ready_in_my_hand).
-go(3,i,food_ready).
+aos(3,should_let,i,go).
+aos(3,ready_in,food,my_hand).
+aos(3,go,i,food_ready_in_my_hand).
+aos(3,go,i,food_ready).

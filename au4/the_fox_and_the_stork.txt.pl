@@ -21,13 +21,13 @@ advmod(0,good,very).
 amod(0,friend,good).
 xcomp(0,seem,friend).
 % relations.
-be_on(0,fox,term).
-seem(0,stork,very_good_friend).
-seem(0,stork,friend).
-be_on(0,stork,term).
-be_on(0,stork,visit_term).
-be_on(0,fox,visit_term).
-seem(0,stork,good_friend).
+aos(0,be_on,fox,term).
+aos(0,seem,stork,very_good_friend).
+aos(0,seem,stork,friend).
+aos(0,be_on,stork,term).
+aos(0,be_on,stork,visit_term).
+aos(0,be_on,fox,visit_term).
+aos(0,seem,stork,good_friend).
 %% so the fox invited the stork to dinner and for a joke put nothing before her but some soup in a very shallow dish.
 % dependencies.
 root(1,root,invite).
@@ -55,16 +55,16 @@ advmod(1,dish,very).
 amod(1,dish,shallow).
 nmod:in(1,soup,dish).
 % relations.
-put(1,joke,nothing).
-put_nothing_but(1,joke,soup_in_very_dish).
-put_nothing_but(1,joke,soup_in_very_shallow_dish).
-invite(1,fox,stork).
-is_in(1,soup,very_shallow_dish).
-put_nothing_but(1,joke,soup_in_dish).
-invite_stork_to(1,fox,dinner).
-put_nothing_before(1,joke,she).
-put_nothing_but(1,joke,soup).
-put_nothing_but(1,joke,soup_in_shallow_dish).
+aos(1,put,joke,nothing).
+aos(1,put_nothing_but,joke,soup_in_very_dish).
+aos(1,put_nothing_but,joke,soup_in_very_shallow_dish).
+aos(1,invite,fox,stork).
+aos(1,is_in,soup,very_shallow_dish).
+aos(1,put_nothing_but,joke,soup_in_dish).
+aos(1,invite_stork_to,fox,dinner).
+aos(1,put_nothing_before,joke,she).
+aos(1,put_nothing_but,joke,soup).
+aos(1,put_nothing_but,joke,soup_in_shallow_dish).
 %% this the fox could easily lap up but the stork could only wet the end of her long bill in it and left the meal as hungry as when she began.
 % dependencies.
 root(2,root,this).
@@ -101,26 +101,26 @@ advmod(2,begin,when).
 nsubj(2,begin,she).
 acl:as(2,this,begin).
 % relations.
-is_in(2,she_long_bill,it).
-only_wet(2,stork,end).
-leave_meal_as(2,fox,hungry).
-wet(2,stork,end_of_she_bill_in_it).
-only_wet(2,stork,end_of_she_bill_in_it).
-only_wet(2,stork,end_of_she_long_bill_in_it).
-wet(2,stork,end).
-only_wet(2,stork,end_of_she_long_bill).
-wet(2,stork,end_of_she_long_bill).
-wet(2,stork,end_of_she_long_bill_in_it).
-leave(2,fox,meal).
-wet(2,stork,end_of_she_bill).
-only_wet(2,stork,end_of_she_bill).
+aos(2,is_in,she_long_bill,it).
+aos(2,only_wet,stork,end).
+aos(2,leave_meal_as,fox,hungry).
+aos(2,wet,stork,end_of_she_bill_in_it).
+aos(2,only_wet,stork,end_of_she_bill_in_it).
+aos(2,only_wet,stork,end_of_she_long_bill_in_it).
+aos(2,wet,stork,end).
+aos(2,only_wet,stork,end_of_she_long_bill).
+aos(2,wet,stork,end_of_she_long_bill).
+aos(2,wet,stork,end_of_she_long_bill_in_it).
+aos(2,leave,fox,meal).
+aos(2,wet,stork,end_of_she_bill).
+aos(2,only_wet,stork,end_of_she_bill).
 %% i am sorry.
 % dependencies.
 root(3,root,sorry).
 nsubj(3,sorry,i).
 cop(3,sorry,be).
 % relations.
-be(3,i,sorry).
+aos(3,be,i,sorry).
 %% said the fox.
 % dependencies.
 root(4,root,say).
@@ -170,9 +170,9 @@ case(8,I,with).
 nmod:with(8,come,I).
 advmod(8,come,soon).
 % relations.
-return(8,you,visit).
-come_with(8,you,I).
-come_soon_with(8,you,I).
+aos(8,return,you,visit).
+aos(8,come_with,you,I).
+aos(8,come_soon_with,you,I).
 %% so a day was appointed when the fox should visit the stork.
 % dependencies.
 root(9,root,appoint).
@@ -188,8 +188,8 @@ advcl(9,appoint,visit).
 det(9,stork,the).
 dobj(9,visit,stork).
 % relations.
-be(9,day,appoint).
-should_visit(9,fox,stork).
+aos(9,be,day,appoint).
+aos(9,should_visit,fox,stork).
 %% but when they were seated at table all that was for their dinner was contained in a very long-necked jar with a narrow mouth in which the fox could not insert his snout so all he could manage to do was to lick the outside of the jar.
 % dependencies.
 root(10,root,seat).
@@ -245,15 +245,15 @@ mwe(10,outside,of).
 det(10,jar,the).
 nmod:outside_of(10,lick,jar).
 % relations.
-be_contain_in(10,they_dinner,very_long-necked_jar).
-be_with(10,long-necked_jar,narrow_mouth).
-be(10,they_dinner,contain).
-be(10,they,when_seat).
-be_contain_in(10,they_dinner,jar).
-could_manage(10,he,do).
-be_contain_in(10,they_dinner,very_jar).
-be_contain_in(10,they_dinner,long-necked_jar).
-be(10,they,seat).
+aos(10,be_contain_in,they_dinner,very_long-necked_jar).
+aos(10,be_with,long-necked_jar,narrow_mouth).
+aos(10,be,they_dinner,contain).
+aos(10,be,they,when_seat).
+aos(10,be_contain_in,they_dinner,jar).
+aos(10,could_manage,he,do).
+aos(10,be_contain_in,they_dinner,very_jar).
+aos(10,be_contain_in,they_dinner,long-necked_jar).
+aos(10,be,they,seat).
 %% i will not apologise for the dinner.
 % dependencies.
 root(11,root,apologise).

@@ -21,13 +21,13 @@ advcl(0,straw-yard,approach).
 det(0,spot,the).
 dobj(0,approach,spot).
 % relations.
-be_in(0,cock,straw-yard).
-approach(0,lion_desperate,spot).
-together_approach(0,lion_desperate,spot).
-approach(0,lion,spot).
-be_in(0,ass,straw-yard).
-together_approach(0,lion,spot).
-desperate_from(0,lion,hunger).
+aos(0,be_in,cock,straw-yard).
+aos(0,approach,lion_desperate,spot).
+aos(0,together_approach,lion_desperate,spot).
+aos(0,approach,lion,spot).
+aos(0,be_in,ass,straw-yard).
+aos(0,together_approach,lion,spot).
+aos(0,desperate_from,lion,hunger).
 %% he was about to spring upon the ass when the cock ( to the sound of whose voice the lion it is said has a singular aversion ) crowed loudly and the lion fled away as fast as he could.
 % dependencies.
 root(1,root,ass).
@@ -72,15 +72,15 @@ mark(1,could,as).
 nsubj(1,could,he).
 advcl:as(1,flee,could).
 % relations.
-flee_fast(1,lion,he_could).
-flee_away_as_fast(1,lion,he_could).
-be(1,it,say).
-flee(1,lion,he_could).
-flee_away_fast(1,lion,he_could).
-be_upon(1,he,ass).
-flee_as_fast(1,lion,he_could).
-be_upon(1,he,about_ass).
-be_upon(1,he,about_to_spring_ass).
+aos(1,flee_fast,lion,he_could).
+aos(1,flee_away_as_fast,lion,he_could).
+aos(1,be,it,say).
+aos(1,flee,lion,he_could).
+aos(1,flee_away_fast,lion,he_could).
+aos(1,be_upon,he,ass).
+aos(1,flee_as_fast,lion,he_could).
+aos(1,be_upon,he,about_ass).
+aos(1,be_upon,he,about_to_spring_ass).
 %% the ass observing his trepidation at the mere crowing of a cock summoned courage to attack him and galloped after him for that purpose.
 % dependencies.
 root(2,root,summon).
@@ -109,15 +109,15 @@ case(2,purpose,for).
 det(2,purpose,that).
 nmod:for(2,gallop,purpose).
 % relations.
-observe(2,ass,he_trepidation).
-gallop_for(2,ass,purpose).
-observe_he_trepidation_at(2,ass,crowing_cock).
-gallop_after(2,ass,he).
-observe_he_trepidation_at(2,ass,crowing).
-summon(2,ass,courage).
-attack(2,ass,he).
-observe_he_trepidation_at(2,ass,mere_crowing).
-observe_he_trepidation_at(2,ass,mere_crowing_cock).
+aos(2,observe,ass,he_trepidation).
+aos(2,gallop_for,ass,purpose).
+aos(2,observe_he_trepidation_at,ass,crowing_cock).
+aos(2,gallop_after,ass,he).
+aos(2,observe_he_trepidation_at,ass,crowing).
+aos(2,summon,ass,courage).
+aos(2,attack,ass,he).
+aos(2,observe_he_trepidation_at,ass,mere_crowing).
+aos(2,observe_he_trepidation_at,ass,mere_crowing_cock).
 %% he had run no long distance when the lion turning about seized him and tore him to pieces.
 % dependencies.
 root(3,root,run).
@@ -141,8 +141,8 @@ dobj(3,tear,he).
 case(3,piece,to).
 nmod:to(3,tear,piece).
 % relations.
-seize(3,lion,he).
-tear(3,lion,he).
+aos(3,seize,lion,he).
+aos(3,tear,lion,he).
 %% false confidence often leads into danger.
 % dependencies.
 root(4,root,lead).
@@ -152,5 +152,5 @@ advmod(4,lead,often).
 case(4,danger,into).
 nmod:into(4,lead,danger).
 % relations.
-lead_into(4,false_confidence,danger).
-often_lead_into(4,false_confidence,danger).
+aos(4,lead_into,false_confidence,danger).
+aos(4,often_lead_into,false_confidence,danger).

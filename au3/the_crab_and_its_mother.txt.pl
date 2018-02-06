@@ -7,7 +7,7 @@ case(0,son,to).
 nmod:poss(0,son,she).
 nmod:to(0,say,son).
 % relations.
-say_to(0,crab,she_son).
+aos(0,say_to,crab,she_son).
 %% why do you walk so one-sided my child.
 % dependencies.
 root(1,root,walk).
@@ -19,10 +19,10 @@ amod(1,child,one-sided).
 nmod:poss(1,child,my).
 dobj(1,walk,child).
 % relations.
-do_walk(1,you,my_child).
-do_walk(1,you,so_my_child).
-do_walk(1,you,one-sided_my_child).
-do_walk(1,you,so_one-sided_my_child).
+aos(1,do_walk,you,my_child).
+aos(1,do_walk,you,so_my_child).
+aos(1,do_walk,you,one-sided_my_child).
+aos(1,do_walk,you,so_one-sided_my_child).
 %% it is far more becoming to go straight forward.
 % dependencies.
 root(2,root,become).
@@ -36,14 +36,14 @@ xcomp(2,become,go).
 dobj(2,go,straight).
 advmod(2,go,forward).
 % relations.
-be_far_more_become(2,it,go_forward).
-go_forward(2,it,straight).
-be_more_become(2,it,go_forward).
-go(2,it,straight).
-be_far_more_become(2,it,go).
-be_become(2,it,go_forward).
-be_become(2,it,go).
-be_more_become(2,it,go).
+aos(2,be_far_more_become,it,go_forward).
+aos(2,go_forward,it,straight).
+aos(2,be_more_become,it,go_forward).
+aos(2,go,it,straight).
+aos(2,be_far_more_become,it,go).
+aos(2,be_become,it,go_forward).
+aos(2,be_become,it,go).
+aos(2,be_more_become,it,go).
 %% the young crab replied.
 % dependencies.
 root(3,root,reply).
@@ -78,10 +78,10 @@ xcomp(5,promise,walk).
 case(5,it,in).
 nmod:in(5,walk,it).
 % relations.
-will_show(5,you,I).
-will_promise(5,i,walk).
-will_promise(5,i,walk_in_it).
-walk_in(5,i,it).
+aos(5,will_show,you,I).
+aos(5,will_promise,i,walk).
+aos(5,will_promise,i,walk_in_it).
+aos(5,walk_in,i,it).
 %% the mother tried in vain and submitted without remonstrance to the reproof of her child.
 % dependencies.
 root(6,root,try).
@@ -101,7 +101,7 @@ case(6,child,of).
 nmod:poss(6,child,she).
 nmod:of(6,reproof,child).
 % relations.
-try_in(6,mother,vain).
-submit_to(6,mother,reproof).
-submit_without(6,mother,remonstrance).
-submit_to(6,mother,reproof_of_she_child).
+aos(6,try_in,mother,vain).
+aos(6,submit_to,mother,reproof).
+aos(6,submit_without,mother,remonstrance).
+aos(6,submit_to,mother,reproof_of_she_child).

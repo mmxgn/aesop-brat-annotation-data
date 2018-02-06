@@ -28,9 +28,9 @@ amod(0,basket,laden).
 case(0,fish,with).
 nmod:with(0,bring,fish).
 % relations.
-return_from(0,huntsman,field).
-fall_in(0,huntsman,in_chance).
-return_with(0,huntsman,he_dog).
+aos(0,return_from,huntsman,field).
+aos(0,fall_in,huntsman,in_chance).
+aos(0,return_with,huntsman,he_dog).
 %% the huntsman wished to have the fish and their owner experienced an equal longing for the contents of the game-bag.
 % dependencies.
 root(1,root,wish).
@@ -56,15 +56,15 @@ case(1,game-bag,of).
 det(1,game-bag,the).
 nmod:of(1,contents,game-bag).
 % relations.
-experience(1,fish,equal_longing).
-wish(1,huntsman,have).
-experience(1,fish,longing).
-experience_longing_for(1,they_owner,contents).
-experience_longing_for(1,fish,contents_of_game-bag).
-experience(1,they_owner,equal_longing).
-experience_longing_for(1,fish,contents).
-experience(1,they_owner,longing).
-experience_longing_for(1,they_owner,contents_of_game-bag).
+aos(1,experience,fish,equal_longing).
+aos(1,wish,huntsman,have).
+aos(1,experience,fish,longing).
+aos(1,experience_longing_for,they_owner,contents).
+aos(1,experience_longing_for,fish,contents_of_game-bag).
+aos(1,experience,they_owner,equal_longing).
+aos(1,experience_longing_for,fish,contents).
+aos(1,experience,they_owner,longing).
+aos(1,experience_longing_for,they_owner,contents_of_game-bag).
 %% they quickly agreed to exchange the produce of their day 's sport.
 % dependencies.
 root(2,root,agree).
@@ -81,9 +81,9 @@ nmod:poss(2,sport,day).
 case(2,day,'s).
 nmod:of(2,produce,sport).
 % relations.
-of(2,day,sport).
-exchange(2,they,produce).
-exchange(2,they,produce_of_they_day_'s_sport).
+aos(2,of,day,sport).
+aos(2,exchange,they,produce).
+aos(2,exchange,they,produce_of_they_day_'s_sport).
 %% each was so well pleased with his bargain that they made for some time the same exchange day after day.
 % dependencies.
 root(3,root,pleased).
@@ -107,11 +107,11 @@ dep(3,time,day).
 case(3,day,after).
 nmod:after(3,make,day).
 % relations.
-be_pleased_with(3,each,he_bargain).
-be_well_pleased_with(3,each,he_bargain).
-make_after(3,they,day).
-make_for(3,they,time).
-be_so_well_pleased_with(3,each,he_bargain).
+aos(3,be_pleased_with,each,he_bargain).
+aos(3,be_well_pleased_with,each,he_bargain).
+aos(3,make_after,they,day).
+aos(3,make_for,they,time).
+aos(3,be_so_well_pleased_with,each,he_bargain).
 %% finally a neighbor said to them.
 % dependencies.
 root(4,root,neighbor).
@@ -158,20 +158,20 @@ nmod:poss(5,sport,he).
 amod(5,sport,own).
 nmod:of(5,fruit,sport).
 % relations.
-will_destroy(5,you,pleasure).
-will_destroy_pleasure_by(5,you,frequent_use).
-retain(5,each,fruit_of_he_sport).
-will_destroy(5,you,pleasure_of_you_exchange).
-will_destroy_pleasure_in(5,you,way).
-will_soon_destroy_pleasure_in(5,you,way).
-will_soon_destroy_pleasure_by(5,you,frequent_use).
-will_soon_destroy(5,you,pleasure).
-pleasure_of(5,you,you_exchange).
-will_destroy_pleasure_by(5,you,use).
-will_soon_destroy_pleasure_by(5,you,use).
-retain(5,each,fruit).
-retain(5,each,fruit_of_he_own_sport).
-will_soon_destroy(5,you,pleasure_of_you_exchange).
+aos(5,will_destroy,you,pleasure).
+aos(5,will_destroy_pleasure_by,you,frequent_use).
+aos(5,retain,each,fruit_of_he_sport).
+aos(5,will_destroy,you,pleasure_of_you_exchange).
+aos(5,will_destroy_pleasure_in,you,way).
+aos(5,will_soon_destroy_pleasure_in,you,way).
+aos(5,will_soon_destroy_pleasure_by,you,frequent_use).
+aos(5,will_soon_destroy,you,pleasure).
+aos(5,pleasure_of,you,you_exchange).
+aos(5,will_destroy_pleasure_by,you,use).
+aos(5,will_soon_destroy_pleasure_by,you,use).
+aos(5,retain,each,fruit).
+aos(5,retain,each,fruit_of_he_own_sport).
+aos(5,will_soon_destroy,you,pleasure_of_you_exchange).
 %% abstain and enjoy.
 % dependencies.
 root(6,root,abstain).

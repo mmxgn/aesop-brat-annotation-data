@@ -37,8 +37,8 @@ nsubj(1,keep,they).
 advcl:while(1,attack,keep).
 advmod(1,keep,together).
 % relations.
-lay_in(1,lion,ambush).
-lay_in(1,lion,hope_make).
+aos(1,lay_in,lion,ambush).
+aos(1,lay_in,lion,hope_make).
 %% having at last by guileful speeches succeeded in separating them he attacked them without fear as they fed alone and feasted on them one by one at his own leisure.
 % dependencies.
 root(2,root,have).
@@ -74,12 +74,12 @@ nmod:poss(2,leisure,he).
 amod(2,leisure,own).
 nmod:at(2,one,leisure).
 % relations.
-attack(2,he,they).
-feast_on(2,they,they).
+aos(2,attack,he,they).
+aos(2,feast_on,they,they).
 %% union is strength.
 % dependencies.
 root(3,root,strength).
 nsubj(3,strength,union).
 cop(3,strength,be).
 % relations.
-be(3,union,strength).
+aos(3,be,union,strength).

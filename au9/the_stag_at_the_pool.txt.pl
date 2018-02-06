@@ -13,9 +13,9 @@ nmod:to(0,come,spring).
 mark(0,drink,to).
 xcomp(0,come,drink).
 % relations.
-come_to(0,stag,spring).
-come(0,stag,drink).
-overpower_by(0,stag,heat).
+aos(0,come_to,stag,spring).
+aos(0,come,stag,drink).
+aos(0,overpower_by,stag,heat).
 %% seeing his own shadow reflected in the water he greatly admired the size and variety of his horns but felt angry with himself for having such slender and weak feet.
 % dependencies.
 root(1,root,see).
@@ -53,16 +53,16 @@ amod(1,foot,weak).
 dobj(1,have,foot).
 conj:and(1,slender,foot).
 % relations.
-size_of(1,he,he_horn).
-feel_with(1,he,himself).
-greatly_admire(1,he,size_of_he_horn).
-admire(1,he,size).
-greatly_admire(1,he,variety).
-greatly_admire(1,he,size).
-feel(1,he,angry).
-admire(1,he,size_of_he_horn).
-size_of(1,variety,he_horn).
-admire(1,he,variety).
+aos(1,size_of,he,he_horn).
+aos(1,feel_with,he,himself).
+aos(1,greatly_admire,he,size_of_he_horn).
+aos(1,admire,he,size).
+aos(1,greatly_admire,he,variety).
+aos(1,greatly_admire,he,size).
+aos(1,feel,he,angry).
+aos(1,admire,he,size_of_he_horn).
+aos(1,size_of,variety,he_horn).
+aos(1,admire,he,variety).
 %% while he was thus contemplating himself a lion appeared at the pool and crouched to spring upon him.
 % dependencies.
 root(2,root,contemplate).
@@ -87,10 +87,10 @@ xcomp(2,crouch,spring).
 case(2,he,upon).
 nmod:upon(2,spring,he).
 % relations.
-crouch(2,lion,spring).
-be_thus_contemplate(2,he,himself).
-be_contemplate(2,he,himself).
-crouch(2,lion,spring_upon_he).
+aos(2,crouch,lion,spring).
+aos(2,be_thus_contemplate,he,himself).
+aos(2,be_contemplate,he,himself).
+aos(2,crouch,lion,spring_upon_he).
 %% the stag immediately took to flight and exerting his utmost speed as long as the plain was smooth and open kept himself easily at a safe distance from the lion.
 % dependencies.
 root(3,root,take).
@@ -126,14 +126,14 @@ case(3,lion,from).
 det(3,lion,the).
 nmod:from(3,keep,lion).
 % relations.
-exert(3,himself,he_speed).
-exert_long(3,himself,he_speed).
-exert_as_long(3,himself,he_utmost_speed).
-exert_long(3,himself,he_utmost_speed).
-take_to(3,stag,flight).
-exert(3,himself,he_utmost_speed).
-immediately_take_to(3,stag,flight).
-exert_as_long(3,himself,he_speed).
+aos(3,exert,himself,he_speed).
+aos(3,exert_long,himself,he_speed).
+aos(3,exert_as_long,himself,he_utmost_speed).
+aos(3,exert_long,himself,he_utmost_speed).
+aos(3,take_to,stag,flight).
+aos(3,exert,himself,he_utmost_speed).
+aos(3,immediately_take_to,stag,flight).
+aos(3,exert_as_long,himself,he_speed).
 %% but entering a wood he became entangled by his horns and the lion quickly came up to him and caught him.
 % dependencies.
 root(4,root,enter).
@@ -161,11 +161,11 @@ conj:and(4,become,catch).
 conj:and(4,come,catch).
 dobj(4,catch,he).
 % relations.
-become(4,he,entangled).
-catch(4,lion,he).
-come_up_to(4,lion,he).
-become_by(4,he,he_horn).
-quickly_come_up_to(4,lion,he).
+aos(4,become,he,entangled).
+aos(4,catch,lion,he).
+aos(4,come_up_to,lion,he).
+aos(4,become_by,he,he_horn).
+aos(4,quickly_come_up_to,lion,he).
 %% when too late he thus reproached himself.
 % dependencies.
 root(5,root,reproach).
@@ -176,19 +176,19 @@ nsubj(5,reproach,he).
 advmod(5,reproach,thus).
 dobj(5,reproach,himself).
 % relations.
-late_thus_reproach(5,he,himself).
-late_reproach(5,he,himself).
-too_late_reproach(5,he,himself).
-thus_reproach(5,he,himself).
-too_late_thus_reproach(5,he,himself).
-reproach(5,he,himself).
+aos(5,late_thus_reproach,he,himself).
+aos(5,late_reproach,he,himself).
+aos(5,too_late_reproach,he,himself).
+aos(5,thus_reproach,he,himself).
+aos(5,too_late_thus_reproach,he,himself).
+aos(5,reproach,he,himself).
 %% woe is me.
 % dependencies.
 root(6,root,I).
 nsubj(6,I,woe).
 cop(6,I,be).
 % relations.
-be(6,woe,I).
+aos(6,be,woe,I).
 %% how i have deceived myself.
 % dependencies.
 root(7,root,deceive).
@@ -197,7 +197,7 @@ nsubj(7,deceive,i).
 aux(7,deceive,have).
 dobj(7,deceive,myself).
 % relations.
-have_deceive(7,i,myself).
+aos(7,have_deceive,i,myself).
 %% these feet which would have saved me i despised and i gloried in these antlers which have proved my destruction.
 % dependencies.
 root(8,root,foot).
@@ -224,4 +224,4 @@ acl:relcl(8,antler,prove).
 nmod:poss(8,destruction,my).
 dobj(8,prove,destruction).
 % relations.
-be_in(8,foot,antler).
+aos(8,be_in,foot,antler).

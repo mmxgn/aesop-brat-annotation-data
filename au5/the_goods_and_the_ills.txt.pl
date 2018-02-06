@@ -25,10 +25,10 @@ nmod:in(0,have,affair).
 case(0,mankind,of).
 nmod:of(0,affair,mankind).
 % relations.
-have_in(0,they,affair_of_mankind).
-be_drive_out_by(0,goods,ill).
-have_in(0,they,affair).
-be_once_drive_out_by(0,goods,ill).
+aos(0,have_in,they,affair_of_mankind).
+aos(0,be_drive_out_by,goods,ill).
+aos(0,have_in,they,affair).
+aos(0,be_once_drive_out_by,goods,ill).
 %% for the ills by reason of their numbers had prevailed to possess the earth.
 % dependencies.
 root(1,root,prevail).
@@ -47,7 +47,7 @@ xcomp(1,prevail,possess).
 det(1,earth,the).
 dobj(1,possess,earth).
 % relations.
-possess(1,ill,earth).
+aos(1,possess,ill,earth).
 %% the goods wafted themselves to heaven and asked for a righteous vengeance on their persecutors.
 % dependencies.
 root(2,root,waft).
@@ -67,10 +67,10 @@ case(2,persecutor,on).
 nmod:poss(2,persecutor,they).
 nmod:on(2,ask,persecutor).
 % relations.
-waft(2,goods,themselves).
-ask_on(2,goods,they_persecutor).
-ask_for(2,goods,righteous_vengeance).
-ask_for(2,goods,vengeance).
+aos(2,waft,goods,themselves).
+aos(2,ask_on,goods,they_persecutor).
+aos(2,ask_for,goods,righteous_vengeance).
+aos(2,ask_for,goods,vengeance).
 %% they entreated jupiter that they might no longer be associated with the ills as they had nothing in common and could not live together but were engaged in unceasing warfare.
 % dependencies.
 root(3,root,entreat).
@@ -107,14 +107,14 @@ case(3,warfare,in).
 amod(3,warfare,unceasing).
 nmod:in(3,engage,warfare).
 % relations.
-entreat(3,they,jupiter).
-be_engage_in(3,they,unceasing_warfare).
-be_engage_in(3,they,warfare).
-nothing_in(3,they,common).
-be_associate_with(3,they,ill).
-be(3,they,engage).
-be(3,they,associate).
-is_in(3,nothing,common).
+aos(3,entreat,they,jupiter).
+aos(3,be_engage_in,they,unceasing_warfare).
+aos(3,be_engage_in,they,warfare).
+aos(3,nothing_in,they,common).
+aos(3,be_associate_with,they,ill).
+aos(3,be,they,engage).
+aos(3,be,they,associate).
+aos(3,is_in,nothing,common).
 %% and that an indissoluble law might be laid down for their future protection.
 % dependencies.
 root(4,root,lay).
@@ -168,14 +168,14 @@ dobj(5,enter,habitation).
 case(5,man,of).
 nmod:of(5,habitation,man).
 % relations.
-is_in(5,earth,company).
-visit(5,henceforth,earth).
-should_enter(5,goods,habitation).
-visit(5,henceforth,earth_in_company).
-earth_in(5,henceforth,company).
-habitation_of(5,goods,man).
-grant(5,jupiter,they_request).
-should_enter(5,goods,habitation_of_man).
+aos(5,is_in,earth,company).
+aos(5,visit,henceforth,earth).
+aos(5,should_enter,goods,habitation).
+aos(5,visit,henceforth,earth_in_company).
+aos(5,earth_in,henceforth,company).
+aos(5,habitation_of,goods,man).
+aos(5,grant,jupiter,they_request).
+aos(5,should_enter,goods,habitation_of_man).
 %% hence it arises that ills abound for they come not one by one but in troops and by no means singly while the goods proceed from jupiter and are given not alike to all but singly and separately.
 % dependencies.
 root(6,root,arise).

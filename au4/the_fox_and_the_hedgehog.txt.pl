@@ -37,16 +37,16 @@ conj:and(0,sick,unable).
 mark(0,move,to).
 advcl:to(0,lay,move).
 % relations.
-be(0,fox_swimming,carry).
-lay_for(0,he,time).
-lay(0,he,very_much_bruised_sick).
-lay_for(0,he,long_time).
-lay(0,he,move).
-lay(0,he,very_much_bruised).
-lay(0,he,much_bruised).
-lay(0,he,bruised).
-lay(0,he,bruised_sick).
-lay(0,he,much_bruised_sick).
+aos(0,be,fox_swimming,carry).
+aos(0,lay_for,he,time).
+aos(0,lay,he,very_much_bruised_sick).
+aos(0,lay_for,he,long_time).
+aos(0,lay,he,move).
+aos(0,lay,he,very_much_bruised).
+aos(0,lay,he,much_bruised).
+aos(0,lay,he,bruised).
+aos(0,lay,he,bruised_sick).
+aos(0,lay,he,much_bruised_sick).
 %% a swarm of hungry blood-sucking flies settled upon him.
 % dependencies.
 root(1,root,fly).
@@ -84,7 +84,7 @@ aux(2,torment,be).
 acl:relcl(2,fly,torment).
 dobj(2,torment,he).
 % relations.
-see(2,hedgehog_passing,he_anguish).
+aos(2,see,hedgehog_passing,he_anguish).
 %% by no means.
 % dependencies.
 root(3,root,means).
@@ -118,7 +118,7 @@ nsubj(7,say,').
 det(7,hedgehog,the).
 dobj(7,say,hedgehog).
 % relations.
-say(7,',hedgehog).
+aos(7,say,',hedgehog).
 %% do you not want to be rid of them.
 % dependencies.
 root(8,root,want).
@@ -199,4 +199,4 @@ nsubj(12,leave,i).
 aux(12,leave,have).
 acl:relcl(12,blood,leave).
 % relations.
-rid(12,you,I).
+aos(12,rid,you,I).

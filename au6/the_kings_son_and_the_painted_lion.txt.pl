@@ -30,15 +30,15 @@ case(0,lion,by).
 det(0,lion,a).
 nmod:agent(0,kill,lion).
 % relations.
-be_fond_of(0,son,martial_exercise).
-be(0,he_son,kill).
-be_fond_of(0,only_son,exercise).
-be(0,son,fond).
-be_kill_by(0,he_son,lion).
-be_fond_of(0,only_son,martial_exercise).
-be(0,he,warn).
-be(0,only_son,fond).
-be_fond_of(0,son,exercise).
+aos(0,be_fond_of,son,martial_exercise).
+aos(0,be,he_son,kill).
+aos(0,be_fond_of,only_son,exercise).
+aos(0,be,son,fond).
+aos(0,be_kill_by,he_son,lion).
+aos(0,be_fond_of,only_son,martial_exercise).
+aos(0,be,he,warn).
+aos(0,be,only_son,fond).
+aos(0,be_fond_of,son,exercise).
 %% afraid the dream should prove true he built for his son a pleasant palace and adorned its walls for his amusement with all kinds of life-sized animals among which was the picture of a lion.
 % dependencies.
 root(1,root,kind).
@@ -79,11 +79,11 @@ case(1,lion,of).
 det(1,lion,a).
 nmod:of(1,picture,lion).
 % relations.
-prove(1,dream,pleasant_palace).
-build_for(1,he,he_son).
-prove(1,dream,true).
-adorn(1,dream,its_wall).
-prove(1,dream,palace).
+aos(1,prove,dream,pleasant_palace).
+aos(1,build_for,he,he_son).
+aos(1,prove,dream,true).
+aos(1,adorn,dream,its_wall).
+aos(1,prove,dream,palace).
 %% when the young prince saw this his grief at being thus confined burst out afresh and standing near the lion he said.
 % dependencies.
 root(2,root,see).
@@ -110,16 +110,16 @@ nmod:near(2,standing,lion).
 nsubj(2,say,he).
 acl:relcl(2,lion,say).
 % relations.
-be_thus_confine(2,prince,burst).
-be_confine(2,young_prince,burst).
-be_confine_burst_out(2,prince,afresh).
-be_confine(2,prince,burst).
-be_thus_confine_burst_out(2,prince,afresh).
-be_thus_confine(2,young_prince,burst).
-be_thus_confine_burst_out(2,young_prince,afresh).
-see(2,prince,he_grief).
-see(2,young_prince,he_grief).
-be_confine_burst_out(2,young_prince,afresh).
+aos(2,be_thus_confine,prince,burst).
+aos(2,be_confine,young_prince,burst).
+aos(2,be_confine_burst_out,prince,afresh).
+aos(2,be_confine,prince,burst).
+aos(2,be_thus_confine_burst_out,prince,afresh).
+aos(2,be_thus_confine,young_prince,burst).
+aos(2,be_thus_confine_burst_out,young_prince,afresh).
+aos(2,see,prince,he_grief).
+aos(2,see,young_prince,he_grief).
+aos(2,be_confine_burst_out,young_prince,afresh).
 %% o you most detestable of animals.
 % dependencies.
 root(3,root,o).
@@ -172,16 +172,16 @@ advcl:as(4,shut,do).
 case(4,you,to).
 nmod:to(4,do,you).
 % relations.
-is_in(4,you_account,palace).
-now_do_to(4,i,you).
-do_to(4,i,you).
-see_in(4,he,he_sleep).
-be_shut_up(4,i,i_do).
-be_shut_up_on(4,i,you_account_in_palace).
-be_shut_up(4,i,i_do_to_you).
-be_shut_up(4,i,i_now_do).
-be_shut_up_on(4,i,you_account).
-be_shut_up(4,i,i_now_do_to_you).
+aos(4,is_in,you_account,palace).
+aos(4,now_do_to,i,you).
+aos(4,do_to,i,you).
+aos(4,see_in,he,he_sleep).
+aos(4,be_shut_up,i,i_do).
+aos(4,be_shut_up_on,i,you_account_in_palace).
+aos(4,be_shut_up,i,i_do_to_you).
+aos(4,be_shut_up,i,i_now_do).
+aos(4,be_shut_up_on,i,you_account).
+aos(4,be_shut_up,i,i_now_do_to_you).
 %% ' with these words he stretched out his hands toward a thorn-tree meaning to cut a stick from its branches so that he might beat the lion.
 % dependencies.
 root(5,root,stretch).
@@ -212,12 +212,12 @@ advcl:so_that(5,cut,beat).
 det(5,lion,the).
 dobj(5,beat,lion).
 % relations.
-might_beat(5,he,lion).
-stretch_out(5,he,he_hand).
-cut_stick_from(5,he,its_branch).
-stretch_out(5,he,he_hand_toward_meaning).
-cut(5,he,stick).
-stretch_out(5,he,he_hand_toward_thorn-tree_meaning).
+aos(5,might_beat,he,lion).
+aos(5,stretch_out,he,he_hand).
+aos(5,cut_stick_from,he,its_branch).
+aos(5,stretch_out,he,he_hand_toward_meaning).
+aos(5,cut,he,stick).
+aos(5,stretch_out,he,he_hand_toward_thorn-tree_meaning).
 %% but one of the tree 's prickles pierced his finger and caused great pain and inflammation so that the young prince fell down in a fainting fit.
 % dependencies.
 root(6,root,pierce).
@@ -250,11 +250,11 @@ det(6,fit,a).
 amod(6,fit,faint).
 nmod:in(6,fall,fit).
 % relations.
-of(6,tree,prickle).
-fall_down_in(6,prince,faint_fit).
-fall_down_in(6,prince,fit).
-fall_down_in(6,young_prince,faint_fit).
-fall_down_in(6,young_prince,fit).
+aos(6,of,tree,prickle).
+aos(6,fall_down_in,prince,faint_fit).
+aos(6,fall_down_in,prince,fit).
+aos(6,fall_down_in,young_prince,faint_fit).
+aos(6,fall_down_in,young_prince,fit).
 %% a violent fever suddenly set in from which he died not many days later.
 % dependencies.
 root(7,root,set).

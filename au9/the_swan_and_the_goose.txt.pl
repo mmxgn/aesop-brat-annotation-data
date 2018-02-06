@@ -15,22 +15,22 @@ det(0,swan,a).
 dobj(0,buy,swan).
 conj:and(0,goose,swan).
 % relations.
-buy_swan_in(0,certain_rich_man,market).
-buy(0,rich_man,goose).
-buy_swan_in(0,rich_man,market).
-buy_goose_in(0,certain_man,market).
-buy_goose_in(0,certain_rich_man,market).
-buy(0,man,swan).
-buy(0,rich_man,swan).
-buy_goose_in(0,man,market).
-buy(0,certain_man,swan).
-buy(0,certain_rich_man,goose).
-buy_swan_in(0,man,market).
-buy_goose_in(0,rich_man,market).
-buy(0,man,goose).
-buy_swan_in(0,certain_man,market).
-buy(0,certain_man,goose).
-buy(0,certain_rich_man,swan).
+aos(0,buy_swan_in,certain_rich_man,market).
+aos(0,buy,rich_man,goose).
+aos(0,buy_swan_in,rich_man,market).
+aos(0,buy_goose_in,certain_man,market).
+aos(0,buy_goose_in,certain_rich_man,market).
+aos(0,buy,man,swan).
+aos(0,buy,rich_man,swan).
+aos(0,buy_goose_in,man,market).
+aos(0,buy,certain_man,swan).
+aos(0,buy,certain_rich_man,goose).
+aos(0,buy_swan_in,man,market).
+aos(0,buy_goose_in,rich_man,market).
+aos(0,buy,man,goose).
+aos(0,buy_swan_in,certain_man,market).
+aos(0,buy,certain_man,goose).
+aos(0,buy,certain_rich_man,swan).
 %% he fed the one for his table and kept the other for the sake of its song.
 % dependencies.
 root(1,root,feed).
@@ -52,8 +52,8 @@ case(1,song,of).
 nmod:poss(1,song,its).
 nmod:of(1,sake,song).
 % relations.
-keep(1,he,other).
-feed(1,he,one_for_he_table).
+aos(1,keep,he,other).
+aos(1,feed,he,one_for_he_table).
 %% when the time came for killing the goose the cook went to get him at night when it was dark and he was not able to distinguish one bird from the other.
 % dependencies.
 root(2,root,come).
@@ -92,7 +92,7 @@ case(2,other,from).
 det(2,other,the).
 nmod:from(2,distinguish,other).
 % relations.
-get(2,cook,he).
+aos(2,get,cook,he).
 %% by mistake he caught the swan instead of the goose.
 % dependencies.
 root(3,root,catch).
@@ -106,8 +106,8 @@ mwe(3,instead,of).
 det(3,goose,the).
 nmod:instead_of(3,swan,goose).
 % relations.
-catch_swan_by(3,he,mistake).
-catch(3,he,swan).
+aos(3,catch_swan_by,he,mistake).
+aos(3,catch,he,swan).
 %% the swan threatened with death burst forth into song and thus made himself known by his voice and preserved his life by his melody.
 % dependencies.
 root(4,root,threaten).

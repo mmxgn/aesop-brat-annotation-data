@@ -25,9 +25,9 @@ nmod:to(1,put,dispute).
 mark(1,say,by).
 advcl:by(1,put,say).
 % relations.
-put_end_to(1,crow,dispute).
-put_end(1,crow,say).
-put(1,crow,end).
+aos(1,put_end_to,crow,dispute).
+aos(1,put_end,crow,say).
+aos(1,put,crow,end).
 %% your feathers are all very well in the spring but mine protect me against the winter.
 % dependencies.
 root(2,root,spring).
@@ -47,7 +47,7 @@ case(2,winter,against).
 det(2,winter,the).
 nmod:against(2,protect,winter).
 % relations.
-be_in(2,you_feather,well_spring).
-protect(2,mine,I).
-be_in(2,you_feather,spring).
-be_in(2,you_feather,very_well_spring).
+aos(2,be_in,you_feather,well_spring).
+aos(2,protect,mine,I).
+aos(2,be_in,you_feather,spring).
+aos(2,be_in,you_feather,very_well_spring).

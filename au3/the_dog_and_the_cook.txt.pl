@@ -38,12 +38,12 @@ case(1,he,of).
 nmod:of(1,friend,he).
 amod(1,he,say).
 % relations.
-friend_of(1,stranger_dog,he_say).
-invite(1,he_dog,stranger_dog_friend_of_he_say).
-avail(1,he_dog,himself).
-invite(1,he_dog,stranger_dog_friend_of_he).
-friend_of(1,stranger_dog,he).
-invite(1,he_dog,stranger_dog_friend).
+aos(1,friend_of,stranger_dog,he_say).
+aos(1,invite,he_dog,stranger_dog_friend_of_he_say).
+aos(1,avail,he_dog,himself).
+aos(1,invite,he_dog,stranger_dog_friend_of_he).
+aos(1,friend_of,stranger_dog,he).
+aos(1,invite,he_dog,stranger_dog_friend).
 %% my master gives a feast and there is always much food remaining.
 % dependencies.
 root(2,root,give).
@@ -59,7 +59,7 @@ amod(2,food,much).
 nsubj(2,be,food).
 acl(2,food,remain).
 % relations.
-give(2,my_master,feast).
+aos(2,give,my_master,feast).
 %% come and sup with me tonight.
 % dependencies.
 root(3,root,come).
@@ -69,7 +69,7 @@ case(3,I,with).
 nmod:with(3,sup,I).
 nmod:tmod(3,I,tonight).
 % relations.
-be_with(3,sup,I_tonight).
+aos(3,be_with,sup,I_tonight).
 %% the dog thus invited went at the hour appointed and seeing the preparations for so grand an entertainment said in the joy of his heart.
 % dependencies.
 root(4,root,go).
@@ -99,9 +99,9 @@ case(4,heart,of).
 nmod:poss(4,heart,he).
 nmod:of(4,joy,heart).
 % relations.
-say_in(4,entertainment,joy).
-go_at(4,dog,hour).
-say_in(4,entertainment,joy_of_he_heart).
+aos(4,say_in,entertainment,joy).
+aos(4,go_at,dog,hour).
+aos(4,say_in,entertainment,joy_of_he_heart).
 %% how glad i am that i came.
 % dependencies.
 root(5,root,be).
@@ -145,7 +145,7 @@ cc(7,today,and).
 nmod:tmod(7,last,tomorrow).
 conj:and(7,today,tomorrow).
 % relations.
-will_take(7,i,care).
+aos(7,will_take,i,care).
 %% while he was congratulating himself and wagging his tail to convey his pleasure to his friend the cook saw him moving about among his dishes and seizing him by his fore and hind paws bundled him without ceremony out of the window.
 % dependencies.
 root(8,root,congratulating).
@@ -194,9 +194,9 @@ mwe(8,out,of).
 det(8,window,the).
 nmod:out_of(8,bundle,window).
 % relations.
-seize(8,he,he).
-be_congratulating(8,he,himself).
-move_among(8,he,he_dish).
+aos(8,seize,he,he).
+aos(8,be_congratulating,he,himself).
+aos(8,move_among,he,he_dish).
 %% he fell with force upon the ground and limped away howling dreadfully.
 % dependencies.
 root(9,root,fall).
@@ -213,12 +213,12 @@ advmod(9,howling,away).
 xcomp(9,limp,howling).
 advmod(9,limp,dreadfully).
 % relations.
-fall_with(9,he,force).
-limp(9,he,away_howling).
-fall_upon(9,he,ground).
-limp_dreadfully(9,he,away_howling).
-limp(9,he,howling).
-limp_dreadfully(9,he,howling).
+aos(9,fall_with,he,force).
+aos(9,limp,he,away_howling).
+aos(9,fall_upon,he,ground).
+aos(9,limp_dreadfully,he,away_howling).
+aos(9,limp,he,howling).
+aos(9,limp_dreadfully,he,howling).
 %% his yelling soon attracted other street dogs who came up to him and inquired how he had enjoyed his supper.
 % dependencies.
 root(10,root,attract).
@@ -245,7 +245,7 @@ ccomp(10,inquire,enjoy).
 nmod:poss(10,supper,he).
 dobj(10,enjoy,supper).
 % relations.
-enjoy(10,he,he_supper).
+aos(10,enjoy,he,he_supper).
 %% he replied.
 % dependencies.
 root(11,root,reply).
@@ -270,10 +270,10 @@ nsubj(12,remember,i).
 dep(12,drink,remember).
 dobj(12,remember,nothing).
 % relations.
-drink(12,i,so_much_wine).
-remember(12,i,nothing).
-drink(12,i,wine).
-drink(12,i,much_wine).
+aos(12,drink,i,so_much_wine).
+aos(12,remember,i,nothing).
+aos(12,drink,i,wine).
+aos(12,drink,i,much_wine).
 %% i do not know how i got out of the house.
 % dependencies.
 root(13,root,know).

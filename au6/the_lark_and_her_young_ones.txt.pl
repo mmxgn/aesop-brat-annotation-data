@@ -16,7 +16,7 @@ amod(0,wheat,young).
 amod(0,wheat,green).
 nmod:on(0,spring,wheat).
 % relations.
-have_make(0,lark,she_nest).
+aos(0,have_make,lark,she_nest).
 %% the brood had almost grown to their full strength and attained the use of their wings and the full plumage of their feathers when the owner of the field looking over his ripe crop said.
 % dependencies.
 root(1,root,grow).
@@ -57,18 +57,18 @@ amod(1,crop,ripe).
 nmod:over(1,look,crop).
 advcl(1,attain,say).
 % relations.
-attain(1,brood,use_of_they_wing).
-full_plumage_of(1,use,they_feather).
-have_grow_to(1,brood,they_strength).
-attain(1,brood,plumage_of_they_feather).
-have_almost_grow_to(1,brood,they_strength).
-have_almost_grow_to(1,brood,they_full_strength).
-attain(1,brood,plumage).
-have_grow_to(1,brood,they_full_strength).
-attain(1,brood,use).
-attain(1,brood,full_plumage).
-plumage_of(1,use,they_feather).
-attain(1,brood,full_plumage_of_they_feather).
+aos(1,attain,brood,use_of_they_wing).
+aos(1,full_plumage_of,use,they_feather).
+aos(1,have_grow_to,brood,they_strength).
+aos(1,attain,brood,plumage_of_they_feather).
+aos(1,have_almost_grow_to,brood,they_strength).
+aos(1,have_almost_grow_to,brood,they_full_strength).
+aos(1,attain,brood,plumage).
+aos(1,have_grow_to,brood,they_full_strength).
+aos(1,attain,brood,use).
+aos(1,attain,brood,full_plumage).
+aos(1,plumage_of,use,they_feather).
+aos(1,attain,brood,full_plumage_of_they_feather).
 %% the time has come when i must ask all my neighbors to help me with my harvest.
 % dependencies.
 root(2,root,come).
@@ -90,10 +90,10 @@ case(2,harvest,with).
 nmod:poss(2,harvest,my).
 nmod:with(2,help,harvest).
 % relations.
-must_ask(2,i,my_neighbor).
-must_ask(2,i,neighbor).
-help(2,my_neighbor,I).
-help(2,neighbor,I).
+aos(2,must_ask,i,my_neighbor).
+aos(2,must_ask,i,neighbor).
+aos(2,help,my_neighbor,I).
+aos(2,help,neighbor,I).
 %% one of the young larks heard his speech and related it to his mother inquiring of her to what place they should move for safety.
 % dependencies.
 root(3,root,hear).
@@ -123,7 +123,7 @@ acl:relcl(3,place,move).
 case(3,safety,for).
 nmod:for(3,move,safety).
 % relations.
-should_move_for(3,they,safety).
+aos(3,should_move_for,they,safety).
 %% there is no occasion to move yet my son.
 % dependencies.
 root(4,root,be).
@@ -190,10 +190,10 @@ nmod:from(7,shed,excess).
 case(7,ripeness,of).
 nmod:of(7,excess,ripeness).
 % relations.
-shed(7,wheat,grain).
-shed_grain_from(7,wheat,excess).
-shed_grain_from(7,wheat,excess_of_ripeness).
-see(7,owner,wheat).
+aos(7,shed,wheat,grain).
+aos(7,shed_grain_from,wheat,excess).
+aos(7,shed_grain_from,wheat,excess_of_ripeness).
+aos(7,see,owner,wheat).
 %% he said.
 % dependencies.
 root(8,root,say).
@@ -229,10 +229,10 @@ case(9,harvest,in).
 det(9,harvest,the).
 nmod:in(9,get,harvest).
 % relations.
-get_in(9,i,harvest).
-will_come_with(9,i,many_reaper).
-will_come_with(9,i,as_many_reaper).
-will_come_with(9,i,reaper).
+aos(9,get_in,i,harvest).
+aos(9,will_come_with,i,many_reaper).
+aos(9,will_come_with,i,as_many_reaper).
+aos(9,will_come_with,i,reaper).
 %% the lark on hearing these words said to her brood.
 % dependencies.
 root(10,root,say).
@@ -268,7 +268,7 @@ case(11,earnest,in).
 det(11,time,this).
 nsubj(11,earnest,time).
 % relations.
-be_in(11,time,earnest).
+aos(11,be_in,time,earnest).
 %% he no longer trusts his friends but will reap the field himself.
 % dependencies.
 root(12,root,friend).
@@ -285,4 +285,4 @@ det(12,field,the).
 nsubj(12,himself,field).
 xcomp(12,reap,himself).
 % relations.
-reap(12,he,field_himself).
+aos(12,reap,he,field_himself).

@@ -69,10 +69,12 @@ if __name__ == "__main__":
         
         for rel in output['sentences'][0]['openie']:
             KB.append(
-                '{}({},{},{})'.format(normalize(rel['relation']),
-                                      sent_no,
-                                      normalize(rel['subject']),
-                                      normalize(rel['object']))
+                # aos stands for action or stative
+                'aos({},{},{},{})'.format( 
+                                        sent_no,
+                                        normalize(rel['relation']),
+                                        normalize(rel['subject']),
+                                        normalize(rel['object']))
             )
 
     # Save KB data

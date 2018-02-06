@@ -13,7 +13,7 @@ case(0,birth,at).
 det(0,birth,each).
 nmod:at(0,one,birth).
 % relations.
-be(0,it,say).
+aos(0,be,it,say).
 %% the mother fondles one and nurtures it with the greatest affection and care but hates and neglects the other.
 % dependencies.
 root(1,root,fondle).
@@ -40,9 +40,9 @@ conj:and(1,hate,neglect).
 det(1,other,the).
 dobj(1,hate,other).
 % relations.
-hate(1,mother,other).
-fondle(1,mother,one).
-nurture(1,mother,it).
+aos(1,hate,mother,other).
+aos(1,fondle,mother,one).
+aos(1,nurture,mother,it).
 %% it happened once that the young one which was caressed and loved was smothered by the too great affection of the mother while the despised one was nurtured and reared in spite of the neglect to which it was exposed.
 % dependencies.
 root(2,root,happen).
@@ -92,5 +92,5 @@ nsubjpass(2,expose,it).
 auxpass(2,expose,be).
 acl:relcl(2,neglect,expose).
 % relations.
-be(2,it,expose).
-be(2,despise_one,nurture).
+aos(2,be,it,expose).
+aos(2,be,despise_one,nurture).

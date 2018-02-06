@@ -8,8 +8,8 @@ nummod(0,frog,two).
 dep(0,frog,frog).
 cop(0,neighbor,be).
 % relations.
-be(0,frog,neighbor).
-be(0,two_frog,neighbor).
+aos(0,be,frog,neighbor).
+aos(0,be,two_frog,neighbor).
 %% one inhabited a deep pond far removed from public view.
 % dependencies.
 root(1,root,inhabit).
@@ -23,14 +23,14 @@ case(1,view,from).
 amod(1,view,public).
 nmod:from(1,inhabit,view).
 % relations.
-inhabit(1,one,pond).
-inhabit_pond_from(1,one,view).
-inhabit(1,one,pond_far_remove).
-inhabit(1,one,pond_remove).
-inhabit(1,one,deep_pond_remove).
-inhabit_pond_from(1,one,public_view).
-inhabit(1,one,deep_pond_far_remove).
-inhabit(1,one,deep_pond).
+aos(1,inhabit,one,pond).
+aos(1,inhabit_pond_from,one,view).
+aos(1,inhabit,one,pond_far_remove).
+aos(1,inhabit,one,pond_remove).
+aos(1,inhabit,one,deep_pond_remove).
+aos(1,inhabit_pond_from,one,public_view).
+aos(1,inhabit,one,deep_pond_far_remove).
+aos(1,inhabit,one,deep_pond).
 %% the other lived in a gully containing little water and traversed by a country road.
 % dependencies.
 root(2,root,live).
@@ -50,8 +50,8 @@ det(2,road,a).
 compound(2,road,country).
 nmod:by(2,traverse,road).
 % relations.
-live_in(2,other,gully).
-traverse_by(2,other,country_road).
+aos(2,live_in,other,gully).
+aos(2,traverse_by,other,country_road).
 %% the frog that lived in the pond warned his friend to change his residence and entreated him to come and live with him saying that he would enjoy greater safety from danger and more abundant food.
 % dependencies.
 root(3,root,warn).
@@ -122,7 +122,7 @@ aux(4,become,have).
 acl:relcl(4,place,become).
 xcomp(4,become,accustomed).
 % relations.
-refuse(4,other,say).
+aos(4,refuse,other,say).
 %% a few days afterwards a heavy wagon passed through the gully and crushed him to death under its wheels.
 % dependencies.
 root(5,root,afterwards).
@@ -146,7 +146,7 @@ case(5,wheel,under).
 nmod:poss(5,wheel,its).
 nmod:under(5,crush,wheel).
 % relations.
-afterwards(5,few_day,wagon).
-afterwards(5,day,heavy_wagon).
-afterwards(5,day,wagon).
-afterwards(5,few_day,heavy_wagon).
+aos(5,afterwards,few_day,wagon).
+aos(5,afterwards,day,heavy_wagon).
+aos(5,afterwards,day,wagon).
+aos(5,afterwards,few_day,heavy_wagon).

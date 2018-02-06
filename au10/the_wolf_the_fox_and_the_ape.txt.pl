@@ -16,10 +16,10 @@ conj:but(0,accuse,deny).
 det(0,charge,the).
 dobj(0,deny,charge).
 % relations.
-deny(0,wolf,charge).
-entirely_deny(0,wolf,charge).
-accuse(0,wolf,fox_of_theft).
-accuse(0,wolf,fox).
+aos(0,deny,wolf,charge).
+aos(0,entirely_deny,wolf,charge).
+aos(0,accuse,wolf,fox_of_theft).
+aos(0,accuse,wolf,fox).
 %% an ape undertook to adjudge the matter between them.
 % dependencies.
 root(1,root,undertake).
@@ -33,8 +33,8 @@ dobj(1,adjudge,matter).
 case(1,they,between).
 nmod:between(1,matter,they).
 % relations.
-adjudge(1,ape,matter_between_they).
-adjudge(1,ape,matter).
+aos(1,adjudge,ape,matter_between_they).
+aos(1,adjudge,ape,matter).
 %% when each had fully stated his case the ape announced this sentence.
 % dependencies.
 root(2,root,state).
@@ -50,7 +50,7 @@ acl:relcl(2,case,announce).
 det(2,sentence,this).
 dobj(2,announce,sentence).
 % relations.
-announce(2,ape,sentence).
+aos(2,announce,ape,sentence).
 %% i do not think you wolf ever lost what you claim.
 % dependencies.
 root(3,root,think).

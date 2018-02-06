@@ -41,27 +41,27 @@ case(0,event,of).
 amod(0,event,future).
 nmod:of(0,course,event).
 % relations.
-be_consider(0,he,good_course_of_future_event).
-be_consider(0,he,course).
-be_consider(0,he,bird).
-be(0,he,consider).
-be(0,crow,jealous).
-be_consider(0,he,bird_of_good_omen).
-be_consider(0,he,course_of_future_event).
-bird_of(0,he,good_omen).
-bird_of(0,he,omen).
-always_attract(0,he,attention).
-good_course_of(0,he,future_event).
-good_or_evil_course_of(0,bird,future_event).
-be_consider(0,he,good_course).
-be_jealous(0,crow,consider).
-attract(0,he,attention).
-be_consider(0,he,bird_of_omen).
-course_of(0,he,future_event).
-course_of(0,bird,future_event).
-good_or_evil_course_of(0,he,future_event).
-be_jealous_of(0,crow,raven).
-good_course_of(0,bird,future_event).
+aos(0,be_consider,he,good_course_of_future_event).
+aos(0,be_consider,he,course).
+aos(0,be_consider,he,bird).
+aos(0,be,he,consider).
+aos(0,be,crow,jealous).
+aos(0,be_consider,he,bird_of_good_omen).
+aos(0,be_consider,he,course_of_future_event).
+aos(0,bird_of,he,good_omen).
+aos(0,bird_of,he,omen).
+aos(0,always_attract,he,attention).
+aos(0,good_course_of,he,future_event).
+aos(0,good_or_evil_course_of,bird,future_event).
+aos(0,be_consider,he,good_course).
+aos(0,be_jealous,crow,consider).
+aos(0,attract,he,attention).
+aos(0,be_consider,he,bird_of_omen).
+aos(0,course_of,he,future_event).
+aos(0,course_of,bird,future_event).
+aos(0,good_or_evil_course_of,he,future_event).
+aos(0,be_jealous_of,crow,raven).
+aos(0,good_course_of,bird,future_event).
 %% seeing some travelers approaching the crow flew up into a tree and perching herself on one of the branches cawed as loudly as she could.
 % dependencies.
 root(1,root,see).
@@ -90,9 +90,9 @@ mark(1,could,as).
 nsubj(1,could,she).
 advcl:as(1,caw,could).
 % relations.
-fly_into(1,crow,tree).
-fly_up_into(1,crow,tree).
-perch(1,traveler,herself).
+aos(1,fly_into,crow,tree).
+aos(1,fly_up_into,crow,tree).
+aos(1,perch,traveler,herself).
 %% the travelers turned towards the sound and wondered what it foreboded when one of them said to his companion.
 % dependencies.
 root(2,root,turn).
@@ -116,7 +116,7 @@ case(2,companion,to).
 nmod:poss(2,companion,he).
 nmod:to(2,say,companion).
 % relations.
-turn_towards(2,traveler,sound).
+aos(2,turn_towards,traveler,sound).
 %% let us proceed on our journey my friend for it is only the caw of a crow and her cry you know is no omen.
 % dependencies.
 root(3,root,let).

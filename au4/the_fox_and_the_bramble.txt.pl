@@ -23,9 +23,9 @@ mark(0,save,to).
 advcl:to(0,catch,save).
 dobj(0,save,himself).
 % relations.
-catch(0,he,hold_of_bramble).
-lose(0,he,he_footing).
-catch(0,he,hold).
+aos(0,catch,he,hold_of_bramble).
+aos(0,lose,he,he_footing).
+aos(0,catch,he,hold).
 %% having pricked and grievously tom the soles of his feet he accused the bramble because when he had fled to her for assistance she had used him worse than the hedge itself.
 % dependencies.
 root(1,root,prick).
@@ -61,11 +61,11 @@ det(1,hedge,the).
 nmod:than(1,tom,hedge).
 dobj(1,prick,itself).
 % relations.
-have_flee_for(1,he,assistance).
-accuse_bramble(1,he,she_have_use).
-accuse(1,he,bramble).
-have_flee_to(1,he,she).
-have_use(1,she,he_worse).
+aos(1,have_flee_for,he,assistance).
+aos(1,accuse_bramble,he,she_have_use).
+aos(1,accuse,he,bramble).
+aos(1,have_flee_to,he,she).
+aos(1,have_use,she,he_worse).
 %% the bramble interrupting him said.
 % dependencies.
 root(2,root,say).
@@ -104,11 +104,11 @@ xcomp(3,accustom,fasten).
 case(3,other,upon).
 nmod:upon(3,fasten,other).
 % relations.
-fasten(3,you,yourself).
-always_accustom(3,myself,fasten).
-accustom(3,myself,fasten).
-fasten_upon(3,myself,other).
-must_out_of(3,you,really_must_have_you_sens).
-accustom(3,myself,fasten_upon_other).
-always_accustom(3,myself,fasten_upon_other).
-must_out_of(3,you,must_have_you_sens).
+aos(3,fasten,you,yourself).
+aos(3,always_accustom,myself,fasten).
+aos(3,accustom,myself,fasten).
+aos(3,fasten_upon,myself,other).
+aos(3,must_out_of,you,really_must_have_you_sens).
+aos(3,accustom,myself,fasten_upon_other).
+aos(3,always_accustom,myself,fasten_upon_other).
+aos(3,must_out_of,you,must_have_you_sens).

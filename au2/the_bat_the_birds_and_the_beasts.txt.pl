@@ -17,8 +17,8 @@ det(0,beast,the).
 nmod:between(0,come,beast).
 conj:and(0,bird,beast).
 % relations.
-come_off_between(0,conflict,bird).
-come_off_between(0,great_conflict,bird).
+aos(0,come_off_between,conflict,bird).
+aos(0,come_off_between,great_conflict,bird).
 %% when the two armies were collected together the bat hesitated which to join.
 % dependencies.
 root(1,root,collect).
@@ -35,14 +35,14 @@ nsubj(1,join,which).
 mark(1,join,to).
 ccomp(1,hesitate,join).
 % relations.
-be(1,army,collect).
-be(1,army,when_collect).
-be(1,two_army,collect_together).
-be(1,two_army,collect).
-be(1,two_army,when_collect_together).
-be(1,army,collect_together).
-be(1,army,when_collect_together).
-be(1,two_army,when_collect).
+aos(1,be,army,collect).
+aos(1,be,army,when_collect).
+aos(1,be,two_army,collect_together).
+aos(1,be,two_army,collect).
+aos(1,be,two_army,when_collect_together).
+aos(1,be,army,collect_together).
+aos(1,be,army,when_collect_together).
+aos(1,be,two_army,when_collect).
 %% the birds that passed his perch said.
 % dependencies.
 root(2,root,say).
@@ -157,10 +157,10 @@ mark(10,fly,to).
 xcomp(10,have,fly).
 advmod(10,fly,away).
 % relations.
-all_turn_against(10,they,he).
-have(10,he,fly).
-have(10,he,fly_away).
-turn_against(10,they,he).
+aos(10,all_turn_against,they,he).
+aos(10,have,he,fly).
+aos(10,have,he,fly_away).
+aos(10,turn_against,they,he).
 %% he then went to the beasts but soon had to beat a retreat or else they would have torn him to pieces.
 % dependencies.
 root(11,root,go).
@@ -189,7 +189,7 @@ dobj(11,tear,he).
 case(11,piece,to).
 nmod:to(11,tear,piece).
 % relations.
-go_to(11,he,beast).
+aos(11,go_to,he,beast).
 %% ah.
 % dependencies.
 root(12,root,ah).

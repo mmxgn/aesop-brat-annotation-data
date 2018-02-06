@@ -7,8 +7,8 @@ cop(0,hunting,be).
 case(0,locust,for).
 nmod:for(0,hunting,locust).
 % relations.
-be_hunting_for(0,boy,locust).
-be(0,boy,hunting).
+aos(0,be_hunting_for,boy,locust).
+aos(0,be,boy,hunting).
 %% he had caught a goodly number when he saw a scorpion and mistaking him for a locust reached out his hand to take him.
 % dependencies.
 root(1,root,catch).
@@ -37,9 +37,9 @@ mark(1,take,to).
 acl:to(1,hand,take).
 dobj(1,take,he).
 % relations.
-have_catch(1,he,number).
-see(1,he,scorpion).
-have_catch(1,he,goodly_number).
+aos(1,have_catch,he,number).
+aos(1,see,he,scorpion).
+aos(1,have_catch,he,goodly_number).
 %% the scorpion showing his sting said if you had but touched me my friend you would have lost me and all your locusts too.
 % dependencies.
 root(2,root,say).
@@ -70,4 +70,4 @@ ccomp(2,say,locust).
 conj:and(2,lose,locust).
 advmod(2,locust,too).
 % relations.
-show(2,scorpion,he_sting).
+aos(2,show,scorpion,he_sting).

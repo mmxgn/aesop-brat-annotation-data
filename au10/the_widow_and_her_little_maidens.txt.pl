@@ -56,14 +56,14 @@ dobj(2,rouse,mistress).
 advmod(2,early,so).
 advmod(2,rouse,early).
 % relations.
-aggravate_by(2,maiden,labor_resolve).
-aggravate_by(2,maiden,excessive_labor_resolve).
-aggravate_by(2,maiden,excessive_labor).
-aggravate_by(2,maiden,such_labor_resolve).
-aggravate_by(2,maiden,such_labor).
-aggravate_by(2,maiden,such_excessive_labor).
-aggravate_by(2,maiden,labor).
-aggravate_by(2,maiden,such_excessive_labor_resolve).
+aos(2,aggravate_by,maiden,labor_resolve).
+aos(2,aggravate_by,maiden,excessive_labor_resolve).
+aos(2,aggravate_by,maiden,excessive_labor).
+aos(2,aggravate_by,maiden,such_labor_resolve).
+aos(2,aggravate_by,maiden,such_labor).
+aos(2,aggravate_by,maiden,such_excessive_labor).
+aos(2,aggravate_by,maiden,labor).
+aos(2,aggravate_by,maiden,such_excessive_labor_resolve).
 %% when they had done this they found that they had only prepared for themselves greater troubles for their mistress no longer hearing the hour from the cock woke them up to their work in the middle of the night.
 % dependencies.
 root(3,root,do).

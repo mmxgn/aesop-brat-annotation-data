@@ -25,13 +25,13 @@ det(0,hiding-place,a).
 amod(0,hiding-place,safe).
 dobj(0,show,hiding-place).
 % relations.
-show(0,he,safe_hiding-place).
-come_across(0,fox,woodcutter).
-show(0,he,hiding-place).
-show(0,he,he).
-fell(0,fox,oak).
-run_before(0,fox,hound).
-beg(0,fox,he).
+aos(0,show,he,safe_hiding-place).
+aos(0,come_across,fox,woodcutter).
+aos(0,show,he,hiding-place).
+aos(0,show,he,he).
+aos(0,fell,fox,oak).
+aos(0,run_before,fox,hound).
+aos(0,beg,fox,he).
 %% the woodcutter advised him to take shelter in his own hut so the fox crept in and hid himself in a corner.
 % dependencies.
 root(1,root,advise).
@@ -60,13 +60,13 @@ case(1,corner,in).
 det(1,corner,a).
 nmod:in(1,hide,corner).
 % relations.
-advise(1,woodcutter,he).
-hide(1,fox,himself).
-take(1,he,shelter).
-take_shelter(1,he,fox_creep).
-take_shelter_in(1,he,he_own_hut).
-take_shelter(1,he,fox_creep_in).
-take_shelter_in(1,he,he_hut).
+aos(1,advise,woodcutter,he).
+aos(1,hide,fox,himself).
+aos(1,take,he,shelter).
+aos(1,take_shelter,he,fox_creep).
+aos(1,take_shelter_in,he,he_own_hut).
+aos(1,take_shelter,he,fox_creep_in).
+aos(1,take_shelter_in,he,he_hut).
 %% the huntsman soon came up with his hounds and inquired of the woodcutter if he had seen the fox.
 % dependencies.
 root(2,root,come).
@@ -90,11 +90,11 @@ advcl:if(2,inquire,see).
 det(2,fox,the).
 dobj(2,see,fox).
 % relations.
-inquire_of(2,huntsman,woodcutter).
-soon_come_up_with(2,huntsman,he_hound).
-inquire(2,huntsman,he_have_see).
-have_see(2,he,fox).
-come_up_with(2,huntsman,he_hound).
+aos(2,inquire_of,huntsman,woodcutter).
+aos(2,soon_come_up_with,huntsman,he_hound).
+aos(2,inquire,huntsman,he_have_see).
+aos(2,have_see,he,fox).
+aos(2,come_up_with,huntsman,he_hound).
 %% he declared that he had not seen him and yet pointed all the time he was speaking to the hut where the fox lay hidden.
 % dependencies.
 root(3,root,declare).
@@ -199,9 +199,9 @@ nmod:without(6,leave,word).
 case(6,thanks,of).
 nmod:of(6,fellow,thanks).
 % relations.
-leave(6,you,I).
-yet_leave(6,you,I).
-owe(6,you,you_life).
+aos(6,leave,you,I).
+aos(6,yet_leave,you,I).
+aos(6,owe,you,you_life).
 %% the fox replied.
 % dependencies.
 root(7,root,reply).

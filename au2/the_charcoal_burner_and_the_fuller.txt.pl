@@ -11,9 +11,9 @@ nmod:poss(0,house,he).
 amod(0,house,own).
 nmod:in(0,carry,house).
 % relations.
-carry_in(0,charcoal-burner,he_house).
-carry_on(0,charcoal-burner,he_trade).
-carry_in(0,charcoal-burner,he_own_house).
+aos(0,carry_in,charcoal-burner,he_house).
+aos(0,carry_on,charcoal-burner,he_trade).
+aos(0,carry_in,charcoal-burner,he_own_house).
 %% one day he met a friend a fuller and entreated him to come and live with him saying that they should be far better neighbors and that their housekeeping expenses would be lessened.
 % dependencies.
 root(1,root,day).
@@ -56,9 +56,9 @@ auxpass(1,lessen,be).
 ccomp(1,say,lessen).
 conj:and(1,neighbor,lessen).
 % relations.
-entreat(1,he,he).
-meet(1,he,friend_fuller).
-meet(1,he,friend).
+aos(1,entreat,he,he).
+aos(1,meet,he,friend_fuller).
+aos(1,meet,he,friend).
 %% the fuller replied.
 % dependencies.
 root(2,root,reply).
@@ -91,15 +91,15 @@ case(3,charcoal,with).
 nmod:poss(3,charcoal,you).
 nmod:with(3,blacken,charcoal).
 % relations.
-be_impossible(3,arrangement,concern).
-immediately_blacken_again_with(3,you,you_charcoal).
-be(3,arrangement,impossible).
-blacken_with(3,you,you_charcoal).
-be_impossible_far(3,arrangement,concern).
-blacken_again_with(3,you,you_charcoal).
-be(3,arrangement,impossible_as_far).
-immediately_blacken_with(3,you,you_charcoal).
-be(3,i,concern).
+aos(3,be_impossible,arrangement,concern).
+aos(3,immediately_blacken_again_with,you,you_charcoal).
+aos(3,be,arrangement,impossible).
+aos(3,blacken_with,you,you_charcoal).
+aos(3,be_impossible_far,arrangement,concern).
+aos(3,blacken_again_with,you,you_charcoal).
+aos(3,be,arrangement,impossible_as_far).
+aos(3,immediately_blacken_with,you,you_charcoal).
+aos(3,be,i,concern).
 %% like will draw like.
 % dependencies.
 root(4,root,draw).

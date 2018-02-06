@@ -9,9 +9,9 @@ nmod:poss(0,complaint,he).
 amod(0,complaint,frequent).
 nmod:with(0,weary,complaint).
 % relations.
-weary(0,lion,jupiter).
-weary_jupiter_with(0,lion,he_frequent_complaint).
-weary_jupiter_with(0,lion,he_complaint).
+aos(0,weary,lion,jupiter).
+aos(0,weary_jupiter_with,lion,he_frequent_complaint).
+aos(0,weary_jupiter_with,lion,he_complaint).
 %% it is true o jupiter.
 % dependencies.
 root(1,root,jupiter).
@@ -20,8 +20,8 @@ cop(1,jupiter,be).
 amod(1,jupiter,true).
 compound(1,jupiter,o).
 % relations.
-be(1,it,true_o_jupiter).
-be(1,it,o_jupiter).
+aos(1,be,it,true_o_jupiter).
+aos(1,be,it,o_jupiter).
 %% he said.
 % dependencies.
 root(2,root,say).
@@ -44,12 +44,12 @@ conj:and(3,gigantic,powerful).
 case(3,attack,in).
 nmod:in(3,powerful,attack).
 % relations.
-be_gigantic_in(3,i,strength_handsome).
-be_in(3,strength_handsome,shape).
-be_gigantic_in(3,i,strength_in_shape).
-be_gigantic_in(3,i,strength_handsome_in_shape).
-be(3,i,gigantic).
-be_gigantic_in(3,i,strength).
+aos(3,be_gigantic_in,i,strength_handsome).
+aos(3,be_in,strength_handsome,shape).
+aos(3,be_gigantic_in,i,strength_in_shape).
+aos(3,be_gigantic_in,i,strength_handsome_in_shape).
+aos(3,be,i,gigantic).
+aos(3,be_gigantic_in,i,strength).
 %% i have jaws well provided with teeth and feet furnished with claws and i lord it over all the beasts of the forest and what a disgrace it is that being such as i am i should be frightened by the crowing of a cock.
 % dependencies.
 root(4,root,provide).
@@ -118,7 +118,7 @@ case(6,cause,without).
 det(6,cause,a).
 nmod:without(6,blame,cause).
 % relations.
-do_blame(6,you,I).
+aos(6,do_blame,you,I).
 %% i have given you all the attributes which i possess myself and your courage never fails you except in this one instance.
 % dependencies.
 root(7,root,give).
@@ -172,7 +172,7 @@ nsubj(8,die,he).
 aux(8,die,might).
 ccomp(8,wish,die).
 % relations.
-groan_on(8,lion,hearing).
+aos(8,groan_on,lion,hearing).
 %% as these thoughts passed through his mind he met an elephant and came close to hold a conversation with him.
 % dependencies.
 root(9,root,pass).
@@ -199,7 +199,7 @@ dobj(9,hold,conversation).
 case(9,he,with).
 nmod:with(9,hold,he).
 % relations.
-meet(9,he,elephant).
+aos(9,meet,he,elephant).
 %% after a time he observed that the elephant shook his ears very often and he inquired what was the matter and why his ears moved with such a tremor every now and then.
 % dependencies.
 root(10,root,observe).
@@ -239,16 +239,16 @@ cc(10,now,and).
 advmod(10,move,then).
 conj:and(10,now,then).
 % relations.
-move_now_with(10,he_ear,such_tremor).
-move_with(10,he_ear,such_tremor).
-move_now_and_then_with(10,he_ear,tremor).
-shake(10,elephant,he_ear).
-move_now_and_then_with(10,he_ear,such_tremor).
-shake_often(10,elephant,he_ear).
-shake_very_often(10,elephant,he_ear).
-move_with(10,he_ear,tremor).
-observe_after(10,he,time).
-move_now_with(10,he_ear,tremor).
+aos(10,move_now_with,he_ear,such_tremor).
+aos(10,move_with,he_ear,such_tremor).
+aos(10,move_now_and_then_with,he_ear,tremor).
+aos(10,shake,elephant,he_ear).
+aos(10,move_now_and_then_with,he_ear,such_tremor).
+aos(10,shake_often,elephant,he_ear).
+aos(10,shake_very_often,elephant,he_ear).
+aos(10,move_with,he_ear,tremor).
+aos(10,observe_after,he,time).
+aos(10,move_now_with,he_ear,tremor).
 %% just at that moment a gnat settled on the head of the elephant and he replied.
 % dependencies.
 root(11,root,moment).
@@ -269,8 +269,8 @@ nsubj(11,reply,he).
 acl:relcl(11,moment,reply).
 conj:and(11,settle,reply).
 % relations.
-settle_on(11,gnat,head).
-settle_on(11,gnat,head_of_elephant).
+aos(11,settle_on,gnat,head).
+aos(11,settle_on,gnat,head_of_elephant).
 %% do you see that little buzzing insect.
 % dependencies.
 root(12,root,do).
@@ -281,7 +281,7 @@ dep(12,buzz,little).
 xcomp(12,see,buzz).
 dobj(12,buzz,insect).
 % relations.
-see(12,you,buzz).
+aos(12,see,you,buzz).
 %% if it enters my ear my fate is sealed.
 % dependencies.
 root(13,root,enter).
@@ -294,7 +294,7 @@ nsubjpass(13,seal,fate).
 auxpass(13,seal,be).
 acl:relcl(13,ear,seal).
 % relations.
-be(13,my_fate,seal).
+aos(13,be,my_fate,seal).
 %% i should die presently.
 % dependencies.
 root(14,root,die).
@@ -333,7 +333,7 @@ conj:nor(16,huge,wish).
 nsubj(16,dead,myself).
 xcomp(16,wish,dead).
 % relations.
-be(16,beast,afraid).
+aos(16,be,beast,afraid).
 %% i find myself even as i am better off than the elephant.
 % dependencies.
 root(17,root,find).
@@ -349,5 +349,5 @@ case(17,elephant,than).
 det(17,elephant,the).
 nmod:than(17,off,elephant).
 % relations.
-find_even(17,better,myself).
-find(17,better,myself).
+aos(17,find_even,better,myself).
+aos(17,find,better,myself).

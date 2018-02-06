@@ -32,7 +32,7 @@ acl:relcl(1,spot,decorate).
 nmod:poss(1,skin,he).
 dobj(1,decorate,skin).
 % relations.
-exhibit(1,leopard,one).
+aos(1,exhibit,leopard,one).
 %% but the fox interrupting him said.
 % dependencies.
 root(2,root,fox).

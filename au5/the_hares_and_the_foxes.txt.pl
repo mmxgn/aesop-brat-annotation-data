@@ -18,9 +18,9 @@ mark(0,help,to).
 xcomp(0,call,help).
 dobj(0,help,they).
 % relations.
-wage(0,hare,war).
-wage_war_with(0,hare,eagle).
-call_upon(0,hare,fox).
+aos(0,wage,hare,war).
+aos(0,wage_war_with,hare,eagle).
+aos(0,call_upon,hare,fox).
 %% they replied.
 % dependencies.
 root(1,root,reply).

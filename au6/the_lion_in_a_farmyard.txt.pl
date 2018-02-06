@@ -6,7 +6,7 @@ nsubj(0,enter,lion).
 det(0,farmyard,a).
 dobj(0,enter,farmyard).
 % relations.
-enter(0,lion,farmyard).
+aos(0,enter,lion,farmyard).
 %% the farmer wishing to catch him shut the gate.
 % dependencies.
 root(1,root,farmer).
@@ -19,7 +19,7 @@ ccomp(1,catch,shut).
 det(1,gate,the).
 dobj(1,shut,gate).
 % relations.
-shut(1,he,gate).
+aos(1,shut,he,gate).
 %% when the lion found that he could not escape he flew upon the sheep and killed them and then attacked the oxen.
 % dependencies.
 root(2,root,find).
@@ -48,7 +48,7 @@ conj:and(2,find,attack).
 det(2,oxen,the).
 dobj(2,attack,oxen).
 % relations.
-attack(2,lion,oxen).
+aos(2,attack,lion,oxen).
 %% the farmer beginning to be alarmed for his own safety opened the gate and released the lion.
 % dependencies.
 root(3,root,open).
@@ -70,8 +70,8 @@ conj:and(3,open,release).
 det(3,lion,the).
 dobj(3,release,lion).
 % relations.
-release(3,farmer,lion).
-open(3,farmer,gate).
+aos(3,release,farmer,lion).
+aos(3,open,farmer,gate).
 %% on his departure the farmer grievously lamented the destruction of his sheep and oxen but his wife who had been a spectator to all that took place said.
 % dependencies.
 root(4,root,lament).
@@ -107,12 +107,12 @@ acl:relcl(4,all,take).
 nsubj(4,say,place).
 ccomp(4,take,say).
 % relations.
-grievously_lament_destruction_on(4,farmer,he_departure).
-grievously_lament(4,farmer,destruction_of_he_sheep).
-lament(4,farmer,destruction_of_he_sheep).
-lament(4,farmer,destruction).
-lament_destruction_on(4,farmer,he_departure).
-grievously_lament(4,farmer,destruction).
+aos(4,grievously_lament_destruction_on,farmer,he_departure).
+aos(4,grievously_lament,farmer,destruction_of_he_sheep).
+aos(4,lament,farmer,destruction_of_he_sheep).
+aos(4,lament,farmer,destruction).
+aos(4,lament_destruction_on,farmer,he_departure).
+aos(4,grievously_lament,farmer,destruction).
 %% on my word you are rightly served for how could you for a moment think of shutting up a lion along with you in your farmyard when you know that you shake in your shoes if you only hear his roar at a distance.
 % dependencies.
 root(5,root,serve).
@@ -160,15 +160,15 @@ case(5,distance,at).
 det(5,distance,a).
 nmod:at(5,hear,distance).
 % relations.
-be_rightly_serve_on(5,you,my_word).
-hear(5,you,he_roar).
-be_rightly_serve(5,you,how_could_you).
-is_in(5,lion,you_farmyard).
-be(5,you,serve).
-shake_in(5,you,you_shoe).
-only_hear(5,you,he_roar).
-be_serve(5,you,could_you).
-be_serve_on(5,you,my_word).
-be_serve(5,you,how_could_you).
-be_rightly_serve(5,you,could_you).
-be(5,you,rightly_serve).
+aos(5,be_rightly_serve_on,you,my_word).
+aos(5,hear,you,he_roar).
+aos(5,be_rightly_serve,you,how_could_you).
+aos(5,is_in,lion,you_farmyard).
+aos(5,be,you,serve).
+aos(5,shake_in,you,you_shoe).
+aos(5,only_hear,you,he_roar).
+aos(5,be_serve,you,could_you).
+aos(5,be_serve_on,you,my_word).
+aos(5,be_serve,you,how_could_you).
+aos(5,be_rightly_serve,you,could_you).
+aos(5,be,you,rightly_serve).

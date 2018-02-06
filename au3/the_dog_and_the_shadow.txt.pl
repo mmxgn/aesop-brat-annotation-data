@@ -26,11 +26,11 @@ dobj(0,eat,it).
 case(0,peace,in).
 nmod:in(0,eat,peace).
 % relations.
-get(0,dog,piece).
-carry_home(0,it,it).
-piece_of(0,dog,meat).
-get(0,dog,piece_of_meat).
-carry(0,it,it).
+aos(0,get,dog,piece).
+aos(0,carry_home,it,it).
+aos(0,piece_of,dog,meat).
+aos(0,get,dog,piece_of_meat).
+aos(0,carry,it,it).
 %% now on his way home he had to cross a plank lying across a running brook.
 % dependencies.
 root(1,root,have).
@@ -51,12 +51,12 @@ det(1,brook,a).
 amod(1,brook,run).
 nmod:across(1,lie,brook).
 % relations.
-cross(1,he,plank_lie_across_run_brook).
-have_on(1,he,now_he_way_home).
-cross(1,he,plank_lie).
-cross(1,he,plank).
-have_on(1,he,he_way_home).
-cross(1,he,plank_lie_across_brook).
+aos(1,cross,he,plank_lie_across_run_brook).
+aos(1,have_on,he,now_he_way_home).
+aos(1,cross,he,plank_lie).
+aos(1,cross,he,plank).
+aos(1,have_on,he,he_way_home).
+aos(1,cross,he,plank_lie_across_brook).
 %% as he crossed he looked down and saw his own shadow reflected in the water beneath.
 % dependencies.
 root(2,root,cross).
@@ -78,12 +78,12 @@ det(2,water,the).
 nmod:in(2,reflect,water).
 case(2,water,beneath).
 % relations.
-see(2,he,he_shadow_reflect).
-see(2,he,he_own_shadow).
-see(2,he,he_own_shadow_reflect_in_water_beneath).
-see(2,he,he_own_shadow_reflect).
-see(2,he,he_shadow).
-see(2,he,he_shadow_reflect_in_water_beneath).
+aos(2,see,he,he_shadow_reflect).
+aos(2,see,he,he_own_shadow).
+aos(2,see,he,he_own_shadow_reflect_in_water_beneath).
+aos(2,see,he,he_own_shadow_reflect).
+aos(2,see,he,he_shadow).
+aos(2,see,he,he_shadow_reflect_in_water_beneath).
 %% thinking it was another dog with another piece of meat he made up his mind to have that also.
 % dependencies.
 root(3,root,think).
@@ -106,7 +106,7 @@ acl:to(3,mind,have).
 dobj(3,have,that).
 advmod(3,have,also).
 % relations.
-is_with(3,dog,piece_of_meat).
+aos(3,is_with,dog,piece_of_meat).
 %% so he made a snap at the shadow in the water but as he opened his mouth the piece of meat fell out dropped into the water and was never seen more.
 % dependencies.
 root(4,root,so).

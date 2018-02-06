@@ -47,7 +47,7 @@ aux(2,ask,do).
 nsubj(2,ask,you).
 dobj(2,ask,I).
 % relations.
-do_ask(2,you,I).
+aos(2,do_ask,you,I).
 %% is it that the level way through the desert is closed.
 % dependencies.
 root(3,root,be).

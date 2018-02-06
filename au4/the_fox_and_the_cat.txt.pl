@@ -16,10 +16,10 @@ advcl:for(0,boast,escape).
 nmod:poss(0,enemy,its).
 dobj(0,escape,enemy).
 % relations.
-be_boast_to(0,fox,cat_of_its_clever_device).
-be_boast_to(0,fox,cat_of_its_device).
-be_boast_to(0,fox,cat).
-escape(0,fox,its_enemy).
+aos(0,be_boast_to,fox,cat_of_its_clever_device).
+aos(0,be_boast_to,fox,cat_of_its_device).
+aos(0,be_boast_to,fox,cat).
+aos(0,escape,fox,its_enemy).
 %% i have a whole bag of tricks.
 % dependencies.
 root(1,root,have).
@@ -30,10 +30,10 @@ dobj(1,have,bag).
 case(1,trick,of).
 nmod:of(1,bag,trick).
 % relations.
-have(1,i,bag_of_trick).
-have(1,i,whole_bag_of_trick).
-have(1,i,whole_bag).
-have(1,i,bag).
+aos(1,have,i,bag_of_trick).
+aos(1,have,i,whole_bag_of_trick).
+aos(1,have,i,whole_bag).
+aos(1,have,i,bag).
 %% he said.
 % dependencies.
 root(2,root,say).
@@ -58,7 +58,7 @@ nsubj(4,have,i).
 advmod(4,one,only).
 dobj(4,have,one).
 % relations.
-have(4,i,only_one).
+aos(4,have,i,only_one).
 %% said the cat.
 % dependencies.
 root(5,root,say).
@@ -75,8 +75,8 @@ advmod(6,manage,generally).
 case(6,that,with).
 nmod:with(6,manage,that).
 % relations.
-can_manage_with(6,i,that).
-can_generally_manage_with(6,i,that).
+aos(6,can_manage_with,i,that).
+aos(6,can_generally_manage_with,i,that).
 %% just at that moment they heard the cry of a pack of hounds coming towards them and the cat immediately scampered up a tree and hid herself in the boughs.
 % dependencies.
 root(7,root,moment).
@@ -113,18 +113,18 @@ case(7,bough,in).
 det(7,bough,the).
 nmod:in(7,hide,bough).
 % relations.
-hear(7,they,cry_of_pack).
-cry_of(7,they,pack_of_hound).
-hear(7,they,cry).
-immediately_scamper_up(7,cat,tree).
-scamper_up(7,cat,tree).
-hide(7,cat,herself).
-hear(7,they,cry_of_pack_of_hound).
-cry_of(7,they,pack_of_hound_come).
-cry_of(7,they,pack).
-hear(7,they,cry_of_pack_of_hound_come).
-cry_of(7,they,pack_of_hound_come_towards_they).
-hear(7,they,cry_of_pack_of_hound_come_towards_they).
+aos(7,hear,they,cry_of_pack).
+aos(7,cry_of,they,pack_of_hound).
+aos(7,hear,they,cry).
+aos(7,immediately_scamper_up,cat,tree).
+aos(7,scamper_up,cat,tree).
+aos(7,hide,cat,herself).
+aos(7,hear,they,cry_of_pack_of_hound).
+aos(7,cry_of,they,pack_of_hound_come).
+aos(7,cry_of,they,pack).
+aos(7,hear,they,cry_of_pack_of_hound_come).
+aos(7,cry_of,they,pack_of_hound_come_towards_they).
+aos(7,hear,they,cry_of_pack_of_hound_come_towards_they).
 %% this is my plan.
 % dependencies.
 root(8,root,plan).
@@ -132,7 +132,7 @@ nsubj(8,plan,this).
 cop(8,plan,be).
 nmod:poss(8,plan,my).
 % relations.
-be(8,this,my_plan).
+aos(8,be,this,my_plan).
 %% said the cat.
 % dependencies.
 root(9,root,say).
@@ -149,7 +149,7 @@ nsubj:xsubj(10,do,you).
 mark(10,do,to).
 xcomp(10,go,do).
 % relations.
-be_go(10,you,do).
+aos(10,be_go,you,do).
 %% the fox thought first of one way then of another and while he was debating the hounds came nearer and nearer and at last the fox in his confusion was caught up by the hounds and soon killed by the huntsmen.
 % dependencies.
 root(11,root,think).
@@ -197,20 +197,20 @@ case(11,huntsman,by).
 det(11,huntsman,the).
 nmod:by(11,kill,huntsman).
 % relations.
-think_first_of(11,fox,one_way).
-kill_by(11,fox,huntsman).
-be_debate(11,he,hound_come_nearer_nearer).
-soon_kill_by(11,fox,huntsman).
-be_in(11,fox,he_confusion).
-be_catch_up_by(11,fox,hound).
-come_nearer(11,hound,nearer).
-think_of(11,fox,one_way_then_of_another).
-think_first_of(11,fox,one_way_then_of_another).
-be_catch_up_at(11,fox,last).
-think_first_of(11,fox,one_way_of_another).
-think_of(11,fox,one_way).
-think_of(11,fox,one_way_of_another).
-be_debate(11,he,hound_come).
+aos(11,think_first_of,fox,one_way).
+aos(11,kill_by,fox,huntsman).
+aos(11,be_debate,he,hound_come_nearer_nearer).
+aos(11,soon_kill_by,fox,huntsman).
+aos(11,be_in,fox,he_confusion).
+aos(11,be_catch_up_by,fox,hound).
+aos(11,come_nearer,hound,nearer).
+aos(11,think_of,fox,one_way_then_of_another).
+aos(11,think_first_of,fox,one_way_then_of_another).
+aos(11,be_catch_up_at,fox,last).
+aos(11,think_first_of,fox,one_way_of_another).
+aos(11,think_of,fox,one_way).
+aos(11,think_of,fox,one_way_of_another).
+aos(11,be_debate,he,hound_come).
 %% miss puss who had been looking on said.
 % dependencies.
 root(12,root,miss).

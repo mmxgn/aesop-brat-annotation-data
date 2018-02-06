@@ -20,7 +20,7 @@ nsubj(0,do,he).
 advmod(0,do,once).
 advcl:as(0,catch,do).
 % relations.
-inactive_from(0,weasel,age).
+aos(0,inactive_from,weasel,age).
 %% he therefore rolled himself in flour and lay down in a dark corner.
 % dependencies.
 root(1,root,roll).
@@ -38,10 +38,10 @@ det(1,corner,a).
 amod(1,corner,dark).
 nmod:in(1,lay,corner).
 % relations.
-lay_down_in(1,he,dark_corner).
-lay_down_in(1,he,corner).
-therefore_roll(1,he,himself).
-roll(1,he,himself).
+aos(1,lay_down_in,he,dark_corner).
+aos(1,lay_down_in,he,corner).
+aos(1,therefore_roll,he,himself).
+aos(1,roll,he,himself).
 %% a mouse supposing him to be food leaped upon him and was instantly caught and squeezed to death.
 % dependencies.
 root(2,root,leap).
@@ -66,12 +66,12 @@ conj:and(2,catch,squeeze).
 case(2,death,to).
 nmod:to(2,catch,death).
 % relations.
-be_instantly_catch_to(2,mouse,death).
-leap_upon(2,mouse,he).
-be_catch_to(2,mouse,death).
-be(2,mouse,catch).
-be(2,mouse,instantly_catch).
-be(2,he,food).
+aos(2,be_instantly_catch_to,mouse,death).
+aos(2,leap_upon,mouse,he).
+aos(2,be_catch_to,mouse,death).
+aos(2,be,mouse,catch).
+aos(2,be,mouse,instantly_catch).
+aos(2,be,he,food).
 %% another perished in a similar manner and then a third and still others after them.
 % dependencies.
 root(3,root,perish).
@@ -92,12 +92,12 @@ dobj(3,perish,other).
 case(3,they,after).
 nmod:after(3,perish,they).
 % relations.
-perish(3,another,in_similar_manner_other).
-perish(3,another,other).
-perish_other_after(3,another,they).
-perish(3,another,in_manner_other).
-perish_after(3,another,they).
-is_in(3,other,similar_manner).
+aos(3,perish,another,in_similar_manner_other).
+aos(3,perish,another,other).
+aos(3,perish_other_after,another,they).
+aos(3,perish,another,in_manner_other).
+aos(3,perish_after,another,they).
+aos(3,is_in,other,similar_manner).
 %% a very old mouse who had escaped many a trap and snare observed from a safe distance the trick of his crafty foe and said.
 % dependencies.
 root(4,root,mouse).
@@ -131,13 +131,13 @@ cc(4,escape,and).
 acl:relcl(4,mouse,say).
 conj:and(4,escape,say).
 % relations.
-observe_from(4,snare,distance).
-observe_trick_from(4,snare,distance).
-observe_trick_from(4,snare,safe_distance).
-observe_from(4,snare,safe_distance).
-observe(4,snare,trick_of_he_foe).
-observe(4,snare,trick_of_he_crafty_foe).
-observe(4,snare,trick).
+aos(4,observe_from,snare,distance).
+aos(4,observe_trick_from,snare,distance).
+aos(4,observe_trick_from,snare,safe_distance).
+aos(4,observe_from,snare,safe_distance).
+aos(4,observe,snare,trick_of_he_foe).
+aos(4,observe,snare,trick_of_he_crafty_foe).
+aos(4,observe,snare,trick).
 %% ah.
 % dependencies.
 root(5,root,ah).

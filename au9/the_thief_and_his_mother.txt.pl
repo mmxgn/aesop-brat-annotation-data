@@ -19,11 +19,11 @@ case(0,mother,to).
 nmod:poss(0,mother,he).
 nmod:to(0,home,mother).
 % relations.
-take(0,boy,it).
-steal_lesson-book_from(0,boy,one_he_schoolfellow).
-steal(0,boy,lesson-book).
-take_home(0,boy,it).
-steal_lesson-book_from(0,boy,one_of_he_schoolfellow).
+aos(0,take,boy,it).
+aos(0,steal_lesson-book_from,boy,one_he_schoolfellow).
+aos(0,steal,boy,lesson-book).
+aos(0,take_home,boy,it).
+aos(0,steal_lesson-book_from,boy,one_of_he_schoolfellow).
 %% she not only abstained from beating him but encouraged him.
 % dependencies.
 root(1,root,abstain).
@@ -38,8 +38,8 @@ cc(1,abstain,but).
 conj:but(1,abstain,encourage).
 dobj(1,encourage,he).
 % relations.
-beat(1,she,he).
-encourage(1,she,he).
+aos(1,beat,she,he).
+aos(1,encourage,she,he).
 %% he next time stole a cloak and brought it to her and she again commended him.
 % dependencies.
 root(2,root,steal).
@@ -60,12 +60,12 @@ advmod(2,commend,again).
 conj:and(2,steal,commend).
 dobj(2,commend,he).
 % relations.
-steal_cloak_at_time(2,he,time).
-bring(2,he,it).
-commend(2,she,he).
-steal_cloak_at_time(2,he,next_time).
-steal(2,he,cloak).
-again_commend(2,she,he).
+aos(2,steal_cloak_at_time,he,time).
+aos(2,bring,he,it).
+aos(2,commend,she,he).
+aos(2,steal_cloak_at_time,he,next_time).
+aos(2,steal,he,cloak).
+aos(2,again_commend,she,he).
 %% the youth advanced to adulthood proceeded to steal things of still greater value.
 % dependencies.
 root(3,root,advance).
@@ -110,17 +110,17 @@ case(4,execution,of).
 amod(4,execution,public).
 nmod:of(4,place,execution).
 % relations.
-be(4,he,catch).
-be_catch_in(4,he,very_act).
-be(4,he,lead_away).
-be_catch_in(4,he,act).
-be_lead_to(4,he,place_of_execution).
-be_lead_to(4,he,place_of_public_execution).
-be_lead_away_to(4,he,place_of_public_execution).
-be_lead_away_to(4,he,place_of_execution).
-be_lead_to(4,he,place).
-be_lead_away_to(4,he,place).
-be(4,he,lead).
+aos(4,be,he,catch).
+aos(4,be_catch_in,he,very_act).
+aos(4,be,he,lead_away).
+aos(4,be_catch_in,he,act).
+aos(4,be_lead_to,he,place_of_execution).
+aos(4,be_lead_to,he,place_of_public_execution).
+aos(4,be_lead_away_to,he,place_of_public_execution).
+aos(4,be_lead_away_to,he,place_of_execution).
+aos(4,be_lead_to,he,place).
+aos(4,be_lead_away_to,he,place).
+aos(4,be,he,lead).
 %% his mother followed in the crowd and violently beat her breast in sorrow whereupon the young man said.
 % dependencies.
 root(5,root,follow).
@@ -143,9 +143,9 @@ amod(5,man,young).
 nsubj(5,say,man).
 dep(5,beat,say).
 % relations.
-beat(5,he_mother,she_breast).
-follow_in(5,he_mother,crowd).
-violently_beat(5,he_mother,she_breast).
+aos(5,beat,he_mother,she_breast).
+aos(5,follow_in,he_mother,crowd).
+aos(5,violently_beat,he_mother,she_breast).
 %% i wish to say something to my mother in her ear.
 % dependencies.
 root(6,root,wish).
@@ -161,15 +161,15 @@ case(6,ear,in).
 nmod:poss(6,ear,she).
 nmod:in(6,mother,ear).
 % relations.
-say(6,i,something).
-wish(6,i,say).
-say_something_to(6,i,my_mother_in_she_ear).
-wish(6,i,say_to_my_mother_in_she_ear).
-say_to(6,i,my_mother).
-is_in(6,my_mother,she_ear).
-wish(6,i,say_to_my_mother).
-say_something_to(6,i,my_mother).
-say_to(6,i,my_mother_in_she_ear).
+aos(6,say,i,something).
+aos(6,wish,i,say).
+aos(6,say_something_to,i,my_mother_in_she_ear).
+aos(6,wish,i,say_to_my_mother_in_she_ear).
+aos(6,say_to,i,my_mother).
+aos(6,is_in,my_mother,she_ear).
+aos(6,wish,i,say_to_my_mother).
+aos(6,say_something_to,i,my_mother).
+aos(6,say_to,i,my_mother_in_she_ear).
 %% she came close to him and he quickly seized her ear with his teeth and bit it off.
 % dependencies.
 root(7,root,come).
@@ -193,7 +193,7 @@ advcl:to(7,close,it).
 conj:and(7,seize,it).
 advcl(7,come,off).
 % relations.
-come(7,she,close).
+aos(7,come,she,close).
 %% the mother upbraided him as an unnatural child whereon he replied.
 % dependencies.
 root(8,root,upbraid).
@@ -208,7 +208,7 @@ nmod:as(8,upbraid,whereon).
 nsubj(8,reply,he).
 acl:relcl(8,whereon,reply).
 % relations.
-upbraid(8,mother,he).
+aos(8,upbraid,mother,he).
 %% ah.
 % dependencies.
 root(9,root,ah).
@@ -251,10 +251,10 @@ det(10,death,a).
 amod(10,death,disgraceful).
 nmod:to(10,lead,death).
 % relations.
-be(10,i,thus_lead).
-be(10,i,lead).
-be_lead_to(10,i,disgraceful_death).
-be_lead_to(10,i,death).
-be_thus_lead_to(10,i,disgraceful_death).
-have_beat(10,you,I).
-be_thus_lead_to(10,i,death).
+aos(10,be,i,thus_lead).
+aos(10,be,i,lead).
+aos(10,be_lead_to,i,disgraceful_death).
+aos(10,be_lead_to,i,death).
+aos(10,be_thus_lead_to,i,disgraceful_death).
+aos(10,have_beat,you,I).
+aos(10,be_thus_lead_to,i,death).

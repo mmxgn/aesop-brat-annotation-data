@@ -31,7 +31,7 @@ nsubj(0,asleep,bird).
 cop(0,asleep,be).
 advcl(0,have,asleep).
 % relations.
-be(0,singing_bird,confine).
+aos(0,be,singing_bird,confine).
 %% one night a bat came and clung to the bars of the cage and asked the bird why she was silent by day and sang only at night.
 % dependencies.
 root(1,root,night).
@@ -69,14 +69,14 @@ advmod(1,sing,only).
 case(1,night,at).
 nmod:at(1,sing,night).
 % relations.
-come_to(1,bat,bar).
-be(1,she,why_silent_by_day).
-be(1,she,why_silent).
-be(1,she,silent).
-sing_only_at(1,she,night).
-come_of(1,bat,cage).
-sing_at(1,she,night).
-be_silent_by(1,she,day).
+aos(1,come_to,bat,bar).
+aos(1,be,she,why_silent_by_day).
+aos(1,be,she,why_silent).
+aos(1,be,she,silent).
+aos(1,sing_only_at,she,night).
+aos(1,come_of,bat,cage).
+aos(1,sing_at,she,night).
+aos(1,be_silent_by,she,day).
 %% i have a very good reason for doing so.
 % dependencies.
 root(2,root,have).
@@ -89,12 +89,12 @@ mark(2,do,for).
 acl:for(2,reason,do).
 advmod(2,do,so).
 % relations.
-have(2,i,reason_do).
-have(2,i,good_reason_do_so).
-have(2,i,very_good_reason_do).
-have(2,i,good_reason_do).
-have(2,i,very_good_reason_do_so).
-have(2,i,reason_do_so).
+aos(2,have,i,reason_do).
+aos(2,have,i,good_reason_do_so).
+aos(2,have,i,very_good_reason_do).
+aos(2,have,i,good_reason_do).
+aos(2,have,i,very_good_reason_do_so).
+aos(2,have,i,reason_do_so).
 %% said the bird.
 % dependencies.
 root(3,root,say).
@@ -134,8 +134,8 @@ cc(4,be,and).
 conj:and(4,be,catch).
 dobj(4,catch,I).
 % relations.
-is_in(4,singing,daytime).
-catch(4,it,I).
+aos(4,is_in,singing,daytime).
+aos(4,catch,it,I).
 %% since then i have never sung except by night.
 % dependencies.
 root(5,root,sing).

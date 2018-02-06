@@ -25,7 +25,7 @@ case(1,fox,except).
 det(1,fox,the).
 nmod:except(1,visit,fox).
 % relations.
-visit(1,beast,they_king).
+aos(1,visit,beast,they_king).
 %% the wolf therefore thinking that he had a capital opportunity accused the fox to the lion of not paying any respect to him who had the rule over them all and of not coming to visit him.
 % dependencies.
 root(2,root,accuse).
@@ -68,7 +68,7 @@ mark(2,visit,to).
 xcomp(2,come,visit).
 dobj(2,visit,he).
 % relations.
-accuse(2,wolf,fox).
+aos(2,accuse,wolf,fox).
 %% at that very moment the fox came in and heard these last words of the wolf.
 % dependencies.
 root(3,root,moment).
@@ -90,12 +90,12 @@ case(3,wolf,of).
 det(3,wolf,the).
 nmod:of(3,word,wolf).
 % relations.
-hear(3,fox,last_word_of_wolf).
-hear(3,fox,word_of_wolf).
-hear(3,fox,word).
-hear(3,fox,last_word).
-word_of(3,hear,wolf).
-last_word_of(3,hear,wolf).
+aos(3,hear,fox,last_word_of_wolf).
+aos(3,hear,fox,word_of_wolf).
+aos(3,hear,fox,word).
+aos(3,hear,fox,last_word).
+aos(3,word_of,hear,wolf).
+aos(3,last_word_of,hear,wolf).
 %% the lion roaring out in a rage against him the fox sought an opportunity to defend himself and said.
 % dependencies.
 root(4,root,lion).
@@ -120,8 +120,8 @@ cc(4,seek,and).
 acl:relcl(4,rage,say).
 conj:and(4,seek,say).
 % relations.
-defend(4,fox,himself).
-seek(4,fox,opportunity).
+aos(4,defend,fox,himself).
+aos(4,seek,fox,opportunity).
 %% and who of all those who have come to you have benefited you so much as i who have traveled from place to place in every direction and have sought and learnt from the physicians the means of healing you.
 % dependencies.
 root(5,root,benefit).
@@ -170,7 +170,7 @@ case(5,healing,of).
 nmod:of(5,means,healing).
 dobj(5,travel,you).
 % relations.
-is_in(5,place,direction).
+aos(5,is_in,place,direction).
 %% ' the lion commanded him immediately to tell him the cure when he replied.
 % dependencies.
 root(6,root,command).
@@ -188,9 +188,9 @@ advmod(6,reply,when).
 nsubj(6,reply,he).
 ccomp(6,cure,reply).
 % relations.
-command(6,cure,he).
-command_immediately(6,cure,he).
-tell(6,cure,he).
+aos(6,command,cure,he).
+aos(6,command_immediately,cure,he).
+aos(6,tell,cure,he).
 %% you must flay a wolf alive and wrap his skin yet warm around you.
 % dependencies.
 root(7,root,flay).
@@ -209,13 +209,13 @@ xcomp(7,wrap,warm).
 case(7,you,around).
 nmod:around(7,warm,you).
 % relations.
-wrap(7,you,he_skin_warm).
-wrap(7,you,he_skin_yet_warm_around_you).
-warm_around(7,he_skin,you).
-wrap(7,you,he_skin_warm_around_you).
-must_flay(7,you,wolf_alive).
-yet_warm_around(7,he_skin,you).
-wrap(7,you,he_skin_yet_warm).
+aos(7,wrap,you,he_skin_warm).
+aos(7,wrap,you,he_skin_yet_warm_around_you).
+aos(7,warm_around,he_skin,you).
+aos(7,wrap,you,he_skin_warm_around_you).
+aos(7,must_flay,you,wolf_alive).
+aos(7,yet_warm_around,he_skin,you).
+aos(7,wrap,you,he_skin_yet_warm).
 %% the wolf was at once taken and flayed.
 % dependencies.
 root(8,root,take).
@@ -228,8 +228,8 @@ advmod(8,take,once).
 cc(8,take,and).
 conj:and(8,take,flay).
 % relations.
-be(8,wolf,at_once_take).
-be(8,wolf,take).
+aos(8,be,wolf,at_once_take).
+aos(8,be,wolf,take).
 %% whereon the fox turning to him said with a smile.
 % dependencies.
 root(9,root,whereon).
@@ -243,8 +243,8 @@ case(9,smile,with).
 det(9,smile,a).
 nmod:with(9,say,smile).
 % relations.
-say_with(9,fox,smile).
-turn_to(9,fox,he).
+aos(9,say_with,fox,smile).
+aos(9,turn_to,fox,he).
 %% you should have moved your master not to ill but to good will.
 % dependencies.
 root(10,root,move).

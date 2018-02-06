@@ -12,7 +12,7 @@ case(0,filbert,full).
 case(0,filbert,of).
 nmod:of(0,pitcher,filbert).
 % relations.
-put(0,boy,he_hand).
+aos(0,put,boy,he_hand).
 %% he grasped as many as he could possibly hold but when he tried to pull out his hand he was prevented from doing so by the neck of the pitcher.
 % dependencies.
 root(1,root,grasp).
@@ -47,20 +47,20 @@ case(1,pitcher,of).
 det(1,pitcher,the).
 nmod:of(1,neck,pitcher).
 % relations.
-be_prevent(1,he,do_so).
-do_so_by(1,he,neck_of_pitcher).
-be_prevent(1,he,do_by_neck_of_pitcher).
-pull_out(1,he,he_hand).
-do_by(1,he,neck).
-grasp(1,he,as_many).
-be_prevent(1,he,do).
-grasp(1,he,many).
-be_prevent(1,he,do_by_neck).
-do_so_by(1,he,neck).
-be_prevent(1,he,do_so_by_neck_of_pitcher).
-do_by(1,he,neck_of_pitcher).
-be(1,he,prevent).
-be_prevent(1,he,do_so_by_neck).
+aos(1,be_prevent,he,do_so).
+aos(1,do_so_by,he,neck_of_pitcher).
+aos(1,be_prevent,he,do_by_neck_of_pitcher).
+aos(1,pull_out,he,he_hand).
+aos(1,do_by,he,neck).
+aos(1,grasp,he,as_many).
+aos(1,be_prevent,he,do).
+aos(1,grasp,he,many).
+aos(1,be_prevent,he,do_by_neck).
+aos(1,do_so_by,he,neck).
+aos(1,be_prevent,he,do_so_by_neck_of_pitcher).
+aos(1,do_by,he,neck_of_pitcher).
+aos(1,be,he,prevent).
+aos(1,be_prevent,he,do_so_by_neck).
 %% unwilling to lose his filberts and yet unable to withdraw his hand he burst into tears and bitterly lamented his disappointment.
 % dependencies.
 root(2,root,unwilling).
@@ -88,9 +88,9 @@ conj:and(2,burst,lament).
 nmod:poss(2,disappointment,he).
 dobj(2,lament,disappointment).
 % relations.
-burst_into(2,he,tear).
-bitterly_lament(2,he,he_disappointment).
-lament(2,he,he_disappointment).
+aos(2,burst_into,he,tear).
+aos(2,bitterly_lament,he,he_disappointment).
+aos(2,lament,he,he_disappointment).
 %% a bystander said to him.
 % dependencies.
 root(3,root,say).
@@ -99,7 +99,7 @@ nsubj(3,say,bystander).
 case(3,he,to).
 nmod:to(3,say,he).
 % relations.
-say_to(3,bystander,he).
+aos(3,say_to,bystander,he).
 %% be satisfied with half the quantity and you will readily draw out your hand.
 % dependencies.
 root(4,root,satisfy).

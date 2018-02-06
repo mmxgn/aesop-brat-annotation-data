@@ -14,19 +14,19 @@ nmod:in(0,morning,search).
 case(0,food,of).
 nmod:of(0,search,food).
 % relations.
-be_prowl_in(0,famished_wolf,morning_in_search).
-be_prowl_in(0,famished_wolf,morning_in_search_of_food).
-be_prowl_in(0,wolf,morning).
-is_in(0,morning,search_of_food).
-be_prowl_in(0,famished_wolf,morning).
-be_prowl_about_in(0,famished_wolf,morning).
-be_prowl_about_in(0,wolf,morning_in_search_of_food).
-be_prowl_in(0,wolf,morning_in_search_of_food).
-be_prowl_in(0,wolf,morning_in_search).
-be_prowl_about_in(0,famished_wolf,morning_in_search_of_food).
-be_prowl_about_in(0,wolf,morning).
-be_prowl_about_in(0,wolf,morning_in_search).
-be_prowl_about_in(0,famished_wolf,morning_in_search).
+aos(0,be_prowl_in,famished_wolf,morning_in_search).
+aos(0,be_prowl_in,famished_wolf,morning_in_search_of_food).
+aos(0,be_prowl_in,wolf,morning).
+aos(0,is_in,morning,search_of_food).
+aos(0,be_prowl_in,famished_wolf,morning).
+aos(0,be_prowl_about_in,famished_wolf,morning).
+aos(0,be_prowl_about_in,wolf,morning_in_search_of_food).
+aos(0,be_prowl_in,wolf,morning_in_search_of_food).
+aos(0,be_prowl_in,wolf,morning_in_search).
+aos(0,be_prowl_about_in,famished_wolf,morning_in_search_of_food).
+aos(0,be_prowl_about_in,wolf,morning).
+aos(0,be_prowl_about_in,wolf,morning_in_search).
+aos(0,be_prowl_about_in,famished_wolf,morning_in_search).
 %% as he passed the door of a cottage built in the forest he heard a mother say to her child.
 % dependencies.
 root(1,root,pass).
@@ -50,10 +50,10 @@ case(1,child,to).
 nmod:poss(1,child,she).
 nmod:to(1,say,child).
 % relations.
-pass(1,he,door_of_cottage_build).
-pass(1,he,door_of_cottage).
-pass(1,he,door).
-say_to(1,mother,she_child).
+aos(1,pass,he,door_of_cottage_build).
+aos(1,pass,he,door_of_cottage).
+aos(1,pass,he,door).
+aos(1,say_to,mother,she_child).
 %% be quiet or i will throw you out of the window and the wolf shall eat you.
 % dependencies.
 root(2,root,quiet).
@@ -87,7 +87,7 @@ case(3,door,at).
 det(3,door,the).
 nmod:at(3,wait,door).
 % relations.
-sit(3,wolf,day_wait_at_door).
+aos(3,sit,wolf,day_wait_at_door).
 %% in the evening he heard the same woman fondling her child and saying.
 % dependencies.
 root(4,root,hear).
@@ -105,10 +105,10 @@ cc(4,fondle,and).
 dep(4,hear,say).
 conj:and(4,fondle,say).
 % relations.
-hear(4,he,same_woman).
-hear(4,he,woman).
-hear_woman_in(4,he,evening).
-fondle(4,he,she_child).
+aos(4,hear,he,same_woman).
+aos(4,hear,he,woman).
+aos(4,hear_woman_in,he,evening).
+aos(4,fondle,he,she_child).
 %% you are quiet now and if the wolf should come we will kill him.
 % dependencies.
 root(5,root,quiet).
@@ -126,9 +126,9 @@ aux(5,kill,will).
 conj:and(5,quiet,kill).
 dobj(5,kill,he).
 % relations.
-be(5,you,quiet_now).
-be(5,you,quiet).
-will_kill(5,we,he).
+aos(5,be,you,quiet_now).
+aos(5,be,you,quiet).
+aos(5,will_kill,we,he).
 %% the wolf hearing these words went home gasping with cold and hunger.
 % dependencies.
 root(6,root,hearing).
@@ -145,9 +145,9 @@ cc(6,cold,and).
 nmod:with(6,gasp,hunger).
 conj:and(6,cold,hunger).
 % relations.
-go(6,word,home).
-go(6,word,home_gasp).
-go(6,word,home_gasp_with_cold).
+aos(6,go,word,home).
+aos(6,go,word,home_gasp).
+aos(6,go,word,home_gasp_with_cold).
 %% when he reached his den mistress wolf inquired of him why he returned wearied and supperless so contrary to his wont.
 % dependencies.
 root(7,root,reach).
@@ -173,13 +173,13 @@ case(7,wont,to).
 nmod:poss(7,wont,he).
 nmod:to(7,return,wont).
 % relations.
-return(7,he,wearied).
-return_to(7,he,he_wont).
-return_contrary_to(7,he,he_wont).
-return_contrary(7,he,wearied).
-inquire_of(7,he_den_mistress_wolf,he).
-return_so_contrary(7,he,wearied).
-return_so_contrary_to(7,he,he_wont).
+aos(7,return,he,wearied).
+aos(7,return_to,he,he_wont).
+aos(7,return_contrary_to,he,he_wont).
+aos(7,return_contrary,he,wearied).
+aos(7,inquire_of,he_den_mistress_wolf,he).
+aos(7,return_so_contrary,he,wearied).
+aos(7,return_so_contrary_to,he,he_wont).
 %% he replied.
 % dependencies.
 root(8,root,reply).
@@ -203,6 +203,6 @@ case(10,woman,of).
 det(10,woman,a).
 nmod:of(10,word,woman).
 % relations.
-give(10,i,credence).
-give_credence_to(10,i,word_of_woman).
-give_credence_to(10,i,word).
+aos(10,give,i,credence).
+aos(10,give_credence_to,i,word_of_woman).
+aos(10,give_credence_to,i,word).

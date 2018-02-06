@@ -25,8 +25,8 @@ nsubj:xsubj(0,fly,she).
 mark(0,fly,to).
 xcomp(0,teach,fly).
 % relations.
-lazily_bask_in(0,tortoise,sun).
-bask_in(0,tortoise,sun).
+aos(0,lazily_bask_in,tortoise,sun).
+aos(0,bask_in,tortoise,sun).
 %% an eagle hovering near heard her lamentation and demanded what reward she would give him if he would take her aloft and float her in the air.
 % dependencies.
 root(1,root,eagle).
@@ -60,10 +60,10 @@ case(1,air,in).
 det(1,air,the).
 nmod:in(1,float,air).
 % relations.
-would_take(1,he,she).
-would_take_aloft(1,he,she).
-float(1,he,she).
-would_give(1,she,he).
+aos(1,would_take,he,she).
+aos(1,would_take_aloft,he,she).
+aos(1,float,he,she).
+aos(1,would_give,she,he).
 %% i will give you.
 % dependencies.
 root(2,root,give).
@@ -71,7 +71,7 @@ nsubj(2,give,i).
 aux(2,give,will).
 dobj(2,give,you).
 % relations.
-will_give(2,i,you).
+aos(2,will_give,i,you).
 %% she said.
 % dependencies.
 root(3,root,say).
@@ -98,7 +98,7 @@ mark(5,fly,to).
 xcomp(5,teach,fly).
 advmod(5,fly,then).
 % relations.
-will_teach(5,i,you).
+aos(5,will_teach,i,you).
 %% said the eagle.
 % dependencies.
 root(6,root,say).
@@ -139,15 +139,15 @@ dobj(7,dash,shell).
 case(7,piece,to).
 nmod:to(7,dash,piece).
 % relations.
-fall_on(7,she,mountain).
-carry(7,he,she_suddenly_he_let).
-carry(7,he,she_suddenly_let).
-fall_on(7,she,lofty_mountain).
-carry(7,he,suddenly_he_let).
-carry(7,he,she_let).
-carry(7,he,he_let).
-dash(7,she,she_shell).
-carry(7,he,she_he_let).
+aos(7,fall_on,she,mountain).
+aos(7,carry,he,she_suddenly_he_let).
+aos(7,carry,he,she_suddenly_let).
+aos(7,fall_on,she,lofty_mountain).
+aos(7,carry,he,suddenly_he_let).
+aos(7,carry,he,she_let).
+aos(7,carry,he,he_let).
+aos(7,dash,she,she_shell).
+aos(7,carry,he,she_he_let).
 %% the tortoise exclaimed in the moment of death.
 % dependencies.
 root(8,root,exclaim).
@@ -159,8 +159,8 @@ nmod:in(8,exclaim,moment).
 case(8,death,of).
 nmod:of(8,moment,death).
 % relations.
-exclaim_in(8,tortoise,moment).
-exclaim_in(8,tortoise,moment_of_death).
+aos(8,exclaim_in,tortoise,moment).
+aos(8,exclaim_in,tortoise,moment_of_death).
 %% i have deserved my present fate.
 % dependencies.
 root(9,root,deserve).
@@ -170,8 +170,8 @@ nmod:poss(9,fate,my).
 amod(9,fate,present).
 dobj(9,deserve,fate).
 % relations.
-have_deserve(9,i,my_present_fate).
-have_deserve(9,i,my_fate).
+aos(9,have_deserve,i,my_present_fate).
+aos(9,have_deserve,i,my_fate).
 %% for what had i to do with wings and clouds who can with difficulty move about on the earth.
 % dependencies.
 root(10,root,have).
@@ -212,5 +212,5 @@ auxpass(11,ruin,be).
 advmod(11,ruin,often).
 ccomp(11,wish,ruin).
 % relations.
-be(11,they,often_ruin).
-be(11,they,ruin).
+aos(11,be,they,often_ruin).
+aos(11,be,they,ruin).

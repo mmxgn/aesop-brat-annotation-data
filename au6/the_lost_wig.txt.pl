@@ -61,10 +61,10 @@ amod(1,bow,beautiful).
 amod(1,bow,low).
 dobj(1,make,bow).
 % relations.
-make(1,impression,beautiful_low_bow).
-make(1,impression,beautiful_bow).
-make(1,impression,bow).
-make(1,impression,low_bow).
+aos(1,make,impression,beautiful_low_bow).
+aos(1,make,impression,beautiful_bow).
+aos(1,make,impression,bow).
+aos(1,make,impression,low_bow).
 %% at that moment a very smart gust of wind came up and the consequence was that his wig flew off and left him there feeling foolish and looking worse with his bald head glistening like a billiard ball.
 % dependencies.
 root(2,root,moment).
@@ -111,10 +111,10 @@ det(2,ball,a).
 amod(2,ball,billiard).
 nmod:like(2,glisten,ball).
 % relations.
-feel(2,he,foolish).
-look(2,he,worse).
-leave(2,he_wig,he_feel).
-is_with(2,moment,he_bald_head_glisten_like_billiard_ball).
+aos(2,feel,he,foolish).
+aos(2,look,he,worse).
+aos(2,leave,he_wig,he_feel).
+aos(2,is_with,moment,he_bald_head_glisten_like_billiard_ball).
 %% though somewhat embarrassed at first he smiled at the lady and said.
 % dependencies.
 root(3,root,smile).
@@ -131,7 +131,7 @@ nmod:at(3,smile,lady).
 cc(3,smile,and).
 conj:and(3,smile,say).
 % relations.
-smile_at(3,he,lady).
+aos(3,smile_at,he,lady).
 %% is it a wonder that another fellow 's hair should n't keep on my head when my own would n't stay there.
 % dependencies.
 root(4,root,it).
@@ -157,4 +157,4 @@ neg(4,stay,not).
 advcl(4,keep,stay).
 advmod(4,stay,there).
 % relations.
-has(4,fellow,hair).
+aos(4,has,fellow,hair).

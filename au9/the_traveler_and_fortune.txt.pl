@@ -21,8 +21,8 @@ dep(0,well,a).
 advmod(0,well,deep).
 acl:of(0,brink,well).
 % relations.
-weary_from(0,traveler,journey).
-weary_from(0,traveler,long_journey).
+aos(0,weary_from,traveler,journey).
+aos(0,weary_from,traveler,long_journey).
 %% just as he was about to fall into the water dame fortune it is said appeared to him and waking him from his slumber thus addressed him.
 % dependencies.
 root(1,root,address).
@@ -55,12 +55,12 @@ nmod:from(1,wake,slumber).
 advmod(1,address,thus).
 nsubj(1,address,he).
 % relations.
-be_say(1,it,appear).
-be_say(1,it,appear_to_he).
-be_say(1,it,just_he_be_about).
-be(1,it,say).
-appear_to(1,it,he).
-be_say(1,it,he_be_about).
+aos(1,be_say,it,appear).
+aos(1,be_say,it,appear_to_he).
+aos(1,be_say,it,just_he_be_about).
+aos(1,be,it,say).
+aos(1,appear_to,it,he).
+aos(1,be_say,it,he_be_about).
 %% good sir pray wake up for if you fall into the well the blame will be thrown on me and i shall get an ill name among mortals.
 % dependencies.
 root(2,root,wake).
@@ -93,16 +93,16 @@ dobj(2,get,name).
 case(2,mortal,among).
 nmod:among(2,get,mortal).
 % relations.
-wake_up(2,good_sir_pray,will_throw_on_I).
-shall_get(2,i,name).
-shall_get(2,i,ill_name).
-wake_up(2,sir_pray,will_throw).
-be(2,blame,will_throw).
-fall_into(2,you,well).
-wake_up(2,good_sir_pray,will_throw).
-wake_up(2,sir_pray,will_throw_on_I).
-be(2,blame,will_throw_on_I).
-shall_get_name_among(2,i,mortal).
+aos(2,wake_up,good_sir_pray,will_throw_on_I).
+aos(2,shall_get,i,name).
+aos(2,shall_get,i,ill_name).
+aos(2,wake_up,sir_pray,will_throw).
+aos(2,be,blame,will_throw).
+aos(2,fall_into,you,well).
+aos(2,wake_up,good_sir_pray,will_throw).
+aos(2,wake_up,sir_pray,will_throw_on_I).
+aos(2,be,blame,will_throw_on_I).
+aos(2,shall_get_name_among,i,mortal).
 %% for i find that men are sure to impute their calamities to me however much by their own folly they have really brought them on themselves.
 % dependencies.
 root(3,root,find).
@@ -133,7 +133,7 @@ dobj(3,bring,they).
 case(3,themselves,on).
 nmod:on(3,bring,themselves).
 % relations.
-have_really_bring(3,they,they).
-impute(3,man,they_calamity).
-be(3,man,sure).
-have_bring(3,they,they).
+aos(3,have_really_bring,they,they).
+aos(3,impute,man,they_calamity).
+aos(3,be,man,sure).
+aos(3,have_bring,they,they).

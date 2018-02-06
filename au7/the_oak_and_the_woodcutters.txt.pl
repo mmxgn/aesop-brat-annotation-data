@@ -24,11 +24,11 @@ advcl:for(0,make,divide).
 det(0,trunk,the).
 dobj(0,divide,trunk).
 % relations.
-make(0,piece,wedge_of_its_own_branch).
-cut_down(0,woodcutter,mountain_oak).
-make(0,piece,wedge).
-split(0,woodcutter,it).
-make(0,piece,wedge_of_its_branch).
+aos(0,make,piece,wedge_of_its_own_branch).
+aos(0,cut_down,woodcutter,mountain_oak).
+aos(0,make,piece,wedge).
+aos(0,split,woodcutter,it).
+aos(0,make,piece,wedge_of_its_branch).
 %% the oak said with a sigh.
 % dependencies.
 root(1,root,say).
@@ -38,7 +38,7 @@ case(1,sigh,with).
 det(1,sigh,a).
 nmod:with(1,say,sigh).
 % relations.
-say_with(1,oak,sigh).
+aos(1,say_with,oak,sigh).
 %% i do not care about the blows of the axe aimed at my roots but i do grieve at being torn in pieces by these wedges made from my own branches.
 % dependencies.
 root(2,root,care).

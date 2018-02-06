@@ -48,14 +48,14 @@ nsubj(1,kill,they).
 acl:relcl(1,gold,kill).
 dobj(1,kill,it).
 % relations.
-lump_of(1,hen,gold).
-kill(1,they,it).
-must_contain(1,hen,lump).
-must_contain(1,hen,great_lump).
-must_contain(1,hen,lump_of_gold).
-must_contain(1,hen,great_lump_of_gold).
-must_contain_lump_in(1,hen,its_inside).
-great_lump_of(1,hen,gold).
+aos(1,lump_of,hen,gold).
+aos(1,kill,they,it).
+aos(1,must_contain,hen,lump).
+aos(1,must_contain,hen,great_lump).
+aos(1,must_contain,hen,lump_of_gold).
+aos(1,must_contain,hen,great_lump_of_gold).
+aos(1,must_contain_lump_in,hen,its_inside).
+aos(1,great_lump_of,hen,gold).
 %% having done so they found to their surprise that the hen differed in no respect from their other hens.
 % dependencies.
 root(2,root,do).
@@ -78,7 +78,7 @@ nmod:poss(2,hen,they).
 amod(2,hen,other).
 nmod:from(2,differ,hen).
 % relations.
-find_to(2,they,they_surprise).
+aos(2,find_to,they,they_surprise).
 %% the foolish pair thus hoping to become rich all at once deprived themselves of the gain of which they were assured day by day.
 % dependencies.
 root(3,root,pair).
@@ -107,7 +107,7 @@ nmod:tmod(3,assure,day).
 case(3,day,by).
 nmod:agent(3,assure,day).
 % relations.
-be(3,they,assure_day_by_day).
-be_assure_by(3,they,day).
-be(3,they,assure).
-be_assure_at_time(3,they,day).
+aos(3,be,they,assure_day_by_day).
+aos(3,be_assure_by,they,day).
+aos(3,be,they,assure).
+aos(3,be_assure_at_time,they,day).

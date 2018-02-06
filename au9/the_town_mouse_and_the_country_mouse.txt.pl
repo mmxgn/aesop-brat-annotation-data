@@ -23,13 +23,13 @@ case(0,country,in).
 det(0,country,the).
 nmod:in(0,cousin,country).
 % relations.
-once_go_on(0,town_mouse,visit).
-go_on(0,town_mouse,visit).
-go_to(0,town_mouse,he_cousin_in_country).
-is_in(0,he_cousin,country).
-once_go_to(0,town_mouse,he_cousin_in_country).
-once_go_to(0,town_mouse,he_cousin).
-go_to(0,town_mouse,he_cousin).
+aos(0,once_go_on,town_mouse,visit).
+aos(0,go_on,town_mouse,visit).
+aos(0,go_to,town_mouse,he_cousin_in_country).
+aos(0,is_in,he_cousin,country).
+aos(0,once_go_to,town_mouse,he_cousin_in_country).
+aos(0,once_go_to,town_mouse,he_cousin).
+aos(0,go_to,town_mouse,he_cousin).
 %% he was rough and ready this cousin but he loved his town friend and made him heartily welcome.
 % dependencies.
 root(1,root,rough).
@@ -54,8 +54,8 @@ nsubj(1,welcome,he).
 advmod(1,welcome,heartily).
 ccomp(1,make,welcome).
 % relations.
-love(1,he,he_town_friend).
-be(1,he,rough).
+aos(1,love,he,he_town_friend).
+aos(1,be,he,rough).
 %% beans and bacon cheese and bread were all he had to offer but he offered them freely.
 % dependencies.
 root(2,root,all).
@@ -79,11 +79,11 @@ ccomp(2,offer,offer).
 dobj(2,offer,they).
 advmod(2,offer,freely).
 % relations.
-have(2,he,offer).
-be_all(2,bean,he_have).
-be_all(2,bacon_cheese,he_have).
-offer(2,he,they).
-offer_freely(2,he,they).
+aos(2,have,he,offer).
+aos(2,be_all,bean,he_have).
+aos(2,be_all,bacon_cheese,he_have).
+aos(2,offer,he,they).
+aos(2,offer_freely,he,they).
 %% the town mouse rather turned up his long nose at this country fare and said.
 % dependencies.
 root(3,root,turn).
@@ -103,12 +103,12 @@ nmod:at(3,turn,fare).
 cc(3,turn,and).
 conj:and(3,turn,say).
 % relations.
-turn_up_at(3,town_mouse,country_fare).
-rather_turn_up(3,town_mouse,he_long_nose).
-rather_turn_up_at(3,town_mouse,country_fare).
-turn_up(3,town_mouse,he_nose).
-rather_turn_up(3,town_mouse,he_nose).
-turn_up(3,town_mouse,he_long_nose).
+aos(3,turn_up_at,town_mouse,country_fare).
+aos(3,rather_turn_up,town_mouse,he_long_nose).
+aos(3,rather_turn_up_at,town_mouse,country_fare).
+aos(3,turn_up,town_mouse,he_nose).
+aos(3,rather_turn_up,town_mouse,he_nose).
+aos(3,turn_up,town_mouse,he_long_nose).
 %% i can not understand cousin how you can put up with such poor food as this but of course you can not expect anything better in the country.
 % dependencies.
 root(4,root,understand).
@@ -158,8 +158,8 @@ advmod(5,live,how).
 mark(5,live,to).
 xcomp(5,show,live).
 % relations.
-will_show(5,i,you).
-will_show(5,I,you).
+aos(5,will_show,i,you).
+aos(5,will_show,I,you).
 %% when you have been in town a week you will wonder how you could ever have stood a country life.
 % dependencies.
 root(6,root,stand).
@@ -183,10 +183,10 @@ det(6,life,a).
 compound(6,life,country).
 nsubj(6,stand,life).
 % relations.
-have_in(6,you,when_have_town).
-have_in(6,you,when_have_town_week).
-have_in(6,you,have_town_week).
-have_in(6,you,have_town).
+aos(6,have_in,you,when_have_town).
+aos(6,have_in,you,when_have_town_week).
+aos(6,have_in,you,have_town_week).
+aos(6,have_in,you,have_town).
 %% no sooner said than done the two mice set off for the town and arrived at the town mouse 's residence late at night.
 % dependencies.
 root(7,root,say).
@@ -227,11 +227,11 @@ nmod:poss(8,journey,we).
 amod(8,journey,long).
 nmod:after(8,want,journey).
 % relations.
-will_want_after(8,you,we_long_journey).
-will_want(8,you,refreshment).
-will_want_refreshment_after(8,you,we_journey).
-will_want_refreshment_after(8,you,we_long_journey).
-will_want_after(8,you,we_journey).
+aos(8,will_want_after,you,we_long_journey).
+aos(8,will_want,you,refreshment).
+aos(8,will_want_refreshment_after,you,we_journey).
+aos(8,will_want_refreshment_after,you,we_long_journey).
+aos(8,will_want_after,you,we_journey).
 %% said the polite town mouse and took his friend into the grand dining-room.
 % dependencies.
 root(9,root,say).
@@ -249,12 +249,12 @@ det(9,dining-room,the).
 amod(9,dining-room,grand).
 nmod:into(9,say,dining-room).
 % relations.
-say_into(9,he_friend,grand_dining-room).
-say_town_mouse_into(9,he_friend,grand_dining-room).
-say_into(9,he_friend,dining-room).
-say(9,he_friend,polite_town_mouse).
-say(9,he_friend,town_mouse).
-say_town_mouse_into(9,he_friend,dining-room).
+aos(9,say_into,he_friend,grand_dining-room).
+aos(9,say_town_mouse_into,he_friend,grand_dining-room).
+aos(9,say_into,he_friend,dining-room).
+aos(9,say,he_friend,polite_town_mouse).
+aos(9,say,he_friend,town_mouse).
+aos(9,say_town_mouse_into,he_friend,dining-room).
 %% there they found the remains of a fine feast and soon the two mice were eating up jellies and cakes and all that was nice.
 % dependencies.
 root(10,root,find).
@@ -286,20 +286,20 @@ ref(10,all,that).
 cop(10,nice,be).
 acl:relcl(10,all,nice).
 % relations.
-be_eat_up(10,two_mouse,cake).
-there_find(10,they,remains).
-find(10,they,remains_of_feast).
-soon_be_eat_up(10,two_mouse,jelly).
-find(10,they,remains).
-be_eat_up(10,mouse,cake).
-there_find(10,they,remains_of_fine_feast).
-be_eat_up(10,mouse,jelly).
-soon_be_eat_up(10,mouse,jelly).
-find(10,they,remains_of_fine_feast).
-soon_be_eat_up(10,mouse,cake).
-be_eat_up(10,two_mouse,jelly).
-there_find(10,they,remains_of_feast).
-soon_be_eat_up(10,two_mouse,cake).
+aos(10,be_eat_up,two_mouse,cake).
+aos(10,there_find,they,remains).
+aos(10,find,they,remains_of_feast).
+aos(10,soon_be_eat_up,two_mouse,jelly).
+aos(10,find,they,remains).
+aos(10,be_eat_up,mouse,cake).
+aos(10,there_find,they,remains_of_fine_feast).
+aos(10,be_eat_up,mouse,jelly).
+aos(10,soon_be_eat_up,mouse,jelly).
+aos(10,find,they,remains_of_fine_feast).
+aos(10,soon_be_eat_up,mouse,cake).
+aos(10,be_eat_up,two_mouse,jelly).
+aos(10,there_find,they,remains_of_feast).
+aos(10,soon_be_eat_up,two_mouse,cake).
 %% suddenly they heard growling and barking.
 % dependencies.
 root(11,root,they).
@@ -334,10 +334,10 @@ case(14,house,of).
 det(14,house,the).
 nmod:of(14,dog,house).
 % relations.
-be(14,it,dog).
-be_only_dog_of(14,it,house).
-be(14,it,only_dog).
-be_dog_of(14,it,house).
+aos(14,be,it,dog).
+aos(14,be_only_dog_of,it,house).
+aos(14,be,it,only_dog).
+aos(14,be_dog_of,it,house).
 %% answered the other.
 % dependencies.
 root(15,root,answer).
@@ -399,8 +399,8 @@ xcomp(19,have,run).
 conj:and(19,scamper,run).
 compound:prt(19,run,off).
 % relations.
-fly(19,door,open).
-fly(19,door,come).
+aos(19,fly,door,open).
+aos(19,fly,door,come).
 %% good-bye cousin.
 % dependencies.
 root(20,root,cousin).
@@ -455,4 +455,4 @@ conj:and(27,cake,ale).
 case(27,fear,in).
 nmod:in(27,better,fear).
 % relations.
-be_in(27,bacon,peace).
+aos(27,be_in,bacon,peace).

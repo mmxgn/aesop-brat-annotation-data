@@ -39,11 +39,11 @@ xcomp(0,go,call).
 case(0,they,on).
 nmod:on(0,call,they).
 % relations.
-go(0,bag,call).
-is_in(0,bird,certain_aviary).
-take(0,himself,he_cane).
-call_on(0,bag,they).
-go(0,bag,call_on_they).
+aos(0,go,bag,call).
+aos(0,is_in,bird,certain_aviary).
+aos(0,take,himself,he_cane).
+aos(0,call_on,bag,they).
+aos(0,go,bag,call_on_they).
 %% he knocked at the door and inquired of the inmates how they all did saying that if they were ill he would be happy to prescribe for them and cure them.
 % dependencies.
 root(1,root,knock).
@@ -82,10 +82,10 @@ xcomp(1,happy,cure).
 conj:and(1,prescribe,cure).
 dobj(1,cure,they).
 % relations.
-all_do(1,they,say).
-knock_at(1,he,door).
-inquire_of(1,he,inmate).
-do(1,they,say).
+aos(1,all_do,they,say).
+aos(1,knock_at,he,door).
+aos(1,inquire_of,he,inmate).
+aos(1,do,they,say).
 %% they replied.
 % dependencies.
 root(2,root,reply).
@@ -123,23 +123,23 @@ mark(3,be,as).
 nsubj(3,be,we).
 advcl:as(3,leave,be).
 % relations.
-continue(3,we,will_only_good_enough).
-will(3,you,will_only_good_enough).
-be(3,we,well).
-will(3,you,so_will_good).
-continue(3,we,so_will_only_good_enough).
-be(3,we,all_well).
-will(3,you,will_only_good).
-continue(3,we,will_good_enough).
-continue(3,we,will_only_good).
-be(3,we,all_very_well).
-will(3,you,so_will_only_good_enough).
-will(3,you,will_good_enough).
-continue(3,we,so_will_good).
-will(3,you,so_will_only_good).
-continue(3,we,so_will_only_good).
-continue(3,we,so_will_good_enough).
-continue(3,we,will_good).
-be(3,we,very_well).
-will(3,you,will_good).
-will(3,you,so_will_good_enough).
+aos(3,continue,we,will_only_good_enough).
+aos(3,will,you,will_only_good_enough).
+aos(3,be,we,well).
+aos(3,will,you,so_will_good).
+aos(3,continue,we,so_will_only_good_enough).
+aos(3,be,we,all_well).
+aos(3,will,you,will_only_good).
+aos(3,continue,we,will_good_enough).
+aos(3,continue,we,will_only_good).
+aos(3,be,we,all_very_well).
+aos(3,will,you,so_will_only_good_enough).
+aos(3,will,you,will_good_enough).
+aos(3,continue,we,so_will_good).
+aos(3,will,you,so_will_only_good).
+aos(3,continue,we,so_will_only_good).
+aos(3,continue,we,so_will_good_enough).
+aos(3,continue,we,will_good).
+aos(3,be,we,very_well).
+aos(3,will,you,will_good).
+aos(3,will,you,so_will_good_enough).

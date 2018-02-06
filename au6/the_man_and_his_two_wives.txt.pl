@@ -32,8 +32,8 @@ ref(0,one,that).
 cop(0,young,be).
 acl:relcl(0,one,young).
 % relations.
-be(0,man,allow).
-be(0,man,when_allow).
+aos(0,be,man,allow).
+aos(0,be,man,when_allow).
 %% each loved him very much and desired to see him like herself.
 % dependencies.
 root(1,root,love).
@@ -50,7 +50,7 @@ dobj(1,see,he).
 case(1,herself,like).
 nmod:like(1,see,herself).
 % relations.
-love(1,each,he).
+aos(1,love,each,he).
 %% now the man 's hair was turning grey which the young wife did not like as it made him look too old for her husband.
 % dependencies.
 root(2,root,turn).
@@ -79,7 +79,7 @@ case(2,husband,for).
 nmod:poss(2,husband,she).
 nmod:for(2,old,husband).
 % relations.
-has(2,man,hair).
+aos(2,has,man,hair).
 %% so every night she used to comb his hair and pick out the white ones.
 % dependencies.
 root(3,root,night).
@@ -128,10 +128,10 @@ case(4,mother,for).
 nmod:poss(4,mother,he).
 nmod:for(4,mistake,mother).
 % relations.
-see(4,wife,she_husband).
-see(4,elder_wife,she_husband).
-be_mistake_for(4,she,he_mother).
-be_mistake_for(4,she,mother).
+aos(4,see,wife,she_husband).
+aos(4,see,elder_wife,she_husband).
+aos(4,be_mistake_for,she,he_mother).
+aos(4,be_mistake_for,she,mother).
 %% so every morning she used to arrange his hair and pick out as many of the black ones as she could.
 % dependencies.
 root(5,root,morning).
@@ -172,6 +172,6 @@ nsubj(6,bald,himself).
 advmod(6,bald,entirely).
 xcomp(6,find,bald).
 % relations.
-be(6,consequence,man).
-be(6,consequence,man_soon_find).
-be(6,consequence,man_find).
+aos(6,be,consequence,man).
+aos(6,be,consequence,man_soon_find).
+aos(6,be,consequence,man_find).

@@ -26,7 +26,7 @@ case(0,stump,but).
 det(0,stump,the).
 nmod:but(0,all,stump).
 % relations.
-catch(0,fox,its_tail).
+aos(0,catch,fox,its_tail).
 %% at first he was ashamed to show himself among his fellow foxes.
 % dependencies.
 root(1,root,ashamed).
@@ -43,9 +43,9 @@ nmod:poss(1,fox,he).
 amod(1,fox,fellow).
 nmod:among(1,show,fox).
 % relations.
-be(1,he,ashamed).
-be_ashamed_at(1,he,first).
-show(1,he,himself).
+aos(1,be,he,ashamed).
+aos(1,be_ashamed_at,he,first).
+aos(1,show,he,himself).
 %% but at last he determined to put a bolder face upon his misfortune and summoned all the foxes to a general meeting to consider a proposal which he had to place before them.
 % dependencies.
 root(2,root,but).
@@ -87,16 +87,16 @@ xcomp(2,have,place).
 case(2,they,before).
 nmod:before(2,place,they).
 % relations.
-have(2,he,place_before_they).
-put_face_upon(2,he,he_misfortune).
-summon(2,he,fox).
-summon_fox(2,he,consider).
-have(2,he,place).
-summon_fox_to(2,he,meeting).
-place_before(2,he,they).
-put(2,he,face).
-put(2,he,bolder_face).
-summon_fox_to(2,he,general_meeting).
+aos(2,have,he,place_before_they).
+aos(2,put_face_upon,he,he_misfortune).
+aos(2,summon,he,fox).
+aos(2,summon_fox,he,consider).
+aos(2,have,he,place).
+aos(2,summon_fox_to,he,meeting).
+aos(2,place_before,he,they).
+aos(2,put,he,face).
+aos(2,put,he,bolder_face).
+aos(2,summon_fox_to,he,general_meeting).
 %% when they had assembled together the fox proposed that they should all do away with their tails.
 % dependencies.
 root(3,root,assemble).
@@ -117,10 +117,10 @@ case(3,tail,with).
 nmod:poss(3,tail,they).
 nmod:with(3,do,tail).
 % relations.
-do_with(3,they,they_tail).
-all_do_away_with(3,they,they_tail).
-all_do_with(3,they,they_tail).
-do_away_with(3,they,they_tail).
+aos(3,do_with,they,they_tail).
+aos(3,all_do_away_with,they,they_tail).
+aos(3,all_do_with,they,they_tail).
+aos(3,do_away_with,they,they_tail).
 %% he pointed out how inconvenient a tail was when they were pursued by their enemies the dogs.
 % dependencies.
 root(4,root,point).
@@ -141,10 +141,10 @@ nmod:agent(4,pursue,enemy).
 det(4,dog,the).
 dep(4,enemy,dog).
 % relations.
-be_pursue_by(4,they,they_enemy).
-be(4,they,pursue).
-be(4,they,when_pursue_by_they_enemy).
-be(4,they,when_pursue).
+aos(4,be_pursue_by,they,they_enemy).
+aos(4,be,they,pursue).
+aos(4,be,they,when_pursue_by_they_enemy).
+aos(4,be,they,when_pursue).
 %% how much it was in the way when they desired to sit down and hold a friendly conversation with one another.
 % dependencies.
 root(5,root,way).
@@ -172,11 +172,11 @@ case(5,one,with).
 nmod:with(5,hold,one).
 dep(5,one,another).
 % relations.
-desire(5,they,sit_down).
-desire(5,they,sit).
-be_in(5,it,much_way).
-be_in(5,it,way).
-be_in(5,it,how_much_way).
+aos(5,desire,they,sit_down).
+aos(5,desire,they,sit).
+aos(5,be_in,it,much_way).
+aos(5,be_in,it,way).
+aos(5,be_in,it,how_much_way).
 %% he failed to see any advantage in carrying about such a useless encumbrance.
 % dependencies.
 root(6,root,fail).
@@ -194,8 +194,8 @@ det(6,encumbrance,a).
 amod(6,encumbrance,useless).
 nmod:about(6,carry,encumbrance).
 % relations.
-see(6,he,advantage).
-see_advantage(6,he,carry).
+aos(6,see,he,advantage).
+aos(6,see_advantage,he,carry).
 %% that is all very well.
 % dependencies.
 root(7,root,be).

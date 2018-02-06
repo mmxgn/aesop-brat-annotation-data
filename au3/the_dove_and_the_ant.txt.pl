@@ -46,15 +46,15 @@ acl:relcl(1,means,gain).
 det(1,shore,the).
 dobj(1,gain,shore).
 % relations.
-throw_into(1,a_dive,river).
-pity(1,a,she_condition).
-pity(1,a,small_bough).
-pity(1,a_dive,she_condition).
-pity(1,a_dive,small_bough).
-pity(1,a_dive,bough).
-throw_into(1,a,river).
-pity(1,a,bough).
-gain(1,ant,shore).
+aos(1,throw_into,a_dive,river).
+aos(1,pity,a,she_condition).
+aos(1,pity,a,small_bough).
+aos(1,pity,a_dive,she_condition).
+aos(1,pity,a_dive,small_bough).
+aos(1,pity,a_dive,bough).
+aos(1,throw_into,a,river).
+aos(1,pity,a,bough).
+aos(1,gain,ant,shore).
 %% the ant afterward seeing a man with a fowling-piece aiming at the dove stung him in the foot sharply and made him miss his aim and so saved the dove 's life.
 % dependencies.
 root(2,root,sting).
@@ -92,20 +92,20 @@ amod(2,the,dive).
 case(2,the,'s).
 dobj(2,save,life).
 % relations.
-is_with(2,man,fowling-piece_aim_at_the_dive).
-see(2,ant,man).
-afterward_see(2,ant,man_with_fowling-piece_aim_at_the).
-save(2,ant,the_'s_life).
-sting(2,ant,he).
-afterward_see(2,ant,man_with_fowling-piece_aim).
-see(2,ant,man_with_fowling-piece_aim_at_the).
-save(2,ant,the_dive_'s_life).
-has(2,the_dive,life).
-afterward_see(2,ant,man_with_fowling-piece).
-sting_sharply(2,ant,he).
-afterward_see(2,ant,man).
-see(2,ant,man_with_fowling-piece_aim).
-see(2,ant,man_with_fowling-piece_aim_at_the_dive).
-see(2,ant,man_with_fowling-piece).
-afterward_see(2,ant,man_with_fowling-piece_aim_at_the_dive).
-miss(2,he,he_aim).
+aos(2,is_with,man,fowling-piece_aim_at_the_dive).
+aos(2,see,ant,man).
+aos(2,afterward_see,ant,man_with_fowling-piece_aim_at_the).
+aos(2,save,ant,the_'s_life).
+aos(2,sting,ant,he).
+aos(2,afterward_see,ant,man_with_fowling-piece_aim).
+aos(2,see,ant,man_with_fowling-piece_aim_at_the).
+aos(2,save,ant,the_dive_'s_life).
+aos(2,has,the_dive,life).
+aos(2,afterward_see,ant,man_with_fowling-piece).
+aos(2,sting_sharply,ant,he).
+aos(2,afterward_see,ant,man).
+aos(2,see,ant,man_with_fowling-piece_aim).
+aos(2,see,ant,man_with_fowling-piece_aim_at_the_dive).
+aos(2,see,ant,man_with_fowling-piece).
+aos(2,afterward_see,ant,man_with_fowling-piece_aim_at_the_dive).
+aos(2,miss,he,he_aim).

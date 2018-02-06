@@ -39,9 +39,9 @@ mark(0,call,to).
 xcomp(0,decide,call).
 dobj(0,call,he).
 % relations.
-be(0,large_wolf,bear).
-be(0,wolf,bear).
-call(0,they,he).
+aos(0,be,large_wolf,bear).
+aos(0,be,wolf,bear).
+aos(0,call,they,he).
 %% lion.
 % dependencies.
 root(1,root,lion).
@@ -82,8 +82,8 @@ case(2,lion,with).
 det(2,lion,the).
 nmod:with(2,consort,lion).
 % relations.
-is_with(2,wolf,lack_of_sense).
-is_in(2,name,earnest).
+aos(2,is_with,wolf,lack_of_sense).
+aos(2,is_in,name,earnest).
 %% an old sly fox seeing this said.
 % dependencies.
 root(3,root,say).
@@ -113,8 +113,8 @@ cc(4,pride,and).
 nmod:in(4,do,self-conceit).
 conj:and(4,pride,self-conceit).
 % relations.
-do_in(4,you,you_pride).
-do_in(4,myself,you_pride).
+aos(4,do_in,you,you_pride).
+aos(4,do_in,myself,you_pride).
 %% for even though you have the size of a lion among wolves in a herd of lions you are definitely a wolf.
 % dependencies.
 root(5,root,wolf).
@@ -140,20 +140,20 @@ cop(5,wolf,be).
 advmod(5,wolf,definitely).
 det(5,wolf,a).
 % relations.
-size_of(5,you,lion).
-is_in(5,wolf,herd_of_lion).
-have(5,you,size).
-even_have(5,you,size_of_lion_among_wolf_in_herd).
-be(5,you,wolf).
-have(5,you,size_of_lion_among_wolf).
-have(5,you,size_of_lion_among_wolf_in_herd).
-size_of(5,you,lion_among_wolf_in_herd_of_lion).
-have(5,you,size_of_lion_among_wolf_in_herd_of_lion).
-even_have(5,you,size_of_lion_among_wolf_in_herd_of_lion).
-size_of(5,you,lion_among_wolf).
-even_have(5,you,size_of_lion_among_wolf).
-size_of(5,you,lion_among_wolf_in_herd).
-be(5,you,definitely_wolf).
-have(5,you,size_of_lion).
-even_have(5,you,size).
-even_have(5,you,size_of_lion).
+aos(5,size_of,you,lion).
+aos(5,is_in,wolf,herd_of_lion).
+aos(5,have,you,size).
+aos(5,even_have,you,size_of_lion_among_wolf_in_herd).
+aos(5,be,you,wolf).
+aos(5,have,you,size_of_lion_among_wolf).
+aos(5,have,you,size_of_lion_among_wolf_in_herd).
+aos(5,size_of,you,lion_among_wolf_in_herd_of_lion).
+aos(5,have,you,size_of_lion_among_wolf_in_herd_of_lion).
+aos(5,even_have,you,size_of_lion_among_wolf_in_herd_of_lion).
+aos(5,size_of,you,lion_among_wolf).
+aos(5,even_have,you,size_of_lion_among_wolf).
+aos(5,size_of,you,lion_among_wolf_in_herd).
+aos(5,be,you,definitely_wolf).
+aos(5,have,you,size_of_lion).
+aos(5,even_have,you,size).
+aos(5,even_have,you,size_of_lion).

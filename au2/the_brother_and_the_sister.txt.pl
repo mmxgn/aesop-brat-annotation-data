@@ -23,9 +23,9 @@ nmod:poss(0,ugliness,she).
 amod(0,ugliness,extraordinary).
 nmod:for(0,latter,ugliness).
 % relations.
-look(0,father,latter).
-look(0,father,latter_for_she_extraordinary_ugliness).
-look(0,father,latter_for_she_ugliness).
+aos(0,look,father,latter).
+aos(0,look,father,latter_for_she_extraordinary_ugliness).
+aos(0,look,father,latter_for_she_ugliness).
 %% while they were playing one day as children they happened by chance to look together into a mirror that was placed on their mother 's chair.
 % dependencies.
 root(1,root,play).
@@ -57,11 +57,11 @@ nmod:poss(1,chair,mother).
 case(1,mother,'s).
 nmod:on(1,place,chair).
 % relations.
-happen(1,they,look_together).
-happen_by(1,they,chance).
-happen(1,they,look).
-be_play(1,they,one_day).
-on(1,mother,chair).
+aos(1,happen,they,look_together).
+aos(1,happen_by,they,chance).
+aos(1,happen,they,look).
+aos(1,be_play,they,one_day).
+aos(1,on,mother,chair).
 %% the boy congratulated himself on his good looks.
 % dependencies.
 root(2,root,congratulate).
@@ -73,7 +73,7 @@ nmod:poss(2,look,he).
 amod(2,look,good).
 nmod:on(2,congratulate,look).
 % relations.
-congratulate(2,boy,himself).
+aos(2,congratulate,boy,himself).
 %% the girl grew angry and could not bear the self-praises of her brother interpreting all he said ( and how could she do otherwise.
 % dependencies.
 root(3,root,grow).
@@ -119,8 +119,8 @@ case(5,father,to).
 nmod:poss(5,father,she).
 nmod:to(5,run,father).
 % relations.
-run_off_to(5,she,she_father).
-run_to(5,she,she_father).
+aos(5,run_off_to,she,she_father).
+aos(5,run_to,she,she_father).
 %% to be avenged on her brother and spitefully accused him of having as a boy made use of that which belonged only to girls.
 % dependencies.
 root(6,root,avenge).

@@ -22,14 +22,14 @@ nummod(0,cloak,one).
 amod(0,cloak,good).
 nmod:but(0,have,cloak).
 % relations.
-have_run_through(0,spendthrift,he_patrimony).
-have_run_through(0,great_spendthrift,patrimony).
-have_but(0,spendthrift,one_good_cloak).
-have_but(0,great_spendthrift,one_cloak).
-have_run_through(0,great_spendthrift,he_patrimony).
-have_run_through(0,spendthrift,patrimony).
-have_but(0,spendthrift,one_cloak).
-have_but(0,great_spendthrift,one_good_cloak).
+aos(0,have_run_through,spendthrift,he_patrimony).
+aos(0,have_run_through,great_spendthrift,patrimony).
+aos(0,have_but,spendthrift,one_good_cloak).
+aos(0,have_but,great_spendthrift,one_cloak).
+aos(0,have_run_through,great_spendthrift,he_patrimony).
+aos(0,have_run_through,spendthrift,patrimony).
+aos(0,have_but,spendthrift,one_cloak).
+aos(0,have_but,great_spendthrift,one_good_cloak).
 %% one day he happened to see a swallow which had appeared before its season skimming along a pool and twittering gaily.
 % dependencies.
 root(1,root,day).
@@ -56,7 +56,7 @@ ccomp(1,appear,twitter).
 conj:and(1,skim,twitter).
 advmod(1,twitter,gaily).
 % relations.
-happen(1,he,see).
+aos(1,happen,he,see).
 %% he supposed that summer had come and went and sold his cloak.
 % dependencies.
 root(2,root,suppose).
@@ -74,7 +74,7 @@ conj:and(2,go,sell).
 nmod:poss(2,cloak,he).
 dobj(2,go,cloak).
 % relations.
-go(2,he,he_cloak).
+aos(2,go,he,he_cloak).
 %% not many days later winter set in again with renewed frost and cold.
 % dependencies.
 root(3,root,day).
@@ -92,7 +92,7 @@ cc(3,frost,and).
 nmod:with(3,day,cold).
 conj:and(3,frost,cold).
 % relations.
-is_with(3,many_day,renew_frost).
+aos(3,is_with,many_day,renew_frost).
 %% when he found the unfortunate swallow lifeless on the ground he said.
 % dependencies.
 root(4,root,find).
@@ -143,5 +143,5 @@ nmod:poss(7,destruction,my).
 dobj(7,work,destruction).
 advmod(7,work,also).
 % relations.
-have_work_also(7,you,my_destruction).
-have_work(7,you,my_destruction).
+aos(7,have_work_also,you,my_destruction).
+aos(7,have_work,you,my_destruction).

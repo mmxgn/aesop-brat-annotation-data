@@ -12,7 +12,7 @@ mark(0,kill,to).
 xcomp(0,about,kill).
 dobj(0,kill,it).
 % relations.
-catch(0,fowler,partridge).
+aos(0,catch,fowler,partridge).
 %% the partridge earnestly begged him to spare his life saying.
 % dependencies.
 root(1,root,beg).
@@ -27,10 +27,10 @@ nmod:poss(1,life,he).
 dobj(1,spare,life).
 acl(1,life,say).
 % relations.
-beg(1,partridge,he).
-spare(1,he,he_life_say).
-earnestly_beg(1,partridge,he).
-spare(1,he,he_life).
+aos(1,beg,partridge,he).
+aos(1,spare,he,he_life_say).
+aos(1,earnestly_beg,partridge,he).
+aos(1,spare,he,he_life).
 %% pray master permit me to live and i will entice many partridges to you in recompense for your mercy to me.
 % dependencies.
 root(2,root,permit).
@@ -56,13 +56,13 @@ nmod:for(2,recompense,mercy).
 case(2,I,to).
 nmod:to(2,entice,I).
 % relations.
-permit(2,pray_master,I).
-will_entice_partridge_in(2,i,recompense).
-will_entice(2,i,partridge).
-will_entice_partridge_in(2,i,recompense_for_you_mercy).
-will_entice_partridge_to(2,i,I).
-will_entice(2,i,many_partridge).
-will_entice_partridge_to(2,i,you).
+aos(2,permit,pray_master,I).
+aos(2,will_entice_partridge_in,i,recompense).
+aos(2,will_entice,i,partridge).
+aos(2,will_entice_partridge_in,i,recompense_for_you_mercy).
+aos(2,will_entice_partridge_to,i,I).
+aos(2,will_entice,i,many_partridge).
+aos(2,will_entice_partridge_to,i,you).
 %% the fowler replied.
 % dependencies.
 root(3,root,reply).
@@ -99,7 +99,7 @@ cc(4,friend,and).
 dobj(4,betray,relation).
 conj:and(4,friend,relation).
 % relations.
-be(4,you,willing).
-shall_take(4,i,you_life).
-shall_now_take(4,i,you_life).
-save(4,you,it).
+aos(4,be,you,willing).
+aos(4,shall_take,i,you_life).
+aos(4,shall_now_take,i,you_life).
+aos(4,save,you,it).

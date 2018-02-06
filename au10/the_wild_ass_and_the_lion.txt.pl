@@ -25,14 +25,14 @@ case(0,ease,with).
 amod(0,ease,greater).
 nmod:with(0,capture,ease).
 % relations.
-enter_into(0,ass,alliance).
-might_capture_beast_with(0,they,greater_ease).
-enter_into(0,wild_ass,alliance).
-might_capture_beast_with(0,they,ease).
-might_capture(0,they,beast).
-might_capture(0,they,beast_of_forest).
-enter_into(0,lion,alliance).
-beast_of(0,they,forest).
+aos(0,enter_into,ass,alliance).
+aos(0,might_capture_beast_with,they,greater_ease).
+aos(0,enter_into,wild_ass,alliance).
+aos(0,might_capture_beast_with,they,ease).
+aos(0,might_capture,they,beast).
+aos(0,might_capture,they,beast_of_forest).
+aos(0,enter_into,lion,alliance).
+aos(0,beast_of,they,forest).
 %% the lion agreed to assist the wild ass with his strength while the wild ass gave the lion the benefit of his greater speed.
 % dependencies.
 root(1,root,agree).
@@ -61,21 +61,21 @@ nmod:poss(1,speed,he).
 amod(1,speed,greater).
 nmod:of(1,benefit,speed).
 % relations.
-give(1,ass,benefit_of_he_speed).
-give(1,ass,benefit_of_he_greater_speed).
-assist_ass_with(1,lion,he_strength).
-assist(1,lion,wild_ass).
-benefit_of(1,ass,he_greater_speed).
-give(1,ass,benefit).
-assist(1,lion,ass).
-give(1,wild_ass,benefit_of_he_speed).
-give(1,ass,lion).
-benefit_of(1,wild_ass,he_speed).
-give(1,wild_ass,benefit).
-give(1,wild_ass,lion).
-give(1,wild_ass,benefit_of_he_greater_speed).
-benefit_of(1,wild_ass,he_greater_speed).
-benefit_of(1,ass,he_speed).
+aos(1,give,ass,benefit_of_he_speed).
+aos(1,give,ass,benefit_of_he_greater_speed).
+aos(1,assist_ass_with,lion,he_strength).
+aos(1,assist,lion,wild_ass).
+aos(1,benefit_of,ass,he_greater_speed).
+aos(1,give,ass,benefit).
+aos(1,assist,lion,ass).
+aos(1,give,wild_ass,benefit_of_he_speed).
+aos(1,give,ass,lion).
+aos(1,benefit_of,wild_ass,he_speed).
+aos(1,give,wild_ass,benefit).
+aos(1,give,wild_ass,lion).
+aos(1,give,wild_ass,benefit_of_he_greater_speed).
+aos(1,benefit_of,wild_ass,he_greater_speed).
+aos(1,benefit_of,ass,he_speed).
 %% when they had taken as many beasts as their necessities required the lion undertook to distribute the prey and for this purpose divided it into three shares.
 % dependencies.
 root(2,root,take).
@@ -107,14 +107,14 @@ case(2,share,into).
 nummod(2,share,three).
 nmod:into(2,divide,share).
 % relations.
-divide_it_into(2,they_purpose,three_share).
-have_take(2,they,many_beast).
-divide_into(2,they_purpose,three_share).
-have_take(2,they,beast).
-distribute(2,lion,prey).
-have_take(2,they,as_many_beast).
-divide(2,they_purpose,it).
-have_take_beast(2,they,they_necessity_require).
+aos(2,divide_it_into,they_purpose,three_share).
+aos(2,have_take,they,many_beast).
+aos(2,divide_into,they_purpose,three_share).
+aos(2,have_take,they,beast).
+aos(2,distribute,lion,prey).
+aos(2,have_take,they,as_many_beast).
+aos(2,divide,they_purpose,it).
+aos(2,have_take_beast,they,they_necessity_require).
 %% i will take the first share.
 % dependencies.
 root(3,root,take).
@@ -124,8 +124,8 @@ det(3,share,the).
 amod(3,share,first).
 dobj(3,take,share).
 % relations.
-will_take(3,i,first_share).
-will_take(3,i,share).
+aos(3,will_take,i,first_share).
+aos(3,will_take,i,share).
 %% he said.
 % dependencies.
 root(4,root,say).
@@ -185,11 +185,11 @@ mark(5,can,as).
 nsubj(5,can,you).
 advcl:as(5,fast,can).
 % relations.
-is_with(5,partner,you_in_chase).
-willingly_resign(5,you,it).
-resign(5,you,it).
-will(5,partner,will_source).
-be(5,i,king).
+aos(5,is_with,partner,you_in_chase).
+aos(5,willingly_resign,you,it).
+aos(5,resign,you,it).
+aos(5,will,partner,will_source).
+aos(5,be,i,king).
 %% might makes right.
 % dependencies.
 root(6,root,make).

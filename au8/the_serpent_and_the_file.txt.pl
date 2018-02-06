@@ -15,9 +15,9 @@ nmod:poss(0,shop,armourer).
 case(0,armourer,'s).
 nmod:into(0,come,shop).
 % relations.
-is_in(0,serpent,course_of_its_wanderings).
-come_into(0,serpent,armourer_'s_shop).
-into(0,armourer,shop).
+aos(0,is_in,serpent,course_of_its_wanderings).
+aos(0,come_into,serpent,armourer_'s_shop).
+aos(0,into,armourer,shop).
 %% as he glided over the floor he felt his skin pricked by a file lying there.
 % dependencies.
 root(1,root,glide).
@@ -37,11 +37,11 @@ nmod:by(1,prick,file).
 acl(1,file,lie).
 advmod(1,lie,there).
 % relations.
-feel(1,he,he_skin_prick_by_file).
-feel(1,he,he_skin_prick_by_file_lie_there).
-feel(1,he,he_skin).
-feel(1,he,he_skin_prick_by_file_lie).
-feel(1,he,he_skin_prick).
+aos(1,feel,he,he_skin_prick_by_file).
+aos(1,feel,he,he_skin_prick_by_file_lie_there).
+aos(1,feel,he,he_skin).
+aos(1,feel,he,he_skin_prick_by_file_lie).
+aos(1,feel,he,he_skin_prick).
 %% in a rage he turned round upon it and tried to dart his fangs into it.
 % dependencies.
 root(2,root,turn).
@@ -63,11 +63,11 @@ dobj(2,dart,fang).
 case(2,it,into).
 nmod:into(2,dart,it).
 % relations.
-turn_in(2,he,rage).
-turn_round_in(2,he,rage).
-turn_upon(2,he,it).
-turn(2,he,round).
-turn_round_upon(2,he,it).
+aos(2,turn_in,he,rage).
+aos(2,turn_round_in,he,rage).
+aos(2,turn_upon,he,it).
+aos(2,turn,he,round).
+aos(2,turn_round_upon,he,it).
 %% but he could do no harm to heavy iron and had soon to give over his wrath.
 % dependencies.
 root(3,root,do).

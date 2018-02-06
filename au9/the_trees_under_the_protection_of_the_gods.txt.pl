@@ -19,13 +19,13 @@ nmod:poss(0,protection,they).
 amod(0,protection,special).
 advcl:under(0,make,protection).
 % relations.
-make(0,god,choice_of_tree).
-make_choice_under(0,god,they_special_protection).
-be_under(0,god,they_special_protection).
-make(0,god,choice_of_certain_tree).
-be_under(0,god,they_protection).
-make_choice_under(0,god,they_protection).
-make(0,god,choice).
+aos(0,make,god,choice_of_tree).
+aos(0,make_choice_under,god,they_special_protection).
+aos(0,be_under,god,they_special_protection).
+aos(0,make,god,choice_of_certain_tree).
+aos(0,be_under,god,they_protection).
+aos(0,make_choice_under,god,they_protection).
+aos(0,make,god,choice).
 %% jupiter chose the oak venus the myrtle apollo the laurel cybele the pine and hercules the poplar.
 % dependencies.
 root(1,root,choose).
@@ -48,7 +48,7 @@ conj:and(1,venus,hercule).
 det(1,poplar,the).
 dobj(1,hercule,poplar).
 % relations.
-hercule(1,oak,poplar).
+aos(1,hercule,oak,poplar).
 %% minerva wondering why they had preferred trees not yielding fruit inquired the reason for their choice.
 % dependencies.
 root(2,root,inquire).
@@ -68,7 +68,7 @@ case(2,choice,for).
 nmod:poss(2,choice,they).
 nmod:for(2,inquire,choice).
 % relations.
-inquire_reason_for(2,minerva,they_choice).
+aos(2,inquire_reason_for,minerva,they_choice).
 %% jupiter replied.
 % dependencies.
 root(3,root,reply).
@@ -91,9 +91,9 @@ case(4,fruit,for).
 det(4,fruit,the).
 nmod:for(4,honor,fruit).
 % relations.
-be(4,it,we_should_seem).
-covet(4,we,honor).
-covet(4,we,honor_for_fruit).
+aos(4,be,it,we_should_seem).
+aos(4,covet,we,honor).
+aos(4,covet,we,honor_for_fruit).
 %% but said minerva.
 % dependencies.
 root(5,root,say).
@@ -137,10 +137,10 @@ advmod(8,call,rightly).
 acl:relcl(8,daughter,call).
 xcomp(8,call,wise).
 % relations.
-be(8,you,call).
-be_call(8,you,wise).
-be_rightly_call(8,you,wise).
-be(8,you,rightly_call).
+aos(8,be,you,call).
+aos(8,be_call,you,wise).
+aos(8,be_rightly_call,you,wise).
+aos(8,be,you,rightly_call).
 %% for unless what we do is useful the glory of it is vain.
 % dependencies.
 root(9,root,useful).
@@ -157,4 +157,4 @@ nmod:of(9,glory,it).
 cop(9,vain,be).
 ccomp(9,useful,vain).
 % relations.
-be(9,glory,vain).
+aos(9,be,glory,vain).

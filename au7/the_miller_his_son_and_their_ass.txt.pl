@@ -18,8 +18,8 @@ mark(0,sell,to).
 xcomp(0,fair,sell).
 dobj(0,sell,he).
 % relations.
-be_drive(0,he_son,they_ass).
-be_drive(0,miller,they_ass).
+aos(0,be_drive,he_son,they_ass).
+aos(0,be_drive,miller,they_ass).
 %% they had not gone far when they met with a troop of women collected round a well talking and laughing.
 % dependencies.
 root(1,root,go).
@@ -78,10 +78,10 @@ nsubj(4,ride,they).
 aux(4,ride,might).
 acl:relcl(4,road,ride).
 % relations.
-ever_see(4,you,fellow).
-ever_see(4,you,such_fellow).
-see(4,you,fellow).
-see(4,you,such_fellow).
+aos(4,ever_see,you,fellow).
+aos(4,ever_see,you,such_fellow).
+aos(4,see,you,fellow).
+aos(4,see,you,such_fellow).
 %% ' the old man hearing this quickly made his son mount the ass and continued to walk along merrily by his side.
 % dependencies.
 root(5,root,make).
@@ -107,7 +107,7 @@ case(5,side,by).
 nmod:poss(5,side,he).
 nmod:by(5,walk,side).
 % relations.
-mount(5,he_son,ass).
+aos(5,mount,he_son,ass).
 %% presently they came up to a group of old men in earnest debate.
 % dependencies.
 root(6,root,come).
@@ -157,7 +157,7 @@ case(10,day,in).
 det(10,day,these).
 nmod:in(10,age,day).
 % relations.
-be_in(10,old_age,day).
+aos(10,be_in,old_age,day).
 %% do you see that idle lad riding while his old father has to walk.
 % dependencies.
 root(11,root,do).
@@ -176,12 +176,12 @@ advcl:while(11,ride,have).
 mark(11,walk,to).
 xcomp(11,have,walk).
 % relations.
-see(11,you,idle_lad_ride).
-have(11,he_old_father,walk).
-see(11,you,lad_ride).
-have(11,he_father,walk).
-see(11,you,lad).
-see(11,you,idle_lad).
+aos(11,see,you,idle_lad_ride).
+aos(11,have,he_old_father,walk).
+aos(11,see,you,lad_ride).
+aos(11,have,he_father,walk).
+aos(11,see,you,lad).
+aos(11,see,you,idle_lad).
 %% get down you young scapegrace and let the old man rest his weary limbs.
 % dependencies.
 root(12,root,get).
@@ -199,10 +199,10 @@ nmod:poss(12,limb,he).
 amod(12,limb,weary).
 dobj(12,rest,limb).
 % relations.
-rest(12,old_man,he_weary_limb).
-rest(12,man,he_limb).
-rest(12,man,he_weary_limb).
-rest(12,old_man,he_limb).
+aos(12,rest,old_man,he_weary_limb).
+aos(12,rest,man,he_limb).
+aos(12,rest,man,he_weary_limb).
+aos(12,rest,old_man,he_limb).
 %% upon this the old man made his son dismount and got up himself.
 % dependencies.
 root(13,root,this).
@@ -221,10 +221,10 @@ conj:and(13,make,get).
 compound:prt(13,get,up).
 dobj(13,get,himself).
 % relations.
-get_up(13,old_man,himself).
-get_up(13,man,himself).
-make(13,man,he_son_dismount).
-make(13,old_man,he_son_dismount).
+aos(13,get_up,old_man,himself).
+aos(13,get_up,man,himself).
+aos(13,make,man,he_son_dismount).
+aos(13,make,old_man,he_son_dismount).
 %% in this manner they had not proceeded far when they met a company of women and children.
 % dependencies.
 root(14,root,proceed).
@@ -287,7 +287,7 @@ nmod:by(17,keep,side).
 case(17,you,of).
 nmod:of(17,side,you).
 % relations.
-can_ride_upon(17,you,beast).
+aos(17,can_ride_upon,you,beast).
 %% ' the good-natured miller immediately took up his son behind him.
 % dependencies.
 root(18,root,take).
@@ -312,9 +312,9 @@ advmod(19,reach,almost).
 det(19,town,the).
 dobj(19,reach,town).
 % relations.
-have_now_almost_reach(19,they,town).
-have_almost_reach(19,they,town).
-have_reach(19,they,town).
+aos(19,have_now_almost_reach,they,town).
+aos(19,have_almost_reach,they,town).
+aos(19,have_reach,they,town).
 %% pray honest friend.
 % dependencies.
 root(20,root,pray).
@@ -335,7 +335,7 @@ nsubj(22,that,ass).
 nmod:poss(22,own,you).
 dep(22,ass,own).
 % relations.
-be(22,ass,that).
+aos(22,be,ass,that).
 %% '.
 % dependencies.
 root(23,root,').
@@ -376,7 +376,7 @@ nmod:by(28,load,way).
 nsubj(28,load,you).
 dobj(28,load,he).
 % relations.
-load(28,you,he).
+aos(28,load,you,he).
 %% why you two fellows are better able to carry the poor beast than he you.
 % dependencies.
 root(29,root,able).
@@ -458,12 +458,12 @@ case(33,town,to).
 det(33,town,the).
 nmod:to(33,carry,town).
 % relations.
-tie_together(33,they,leg).
-carry(33,help,he).
-tie(33,they,leg).
-tie(33,they,leg_of_ass).
-tie_together(33,they,leg_of_ass).
-leg_of(33,they,ass).
+aos(33,tie_together,they,leg).
+aos(33,carry,help,he).
+aos(33,tie,they,leg).
+aos(33,tie,they,leg_of_ass).
+aos(33,tie_together,they,leg_of_ass).
+aos(33,leg_of,they,ass).
 %% this entertaining sight brought the people in crowds to laugh at it till the ass not liking the noise nor the strange handling that he was subject to broke the cords that bound him and tumbling off the pole fell into the river.
 % dependencies.
 root(34,root,bring).
@@ -554,9 +554,9 @@ case(35,bargain,in).
 det(35,bargain,the).
 nmod:in(35,lose,bargain).
 % relations.
-have(35,he,pleased_nobody).
-make_upon(35,best,old_man).
-have(35,he,nobody).
-lose(35,he,he_ass).
-make_upon(35,best,man).
-have_nobody(35,he,endeavor).
+aos(35,have,he,pleased_nobody).
+aos(35,make_upon,best,old_man).
+aos(35,have,he,nobody).
+aos(35,lose,he,he_ass).
+aos(35,make_upon,best,man).
+aos(35,have_nobody,he,endeavor).

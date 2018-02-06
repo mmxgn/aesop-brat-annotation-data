@@ -21,12 +21,12 @@ conj:and(0,shelter,protection).
 case(0,man,from).
 nmod:from(0,seek,man).
 % relations.
-drive_to(0,dog,strait).
-drive_by(0,dog,cold).
-drive_to(0,horse_ox,great_strait).
-drive_to(0,horse_ox,strait).
-drive_to(0,dog,great_strait).
-drive_by(0,horse_ox,cold).
+aos(0,drive_to,dog,strait).
+aos(0,drive_by,dog,cold).
+aos(0,drive_to,horse_ox,great_strait).
+aos(0,drive_to,horse_ox,strait).
+aos(0,drive_to,dog,great_strait).
+aos(0,drive_by,horse_ox,cold).
 %% he received them kindly lighted a fire and warmed them.
 % dependencies.
 root(1,root,receive).
@@ -42,9 +42,9 @@ ccomp(1,receive,warm).
 conj:and(1,light,warm).
 dobj(1,warm,they).
 % relations.
-warm(1,they,they).
-kindly_light(1,they,fire).
-light(1,they,fire).
+aos(1,warm,they,they).
+aos(1,kindly_light,they,fire).
+aos(1,light,they,fire).
 %% he let the horse make free with his oats gave the ox an abundance of hay and fed the dog with meat from his own table.
 % dependencies.
 root(2,root,let).
@@ -76,16 +76,16 @@ nmod:poss(2,table,he).
 amod(2,table,own).
 nmod:from(2,feed,table).
 % relations.
-give(2,he_oats,abundance).
-feed_dog_from(2,he_oats,he_own_table).
-feed(2,he_oats,dog).
-is_with(2,dog,meat).
-give(2,he_oats,ox).
-feed_dog_from(2,he_oats,he_table).
-give(2,he_oats,abundance_of_hay).
-feed(2,he_oats,dog_with_meat).
-make(2,horse,free).
-abundance_of(2,he_oats,hay).
+aos(2,give,he_oats,abundance).
+aos(2,feed_dog_from,he_oats,he_own_table).
+aos(2,feed,he_oats,dog).
+aos(2,is_with,dog,meat).
+aos(2,give,he_oats,ox).
+aos(2,feed_dog_from,he_oats,he_table).
+aos(2,give,he_oats,abundance_of_hay).
+aos(2,feed,he_oats,dog_with_meat).
+aos(2,make,horse,free).
+aos(2,abundance_of,he_oats,hay).
 %% grateful for these favors the animals determined to repay him to the best of their ability.
 % dependencies.
 root(3,root,grateful).
@@ -106,7 +106,7 @@ case(3,ability,of).
 nmod:poss(3,ability,they).
 nmod:of(3,best,ability).
 % relations.
-repay(3,animal,he).
+aos(3,repay,animal,he).
 %% for this purpose they divided the term of his life between them and each endowed one portion of it with the qualities which chiefly characterized himself.
 % dependencies.
 root(4,root,divide).
@@ -138,9 +138,9 @@ advmod(4,characterize,chiefly).
 acl:relcl(4,quality,characterize).
 dobj(4,characterize,himself).
 % relations.
-divide_term_for(4,they,purpose).
-divide(4,they,term).
-divide_for(4,they,purpose).
+aos(4,divide_term_for,they,purpose).
+aos(4,divide,they,term).
+aos(4,divide_for,they,purpose).
 %% the horse chose his earliest years and gave them his own attributes hence every man is in his youth impetuous headstrong and obstinate in maintaining his own opinion.
 % dependencies.
 root(5,root,choose).
@@ -174,9 +174,9 @@ nmod:poss(5,opinion,he).
 amod(5,opinion,own).
 dobj(5,maintain,opinion).
 % relations.
-give(5,horse,they).
-give(5,horse,he_own_attribute).
-give(5,horse,he_attribute).
+aos(5,give,horse,they).
+aos(5,give,horse,he_own_attribute).
+aos(5,give,horse,he_attribute).
 %% the ox took under his patronage the next term of life and therefore man in his middle age is fond of work devoted to labor and resolute to amass wealth and to husband his resources.
 % dependencies.
 root(6,root,fond).
@@ -218,24 +218,24 @@ nmod:poss(6,resource,he).
 nsubj(6,fond,resource).
 nsubj(6,fond,resource).
 % relations.
-take_under(6,ox,he_patronage_term_therefore_man).
-be_fond_of(6,he_resource,work_devote_to_labor_wealth).
-take_under(6,ox,he_patronage_next_term_of_life_man).
-take_in(6,ox,he_middle_age).
-take_in(6,ox,he_age).
-be_fond_of(6,he_resource,work_devote).
-be(6,he_resource,fond_of_work_to_husband).
-take_under(6,ox,he_patronage_term_of_life_therefore_man).
-take_under(6,ox,he_patronage_term_man).
-be(6,he_resource,fond_of_work_devote_to_labor_wealth_to_husband).
-be(6,he_resource,fond_of_work_devote_to_husband).
-take_under(6,ox,he_patronage_term_of_life_man).
-take_under(6,ox,he_patronage_next_term_therefore_man).
-be_fond_to(6,he_resource,husband).
-take_under(6,ox,he_patronage_next_term_man).
-be_fond_of(6,he_resource,work).
-take_under(6,ox,he_patronage_next_term_of_life_therefore_man).
-be(6,he_resource,fond).
+aos(6,take_under,ox,he_patronage_term_therefore_man).
+aos(6,be_fond_of,he_resource,work_devote_to_labor_wealth).
+aos(6,take_under,ox,he_patronage_next_term_of_life_man).
+aos(6,take_in,ox,he_middle_age).
+aos(6,take_in,ox,he_age).
+aos(6,be_fond_of,he_resource,work_devote).
+aos(6,be,he_resource,fond_of_work_to_husband).
+aos(6,take_under,ox,he_patronage_term_of_life_therefore_man).
+aos(6,take_under,ox,he_patronage_term_man).
+aos(6,be,he_resource,fond_of_work_devote_to_labor_wealth_to_husband).
+aos(6,be,he_resource,fond_of_work_devote_to_husband).
+aos(6,take_under,ox,he_patronage_term_of_life_man).
+aos(6,take_under,ox,he_patronage_next_term_therefore_man).
+aos(6,be_fond_to,he_resource,husband).
+aos(6,take_under,ox,he_patronage_next_term_man).
+aos(6,be_fond_of,he_resource,work).
+aos(6,take_under,ox,he_patronage_next_term_of_life_therefore_man).
+aos(6,be,he_resource,fond).
 %% the end of life was reserved for the dog wherefore the old man is often snappish irritable hard to please and selfish tolerant only of his own household but averse to strangers and to all who do not administer to his comfort or to his necessities.
 % dependencies.
 root(7,root,reserve).
@@ -295,7 +295,7 @@ case(7,necessity,to).
 nmod:poss(7,necessity,he).
 nmod:to(7,administer,necessity).
 % relations.
-be(7,old_man,often_hard).
-be(7,old_man,hard).
-be(7,man,often_hard).
-be(7,man,hard).
+aos(7,be,old_man,often_hard).
+aos(7,be,old_man,hard).
+aos(7,be,man,often_hard).
+aos(7,be,man,hard).

@@ -19,8 +19,8 @@ ccomp(0,find,set).
 nsubj(0,free,he).
 xcomp(0,set,free).
 % relations.
-set(0,eagle,he_free).
-capture_in(0,eagle,trap).
+aos(0,set,eagle,he_free).
+aos(0,capture_in,eagle,trap).
 %% the eagle did not prove ungrateful to his deliverer for seeing the peasant sitting under a wall which was not safe he flew toward him and with his talons snatched a bundle from his head.
 % dependencies.
 root(1,root,prove).
@@ -61,9 +61,9 @@ case(1,head,from).
 nmod:poss(1,head,he).
 nmod:from(1,snatch,head).
 % relations.
-snatch_bundle_from(1,he_talon,he_head).
-snatch(1,he_talon,bundle).
-fly_toward(1,he,he).
+aos(1,snatch_bundle_from,he_talon,he_head).
+aos(1,snatch,he_talon,bundle).
+aos(1,fly_toward,he,he).
 %% when the peasant rose in pursuit the eagle let the bundle fall again.
 % dependencies.
 root(2,root,rise).
@@ -80,9 +80,9 @@ compound(2,fall,bundle).
 nmod:tmod(2,let,fall).
 advmod(2,let,again).
 % relations.
-rise(2,peasant,eagle).
-rise_eagle_in(2,peasant,pursuit).
-rise_in(2,peasant,pursuit).
+aos(2,rise,peasant,eagle).
+aos(2,rise_eagle_in,peasant,pursuit).
+aos(2,rise_in,peasant,pursuit).
 %% taking it up the man returned to the same place to find that the wall under which he had been sitting had fallen to pieces.
 % dependencies.
 root(3,root,take).
@@ -126,4 +126,4 @@ case(4,eagle,by).
 det(4,eagle,the).
 nmod:by(4,render,eagle).
 % relations.
-marvel_at(4,he,service).
+aos(4,marvel_at,he,service).

@@ -10,7 +10,7 @@ case(0,lion,to).
 det(0,lion,a).
 nmod:to(0,come,lion).
 % relations.
-come_to(0,gnat,lion).
+aos(0,come_to,gnat,lion).
 %% i do not in the least fear you nor are you stronger than i am.
 % dependencies.
 root(1,root,do).
@@ -30,9 +30,9 @@ mark(1,be,than).
 nsubj(1,be,i).
 ccomp(1,stronger,be).
 % relations.
-do(1,i,not_in_least_fear).
-do(1,i,not).
-do(1,i,not_in_fear).
+aos(1,do,i,not_in_least_fear).
+aos(1,do,i,not).
+aos(1,do,i,not_in_fear).
 %% for in what does your strength consist.
 % dependencies.
 root(2,root,do).
@@ -64,11 +64,11 @@ case(3,quarrel,in).
 nmod:poss(3,quarrel,she).
 nmod:in(3,woman,quarrel).
 % relations.
-bite(3,you,woman_in_she_quarrel).
-can_scratch_with(3,you,you_claw).
-is_in(3,woman,she_quarrel).
-bite_woman_with(3,you,you_tooth).
-bite(3,you,woman).
+aos(3,bite,you,woman_in_she_quarrel).
+aos(3,can_scratch_with,you,you_claw).
+aos(3,is_in,woman,she_quarrel).
+aos(3,bite_woman_with,you,you_tooth).
+aos(3,bite,you,woman).
 %% i repeat that i am altogether more powerful than you.
 % dependencies.
 root(4,root,repeat).
@@ -82,14 +82,14 @@ dep(4,repeat,powerful).
 case(4,you,than).
 nmod:than(4,powerful,you).
 % relations.
-be(4,i,powerful).
-be_powerful_than(4,i,you).
-be_altogether_powerful_than(4,i,you).
-be(4,i,more_powerful).
-be_altogether_more_powerful_than(4,i,you).
-be_more_powerful_than(4,i,you).
-be(4,i,altogether_powerful).
-be(4,i,altogether_more_powerful).
+aos(4,be,i,powerful).
+aos(4,be_powerful_than,i,you).
+aos(4,be_altogether_powerful_than,i,you).
+aos(4,be,i,more_powerful).
+aos(4,be_altogether_more_powerful_than,i,you).
+aos(4,be_more_powerful_than,i,you).
+aos(4,be,i,altogether_powerful).
+aos(4,be,i,altogether_more_powerful).
 %% and if you doubt it let us fight and see who will conquer.
 % dependencies.
 root(5,root,doubt).
@@ -141,8 +141,8 @@ conj:and(6,fasten,devoid).
 case(6,hair,of).
 nmod:of(6,gnat,hair).
 % relations.
-fasten(6,he_horn,himself).
-sting(6,he_horn,he).
+aos(6,fasten,he_horn,himself).
+aos(6,sting,he_horn,he).
 %% while trying to crush him the lion tore himself with his claws until he punished himself severely.
 % dependencies.
 root(7,root,tear).
@@ -163,10 +163,10 @@ advcl:until(7,tear,punish).
 dobj(7,punish,himself).
 advmod(7,punish,severely).
 % relations.
-try(7,himself,crush).
-punish_severely(7,he,himself).
-tear(7,try,himself).
-punish(7,he,himself).
+aos(7,try,himself,crush).
+aos(7,punish_severely,he,himself).
+aos(7,tear,try,himself).
+aos(7,punish,he,himself).
 %% the gnat thus prevailed over the lion and buzzing about in a song of triumph flew away.
 % dependencies.
 root(8,root,fly).
@@ -211,8 +211,8 @@ case(9,spider,by).
 det(9,spider,a).
 nmod:agent(9,eat,spider).
 % relations.
-be(9,he,eat).
-be_eat_by(9,he,spider).
+aos(9,be,he,eat).
+aos(9,be_eat_by,he,spider).
 %% he greatly lamented his fate saying.
 % dependencies.
 root(10,root,lament).
@@ -222,15 +222,15 @@ nmod:poss(10,fate,he).
 dobj(10,lament,fate).
 xcomp(10,lament,say).
 % relations.
-greatly_lament(10,he,he_fate).
-lament(10,he,he_fate).
+aos(10,greatly_lament,he,he_fate).
+aos(10,lament,he,he_fate).
 %% woe is me.
 % dependencies.
 root(11,root,I).
 nsubj(11,I,woe).
 cop(11,I,be).
 % relations.
-be(11,woe,I).
+aos(11,be,woe,I).
 %% that i who can wage war successfully with the hugest beasts should perish myself from this spider the most inconsiderable of insects.
 % dependencies.
 root(12,root,perish).

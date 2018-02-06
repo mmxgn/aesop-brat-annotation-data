@@ -27,12 +27,12 @@ case(0,tree,of).
 det(0,tree,a).
 nmod:of(0,branch,tree).
 % relations.
-is_in(0,cheese,its_beak).
-fly_off_with(0,crow,piece).
-fly_off_with(0,crow,piece_of_cheese_in_its_beak).
-settle_on(0,crow,branch_of_tree).
-fly_off_with(0,crow,piece_of_cheese).
-settle_on(0,crow,branch).
+aos(0,is_in,cheese,its_beak).
+aos(0,fly_off_with,crow,piece).
+aos(0,fly_off_with,crow,piece_of_cheese_in_its_beak).
+aos(0,settle_on,crow,branch_of_tree).
+aos(0,fly_off_with,crow,piece_of_cheese).
+aos(0,settle_on,crow,branch).
 %% that 's for me as i am a fox.
 % dependencies.
 root(1,root,I).
@@ -45,7 +45,7 @@ cop(1,fox,be).
 det(1,fox,a).
 advcl:as(1,I,fox).
 % relations.
-be(1,i,fox).
+aos(1,be,i,fox).
 %% said master reynard and he walked up to the foot of the tree.
 % dependencies.
 root(2,root,say).
@@ -113,12 +113,12 @@ nmod:poss(7,figure,you).
 nsubj(7,do,figure).
 advcl:as(7,feel,do).
 % relations.
-surpass(7,you_voice,that).
-surpass(7,you_voice,that_of_bird).
-feel(7,i,you_figure_do).
-feel(7,i,just_you_figure_do).
-surpass(7,you_voice,that_of_other_bird).
-feel(7,i,sure).
+aos(7,surpass,you_voice,that).
+aos(7,surpass,you_voice,that_of_bird).
+aos(7,feel,i,you_figure_do).
+aos(7,feel,i,just_you_figure_do).
+aos(7,surpass,you_voice,that_of_other_bird).
+aos(7,feel,i,sure).
 %% let me hear but one song from you that i may greet you as the queen of birds.
 % dependencies.
 root(8,root,let).
@@ -140,9 +140,9 @@ nmod:as(8,greet,queen).
 case(8,bird,of).
 nmod:of(8,queen,bird).
 % relations.
-hear_but(8,I,one_song).
-greet(8,i,you).
-hear_but(8,I,one_song_from_you).
+aos(8,hear_but,I,one_song).
+aos(8,greet,i,you).
+aos(8,hear_but,I,one_song_from_you).
 %% the crow lifted up her head and began to caw her best but the moment she opened her mouth the piece of cheese fell to the ground only to be snapped up by master fox.
 % dependencies.
 root(9,root,lift).
@@ -184,9 +184,9 @@ case(9,fox,by).
 compound(9,fox,master).
 nmod:agent(9,snap,fox).
 % relations.
-be_snap_up_by(9,piece,master_fox).
-open(9,she,she_mouth).
-lift_up(9,crow,she_head).
+aos(9,be_snap_up_by,piece,master_fox).
+aos(9,open,she,she_mouth).
+aos(9,lift_up,crow,she_head).
 %% that will do.
 % dependencies.
 root(10,root,do).
@@ -206,4 +206,4 @@ cop(12,all,be).
 nsubj(12,want,i).
 acl:relcl(12,all,want).
 % relations.
-be_all(12,that,i_want).
+aos(12,be_all,that,i_want).

@@ -25,13 +25,13 @@ nmod:with(0,lioness,cub).
 case(0,arm,in).
 nmod:in(0,come,arm).
 % relations.
-come_across(0,balmy_morning,lioness).
-come_in(0,balmy_morning,arm).
-come_in(0,one_balmy_morning,arm).
-is_with(0,lioness,she_cub).
-come_across(0,balmy_morning,lioness_with_she_cub).
-come_across(0,one_balmy_morning,lioness_with_she_cub).
-come_across(0,one_balmy_morning,lioness).
+aos(0,come_across,balmy_morning,lioness).
+aos(0,come_in,balmy_morning,arm).
+aos(0,come_in,one_balmy_morning,arm).
+aos(0,is_with,lioness,she_cub).
+aos(0,come_across,balmy_morning,lioness_with_she_cub).
+aos(0,come_across,one_balmy_morning,lioness_with_she_cub).
+aos(0,come_across,one_balmy_morning,lioness).
 %% why such airs haughty dame over one solitary cub.
 % dependencies.
 root(1,root,why).
@@ -74,7 +74,7 @@ nsubj(3,feel,mother).
 aux(3,feel,should).
 ccomp(3,able,feel).
 % relations.
-be(3,you,able).
+aos(3,be,you,able).
 %% the lioness gave her a squelching look and lifting up her nose walked away saying calmly.
 % dependencies.
 root(4,root,walk).
@@ -95,11 +95,11 @@ advmod(4,say,away).
 xcomp(4,walk,say).
 advmod(4,say,calmly).
 % relations.
-walk(4,lioness,say_calmly).
-walk(4,lioness,away_say).
-walk(4,lioness,say).
-lift_up(4,squelching_look,she_nose).
-walk(4,lioness,away_say_calmly).
+aos(4,walk,lioness,say_calmly).
+aos(4,walk,lioness,away_say).
+aos(4,walk,lioness,say).
+aos(4,lift_up,squelching_look,she_nose).
+aos(4,walk,lioness,away_say_calmly).
 %% yes just look at that beautiful collection.
 % dependencies.
 root(5,root,yes).
@@ -135,8 +135,8 @@ cop(8,lion,be).
 det(8,lion,a).
 ccomp(8,remember,lion).
 % relations.
-be(8,one,lion).
-have(8,i,only_one).
+aos(8,be,one,lion).
+aos(8,have,i,only_one).
 %% quality is better than quantity.
 % dependencies.
 root(9,root,better).
@@ -145,5 +145,5 @@ cop(9,better,be).
 case(9,quantity,than).
 nmod:than(9,better,quantity).
 % relations.
-be(9,quality,better).
-be_better_than(9,quality,quantity).
+aos(9,be,quality,better).
+aos(9,be_better_than,quality,quantity).

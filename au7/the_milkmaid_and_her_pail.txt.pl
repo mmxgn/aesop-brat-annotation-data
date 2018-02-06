@@ -17,8 +17,8 @@ case(0,head,on).
 nmod:poss(0,head,she).
 nmod:on(0,pail,head).
 % relations.
-go_to(0,milkmaid,market).
-carry(0,milkmaid,she_milk).
+aos(0,go_to,milkmaid,market).
+aos(0,carry,milkmaid,she_milk).
 %% as she went along she began calculating what she would do with the money she would get for the milk.
 % dependencies.
 root(1,root,go).
@@ -42,9 +42,9 @@ case(1,milk,for).
 det(1,milk,the).
 nmod:for(1,get,milk).
 % relations.
-get(1,she,she_begin).
-begin(1,she,calculate).
-get_for(1,she,milk).
+aos(1,get,she,she_begin).
+aos(1,begin,she,calculate).
+aos(1,get_for,she,milk).
 %% i 'll buy some fowls from farmer brown.
 % dependencies.
 root(2,root,buy).
@@ -56,9 +56,9 @@ case(2,farmer,from).
 nmod:from(2,buy,farmer).
 amod(2,farmer,brown).
 % relations.
-will_buy_fowl_from(2,i,farmer).
-will_buy_fowl_from(2,i,farmer_brown).
-will_buy(2,i,fowl).
+aos(2,will_buy_fowl_from,i,farmer).
+aos(2,will_buy_fowl_from,i,farmer_brown).
+aos(2,will_buy,i,fowl).
 %% said she.
 % dependencies.
 root(3,root,say).
@@ -83,9 +83,9 @@ nmod:poss(4,wife,parson).
 case(4,parson,'s).
 nmod:to(4,sell,wife).
 % relations.
-will_lay_at_time(4,they,morning).
-to(4,parson,wife).
-will_lay_egg_at_time(4,they,morning).
+aos(4,will_lay_at_time,they,morning).
+aos(4,to,parson,wife).
+aos(4,will_lay_egg_at_time,they,morning).
 %% with the money that i get from the sale of these eggs i 'll buy myself a new dimity frock and a chip hat.
 % dependencies.
 root(5,root,money).
@@ -115,9 +115,9 @@ compound(5,hat,chip).
 xcomp(5,buy,hat).
 conj:and(5,frock,hat).
 % relations.
-will_buy(5,i,myself_new_dimity_frock).
-will_buy(5,i,myself_dimity_frock).
-get_from(5,i,sale).
+aos(5,will_buy,i,myself_new_dimity_frock).
+aos(5,will_buy,i,myself_dimity_frock).
+aos(5,get_from,i,sale).
 %% and when i go to market wo n't all the young men come up and speak to me.
 % dependencies.
 root(6,root,go).
@@ -140,7 +140,7 @@ conj:and(6,go,speak).
 case(6,I,to).
 nmod:to(6,speak,I).
 % relations.
-speak_to(6,i,I).
+aos(6,speak_to,i,I).
 %% polly shaw will be that jealous.
 % dependencies.
 root(7,root,shaw).
@@ -175,9 +175,9 @@ dobj(9,toss,head).
 case(9,this,like).
 nmod:like(9,toss,this).
 % relations.
-toss(9,i,my_head).
-shall_just_look_at(9,i,she).
-shall_look_at(9,i,she).
+aos(9,toss,i,my_head).
+aos(9,shall_just_look_at,i,she).
+aos(9,shall_look_at,i,she).
 %% as she spoke she tossed her head back the pail fell off it and all the milk was spilt.
 % dependencies.
 root(10,root,speak).
@@ -201,7 +201,7 @@ auxpass(10,spill,be).
 dep(10,toss,spill).
 conj:and(10,fall,spill).
 % relations.
-be(10,milk,spill).
+aos(10,be,milk,spill).
 %% so she had to go home and tell her mother what had occurred.
 % dependencies.
 root(11,root,have).
@@ -222,8 +222,8 @@ ref(11,mother,what).
 aux(11,occur,have).
 acl:relcl(11,mother,occur).
 % relations.
-go(11,she,home).
-have(11,she,go).
+aos(11,go,she,home).
+aos(11,have,she,go).
 %% ah my child.
 % dependencies.
 root(12,root,ah).

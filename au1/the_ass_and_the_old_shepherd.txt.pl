@@ -22,8 +22,8 @@ case(0,enemy,of).
 det(0,enemy,the).
 nmod:of(0,cry,enemy).
 % relations.
-watch(0,shepherd,he_ass).
-cry_of(0,shepherd,enemy).
+aos(0,watch,shepherd,he_ass).
+aos(0,cry_of,shepherd,enemy).
 %% he appealed to the ass to fly with him lest they should both be captured but the animal lazily replied.
 % dependencies.
 root(1,root,appeal).
@@ -48,14 +48,14 @@ nsubj(1,reply,animal).
 advmod(1,reply,lazily).
 ccomp(1,capture,reply).
 % relations.
-should(1,they,should_both_capture).
-appeal(1,he,fly).
-fly(1,he,should_both_capture).
-appeal_to(1,he,ass).
-fly_with(1,he,he).
-fly(1,he,should_capture).
-should(1,they,should_capture).
-appeal(1,he,fly_with_he).
+aos(1,should,they,should_both_capture).
+aos(1,appeal,he,fly).
+aos(1,fly,he,should_both_capture).
+aos(1,appeal_to,he,ass).
+aos(1,fly_with,he,he).
+aos(1,fly,he,should_capture).
+aos(1,should,they,should_capture).
+aos(1,appeal,he,fly_with_he).
 %% why should i pray.
 % dependencies.
 root(2,root,pray).
@@ -81,10 +81,10 @@ dobj(3,place,set).
 case(3,pannier,of).
 nmod:of(3,set,pannier).
 % relations.
-place(3,it,two_set).
-place(3,conqueror,two_set).
-place(3,conqueror,two_set_of_pannier).
-place(3,it,two_set_of_pannier).
+aos(3,place,it,two_set).
+aos(3,place,conqueror,two_set).
+aos(3,place,conqueror,two_set_of_pannier).
+aos(3,place,it,two_set_of_pannier).
 %% '.
 % dependencies.
 root(4,root,').

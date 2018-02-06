@@ -20,8 +20,8 @@ det(0,time,the).
 amod(0,time,same).
 nmod:at(0,court,time).
 % relations.
-court(0,gray,two_woman).
-turn(0,hair,gray).
+aos(0,court,gray,two_woman).
+aos(0,turn,hair,gray).
 %% one of them was young and the other well advanced in years.
 % dependencies.
 root(1,root,young).
@@ -72,10 +72,10 @@ nmod:poss(2,hair,he).
 amod(2,hair,black).
 nmod:of(2,portion,hair).
 % relations.
-pull_out(2,she,portion_of_he_hair).
-pull_out(2,she,portion).
-visit(2,she_admirer,she).
-pull_out(2,she,portion_of_he_black_hair).
+aos(2,pull_out,she,portion_of_he_hair).
+aos(2,pull_out,she,portion).
+aos(2,visit,she_admirer,she).
+aos(2,pull_out,she,portion_of_he_black_hair).
 %% the younger on the contrary not wishing to become the wife of an old man was equally zealous in removing every gray hair she could find.
 % dependencies.
 root(3,root,zealous).
@@ -133,6 +133,6 @@ case(4,head,on).
 nmod:poss(4,head,he).
 nmod:on(4,leave,head).
 % relations.
-find(4,he,both).
-soon_find(4,he,both).
-very_soon_find(4,he,both).
+aos(4,find,he,both).
+aos(4,soon_find,he,both).
+aos(4,very_soon_find,he,both).

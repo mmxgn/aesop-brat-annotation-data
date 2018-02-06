@@ -34,15 +34,15 @@ case(0,horn,of).
 nmod:poss(0,horn,he).
 nmod:of(0,tip,horn).
 % relations.
-hotly_pursue_by(0,hart,hound).
-leave_nothing(0,itself,see_but_tip).
-leave_nothing(0,itself,see_but_tip_of_he_horn).
-bury(0,hart,itself).
-flee_for(0,hart,refuge).
-leave(0,itself,nothing).
-flee_into(0,hart,ox-stall).
-pursue_by(0,hart,hound).
-leave_nothing(0,itself,see).
+aos(0,hotly_pursue_by,hart,hound).
+aos(0,leave_nothing,itself,see_but_tip).
+aos(0,leave_nothing,itself,see_but_tip_of_he_horn).
+aos(0,bury,hart,itself).
+aos(0,flee_for,hart,refuge).
+aos(0,leave,itself,nothing).
+aos(0,flee_into,hart,ox-stall).
+aos(0,pursue_by,hart,hound).
+aos(0,leave_nothing,itself,see).
 %% soon after the hunters came up and asked if any one had seen the hart.
 % dependencies.
 root(1,root,soon).
@@ -91,9 +91,9 @@ dobj(2,see,hunter).
 conj:and(2,nothing,hunter).
 advmod(2,go,away).
 % relations.
-see(2,they_dinner,nothing).
-see(2,they_dinner,hunter).
-look(2,they_dinner,round).
+aos(2,see,they_dinner,nothing).
+aos(2,see,they_dinner,hunter).
+aos(2,look,they_dinner,round).
 %% shortly afterwards the master came in and looking round saw that something unusual had taken place.
 % dependencies.
 root(3,root,come).
@@ -126,8 +126,8 @@ nmod:of(4,truss,hay).
 cc(4,point,and).
 conj:and(4,point,say).
 % relations.
-point_to(4,he,truss).
-point_to(4,he,truss_of_hay).
+aos(4,point_to,he,truss).
+aos(4,point_to,he,truss_of_hay).
 %% what are those two curious things sticking out of the hay.
 % dependencies.
 root(5,root,stick).
@@ -167,10 +167,10 @@ dobj(6,make,end).
 case(6,he,of).
 nmod:of(6,end,he).
 % relations.
-make(6,they,end).
-soon_make(6,they,end).
-soon_make(6,they,end_of_he).
-come(6,stable_boy,look).
-make(6,they,end_of_he).
-come(6,boy,look).
-discover(6,they,hart).
+aos(6,make,they,end).
+aos(6,soon_make,they,end).
+aos(6,soon_make,they,end_of_he).
+aos(6,come,stable_boy,look).
+aos(6,make,they,end_of_he).
+aos(6,come,boy,look).
+aos(6,discover,they,hart).

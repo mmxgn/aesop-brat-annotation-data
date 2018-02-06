@@ -17,11 +17,11 @@ nmod:poss(0,desire,heart).
 case(0,heart,').
 dobj(0,grant,desire).
 % relations.
-grant(0,he,they_heart_'_desire).
-pray(0,two_neighbour,he).
-come_before(0,two_neighbour,jupiter).
-come_before(0,neighbour,jupiter).
-pray(0,neighbour,he).
+aos(0,grant,he,they_heart_'_desire).
+aos(0,pray,two_neighbour,he).
+aos(0,come_before,two_neighbour,jupiter).
+aos(0,come_before,neighbour,jupiter).
+aos(0,pray,neighbour,he).
 %% now the one was full of avarice and the other eaten up with envy.
 % dependencies.
 root(1,root,full).
@@ -73,7 +73,7 @@ advmod(2,much,twice).
 advmod(2,much,as).
 dobj(2,have,much).
 % relations.
-have(2,he_neighbour,twice_as_much).
+aos(2,have,he_neighbour,twice_as_much).
 %% the avaricious man prayed to have a room full of gold.
 % dependencies.
 root(3,root,pray).
@@ -89,10 +89,10 @@ case(3,gold,full).
 case(3,gold,of).
 nmod:of(3,room,gold).
 % relations.
-have(3,man,room_full_of_gold).
-have(3,avaricious_man,room_full_of_gold).
-have(3,man,room).
-have(3,avaricious_man,room).
+aos(3,have,man,room_full_of_gold).
+aos(3,have,avaricious_man,room_full_of_gold).
+aos(3,have,man,room).
+aos(3,have,avaricious_man,room).
 %% no sooner said than done.
 % dependencies.
 root(4,root,say).
@@ -126,13 +126,13 @@ det(5,metal,the).
 amod(5,metal,precious).
 nmod:of(5,room,metal).
 % relations.
-have(5,he_neighbour,two_room_full_of_precious_metal).
-be(5,joy,turn).
-have(5,he_neighbour,two_room_full_of_metal).
-have(5,he_neighbour,two_room).
-be(5,he_joy,turn).
-be_turn_to(5,he_joy,grief).
-be_turn_to(5,joy,grief).
+aos(5,have,he_neighbour,two_room_full_of_precious_metal).
+aos(5,be,joy,turn).
+aos(5,have,he_neighbour,two_room_full_of_metal).
+aos(5,have,he_neighbour,two_room).
+aos(5,be,he_joy,turn).
+aos(5,be_turn_to,he_joy,grief).
+aos(5,be_turn_to,joy,grief).
 %% then came the turn of the envious man who could not bear to think that his neighbour had any joy at all.
 % dependencies.
 root(6,root,come).

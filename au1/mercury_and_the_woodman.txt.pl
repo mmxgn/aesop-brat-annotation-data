@@ -32,10 +32,10 @@ case(0,water,into).
 det(0,water,the).
 nmod:into(0,fall,water).
 % relations.
-be_fell(0,woodman,tree).
-fly_out_of(0,he_axe,he_hand).
-fall_into(0,he_axe,water).
-be_fell_tree_on(0,woodman,bank).
+aos(0,be_fell,woodman,tree).
+aos(0,fly_out_of,he_axe,he_hand).
+aos(0,fall_into,he_axe,water).
+aos(0,be_fell_tree_on,woodman,bank).
 %% as he stood by the water 's edge lamenting his loss mercury appeared and asked him the reason for his grief.
 % dependencies.
 root(1,root,stand).
@@ -62,12 +62,12 @@ case(1,grief,for).
 nmod:poss(1,grief,he).
 nmod:for(1,reason,grief).
 % relations.
-reason_for(1,he,he_grief).
-ask(1,he_loss_mercury,he_reason_for_he_grief).
-stand_by(1,he,water_'s_edge).
-ask(1,he_loss_mercury,he_reason).
-stand(1,he,lament).
-by(1,water,edge).
+aos(1,reason_for,he,he_grief).
+aos(1,ask,he_loss_mercury,he_reason_for_he_grief).
+aos(1,stand_by,he,water_'s_edge).
+aos(1,ask,he_loss_mercury,he_reason).
+aos(1,stand,he,lament).
+aos(1,by,water,edge).
 %% on learning what had happened out of pity for his distress mercury dived into the river and bringing up a golden axe asked him if that was the one he had lost.
 % dependencies.
 root(2,root,learn).
@@ -104,7 +104,7 @@ nsubj(2,lose,he).
 aux(2,lose,have).
 acl:relcl(2,one,lose).
 % relations.
-dive_into(2,he_distress_mercury,river).
+aos(2,dive_into,he_distress_mercury,river).
 %% the woodman replied that it was not and mercury then dived a second time and bringing up a silver axe asked if that was his.
 % dependencies.
 root(3,root,reply).
@@ -135,8 +135,8 @@ nsubj(3,he,that).
 cop(3,he,be).
 advcl:if(3,ask,he).
 % relations.
-dive(3,mercury,time).
-dive(3,mercury,second_time).
+aos(3,dive,mercury,time).
+aos(3,dive,mercury,second_time).
 %% no that is not mine either.
 % dependencies.
 root(4,root,no).
@@ -169,8 +169,8 @@ det(6,axe,the).
 amod(6,axe,miss).
 nmod(6,bring,axe).
 % relations.
-dive_into(6,mercury,river).
-dive_into(6,more_mercury,river).
+aos(6,dive_into,mercury,river).
+aos(6,dive_into,more_mercury,river).
 %% the woodman was overjoyed at recovering his property and thanked his benefactor warmly.
 % dependencies.
 root(7,root,overjoy).
@@ -188,10 +188,10 @@ nmod:poss(7,benefactor,he).
 dobj(7,thank,benefactor).
 advmod(7,thank,warmly).
 % relations.
-be(7,woodman,overjoy).
-thank_warmly(7,woodman,he_benefactor).
-recover(7,woodman,he_property).
-thank(7,woodman,he_benefactor).
+aos(7,be,woodman,overjoy).
+aos(7,thank_warmly,woodman,he_benefactor).
+aos(7,recover,woodman,he_property).
+aos(7,thank,woodman,he_benefactor).
 %% and the latter was so pleased with his honesty that he made him a present of the other two axes.
 % dependencies.
 root(8,root,latter).
@@ -215,11 +215,11 @@ amod(8,axis,other).
 nummod(8,axis,two).
 nmod:of(8,present,axis).
 % relations.
-make(8,he,he_present_of_other_two_axis).
-make(8,he,he_present).
-make(8,he,he_present_of_two_axis).
-present_of(8,he,two_axis).
-present_of(8,he,other_two_axis).
+aos(8,make,he,he_present_of_other_two_axis).
+aos(8,make,he,he_present).
+aos(8,make,he,he_present_of_two_axis).
+aos(8,present_of,he,two_axis).
+aos(8,present_of,he,other_two_axis).
 %% when the woodman told the story to his companions one of these was filled with envy of his good fortune and determined to try his luck for himself.
 % dependencies.
 root(9,root,tell).
@@ -254,7 +254,7 @@ dobj(9,try,luck).
 case(9,himself,for).
 nmod:for(9,try,himself).
 % relations.
-tell(9,woodman,story).
+aos(9,tell,woodman,story).
 %% so he went and began to fell a tree at the edge of the river and presently contrived to let his axe drop into the water.
 % dependencies.
 root(10,root,so).
@@ -288,9 +288,9 @@ case(10,water,into).
 det(10,water,the).
 nmod:into(10,let,water).
 % relations.
-begin(10,he,fall_at_edge).
-begin(10,he,fall_at_edge_of_river).
-begin(10,he,fall).
+aos(10,begin,he,fall_at_edge).
+aos(10,begin,he,fall_at_edge_of_river).
+aos(10,begin,he,fall).
 %% mercury appeared as before and on learning that his axe had fallen in he dived and brought up a golden axe as he had done on the previous occasion.
 % dependencies.
 root(11,root,appear).
@@ -326,11 +326,11 @@ det(11,occasion,the).
 amod(11,occasion,previous).
 nmod:on(11,do,occasion).
 % relations.
-appear(11,mercury,he_have_do_on_previous_occasion).
-have_do_on(11,he,occasion).
-have_do_on(11,he,previous_occasion).
-appear(11,mercury,he_have_do).
-appear(11,mercury,he_have_do_on_occasion).
+aos(11,appear,mercury,he_have_do_on_previous_occasion).
+aos(11,have_do_on,he,occasion).
+aos(11,have_do_on,he,previous_occasion).
+aos(11,appear,mercury,he_have_do).
+aos(11,appear,mercury,he_have_do_on_occasion).
 %% without waiting to be asked whether it was his or not the fellow cried.
 % dependencies.
 root(12,root,wait).
@@ -348,7 +348,7 @@ det(12,fellow,the).
 nsubj(12,cry,fellow).
 conj:or(12,wait,cry).
 % relations.
-be(12,it,he).
+aos(12,be,it,he).
 %% that 's mine that 's mine.
 % dependencies.
 root(13,root,mine).
@@ -410,6 +410,6 @@ case(14,stream,into).
 det(14,stream,the).
 nmod:into(14,fall,stream).
 % relations.
-give(14,he,he).
-give(14,he,axe).
-give(14,he,golden_axe).
+aos(14,give,he,he).
+aos(14,give,he,axe).
+aos(14,give,he,golden_axe).

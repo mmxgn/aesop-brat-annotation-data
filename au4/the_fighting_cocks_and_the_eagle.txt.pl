@@ -13,14 +13,14 @@ case(0,farmyard,of).
 det(0,farmyard,the).
 nmod:of(0,mastery,farmyard).
 % relations.
-be_fight_for(0,two_game_cock,mastery_of_farmyard).
-be_fiercely_fight_for(0,game_cock,mastery_of_farmyard).
-be_fight_for(0,two_game_cock,mastery).
-be_fight_for(0,game_cock,mastery_of_farmyard).
-be_fiercely_fight_for(0,game_cock,mastery).
-be_fiercely_fight_for(0,two_game_cock,mastery_of_farmyard).
-be_fight_for(0,game_cock,mastery).
-be_fiercely_fight_for(0,two_game_cock,mastery).
+aos(0,be_fight_for,two_game_cock,mastery_of_farmyard).
+aos(0,be_fiercely_fight_for,game_cock,mastery_of_farmyard).
+aos(0,be_fight_for,two_game_cock,mastery).
+aos(0,be_fight_for,game_cock,mastery_of_farmyard).
+aos(0,be_fiercely_fight_for,game_cock,mastery).
+aos(0,be_fiercely_fight_for,two_game_cock,mastery_of_farmyard).
+aos(0,be_fight_for,game_cock,mastery).
+aos(0,be_fiercely_fight_for,two_game_cock,mastery).
 %% one at last put the other to flight.
 % dependencies.
 root(1,root,put).
@@ -69,9 +69,9 @@ nmod:with(2,crow,all).
 nsubj(2,might,he).
 acl:relcl(2,all,might).
 % relations.
-hide(2,the,himself).
-vanquish(2,the,cock).
-flap(2,conqueror,he_wing).
+aos(2,hide,the,himself).
+aos(2,vanquish,the,cock).
+aos(2,flap,conqueror,he_wing).
 %% an eagle sailing through the air pounced upon him and carried him off in his talons.
 % dependencies.
 root(3,root,sailing).
@@ -111,8 +111,8 @@ case(4,mastery,with).
 amod(4,mastery,undisputed).
 nmod:with(4,rule,mastery).
 % relations.
-rule_henceforth_with(4,the,undisputed_mastery).
-come_out_of(4,the,he_corner).
-vanquish_immediately(4,the,cock).
-rule_henceforth_with(4,the,mastery).
-rule(4,the,henceforth).
+aos(4,rule_henceforth_with,the,undisputed_mastery).
+aos(4,come_out_of,the,he_corner).
+aos(4,vanquish_immediately,the,cock).
+aos(4,rule_henceforth_with,the,mastery).
+aos(4,rule,the,henceforth).

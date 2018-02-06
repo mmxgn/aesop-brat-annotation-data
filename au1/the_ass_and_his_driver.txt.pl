@@ -22,9 +22,9 @@ det(0,precipice,a).
 amod(0,precipice,deep).
 nmod:of(0,brink,precipice).
 % relations.
-bolt_to(0,ass,brink_of_precipice).
-bolt_to(0,ass,brink).
-bolt_to(0,ass,brink_of_deep_precipice).
+aos(0,bolt_to,ass,brink_of_precipice).
+aos(0,bolt_to,ass,brink).
+aos(0,bolt_to,ass,brink_of_deep_precipice).
 %% while he was in the act of throwing himself over his owner seized him by the tail endeavoring to pull him back.
 % dependencies.
 root(1,root,act).
@@ -50,7 +50,7 @@ xcomp(1,endeavor,pull).
 dobj(1,pull,he).
 advmod(1,pull,back).
 % relations.
-seize(1,he_owner,he).
+aos(1,seize,he_owner,he).
 %% when the ass persisted in his effort the man let him go and said.
 % dependencies.
 root(2,root,persist).

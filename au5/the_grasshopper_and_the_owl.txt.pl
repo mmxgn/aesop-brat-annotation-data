@@ -33,15 +33,15 @@ mark(0,stop,to).
 xcomp(0,disturb,stop).
 xcomp(0,stop,chirp).
 % relations.
-be(0,owl,greatly_disturb).
-be(0,owl,greatly_disturb_by_noise_she).
-be(0,owl,disturb_by_noise_of_grasshopper_she).
-be(0,owl,greatly_disturb_by_noise_of_grasshopper_she).
-be(0,owl,disturb).
-be(0,owl,greatly_disturb_she).
-be(0,owl,disturb_she).
-stop(0,owl,chirp).
-be(0,owl,disturb_by_noise_she).
+aos(0,be,owl,greatly_disturb).
+aos(0,be,owl,greatly_disturb_by_noise_she).
+aos(0,be,owl,disturb_by_noise_of_grasshopper_she).
+aos(0,be,owl,greatly_disturb_by_noise_of_grasshopper_she).
+aos(0,be,owl,disturb).
+aos(0,be,owl,greatly_disturb_she).
+aos(0,be,owl,disturb_she).
+aos(0,stop,owl,chirp).
+aos(0,be,owl,disturb_by_noise_she).
 %% the grasshopper refused to desist and chirped louder and louder the more the owl entreated.
 % dependencies.
 root(1,root,grasshopper).
@@ -88,7 +88,7 @@ case(2,stratagem,by).
 det(2,stratagem,a).
 nmod:by(2,attack,stratagem).
 % relations.
-be_despise(2,she_word,owl).
+aos(2,be_despise,she_word,owl).
 %% since i can not sleep.
 % dependencies.
 root(3,root,sleep).
@@ -153,8 +153,8 @@ conj:and(6,dislike,drink).
 dobj(6,drink,it).
 advmod(6,drink,together).
 % relations.
-will_drink(6,we,it).
-will_drink_together(6,we,it).
+aos(6,will_drink,we,it).
+aos(6,will_drink_together,we,it).
 %% the grasshopper who was thirsty and pleased with the praise of her voice eagerly flew up.
 % dependencies.
 root(7,root,fly).
@@ -195,4 +195,4 @@ dobj(8,put,she).
 case(8,death,to).
 nmod:to(8,put,death).
 % relations.
-put(8,she,she).
+aos(8,put,she,she).

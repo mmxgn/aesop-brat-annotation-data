@@ -11,9 +11,9 @@ case(0,charger,with).
 nmod:poss(0,charger,he).
 nmod:with(0,take,charger).
 % relations.
-take(0,horse_soldier,utmost_pain).
-take_pain_with(0,horse_soldier,he_charger).
-take(0,horse_soldier,pain).
+aos(0,take,horse_soldier,utmost_pain).
+aos(0,take_pain_with,horse_soldier,he_charger).
+aos(0,take,horse_soldier,pain).
 %% as long as the war lasted he looked upon him as his fellow-helper in all emergencies and fed him carefully with hay and corn.
 % dependencies.
 root(1,root,long).
@@ -42,9 +42,9 @@ cc(1,hay,and).
 nmod:with(1,feed,corn).
 conj:and(1,hay,corn).
 % relations.
-look_upon(1,he,he).
-is_in(1,he_fellow-helper,emergency).
-look_as(1,he,he_fellow-helper_in_emergency).
+aos(1,look_upon,he,he).
+aos(1,is_in,he_fellow-helper,emergency).
+aos(1,look_as,he,he_fellow-helper_in_emergency).
 %% but when the war was over he only allowed him chaff to eat and made him carry heavy loads of wood subjecting him to much slavish drudgery and ill-treatment.
 % dependencies.
 root(2,root,be).
@@ -81,12 +81,12 @@ cc(2,drudgery,and).
 nmod:to(2,subject,ill-treatment).
 conj:and(2,drudgery,ill-treatment).
 % relations.
-allow(2,he,eat).
-only_allow(2,he,eat).
-only_allow(2,he,chaff).
-allow(2,he,chaff).
-be(2,war,he_only_allow).
-be(2,war,he_allow).
+aos(2,allow,he,eat).
+aos(2,only_allow,he,eat).
+aos(2,only_allow,he,chaff).
+aos(2,allow,he,chaff).
+aos(2,be,war,he_only_allow).
+aos(2,be,war,he_allow).
 %% war was again proclaimed however and when the trumpet summoned him to his standard the soldier put on his charger its military trappings and mounted being clad in his heavy coat of mail.
 % dependencies.
 root(3,root,proclaimed).
@@ -126,8 +126,8 @@ nmod:in(3,clothe,coat).
 case(3,mail,of).
 nmod:of(3,coat,mail).
 % relations.
-be(3,war,proclaimed).
-be(3,war,again_proclaimed).
+aos(3,be,war,proclaimed).
+aos(3,be,war,again_proclaimed).
 %% the horse fell down straightway under the weight no longer equal to the burden and said to his master.
 % dependencies.
 root(4,root,fall).
@@ -151,14 +151,14 @@ case(4,master,to).
 nmod:poss(4,master,he).
 nmod:to(4,say,master).
 % relations.
-fall_down_under(4,horse,weight).
-fall_down_straightway_under(4,horse,weight).
-say_to(4,horse,he_master).
-fall_down_straightway_to(4,horse,burden).
-fall_down(4,horse,straightway).
-fall_down_to(4,horse,burden).
-fall_down_under(4,horse,weight_equal).
-fall_down_straightway_under(4,horse,weight_equal).
+aos(4,fall_down_under,horse,weight).
+aos(4,fall_down_straightway_under,horse,weight).
+aos(4,say_to,horse,he_master).
+aos(4,fall_down_straightway_to,horse,burden).
+aos(4,fall_down,horse,straightway).
+aos(4,fall_down_to,horse,burden).
+aos(4,fall_down_under,horse,weight_equal).
+aos(4,fall_down_straightway_under,horse,weight_equal).
 %% you must now go to the war on foot for you have transformed me from a horse into an ass.
 % dependencies.
 root(5,root,go).
@@ -182,11 +182,11 @@ case(5,ass,into).
 det(5,ass,a).
 nmod:into(5,transform,ass).
 % relations.
-must_go_to(5,you,war).
-have_transform(5,you,I).
-must_go_to(5,you,war_on_foot).
-must_now_go_to(5,you,war_on_foot).
-must_now_go_to(5,you,war).
+aos(5,must_go_to,you,war).
+aos(5,have_transform,you,I).
+aos(5,must_go_to,you,war_on_foot).
+aos(5,must_now_go_to,you,war_on_foot).
+aos(5,must_now_go_to,you,war).
 %% and how can you expect that i can again turn in a moment from an ass to a horse.
 % dependencies.
 root(6,root,can).
@@ -209,10 +209,10 @@ case(6,horse,to).
 det(6,horse,a).
 nmod:to(6,turn,horse).
 % relations.
-moment_from(6,i,ass).
-again_turn_in_moment_to(6,i,horse).
-turn_in(6,i,moment_from_ass).
-again_turn_in(6,i,moment).
-turn_in(6,i,moment).
-again_turn_in(6,i,moment_from_ass).
-turn_in_moment_to(6,i,horse).
+aos(6,moment_from,i,ass).
+aos(6,again_turn_in_moment_to,i,horse).
+aos(6,turn_in,i,moment_from_ass).
+aos(6,again_turn_in,i,moment).
+aos(6,turn_in,i,moment).
+aos(6,again_turn_in,i,moment_from_ass).
+aos(6,turn_in_moment_to,i,horse).

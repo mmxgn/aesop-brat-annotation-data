@@ -14,9 +14,9 @@ case(0,theatre,of).
 det(0,theatre,a).
 nmod:of(0,store-room,theatre).
 % relations.
-get_into(0,fox,store-room_of_theatre).
-have_by(0,fox,means).
-get_into(0,fox,store-room).
+aos(0,get_into,fox,store-room_of_theatre).
+aos(0,have_by,fox,means).
+aos(0,get_into,fox,store-room).
 %% suddenly he observed a face glaring down on him and began to be very frightened.
 % dependencies.
 root(1,root,he).
@@ -36,9 +36,9 @@ cop(1,frightened,be).
 advmod(1,frightened,very).
 xcomp(1,begin,frightened).
 % relations.
-glare_down_on(1,face,he).
-begin(1,face,very_frightened).
-begin(1,face,frightened).
+aos(1,glare_down_on,face,he).
+aos(1,begin,face,very_frightened).
+aos(1,begin,face,frightened).
 %% but looking more closely he found it was only a mask such as actors use to put over their face.
 % dependencies.
 root(2,root,look).
@@ -79,8 +79,8 @@ nsubj(5,look,you).
 advmod(5,fine,very).
 xcomp(5,look,fine).
 % relations.
-look(5,you,very_fine).
-look(5,you,fine).
+aos(5,look,you,very_fine).
+aos(5,look,you,fine).
 %% it is a pity you have not got any brains.
 % dependencies.
 root(6,root,pity).

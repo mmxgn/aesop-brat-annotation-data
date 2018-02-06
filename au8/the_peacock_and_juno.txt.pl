@@ -23,13 +23,13 @@ nmod:poss(0,attraction,he).
 amod(0,attraction,other).
 nmod:to(0,have,attraction).
 % relations.
-is_in(0,nightingale,addition).
-once_place_petition_before(0,peacock,juno_desire).
-place_petition_before(0,peacock,juno_desire).
-place(0,peacock,petition).
-once_place_petition_before(0,peacock,juno).
-place_petition_before(0,peacock,juno).
-once_place(0,peacock,petition).
+aos(0,is_in,nightingale,addition).
+aos(0,once_place_petition_before,peacock,juno_desire).
+aos(0,place_petition_before,peacock,juno_desire).
+aos(0,place,peacock,petition).
+aos(0,once_place_petition_before,peacock,juno).
+aos(0,place_petition_before,peacock,juno).
+aos(0,once_place,peacock,petition).
 %% but juno refused his request.
 % dependencies.
 root(1,root,refuse).
@@ -38,7 +38,7 @@ nsubj(1,refuse,juno).
 nmod:poss(1,request,he).
 dobj(1,refuse,request).
 % relations.
-refuse(1,juno,he_request).
+aos(1,refuse,juno,he_request).
 %% when he persisted and pointed out that he was her favourite bird she said.
 % dependencies.
 root(2,root,persist).

@@ -71,12 +71,12 @@ case(2,bit,that).
 nmod:that(2,dog,bit).
 dobj(2,dip,you).
 % relations.
-dip(2,piece,you).
-go_to(2,you,dog_bit).
-dip(2,piece,it).
-go(2,you,it).
-would(2,you,would_cure).
-go_to(2,you,dog).
+aos(2,dip,piece,you).
+aos(2,go_to,you,dog_bit).
+aos(2,dip,piece,it).
+aos(2,go,you,it).
+aos(2,would,you,would_cure).
+aos(2,go_to,you,dog).
 %% the man who had been bitten laughed at this advice and said.
 % dependencies.
 root(3,root,laugh).
@@ -122,7 +122,7 @@ mark(5,bite,to).
 acl:to(5,town,bite).
 dobj(5,bite,I).
 % relations.
-should_beg(5,i,dog).
+aos(5,should_beg,i,dog).
 %% benefits bestowed upon the evil-disposed increase their means of injuring you.
 % dependencies.
 root(6,root,bestow).

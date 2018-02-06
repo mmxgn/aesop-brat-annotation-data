@@ -24,8 +24,8 @@ nsubj(0,cat,enemy).
 det(0,cat,the).
 xcomp(0,outwit,cat).
 % relations.
-have(0,mouse,council_consider).
-have(0,mouse,general_council_consider).
+aos(0,have,mouse,council_consider).
+aos(0,have,mouse,general_council_consider).
 %% some said this and some said that.
 % dependencies.
 root(1,root,say).
@@ -98,7 +98,7 @@ nsubj(5,approach,enemy).
 acl:relcl(5,manner,approach).
 dobj(5,approach,we).
 % relations.
-approach(5,enemy,we).
+aos(5,approach,enemy,we).
 %% now if we could receive some signal of her approach we could easily escape from her.
 % dependencies.
 root(6,root,now).
@@ -145,12 +145,12 @@ case(7,cat,of).
 det(7,cat,the).
 nmod:of(7,neck,cat).
 % relations.
-venture_therefore(7,neck,propose).
-be_procure_by(7,small_bell,ribbon_round).
-be(7,small_bell,procure).
-venture(7,neck,propose).
-be(7,bell,procure).
-be_procure_by(7,bell,ribbon_round).
+aos(7,venture_therefore,neck,propose).
+aos(7,be_procure_by,small_bell,ribbon_round).
+aos(7,be,small_bell,procure).
+aos(7,venture,neck,propose).
+aos(7,be,bell,procure).
+aos(7,be_procure_by,bell,ribbon_round).
 %% by this means we should always know when she was about and could easily retire while she was in the neighbourhood.
 % dependencies.
 root(8,root,mean).
@@ -177,9 +177,9 @@ case(8,neighbourhood,in).
 det(8,neighbourhood,the).
 advcl:in(8,retire,neighbourhood).
 % relations.
-easily_retire_in(8,she,neighbourhood).
-retire_in(8,she,neighbourhood).
-be_in(8,she,neighbourhood).
+aos(8,easily_retire_in,she,neighbourhood).
+aos(8,retire_in,she,neighbourhood).
+aos(8,be_in,she,neighbourhood).
 %% this proposal met with general applause until an old mouse got up and said.
 % dependencies.
 root(9,root,meet).
@@ -199,12 +199,12 @@ cc(9,get,and).
 advcl:until(9,meet,say).
 conj:and(9,get,say).
 % relations.
-meet(9,proposal,old_mouse_get).
-meet(9,proposal,old_mouse_get_up).
-meet(9,proposal,mouse_get).
-meet_with(9,proposal,applause).
-meet_with(9,proposal,general_applause).
-meet(9,proposal,mouse_get_up).
+aos(9,meet,proposal,old_mouse_get).
+aos(9,meet,proposal,old_mouse_get_up).
+aos(9,meet,proposal,mouse_get).
+aos(9,meet_with,proposal,applause).
+aos(9,meet_with,proposal,general_applause).
+aos(9,meet,proposal,mouse_get_up).
 %% that is all very well but who is to bell the cat.
 % dependencies.
 root(10,root,all).
@@ -233,4 +233,4 @@ conj:and(11,another,nobody).
 nsubj(11,speak,nobody).
 ccomp(11,look,speak).
 % relations.
-look_at(11,mouse,one).
+aos(11,look_at,mouse,one).

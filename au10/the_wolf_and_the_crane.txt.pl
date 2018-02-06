@@ -31,7 +31,7 @@ advcl(0,kill,swallow).
 conj:and(0,stick,swallow).
 dobj(0,swallow,it).
 % relations.
-is_in(0,small_bone,meat).
+aos(0,is_in,small_bone,meat).
 %% he soon felt terrible pain in his throat and ran up and down groaning and groaning and seeking for something to relieve the pain.
 % dependencies.
 root(1,root,feel).
@@ -63,14 +63,14 @@ xcomp(1,seek,relieve).
 det(1,pain,the).
 dobj(1,relieve,pain).
 % relations.
-soon_feel(1,he,terrible_pain).
-feel(1,he,pain).
-soon_feel_in(1,he,he_throat).
-feel(1,he,terrible_pain).
-soon_feel(1,he,pain).
-feel_in(1,he,he_throat).
-feel_pain_in(1,he,he_throat).
-soon_feel_pain_in(1,he,he_throat).
+aos(1,soon_feel,he,terrible_pain).
+aos(1,feel,he,pain).
+aos(1,soon_feel_in,he,he_throat).
+aos(1,feel,he,terrible_pain).
+aos(1,soon_feel,he,pain).
+aos(1,feel_in,he,he_throat).
+aos(1,feel_pain_in,he,he_throat).
+aos(1,soon_feel_pain_in,he,he_throat).
 %% he tried to induce every one he met to remove the bone.
 % dependencies.
 root(2,root,try).
@@ -95,7 +95,7 @@ nsubj(3,give,i).
 aux(3,give,would).
 dobj(3,give,anything).
 % relations.
-would_give(3,i,anything).
+aos(3,would_give,i,anything).
 %% said he.
 % dependencies.
 root(4,root,say).
@@ -110,7 +110,7 @@ aux(5,take,would).
 dobj(5,take,it).
 compound:prt(5,take,out).
 % relations.
-would_take_out(5,you,it).
+aos(5,would_take_out,you,it).
 %% at last the crane agreed to try and told the wolf to lie on his side and open his jaws as wide as he could.
 % dependencies.
 root(6,root,agree).
@@ -144,10 +144,10 @@ mark(6,could,as).
 nsubj(6,could,he).
 advcl:as(6,open,could).
 % relations.
-agree_at(6,crane,last).
-tell(6,crane,wolf).
-agree(6,crane,try).
-lie_on(6,wolf,he_side).
+aos(6,agree_at,crane,last).
+aos(6,tell,crane,wolf).
+aos(6,agree,crane,try).
+aos(6,lie_on,wolf,he_side).
 %% then the crane put its long neck down the wolf 's throat and with its beak loosened the bone till at last it got it out.
 % dependencies.
 root(7,root,crane).
@@ -178,11 +178,11 @@ dep(7,bone,get).
 dobj(7,get,it).
 compound:prt(7,get,out).
 % relations.
-loosen(7,its_neck,bone).
-down(7,wolf,throat).
-loosen_bone_with(7,its_neck,its_beak).
-loosen(7,its_long_neck,bone).
-loosen_bone_with(7,its_long_neck,its_beak).
+aos(7,loosen,its_neck,bone).
+aos(7,down,wolf,throat).
+aos(7,loosen_bone_with,its_neck,its_beak).
+aos(7,loosen,its_long_neck,bone).
+aos(7,loosen_bone_with,its_long_neck,its_beak).
 %% will you kindly give me the reward you promised.
 % dependencies.
 root(8,root,give).
@@ -215,7 +215,7 @@ dobj(10,grin,tooth).
 cc(10,grin,and).
 conj:and(10,grin,say).
 % relations.
-grin(10,wolf,he_tooth).
+aos(10,grin,wolf,he_tooth).
 %% be content.
 % dependencies.
 root(11,root,content).
@@ -242,9 +242,9 @@ advmod(12,safety,again).
 case(12,safety,in).
 nmod:in(12,take,safety).
 % relations.
-inside(12,wolf,mouth).
-take_out(12,you,it).
-have_put(12,you,you_head).
+aos(12,inside,wolf,mouth).
+aos(12,take_out,you,it).
+aos(12,have_put,you,you_head).
 %% that ought to be reward enough for you.
 % dependencies.
 root(13,root,ought).

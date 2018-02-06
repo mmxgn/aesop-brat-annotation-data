@@ -41,8 +41,8 @@ xcomp(1,hope,find).
 nsubj(1,full,it).
 xcomp(1,find,full).
 % relations.
-hope(1,it,find).
-find(1,it,it_full).
+aos(1,hope,it,find).
+aos(1,find,it,it_full).
 %% but when she took it up she found that all the wine had been drunk out of it.
 % dependencies.
 root(2,root,take).
@@ -64,11 +64,11 @@ dep(2,drunk,out).
 case(2,it,of).
 nmod:of(2,drunk,it).
 % relations.
-take(2,she,it_find).
-take(2,she,it_she_find).
-be(2,wine,drunk).
-take(2,she,she_find).
-be_drunk_of(2,wine,it).
+aos(2,take,she,it_find).
+aos(2,take,she,it_she_find).
+aos(2,be,wine,drunk).
+aos(2,take,she,she_find).
+aos(2,be_drunk_of,wine,it).
 %% still she took a long sniff at the mouth of the jar.
 % dependencies.
 root(3,root,still).
@@ -84,8 +84,8 @@ case(3,jar,of).
 det(3,jar,the).
 nmod:of(3,mouth,jar).
 % relations.
-sniff_at(3,long,mouth).
-sniff_at(3,long,mouth_of_jar).
+aos(3,sniff_at,long,mouth).
+aos(3,sniff_at,long,mouth_of_jar).
 %% ah.
 % dependencies.
 root(4,root,ah).

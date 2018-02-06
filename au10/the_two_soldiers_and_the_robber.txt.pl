@@ -35,8 +35,8 @@ compound(2,hand,stout).
 amod(2,hand,right).
 nmod:with(2,defend,hand).
 % relations.
-defend(2,other,himself).
-stand(2,other,he_ground).
+aos(2,defend,other,himself).
+aos(2,stand,other,he_ground).
 %% the robber being slain the timid companion ran up and drew his sword and then throwing back his traveling cloak said.
 % dependencies.
 root(3,root,say).
@@ -64,8 +64,8 @@ nmod:poss(3,cloak,he).
 amod(3,cloak,travel).
 dobj(3,throw,cloak).
 % relations.
-draw(3,companion,he_sword).
-draw(3,timid_companion,he_sword).
+aos(3,draw,companion,he_sword).
+aos(3,draw,timid_companion,he_sword).
 %% i 'll at him and i 'll take care he shall learn whom he has attacked.
 % dependencies.
 root(4,root,will).
@@ -86,7 +86,7 @@ nsubj(4,attack,he).
 aux(4,attack,have).
 ccomp(4,learn,attack).
 % relations.
-will_at(4,i,he).
+aos(4,will_at,i,he).
 %% on this he who had fought with the robber made answer.
 % dependencies.
 root(5,root,he).
@@ -138,30 +138,30 @@ mark(6,true,to).
 cop(6,true,be).
 xcomp(6,believe,true).
 % relations.
-believe(6,i,true).
-should(6,i,should_have_encouraged_believe).
-have_with(6,it,now_even_have_only_word).
-should(6,i,should_have_more_encouraged_believe).
-believe(6,i,they).
-have_with(6,it,just_have_word).
-have_with(6,it,just_even_have_word).
-have_with(6,it,just_now_have_word).
-have_with(6,it,even_have_word).
-have_with(6,it,now_even_have_word).
-help(6,you,I).
-have_with(6,it,just_have_only_word).
-have_with(6,it,now_have_word).
-should(6,i,should_have_more_encouraged).
-have_with(6,it,even_have_only_word).
-have_with(6,it,just_now_have_only_word).
-have_with(6,it,just_even_have_only_word).
-have_with(6,it,have_only_word).
-believe(6,should_have_encouraged,they).
-have_with(6,it,just_now_even_have_only_word).
-have_with(6,it,now_have_only_word).
-have_with(6,it,have_word).
-have_with(6,it,just_now_even_have_word).
-should(6,i,should_have_encouraged).
+aos(6,believe,i,true).
+aos(6,should,i,should_have_encouraged_believe).
+aos(6,have_with,it,now_even_have_only_word).
+aos(6,should,i,should_have_more_encouraged_believe).
+aos(6,believe,i,they).
+aos(6,have_with,it,just_have_word).
+aos(6,have_with,it,just_even_have_word).
+aos(6,have_with,it,just_now_have_word).
+aos(6,have_with,it,even_have_word).
+aos(6,have_with,it,now_even_have_word).
+aos(6,help,you,I).
+aos(6,have_with,it,just_have_only_word).
+aos(6,have_with,it,now_have_word).
+aos(6,should,i,should_have_more_encouraged).
+aos(6,have_with,it,even_have_only_word).
+aos(6,have_with,it,just_now_have_only_word).
+aos(6,have_with,it,just_even_have_only_word).
+aos(6,have_with,it,have_only_word).
+aos(6,believe,should_have_encouraged,they).
+aos(6,have_with,it,just_now_even_have_only_word).
+aos(6,have_with,it,now_have_only_word).
+aos(6,have_with,it,have_word).
+aos(6,have_with,it,just_now_even_have_word).
+aos(6,should,i,should_have_encouraged).
 %% but now put up your sword in its sheath and hold your equally useless tongue till you can deceive others who do not know you.
 % dependencies.
 root(7,root,put).
@@ -192,12 +192,12 @@ neg(7,know,not).
 acl:relcl(7,other,know).
 dobj(7,know,you).
 % relations.
-is_in(7,you_sword,its_sheath).
-put_up(7,now,you_sword_in_its_sheath).
-hold(7,now,you_tongue).
-put_up(7,now,you_sword).
-hold(7,now,you_equally_useless_tongue).
-hold(7,now,you_useless_tongue).
+aos(7,is_in,you_sword,its_sheath).
+aos(7,put_up,now,you_sword_in_its_sheath).
+aos(7,hold,now,you_tongue).
+aos(7,put_up,now,you_sword).
+aos(7,hold,now,you_equally_useless_tongue).
+aos(7,hold,now,you_useless_tongue).
 %% i indeed who have experienced with what speed you run away know right well that no dependence can be placed on your valor.
 % dependencies.
 root(8,root,indeed).

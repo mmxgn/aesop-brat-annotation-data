@@ -24,9 +24,9 @@ case(0,shrine,at).
 nmod:poss(0,shrine,he).
 nmod:at(0,offer,shrine).
 % relations.
-pray(0,crow,apollo).
-apollo(0,crow,release).
-catch_in(0,crow,snare).
+aos(0,pray,crow,apollo).
+aos(0,apollo,crow,release).
+aos(0,catch_in,crow,snare).
 %% but when rescued from his danger he forgot his promise.
 % dependencies.
 root(1,root,forget).
@@ -40,7 +40,7 @@ nsubj(1,forget,he).
 nmod:poss(1,promise,he).
 dobj(1,forget,promise).
 % relations.
-forget(1,he,he_promise).
+aos(1,forget,he,he_promise).
 %% shortly afterwards again caught in a snare he passed by apollo and made the same promise to offer frankincense to mercury.
 % dependencies.
 root(2,root,catch).
@@ -67,9 +67,9 @@ dobj(2,offer,frankincense).
 case(2,mercury,to).
 nmod:to(2,offer,mercury).
 % relations.
-make(2,he,same_promise).
-make(2,he,promise).
-pass_by(2,he,apollo).
+aos(2,make,he,same_promise).
+aos(2,make,he,promise).
+aos(2,pass_by,he,apollo).
 %% mercury soon appeared and said to him.
 % dependencies.
 root(3,root,mercury).
@@ -107,4 +107,4 @@ nmod:poss(5,patron,thy).
 amod(5,patron,former).
 dobj(5,wrong,patron).
 % relations.
-can_believe(5,i,thee).
+aos(5,can_believe,i,thee).

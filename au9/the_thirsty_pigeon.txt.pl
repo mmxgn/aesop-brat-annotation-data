@@ -16,12 +16,12 @@ case(0,signboard,on).
 det(0,signboard,a).
 nmod:on(0,paint,signboard).
 % relations.
-see(0,pigeon,goblet_of_water_paint).
-see(0,pigeon,goblet_of_water).
-see(0,pigeon,goblet).
-oppress_by(0,pigeon,thirst).
-oppress_by(0,pigeon,excessive_thirst).
-see(0,pigeon,goblet_of_water_paint_on_signboard).
+aos(0,see,pigeon,goblet_of_water_paint).
+aos(0,see,pigeon,goblet_of_water).
+aos(0,see,pigeon,goblet).
+aos(0,oppress_by,pigeon,thirst).
+aos(0,oppress_by,pigeon,excessive_thirst).
+aos(0,see,pigeon,goblet_of_water_paint_on_signboard).
 %% not supposing it to be only a picture she flew towards it with a loud whir and unwittingly dashed against the signboard jarring herself terribly.
 % dependencies.
 root(1,root,suppose).
@@ -78,5 +78,5 @@ mwe(2,one,of).
 det(2,bystander,the).
 nmod(2,catch,bystander).
 % relations.
-be(2,she,catch).
-fall_to(2,she,ground).
+aos(2,be,she,catch).
+aos(2,fall_to,she,ground).

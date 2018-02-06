@@ -34,14 +34,14 @@ mark(2,answer,to).
 xcomp(2,have,answer).
 nmod(2,answer,for).
 % relations.
-have(2,dog,answer_for).
-have_much(2,dog,answer).
-have(2,dog,answer).
-have_much(2,evil-disposed_dog,answer).
-have_much(2,evil-disposed_dog,answer_for).
-have_much(2,dog,answer_for).
-have(2,evil-disposed_dog,answer_for).
-have(2,evil-disposed_dog,answer).
+aos(2,have,dog,answer_for).
+aos(2,have_much,dog,answer).
+aos(2,have,dog,answer).
+aos(2,have_much,evil-disposed_dog,answer).
+aos(2,have_much,evil-disposed_dog,answer_for).
+aos(2,have_much,dog,answer_for).
+aos(2,have,evil-disposed_dog,answer_for).
+aos(2,have,evil-disposed_dog,answer).
 %% they always bark whenever we approach you and attack us before we have done any harm.
 % dependencies.
 root(3,root,bark).
@@ -63,9 +63,9 @@ advcl:before(3,attack,do).
 det(3,harm,any).
 dobj(3,do,harm).
 % relations.
-attack(3,we,we).
-approach(3,we,you).
-have_do(3,we,harm).
+aos(3,attack,we,we).
+aos(3,approach,we,you).
+aos(3,have_do,we,harm).
 %% if you would only dismiss them from your heels there might soon be treaties of peace and reconciliation between us.
 % dependencies.
 root(4,root,dismiss).
@@ -90,16 +90,16 @@ conj:and(4,peace,reconciliation).
 case(4,we,between).
 nmod:between(4,treaty,we).
 % relations.
-might(4,there,might_soon_treaty_of_peace_between_we).
-might(4,there,might_soon_treaty_of_peace).
-would_only_dismiss(4,you,they).
-might(4,there,might_soon_treaty).
-might(4,there,might_treaty_between_we).
-might(4,there,might_soon_treaty_between_we).
-would_dismiss(4,you,they).
-might(4,there,might_treaty_of_peace).
-might(4,there,might_treaty).
-might(4,there,might_treaty_of_peace_between_we).
+aos(4,might,there,might_soon_treaty_of_peace_between_we).
+aos(4,might,there,might_soon_treaty_of_peace).
+aos(4,would_only_dismiss,you,they).
+aos(4,might,there,might_soon_treaty).
+aos(4,might,there,might_treaty_between_we).
+aos(4,might,there,might_soon_treaty_between_we).
+aos(4,would_dismiss,you,they).
+aos(4,might,there,might_treaty_of_peace).
+aos(4,might,there,might_treaty).
+aos(4,might,there,might_treaty_of_peace_between_we).
 %% the sheep poor silly creatures were easily beguiled and dismissed the dogs whereupon the wolves destroyed the unguarded flock at their own pleasure.
 % dependencies.
 root(5,root,whereupon).
@@ -128,15 +128,15 @@ nmod:poss(5,pleasure,they).
 amod(5,pleasure,own).
 nmod:at(5,destroy,pleasure).
 % relations.
-be_beguile(5,poor_creature,dog).
-destroy(5,wolf,unguarded_flock).
-be_beguile(5,poor_silly_creature,dog).
-destroy_flock_at(5,wolf,they_own_pleasure).
-be_easily_beguile(5,silly_creature,dog).
-be_easily_beguile(5,poor_creature,dog).
-be_beguile(5,creature,dog).
-be_easily_beguile(5,poor_silly_creature,dog).
-destroy_flock_at(5,wolf,they_pleasure).
-be_beguile(5,silly_creature,dog).
-destroy(5,wolf,flock).
-be_easily_beguile(5,creature,dog).
+aos(5,be_beguile,poor_creature,dog).
+aos(5,destroy,wolf,unguarded_flock).
+aos(5,be_beguile,poor_silly_creature,dog).
+aos(5,destroy_flock_at,wolf,they_own_pleasure).
+aos(5,be_easily_beguile,silly_creature,dog).
+aos(5,be_easily_beguile,poor_creature,dog).
+aos(5,be_beguile,creature,dog).
+aos(5,be_easily_beguile,poor_silly_creature,dog).
+aos(5,destroy_flock_at,wolf,they_pleasure).
+aos(5,be_beguile,silly_creature,dog).
+aos(5,destroy,wolf,flock).
+aos(5,be_easily_beguile,creature,dog).

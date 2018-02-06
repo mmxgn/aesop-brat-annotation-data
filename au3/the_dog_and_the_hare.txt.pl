@@ -46,11 +46,11 @@ case(0,dog,with).
 det(0,dog,another).
 nmod:with(0,fawn,dog).
 % relations.
-fawn_upon(0,another,she).
-fawn_in(0,another,play).
-hare_on(0,she,hillside).
-would_take(0,he,she_life).
-pursue(0,hare,she).
+aos(0,fawn_upon,another,she).
+aos(0,fawn_in,another,play).
+aos(0,hare_on,she,hillside).
+aos(0,would_take,he,she_life).
+aos(0,pursue,hare,she).
 %% the hare said to him.
 % dependencies.
 root(1,root,say).
@@ -59,7 +59,7 @@ nsubj(1,say,hare).
 case(1,he,to).
 nmod:to(1,say,he).
 % relations.
-say_to(1,hare,he).
+aos(1,say_to,hare,he).
 %% i wish you would act sincerely by me and show yourself in your true colors.
 % dependencies.
 root(2,root,wish).
@@ -80,9 +80,9 @@ nmod:poss(2,color,you).
 amod(2,color,true).
 nmod:in(2,show,color).
 % relations.
-act_sincerely_by(2,you,I).
-show(2,you,yourself).
-act_by(2,you,I).
+aos(2,act_sincerely_by,you,I).
+aos(2,show,you,yourself).
+aos(2,act_by,you,I).
 %% if you are a friend why do you bite me so hard.
 % dependencies.
 root(3,root,friend).
@@ -98,11 +98,11 @@ dobj(3,bite,I).
 advmod(3,hard,so).
 advmod(3,bite,hard).
 % relations.
-bite(3,you,I).
-be_friend(3,you,do).
-be_friend(3,you,why_do).
-bite_hard(3,you,I).
-bite_so_hard(3,you,I).
+aos(3,bite,you,I).
+aos(3,be_friend,you,do).
+aos(3,be_friend,you,why_do).
+aos(3,bite_hard,you,I).
+aos(3,bite_so_hard,you,I).
 %% if an enemy why do you fawn on me.
 % dependencies.
 root(4,root,fawn).
@@ -115,7 +115,7 @@ nsubj(4,fawn,you).
 case(4,I,on).
 nmod:on(4,fawn,I).
 % relations.
-do_fawn_on(4,you,I).
+aos(4,do_fawn_on,you,I).
 %% ' no one can be a friend if you know not whether to trust or distrust him.
 % dependencies.
 root(5,root,friend).

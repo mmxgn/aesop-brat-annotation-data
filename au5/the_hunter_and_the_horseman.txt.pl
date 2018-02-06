@@ -18,7 +18,7 @@ conj:and(0,snare,set).
 compound:prt(0,set,out).
 advmod(0,set,homewards).
 % relations.
-place(0,hare,it).
+aos(0,place,hare,it).
 %% on his way he met a man on horseback who begged the hare of him under the pretense of purchasing it.
 % dependencies.
 root(1,root,meet).
@@ -62,8 +62,8 @@ mark(2,could,as).
 nsubj(2,could,he).
 advcl:as(2,ride,could).
 % relations.
-ride_off_fast(2,he,he_could).
-ride_off(2,he,he_could).
+aos(2,ride_off_fast,he,he_could).
+aos(2,ride_off,he,he_could).
 %% the hunter ran after him as if he was sure of overtaking him but the horseman increased more and more the distance between them.
 % dependencies.
 root(3,root,run).
@@ -93,17 +93,17 @@ dobj(3,increase,distance).
 case(3,they,between).
 nmod:between(3,distance,they).
 % relations.
-increase_more(3,horseman,distance).
-increase_more_and_more(3,horseman,distance).
-be(3,he,sure).
-distance_between(3,horseman,they).
-increase_more(3,horseman,distance_between_they).
-overtake(3,he,he).
-increase_more_and_more(3,horseman,distance_between_they).
-run_after(3,hunter,he).
-increase(3,horseman,distance).
-increase(3,horseman,distance_between_they).
-run(3,hunter,sure).
+aos(3,increase_more,horseman,distance).
+aos(3,increase_more_and_more,horseman,distance).
+aos(3,be,he,sure).
+aos(3,distance_between,horseman,they).
+aos(3,increase_more,horseman,distance_between_they).
+aos(3,overtake,he,he).
+aos(3,increase_more_and_more,horseman,distance_between_they).
+aos(3,run_after,hunter,he).
+aos(3,increase,horseman,distance).
+aos(3,increase,horseman,distance_between_they).
+aos(3,run,hunter,sure).
 %% the hunter sorely against his will called out to him and said.
 % dependencies.
 root(4,root,call).
@@ -120,7 +120,7 @@ nmod:to(4,call,he).
 cc(4,call,and).
 conj:and(4,call,say).
 % relations.
-will_call_out_to(4,hunter,he).
+aos(4,will_call_out_to,hunter,he).
 %% get along with you.
 % dependencies.
 root(5,root,get).
@@ -142,5 +142,5 @@ case(6,hare,of).
 det(6,hare,the).
 nmod:of(6,present,hare).
 % relations.
-will_now_make(6,present,you).
-will_make(6,present,you).
+aos(6,will_now_make,present,you).
+aos(6,will_make,present,you).

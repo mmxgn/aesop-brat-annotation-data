@@ -26,19 +26,19 @@ nmod:near(0,very,time).
 case(0,change,of).
 nmod:of(0,time,change).
 % relations.
-nimbly_run_about_in(0,ant,sunshine).
-nimbly_run_in(0,ant,sunshine).
-run_about_in(0,ant,sunshine).
-run_in(0,ant,sunshine_search_food).
-run_in(0,ant,sunshine_search).
-run_in(0,ant,sunshine).
-nimbly_run_about_in(0,ant,sunshine_search).
-run_about_in(0,ant,sunshine_search).
-run_about_in(0,ant,sunshine_search_food).
-is_in(0,sunshine,search_of_food).
-nimbly_run_about_in(0,ant,sunshine_search_food).
-nimbly_run_in(0,ant,sunshine_search).
-nimbly_run_in(0,ant,sunshine_search_food).
+aos(0,nimbly_run_about_in,ant,sunshine).
+aos(0,nimbly_run_in,ant,sunshine).
+aos(0,run_about_in,ant,sunshine).
+aos(0,run_in,ant,sunshine_search_food).
+aos(0,run_in,ant,sunshine_search).
+aos(0,run_in,ant,sunshine).
+aos(0,nimbly_run_about_in,ant,sunshine_search).
+aos(0,run_about_in,ant,sunshine_search).
+aos(0,run_about_in,ant,sunshine_search_food).
+aos(0,is_in,sunshine,search_of_food).
+aos(0,nimbly_run_about_in,ant,sunshine_search_food).
+aos(0,nimbly_run_in,ant,sunshine_search).
+aos(0,nimbly_run_in,ant,sunshine_search_food).
 %% the chrysalis moved its tail and thus attracted the attention of the ant who then saw for the first time that it was alive.
 % dependencies.
 root(1,root,move).
@@ -68,10 +68,10 @@ nsubj(1,alive,it).
 cop(1,alive,be).
 ccomp(1,see,alive).
 % relations.
-thus_attract(1,chrysalis,attention).
-be(1,it,alive).
-move(1,chrysalis,its_tail).
-attract(1,chrysalis,attention).
+aos(1,thus_attract,chrysalis,attention).
+aos(1,be,it,alive).
+aos(1,move,chrysalis,its_tail).
+aos(1,attract,chrysalis,attention).
 %% poor pitiable animal.
 % dependencies.
 root(2,root,animal).
@@ -94,8 +94,8 @@ amod(4,fate,sad).
 nsubj(4,yours,fate).
 cop(4,yours,be).
 % relations.
-be(4,sad_fate,yours).
-be(4,fate,yours).
+aos(4,be,sad_fate,yours).
+aos(4,be,fate,yours).
 %% while i can run hither and thither at my pleasure and if i wish ascend the tallest tree you lie imprisoned here in your shell with power only to move a joint or two of your scaly tail.
 % dependencies.
 root(5,root,run).
@@ -138,12 +138,12 @@ nmod:poss(5,tail,you).
 amod(5,tail,scaly).
 nmod:of(5,two,tail).
 % relations.
-imprison_here_in(5,you,you_shell).
-imprison_with(5,you,power_only).
-imprison_here_with(5,you,power).
-imprison_here_with(5,you,power_only).
-imprison_in(5,you,you_shell).
-imprison_with(5,you,power).
+aos(5,imprison_here_in,you,you_shell).
+aos(5,imprison_with,you,power_only).
+aos(5,imprison_here_with,you,power).
+aos(5,imprison_here_with,you,power_only).
+aos(5,imprison_in,you,you_shell).
+aos(5,imprison_with,you,power).
 %% the chrysalis heard all this but did not try to make any reply.
 % dependencies.
 root(6,root,hear).
@@ -209,8 +209,8 @@ det(8,butterfly,a).
 amod(8,butterfly,beautiful).
 nmod:of(8,wing,butterfly).
 % relations.
-feel(8,he,suddenly_shaded).
-feel(8,he,shaded).
+aos(8,feel,he,suddenly_shaded).
+aos(8,feel,he,shaded).
 %% behold in me.
 % dependencies.
 root(9,root,behold).

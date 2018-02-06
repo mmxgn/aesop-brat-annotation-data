@@ -15,14 +15,14 @@ nmod:with(0,go,donkey).
 case(0,market,to).
 nmod:to(0,go,market).
 % relations.
-be_go_with(0,man,they_donkey).
-be_once_go_to(0,he_son,market).
-be_go_with(0,he_son,they_donkey).
-be_go_to(0,man,market).
-be_once_go_with(0,man,they_donkey).
-be_go_to(0,he_son,market).
-be_once_go_to(0,man,market).
-be_once_go_with(0,he_son,they_donkey).
+aos(0,be_go_with,man,they_donkey).
+aos(0,be_once_go_to,he_son,market).
+aos(0,be_go_with,he_son,they_donkey).
+aos(0,be_go_to,man,market).
+aos(0,be_once_go_with,man,they_donkey).
+aos(0,be_go_to,he_son,market).
+aos(0,be_once_go_to,man,market).
+aos(0,be_once_go_with,he_son,they_donkey).
 %% as they were walking along by its side a countryman passed them and said.
 % dependencies.
 root(1,root,walk).
@@ -41,7 +41,7 @@ cc(1,pass,and).
 acl:relcl(1,countryman,say).
 conj:and(1,pass,say).
 % relations.
-be_walk_along_by(1,they,its_side).
+aos(1,be_walk_along_by,they,its_side).
 %% you fools what is a donkey for but to ride upon.
 % dependencies.
 root(2,root,fool).
@@ -75,9 +75,9 @@ case(3,way,on).
 nmod:poss(3,way,they).
 nmod:on(3,go,way).
 % relations.
-put(3,man,boy).
-put_boy_on(3,man,donkey).
-go_on(3,they,they_way).
+aos(3,put,man,boy).
+aos(3,put_boy_on,man,donkey).
+aos(3,go_on,they,they_way).
 %% but soon they passed a group of men one of whom said.
 % dependencies.
 root(4,root,pass).
@@ -94,8 +94,8 @@ case(4,whom,of).
 ref(4,man,whom).
 acl:relcl(4,man,say).
 % relations.
-pass(4,they,group).
-soon_pass(4,they,group).
+aos(4,pass,they,group).
+aos(4,soon_pass,they,group).
 %% see that lazy youngster he lets his father walk while he rides.
 % dependencies.
 root(5,root,see).
@@ -111,7 +111,7 @@ case(5,ride,while).
 dep(5,ride,he).
 nmod:while(5,let,ride).
 % relations.
-let(5,he,he_father_walk).
+aos(5,let,he,he_father_walk).
 %% so the man ordered his boy to get off and got on himself.
 % dependencies.
 root(6,root,order).
@@ -130,8 +130,8 @@ conj:and(6,order,get).
 case(6,himself,on).
 nmod:on(6,get,himself).
 % relations.
-get_on(6,man,himself).
-order(6,man,he_boy).
+aos(6,get_on,man,himself).
+aos(6,order,man,he_boy).
 %% but they had n't gone far when they passed two women one of whom said to the other.
 % dependencies.
 root(7,root,go).
@@ -195,7 +195,7 @@ case(9,donkey,on).
 det(9,donkey,the).
 nmod:on(9,take,donkey).
 % relations.
-take_up(9,he,he_boy).
+aos(9,take_up,he,he_boy).
 %% by this time they had come to the town and the passers-by began to jeer and point at them.
 % dependencies.
 root(10,root,time).
@@ -222,10 +222,10 @@ conj:and(10,jeer,point).
 case(10,they,at).
 nmod:at(10,jeer,they).
 % relations.
-jeer_at(10,passer-by,they).
-have_come_to(10,they,town).
-begin(10,passer-by,jeer).
-begin(10,passer-by,jeer_at_they).
+aos(10,jeer_at,passer-by,they).
+aos(10,have_come_to,they,town).
+aos(10,begin,passer-by,jeer).
+aos(10,begin,passer-by,jeer_at_they).
 %% the man stopped and asked what they were scoffing at.
 % dependencies.
 root(11,root,stop).
@@ -267,7 +267,7 @@ amod(13,son,hulk).
 nmod:with(13,donkey,son).
 conj:and(13,you,son).
 % relations.
-be_with(13,poor_donkey,you).
+aos(13,be_with,poor_donkey,you).
 %% the man and boy got off and tried to think what to do.
 % dependencies.
 root(14,root,get).
@@ -287,7 +287,7 @@ nsubj(14,do,what).
 mark(14,do,to).
 ccomp(14,think,do).
 % relations.
-try(14,boy,think).
+aos(14,try,boy,think).
 %% they thought and they thought till at last they cut down a pole tied the donkey 's feet to it and raised the pole and the donkey to their shoulders.
 % dependencies.
 root(15,root,think).
@@ -324,13 +324,13 @@ case(15,shoulder,to).
 nmod:poss(15,shoulder,they).
 nmod:to(15,raise,shoulder).
 % relations.
-has(15,donkey,foot).
-raise(15,pole,donkey).
-raise_pole_to(15,pole,they_shoulder).
-tie(15,pole,donkey_'s_foot).
-raise_donkey_to(15,pole,they_shoulder).
-cut_down_at(15,they,last).
-raise(15,pole,pole).
+aos(15,has,donkey,foot).
+aos(15,raise,pole,donkey).
+aos(15,raise_pole_to,pole,they_shoulder).
+aos(15,tie,pole,donkey_'s_foot).
+aos(15,raise_donkey_to,pole,they_shoulder).
+aos(15,cut_down_at,they,last).
+aos(15,raise,pole,pole).
 %% they went along amid the laughter of all who met them till they came to market bridge when the donkey getting one of his feet loose kicked out and caused the boy to drop his end of the pole.
 % dependencies.
 root(16,root,go).
@@ -376,14 +376,14 @@ case(16,pole,of).
 det(16,pole,the).
 nmod:of(16,end,pole).
 % relations.
-come_to(16,they,market_bridge).
-cause(16,donkey,boy).
-go_amid(16,they,laughter).
-go_along_amid(16,they,laughter).
-one_of(16,get,he_foot).
-get(16,donkey,one_he_foot).
-one(16,get,he_foot).
-get(16,donkey,one_of_he_foot).
+aos(16,come_to,they,market_bridge).
+aos(16,cause,donkey,boy).
+aos(16,go_amid,they,laughter).
+aos(16,go_along_amid,they,laughter).
+aos(16,one_of,get,he_foot).
+aos(16,get,donkey,one_he_foot).
+aos(16,one,get,he_foot).
+aos(16,get,donkey,one_of_he_foot).
 %% in the struggle the donkey fell over the bridge and his fore-feet being tied together he was drowned.
 % dependencies.
 root(17,root,fall).
@@ -406,8 +406,8 @@ nsubjpass(17,drown,he).
 auxpass(17,drown,be).
 ccomp(17,tie,drown).
 % relations.
-fall_in(17,donkey,struggle).
-fall_over(17,donkey,bridge).
+aos(17,fall_in,donkey,struggle).
+aos(17,fall_over,donkey,bridge).
 %% that will teach you.
 % dependencies.
 root(18,root,teach).

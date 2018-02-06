@@ -22,18 +22,18 @@ det(0,pool,a).
 amod(0,pool,deep).
 nmod:into(0,accident,pool).
 % relations.
-felling_wood_by(0,he_axe_drop,side_of_river).
-let(0,felling_wood,he_axe_drop).
-let(0,wood,he_axe_drop).
-let(0,wood,he_drop).
-let(0,felling_wood,he_drop).
-felling_wood_by(0,he_drop,side).
-wood_by(0,he_axe_drop,side).
-wood_by(0,he_drop,side_of_river).
-wood_by(0,he_drop,side).
-wood_by(0,he_axe_drop,side_of_river).
-felling_wood_by(0,he_axe_drop,side).
-felling_wood_by(0,he_drop,side_of_river).
+aos(0,felling_wood_by,he_axe_drop,side_of_river).
+aos(0,let,felling_wood,he_axe_drop).
+aos(0,let,wood,he_axe_drop).
+aos(0,let,wood,he_drop).
+aos(0,let,felling_wood,he_drop).
+aos(0,felling_wood_by,he_drop,side).
+aos(0,wood_by,he_axe_drop,side).
+aos(0,wood_by,he_drop,side_of_river).
+aos(0,wood_by,he_drop,side).
+aos(0,wood_by,he_axe_drop,side_of_river).
+aos(0,felling_wood_by,he_axe_drop,side).
+aos(0,felling_wood_by,he_drop,side_of_river).
 %% being thus deprived of the means of his livelihood he sat down on the bank and lamented his hard fate.
 % dependencies.
 root(1,root,deprive).
@@ -59,9 +59,9 @@ nmod:poss(1,fate,he).
 amod(1,fate,hard).
 dobj(1,lament,fate).
 % relations.
-lament(1,he,he_hard_fate).
-sit_down_on(1,he,bank).
-lament(1,he,he_fate).
+aos(1,lament,he,he_hard_fate).
+aos(1,sit_down_on,he,bank).
+aos(1,lament,he,he_fate).
 %% mercury appeared and demanded the cause of his tears.
 % dependencies.
 root(2,root,appear).
@@ -75,9 +75,9 @@ case(2,tear,of).
 nmod:poss(2,tear,he).
 nmod:of(2,cause,tear).
 % relations.
-demand(2,mercury,cause).
-cause_of(2,demand,he_tear).
-demand(2,mercury,cause_of_he_tear).
+aos(2,demand,mercury,cause).
+aos(2,cause_of,demand,he_tear).
+aos(2,demand,mercury,cause_of_he_tear).
 %% after he told him his misfortune mercury plunged into the stream and bringing up a golden axe inquired if that were the one he had lost.
 % dependencies.
 root(3,root,tell).
@@ -108,7 +108,7 @@ nsubj(3,lose,he).
 aux(3,lose,have).
 acl:relcl(3,one,lose).
 % relations.
-tell(3,he,he).
+aos(3,tell,he,he).
 %% on his saying that it was not his mercury disappeared beneath the water a second time returned with a silver axe in his hand and again asked the workman if it were his.
 % dependencies.
 root(4,root,disappear).
@@ -146,7 +146,7 @@ nsubj(4,he,it).
 cop(4,he,be).
 advcl:if(4,ask,he).
 % relations.
-be(4,it,he).
+aos(4,be,it,he).
 %% when the workman said it was not he dived into the pool for the third time and brought up the axe that had been lost.
 % dependencies.
 root(5,root,say).
@@ -193,8 +193,8 @@ case(6,recovery,at).
 nmod:poss(6,recovery,its).
 nmod:at(6,express,recovery).
 % relations.
-express(6,workman,he_joy).
-claim(6,workman,it).
+aos(6,express,workman,he_joy).
+aos(6,claim,workman,it).
 %% mercury pleased with his honesty gave him the golden and silver axes in addition to his own.
 % dependencies.
 root(7,root,give).
@@ -216,20 +216,20 @@ case(7,own,to).
 nmod:poss(7,own,he).
 nmod:to(7,give,own).
 % relations.
-give(7,mercury_pleased,axis_in_addition).
-give_axis_to(7,mercury_pleased,he_own).
-give(7,mercury,golden_axis_in_addition).
-pleased_with(7,mercury,he_honesty).
-give(7,mercury,golden_axis).
-give(7,mercury_pleased,golden_axis).
-give(7,mercury,he).
-give(7,mercury,axis).
-give(7,mercury_pleased,axis).
-give(7,mercury,axis_in_addition).
-give(7,mercury_pleased,he).
-give(7,mercury_pleased,golden_axis_in_addition).
-give_axis_to(7,mercury,he_own).
-is_in(7,golden_axis,addition).
+aos(7,give,mercury_pleased,axis_in_addition).
+aos(7,give_axis_to,mercury_pleased,he_own).
+aos(7,give,mercury,golden_axis_in_addition).
+aos(7,pleased_with,mercury,he_honesty).
+aos(7,give,mercury,golden_axis).
+aos(7,give,mercury_pleased,golden_axis).
+aos(7,give,mercury,he).
+aos(7,give,mercury,axis).
+aos(7,give,mercury_pleased,axis).
+aos(7,give,mercury,axis_in_addition).
+aos(7,give,mercury_pleased,he).
+aos(7,give,mercury_pleased,golden_axis_in_addition).
+aos(7,give_axis_to,mercury,he_own).
+aos(7,is_in,golden_axis,addition).
 %% the workman on his return to his house related to his companions all that had happened.
 % dependencies.
 root(8,root,workman).
@@ -301,9 +301,9 @@ nmod:on(10,sit,bank).
 mark(10,weep,to).
 acl:to(10,bank,weep).
 % relations.
-run_to(10,he,river).
-throw(10,he,he_axe).
-sit_down_on(10,he_axe,bank_weep).
+aos(10,run_to,he,river).
+aos(10,throw,he,he_axe).
+aos(10,sit_down_on,he_axe,bank_weep).
 %% mercury appeared to him just as he hoped he would.
 % dependencies.
 root(11,root,appear).
@@ -317,9 +317,9 @@ advcl:as(11,appear,hope).
 nsubj(11,would,he).
 ccomp(11,hope,would).
 % relations.
-appear(11,mercury,he_hope).
-appear_to(11,mercury,he).
-appear(11,mercury,just_he_hope).
+aos(11,appear,mercury,he_hope).
+aos(11,appear_to,mercury,he).
+aos(11,appear,mercury,just_he_hope).
 %% and having learned the cause of his grief plunged into the stream and brought up a golden axe inquiring if he had lost it.
 % dependencies.
 root(12,root,learn).
@@ -349,12 +349,12 @@ aux(12,lose,have).
 advcl:if(12,inquire,lose).
 dobj(12,lose,it).
 % relations.
-bring_up(12,cause,axe).
-plunge_into(12,cause,stream).
-bring_up(12,cause,golden_axe).
-bring_up(12,cause,axe_inquire).
-have_lose(12,he,it).
-bring_up(12,cause,golden_axe_inquire).
+aos(12,bring_up,cause,axe).
+aos(12,plunge_into,cause,stream).
+aos(12,bring_up,cause,golden_axe).
+aos(12,bring_up,cause,axe_inquire).
+aos(12,have_lose,he,it).
+aos(12,bring_up,cause,golden_axe_inquire).
 %% the workman seized it greedily and declared that truly it was the very same axe that he had lost.
 % dependencies.
 root(13,root,seize).
@@ -378,16 +378,16 @@ nsubj(13,lose,he).
 aux(13,lose,have).
 ccomp(13,axe,lose).
 % relations.
-seize_greedily(13,workman,it).
-be(13,it,truly_very_axe).
-seize(13,workman,it).
-be(13,it,truly_same_axe).
-be(13,it,very_same_axe).
-be(13,it,very_axe).
-be(13,it,same_axe).
-be(13,it,axe).
-be(13,it,truly_very_same_axe).
-be(13,it,truly_axe).
+aos(13,seize_greedily,workman,it).
+aos(13,be,it,truly_very_axe).
+aos(13,seize,workman,it).
+aos(13,be,it,truly_same_axe).
+aos(13,be,it,very_same_axe).
+aos(13,be,it,very_axe).
+aos(13,be,it,same_axe).
+aos(13,be,it,axe).
+aos(13,be,it,truly_very_same_axe).
+aos(13,be,it,truly_axe).
 %% mercury displeased at his knavery not only took away the golden axe but refused to recover for him the axe he had thrown into the pool.
 % dependencies.
 root(14,root,take).
@@ -419,9 +419,9 @@ case(14,pool,into).
 det(14,pool,the).
 nmod:into(14,throw,pool).
 % relations.
-take_away(14,mercury,golden_axe).
-take_away(14,mercury_displeased,axe).
-take_away(14,mercury_displeased,golden_axe).
-displeased_at(14,mercury,he_knavery).
-take_away(14,mercury,axe).
-have_throw_into(14,he,pool).
+aos(14,take_away,mercury,golden_axe).
+aos(14,take_away,mercury_displeased,axe).
+aos(14,take_away,mercury_displeased,golden_axe).
+aos(14,displeased_at,mercury,he_knavery).
+aos(14,take_away,mercury,axe).
+aos(14,have_throw_into,he,pool).

@@ -21,12 +21,12 @@ nsubjpass(0,shed,blood).
 auxpass(0,shed,be).
 acl:relcl(0,other,shed).
 % relations.
-wage(0,mouse,perpetual_war).
-wage(0,mouse,war).
-wage(0,weasel,perpetual_war).
-wage(0,weasel,war).
-be(0,blood,shed).
-be(0,much_blood,shed).
+aos(0,wage,mouse,perpetual_war).
+aos(0,wage,mouse,war).
+aos(0,wage,weasel,perpetual_war).
+aos(0,wage,weasel,war).
+aos(0,be,blood,shed).
+aos(0,be,much_blood,shed).
 %% the weasels were always the victors.
 % dependencies.
 root(1,root,victor).
@@ -36,8 +36,8 @@ cop(1,victor,be).
 advmod(1,victor,always).
 det(1,victor,the).
 % relations.
-be(1,weasel,victor).
-be(1,weasel,always_victor).
+aos(1,be,weasel,victor).
+aos(1,be,weasel,always_victor).
 %% the mice thought that the cause of their frequent defeats was that they had no leaders set apart from the general army to command them and that they were exposed to dangers from lack of discipline.
 % dependencies.
 root(2,root,think).
@@ -133,16 +133,16 @@ cc(3,regiment,and).
 nmod:into(3,form,battalion).
 conj:and(3,regiment,battalion).
 % relations.
-is_in(3,they_courage,fight).
-most_note_for(3,those,they_courage_fight).
-might(3,they,might_better_marshal_in_battle_array).
-note_for(3,those,they_courage_fight).
-might(3,they,might_marshal).
-note_for(3,those,they_courage).
-might(3,they,might_better_marshal).
-most_note_for(3,those,they_courage).
-might(3,they,might_marshal_in_battle_array).
-form_into(3,they,troops_regiment).
+aos(3,is_in,they_courage,fight).
+aos(3,most_note_for,those,they_courage_fight).
+aos(3,might,they,might_better_marshal_in_battle_array).
+aos(3,note_for,those,they_courage_fight).
+aos(3,might,they,might_marshal).
+aos(3,note_for,those,they_courage).
+aos(3,might,they,might_better_marshal).
+aos(3,most_note_for,those,they_courage).
+aos(3,might,they,might_marshal_in_battle_array).
+aos(3,form_into,they,troops_regiment).
 %% when all this was done and the army disciplined and the herald mouse had duly proclaimed war by challenging the weasels the newly chosen generals bound their heads with straws that they might be more conspicuous to all their troops.
 % dependencies.
 root(4,root,do).
@@ -188,19 +188,19 @@ det:predet(4,troops,all).
 nmod:poss(4,troops,they).
 nmod:to(4,conspicuous,troops).
 % relations.
-be_more_conspicuous_to(4,they,troops).
-bind_with(4,general,straw).
-have(4,mouse,war).
-bind(4,choose_general,they_head).
-be(4,this,do).
-be_conspicuous_to(4,they,they_troops).
-bind_with(4,choose_general,straw).
-be_more_conspicuous_to(4,they,they_troops).
-have(4,mouse,proclaimed_war).
-be(4,this,when_do).
-have(4,mouse,duly_proclaimed_war).
-be_conspicuous_to(4,they,troops).
-bind(4,general,they_head).
+aos(4,be_more_conspicuous_to,they,troops).
+aos(4,bind_with,general,straw).
+aos(4,have,mouse,war).
+aos(4,bind,choose_general,they_head).
+aos(4,be,this,do).
+aos(4,be_conspicuous_to,they,they_troops).
+aos(4,bind_with,choose_general,straw).
+aos(4,be_more_conspicuous_to,they,they_troops).
+aos(4,have,mouse,proclaimed_war).
+aos(4,be,this,when_do).
+aos(4,have,mouse,duly_proclaimed_war).
+aos(4,be_conspicuous_to,they,troops).
+aos(4,bind,general,they_head).
 %% scarcely had the battle begun when a great rout overwhelmed the mice who scampered off as fast as they could to their holes.
 % dependencies.
 root(5,root,have).

@@ -18,8 +18,8 @@ case(0,household,of).
 nmod:poss(0,household,he).
 nmod:of(0,member,household).
 % relations.
-hate_by(0,herself,member_of_household).
-hate_by(0,herself,member_of_he_household).
+aos(0,hate_by,herself,member_of_household).
+aos(0,hate_by,herself,member_of_he_household).
 %% wishing to find out if she had the same effect on the persons in her father 's house he made some excuse to send her home on a visit to her father.
 % dependencies.
 root(1,root,wish).
@@ -55,13 +55,13 @@ case(1,father,to).
 nmod:poss(1,father,she).
 nmod:to(1,visit,father).
 % relations.
-effect_on(1,she,person).
-in(1,father,house).
-have(1,she,same_effect).
-have(1,she,effect).
-have(1,she,same_effect_on_person).
-have(1,she,effect_on_person).
-same_effect_on(1,she,person).
+aos(1,effect_on,she,person).
+aos(1,in,father,house).
+aos(1,have,she,same_effect).
+aos(1,have,she,effect).
+aos(1,have,she,same_effect_on_person).
+aos(1,have,she,effect_on_person).
+aos(1,same_effect_on,she,person).
 %% after a short time she returned and when he inquired how she had got on and how the servants had treated her she replied.
 % dependencies.
 root(2,root,time).
@@ -90,7 +90,7 @@ dobj(2,treat,she).
 nsubj(2,reply,she).
 dep(2,treat,reply).
 % relations.
-have_treat(2,servant,she).
+aos(2,have_treat,servant,she).
 %% the herdsmen and shepherds cast on me looks of aversion.
 % dependencies.
 root(3,root,look).
@@ -105,9 +105,9 @@ nmod:on(3,cast,I).
 case(3,aversion,of).
 nmod:of(3,look,aversion).
 % relations.
-look_of(3,herdsman,aversion).
-look_of(3,shepherd,aversion).
-cast_on(3,herdsman,I).
+aos(3,look_of,herdsman,aversion).
+aos(3,look_of,shepherd,aversion).
+aos(3,cast_on,herdsman,I).
 %% he said.
 % dependencies.
 root(4,root,say).
@@ -160,5 +160,5 @@ det(5,day,the).
 amod(5,day,whole).
 nmod:tmod(5,pass,day).
 % relations.
-is_with(5,morning,they_flock).
-be(5,you,dislike).
+aos(5,is_with,morning,they_flock).
+aos(5,be,you,dislike).

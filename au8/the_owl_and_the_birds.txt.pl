@@ -37,8 +37,8 @@ nsubj:xsubj(0,grow,it).
 mark(0,grow,to).
 xcomp(0,allow,grow).
 % relations.
-is_in(0,owl,she_wisdom).
-counsel(0,owl,bird).
+aos(0,is_in,owl,she_wisdom).
+aos(0,counsel,owl,bird).
 %% she said acorns would produce mistletoe from which an irremediable poison the bird- lime would be extracted and by which they would be captured.
 % dependencies.
 root(1,root,say).
@@ -102,9 +102,9 @@ dobj(2,bode,good).
 case(2,they,to).
 nmod:to(2,bode,they).
 % relations.
-pluck_up(2,they,seed).
-advise(2,owl,they).
-advise(2,owl_next,they).
+aos(2,pluck_up,they,seed).
+aos(2,advise,owl,they).
+aos(2,advise,owl_next,they).
 %% and lastly the owl seeing an archer approach predicted that this man being on foot would contrive darts armed with feathers which would fly faster than the wings of the birds themselves.
 % dependencies.
 root(3,root,lastly).
@@ -141,9 +141,9 @@ det(3,bird,the).
 nmod:of(3,wing,bird).
 advmod(3,bird,themselves).
 % relations.
-contrive(3,man,darts).
-see(3,owl,archer_approach).
-contrive(3,man,darts_arm).
+aos(3,contrive,man,darts).
+aos(3,see,owl,archer_approach).
+aos(3,contrive,man,darts_arm).
 %% the birds gave no credence to these warning words but considered the owl to be beside herself and said that she was mad.
 % dependencies.
 root(4,root,give).
@@ -172,9 +172,9 @@ nsubj(4,mad,she).
 cop(4,mad,be).
 ccomp(4,say,mad).
 % relations.
-consider_beside(4,bird,herself).
-consider(4,bird,owl).
-consider_owl_beside(4,bird,herself).
+aos(4,consider_beside,bird,herself).
+aos(4,consider,bird,owl).
+aos(4,consider_owl_beside,bird,herself).
 %% but afterwards finding her words were true they wondered at her knowledge and deemed her to be the wisest of birds.
 % dependencies.
 root(5,root,find).
@@ -202,11 +202,11 @@ xcomp(5,deem,wisest).
 case(5,bird,of).
 nmod:of(5,wisest,bird).
 % relations.
-deem(5,they,wisest_of_bird).
-be(5,she_word,true).
-wonder_at(5,they,she_knowledge).
-deem(5,they,she).
-deem(5,they,wisest).
+aos(5,deem,they,wisest_of_bird).
+aos(5,be,she_word,true).
+aos(5,wonder_at,they,she_knowledge).
+aos(5,deem,they,she).
+aos(5,deem,they,wisest).
 %% hence it is that when she appears they look to her as knowing all things while she no longer gives them advice but in solitude laments their past folly.
 % dependencies.
 root(6,root,be).
@@ -240,4 +240,4 @@ nmod:poss(6,folly,they).
 amod(6,folly,past).
 dobj(6,lament,folly).
 % relations.
-look_to(6,they,she).
+aos(6,look_to,they,she).

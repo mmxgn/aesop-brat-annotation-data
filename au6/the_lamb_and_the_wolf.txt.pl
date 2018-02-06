@@ -27,7 +27,7 @@ nmod:to(1,call,he).
 cc(1,call,and).
 conj:and(1,call,say).
 % relations.
-call_out_to(1,wolf,he).
+aos(1,call_out_to,wolf,he).
 %% the priest will slay you in sacrifice if he should catch you.
 % dependencies.
 root(2,root,slay).
@@ -43,8 +43,8 @@ aux(2,catch,should).
 advcl:if(2,slay,catch).
 dobj(2,catch,you).
 % relations.
-should_catch(2,he,you).
-will_slay(2,priest,you).
+aos(2,should_catch,he,you).
+aos(2,will_slay,priest,you).
 %% on which the lamb replied.
 % dependencies.
 root(3,root,reply).
@@ -75,9 +75,9 @@ advcl:to(4,better,eat).
 case(4,you,by).
 nmod:agent(4,eat,you).
 % relations.
-be_eat_by(4,it,you).
-be(4,it,sacrifice).
-be(4,it,eat).
-would(4,it,would_better).
-be_sacrifice_in(4,it,temple).
-would(4,it,would_better_for_I).
+aos(4,be_eat_by,it,you).
+aos(4,be,it,sacrifice).
+aos(4,be,it,eat).
+aos(4,would,it,would_better).
+aos(4,be_sacrifice_in,it,temple).
+aos(4,would,it,would_better_for_I).

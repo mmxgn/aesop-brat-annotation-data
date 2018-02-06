@@ -9,8 +9,8 @@ acl(0,monkey,train).
 mark(0,dance,to).
 xcomp(0,train,dance).
 % relations.
-have(0,prince,monkey_train).
-have(0,prince,monkey).
+aos(0,have,prince,monkey_train).
+aos(0,have,prince,monkey).
 %% being naturally great mimics of men 's actions they showed themselves most apt pupils and when arrayed in their rich clothes and masks they danced as well as any of the courtiers.
 % dependencies.
 root(1,root,mimic).
@@ -48,13 +48,13 @@ case(1,courtier,of).
 det(1,courtier,the).
 nmod:of(1,any,courtier).
 % relations.
-array_in(1,they,they_clothes).
-show(1,they,themselves).
-show(1,they,apt_pupil).
-array_in(1,they,they_rich_clothes).
-show(1,they,most_apt_pupil).
-of(1,man,action).
-show(1,they,pupil).
+aos(1,array_in,they,they_clothes).
+aos(1,show,they,themselves).
+aos(1,show,they,apt_pupil).
+aos(1,array_in,they,they_rich_clothes).
+aos(1,show,they,most_apt_pupil).
+aos(1,of,man,action).
+aos(1,show,they,pupil).
 %% the spectacle was often repeated with great applause till on one occasion a courtier bent on mischief took from his pocket a handful of nuts and threw them upon the stage.
 % dependencies.
 root(2,root,repeat).
@@ -91,41 +91,41 @@ case(2,stage,upon).
 det(2,stage,the).
 nmod:upon(2,throw,stage).
 % relations.
-bent_on(2,courtier,mischief).
-be_repeat(2,spectacle,courtier_bent_on_mischief_take).
-be(2,spectacle,often_repeat).
-be_often_repeat(2,spectacle,courtier_bent_take).
-be_repeat(2,spectacle,on_one_occasion_courtier_bent_take_from_he_pocket).
-be_often_repeat(2,spectacle,courtier_take_from_he_pocket).
-be_repeat(2,spectacle,on_one_occasion_courtier_take_from_he_pocket).
-be_often_repeat(2,spectacle,on_one_occasion_courtier_bent_take).
-be_repeat_with(2,spectacle,applause).
-take_on(2,courtier_bent,one_occasion).
-be_often_repeat(2,spectacle,on_one_occasion_courtier_take_from_he_pocket).
-be_often_repeat(2,spectacle,on_one_occasion_courtier_bent_on_mischief_take_from_he_pocket).
-throw(2,courtier_bent,they).
-be_repeat(2,spectacle,on_one_occasion_courtier_bent_on_mischief_take).
-be_repeat(2,spectacle,courtier_bent_take).
-be_often_repeat(2,spectacle,courtier_take).
-be_repeat(2,spectacle,on_one_occasion_courtier_take).
-be_often_repeat(2,spectacle,on_one_occasion_courtier_bent_on_mischief_take).
-be_repeat(2,spectacle,on_one_occasion_courtier_bent_on_mischief_take_from_he_pocket).
-be_often_repeat(2,spectacle,courtier_bent_take_from_he_pocket).
-take_from(2,courtier_bent,he_pocket).
-be_often_repeat(2,spectacle,on_one_occasion_courtier_take).
-be_repeat(2,spectacle,courtier_bent_on_mischief_take_from_he_pocket).
-be_often_repeat_with(2,spectacle,applause).
-take_on(2,courtier,one_occasion).
-throw(2,courtier,they).
-take_from(2,courtier,he_pocket).
-be_repeat(2,spectacle,courtier_take).
-be_repeat(2,spectacle,courtier_bent_take_from_he_pocket).
-be(2,spectacle,repeat).
-be_often_repeat(2,spectacle,courtier_bent_on_mischief_take).
-be_repeat(2,spectacle,on_one_occasion_courtier_bent_take).
-be_repeat(2,spectacle,courtier_take_from_he_pocket).
-be_often_repeat(2,spectacle,on_one_occasion_courtier_bent_take_from_he_pocket).
-be_often_repeat(2,spectacle,courtier_bent_on_mischief_take_from_he_pocket).
+aos(2,bent_on,courtier,mischief).
+aos(2,be_repeat,spectacle,courtier_bent_on_mischief_take).
+aos(2,be,spectacle,often_repeat).
+aos(2,be_often_repeat,spectacle,courtier_bent_take).
+aos(2,be_repeat,spectacle,on_one_occasion_courtier_bent_take_from_he_pocket).
+aos(2,be_often_repeat,spectacle,courtier_take_from_he_pocket).
+aos(2,be_repeat,spectacle,on_one_occasion_courtier_take_from_he_pocket).
+aos(2,be_often_repeat,spectacle,on_one_occasion_courtier_bent_take).
+aos(2,be_repeat_with,spectacle,applause).
+aos(2,take_on,courtier_bent,one_occasion).
+aos(2,be_often_repeat,spectacle,on_one_occasion_courtier_take_from_he_pocket).
+aos(2,be_often_repeat,spectacle,on_one_occasion_courtier_bent_on_mischief_take_from_he_pocket).
+aos(2,throw,courtier_bent,they).
+aos(2,be_repeat,spectacle,on_one_occasion_courtier_bent_on_mischief_take).
+aos(2,be_repeat,spectacle,courtier_bent_take).
+aos(2,be_often_repeat,spectacle,courtier_take).
+aos(2,be_repeat,spectacle,on_one_occasion_courtier_take).
+aos(2,be_often_repeat,spectacle,on_one_occasion_courtier_bent_on_mischief_take).
+aos(2,be_repeat,spectacle,on_one_occasion_courtier_bent_on_mischief_take_from_he_pocket).
+aos(2,be_often_repeat,spectacle,courtier_bent_take_from_he_pocket).
+aos(2,take_from,courtier_bent,he_pocket).
+aos(2,be_often_repeat,spectacle,on_one_occasion_courtier_take).
+aos(2,be_repeat,spectacle,courtier_bent_on_mischief_take_from_he_pocket).
+aos(2,be_often_repeat_with,spectacle,applause).
+aos(2,take_on,courtier,one_occasion).
+aos(2,throw,courtier,they).
+aos(2,take_from,courtier,he_pocket).
+aos(2,be_repeat,spectacle,courtier_take).
+aos(2,be_repeat,spectacle,courtier_bent_take_from_he_pocket).
+aos(2,be,spectacle,repeat).
+aos(2,be_often_repeat,spectacle,courtier_bent_on_mischief_take).
+aos(2,be_repeat,spectacle,on_one_occasion_courtier_bent_take).
+aos(2,be_repeat,spectacle,courtier_take_from_he_pocket).
+aos(2,be_often_repeat,spectacle,on_one_occasion_courtier_bent_take_from_he_pocket).
+aos(2,be_often_repeat,spectacle,courtier_bent_on_mischief_take_from_he_pocket).
 %% the monkeys at the sight of the nuts forgot their dancing and became ( as indeed they were ) monkeys instead of actors.
 % dependencies.
 root(3,root,forget).
@@ -153,7 +153,7 @@ case(3,actor,instead).
 mwe(3,instead,of).
 nmod:instead_of(3,monkey,actor).
 % relations.
-forget(3,monkey,they_dancing).
+aos(3,forget,monkey,they_dancing).
 %% pulling off their masks and tearing their robes they fought with one another for the nuts.
 % dependencies.
 root(4,root,pull).
@@ -173,7 +173,7 @@ case(4,nut,for).
 det(4,nut,the).
 nmod:for(4,fight,nut).
 % relations.
-fight_for(4,they,nut).
+aos(4,fight_for,they,nut).
 %% the dancing spectacle thus came to an end amidst the laughter and ridicule of the audience.
 % dependencies.
 root(5,root,come).
@@ -194,9 +194,9 @@ case(5,audience,of).
 det(5,audience,the).
 nmod:of(5,laughter,audience).
 % relations.
-thus_come_amidst(5,dancing_spectacle,laughter).
-come_amidst(5,dancing_spectacle,laughter_of_audience).
-thus_come_amidst(5,dancing_spectacle,laughter_of_audience).
-come_to(5,dancing_spectacle,end).
-come_amidst(5,dancing_spectacle,laughter).
-thus_come_to(5,dancing_spectacle,end).
+aos(5,thus_come_amidst,dancing_spectacle,laughter).
+aos(5,come_amidst,dancing_spectacle,laughter_of_audience).
+aos(5,thus_come_amidst,dancing_spectacle,laughter_of_audience).
+aos(5,come_to,dancing_spectacle,end).
+aos(5,come_amidst,dancing_spectacle,laughter).
+aos(5,thus_come_to,dancing_spectacle,end).

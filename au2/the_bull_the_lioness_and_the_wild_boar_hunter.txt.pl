@@ -16,8 +16,8 @@ case(0,horn,with).
 nmod:poss(0,horn,he).
 nmod:with(0,gore,horn).
 % relations.
-has(0,lion,cub).
-gore(0,bull,he).
+aos(0,has,lion,cub).
+aos(0,gore,bull,he).
 %% the lioness came up and bitterly lamented the death of her whelp.
 % dependencies.
 root(1,root,come).
@@ -34,10 +34,10 @@ case(1,whelp,of).
 nmod:poss(1,whelp,she).
 nmod:of(1,death,whelp).
 % relations.
-bitterly_lament(1,lioness,death_of_she_whelp).
-lament(1,lioness,death).
-bitterly_lament(1,lioness,death).
-lament(1,lioness,death_of_she_whelp).
+aos(1,bitterly_lament,lioness,death_of_she_whelp).
+aos(1,lament,lioness,death).
+aos(1,bitterly_lament,lioness,death).
+aos(1,lament,lioness,death_of_she_whelp).
 %% a wild-boar hunter seeing her distress stood at a distance and said to her.
 % dependencies.
 root(2,root,stand).
@@ -56,10 +56,10 @@ conj:and(2,stand,say).
 case(2,she,to).
 nmod:to(2,say,she).
 % relations.
-say_to(2,wild-boar_hunter,she).
-stand_at(2,hunter,distance).
-stand_at(2,wild-boar_hunter,distance).
-say_to(2,hunter,she).
+aos(2,say_to,wild-boar_hunter,she).
+aos(2,stand_at,hunter,distance).
+aos(2,stand_at,wild-boar_hunter,distance).
+aos(2,say_to,hunter,she).
 %% think how many men there are who have reason to lament the loss of their children whose deaths have been caused by you.
 % dependencies.
 root(3,root,think).
@@ -87,5 +87,5 @@ acl:relcl(3,loss,cause).
 case(3,you,by).
 nmod:agent(3,cause,you).
 % relations.
-have(3,death,have_cause).
-have(3,death,have_cause_by_you).
+aos(3,have,death,have_cause).
+aos(3,have,death,have_cause_by_you).

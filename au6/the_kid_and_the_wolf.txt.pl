@@ -14,8 +14,8 @@ case(0,wolf,by).
 det(0,wolf,a).
 nmod:agent(0,pursue,wolf).
 % relations.
-be(0,kid,pursue).
-be_pursue_by(0,kid,wolf).
+aos(0,be,kid,pursue).
+aos(0,be_pursue_by,kid,wolf).
 %% seeing he could not escape he turned round and said.
 % dependencies.
 root(1,root,see).
@@ -68,8 +68,8 @@ nsubj(2,dance,i).
 aux(2,dance,may).
 ccomp(2,tune,dance).
 % relations.
-will_play(2,you,I).
-must(2,i,must_you_prey).
+aos(2,will_play,you,I).
+aos(2,must,i,must_you_prey).
 %% the wolf complied and while he was piping and the kid was dancing some hounds hearing the sound ran up and began chasing the wolf.
 % dependencies.
 root(3,root,comply).
@@ -101,8 +101,8 @@ xcomp(3,begin,chase).
 det(3,wolf,the).
 dobj(3,chase,wolf).
 % relations.
-be(3,he,piping).
-be_dance(3,kid,hound).
+aos(3,be,he,piping).
+aos(3,be_dance,kid,hound).
 %% turning to the kid he said.
 % dependencies.
 root(4,root,turn).
@@ -161,11 +161,11 @@ acl:to(7,enemy,save).
 nmod:poss(7,skin,you).
 dobj(7,save,skin).
 % relations.
-be_key_in(7,thinking,time_of_need).
-be_key_in(7,clever_thinking,time_of_need).
-be_key_in(7,clever_thinking,time_of_dire_need).
-be(7,clever_thinking,key).
-be_key_in(7,clever_thinking,time).
-be_key_in(7,thinking,time).
-be_key_in(7,thinking,time_of_dire_need).
-be(7,thinking,key).
+aos(7,be_key_in,thinking,time_of_need).
+aos(7,be_key_in,clever_thinking,time_of_need).
+aos(7,be_key_in,clever_thinking,time_of_dire_need).
+aos(7,be,clever_thinking,key).
+aos(7,be_key_in,clever_thinking,time).
+aos(7,be_key_in,thinking,time).
+aos(7,be_key_in,thinking,time_of_dire_need).
+aos(7,be,thinking,key).

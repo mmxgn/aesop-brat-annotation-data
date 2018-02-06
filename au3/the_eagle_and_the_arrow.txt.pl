@@ -25,13 +25,13 @@ ccomp(0,feel,wound).
 case(0,death,to).
 nmod:to(0,wound,death).
 % relations.
-suddenly_hear(0,it,whizz_of_arrow).
-be_soar_through(0,eagle,air).
-whizz_of(0,it,arrow).
-hear(0,it,whizz_of_arrow).
-wound_to(0,itself,death).
-hear(0,it,whizz).
-suddenly_hear(0,it,whizz).
+aos(0,suddenly_hear,it,whizz_of_arrow).
+aos(0,be_soar_through,eagle,air).
+aos(0,whizz_of,it,arrow).
+aos(0,hear,it,whizz_of_arrow).
+aos(0,wound_to,itself,death).
+aos(0,hear,it,whizz).
+aos(0,suddenly_hear,it,whizz).
 %% slowly it fluttered down to the earth with its life-blood pouring out of it.
 % dependencies.
 root(1,root,flutter).
@@ -49,7 +49,7 @@ compound:prt(1,pour,out).
 case(1,it,of).
 nmod:of(1,pour,it).
 % relations.
-is_with(1,earth,its_life-blood).
+aos(1,is_with,earth,its_life-blood).
 %% looking down upon the arrow with which it had been pierced it found that the shaft of the arrow had been feathered with one of its own plumes.
 % dependencies.
 root(2,root,look).
@@ -82,12 +82,12 @@ nmod:poss(2,plume,its).
 amod(2,plume,own).
 nmod:of(2,one,plume).
 % relations.
-be_feathered_with(2,shaft,one_its_own_plume).
-be_feathered_with(2,shaft,one_of_its_plume).
-have(2,it,have_pierce).
-be_feathered_with(2,shaft,one_its_plume).
-be(2,shaft,feathered).
-be_feathered_with(2,shaft,one_of_its_own_plume).
+aos(2,be_feathered_with,shaft,one_its_own_plume).
+aos(2,be_feathered_with,shaft,one_of_its_plume).
+aos(2,have,it,have_pierce).
+aos(2,be_feathered_with,shaft,one_its_plume).
+aos(2,be,shaft,feathered).
+aos(2,be_feathered_with,shaft,one_of_its_own_plume).
 %% alas.
 % dependencies.
 root(3,root,alas).

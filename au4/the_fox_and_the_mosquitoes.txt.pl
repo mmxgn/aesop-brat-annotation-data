@@ -19,7 +19,7 @@ aux(0,move,could).
 neg(0,move,not).
 conj:and(0,get,move).
 % relations.
-entangled_in(0,its_tail,bush).
+aos(0,entangled_in,its_tail,bush).
 %% a number of mosquitoes seeing its plight settled upon it and enjoyed a good meal undisturbed by its tail.
 % dependencies.
 root(1,root,mosquito).
@@ -43,8 +43,8 @@ case(1,tail,by).
 nmod:poss(1,tail,its).
 nmod:by(1,undisturbed,tail).
 % relations.
-undisturbed_by(1,good_meal,its_tail).
-undisturbed_by(1,meal,its_tail).
+aos(1,undisturbed_by,good_meal,its_tail).
+aos(1,undisturbed_by,meal,its_tail).
 %% a hedgehog strolling by took pity upon the fox and went up to him.
 % dependencies.
 root(2,root,take).
@@ -63,9 +63,9 @@ compound:prt(2,go,up).
 case(2,he,to).
 nmod:to(2,go,he).
 % relations.
-take(2,hedgehog,pity).
-take_pity_upon(2,hedgehog,fox).
-go_up_to(2,hedgehog,he).
+aos(2,take,hedgehog,pity).
+aos(2,take_pity_upon,hedgehog,fox).
+aos(2,go_up_to,hedgehog,he).
 %% you are in a bad way neighbour.
 % dependencies.
 root(3,root,neighbour).
@@ -76,9 +76,9 @@ det(3,neighbour,a).
 amod(3,neighbour,bad).
 compound(3,neighbour,way).
 % relations.
-be(3,you,bad).
-be_in(3,you,bad_way_neighbour).
-be_in(3,you,way_neighbour).
+aos(3,be,you,bad).
+aos(3,be_in,you,bad_way_neighbour).
+aos(3,be_in,you,way_neighbour).
 %% said the hedgehog.
 % dependencies.
 root(4,root,say).
@@ -110,7 +110,7 @@ nsubj(6,master,you).
 ccomp(6,thank,master).
 dobj(6,master,hedgehog).
 % relations.
-master(6,you,hedgehog).
+aos(6,master,you,hedgehog).
 %% said the fox.
 % dependencies.
 root(7,root,say).
@@ -159,7 +159,7 @@ aux(13,have,have).
 nmod:poss(13,fill,they).
 dobj(13,have,fill).
 % relations.
-have_have(13,mosquito,they_fill).
+aos(13,have_have,mosquito,they_fill).
 %% if you drive these away others will come with fresh appetite and bleed me to death.
 % dependencies.
 root(14,root,drive).
@@ -181,4 +181,4 @@ dobj(14,bleed,I).
 case(14,death,to).
 nmod:to(14,bleed,death).
 % relations.
-bleed(14,other,I).
+aos(14,bleed,other,I).

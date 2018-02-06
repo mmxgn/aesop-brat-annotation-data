@@ -46,8 +46,8 @@ mark(2,do,as).
 nsubj(2,do,i).
 advcl:as(2,raise,do).
 % relations.
-raise(2,you,you_head).
-raise_boldly(2,you,you_head).
+aos(2,raise,you,you_head).
+aos(2,raise_boldly,you,you_head).
 %% i am contented with my lot.
 % dependencies.
 root(3,root,be).
@@ -163,26 +163,26 @@ aux(9,pass,have).
 advcl(9,stand,pass).
 compound:prt(9,pass,over).
 % relations.
-useless_log_on(9,it,ground).
-bend_soon_to(9,reed,force).
-stand_again(9,little_reed,upright).
-soon_have(9,it,repent).
-have(9,it,repent_of_its).
-stand_again(9,reed,upright).
-have(9,it,repent_of_its_boast).
-repent_of(9,it,its_boast).
-bend_soon_to(9,reed,force_wind).
-bend_to(9,reed,force).
-bend_to(9,reed,force_wind).
-soon_have(9,it,repent_of_its_boast).
-soon_have(9,it,repent_of_its).
-bend_to(9,little_reed,force).
-repent_of(9,it,its).
-repent(9,it,hurricane_arise).
-log_on(9,it,ground).
-stand(9,little_reed,upright).
-bend_soon_to(9,little_reed,force_wind).
-have(9,it,repent).
-bend_soon_to(9,little_reed,force).
-bend_to(9,little_reed,force_wind).
-stand(9,reed,upright).
+aos(9,useless_log_on,it,ground).
+aos(9,bend_soon_to,reed,force).
+aos(9,stand_again,little_reed,upright).
+aos(9,soon_have,it,repent).
+aos(9,have,it,repent_of_its).
+aos(9,stand_again,reed,upright).
+aos(9,have,it,repent_of_its_boast).
+aos(9,repent_of,it,its_boast).
+aos(9,bend_soon_to,reed,force_wind).
+aos(9,bend_to,reed,force).
+aos(9,bend_to,reed,force_wind).
+aos(9,soon_have,it,repent_of_its_boast).
+aos(9,soon_have,it,repent_of_its).
+aos(9,bend_to,little_reed,force).
+aos(9,repent_of,it,its).
+aos(9,repent,it,hurricane_arise).
+aos(9,log_on,it,ground).
+aos(9,stand,little_reed,upright).
+aos(9,bend_soon_to,little_reed,force_wind).
+aos(9,have,it,repent).
+aos(9,bend_soon_to,little_reed,force).
+aos(9,bend_to,little_reed,force_wind).
+aos(9,stand,reed,upright).

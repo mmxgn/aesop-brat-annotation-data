@@ -74,13 +74,13 @@ case(2,meal,of).
 nmod:poss(2,meal,he).
 nmod:of(2,share,meal).
 % relations.
-begin(2,he,eat).
-go_to(2,he,dinner).
-would_ask_for(2,he,share).
-would_ask_for(2,he,share_of_he_meal).
-go_on(2,he,hand).
-wag(2,dog,he_tail).
-go_on(2,he,other_hand).
+aos(2,begin,he,eat).
+aos(2,go_to,he,dinner).
+aos(2,would_ask_for,he,share).
+aos(2,would_ask_for,he,share_of_he_meal).
+aos(2,go_on,he,hand).
+aos(2,wag,dog,he_tail).
+aos(2,go_on,he,other_hand).
 %% his master one day pretending to be angry and shaking his stick at him said.
 % dependencies.
 root(3,root,say).
@@ -107,8 +107,8 @@ nsubj(4,wretch,you).
 amod(4,sluggard,little).
 dobj(4,wretch,sluggard).
 % relations.
-wretch(4,you,little_sluggard).
-wretch(4,you,sluggard).
+aos(4,wretch,you,little_sluggard).
+aos(4,wretch,you,sluggard).
 %% what shall i do to you.
 % dependencies.
 root(5,root,shall).
@@ -133,7 +133,7 @@ case(6,mat,on).
 det(6,mat,the).
 nmod:on(6,sleep,mat).
 % relations.
-sleep_on(6,you,mat).
+aos(6,sleep_on,you,mat).
 %% and when i begin to eat after my toil you wake up and wag your tail for food.
 % dependencies.
 root(7,root,begin).
@@ -157,8 +157,8 @@ dobj(7,wag,tail).
 case(7,food,for).
 nmod:for(7,wag,food).
 % relations.
-begin(7,i,eat).
-eat(7,i,my_toil).
+aos(7,begin,i,eat).
+aos(7,eat,i,my_toil).
 %% do you not know that labor is the source of every blessing and that none but those who work are entitled to eat.
 % dependencies.
 root(8,root,know).

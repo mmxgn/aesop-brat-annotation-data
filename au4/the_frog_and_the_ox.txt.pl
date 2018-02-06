@@ -59,15 +59,15 @@ acl(3,hoof,divide).
 case(3,two,in).
 nmod:in(3,divide,two).
 % relations.
-mountain_with(3,hoof,horn_on_its_head).
-be(3,it,as_big).
-be(3,it,big).
-have(3,mountain,hoof_divide).
-have(3,mountain,hoof).
-is_with(3,mountain,horn_on_its_head).
-mountain_with(3,hoof,horn).
-divide_in(3,hoof,two).
-have(3,mountain,hoof_divide_in_two).
+aos(3,mountain_with,hoof,horn_on_its_head).
+aos(3,be,it,as_big).
+aos(3,be,it,big).
+aos(3,have,mountain,hoof_divide).
+aos(3,have,mountain,hoof).
+aos(3,is_with,mountain,horn_on_its_head).
+aos(3,mountain_with,hoof,horn).
+aos(3,divide_in,hoof,two).
+aos(3,have,mountain,hoof_divide_in_two).
 %% tush child tush.
 % dependencies.
 root(4,root,child).
@@ -91,7 +91,7 @@ nmod:poss(6,ox,farmer).
 amod(6,farmer,white).
 case(6,ox,'s).
 % relations.
-be_'s(6,that,only_farmer_white_ox).
+aos(6,be_'s,that,only_farmer_white_ox).
 %% it is n't so big either.
 % dependencies.
 root(7,root,big).
@@ -123,11 +123,11 @@ advmod(8,make,quite).
 case(8,broad,as).
 advcl:as(8,quite,broad).
 % relations.
-could_make(8,taller,myself).
-could_easily_make_quite(8,taller,myself).
-could_easily_make(8,taller,myself).
-be(8,he,little).
-could_make_quite(8,taller,myself).
+aos(8,could_make,taller,myself).
+aos(8,could_easily_make_quite,taller,myself).
+aos(8,could_easily_make,taller,myself).
+aos(8,be,he,little).
+aos(8,could_make_quite,taller,myself).
 %% just you see.
 % dependencies.
 root(9,root,see).
@@ -153,9 +153,9 @@ conj:and(10,blow,blow).
 dobj(10,blow,himself).
 compound:prt(10,blow,out).
 % relations.
-blow_out(10,himself,himself).
-blow_out(10,he,himself).
-blow_out(10,he,himself).
+aos(10,blow_out,himself,himself).
+aos(10,blow_out,he,himself).
+aos(10,blow_out,he,himself).
 %% was he as big as that.
 % dependencies.
 root(11,root,be).
@@ -165,9 +165,9 @@ advmod(11,that,big).
 case(11,that,as).
 nmod:as(11,be,that).
 % relations.
-be_as(11,he,as_big_that).
-be_as(11,he,that).
-be_as(11,he,big_that).
+aos(11,be_as,he,as_big_that).
+aos(11,be_as,he,that).
+aos(11,be_as,he,big_that).
 %% asked he.
 % dependencies.
 root(12,root,ask).
@@ -212,11 +212,11 @@ advcl:if(15,ask,big).
 case(15,that,as).
 nmod:as(15,big,that).
 % relations.
-be_big_as(15,ox,that).
-be(15,ox,big).
-ask(15,himself,young_one).
-be_as_big_as(15,ox,that).
-be(15,ox,as_big).
+aos(15,be_big_as,ox,that).
+aos(15,be,ox,big).
+aos(15,ask,himself,young_one).
+aos(15,be_as_big_as,ox,that).
+aos(15,be,ox,as_big).
 %% bigger father bigger.
 % dependencies.
 root(16,root,father).

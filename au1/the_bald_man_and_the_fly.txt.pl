@@ -19,7 +19,7 @@ nmod:poss(0,day,summer).
 case(0,summer,'s).
 nmod:on(0,sit,day).
 % relations.
-on(0,hot_summer,day).
+aos(0,on,hot_summer,day).
 %% a fly came up and kept buzzing about his bald pate and stinging him from time to time.
 % dependencies.
 root(1,root,come).
@@ -63,13 +63,13 @@ nmod:poss(2,head,he).
 nmod:on(2,come,head).
 advmod(2,come,instead).
 % relations.
-come_on(2,man,he_head).
-come_instead_on(2,man,he_head).
-aim(2,man,blow).
-aim_blow_at(2,man,he_little_enemy).
-aim_blow_at(2,man,he_little_enemy_ack_palm).
-aim_blow_at(2,man,he_enemy_ack_palm).
-aim_blow_at(2,man,he_enemy).
+aos(2,come_on,man,he_head).
+aos(2,come_instead_on,man,he_head).
+aos(2,aim,man,blow).
+aos(2,aim_blow_at,man,he_little_enemy).
+aos(2,aim_blow_at,man,he_little_enemy_ack_palm).
+aos(2,aim_blow_at,man,he_enemy_ack_palm).
+aos(2,aim_blow_at,man,he_enemy).
 %% again the fly tormented him but this time the man was wiser and said.
 % dependencies.
 root(3,root,fly).
@@ -88,7 +88,7 @@ cc(3,torment,and).
 ccomp(3,fly,say).
 conj:and(3,torment,say).
 % relations.
-be(3,man,wiser).
+aos(3,be,man,wiser).
 %% you will only injure yourself if you take notice of despicable enemies.
 % dependencies.
 root(4,root,injure).
@@ -104,10 +104,10 @@ case(4,enemy,of).
 amod(4,enemy,despicable).
 nmod:of(4,notice,enemy).
 % relations.
-will_only_injure(4,you,yourself).
-notice_of(4,you,enemy).
-take(4,you,notice_of_despicable_enemy).
-take(4,you,notice_of_enemy).
-take(4,you,notice).
-will_injure(4,you,yourself).
-notice_of(4,you,despicable_enemy).
+aos(4,will_only_injure,you,yourself).
+aos(4,notice_of,you,enemy).
+aos(4,take,you,notice_of_despicable_enemy).
+aos(4,take,you,notice_of_enemy).
+aos(4,take,you,notice).
+aos(4,will_injure,you,yourself).
+aos(4,notice_of,you,despicable_enemy).

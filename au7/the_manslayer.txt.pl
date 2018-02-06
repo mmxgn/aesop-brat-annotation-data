@@ -23,9 +23,9 @@ ref(0,man,whom).
 nsubj(0,murder,he).
 acl:relcl(0,man,murder).
 % relations.
-be(0,man,pursue).
-commit(0,man,murder).
-be_pursue_by(0,man,relation).
+aos(0,be,man,pursue).
+aos(0,commit,man,murder).
+aos(0,be_pursue_by,man,relation).
 %% on his reaching the river nile he saw a lion on its bank and being fearfully afraid climbed up a tree.
 % dependencies.
 root(1,root,reach).
@@ -87,12 +87,12 @@ advcl(2,throw,eat).
 conj:and(2,catch,eat).
 dobj(2,eat,he).
 % relations.
-find(2,he,serpent_in_branch).
-find(2,he,serpent_in_upper_branch_of_tree).
-find(2,he,serpent_in_upper_branch).
-is_in(2,serpent,upper_branch_of_tree).
-find(2,he,serpent).
-find(2,he,serpent_in_branch_of_tree).
+aos(2,find,he,serpent_in_branch).
+aos(2,find,he,serpent_in_upper_branch_of_tree).
+aos(2,find,he,serpent_in_upper_branch).
+aos(2,is_in,serpent,upper_branch_of_tree).
+aos(2,find,he,serpent).
+aos(2,find,he,serpent_in_branch_of_tree).
 %% thus the earth the air and the water alike refused shelter to a murderer.
 % dependencies.
 root(3,root,earth).
@@ -111,15 +111,15 @@ case(3,murderer,to).
 det(3,murderer,a).
 nmod:to(3,refuse,murderer).
 % relations.
-alike_refuse_to(3,air,murderer).
-refuse_to(3,water,murderer).
-refuse_to(3,air,murderer).
-refuse_shelter_to(3,air,murderer).
-alike_refuse_shelter_to(3,water,murderer).
-alike_refuse(3,air,shelter).
-alike_refuse_to(3,water,murderer).
-alike_refuse_shelter_to(3,air,murderer).
-alike_refuse(3,water,shelter).
-refuse(3,air,shelter).
-refuse(3,water,shelter).
-refuse_shelter_to(3,water,murderer).
+aos(3,alike_refuse_to,air,murderer).
+aos(3,refuse_to,water,murderer).
+aos(3,refuse_to,air,murderer).
+aos(3,refuse_shelter_to,air,murderer).
+aos(3,alike_refuse_shelter_to,water,murderer).
+aos(3,alike_refuse,air,shelter).
+aos(3,alike_refuse_to,water,murderer).
+aos(3,alike_refuse_shelter_to,air,murderer).
+aos(3,alike_refuse,water,shelter).
+aos(3,refuse,air,shelter).
+aos(3,refuse,water,shelter).
+aos(3,refuse_shelter_to,water,murderer).

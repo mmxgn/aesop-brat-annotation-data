@@ -46,12 +46,12 @@ dobj(0,set,it).
 case(0,fire,on).
 nmod:on(0,set,fire).
 % relations.
-soak_to(0,rope,he_tail).
-well_soak_to(0,rope,he_tail).
-soak_in(0,rope,oil).
-set(0,rope,it).
-catch(0,he_poultry_yard,he).
-well_soak_in(0,rope,oil).
+aos(0,soak_to,rope,he_tail).
+aos(0,well_soak_to,rope,he_tail).
+aos(0,soak_in,rope,oil).
+aos(0,set,rope,it).
+aos(0,catch,he_poultry_yard,he).
+aos(0,well_soak_in,rope,oil).
 %% the fox by a strange fatality rushed to the fields of the farmer who had captured him.
 % dependencies.
 root(1,root,rush).
@@ -73,7 +73,7 @@ aux(1,capture,have).
 acl:relcl(1,farmer,capture).
 dobj(1,capture,he).
 % relations.
-rush_to(1,fox,field).
+aos(1,rush_to,fox,field).
 %% it was the time of the wheat harvest.
 % dependencies.
 root(2,root,time).
@@ -85,8 +85,8 @@ det(2,harvest,the).
 compound(2,harvest,wheat).
 nmod:of(2,time,harvest).
 % relations.
-be(2,it,time).
-be_time_of(2,it,wheat_harvest).
+aos(2,be,it,time).
+aos(2,be_time_of,it,wheat_harvest).
 %% but the farmer reaped nothing that year and returned home grieving sorely.
 % dependencies.
 root(3,root,reap).
@@ -103,8 +103,8 @@ dobj(3,return,home).
 acl(3,home,grieve).
 advmod(3,grieve,sorely).
 % relations.
-reap(3,farmer,nothing).
-return(3,farmer,home_grieve).
-return(3,farmer,home_grieve_sorely).
-return(3,farmer,home).
-reap_nothing_at_time(3,farmer,year).
+aos(3,reap,farmer,nothing).
+aos(3,return,farmer,home_grieve).
+aos(3,return,farmer,home_grieve_sorely).
+aos(3,return,farmer,home).
+aos(3,reap_nothing_at_time,farmer,year).

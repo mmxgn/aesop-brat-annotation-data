@@ -50,11 +50,11 @@ dobj(1,give,allowance).
 case(1,barley,of).
 nmod:of(1,allowance,barley).
 % relations.
-give(1,she_purpose,allowance_of_barley).
-give(1,she_purpose,hen).
-give(1,she_purpose,allowance).
-give(1,she_purpose,double_allowance).
-give(1,she_purpose,double_allowance_of_barley).
+aos(1,give,she_purpose,allowance_of_barley).
+aos(1,give,she_purpose,hen).
+aos(1,give,she_purpose,allowance).
+aos(1,give,she_purpose,double_allowance).
+aos(1,give,she_purpose,double_allowance_of_barley).
 %% from that day the hen became fat and sleek and never once laid another egg.
 % dependencies.
 root(2,root,day).
@@ -74,4 +74,4 @@ conj:and(2,day,lay).
 det(2,egg,another).
 dobj(2,lay,egg).
 % relations.
-become(2,hen,fat).
+aos(2,become,hen,fat).

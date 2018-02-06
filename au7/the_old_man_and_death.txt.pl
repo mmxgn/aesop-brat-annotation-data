@@ -17,11 +17,11 @@ case(0,forest,in).
 det(0,forest,a).
 nmod:in(0,stick,forest).
 % relations.
-bent_with(0,old_labourer,age).
-bent_with(0,labourer,double_age).
-is_in(0,stick,forest).
-bent_with(0,labourer,age).
-bent_with(0,old_labourer,double_age).
+aos(0,bent_with,old_labourer,age).
+aos(0,bent_with,labourer,double_age).
+aos(0,is_in,stick,forest).
+aos(0,bent_with,labourer,age).
+aos(0,bent_with,old_labourer,double_age).
 %% at last he grew so tired and hopeless that he threw down the bundle of sticks and cried out.
 % dependencies.
 root(1,root,grow).
@@ -47,12 +47,12 @@ ccomp(1,tired,cry).
 conj:and(1,throw,cry).
 compound:prt(1,cry,out).
 % relations.
-grow(1,he,tired).
-grow_at(1,he,last).
-grow(1,he,so_tired).
-throw_down(1,he,bundle_of_stick).
-throw_down(1,he,bundle).
-bundle_of(1,he,stick).
+aos(1,grow,he,tired).
+aos(1,grow_at,he,last).
+aos(1,grow,he,so_tired).
+aos(1,throw_down,he,bundle_of_stick).
+aos(1,throw_down,he,bundle).
+aos(1,bundle_of,he,stick).
 %% i can not bear this life any longer.
 % dependencies.
 root(2,root,bear).
@@ -79,8 +79,8 @@ acl:relcl(3,i,take).
 conj:and(3,come,take).
 dobj(3,come,I).
 % relations.
-would_only_come(3,wish_death,I).
-would_come(3,wish_death,I).
+aos(3,would_only_come,wish_death,I).
+aos(3,would_come,wish_death,I).
 %% as he spoke death a grisly skeleton appeared and said to him.
 % dependencies.
 root(4,root,speak).
@@ -98,8 +98,8 @@ conj:and(4,appear,say).
 case(4,he,to).
 nmod:to(4,appear,he).
 % relations.
-appear_to(4,skeleton,he).
-appear_to(4,grisly_skeleton,he).
+aos(4,appear_to,skeleton,he).
+aos(4,appear_to,grisly_skeleton,he).
 %% what wouldst thou mortal.
 % dependencies.
 root(5,root,wouldst).
@@ -115,7 +115,7 @@ nsubj(6,call,thee).
 ccomp(6,hear,call).
 dobj(6,call,I).
 % relations.
-call(6,thee,I).
+aos(6,call,thee,I).
 %% please sir.
 % dependencies.
 root(7,root,please).
@@ -145,8 +145,8 @@ case(9,shoulder,to).
 nmod:poss(9,shoulder,my).
 nmod:to(9,lift,shoulder).
 % relations.
-would_help(9,you,I).
-would_kindly_help(9,you,I).
-lift_faggot_on(9,you,on_my_shoulder).
-lift(9,you,faggot_of_stick).
-lift(9,you,faggot).
+aos(9,would_help,you,I).
+aos(9,would_kindly_help,you,I).
+aos(9,lift_faggot_on,you,on_my_shoulder).
+aos(9,lift,you,faggot_of_stick).
+aos(9,lift,you,faggot).

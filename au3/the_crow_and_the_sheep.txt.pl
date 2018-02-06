@@ -12,8 +12,8 @@ case(0,sheep,of).
 det(0,sheep,a).
 nmod:of(0,back,sheep).
 % relations.
-seat(0,crow,herself).
-seat(0,troublesome_crow,herself).
+aos(0,seat,crow,herself).
+aos(0,seat,troublesome_crow,herself).
 %% the sheep much against his will carried her backward and forward for a long time and at last said.
 % dependencies.
 root(1,root,carry).
@@ -38,10 +38,10 @@ case(1,last,at).
 nmod:at(1,forward,last).
 acl(1,last,say).
 % relations.
-much_will_carry(1,sheep,she).
-will_carry_backward(1,sheep,she).
-much_will_carry_backward(1,sheep,she).
-will_carry(1,sheep,she).
+aos(1,much_will_carry,sheep,she).
+aos(1,will_carry_backward,sheep,she).
+aos(1,much_will_carry_backward,sheep,she).
+aos(1,will_carry,sheep,she).
 %% if you had treated a dog in this way you would have had your deserts from his sharp teeth.
 % dependencies.
 root(2,root,treat).
@@ -64,7 +64,7 @@ nmod:poss(2,tooth,he).
 amod(2,tooth,sharp).
 nmod:from(2,have,tooth).
 % relations.
-have_treat(2,you,dog).
+aos(2,have_treat,you,dog).
 %% to this the crow replied.
 % dependencies.
 root(3,root,this).
@@ -86,9 +86,9 @@ case(4,strong,to).
 det(4,strong,the).
 nmod:to(4,despise,strong).
 % relations.
-despise(4,i,weak).
-despise(4,i,yield).
-despise_yield_to(4,i,strong).
+aos(4,despise,i,weak).
+aos(4,despise,i,yield).
+aos(4,despise_yield_to,i,strong).
 %% i know whom i may bully and whom i must flatter.
 % dependencies.
 root(5,root,know).

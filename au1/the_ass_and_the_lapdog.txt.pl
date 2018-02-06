@@ -35,15 +35,15 @@ conj:and(0,come,carry).
 nmod:poss(0,master,he).
 dobj(0,carry,master).
 % relations.
-come(0,farmer,see_to_he_beast).
-come(0,farmer,see_to_he_beast_of_burden).
-see_to(0,farmer,he_beast).
-come_at_time(0,farmer,one_day).
-often_carry(0,farmer,he_master).
-come(0,farmer,see).
-come_to(0,farmer,stable).
-carry(0,farmer,he_master).
-see_to(0,farmer,he_beast_of_burden).
+aos(0,come,farmer,see_to_he_beast).
+aos(0,come,farmer,see_to_he_beast_of_burden).
+aos(0,see_to,farmer,he_beast).
+aos(0,come_at_time,farmer,one_day).
+aos(0,often_carry,farmer,he_master).
+aos(0,come,farmer,see).
+aos(0,come_to,farmer,stable).
+aos(0,carry,farmer,he_master).
+aos(0,see_to,farmer,he_beast_of_burden).
 %% with the farmer came his lapdog who danced about and licked his hand and frisked about as happy as could be.
 % dependencies.
 root(1,root,come).
@@ -72,10 +72,10 @@ mark(1,be,as).
 aux(1,be,could).
 dep(1,happy,be).
 % relations.
-frisk(1,farmer,happy).
-frisk(1,farmer,about_as_happy).
-frisk(1,farmer,as_happy).
-frisk(1,farmer,about_happy).
+aos(1,frisk,farmer,happy).
+aos(1,frisk,farmer,about_as_happy).
+aos(1,frisk,farmer,as_happy).
+aos(1,frisk,farmer,about_happy).
 %% the farmer felt in his pocket gave the lapdog some dainty food and sat down while he gave his orders to his servants.
 % dependencies.
 root(2,root,feel).
@@ -104,10 +104,10 @@ case(2,servant,to).
 nmod:poss(2,servant,he).
 nmod:to(2,give,servant).
 % relations.
-give(2,he,he_order).
-give(2,he_pocket,food).
-give(2,he_pocket,dainty_food).
-give(2,he_pocket,lapdog).
+aos(2,give,he,he_order).
+aos(2,give,he_pocket,food).
+aos(2,give,he_pocket,dainty_food).
+aos(2,give,he_pocket,lapdog).
 %% the lapdog jumped into his master 's lap and lay there blinking while the farmer stroked his ears.
 % dependencies.
 root(3,root,jump).
@@ -130,9 +130,9 @@ xcomp(3,lay,stroke).
 nmod:poss(3,ear,he).
 dobj(3,stroke,ear).
 % relations.
-into(3,master,lap).
-stroke(3,farmer,he_ear).
-jump_into(3,lapdog,he_master_'s_lap).
+aos(3,into,master,lap).
+aos(3,stroke,farmer,he_ear).
+aos(3,jump_into,lapdog,he_master_'s_lap).
 %% the ass seeing this broke loose from his halter and commenced prancing about in imitation of the lapdog.
 % dependencies.
 root(4,root,break).
@@ -155,14 +155,14 @@ case(4,lapdog,of).
 det(4,lapdog,the).
 nmod:of(4,imitation,lapdog).
 % relations.
-commence(4,ass,prance_in_imitation).
-commence(4,ass,prance).
-commence(4,ass,prance_about_in_imitation_of_lapdog).
-commence(4,ass,prance_about_in_imitation).
-commence(4,ass,prance_about).
-break_from(4,ass,he_halter).
-break_loose_from(4,ass,he_halter).
-commence(4,ass,prance_in_imitation_of_lapdog).
+aos(4,commence,ass,prance_in_imitation).
+aos(4,commence,ass,prance).
+aos(4,commence,ass,prance_about_in_imitation_of_lapdog).
+aos(4,commence,ass,prance_about_in_imitation).
+aos(4,commence,ass,prance_about).
+aos(4,break_from,ass,he_halter).
+aos(4,break_loose_from,ass,he_halter).
+aos(4,commence,ass,prance_in_imitation_of_lapdog).
 %% the farmer could not hold his sides with laughter so the ass went up to him and putting his feet upon the farmer 's shoulder attempted to climb into his lap.
 % dependencies.
 root(5,root,hold).

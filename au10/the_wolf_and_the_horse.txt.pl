@@ -18,9 +18,9 @@ advmod(0,address,thus).
 conj:and(0,meet,address).
 dobj(0,address,he).
 % relations.
-meet(0,wolf,horse).
-thus_address(0,wolf,he).
-address(0,wolf,he).
+aos(0,meet,wolf,horse).
+aos(0,thus_address,wolf,he).
+aos(0,address,wolf,he).
 %% i would advise you to go into that field.
 % dependencies.
 root(1,root,advise).
@@ -34,8 +34,8 @@ case(1,field,into).
 det(1,field,that).
 nmod:into(1,go,field).
 % relations.
-go_into(1,you,field).
-would_advise(1,i,you).
+aos(1,go_into,you,field).
+aos(1,would_advise,i,you).
 %% it is full of fine oats which i have left untouched for you as you are a friend whom i would love to hear enjoying good eating.
 % dependencies.
 root(2,root,full).
@@ -68,10 +68,10 @@ xcomp(2,hear,enjoy).
 amod(2,eating,good).
 dobj(2,enjoy,eating).
 % relations.
-be_full_of(2,it,fine_oats).
-would_love(2,i,hear).
-be(2,it,full).
-be_full_of(2,it,oats).
+aos(2,be_full_of,it,fine_oats).
+aos(2,would_love,i,hear).
+aos(2,be,it,full).
+aos(2,be_full_of,it,oats).
 %% the horse replied.
 % dependencies.
 root(3,root,reply).
@@ -102,7 +102,7 @@ case(4,belly,of).
 nmod:poss(4,belly,you).
 nmod:of(4,cost,belly).
 % relations.
-have(4,oats,have_food).
+aos(4,have,oats,have_food).
 %% men of evil reputation when they perform a good deed fail to get credit for it.
 % dependencies.
 root(5,root,man).
@@ -123,7 +123,7 @@ dobj(5,get,credit).
 case(5,it,for).
 nmod:for(5,get,it).
 % relations.
-get_credit_for(5,good_deed,it).
-get(5,deed,credit).
-get(5,good_deed,credit).
-get_credit_for(5,deed,it).
+aos(5,get_credit_for,good_deed,it).
+aos(5,get,deed,credit).
+aos(5,get,good_deed,credit).
+aos(5,get_credit_for,deed,it).

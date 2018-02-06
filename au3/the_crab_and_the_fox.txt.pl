@@ -15,15 +15,15 @@ nmod:poss(0,ground,its).
 compound(0,ground,feeding).
 nmod:as(0,meadow,ground).
 % relations.
-choose(0,crab,neighbor_meadow).
-choose(0,crab,green_meadow_as_its_feeding_ground).
-choose(0,crab,meadow).
-choose(0,crab,neighbor_green_meadow).
-choose(0,crab,meadow_as_its_feeding_ground).
-choose(0,crab,green_meadow).
-choose(0,crab,neighbor_meadow_as_its_feeding_ground).
-choose(0,crab,neighbor_green_meadow_as_its_feeding_ground).
-forsake(0,crab,seashore).
+aos(0,choose,crab,neighbor_meadow).
+aos(0,choose,crab,green_meadow_as_its_feeding_ground).
+aos(0,choose,crab,meadow).
+aos(0,choose,crab,neighbor_green_meadow).
+aos(0,choose,crab,meadow_as_its_feeding_ground).
+aos(0,choose,crab,green_meadow).
+aos(0,choose,crab,neighbor_meadow_as_its_feeding_ground).
+aos(0,choose,crab,neighbor_green_meadow_as_its_feeding_ground).
+aos(0,forsake,crab,seashore).
 %% a fox came across him and being very hungry ate him up.
 % dependencies.
 root(1,root,come).
@@ -39,8 +39,8 @@ conj:and(1,come,eat).
 dobj(1,eat,he).
 compound:prt(1,eat,up).
 % relations.
-come_across(1,fox,he).
-eat_up(1,hungry,he).
+aos(1,come_across,fox,he).
+aos(1,eat_up,hungry,he).
 %% just as he was on the point of being eaten the crab said.
 % dependencies.
 root(2,root,just).
@@ -57,7 +57,7 @@ det(2,crab,the).
 nsubj(2,say,crab).
 ccomp(2,eat,say).
 % relations.
-be_on(2,he,point_eat).
+aos(2,be_on,he,point_eat).
 %% i well deserve my fate for what business had i on the land when by my nature and habits i am only adapted for the sea.
 % dependencies.
 root(3,root,deserve).
@@ -88,21 +88,21 @@ case(3,sea,for).
 det(3,sea,the).
 nmod:for(3,adapt,sea).
 % relations.
-be(3,i,when_by_my_nature_adapt_for_sea).
-have(3,business,i_on_land).
-be(3,i,adapt).
-be(3,i,when_by_my_nature_adapt).
-be(3,i,by_my_nature_only_adapt_for_sea).
-be(3,i,when_by_my_nature_only_adapt).
-be(3,i,only_adapt).
-have(3,business,i).
-be(3,i,by_my_nature_adapt_for_sea).
-be_only_adapt_for(3,i,sea).
-be(3,i,when_by_my_nature_only_adapt_for_sea).
-be(3,i,when_adapt_for_sea).
-be(3,i,when_adapt).
-be(3,i,when_only_adapt).
-be_adapt_for(3,i,sea).
-be_only_adapt_by(3,i,my_nature).
-be_adapt_by(3,i,my_nature).
-be(3,i,when_only_adapt_for_sea).
+aos(3,be,i,when_by_my_nature_adapt_for_sea).
+aos(3,have,business,i_on_land).
+aos(3,be,i,adapt).
+aos(3,be,i,when_by_my_nature_adapt).
+aos(3,be,i,by_my_nature_only_adapt_for_sea).
+aos(3,be,i,when_by_my_nature_only_adapt).
+aos(3,be,i,only_adapt).
+aos(3,have,business,i).
+aos(3,be,i,by_my_nature_adapt_for_sea).
+aos(3,be_only_adapt_for,i,sea).
+aos(3,be,i,when_by_my_nature_only_adapt_for_sea).
+aos(3,be,i,when_adapt_for_sea).
+aos(3,be,i,when_adapt).
+aos(3,be,i,when_only_adapt).
+aos(3,be_adapt_for,i,sea).
+aos(3,be_only_adapt_by,i,my_nature).
+aos(3,be_adapt_by,i,my_nature).
+aos(3,be,i,when_only_adapt_for_sea).

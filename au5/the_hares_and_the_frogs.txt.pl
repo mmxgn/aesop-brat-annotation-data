@@ -18,8 +18,8 @@ advmod(0,go,where).
 mark(0,go,to).
 xcomp(0,know,go).
 % relations.
-be(0,hare,so_persecute).
-be(0,hare,persecute).
+aos(0,be,hare,so_persecute).
+aos(0,be,hare,persecute).
 %% as soon as they saw a single animal approach them off they used to run.
 % dependencies.
 root(1,root,soon).
@@ -39,8 +39,8 @@ acl:relcl(1,approach,use).
 mark(1,run,to).
 xcomp(1,use,run).
 % relations.
-use(1,they,run).
-use_off(1,they,they).
+aos(1,use,they,run).
+aos(1,use_off,they,they).
 %% one day they saw a troop of wild horses stampeding about and in quite a panic all the hares scuttled off to a lake hard by determined to drown themselves rather than live in such a continual state of fear.
 % dependencies.
 root(2,root,day).
@@ -85,12 +85,12 @@ nmod:in(2,live,state).
 case(2,fear,of).
 nmod:of(2,state,fear).
 % relations.
-see(2,they,troop_of_wild_horse).
-scuttle_off_to(2,hare,lake).
-troop_of(2,they,horse).
-see(2,they,troop_of_horse).
-troop_of(2,they,wild_horse).
-see(2,they,troop).
+aos(2,see,they,troop_of_wild_horse).
+aos(2,scuttle_off_to,hare,lake).
+aos(2,troop_of,they,horse).
+aos(2,see,they,troop_of_horse).
+aos(2,troop_of,they,wild_horse).
+aos(2,see,they,troop).
 %% but just as they got near the bank of the lake a troop of frogs frightened in their turn by the approach of the hares scuttled off and jumped into the water.
 % dependencies.
 root(3,root,just).
@@ -128,7 +128,7 @@ case(3,water,into).
 det(3,water,the).
 nmod:into(3,jump,water).
 % relations.
-jump_into(3,troop,water).
+aos(3,jump_into,troop,water).
 %% truly.
 % dependencies.
 root(4,root,truly).

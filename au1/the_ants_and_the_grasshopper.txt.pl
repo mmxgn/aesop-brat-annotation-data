@@ -16,10 +16,10 @@ case(0,summertime,in).
 det(0,summertime,the).
 nmod:in(0,collect,summertime).
 % relations.
-be_spend(0,ant,winter_'s_day).
-be_spend(0,ant,fine_winter_'s_day).
-has(0,fine_winter,day_dry).
-collect_in(0,grain,summertime).
+aos(0,be_spend,ant,winter_'s_day).
+aos(0,be_spend,ant,fine_winter_'s_day).
+aos(0,has,fine_winter,day_dry).
+aos(0,collect_in,grain,summertime).
 %% a grasshopper perishing with famine passed by and earnestly begged for a little food.
 % dependencies.
 root(1,root,grasshopper).
@@ -46,7 +46,7 @@ nsubj(2,inquire,ant).
 case(2,he,of).
 nmod:of(2,inquire,he).
 % relations.
-inquire_of(2,ant,he).
+aos(2,inquire_of,ant,he).
 %% why did you not treasure up food during the summer.
 % dependencies.
 root(3,root,do).
@@ -83,8 +83,8 @@ nmod:tmod(6,pass,day).
 case(6,singing,in).
 nmod:in(6,pass,singing).
 % relations.
-pass_at_time(6,i,day).
-pass_in(6,i,singing).
+aos(6,pass_at_time,i,day).
+aos(6,pass_in,i,singing).
 %% they then said in derision.
 % dependencies.
 root(7,root,say).
@@ -93,7 +93,7 @@ advmod(7,say,then).
 case(7,derision,in).
 nmod:in(7,say,derision).
 % relations.
-say_in(7,they,derision).
+aos(7,say_in,they,derision).
 %% if you were foolish enough to sing all the summer you must dance supperless to bed in the winter.
 % dependencies.
 root(8,root,foolish).
@@ -116,4 +116,4 @@ case(8,winter,in).
 det(8,winter,the).
 nmod:in(8,dance,winter).
 % relations.
-be(8,you,foolish).
+aos(8,be,you,foolish).

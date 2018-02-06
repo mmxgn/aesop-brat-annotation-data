@@ -19,15 +19,15 @@ amod(0,plumage,same).
 amod(0,plumage,beautiful).
 nsubj(0,see,plumage).
 % relations.
-see(0,same_beautiful_plumage,desire).
-see(0,plumage,swan).
-see(0,beautiful_plumage,swan).
-see(0,same_beautiful_plumage,swan).
-see(0,plumage,desire).
-see(0,same_plumage,swan).
-see(0,beautiful_plumage,desire).
-see(0,same_plumage,desire).
-secure_for(0,desire,himself).
+aos(0,see,same_beautiful_plumage,desire).
+aos(0,see,plumage,swan).
+aos(0,see,beautiful_plumage,swan).
+aos(0,see,same_beautiful_plumage,swan).
+aos(0,see,plumage,desire).
+aos(0,see,same_plumage,swan).
+aos(0,see,beautiful_plumage,desire).
+aos(0,see,same_plumage,desire).
+aos(0,secure_for,desire,himself).
 %% supposing that the swan 's splendid white color arose from his washing in the water in which he swam the raven left the altars in the neighborhood where he picked up his living and took up residence in the lakes and pools.
 % dependencies.
 root(1,root,suppose).
@@ -77,8 +77,8 @@ cc(1,lakes,and).
 nmod:in(1,residence,pool).
 conj:and(1,lakes,pool).
 % relations.
-is_in(1,residence,lakes).
-has(1,swan,splendid_white_color).
+aos(1,is_in,residence,lakes).
+aos(1,has,swan,splendid_white_color).
 %% but cleansing his feathers as often as he would he could not change their color while through want of food he perished.
 % dependencies.
 root(2,root,cleanse).

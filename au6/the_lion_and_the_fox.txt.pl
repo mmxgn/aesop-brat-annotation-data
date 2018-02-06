@@ -16,9 +16,9 @@ acl:of(0,pretense,become).
 nmod:poss(0,servant,he).
 xcomp(0,become,servant).
 % relations.
-enter_into(0,fox,partnership).
-enter_on(0,fox,pretense_become).
-enter_with(0,fox,lion).
+aos(0,enter_into,fox,partnership).
+aos(0,enter_on,fox,pretense_become).
+aos(0,enter_with,fox,lion).
 %% each undertook his proper duty in accordance with his own nature and powers.
 % dependencies.
 root(1,root,undertake).
@@ -36,8 +36,8 @@ cc(1,nature,and).
 nmod:with(1,undertake,power).
 conj:and(1,nature,power).
 % relations.
-undertake(1,each,he_duty).
-undertake(1,each,he_proper_duty).
+aos(1,undertake,each,he_duty).
+aos(1,undertake,each,he_proper_duty).
 %% the fox discovered and pointed out the prey.
 % dependencies.
 root(2,root,discover).
@@ -50,7 +50,7 @@ compound:prt(2,point,out).
 det(2,prey,the).
 dobj(2,point,prey).
 % relations.
-point_out(2,fox,prey).
+aos(2,point_out,fox,prey).
 %% the lion sprang on it and seized it.
 % dependencies.
 root(3,root,spring).
@@ -63,8 +63,8 @@ cc(3,spring,and).
 conj:and(3,spring,seize).
 dobj(3,seize,it).
 % relations.
-spring_on(3,lion,it).
-seize(3,lion,it).
+aos(3,spring_on,lion,it).
+aos(3,seize,lion,it).
 %% the fox soon became jealous of the lion carrying off the lion 's share and said that he would no longer find out the prey but would capture it on his own account.
 % dependencies.
 root(4,root,become).
@@ -104,11 +104,11 @@ nmod:poss(4,account,he).
 amod(4,account,own).
 nmod:on(4,capture,account).
 % relations.
-become(4,fox,jealous_of_lion).
-soon_become(4,fox,jealous_of_lion).
-become(4,fox,jealous).
-has(4,lion,share).
-soon_become(4,fox,jealous).
+aos(4,become,fox,jealous_of_lion).
+aos(4,soon_become,fox,jealous_of_lion).
+aos(4,become,fox,jealous).
+aos(4,has,lion,share).
+aos(4,soon_become,fox,jealous).
 %% the next day he attempted to snatch a lamb from the fold but he himself fell prey to the huntsmen and hounds.
 % dependencies.
 root(5,root,day).
@@ -136,8 +136,8 @@ cc(5,huntsman,and).
 nmod:to(5,fall,hound).
 conj:and(5,huntsman,hound).
 % relations.
-fall_prey_to(5,himself,huntsman).
-snatch_lamb_from(5,he,fold).
-snatch(5,he,lamb).
-fall_to(5,himself,huntsman).
-fall(5,himself,prey).
+aos(5,fall_prey_to,himself,huntsman).
+aos(5,snatch_lamb_from,he,fold).
+aos(5,snatch,he,lamb).
+aos(5,fall_to,himself,huntsman).
+aos(5,fall,himself,prey).

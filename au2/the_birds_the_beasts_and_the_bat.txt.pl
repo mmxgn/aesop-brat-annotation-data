@@ -40,14 +40,14 @@ acl:relcl(1,side,feel).
 cop(1,strongest,be).
 det(1,strongest,the).
 % relations.
-uncertain_issue_of(1,fear,fight).
-fear(1,bat,uncertain_issue).
-fear(1,bat,uncertain_issue_of_fight_fight).
-be(1,bat,strongest).
-uncertain_issue_of(1,fear,fight_fight).
-uncertain_issue_of(1,fear,fight_always_fight).
-fear(1,bat,uncertain_issue_of_fight).
-fear(1,bat,uncertain_issue_of_fight_always_fight).
+aos(1,uncertain_issue_of,fear,fight).
+aos(1,fear,bat,uncertain_issue).
+aos(1,fear,bat,uncertain_issue_of_fight_fight).
+aos(1,be,bat,strongest).
+aos(1,uncertain_issue_of,fear,fight_fight).
+aos(1,uncertain_issue_of,fear,fight_always_fight).
+aos(1,fear,bat,uncertain_issue_of_fight).
+aos(1,fear,bat,uncertain_issue_of_fight_always_fight).
 %% when peace was proclaimed his deceitful conduct was apparent to both combatants.
 % dependencies.
 root(2,root,proclaim).
@@ -63,10 +63,10 @@ case(2,combatant,to).
 det(2,combatant,both).
 nmod:to(2,apparent,combatant).
 % relations.
-be_apparent_to(2,he_conduct,combatant).
-be(2,peace,proclaim).
-be(2,peace,when_proclaim).
-be_apparent_to(2,he_deceitful_conduct,combatant).
+aos(2,be_apparent_to,he_conduct,combatant).
+aos(2,be,peace,proclaim).
+aos(2,be,peace,when_proclaim).
+aos(2,be_apparent_to,he_deceitful_conduct,combatant).
 %% therefore being condemned by each for his treachery he was driven forth from the light of day and henceforth concealed himself in dark hiding-places flying always alone and at night.
 % dependencies.
 root(3,root,condemn).
@@ -103,13 +103,13 @@ cc(3,himself,and).
 case(3,night,at).
 nmod:at(3,himself,night).
 % relations.
-be_drive_from(3,he,light_of_day).
-be(3,himself,therefore_condemn).
-therefore_be_condemn_by(3,himself,each).
-be_drive_forth_from(3,he,light_of_day).
-be(3,he,drive).
-be_condemn_by(3,himself,each).
-be_drive_forth_from(3,he,light).
-be_drive_from(3,he,light).
-be(3,himself,condemn).
-be(3,he,drive_forth).
+aos(3,be_drive_from,he,light_of_day).
+aos(3,be,himself,therefore_condemn).
+aos(3,therefore_be_condemn_by,himself,each).
+aos(3,be_drive_forth_from,he,light_of_day).
+aos(3,be,he,drive).
+aos(3,be_condemn_by,himself,each).
+aos(3,be_drive_forth_from,he,light).
+aos(3,be_drive_from,he,light).
+aos(3,be,himself,condemn).
+aos(3,be,he,drive_forth).

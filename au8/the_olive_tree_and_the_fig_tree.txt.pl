@@ -29,10 +29,10 @@ case(0,season,with).
 det(0,season,the).
 nmod:with(0,change,season).
 % relations.
-ridicule_fig-tree(0,olive-tree,green_year).
-be_green_at_time(0,she,year).
-change(0,fig-tree,its_leaf).
-ridicule(0,olive-tree,fig-tree).
+aos(0,ridicule_fig-tree,olive-tree,green_year).
+aos(0,be_green_at_time,she,year).
+aos(0,change,fig-tree,its_leaf).
+aos(0,ridicule,olive-tree,fig-tree).
 %% a shower of snow fell upon them and finding the olive full of foliage it settled upon its branches and broke them down with its weight at once despoiling it of its beauty and killing the tree.
 % dependencies.
 root(1,root,fall).
@@ -76,9 +76,9 @@ conj:and(1,despoil,kill).
 det(1,tree,the).
 dobj(1,kill,tree).
 % relations.
-break_down(1,shower,they).
-fall_upon(1,shower,they).
-settle_upon(1,it,its_branch).
+aos(1,break_down,shower,they).
+aos(1,fall_upon,shower,they).
+aos(1,settle_upon,it,its_branch).
 %% but finding the fig-tree denuded of leaves the snow fell through to the ground and did not injure it at all.
 % dependencies.
 root(2,root,find).

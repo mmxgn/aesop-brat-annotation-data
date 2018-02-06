@@ -13,10 +13,10 @@ case(0,house,into).
 det(0,house,a).
 nmod:into(0,break,house).
 % relations.
-come_in(0,thief,night).
-break_into(0,thief,house).
-come(0,thief,break).
-come(0,thief,break_into_house).
+aos(0,come_in,thief,night).
+aos(0,break_into,thief,house).
+aos(0,come,thief,break).
+aos(0,come,thief,break_into_house).
 %% he brought with him several slices of meat in order to pacify the housedog so that he would not alarm his master by barking.
 % dependencies.
 root(1,root,bring).
@@ -59,7 +59,7 @@ det(2,dog,the).
 nsubj(2,say,dog).
 acl:relcl(2,meat,say).
 % relations.
-throw(2,piece,he).
+aos(2,throw,piece,he).
 %% if you think to stop my mouth you will be greatly mistaken.
 % dependencies.
 root(3,root,think).
@@ -76,8 +76,8 @@ cop(3,mistaken,be).
 advmod(3,mistaken,greatly).
 acl:relcl(3,mouth,mistaken).
 % relations.
-will(3,you,will_greatly_mistaken).
-will(3,you,will_mistaken).
+aos(3,will,you,will_greatly_mistaken).
+aos(3,will,you,will_mistaken).
 %% this sudden kindness at your hands will only make me more watchful lest under these unexpected favors to myself you have some private ends to accomplish for your own benefit and for my master 's injury.
 % dependencies.
 root(4,root,make).
@@ -119,20 +119,20 @@ nmod:poss(4,injury,master).
 case(4,master,'s).
 nmod:for(4,accomplish,injury).
 % relations.
-for(4,master,injury).
-have(4,you,private_end_accomplish_for_my_master_'s_injury).
-have(4,you,private_end_accomplish_for_you_benefit).
-will_make(4,kindness,I_watchful).
-will_make(4,sudden_kindness,I_watchful).
-will_only_make(4,sudden_kindness,I_watchful).
-have(4,you,end_accomplish_for_you_benefit_for_my_master_'s_injury).
-have(4,you,end_accomplish_for_you_own_benefit).
-will_only_make(4,kindness,I_watchful).
-have(4,you,private_end_accomplish_for_you_benefit_for_my_master_'s_injury).
-have(4,you,private_end_accomplish_for_you_own_benefit_for_my_master_'s_injury).
-have(4,you,private_end_accomplish_for_you_own_benefit).
-have(4,you,end_accomplish_for_you_own_benefit_for_my_master_'s_injury).
-have(4,you,private_end_accomplish).
-have(4,you,end_accomplish_for_my_master_'s_injury).
-have(4,you,end_accomplish_for_you_benefit).
-have(4,you,end_accomplish).
+aos(4,for,master,injury).
+aos(4,have,you,private_end_accomplish_for_my_master_'s_injury).
+aos(4,have,you,private_end_accomplish_for_you_benefit).
+aos(4,will_make,kindness,I_watchful).
+aos(4,will_make,sudden_kindness,I_watchful).
+aos(4,will_only_make,sudden_kindness,I_watchful).
+aos(4,have,you,end_accomplish_for_you_benefit_for_my_master_'s_injury).
+aos(4,have,you,end_accomplish_for_you_own_benefit).
+aos(4,will_only_make,kindness,I_watchful).
+aos(4,have,you,private_end_accomplish_for_you_benefit_for_my_master_'s_injury).
+aos(4,have,you,private_end_accomplish_for_you_own_benefit_for_my_master_'s_injury).
+aos(4,have,you,private_end_accomplish_for_you_own_benefit).
+aos(4,have,you,end_accomplish_for_you_own_benefit_for_my_master_'s_injury).
+aos(4,have,you,private_end_accomplish).
+aos(4,have,you,end_accomplish_for_my_master_'s_injury).
+aos(4,have,you,end_accomplish_for_you_benefit).
+aos(4,have,you,end_accomplish).

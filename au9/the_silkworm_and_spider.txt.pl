@@ -27,8 +27,8 @@ compound:prt(0,work,away).
 case(0,zeal,with).
 nmod:with(0,work,zeal).
 % relations.
-work_away_with(0,silkworm,zeal).
-sit_down_at(0,silkworm,she).
+aos(0,work_away_with,silkworm,zeal).
+aos(0,sit_down_at,silkworm,she).
 %% a spider soon came around and asked to hire a web-room near by.
 % dependencies.
 root(1,root,come).
@@ -74,10 +74,10 @@ nsubjpass(2,finish,web).
 auxpass(2,finish,be).
 ccomp(2,work,finish).
 % relations.
-be_finish_in(2,web,time).
-commence(2,spider,she_task).
-be(2,web,finish).
-be_finish_in(2,web,short_time).
+aos(2,be_finish_in,web,time).
+aos(2,commence,spider,she_task).
+aos(2,be,web,finish).
+aos(2,be_finish_in,web,short_time).
 %% just look at it.
 % dependencies.
 root(3,root,look).
@@ -120,13 +120,13 @@ ccomp(6,acknowledge,worker).
 case(6,you,than).
 nmod:than(6,worker,you).
 % relations.
-be_much_better_worker_than(6,i,you).
-be(6,i,better_worker).
-be(6,i,worker).
-be_better_worker_than(6,i,you).
-be(6,i,better).
-be_worker_than(6,i,you).
-be(6,i,much_better_worker).
+aos(6,be_much_better_worker_than,i,you).
+aos(6,be,i,better_worker).
+aos(6,be,i,worker).
+aos(6,be_better_worker_than,i,you).
+aos(6,be,i,better).
+aos(6,be_worker_than,i,you).
+aos(6,be,i,much_better_worker).
 %% see how quickly i perform my labors.
 % dependencies.
 root(7,root,see).
@@ -137,9 +137,9 @@ ccomp(7,see,perform).
 nmod:poss(7,labor,my).
 dobj(7,perform,labor).
 % relations.
-quickly_perform(7,i,my_labor).
-perform(7,i,my_labor).
-how_quickly_perform(7,i,my_labor).
+aos(7,quickly_perform,i,my_labor).
+aos(7,perform,i,my_labor).
+aos(7,how_quickly_perform,i,my_labor).
 %% yes.
 % dependencies.
 root(8,root,yes).
@@ -160,7 +160,7 @@ nsubj(10,bother,you).
 advcl:for(10,hush,bother).
 dobj(10,bother,I).
 % relations.
-bother(10,you,I).
+aos(10,bother,you,I).
 %% your labors are designed only as base traps and are destroyed whenever they are seen and brushed away as useless dirt.
 % dependencies.
 root(11,root,design).
@@ -188,23 +188,23 @@ case(11,dirt,as).
 amod(11,dirt,useless).
 nmod:as(11,see,dirt).
 % relations.
-be_see_away_as(11,they,dirt).
-be(11,you_labor,design).
-be(11,they,whenever_see_away).
-be(11,they,whenever_see_away_as_dirt).
-be(11,you_labor,design_only).
-be(11,they,see_away).
-be_see_away_as(11,they,useless_dirt).
-be(11,they,see).
-be(11,they,whenever_see_as_dirt).
-be_design_as(11,you_labor,base_trap).
-be(11,they,whenever_see_as_useless_dirt).
-be(11,they,whenever_see).
-be(11,you_labor,destroy).
-be(11,they,whenever_see_away_as_useless_dirt).
-be_see_as(11,they,dirt).
-be_see_as(11,they,useless_dirt).
-be_design_only_as(11,you_labor,base_trap).
+aos(11,be_see_away_as,they,dirt).
+aos(11,be,you_labor,design).
+aos(11,be,they,whenever_see_away).
+aos(11,be,they,whenever_see_away_as_dirt).
+aos(11,be,you_labor,design_only).
+aos(11,be,they,see_away).
+aos(11,be_see_away_as,they,useless_dirt).
+aos(11,be,they,see).
+aos(11,be,they,whenever_see_as_dirt).
+aos(11,be_design_as,you_labor,base_trap).
+aos(11,be,they,whenever_see_as_useless_dirt).
+aos(11,be,they,whenever_see).
+aos(11,be,you_labor,destroy).
+aos(11,be,they,whenever_see_away_as_useless_dirt).
+aos(11,be_see_as,they,dirt).
+aos(11,be_see_as,they,useless_dirt).
+aos(11,be_design_only_as,you_labor,base_trap).
 %% while mine are stored away as ornaments of royalty.
 % dependencies.
 root(12,root,store).
@@ -217,5 +217,5 @@ nmod:as(12,store,ornament).
 case(12,royalty,of).
 nmod:of(12,ornament,royalty).
 % relations.
-be_store_away_as(12,mine,ornament_of_royalty).
-be_store_away_as(12,mine,ornament).
+aos(12,be_store_away_as,mine,ornament_of_royalty).
+aos(12,be_store_away_as,mine,ornament).

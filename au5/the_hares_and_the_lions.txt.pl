@@ -14,8 +14,8 @@ aux(0,equal,should).
 cop(0,equal,be).
 ccomp(0,argue,equal).
 % relations.
-be(0,all,equal).
-harangue(0,hare,assembly).
+aos(0,be,all,equal).
+aos(0,harangue,hare,assembly).
 %% the lions made this reply.
 % dependencies.
 root(1,root,make).
@@ -24,7 +24,7 @@ nsubj(1,make,lion).
 det(1,reply,this).
 dobj(1,make,reply).
 % relations.
-make(1,lion,reply).
+aos(1,make,lion,reply).
 %% your words o hares.
 % dependencies.
 root(2,root,word).

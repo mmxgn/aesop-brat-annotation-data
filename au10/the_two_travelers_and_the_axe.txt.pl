@@ -34,7 +34,7 @@ aux(2,find,have).
 det(2,axe,a).
 dobj(2,find,axe).
 % relations.
-have_find(2,i,axe).
+aos(2,have_find,i,axe).
 %% nay my friend.
 % dependencies.
 root(3,root,nay).
@@ -99,7 +99,7 @@ root(7,root,undo).
 nsubjpass(7,undo,we).
 auxpass(7,undo,be).
 % relations.
-be(7,we,undo).
+aos(7,be,we,undo).
 %% nay.
 % dependencies.
 root(8,root,nay).
@@ -122,10 +122,10 @@ nmod:of(10,mode,speech).
 nmod:poss(10,friend,my).
 nsubj(10,keep,friend).
 % relations.
-keep_to(10,my_friend,you_mode).
-keep_to(10,my_friend,you_first_mode).
-keep_to(10,my_friend,you_mode_of_speech).
-keep_to(10,my_friend,you_first_mode_of_speech).
+aos(10,keep_to,my_friend,you_mode).
+aos(10,keep_to,my_friend,you_first_mode).
+aos(10,keep_to,my_friend,you_mode_of_speech).
+aos(10,keep_to,my_friend,you_first_mode_of_speech).
 %% what you thought right then think right now.
 % dependencies.
 root(11,root,think).
@@ -150,4 +150,4 @@ punct(12,not,').
 auxpass(12,undo,be).
 acl:relcl(12,i,undo).
 % relations.
-be(12,not,undo).
+aos(12,be,not,undo).

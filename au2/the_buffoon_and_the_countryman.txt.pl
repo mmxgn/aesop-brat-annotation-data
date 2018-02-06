@@ -47,9 +47,9 @@ acl:relcl(1,porker,conceal).
 case(1,he,about).
 nmod:about(1,conceal,he).
 % relations.
-finish_off(1,he,squeak_so_like_pig).
-finish_off(1,he,squeak).
-finish_off(1,he,squeak_so).
+aos(1,finish_off,he,squeak_so_like_pig).
+aos(1,finish_off,he,squeak).
+aos(1,finish_off,he,squeak_so).
 %% but a countryman who stood by said.
 % dependencies.
 root(2,root,countryman).
@@ -94,9 +94,9 @@ nsubj(5,like,it).
 cop(5,like,be).
 dep(5,show,like).
 % relations.
-will_show(5,i,you).
-give(5,you,I).
-will_show(5,tomorrow,you).
+aos(5,will_show,i,you).
+aos(5,give,you,I).
+aos(5,will_show,tomorrow,you).
 %% the audience laughed but next day sure enough the countryman appeared on the stage and putting his head down squealed so hideously that the spectators hissed and threw stones at him to make him stop.
 % dependencies.
 root(6,root,laugh).
@@ -138,9 +138,9 @@ advcl:to(6,throw,make).
 nsubj(6,stop,he).
 xcomp(6,make,stop).
 % relations.
-throw_stone_at(6,spectator,he).
-throw(6,spectator,stone).
-throw_stone(6,spectator,make).
+aos(6,throw_stone_at,spectator,he).
+aos(6,throw,spectator,stone).
+aos(6,throw_stone,spectator,make).
 %% you fools.
 % dependencies.
 root(7,root,you).
@@ -183,6 +183,6 @@ amod(10,he,utter).
 det(10,squeal,the).
 dobj(10,make,squeal).
 % relations.
-make(10,ear,he).
-make(10,ear,squeal).
-make(10,ear,he_utter).
+aos(10,make,ear,he).
+aos(10,make,ear,squeal).
+aos(10,make,ear,he_utter).

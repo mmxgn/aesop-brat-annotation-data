@@ -25,7 +25,7 @@ case(0,plane-tree,of).
 det(0,plane-tree,a).
 nmod:of(0,branch,plane-tree).
 % relations.
-of(0,summer,sun_lay_down_at_noon_under_widespread_branch_of_plane-tree).
+aos(0,of,summer,sun_lay_down_at_noon_under_widespread_branch_of_plane-tree).
 %% as they rested under its shade one of the travelers said to the other.
 % dependencies.
 root(1,root,rest).
@@ -109,4 +109,4 @@ cc(6,useless,and).
 advcl:as(6,describe,unprofitable).
 conj:and(6,useless,unprofitable).
 % relations.
-describe(6,rest,I).
+aos(6,describe,rest,I).

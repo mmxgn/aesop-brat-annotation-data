@@ -68,7 +68,7 @@ case(4,lamb,to).
 det(4,lamb,the).
 nmod:to(4,call,lamb).
 % relations.
-call_out_to(4,he,lamb).
+aos(4,call_out_to,he,lamb).
 %% how dare you muddle the water from which i am drinking.
 % dependencies.
 root(5,root,dare).
@@ -83,7 +83,7 @@ nsubj(5,drinking,i).
 cop(5,drinking,be).
 advcl:from(5,muddle,drinking).
 % relations.
-muddle(5,you,water).
+aos(5,muddle,you,water).
 %% nay master nay.
 % dependencies.
 root(6,root,nay).
@@ -146,10 +146,10 @@ nmod:tmod(11,call,time).
 amod(11,year,last).
 dep(11,time,year).
 % relations.
-do_call(11,you,name).
-do_call(11,you,bad_name).
-do_call(11,you,I).
-do_call_name_at_time(11,you,time).
+aos(11,do_call,you,name).
+aos(11,do_call,you,bad_name).
+aos(11,do_call,you,I).
+aos(11,do_call_name_at_time,you,time).
 %% that can not be.
 % dependencies.
 root(12,root,be).
@@ -172,9 +172,9 @@ advmod(14,month,only).
 nummod(14,month,six).
 nmod:npmod(14,old,month).
 % relations.
-be_old(14,i,six_month).
-be(14,i,old).
-be_old(14,i,only_six_month).
+aos(14,be_old,i,six_month).
+aos(14,be,i,old).
+aos(14,be_old,i,only_six_month).
 %% i do n't care.
 % dependencies.
 root(15,root,care).
@@ -200,7 +200,7 @@ cop(17,father,be).
 nmod:poss(17,father,you).
 acl:relcl(17,you,father).
 % relations.
-be(17,it,you_father).
+aos(17,be,it,you_father).
 %% and with that he rushed upon the poor little lamb and .warra warra warra warra warra .ate her all up.
 % dependencies.
 root(18,root,rush).
@@ -216,13 +216,13 @@ nmod:upon(18,rush,lamb).
 advmod(18,rush,and).
 punct(18,rush,.).
 % relations.
-rush_with(18,he,that).
-rush_and_with(18,he,that).
-rush_and_upon(18,he,poor_lamb).
-rush_and_upon(18,he,little_lamb).
-rush_upon(18,he,lamb).
-rush_upon(18,he,poor_lamb).
-rush_and_upon(18,he,lamb).
-rush_upon(18,he,little_lamb).
-rush_upon(18,he,poor_little_lamb).
-rush_and_upon(18,he,poor_little_lamb).
+aos(18,rush_with,he,that).
+aos(18,rush_and_with,he,that).
+aos(18,rush_and_upon,he,poor_lamb).
+aos(18,rush_and_upon,he,little_lamb).
+aos(18,rush_upon,he,lamb).
+aos(18,rush_upon,he,poor_lamb).
+aos(18,rush_and_upon,he,lamb).
+aos(18,rush_upon,he,little_lamb).
+aos(18,rush_upon,he,poor_little_lamb).
+aos(18,rush_and_upon,he,poor_little_lamb).

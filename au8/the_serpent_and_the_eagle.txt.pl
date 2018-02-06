@@ -26,9 +26,9 @@ acl:of(0,intention,devour).
 conj:and(0,carry,devour).
 dobj(0,devour,it).
 % relations.
-devour(0,it,it).
-seize(0,eagle,it).
-swoop_down_upon(0,eagle,serpent).
+aos(0,devour,it,it).
+aos(0,seize,eagle,it).
+aos(0,swoop_down_upon,eagle,serpent).
 %% but the serpent was too quick for him and had its coils round him in a moment.
 % dependencies.
 root(1,root,quick).
@@ -50,10 +50,10 @@ case(1,moment,in).
 det(1,moment,a).
 nmod:in(1,round,moment).
 % relations.
-be_too_quick_for(1,serpent,he).
-be(1,serpent,too_quick).
-be(1,serpent,quick).
-be_quick_for(1,serpent,he).
+aos(1,be_too_quick_for,serpent,he).
+aos(1,be,serpent,too_quick).
+aos(1,be,serpent,quick).
+aos(1,be_quick_for,serpent,he).
 %% and then there ensued a life-and-death struggle between the two.
 % dependencies.
 root(2,root,then).
@@ -103,7 +103,7 @@ nsubj:xsubj(3,escape,he).
 mark(3,escape,to).
 xcomp(3,enable,escape).
 % relations.
-enable(3,he,he).
+aos(3,enable,he,he).
 %% in revenge the serpent spat some of his poison into the man 's drinking-horn.
 % dependencies.
 root(4,root,spit).
@@ -121,10 +121,10 @@ nmod:poss(4,drinking-horn,man).
 case(4,man,'s).
 nmod:into(4,spit,drinking-horn).
 % relations.
-spit(4,serpent,some).
-into(4,man,drinking-horn).
-spit(4,serpent,some_of_he_poison).
-spit(4,serpent,some_he_poison).
+aos(4,spit,serpent,some).
+aos(4,into,man,drinking-horn).
+aos(4,spit,serpent,some_of_he_poison).
+aos(4,spit,serpent,some_he_poison).
 %% heated with his exertions the man was about to slake his thirst with a draught from the horn when the eagle knocked it out of his hand and spilled its contents upon the ground.
 % dependencies.
 root(5,root,heat).

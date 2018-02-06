@@ -16,16 +16,16 @@ dobj(0,offer,it).
 case(0,sale,for).
 nmod:for(0,offer,sale).
 % relations.
-make(0,certain_man,image).
-make(0,man,wooden_image).
-make(0,man,image_of_mercury).
-make(0,certain_man,image_of_mercury).
-make(0,man,image).
-make(0,certain_man,wooden_image).
-make(0,man,wooden_image_of_mercury).
-offer(0,certain_man,it).
-offer(0,man,it).
-make(0,certain_man,wooden_image_of_mercury).
+aos(0,make,certain_man,image).
+aos(0,make,man,wooden_image).
+aos(0,make,man,image_of_mercury).
+aos(0,make,certain_man,image_of_mercury).
+aos(0,make,man,image).
+aos(0,make,certain_man,wooden_image).
+aos(0,make,man,wooden_image_of_mercury).
+aos(0,offer,certain_man,it).
+aos(0,offer,man,it).
+aos(0,make,certain_man,wooden_image_of_mercury).
 %% when no one appeared willing to buy it in order to attract purchasers he cried out that he had the statue to sell of a benefactor who bestowed wealth and helped to heap up riches.
 % dependencies.
 root(1,root,appear).
@@ -145,13 +145,13 @@ dobj(7,give,gift).
 advmod(7,slowly,very).
 advmod(7,give,slowly).
 % relations.
-give_slowly(7,he,he_good_gift).
-be_in(7,i,need_of_help).
-give_slowly(7,he,he_gift).
-give_very_slowly(7,he,he_good_gift).
-be_in(7,i,need_of_immediate_help).
-be(7,he,wont).
-give(7,he,he_good_gift).
-give_very_slowly(7,he,he_gift).
-be_in(7,i,need).
-give(7,he,he_gift).
+aos(7,give_slowly,he,he_good_gift).
+aos(7,be_in,i,need_of_help).
+aos(7,give_slowly,he,he_gift).
+aos(7,give_very_slowly,he,he_good_gift).
+aos(7,be_in,i,need_of_immediate_help).
+aos(7,be,he,wont).
+aos(7,give,he,he_good_gift).
+aos(7,give_very_slowly,he,he_gift).
+aos(7,be_in,i,need).
+aos(7,give,he,he_gift).

@@ -15,10 +15,10 @@ ccomp(0,learn,hold).
 case(0,mortal,among).
 nmod:among(0,hold,mortal).
 % relations.
-determine(0,mercury,learn).
-be(0,he,hold).
-be_hold_among(0,he,mortal).
-once_determine(0,mercury,learn).
+aos(0,determine,mercury,learn).
+aos(0,be,he,hold).
+aos(0,be_hold_among,he,mortal).
+aos(0,once_determine,mercury,learn).
 %% for this purpose he assumed the character of a man and visited in this disguise a sculptor 's studio having looked at various statues he demanded the price of two figures of jupiter and juno.
 % dependencies.
 root(1,root,purpose).
@@ -58,10 +58,10 @@ cc(1,jupiter,and).
 nmod:of(1,figure,juno).
 conj:and(1,jupiter,juno).
 % relations.
-character_of(1,he,man).
-has(1,sculptor,studio).
-assume(1,he,character).
-assume(1,he,character_of_man).
+aos(1,character_of,he,man).
+aos(1,has,sculptor,studio).
+aos(1,assume,he,character).
+aos(1,assume,he,character_of_man).
 %% when the sum at which they were valued was named he pointed to a figure of himself saying to the sculptor.
 % dependencies.
 root(2,root,name).
@@ -87,10 +87,10 @@ case(2,sculptor,to).
 det(2,sculptor,the).
 nmod:to(2,say,sculptor).
 % relations.
-point_to(2,he,figure_himself_say).
-point_to(2,he,figure_himself_say_to_sculptor).
-be(2,they,value).
-say_to(2,himself,sculptor).
+aos(2,point_to,he,figure_himself_say).
+aos(2,point_to,he,figure_himself_say_to_sculptor).
+aos(2,be,they,value).
+aos(2,say_to,himself,sculptor).
 %% you will certainly want much more for this as it is the statue of the messenger of the gods and author of all your gain.
 % dependencies.
 root(3,root,want).
@@ -120,40 +120,40 @@ det:predet(3,gain,all).
 nmod:poss(3,gain,you).
 nmod:of(3,god,gain).
 % relations.
-will_want_much_more(3,you,statue_of_messenger_of_god_of_gain).
-be(3,it,statue).
-will_want_more(3,you,statue_of_messenger).
-will_want_more(3,you,statue).
-be_statue_of(3,it,messenger_of_god_of_gain).
-will_certainly_want(3,you,statue_of_messenger_of_god_of_you_gain).
-will_want_more(3,you,statue_of_messenger_of_god_of_gain).
-will_certainly_want_much_more(3,you,statue_of_messenger).
-be_statue_of(3,it,messenger_of_god_of_you_gain).
-will_want_much_more_for(3,you,this).
-will_certainly_want_much_more_for(3,you,this).
-will_want_much_more(3,you,statue_of_messenger_of_god_of_you_gain).
-will_certainly_want_much_more(3,you,statue_of_messenger_of_god_of_you_gain).
-will_certainly_want_more(3,you,statue).
-will_certainly_want_much_more(3,you,statue).
-will_certainly_want(3,you,statue_of_messenger).
-will_certainly_want_for(3,you,this).
-will_certainly_want(3,you,statue_of_messenger_of_god_of_gain).
-will_certainly_want_much_more(3,you,statue_of_messenger_of_god_of_gain).
-will_want(3,you,statue_of_messenger).
-will_certainly_want_more_for(3,you,this).
-will_certainly_want(3,you,statue).
-will_certainly_want_more(3,you,statue_of_messenger_of_god_of_gain).
-be_statue_of(3,it,messenger).
-will_want_much_more(3,you,statue_of_messenger).
-will_want_more(3,you,statue_of_messenger_of_god_of_you_gain).
-will_want(3,you,statue).
-will_want_much_more(3,you,statue).
-will_certainly_want_more(3,you,statue_of_messenger_of_god_of_you_gain).
-will_want_for(3,you,this).
-will_want_more_for(3,you,this).
-will_certainly_want_more(3,you,statue_of_messenger).
-will_want(3,you,statue_of_messenger_of_god_of_you_gain).
-will_want(3,you,statue_of_messenger_of_god_of_gain).
+aos(3,will_want_much_more,you,statue_of_messenger_of_god_of_gain).
+aos(3,be,it,statue).
+aos(3,will_want_more,you,statue_of_messenger).
+aos(3,will_want_more,you,statue).
+aos(3,be_statue_of,it,messenger_of_god_of_gain).
+aos(3,will_certainly_want,you,statue_of_messenger_of_god_of_you_gain).
+aos(3,will_want_more,you,statue_of_messenger_of_god_of_gain).
+aos(3,will_certainly_want_much_more,you,statue_of_messenger).
+aos(3,be_statue_of,it,messenger_of_god_of_you_gain).
+aos(3,will_want_much_more_for,you,this).
+aos(3,will_certainly_want_much_more_for,you,this).
+aos(3,will_want_much_more,you,statue_of_messenger_of_god_of_you_gain).
+aos(3,will_certainly_want_much_more,you,statue_of_messenger_of_god_of_you_gain).
+aos(3,will_certainly_want_more,you,statue).
+aos(3,will_certainly_want_much_more,you,statue).
+aos(3,will_certainly_want,you,statue_of_messenger).
+aos(3,will_certainly_want_for,you,this).
+aos(3,will_certainly_want,you,statue_of_messenger_of_god_of_gain).
+aos(3,will_certainly_want_much_more,you,statue_of_messenger_of_god_of_gain).
+aos(3,will_want,you,statue_of_messenger).
+aos(3,will_certainly_want_more_for,you,this).
+aos(3,will_certainly_want,you,statue).
+aos(3,will_certainly_want_more,you,statue_of_messenger_of_god_of_gain).
+aos(3,be_statue_of,it,messenger).
+aos(3,will_want_much_more,you,statue_of_messenger).
+aos(3,will_want_more,you,statue_of_messenger_of_god_of_you_gain).
+aos(3,will_want,you,statue).
+aos(3,will_want_much_more,you,statue).
+aos(3,will_certainly_want_more,you,statue_of_messenger_of_god_of_you_gain).
+aos(3,will_want_for,you,this).
+aos(3,will_want_more_for,you,this).
+aos(3,will_certainly_want_more,you,statue_of_messenger).
+aos(3,will_want,you,statue_of_messenger_of_god_of_you_gain).
+aos(3,will_want,you,statue_of_messenger_of_god_of_gain).
 %% the sculptor replied.
 % dependencies.
 root(4,root,reply).
@@ -177,4 +177,4 @@ case(5,bargain,into).
 det(5,bargain,the).
 nmod:into(5,fling,bargain).
 % relations.
-fling(5,i,you).
+aos(5,fling,i,you).

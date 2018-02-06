@@ -16,10 +16,10 @@ case(0,trunk,against).
 det(0,trunk,the).
 nmod:against(0,rub,trunk).
 % relations.
-rub(0,wild_boar,he_tusk).
-stand_under(0,boar,tree).
-rub(0,boar,he_tusk).
-stand_under(0,wild_boar,tree).
+aos(0,rub,wild_boar,he_tusk).
+aos(0,stand_under,boar,tree).
+aos(0,rub,boar,he_tusk).
+aos(0,stand_under,wild_boar,tree).
 %% a fox passing by asked him why he thus sharpened his teeth when there was no danger threatening from either huntsman or hound.
 % dependencies.
 root(1,root,ask).
@@ -47,8 +47,8 @@ cc(1,huntsman,or).
 nmod:from(1,threaten,hound).
 conj:or(1,huntsman,hound).
 % relations.
-by_ask(1,fox_passing,he).
-ask(1,fox_passing,he).
+aos(1,by_ask,fox_passing,he).
+aos(1,ask,fox_passing,he).
 %% he replied.
 % dependencies.
 root(2,root,reply).
@@ -61,8 +61,8 @@ nsubj(3,do,i).
 dobj(3,do,it).
 advmod(3,do,advisedly).
 % relations.
-do(3,i,it).
-do_advisedly(3,i,it).
+aos(3,do,i,it).
+aos(3,do_advisedly,i,it).
 %% for it would never do to have to sharpen my weapons just at the time i ought to be using them.
 % dependencies.
 root(4,root,do).

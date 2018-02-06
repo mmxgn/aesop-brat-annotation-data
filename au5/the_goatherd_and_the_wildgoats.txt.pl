@@ -31,13 +31,13 @@ case(0,night,for).
 det(0,night,the).
 nmod:for(0,shut,night).
 % relations.
-drive_he_flock_from(0,goatherd,they_pasture).
-mingle_among(0,wild_goat,they).
-mingle_among(0,goat,they).
-drive(0,goatherd,he_flock).
-shut_up(0,goat,they).
-drive_he_flock_from(0,goatherd,they_pasture_eventide).
-shut_up(0,wild_goat,they).
+aos(0,drive_he_flock_from,goatherd,they_pasture).
+aos(0,mingle_among,wild_goat,they).
+aos(0,mingle_among,goat,they).
+aos(0,drive,goatherd,he_flock).
+aos(0,shut_up,goat,they).
+aos(0,drive_he_flock_from,goatherd,they_pasture_eventide).
+aos(0,shut_up,wild_goat,they).
 %% the next day it snowed very hard so that he could not take the herd to their usual feeding places but was obliged to keep them in the fold.
 % dependencies.
 root(1,root,day).
@@ -110,15 +110,15 @@ nsubj(2,own,they).
 nmod:poss(2,own,he).
 xcomp(2,make,own).
 % relations.
-give(2,he,just_sufficient_food).
-feed(2,he,stranger).
-keep(2,he,they_alive).
-give(2,he,sufficient_food).
-stay_with(2,they,he).
-feed_more_abundantly(2,he,stranger).
-feed_abundantly(2,he,stranger).
-give(2,he,food).
-give_food(2,he,keep).
+aos(2,give,he,just_sufficient_food).
+aos(2,feed,he,stranger).
+aos(2,keep,he,they_alive).
+aos(2,give,he,sufficient_food).
+aos(2,stay_with,they,he).
+aos(2,feed_more_abundantly,he,stranger).
+aos(2,feed_abundantly,he,stranger).
+aos(2,give,he,food).
+aos(2,give_food,he,keep).
 %% when the thaw set in he led them all out to feed and the wild goats scampered away as fast as they could to the mountains.
 % dependencies.
 root(3,root,set).
@@ -149,28 +149,28 @@ case(3,mountain,to).
 det(3,mountain,the).
 nmod:to(3,could,mountain).
 % relations.
-scamper_fast(3,wild_goat,they_could).
-scamper_away_as_fast(3,goat,they_could).
-scamper(3,goat,they_could_to_mountain).
-scamper_fast(3,wild_goat,they_could_to_mountain).
-scamper_as_fast(3,goat,they_could_to_mountain).
-scamper_as_fast(3,goat,they_could).
-scamper_away_fast(3,goat,they_could_to_mountain).
-scamper_away_as_fast(3,wild_goat,they_could_to_mountain).
-scamper(3,wild_goat,they_could_to_mountain).
-lead(3,he,they).
-scamper_away_fast(3,wild_goat,they_could).
-scamper_as_fast(3,wild_goat,they_could).
-scamper_away_fast(3,goat,they_could).
-scamper_away_as_fast(3,goat,they_could_to_mountain).
-scamper_fast(3,goat,they_could_to_mountain).
-scamper_as_fast(3,wild_goat,they_could_to_mountain).
-scamper(3,goat,they_could).
-scamper(3,wild_goat,they_could).
-scamper_fast(3,goat,they_could).
-lead_out(3,he,they).
-scamper_away_fast(3,wild_goat,they_could_to_mountain).
-scamper_away_as_fast(3,wild_goat,they_could).
+aos(3,scamper_fast,wild_goat,they_could).
+aos(3,scamper_away_as_fast,goat,they_could).
+aos(3,scamper,goat,they_could_to_mountain).
+aos(3,scamper_fast,wild_goat,they_could_to_mountain).
+aos(3,scamper_as_fast,goat,they_could_to_mountain).
+aos(3,scamper_as_fast,goat,they_could).
+aos(3,scamper_away_fast,goat,they_could_to_mountain).
+aos(3,scamper_away_as_fast,wild_goat,they_could_to_mountain).
+aos(3,scamper,wild_goat,they_could_to_mountain).
+aos(3,lead,he,they).
+aos(3,scamper_away_fast,wild_goat,they_could).
+aos(3,scamper_as_fast,wild_goat,they_could).
+aos(3,scamper_away_fast,goat,they_could).
+aos(3,scamper_away_as_fast,goat,they_could_to_mountain).
+aos(3,scamper_fast,goat,they_could_to_mountain).
+aos(3,scamper_as_fast,wild_goat,they_could_to_mountain).
+aos(3,scamper,goat,they_could).
+aos(3,scamper,wild_goat,they_could).
+aos(3,scamper_fast,goat,they_could).
+aos(3,lead_out,he,they).
+aos(3,scamper_away_fast,wild_goat,they_could_to_mountain).
+aos(3,scamper_away_as_fast,wild_goat,they_could).
 %% the goatherd scolded them for their ingratitude in leaving him when during the storm he had taken more care of them than of his own herd.
 % dependencies.
 root(4,root,scold).
@@ -200,19 +200,19 @@ nmod:poss(4,herd,he).
 amod(4,herd,own).
 nmod:of(4,take,herd).
 % relations.
-leave(4,goatherd,he).
-have_take(4,he,care).
-have_take_more(4,he,care_of_they).
-have_take_more_care_than(4,he,than_he_own_herd).
-have_take_more_care_during(4,he,storm).
-have_take(4,he,care_of_they).
-have_take_care_than(4,he,than_he_own_herd).
-have_take_more(4,he,care).
-have_take_more_care_than(4,he,than_he_herd).
-have_take_care_during(4,he,storm).
-scold(4,goatherd,they).
-care_of(4,he,they).
-have_take_care_than(4,he,than_he_herd).
+aos(4,leave,goatherd,he).
+aos(4,have_take,he,care).
+aos(4,have_take_more,he,care_of_they).
+aos(4,have_take_more_care_than,he,than_he_own_herd).
+aos(4,have_take_more_care_during,he,storm).
+aos(4,have_take,he,care_of_they).
+aos(4,have_take_care_than,he,than_he_own_herd).
+aos(4,have_take_more,he,care).
+aos(4,have_take_more_care_than,he,than_he_herd).
+aos(4,have_take_care_during,he,storm).
+aos(4,scold,goatherd,they).
+aos(4,care_of,he,they).
+aos(4,have_take_care_than,he,than_he_herd).
 %% one of them turning about said to him.
 % dependencies.
 root(5,root,say).
@@ -237,10 +237,10 @@ cop(6,cautious,be).
 advmod(6,cautious,so).
 acl:relcl(6,reason,cautious).
 % relations.
-be(6,we,why_cautious).
-be(6,we,why_so_cautious).
-be(6,we,cautious).
-be(6,we,so_cautious).
+aos(6,be,we,why_cautious).
+aos(6,be,we,why_so_cautious).
+aos(6,be,we,cautious).
+aos(6,be,we,so_cautious).
 %% for if you yesterday treated us better than the goats you have had so long it is plain also that if others came after us you would in the same manner prefer them to ourselves.
 % dependencies.
 root(7,root,have).
@@ -279,18 +279,18 @@ dobj(7,prefer,they).
 case(7,ourselves,to).
 nmod:to(7,prefer,ourselves).
 % relations.
-treat_than(7,you,goat).
-treat_at_time(7,you,yesterday).
-have_have(7,you,you_yesterday_treat_than_goat).
-be(7,it,plain_also).
-prefer(7,same_manner,they).
-be(7,it,long_plain).
-have_have(7,you,you_yesterday_treat).
-be(7,it,long_plain_also).
-be(7,it,plain).
-be(7,it,so_long_plain).
-be(7,it,so_long_plain_also).
-have_have(7,you,you_treat_than_goat).
-have_have(7,you,you_treat).
-prefer(7,manner,they).
-treat(7,you,we_better).
+aos(7,treat_than,you,goat).
+aos(7,treat_at_time,you,yesterday).
+aos(7,have_have,you,you_yesterday_treat_than_goat).
+aos(7,be,it,plain_also).
+aos(7,prefer,same_manner,they).
+aos(7,be,it,long_plain).
+aos(7,have_have,you,you_yesterday_treat).
+aos(7,be,it,long_plain_also).
+aos(7,be,it,plain).
+aos(7,be,it,so_long_plain).
+aos(7,be,it,so_long_plain_also).
+aos(7,have_have,you,you_treat_than_goat).
+aos(7,have_have,you,you_treat).
+aos(7,prefer,manner,they).
+aos(7,treat,you,we_better).

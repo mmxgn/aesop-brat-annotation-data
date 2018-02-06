@@ -28,10 +28,10 @@ mark(0,could,as).
 nsubj(0,could,they).
 advcl:as(0,break,could).
 % relations.
-break_into(0,thief,house).
-find(0,thief,nothing).
-get_off_as(0,they,fast).
-break(0,thief,they_could).
+aos(0,break_into,thief,house).
+aos(0,find,thief,nothing).
+aos(0,get_off_as,they,fast).
+aos(0,break,thief,they_could).
 %% upon arriving at home they prepared to kill the cock who thus pleaded for his life.
 % dependencies.
 root(1,root,arrive).
@@ -68,10 +68,10 @@ advmod(3,serviceable,very).
 case(3,man,to).
 nmod:to(3,serviceable,man).
 % relations.
-be_serviceable_to(3,i,man).
-be(3,i,serviceable).
-be(3,i,very_serviceable).
-be_very_serviceable_to(3,i,man).
+aos(3,be_serviceable_to,i,man).
+aos(3,be,i,serviceable).
+aos(3,be,i,very_serviceable).
+aos(3,be_very_serviceable_to,i,man).
 %% i wake them up in the night to their work.
 % dependencies.
 root(4,root,wake).
@@ -85,7 +85,7 @@ case(4,work,to).
 nmod:poss(4,work,they).
 nmod:to(4,wake,work).
 % relations.
-wake_up(4,i,they).
+aos(4,wake_up,i,they).
 %% that is the very reason why we must the more kill you.
 % dependencies.
 root(5,root,reason).
@@ -101,8 +101,8 @@ advmod(5,kill,more).
 acl:relcl(5,reason,kill).
 dobj(5,kill,you).
 % relations.
-must_kill(5,we,you).
-must_more_kill(5,we,you).
+aos(5,must_kill,we,you).
+aos(5,must_more_kill,we,you).
 %% they replied.
 % dependencies.
 root(6,root,reply).
@@ -125,11 +125,11 @@ case(7,business,to).
 nmod:poss(7,business,we).
 nmod:to(7,put,business).
 % relations.
-put(7,you,end).
-entirely_put(7,you,end).
-entirely_put_end_to(7,you,we_business).
-wake(7,you,you_neighbor).
-put_end_to(7,you,we_business).
+aos(7,put,you,end).
+aos(7,entirely_put,you,end).
+aos(7,entirely_put_end_to,you,we_business).
+aos(7,wake,you,you_neighbor).
+aos(7,put_end_to,you,we_business).
 %% intentions.
 % dependencies.
 root(8,root,intention).

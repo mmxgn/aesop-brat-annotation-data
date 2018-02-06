@@ -26,20 +26,20 @@ acl(0,cave,gasp).
 case(0,breath,for).
 nmod:for(0,gasp,breath).
 % relations.
-lay_at(0,lion,mouth_of_he_cave_gasp_for_breath).
-have_come_to(0,lion,end).
-lay_death_at(0,lion,mouth).
-lay_death_at(0,lion,mouth_of_he_cave_gasp).
-lay(0,lion,sick_death).
-lay(0,lion,sick_unto_death).
-lay_at(0,lion,mouth_of_he_cave).
-lay_death_at(0,lion,mouth_of_he_cave_gasp_for_breath).
-lay(0,lion,death).
-lay(0,lion,unto_death).
-lay_at(0,lion,mouth).
-lay_at(0,lion,mouth_of_he_cave_gasp).
-lay_death_at(0,lion,mouth_of_he_cave).
-have_come_to(0,lion,end_of_he_day).
+aos(0,lay_at,lion,mouth_of_he_cave_gasp_for_breath).
+aos(0,have_come_to,lion,end).
+aos(0,lay_death_at,lion,mouth).
+aos(0,lay_death_at,lion,mouth_of_he_cave_gasp).
+aos(0,lay,lion,sick_death).
+aos(0,lay,lion,sick_unto_death).
+aos(0,lay_at,lion,mouth_of_he_cave).
+aos(0,lay_death_at,lion,mouth_of_he_cave_gasp_for_breath).
+aos(0,lay,lion,death).
+aos(0,lay,lion,unto_death).
+aos(0,lay_at,lion,mouth).
+aos(0,lay_at,lion,mouth_of_he_cave_gasp).
+aos(0,lay_death_at,lion,mouth_of_he_cave).
+aos(0,have_come_to,lion,end_of_he_day).
 %% the animals his subjects came round him and drew nearer as he grew more and more helpless.
 % dependencies.
 root(1,root,animal).
@@ -63,10 +63,10 @@ conj:and(1,more,more).
 advmod(1,helpless,more).
 xcomp(1,grow,helpless).
 % relations.
-draw(1,he_subject,he_grow).
-grow(1,he,more_helpless).
-grow(1,he,helpless).
-come(1,he_subject,round_he).
+aos(1,draw,he_subject,he_grow).
+aos(1,grow,he,more_helpless).
+aos(1,grow,he,helpless).
+aos(1,come,he_subject,round_he).
 %% when they saw him on the point of death they thought to themselves.
 % dependencies.
 root(2,root,see).
@@ -83,8 +83,8 @@ acl:relcl(2,death,think).
 case(2,themselves,to).
 nmod:to(2,think,themselves).
 % relations.
-see(2,they,he).
-think_to(2,they,themselves).
+aos(2,see,they,he).
+aos(2,think_to,they,themselves).
 %% now is the time to pay off old grudges.
 % dependencies.
 root(3,root,be).
@@ -113,8 +113,8 @@ case(4,tusk,with).
 nmod:poss(4,tusk,he).
 nmod:with(4,drive,tusk).
 % relations.
-drive_with(4,boar,he_tusk).
-drive_at(4,boar,he).
+aos(4,drive_with,boar,he_tusk).
+aos(4,drive_at,boar,he).
 %% then a bull gored him with his horns.
 % dependencies.
 root(5,root,bull).
@@ -161,7 +161,7 @@ case(6,face,into).
 nmod:poss(6,face,he).
 nmod:into(6,kick,face).
 % relations.
-turn(6,he_heel,he_tail).
+aos(6,turn,he_heel,he_tail).
 %% this is a double death.
 % dependencies.
 root(7,root,death).
@@ -170,7 +170,7 @@ cop(7,death,be).
 det(7,death,a).
 amod(7,death,double).
 % relations.
-be(7,this,double).
+aos(7,be,this,double).
 %% growled the lion.
 % dependencies.
 root(8,root,growl).

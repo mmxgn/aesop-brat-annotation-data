@@ -41,7 +41,7 @@ case(1,bird,of).
 det(1,bird,all).
 nmod:of(1,enemy,bird).
 % relations.
-refuse(1,weasel,say).
+aos(1,refuse,weasel,say).
 %% the bat assured him that he was not a bird but a mouse and thus was set free.
 % dependencies.
 root(2,root,assure).

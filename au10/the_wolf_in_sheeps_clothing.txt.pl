@@ -40,9 +40,9 @@ case(1,costume,by).
 nmod:poss(1,costume,he).
 nmod:by(1,deceive,costume).
 % relations.
-pasture_with(1,he,flock).
-deceive(1,he,shepherd).
-deceive_shepherd_by(1,he,he_costume).
+aos(1,pasture_with,he,flock).
+aos(1,deceive,he,shepherd).
+aos(1,deceive_shepherd_by,he,he_costume).
 %% in the evening he was shut up by the shepherd in the fold.
 % dependencies.
 root(2,root,shut).
@@ -59,10 +59,10 @@ case(2,fold,in).
 det(2,fold,the).
 nmod:in(2,shepherd,fold).
 % relations.
-be_shut_up_by(2,he,shepherd_in_fold).
-be_shut_up_in(2,he,evening).
-be_shut_up_by(2,he,shepherd).
-is_in(2,shepherd,fold).
+aos(2,be_shut_up_by,he,shepherd_in_fold).
+aos(2,be_shut_up_in,he,evening).
+aos(2,be_shut_up_by,he,shepherd).
+aos(2,is_in,shepherd,fold).
 %% the gate was closed and the entrance made thoroughly secure.
 % dependencies.
 root(3,root,close).
@@ -76,9 +76,9 @@ conj:and(3,close,make).
 advmod(3,secure,thoroughly).
 xcomp(3,make,secure).
 % relations.
-be(3,gate,close).
-make(3,entrance,thoroughly_secure).
-make(3,entrance,secure).
+aos(3,be,gate,close).
+aos(3,make,entrance,thoroughly_secure).
+aos(3,make,entrance,secure).
 %% but the shepherd returning to the fold during the night to obtain meat for the next day mistakenly caught up the wolf instead of a sheep and killed him instantly.
 % dependencies.
 root(4,root,shepherd).
@@ -114,8 +114,8 @@ conj:and(4,catch,kill).
 dobj(4,kill,he).
 advmod(4,kill,instantly).
 % relations.
-mistakenly_catch_up(4,return,wolf).
-return_to(4,wolf,fold).
-kill(4,return,he).
-catch_up(4,return,wolf).
-kill_instantly(4,return,he).
+aos(4,mistakenly_catch_up,return,wolf).
+aos(4,return_to,wolf,fold).
+aos(4,kill,return,he).
+aos(4,catch_up,return,wolf).
+aos(4,kill_instantly,return,he).

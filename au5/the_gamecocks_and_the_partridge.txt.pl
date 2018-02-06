@@ -9,9 +9,9 @@ case(0,poultry-yard,in).
 nmod:poss(0,poultry-yard,he).
 nmod:in(0,gamecock,poultry-yard).
 % relations.
-have(0,man,two_gamecock).
-is_in(0,two_gamecock,he_poultry-yard).
-have(0,man,two_gamecock_in_he_poultry-yard).
+aos(0,have,man,two_gamecock).
+aos(0,is_in,two_gamecock,he_poultry-yard).
+aos(0,have,man,two_gamecock_in_he_poultry-yard).
 %% one day by chance he found a tame partridge for sale.
 % dependencies.
 root(1,root,day).
@@ -26,9 +26,9 @@ dobj(1,find,partridge).
 case(1,sale,for).
 nmod:for(1,find,sale).
 % relations.
-find(1,he,partridge).
-find(1,he,tame_partridge).
-find_partridge_for(1,he,sale).
+aos(1,find,he,partridge).
+aos(1,find,he,tame_partridge).
+aos(1,find_partridge_for,he,sale).
 %% he purchased it and brought it home to be reared with his gamecocks.
 % dependencies.
 root(2,root,purchase).
@@ -46,9 +46,9 @@ case(2,gamecock,with).
 nmod:poss(2,gamecock,he).
 nmod:with(2,rear,gamecock).
 % relations.
-purchase(2,he,it).
-bring_home(2,he,it).
-bring(2,he,it).
+aos(2,purchase,he,it).
+aos(2,bring_home,he,it).
+aos(2,bring,he,it).
 %% when the partridge was put into the poultry-yard they struck at it and followed it about so that the partridge became grievously troubled and supposed that he was thus evilly treated because he was a stranger.
 % dependencies.
 root(3,root,put).
@@ -91,13 +91,13 @@ cop(3,stranger,be).
 det(3,stranger,a).
 advcl:because(3,treat,stranger).
 % relations.
-strike_at(3,they,it).
-become(3,partridge,grievously_trouble).
-follow(3,they,it).
-become(3,partridge,trouble).
-follow_so(3,they,it).
-be(3,partridge,put).
-be(3,partridge,when_put).
+aos(3,strike_at,they,it).
+aos(3,become,partridge,grievously_trouble).
+aos(3,follow,they,it).
+aos(3,become,partridge,trouble).
+aos(3,follow_so,they,it).
+aos(3,be,partridge,put).
+aos(3,be,partridge,when_put).
 %% not long afterwards he saw the cocks fighting together and not separating before one had well beaten the other.
 % dependencies.
 root(4,root,long).
@@ -121,7 +121,7 @@ ccomp(4,see,beat).
 det(4,other,the).
 dobj(4,beat,other).
 % relations.
-well_beat(4,cock,other).
+aos(4,well_beat,cock,other).
 %% he then said to himself.
 % dependencies.
 root(5,root,say).
@@ -130,7 +130,7 @@ advmod(5,say,then).
 case(5,himself,to).
 nmod:to(5,say,himself).
 % relations.
-say_to(5,he,himself).
+aos(5,say_to,he,himself).
 %% i shall no longer distress myself at being struck at by these gamecocks when i see that they can not even refrain from quarreling with each other.
 % dependencies.
 root(6,root,shall).
@@ -161,6 +161,6 @@ case(6,other,with).
 det(6,other,each).
 nmod:with(6,quarrel,other).
 % relations.
-be_strike_at(6,myself,at_gamecock).
-be(6,myself,strike).
-quarrel_with(6,they,other).
+aos(6,be_strike_at,myself,at_gamecock).
+aos(6,be,myself,strike).
+aos(6,quarrel_with,they,other).

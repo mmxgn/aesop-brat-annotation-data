@@ -15,8 +15,8 @@ nmod:poss(0,night,winter).
 case(0,winter,'s).
 nmod:in(0,lose,night).
 % relations.
-in(0,bitter_winter,night).
-have_lose(0,man,he_way).
+aos(0,in,bitter_winter,night).
+aos(0,have_lose,man,he_way).
 %% as he was roaming about a satyr came up to him and finding that he had lost his way promised to give him a lodging for the night and guide him out of the forest in the morning.
 % dependencies.
 root(1,root,roam).
@@ -61,11 +61,11 @@ case(1,morning,in).
 det(1,morning,the).
 nmod:in(1,forest,morning).
 % relations.
-be_roam(1,he,he).
-give(1,he_way,he).
-give(1,he_way,lodging_for_night).
-give(1,he_way,lodging).
-is_in(1,forest,morning).
+aos(1,be_roam,he,he).
+aos(1,give,he_way,he).
+aos(1,give,he_way,lodging_for_night).
+aos(1,give,he_way,lodging).
+aos(1,is_in,forest,morning).
 %% as he went along to the satyr 's cell the man raised both his hands to his mouth and kept on blowing at them.
 % dependencies.
 root(2,root,go).
@@ -95,11 +95,11 @@ advcl:on(2,keep,blow).
 case(2,they,at).
 nmod:at(2,blow,they).
 % relations.
-keep(2,man,blow_at_they).
-keep(2,man,blow).
-raise(2,man,he_hand).
-to(2,satyr,cell).
-raise_both(2,man,he_hand).
+aos(2,keep,man,blow_at_they).
+aos(2,keep,man,blow).
+aos(2,raise,man,he_hand).
+aos(2,to,satyr,cell).
+aos(2,raise_both,man,he_hand).
 %% what do you do that for.
 % dependencies.
 root(3,root,do).
@@ -125,8 +125,8 @@ case(5,cold,with).
 det(5,cold,the).
 nmod:with(5,numb,cold).
 % relations.
-be(5,my_hand,numb).
-be_numb_with(5,my_hand,cold).
+aos(5,be,my_hand,numb).
+aos(5,be_numb_with,my_hand,cold).
 %% said the man.
 % dependencies.
 root(6,root,say).
@@ -166,15 +166,15 @@ nmod:of(8,dish,porridge).
 case(8,he,before).
 nmod:before(8,put,he).
 % relations.
-arrive_after(8,they,this).
-put(8,they,smoking_dish_of_porridge).
-soon_put_smoking_dish_before(8,they,he).
-soon_put(8,they,smoking_dish_of_porridge).
-put(8,they,smoking_dish).
-at(8,satyr,home).
-arrive_at(8,they,satyr_'s_home).
-put_smoking_dish_before(8,they,he).
-soon_put(8,they,smoking_dish).
+aos(8,arrive_after,they,this).
+aos(8,put,they,smoking_dish_of_porridge).
+aos(8,soon_put_smoking_dish_before,they,he).
+aos(8,soon_put,they,smoking_dish_of_porridge).
+aos(8,put,they,smoking_dish).
+aos(8,at,satyr,home).
+aos(8,arrive_at,they,satyr_'s_home).
+aos(8,put_smoking_dish_before,they,he).
+aos(8,soon_put,they,smoking_dish).
 %% but when the man raised his spoon to his mouth he began blowing upon it.
 % dependencies.
 root(9,root,raise).
@@ -193,10 +193,10 @@ xcomp(9,begin,blow).
 case(9,it,upon).
 nmod:upon(9,blow,it).
 % relations.
-blow_upon(9,he,it).
-begin(9,he,blow).
-begin(9,he,blow_upon_it).
-raise(9,man,he_spoon).
+aos(9,blow_upon,he,it).
+aos(9,begin,he,blow).
+aos(9,begin,he,blow_upon_it).
+aos(9,raise,man,he_spoon).
 %% and what do you do that for.
 % dependencies.
 root(10,root,what).
@@ -228,9 +228,9 @@ aux(12,cool,will).
 conj:and(12,hot,cool).
 dobj(12,cool,it).
 % relations.
-be(12,porridge,too_hot).
-will_cool(12,my_breath,it).
-be(12,porridge,hot).
+aos(12,be,porridge,too_hot).
+aos(12,will_cool,my_breath,it).
+aos(12,be,porridge,hot).
 %% out you go.
 % dependencies.
 root(13,root,go).
@@ -268,5 +268,5 @@ det(15,breath,the).
 amod(15,breath,same).
 nmod:with(15,blow,breath).
 % relations.
-will_have(15,i,nought_do).
-will_have(15,i,do).
+aos(15,will_have,i,nought_do).
+aos(15,will_have,i,do).

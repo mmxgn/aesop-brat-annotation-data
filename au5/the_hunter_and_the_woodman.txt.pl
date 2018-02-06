@@ -42,13 +42,13 @@ nmod:poss(1,lair,he).
 nsubj(1,be,lair).
 ccomp(1,know,be).
 % relations.
-have_see(1,he,mark_of_footstep).
-have_see(1,he,mark_of_he_footstep).
-ask_man_in(1,he,felling_oak).
-ask(1,he,man).
-ask_man_in(1,he,oak).
-mark_of(1,he,he_footstep).
-mark_of(1,he,footstep).
+aos(1,have_see,he,mark_of_footstep).
+aos(1,have_see,he,mark_of_he_footstep).
+aos(1,ask_man_in,he,felling_oak).
+aos(1,ask,he,man).
+aos(1,ask_man_in,he,oak).
+aos(1,mark_of,he,he_footstep).
+aos(1,mark_of,he,footstep).
 %% i will.
 % dependencies.
 root(2,root,will).
@@ -70,8 +70,8 @@ det(4,lion,the).
 xcomp(4,show,lion).
 nsubj(4,show,himself).
 % relations.
-show(4,himself,you_lion).
-once_show(4,himself,you_lion).
+aos(4,show,himself,you_lion).
+aos(4,once_show,himself,you_lion).
 %% the hunter turning very pale and chattering with his teeth from fear replied.
 % dependencies.
 root(5,root,reply).
@@ -120,6 +120,6 @@ det(8,lion,the).
 nmod:of(8,search,lion).
 nsubj(8,search,himself).
 % relations.
-be(8,it,he_track_only_i).
-be(8,it,he_track_i).
-be(8,it,he_track).
+aos(8,be,it,he_track_only_i).
+aos(8,be,it,he_track_i).
+aos(8,be,it,he_track).

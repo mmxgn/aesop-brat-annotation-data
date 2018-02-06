@@ -29,9 +29,9 @@ acl:relcl(0,one,deem).
 det(0,handsomest,the).
 dobj(0,deem,handsomest).
 % relations.
-promise(0,jupiter,reward).
-promise(0,jupiter,royal_reward).
-issue_proclamation_to(0,jupiter,beast_of_forest).
+aos(0,promise,jupiter,reward).
+aos(0,promise,jupiter,royal_reward).
+aos(0,issue_proclamation_to,jupiter,beast_of_forest).
 %% the monkey came with the rest and presented with all a mother 's tenderness a flat-nosed hairless ill-featured young monkey as a candidate for the promised reward.
 % dependencies.
 root(1,root,come).
@@ -63,12 +63,12 @@ det(1,reward,the).
 amod(1,reward,promise).
 nmod:for(1,candidate,reward).
 % relations.
-present_with(1,monkey,mother_'s_tenderness).
-present_as(1,monkey,candidate).
-with(1,mother,tenderness).
-present_as(1,monkey,candidate_for_reward).
-present_as(1,monkey,candidate_for_promise_reward).
-come_with(1,monkey,rest).
+aos(1,present_with,monkey,mother_'s_tenderness).
+aos(1,present_as,monkey,candidate).
+aos(1,with,mother,tenderness).
+aos(1,present_as,monkey,candidate_for_reward).
+aos(1,present_as,monkey,candidate_for_promise_reward).
+aos(1,come_with,monkey,rest).
 %% a general laugh saluted her on the presentation of her son.
 % dependencies.
 root(2,root,salute).
@@ -83,8 +83,8 @@ case(2,son,of).
 nmod:poss(2,son,she).
 nmod:of(2,presentation,son).
 % relations.
-salute(2,general_laugh,she).
-salute(2,laugh,she).
+aos(2,salute,general_laugh,she).
+aos(2,salute,laugh,she).
 %% she resolutely said.
 % dependencies.
 root(3,root,say).
@@ -133,4 +133,4 @@ conj:and(4,handsomest,beautiful).
 case(4,all,of).
 nmod:of(4,beautiful,all).
 % relations.
-be(4,he,he_mother).
+aos(4,be,he,he_mother).

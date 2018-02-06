@@ -18,10 +18,10 @@ case(0,deep,with).
 det(0,deep,the).
 nmod:with(0,sleep,deep).
 % relations.
-sleep_after(0,man,he_buffeting).
-sleep_after(0,shipwrecked_man,he_buffeting).
-sleep_with(0,shipwrecked_man,deep).
-sleep_with(0,man,deep).
+aos(0,sleep_after,man,he_buffeting).
+aos(0,sleep_after,shipwrecked_man,he_buffeting).
+aos(0,sleep_with,shipwrecked_man,deep).
+aos(0,sleep_with,man,deep).
 %% after a while he awoke and looking upon the sea loaded it with reproaches.
 % dependencies.
 root(1,root,a).
@@ -40,8 +40,8 @@ dobj(1,load,it).
 case(1,reproach,with).
 nmod:with(1,load,reproach).
 % relations.
-look_upon(1,it,sea).
-load(1,look,it).
+aos(1,look_upon,it,sea).
+aos(1,load,look,it).
 %% he argued that it enticed men with the calmness of its looks but when it had induced them to plow its waters it grew rough and destroyed them.
 % dependencies.
 root(2,root,argue).
@@ -77,12 +77,12 @@ acl:relcl(2,water,destroy).
 conj:and(2,grow,destroy).
 dobj(2,destroy,they).
 % relations.
-entice(2,it,man).
-entice_man_with(2,it,calmness_of_its_look).
-have_induce(2,it,they).
-entice_man_with(2,it,calmness).
-grow(2,it,rough).
-destroy(2,it,they).
+aos(2,entice,it,man).
+aos(2,entice_man_with,it,calmness_of_its_look).
+aos(2,have_induce,it,they).
+aos(2,entice_man_with,it,calmness).
+aos(2,grow,it,rough).
+aos(2,destroy,it,they).
 %% the sea assuming the form of a woman replied to him.
 % dependencies.
 root(3,root,reply).
@@ -97,8 +97,8 @@ nmod:of(3,form,woman).
 case(3,he,to).
 nmod:to(3,reply,he).
 % relations.
-form_of(3,assume,woman).
-reply_to(3,sea,he).
+aos(3,form_of,assume,woman).
+aos(3,reply_to,sea,he).
 %% blame not me my good sir but the winds for i am by my own nature as calm and firm even as this earth.
 % dependencies.
 root(4,root,nature).
@@ -147,5 +147,5 @@ dobj(5,lash,I).
 case(5,fury,into).
 nmod:into(5,lash,fury).
 % relations.
-create(5,I,wave).
-lash(5,I,I).
+aos(5,create,I,wave).
+aos(5,lash,I,I).

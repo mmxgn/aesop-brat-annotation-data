@@ -24,12 +24,12 @@ case(0,sun,than).
 det(0,sun,the).
 nmod:than(0,give,sun).
 % relations.
-soak_with(0,lamp,much_oil).
-give(0,it,light).
-give(0,it,more_light).
-give_than(0,it,sun).
-soak_with(0,lamp,oil).
-soak_with(0,lamp,too_much_oil).
+aos(0,soak_with,lamp,much_oil).
+aos(0,give,it,light).
+aos(0,give,it,more_light).
+aos(0,give_than,it,sun).
+aos(0,soak_with,lamp,oil).
+aos(0,soak_with,lamp,too_much_oil).
 %% then a sudden puff of wind arose and the lamp was immediately extinguished.
 % dependencies.
 root(1,root,puff).
@@ -47,8 +47,8 @@ advmod(1,extinguish,immediately).
 acl:of(1,puff,extinguish).
 conj:and(1,arise,extinguish).
 % relations.
-be(1,lamp,immediately_extinguish).
-be(1,lamp,extinguish).
+aos(1,be,lamp,immediately_extinguish).
+aos(1,be,lamp,extinguish).
 %% its owner lit it again and said.
 % dependencies.
 root(2,root,light).
@@ -60,8 +60,8 @@ advmod(2,light,again).
 cc(2,light,and).
 conj:and(2,light,say).
 % relations.
-light_again(2,its_owner,it).
-light(2,its_owner,it).
+aos(2,light_again,its_owner,it).
+aos(2,light,its_owner,it).
 %% boast no more but henceforth be content to give thy light in silence.
 % dependencies.
 root(3,root,boast).

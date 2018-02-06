@@ -31,21 +31,21 @@ dobj(0,give,himself).
 aux(0,give,have).
 nsubj(0,give,it).
 % relations.
-same_attention_to(0,himself,he_farm_as_he).
-attention_to(0,he_son,he_farm_as_he).
-give(0,he_son,same_attention).
-attention_to(0,he_son,he_farm).
-same_attention_to(0,himself,he_farm).
-give(0,he_son,same_attention_to_he_farm_as_he).
-same_attention_to(0,he_son,he_farm).
-give(0,he_son,same_attention_to_he_farm).
-give(0,he_son,attention_to_he_farm_as_he).
-same_attention_to(0,he_son,he_farm_as_he).
-attention_to(0,himself,he_farm).
-attention_to(0,himself,he_farm_as_he).
-give(0,he_son,attention).
-give(0,he_son,himself).
-give(0,he_son,attention_to_he_farm).
+aos(0,same_attention_to,himself,he_farm_as_he).
+aos(0,attention_to,he_son,he_farm_as_he).
+aos(0,give,he_son,same_attention).
+aos(0,attention_to,he_son,he_farm).
+aos(0,same_attention_to,himself,he_farm).
+aos(0,give,he_son,same_attention_to_he_farm_as_he).
+aos(0,same_attention_to,he_son,he_farm).
+aos(0,give,he_son,same_attention_to_he_farm).
+aos(0,give,he_son,attention_to_he_farm_as_he).
+aos(0,same_attention_to,he_son,he_farm_as_he).
+aos(0,attention_to,himself,he_farm).
+aos(0,attention_to,himself,he_farm_as_he).
+aos(0,give,he_son,attention).
+aos(0,give,he_son,himself).
+aos(0,give,he_son,attention_to_he_farm).
 %% he called them to his bedside and said.
 % dependencies.
 root(1,root,call).
@@ -58,8 +58,8 @@ nmod:to(1,call,bedside).
 cc(1,call,and).
 conj:and(1,call,say).
 % relations.
-call_to(1,he,he_bedside).
-call(1,he,they).
+aos(1,call_to,he,he_bedside).
+aos(1,call,he,they).
 %% my sons there is a great treasure hid in one of my vineyards.
 % dependencies.
 root(2,root,hide).
@@ -76,8 +76,8 @@ case(2,vineyard,of).
 nmod:poss(2,vineyard,my).
 nmod:of(2,one,vineyard).
 % relations.
-hide_in(2,my_son,one_of_my_vineyard).
-hide_in(2,my_son,one_my_vineyard).
+aos(2,hide_in,my_son,one_of_my_vineyard).
+aos(2,hide_in,my_son,one_my_vineyard).
 %% the sons after his death took their spades and mattocks and carefully dug over every portion of their land.
 % dependencies.
 root(3,root,take).
@@ -102,12 +102,12 @@ case(3,land,of).
 nmod:poss(3,land,they).
 nmod:of(3,portion,land).
 % relations.
-dig_over(3,son,portion_of_land).
-take(3,son,mattock).
-carefully_dig_over(3,son,portion_of_they_land).
-take(3,son,they_spade).
-carefully_dig_over(3,son,portion_of_land).
-dig_over(3,son,portion_of_they_land).
+aos(3,dig_over,son,portion_of_land).
+aos(3,take,son,mattock).
+aos(3,carefully_dig_over,son,portion_of_they_land).
+aos(3,take,son,they_spade).
+aos(3,carefully_dig_over,son,portion_of_land).
+aos(3,dig_over,son,portion_of_they_land).
 %% they found no treasure but the vines repaid their labor by an extraordinary and superabundant crop.
 % dependencies.
 root(4,root,find).

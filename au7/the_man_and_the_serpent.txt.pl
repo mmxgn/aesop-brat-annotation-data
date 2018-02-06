@@ -23,8 +23,8 @@ mwe(0,so,that).
 nsubj(0,die,he).
 advcl:so_that(0,bite,die).
 % relations.
-upon(0,countryman,son_by_accident_trod).
-has(0,serpent,tail).
+aos(0,upon,countryman,son_by_accident_trod).
+aos(0,has,serpent,tail).
 %% the father in a rage got his axe and pursuing the serpent cut off part of its tail.
 % dependencies.
 root(1,root,cut).
@@ -47,10 +47,10 @@ case(1,tail,of).
 nmod:poss(1,tail,its).
 nmod:of(1,part,tail).
 % relations.
-cut_off(1,father,part).
-cut_off(1,father,part_of_its_tail).
-pursue(1,he_axe,serpent).
-is_in(1,father,rage).
+aos(1,cut_off,father,part).
+aos(1,cut_off,father,part_of_its_tail).
+aos(1,pursue,he_axe,serpent).
+aos(1,is_in,father,rage).
 %% so the serpent in revenge began stinging several of the farmer 's cattle and caused him severe loss.
 % dependencies.
 root(2,root,begin).
@@ -73,10 +73,10 @@ dep(2,loss,he).
 amod(2,loss,severe).
 dobj(2,cause,loss).
 % relations.
-cause(2,serpent,loss).
-cause(2,serpent,severe_loss).
-has(2,farmer,cattle).
-is_in(2,serpent,revenge).
+aos(2,cause,serpent,loss).
+aos(2,cause,serpent,severe_loss).
+aos(2,has,farmer,cattle).
+aos(2,is_in,serpent,revenge).
 %% well the farmer thought it best to make it up with the serpent and brought food and honey to the mouth of its lair and said to it.
 % dependencies.
 root(3,root,think).
@@ -111,14 +111,14 @@ conj:and(3,bring,say).
 case(3,it,to).
 nmod:to(3,say,it).
 % relations.
-say_to(3,honey,it).
-bring_food_to(3,farmer,mouth).
-bring(3,farmer,food).
-bring_honey_to(3,farmer,mouth).
-bring(3,farmer,honey).
-bring_food_to(3,farmer,mouth_of_its_lair).
-make_up(3,it,it).
-bring_honey_to(3,farmer,mouth_of_its_lair).
+aos(3,say_to,honey,it).
+aos(3,bring_food_to,farmer,mouth).
+aos(3,bring,farmer,food).
+aos(3,bring_honey_to,farmer,mouth).
+aos(3,bring,farmer,honey).
+aos(3,bring_food_to,farmer,mouth_of_its_lair).
+aos(3,make_up,it,it).
+aos(3,bring_honey_to,farmer,mouth_of_its_lair).
 %% let 's forget and forgive.
 % dependencies.
 root(4,root,let).
@@ -160,10 +160,10 @@ mark(5,revenge,to).
 xcomp(5,try,revenge).
 dobj(5,revenge,he).
 % relations.
-take_vengeance_on(5,my_son,my_cattle).
-take(5,my_son,vengeance).
-be(5,you,right).
-punish(5,you,my_son).
+aos(5,take_vengeance_on,my_son,my_cattle).
+aos(5,take,my_son,vengeance).
+aos(5,be,you,right).
+aos(5,punish,you,my_son).
 %% now that we are both satisfied why should not we be friends again.
 % dependencies.
 root(6,root,now).

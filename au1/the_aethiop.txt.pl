@@ -29,8 +29,8 @@ nmod:poss(0,master,he).
 amod(0,master,former).
 nmod:of(0,neglect,master).
 % relations.
-arise_from(0,color,dirt).
-be(0,purchaser,persuade).
+aos(0,arise_from,color,dirt).
+aos(0,be,purchaser,persuade).
 %% on bringing him home he resorted to every means of cleaning and subjected the man to incessant scrubbings.
 % dependencies.
 root(1,root,bring).
@@ -52,7 +52,7 @@ case(1,scrubbing,to).
 amod(1,scrubbing,incessant).
 nmod:to(1,subject,scrubbing).
 % relations.
-resort_to(1,he,means_of_cleaning).
+aos(1,resort_to,he,means_of_cleaning).
 %% the servant caught a severe cold but he never changed his color or complexion.
 % dependencies.
 root(2,root,catch).
@@ -71,5 +71,5 @@ cc(2,color,or).
 dobj(2,change,complexion).
 conj:or(2,color,complexion).
 % relations.
-catch(2,servant,severe_cold).
-catch(2,servant,cold).
+aos(2,catch,servant,severe_cold).
+aos(2,catch,servant,cold).

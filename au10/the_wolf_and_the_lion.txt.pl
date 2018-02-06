@@ -17,7 +17,7 @@ case(0,lair,to).
 nmod:poss(0,lair,he).
 advcl:to(0,carry,lair).
 % relations.
-be_carry(0,wolf,he).
+aos(0,be_carry,wolf,he).
 %% a lion met him in the path and seizing the lamb took it from him.
 % dependencies.
 root(1,root,meet).
@@ -37,7 +37,7 @@ dobj(1,take,it).
 case(1,he,from).
 nmod:from(1,take,he).
 % relations.
-meet(1,lion,he).
+aos(1,meet,lion,he).
 %% standing at a safe distance the wolf exclaimed.
 % dependencies.
 root(2,root,stand).
@@ -79,8 +79,8 @@ cop(5,yours,be).
 advmod(5,yours,righteously).
 dep(5,yours,eh).
 % relations.
-be(5,it,righteously_yours).
-be(5,it,yours).
+aos(5,be,it,righteously_yours).
+aos(5,be,it,yours).
 %% the gift of a friend.
 % dependencies.
 root(6,root,gift).

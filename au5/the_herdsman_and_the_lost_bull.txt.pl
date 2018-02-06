@@ -15,10 +15,10 @@ case(0,fold,from).
 det(0,fold,the).
 nmod:from(0,lose,fold).
 % relations.
-lose(0,herdsman,bull-calf).
-tend_he_flock_in(0,herdsman,forest).
-tend(0,herdsman,he_flock).
-lose_bull-calf_from(0,herdsman,fold).
+aos(0,lose,herdsman,bull-calf).
+aos(0,tend_he_flock_in,herdsman,forest).
+aos(0,tend,herdsman,he_flock).
+aos(0,lose_bull-calf_from,herdsman,fold).
 %% after a long and fruitless search he made a vow that if he could only discover the thief who had stolen the calf he would offer a lamb in sacrifice to hermes pan and the guardian deities of the forest.
 % dependencies.
 root(1,root,make).
@@ -65,14 +65,14 @@ case(1,forest,of).
 det(1,forest,the).
 nmod:of(1,deity,forest).
 % relations.
-offer_lamb_to(1,he,herme_pan).
-make_vow_after(1,he,search).
-offer(1,he,lamb_in_sacrifice).
-make_vow_after(1,he,long_search).
-make(1,he,vow).
-offer(1,he,lamb).
-lamb_in(1,he,sacrifice).
-is_in(1,lamb,sacrifice).
+aos(1,offer_lamb_to,he,herme_pan).
+aos(1,make_vow_after,he,search).
+aos(1,offer,he,lamb_in_sacrifice).
+aos(1,make_vow_after,he,long_search).
+aos(1,make,he,vow).
+aos(1,offer,he,lamb).
+aos(1,lamb_in,he,sacrifice).
+aos(1,is_in,lamb,sacrifice).
 %% not long afterwards as he ascended a small hillock he saw at its foot a lion feeding on the calf.
 % dependencies.
 root(2,root,see).
@@ -96,8 +96,8 @@ case(2,calf,on).
 det(2,calf,the).
 nmod:on(2,feeding,calf).
 % relations.
-long_see_at(2,lion_feeding,its_foot).
-see_at(2,lion_feeding,its_foot).
+aos(2,long_see_at,lion_feeding,its_foot).
+aos(2,see_at,lion_feeding,its_foot).
 %% terrified at the sight he lifted his eyes and his hands to heaven and said.
 % dependencies.
 root(3,root,terrify).
@@ -119,8 +119,8 @@ cc(3,lift,and).
 acl:relcl(3,sight,say).
 conj:and(3,lift,say).
 % relations.
-lift(3,he,he_eye).
-lift(3,he,he_hand).
+aos(3,lift,he,he_eye).
+aos(3,lift,he,he_hand).
 %% just now i vowed to offer a lamb to the guardian deities of the forest if i could only find out who had robbed me.
 % dependencies.
 root(4,root,vow).
@@ -150,9 +150,9 @@ ccomp(4,find,rob).
 nsubj(4,vow,I).
 nsubj:xsubj(4,offer,I).
 % relations.
-offer_lamb_to(4,I,guardian_deity_of_forest).
-offer_lamb_to(4,I,guardian_deity).
-offer(4,I,lamb).
+aos(4,offer_lamb_to,I,guardian_deity_of_forest).
+aos(4,offer_lamb_to,I,guardian_deity).
+aos(4,offer,I,lamb).
 %% but now that i have discovered the thief i would willingly add a full-grown bull to the calf i have lost if i may only secure my own escape from him in safety.
 % dependencies.
 root(5,root,now).
@@ -189,11 +189,11 @@ nmod:from(5,secure,he).
 case(5,safety,in).
 nmod:in(5,secure,safety).
 % relations.
-would_add(5,i,full-grown_bull).
-may_only_secure(5,i,my_own_escape).
-may_secure(5,i,my_escape).
-would_willingly_add(5,i,full-grown_bull).
-would_add(5,i,bull).
-would_willingly_add(5,i,bull).
-may_only_secure(5,i,my_escape).
-may_secure(5,i,my_own_escape).
+aos(5,would_add,i,full-grown_bull).
+aos(5,may_only_secure,i,my_own_escape).
+aos(5,may_secure,i,my_escape).
+aos(5,would_willingly_add,i,full-grown_bull).
+aos(5,would_add,i,bull).
+aos(5,would_willingly_add,i,bull).
+aos(5,may_only_secure,i,my_escape).
+aos(5,may_secure,i,my_own_escape).

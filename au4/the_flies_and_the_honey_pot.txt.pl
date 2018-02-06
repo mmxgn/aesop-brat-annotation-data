@@ -32,8 +32,8 @@ nsubj(0,eat,it).
 advcl:in(0,place,eat).
 advmod(0,eat,greedily).
 % relations.
-in(0,housekeeper,room).
-be(0,fly,attract).
+aos(0,in,housekeeper,room).
+aos(0,be,fly,attract).
 %% their feet however became so smeared with the honey that they could not use their wings nor release themselves and were suffocated.
 % dependencies.
 root(1,root,become).
@@ -61,7 +61,7 @@ cc(1,become,and).
 auxpass(1,suffocate,be).
 conj:and(1,become,suffocate).
 % relations.
-be(1,they_foot,suffocate).
+aos(1,be,they_foot,suffocate).
 %% just as they were expiring they exclaimed.
 % dependencies.
 root(2,root,just).
@@ -92,5 +92,5 @@ aux(3,destroy,have).
 acl:relcl(3,pleasure,destroy).
 dobj(3,destroy,ourselves).
 % relations.
-have_destroy(3,we,ourselves).
-be_for(3,we,sake).
+aos(3,have_destroy,we,ourselves).
+aos(3,be_for,we,sake).

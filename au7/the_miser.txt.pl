@@ -44,15 +44,15 @@ xcomp(0,go,look).
 case(0,daily,at).
 nmod:at(0,look,daily).
 % relations.
-go(0,miser,look_at_daily).
-bury_in(0,he,hole_in_ground).
-bury_by(0,he,side_of_wall).
-is_in(0,hole,ground).
-bury_by(0,he,side_of_old_wall).
-sell(0,miser,all).
-bury_in(0,he,hole).
-bury_by(0,he,side).
-go(0,miser,look).
+aos(0,go,miser,look_at_daily).
+aos(0,bury_in,he,hole_in_ground).
+aos(0,bury_by,he,side_of_wall).
+aos(0,is_in,hole,ground).
+aos(0,bury_by,he,side_of_old_wall).
+aos(0,sell,miser,all).
+aos(0,bury_in,he,hole).
+aos(0,bury_by,he,side).
+aos(0,go,miser,look).
 %% one of his workmen observed his frequent visits to the spot and decided to watch his movements.
 % dependencies.
 root(1,root,observe).
@@ -101,37 +101,37 @@ cc(2,discover,and).
 conj:and(2,discover,steal).
 dobj(2,steal,it).
 % relations.
-discover(2,he,secret_of_treasure_down_come).
-soon_discover(2,he,secret_of_treasure_down_come_to_lump_of_gold).
-soon_discover(2,he,secret_of_hidden_treasure).
-discover(2,he,secret).
-soon_discover(2,he,secret_of_treasure_down_come).
-soon_discover(2,he,secret_of_treasure_come_to_lump).
-steal(2,he,it).
-soon_discover(2,he,secret_of_treasure_come).
-discover(2,he,secret_of_treasure_come).
-soon_discover(2,he,secret_of_hidden_treasure_down_come_to_lump_of_gold).
-soon_discover(2,he,secret).
-soon_discover(2,he,secret_of_hidden_treasure_down_come_to_lump).
-soon_discover(2,he,secret_of_hidden_treasure_come).
-discover(2,he,secret_of_hidden_treasure_come_to_lump_of_gold).
-soon_discover(2,he,secret_of_treasure).
-discover(2,he,secret_of_hidden_treasure_come).
-soon_discover(2,he,secret_of_hidden_treasure_come_to_lump_of_gold).
-discover(2,he,secret_of_treasure_down_come_to_lump).
-soon_discover(2,he,secret_of_treasure_come_to_lump_of_gold).
-soon_discover(2,he,secret_of_hidden_treasure_down_come).
-discover(2,he,secret_of_hidden_treasure_down_come).
-discover(2,he,secret_of_treasure_down_come_to_lump_of_gold).
-discover(2,he,secret_of_treasure_come_to_lump).
-soon_discover(2,he,secret_of_treasure_down_come_to_lump).
-discover(2,he,secret_of_treasure).
-soon_discover(2,he,secret_of_hidden_treasure_come_to_lump).
-discover(2,he,secret_of_hidden_treasure).
-discover(2,he,secret_of_hidden_treasure_down_come_to_lump_of_gold).
-discover(2,he,secret_of_treasure_come_to_lump_of_gold).
-discover(2,he,secret_of_hidden_treasure_come_to_lump).
-discover(2,he,secret_of_hidden_treasure_down_come_to_lump).
+aos(2,discover,he,secret_of_treasure_down_come).
+aos(2,soon_discover,he,secret_of_treasure_down_come_to_lump_of_gold).
+aos(2,soon_discover,he,secret_of_hidden_treasure).
+aos(2,discover,he,secret).
+aos(2,soon_discover,he,secret_of_treasure_down_come).
+aos(2,soon_discover,he,secret_of_treasure_come_to_lump).
+aos(2,steal,he,it).
+aos(2,soon_discover,he,secret_of_treasure_come).
+aos(2,discover,he,secret_of_treasure_come).
+aos(2,soon_discover,he,secret_of_hidden_treasure_down_come_to_lump_of_gold).
+aos(2,soon_discover,he,secret).
+aos(2,soon_discover,he,secret_of_hidden_treasure_down_come_to_lump).
+aos(2,soon_discover,he,secret_of_hidden_treasure_come).
+aos(2,discover,he,secret_of_hidden_treasure_come_to_lump_of_gold).
+aos(2,soon_discover,he,secret_of_treasure).
+aos(2,discover,he,secret_of_hidden_treasure_come).
+aos(2,soon_discover,he,secret_of_hidden_treasure_come_to_lump_of_gold).
+aos(2,discover,he,secret_of_treasure_down_come_to_lump).
+aos(2,soon_discover,he,secret_of_treasure_come_to_lump_of_gold).
+aos(2,soon_discover,he,secret_of_hidden_treasure_down_come).
+aos(2,discover,he,secret_of_hidden_treasure_down_come).
+aos(2,discover,he,secret_of_treasure_down_come_to_lump_of_gold).
+aos(2,discover,he,secret_of_treasure_come_to_lump).
+aos(2,soon_discover,he,secret_of_treasure_down_come_to_lump).
+aos(2,discover,he,secret_of_treasure).
+aos(2,soon_discover,he,secret_of_hidden_treasure_come_to_lump).
+aos(2,discover,he,secret_of_hidden_treasure).
+aos(2,discover,he,secret_of_hidden_treasure_down_come_to_lump_of_gold).
+aos(2,discover,he,secret_of_treasure_come_to_lump_of_gold).
+aos(2,discover,he,secret_of_hidden_treasure_come_to_lump).
+aos(2,discover,he,secret_of_hidden_treasure_down_come_to_lump).
 %% the miser on his next visit found the hole empty and began to tear his hair and to make loud lamentations.
 % dependencies.
 root(3,root,find).
@@ -158,9 +158,9 @@ conj:and(3,tear,make).
 amod(3,lamentation,loud).
 dobj(3,make,lamentation).
 % relations.
-find(3,miser,hole_empty).
-make(3,he_hair,lamentation).
-make(3,he_hair,loud_lamentation).
+aos(3,find,miser,hole_empty).
+aos(3,make,he_hair,lamentation).
+aos(3,make,he_hair,loud_lamentation).
 %% a neighbor seeing him overcome with grief and learning the cause said.
 % dependencies.
 root(4,root,say).
@@ -177,7 +177,7 @@ conj:and(4,see,learn).
 det(4,cause,the).
 dobj(4,learn,cause).
 % relations.
-overcome_with(4,he,grief).
+aos(4,overcome_with,he,grief).
 %% pray do not grieve so.
 % dependencies.
 root(5,root,grieve).
@@ -223,10 +223,10 @@ det(7,service,the).
 amod(7,service,same).
 xcomp(7,do,service).
 % relations.
-will_do(7,it,you_quite_same_service).
-will_do(7,it,you_same_service).
-will_do(7,it,you_service).
-will_do(7,it,you_quite_service).
+aos(7,will_do,it,you_quite_same_service).
+aos(7,will_do,it,you_same_service).
+aos(7,will_do,it,you_service).
+aos(7,will_do,it,you_quite_service).
 %% for when the gold was there you had it not as you did not make the slightest use of it.
 % dependencies.
 root(8,root,have).
@@ -250,4 +250,4 @@ dobj(8,make,use).
 case(8,it,of).
 nmod:of(8,use,it).
 % relations.
-slightest_use_of(8,you,it).
+aos(8,slightest_use_of,you,it).

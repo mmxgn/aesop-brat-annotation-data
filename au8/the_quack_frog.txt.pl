@@ -41,17 +41,17 @@ xcomp(0,able,heal).
 det(0,disease,all).
 dobj(0,heal,disease).
 % relations.
-proclaim_to(0,frog,beast).
-be(0,he,learn).
-be(0,he,physician_skilled_in_use_of_drug).
-be(0,he,physician).
-be(0,he,physician_skilled_in_use).
-be(0,he,learn_physician_skilled_in_use).
-be(0,he,learn_physician_skilled_in_use_of_drug).
-be(0,he,physician_skilled).
-be(0,he,learn_physician_skilled).
-be(0,he,skilled).
-be(0,he,learn_physician).
+aos(0,proclaim_to,frog,beast).
+aos(0,be,he,learn).
+aos(0,be,he,physician_skilled_in_use_of_drug).
+aos(0,be,he,physician).
+aos(0,be,he,physician_skilled_in_use).
+aos(0,be,he,learn_physician_skilled_in_use).
+aos(0,be,he,learn_physician_skilled_in_use_of_drug).
+aos(0,be,he,physician_skilled).
+aos(0,be,he,learn_physician_skilled).
+aos(0,be,he,skilled).
+aos(0,be,he,learn_physician).
 %% a fox asked him.
 % dependencies.
 root(1,root,ask).
@@ -59,7 +59,7 @@ det(1,fox,a).
 nsubj(1,ask,fox).
 dobj(1,ask,he).
 % relations.
-ask(1,fox,he).
+aos(1,ask,fox,he).
 %% how can you pretend to prescribe for others when you are unable to heal your own lame gait and wrinkled skin.
 % dependencies.
 root(2,root,pretend).
@@ -87,14 +87,14 @@ amod(2,skin,wrinkled).
 dobj(2,heal,skin).
 conj:and(2,gait,skin).
 % relations.
-heal(2,you,you_gait).
-prescribe_for(2,you,other).
-heal(2,you,you_own_lame_gait).
-heal(2,you,skin).
-can_pretend(2,you,prescribe_for_other).
-be(2,you,unable).
-heal(2,you,you_own_gait).
-heal(2,you,you_lame_gait).
-can_pretend(2,you,prescribe).
-be(2,you,when_unable).
-heal(2,you,wrinkled_skin).
+aos(2,heal,you,you_gait).
+aos(2,prescribe_for,you,other).
+aos(2,heal,you,you_own_lame_gait).
+aos(2,heal,you,skin).
+aos(2,can_pretend,you,prescribe_for_other).
+aos(2,be,you,unable).
+aos(2,heal,you,you_own_gait).
+aos(2,heal,you,you_lame_gait).
+aos(2,can_pretend,you,prescribe).
+aos(2,be,you,when_unable).
+aos(2,heal,you,wrinkled_skin).

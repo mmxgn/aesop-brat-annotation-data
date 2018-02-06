@@ -29,12 +29,12 @@ det(0,wolf,the).
 dobj(0,perceive,wolf).
 advcl(0,shut,say).
 % relations.
-shut_up(0,shepherd,wolf_with_they).
-pen_he_sheep_in(0,shepherd,fold_night).
-is_with(0,wolf,they).
-pen_he_sheep_in(0,shepherd,fold).
-pen(0,shepherd,he_sheep).
-shut_up(0,shepherd,wolf).
+aos(0,shut_up,shepherd,wolf_with_they).
+aos(0,pen_he_sheep_in,shepherd,fold_night).
+aos(0,is_with,wolf,they).
+aos(0,pen_he_sheep_in,shepherd,fold).
+aos(0,pen,shepherd,he_sheep).
+aos(0,shut_up,shepherd,wolf).
 %% master how can you expect the sheep to be safe if you admit a wolf into the fold.
 % dependencies.
 root(1,root,master).

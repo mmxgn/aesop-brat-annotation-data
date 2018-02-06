@@ -13,10 +13,10 @@ case(0,other,with).
 det(0,other,each).
 nmod:with(0,wage,other).
 % relations.
-wage(0,dolphin,fierce_war).
-wage(0,whale,fierce_war).
-wage(0,dolphin,war).
-wage(0,whale,war).
+aos(0,wage,dolphin,fierce_war).
+aos(0,wage,whale,fierce_war).
+aos(0,wage,dolphin,war).
+aos(0,wage,whale,war).
 %% when the battle was at its height a sprat lifted its head out of the waves and said that he would reconcile their differences if they would accept him as an umpire.
 % dependencies.
 root(1,root,height).
@@ -54,7 +54,7 @@ case(1,umpire,as).
 det(1,umpire,a).
 nmod:as(1,accept,umpire).
 % relations.
-lift_out(1,sprat,its_head).
+aos(1,lift_out,sprat,its_head).
 %% one of the dolphins replied.
 % dependencies.
 root(2,root,reply).
@@ -87,15 +87,15 @@ case(3,affair,in).
 nmod:poss(3,affair,we).
 nmod:in(3,destroy,affair).
 % relations.
-would(3,we,would_rather_destroy_in_we_battle).
-would(3,we,would_far_rather_destroy_in_we_battle).
-would(3,we,would_destroy_in_we_affair).
-would(3,we,would_far_rather_destroy_in_we_affair).
-would(3,we,would_far_rather_destroy_in_we_battle_in_we_affair).
-would(3,we,would_destroy_in_we_battle_in_we_affair).
-would(3,we,would_far_rather_destroy).
-would(3,we,would_destroy).
-would(3,we,would_rather_destroy).
-would(3,we,would_rather_destroy_in_we_battle_in_we_affair).
-would(3,we,would_destroy_in_we_battle).
-would(3,we,would_rather_destroy_in_we_affair).
+aos(3,would,we,would_rather_destroy_in_we_battle).
+aos(3,would,we,would_far_rather_destroy_in_we_battle).
+aos(3,would,we,would_destroy_in_we_affair).
+aos(3,would,we,would_far_rather_destroy_in_we_affair).
+aos(3,would,we,would_far_rather_destroy_in_we_battle_in_we_affair).
+aos(3,would,we,would_destroy_in_we_battle_in_we_affair).
+aos(3,would,we,would_far_rather_destroy).
+aos(3,would,we,would_destroy).
+aos(3,would,we,would_rather_destroy).
+aos(3,would,we,would_rather_destroy_in_we_battle_in_we_affair).
+aos(3,would,we,would_destroy_in_we_battle).
+aos(3,would,we,would_rather_destroy_in_we_affair).

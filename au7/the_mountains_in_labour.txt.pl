@@ -13,7 +13,7 @@ cop(0,labour,be).
 case(0,labour,in).
 ccomp(0,notice,labour).
 % relations.
-be_in(0,mountain,labour).
+aos(0,be_in,mountain,labour).
 %% smoke came out of their summits the earth was quaking at their feet trees were crashing and huge rocks were tumbling.
 % dependencies.
 root(1,root,come).
@@ -39,7 +39,7 @@ aux(1,tumble,be).
 acl:relcl(1,foot,tumble).
 conj:and(1,crash,tumble).
 % relations.
-come_out_of(1,smoke,they_summit).
+aos(1,come_out_of,smoke,they_summit).
 %% they felt sure that something horrible was going to happen.
 % dependencies.
 root(2,root,feel).
@@ -54,9 +54,9 @@ ccomp(2,feel,go).
 mark(2,happen,to).
 xcomp(2,go,happen).
 % relations.
-go(2,something_horrible,happen).
-go(2,something,happen).
-feel(2,they,sure).
+aos(2,go,something_horrible,happen).
+aos(2,go,something,happen).
+aos(2,feel,they,sure).
 %% they all gathered together in one place to see what terrible thing this could be.
 % dependencies.
 root(3,root,gather).
@@ -76,14 +76,14 @@ dep(3,thing,this).
 aux(3,be,could).
 ccomp(3,see,be).
 % relations.
-gather(3,they,see).
-gather_together(3,they,see).
-all_gather_in(3,they,one_place).
-gather_in(3,they,one_place).
-gather_together_in(3,they,one_place).
-all_gather_together_in(3,they,one_place).
-all_gather_together(3,they,see).
-all_gather(3,they,see).
+aos(3,gather,they,see).
+aos(3,gather_together,they,see).
+aos(3,all_gather_in,they,one_place).
+aos(3,gather_in,they,one_place).
+aos(3,gather_together_in,they,one_place).
+aos(3,all_gather_together_in,they,one_place).
+aos(3,all_gather_together,they,see).
+aos(3,all_gather,they,see).
 %% they waited and they waited but nothing came.
 % dependencies.
 root(4,root,wait).
@@ -121,10 +121,10 @@ case(5,mountain,of).
 det(5,mountain,the).
 nmod:of(5,side,mountain).
 % relations.
-appear_in(5,gap,side).
-appear_in(5,huge_gap,side_of_mountain).
-appear_in(5,huge_gap,side).
-appear_in(5,gap,side_of_mountain).
+aos(5,appear_in,gap,side).
+aos(5,appear_in,huge_gap,side_of_mountain).
+aos(5,appear_in,huge_gap,side).
+aos(5,appear_in,gap,side_of_mountain).
 %% they all fell down upon their knees and waited.
 % dependencies.
 root(6,root,fall).
@@ -138,5 +138,5 @@ nmod:upon(6,fall,knee).
 cc(6,fall,and).
 conj:and(6,fall,wait).
 % relations.
-fall_down_upon(6,they,they_knee).
-all_fall_down_upon(6,they,they_knee).
+aos(6,fall_down_upon,they,they_knee).
+aos(6,all_fall_down_upon,they,they_knee).

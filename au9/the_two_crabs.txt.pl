@@ -18,8 +18,8 @@ case(0,sand,on).
 det(0,sand,the).
 nmod:on(0,stroll,sand).
 % relations.
-come_out_from(0,one_fine_day,they_home_take).
-come_out_from(0,fine_day,they_home_take).
+aos(0,come_out_from,one_fine_day,they_home_take).
+aos(0,come_out_from,fine_day,they_home_take).
 %% child.
 % dependencies.
 root(1,root,child).
@@ -38,8 +38,8 @@ aux(3,walk,be).
 advmod(3,ungracefully,very).
 xcomp(3,walk,ungracefully).
 % relations.
-be_walk(3,you,ungracefully).
-be_walk(3,you,very_ungracefully).
+aos(3,be_walk,you,ungracefully).
+aos(3,be_walk,you,very_ungracefully).
 %% you should accustom yourself to walking straight forward without twisting from side to side.
 % dependencies.
 root(4,root,accustom).
@@ -57,17 +57,17 @@ nmod:from(4,twist,side).
 case(4,side,to).
 nmod:to(4,twist,side).
 % relations.
-should_accustom(4,you,yourself).
-walk_forward(4,you,twist_to_side).
-walk_forward(4,you,straight).
-walk(4,you,twist_to_side).
-walk(4,you,twist_from_side).
-walk(4,you,twist_from_side_to_side).
-walk_forward(4,you,twist_from_side_to_side).
-walk_forward(4,you,twist).
-walk(4,you,straight).
-walk(4,you,twist).
-walk_forward(4,you,twist_from_side).
+aos(4,should_accustom,you,yourself).
+aos(4,walk_forward,you,twist_to_side).
+aos(4,walk_forward,you,straight).
+aos(4,walk,you,twist_to_side).
+aos(4,walk,you,twist_from_side).
+aos(4,walk,you,twist_from_side_to_side).
+aos(4,walk_forward,you,twist_from_side_to_side).
+aos(4,walk_forward,you,twist).
+aos(4,walk,you,straight).
+aos(4,walk,you,twist).
+aos(4,walk_forward,you,twist_from_side).
 %% pray mother.
 % dependencies.
 root(5,root,mother).
@@ -80,7 +80,7 @@ det(6,young,the).
 dobj(6,say,young).
 nsubj(6,say,one).
 % relations.
-say(6,one,young).
+aos(6,say,one,young).
 %% do but set the example yourself and i will follow you.
 % dependencies.
 root(7,root,do).
@@ -96,5 +96,5 @@ aux(7,follow,will).
 acl:relcl(7,example,follow).
 dobj(7,follow,you).
 % relations.
-will_follow(7,i,you).
-will_follow(7,yourself,you).
+aos(7,will_follow,i,you).
+aos(7,will_follow,yourself,you).

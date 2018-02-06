@@ -21,10 +21,10 @@ nsubj(0,fall,she).
 acl:relcl(0,farmhouse,fall).
 dobj(0,fall,a-musing).
 % relations.
-be_carry(0,farmer_'s_daughter,she_pail).
-fall(0,she,a-musing).
-be_carry(0,farmer_'s_daughter,she_pail_of_milk).
-has(0,farmer,daughter).
+aos(0,be_carry,farmer_'s_daughter,she_pail).
+aos(0,fall,she,a-musing).
+aos(0,be_carry,farmer_'s_daughter,she_pail_of_milk).
+aos(0,has,farmer,daughter).
 %% the money for which this milk will be sold will buy at least three hundred eggs.
 % dependencies.
 root(1,root,buy).
@@ -45,7 +45,7 @@ compound(1,hundred,three).
 nummod(1,egg,hundred).
 dobj(1,buy,egg).
 % relations.
-will(1,milk,will_sell).
+aos(1,will,milk,will_sell).
 %% the eggs allowing for all mishaps will produce two hundred and fifty chickens.
 % dependencies.
 root(2,root,produce).
@@ -63,8 +63,8 @@ nummod(2,chicken,fifty).
 dobj(2,produce,chicken).
 conj:and(2,hundred,chicken).
 % relations.
-will_produce(2,egg,fifty_chicken).
-allow_for(2,egg,mishap).
+aos(2,will_produce,egg,fifty_chicken).
+aos(2,allow_for,egg,mishap).
 %% the chickens will become ready for the market when poultry will fetch the highest price so that by the end of the year i shall have money enough from my share to buy a new gown.
 % dependencies.
 root(3,root,become).
@@ -104,18 +104,18 @@ det(3,gown,a).
 amod(3,gown,new).
 dobj(3,buy,gown).
 % relations.
-shall_have(3,i,money).
-will_fetch(3,poultry,highest_price).
-shall_have_enough(3,i,money).
-buy(3,i,gown).
-buy(3,i,new_gown).
-will_fetch(3,poultry,price).
-shall_have_money_enough_by(3,i,end_of_year).
-shall_have_money_enough_by(3,i,end).
-shall_have_money_by(3,i,end_of_year).
-will_become(3,chicken,ready_for_market).
-will_become(3,chicken,ready).
-shall_have_money_by(3,i,end).
+aos(3,shall_have,i,money).
+aos(3,will_fetch,poultry,highest_price).
+aos(3,shall_have_enough,i,money).
+aos(3,buy,i,gown).
+aos(3,buy,i,new_gown).
+aos(3,will_fetch,poultry,price).
+aos(3,shall_have_money_enough_by,i,end_of_year).
+aos(3,shall_have_money_enough_by,i,end).
+aos(3,shall_have_money_by,i,end_of_year).
+aos(3,will_become,chicken,ready_for_market).
+aos(3,will_become,chicken,ready).
+aos(3,shall_have_money_by,i,end).
 %% in this dress i will go to the christmas parties where all the young fellows will propose to me but i will toss my head and refuse them every one.
 % dependencies.
 root(4,root,go).
@@ -152,10 +152,10 @@ nsubj(4,one,they).
 det(4,one,every).
 xcomp(4,refuse,one).
 % relations.
-will_propose_to(4,young_fellow,I).
-will_go_in(4,i,dress).
-will_toss(4,i,my_head).
-will_go_to(4,i,christmas_party).
+aos(4,will_propose_to,young_fellow,I).
+aos(4,will_go_in,i,dress).
+aos(4,will_toss,i,my_head).
+aos(4,will_go_to,i,christmas_party).
 %% at this moment she tossed her head in unison with her thoughts when down fell the milk pail to the ground and all her imaginary schemes perished in a moment.
 % dependencies.
 root(5,root,toss).
@@ -190,15 +190,15 @@ case(5,moment,in).
 det(5,moment,a).
 nmod:in(5,perish,moment).
 % relations.
-fall(5,she,milk_pail).
-when_down_fall_to(5,she,ground).
-down_fall_milk_pail_to(5,she,ground).
-down_fall(5,she,milk_pail).
-when_down_fall(5,she,milk_pail).
-fall_to(5,she,ground).
-perish(5,she_imaginary_scheme,all).
-when_down_fall_milk_pail_to(5,she,ground).
-down_fall_to(5,she,ground).
-fall_milk_pail_to(5,she,ground).
-toss(5,she,she_head).
-perish_in(5,she_imaginary_scheme,moment).
+aos(5,fall,she,milk_pail).
+aos(5,when_down_fall_to,she,ground).
+aos(5,down_fall_milk_pail_to,she,ground).
+aos(5,down_fall,she,milk_pail).
+aos(5,when_down_fall,she,milk_pail).
+aos(5,fall_to,she,ground).
+aos(5,perish,she_imaginary_scheme,all).
+aos(5,when_down_fall_milk_pail_to,she,ground).
+aos(5,down_fall_to,she,ground).
+aos(5,fall_milk_pail_to,she,ground).
+aos(5,toss,she,she_head).
+aos(5,perish_in,she_imaginary_scheme,moment).

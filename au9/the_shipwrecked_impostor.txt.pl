@@ -61,10 +61,10 @@ nsubj:xsubj(1,tell,bundle).
 case(1,falsehood,of).
 nmod:of(1,bundle,falsehood).
 % relations.
-tell(1,bundle,many_marvelous_tale).
-be(1,kind_proposition,accept).
-be(1,kind_proposition,immediately_accept).
-tell(1,bundle,marvelous_tale).
+aos(1,tell,bundle,many_marvelous_tale).
+aos(1,be,kind_proposition,accept).
+aos(1,be,kind_proposition,immediately_accept).
+aos(1,tell,bundle,marvelous_tale).
 %% well well you are indeed an educated chap.
 % dependencies.
 root(2,root,you).
@@ -84,7 +84,7 @@ nsubj(3,say,dolphin).
 case(3,admiration,in).
 nmod:in(3,dolphin,admiration).
 % relations.
-is_in(3,dolphin,admiration).
+aos(3,is_in,dolphin,admiration).
 %% my schooling has been sadly neglected as i went to sea when but a week old.
 % dependencies.
 root(4,root,neglect).
@@ -106,9 +106,9 @@ dep(4,old,week).
 advcl:as(4,neglect,old).
 conj:but(4,go,old).
 % relations.
-have(4,my_schooling,have_neglect).
-go_to(4,i,sea).
-have(4,my_schooling,have_sadly_neglect).
+aos(4,have,my_schooling,have_neglect).
+aos(4,go_to,i,sea).
+aos(4,have,my_schooling,have_sadly_neglect).
 %% just then they entered a large bay and the dolphin referring to it said.
 % dependencies.
 root(5,root,enter).
@@ -126,11 +126,11 @@ case(5,it,to).
 nmod:to(5,refer,it).
 conj:and(5,enter,say).
 % relations.
-enter(5,they,bay).
-refer_to(5,dolphin,it).
-enter(5,they,large_bay).
-just_enter(5,they,bay).
-just_enter(5,they,large_bay).
+aos(5,enter,they,bay).
+aos(5,refer_to,dolphin,it).
+aos(5,enter,they,large_bay).
+aos(5,just_enter,they,bay).
+aos(5,just_enter,they,large_bay).
 %% i suppose you know herring roads.
 % dependencies.
 root(6,root,suppose).
@@ -168,7 +168,7 @@ nsubj(8,know,i).
 ccomp(8,do,know).
 dobj(8,know,rhode).
 % relations.
-know(8,i,rhode).
+aos(8,know,i,rhode).
 %% well i should almost think so.
 % dependencies.
 root(9,root,i).
@@ -197,11 +197,11 @@ nmod:by(10,related,family).
 case(10,family,by).
 punct(10,chum,-).
 % relations.
-have(10,he,old_college_chum).
-have(10,he,college_chum_of_mine).
-have(10,he,old_college_chum_of_mine).
-have(10,he,old).
-have(10,he,college_chum).
+aos(10,have,he,old_college_chum).
+aos(10,have,he,college_chum_of_mine).
+aos(10,have,he,old_college_chum_of_mine).
+aos(10,have,he,old).
+aos(10,have,he,college_chum).
 %% this was too much for the dolphin who immediately made a great leap and then diving quickly left the impostor in the air for an instant before he splashed back and disappeared.
 % dependencies.
 root(11,root,much).
@@ -241,33 +241,33 @@ cc(11,splash,and).
 advcl:before(11,leave,disappear).
 conj:and(11,splash,disappear).
 % relations.
-leave_impostor_in(11,diving,air_for_instant).
-leave(11,great_leap,impostor).
-leave_impostor_in(11,leap,air).
-leave_impostor(11,leap,he_splash).
-quickly_leave_impostor_in(11,great_leap,air).
-quickly_leave_impostor_in(11,leap,air_for_instant).
-leave_impostor(11,great_leap,he_splash).
-leave_impostor_in(11,leap,air_for_instant).
-quickly_leave_impostor(11,great_leap,he_splash_back).
-quickly_leave(11,diving,impostor).
-leave_impostor_in(11,great_leap,air).
-quickly_leave_impostor(11,leap,he_splash).
-quickly_leave_impostor(11,diving,he_splash_back).
-quickly_leave_impostor(11,great_leap,he_splash).
-quickly_leave_impostor(11,diving,he_splash).
-quickly_leave(11,great_leap,impostor).
-leave(11,diving,impostor).
-leave_impostor(11,diving,he_splash).
-quickly_leave_impostor_in(11,great_leap,air_for_instant).
-quickly_leave_impostor_in(11,leap,air).
-quickly_leave_impostor_in(11,diving,air_for_instant).
-leave_impostor(11,leap,he_splash_back).
-leave_impostor_in(11,great_leap,air_for_instant).
-leave_impostor(11,diving,he_splash_back).
-quickly_leave_impostor(11,leap,he_splash_back).
-quickly_leave(11,leap,impostor).
-leave(11,leap,impostor).
-quickly_leave_impostor_in(11,diving,air).
-leave_impostor_in(11,diving,air).
-leave_impostor(11,great_leap,he_splash_back).
+aos(11,leave_impostor_in,diving,air_for_instant).
+aos(11,leave,great_leap,impostor).
+aos(11,leave_impostor_in,leap,air).
+aos(11,leave_impostor,leap,he_splash).
+aos(11,quickly_leave_impostor_in,great_leap,air).
+aos(11,quickly_leave_impostor_in,leap,air_for_instant).
+aos(11,leave_impostor,great_leap,he_splash).
+aos(11,leave_impostor_in,leap,air_for_instant).
+aos(11,quickly_leave_impostor,great_leap,he_splash_back).
+aos(11,quickly_leave,diving,impostor).
+aos(11,leave_impostor_in,great_leap,air).
+aos(11,quickly_leave_impostor,leap,he_splash).
+aos(11,quickly_leave_impostor,diving,he_splash_back).
+aos(11,quickly_leave_impostor,great_leap,he_splash).
+aos(11,quickly_leave_impostor,diving,he_splash).
+aos(11,quickly_leave,great_leap,impostor).
+aos(11,leave,diving,impostor).
+aos(11,leave_impostor,diving,he_splash).
+aos(11,quickly_leave_impostor_in,great_leap,air_for_instant).
+aos(11,quickly_leave_impostor_in,leap,air).
+aos(11,quickly_leave_impostor_in,diving,air_for_instant).
+aos(11,leave_impostor,leap,he_splash_back).
+aos(11,leave_impostor_in,great_leap,air_for_instant).
+aos(11,leave_impostor,diving,he_splash_back).
+aos(11,quickly_leave_impostor,leap,he_splash_back).
+aos(11,quickly_leave,leap,impostor).
+aos(11,leave,leap,impostor).
+aos(11,quickly_leave_impostor_in,diving,air).
+aos(11,leave_impostor_in,diving,air).
+aos(11,leave_impostor,great_leap,he_splash_back).

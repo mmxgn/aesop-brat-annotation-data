@@ -22,11 +22,11 @@ case(0,neighbor,to).
 nmod:poss(0,neighbor,she).
 nmod:to(0,say,neighbor).
 % relations.
-blossom_side_in(0,amaranth,garden).
-say_to(0,amaranth,she_neighbor).
-blossom(0,amaranth,side).
-blossom_side_by(0,amaranth,side).
-say_to(0,rose,she_neighbor).
+aos(0,blossom_side_in,amaranth,garden).
+aos(0,say_to,amaranth,she_neighbor).
+aos(0,blossom,amaranth,side).
+aos(0,blossom_side_by,amaranth,side).
+aos(0,say_to,rose,she_neighbor).
 %% how i envy you your beauty and your sweet scent.
 % dependencies.
 root(1,root,how).
@@ -67,7 +67,7 @@ case(3,voice,in).
 nmod:poss(3,voice,she).
 nmod:in(3,rose,voice).
 % relations.
-is_in(3,rose,she_voice).
+aos(3,is_in,rose,she_voice).
 %% ah my dear friend i bloom but for a time my petals soon wither and fall and then i die.
 % dependencies.
 root(4,root,ah).
@@ -107,8 +107,8 @@ nsubjpass(5,cut,they).
 auxpass(5,cut,be).
 advcl:if(5,fade,cut).
 % relations.
-be(5,they,cut).
-be(5,they,even_cut).
+aos(5,be,they,cut).
+aos(5,be,they,even_cut).
 %% for they are everlasting.
 % dependencies.
 root(6,root,everlasting).
@@ -116,4 +116,4 @@ mark(6,everlasting,for).
 nsubj(6,everlasting,they).
 cop(6,everlasting,be).
 % relations.
-be(6,they,everlasting).
+aos(6,be,they,everlasting).

@@ -92,8 +92,8 @@ conj:and(1,be,call).
 case(1,witness,as).
 nmod:as(1,call,witness).
 % relations.
-say_among(1,he,thing).
-say_among(1,he,other_thing).
+aos(1,say_among,he,thing).
+aos(1,say_among,he,other_thing).
 %% one of the bystanders interrupted him saying.
 % dependencies.
 root(2,root,interrupt).

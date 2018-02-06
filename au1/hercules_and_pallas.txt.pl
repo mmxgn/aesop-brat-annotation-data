@@ -23,11 +23,11 @@ acl:relcl(0,animal,threaten).
 conj:and(0,rear,threaten).
 dobj(0,threaten,he).
 % relations.
-once_journey_along(0,hercule,narrow_roadway).
-once_journey_along(0,hercule,roadway).
-journey_along(0,hercule,narrow_roadway).
-journey_along(0,hercule,roadway).
-threaten(0,its_head,he).
+aos(0,once_journey_along,hercule,narrow_roadway).
+aos(0,once_journey_along,hercule,roadway).
+aos(0,journey_along,hercule,narrow_roadway).
+aos(0,journey_along,hercule,roadway).
+aos(0,threaten,its_head,he).
 %% nothing daunted the hero gave him a few lusty blows with his club and thought to have gone on his way.
 % dependencies.
 root(1,root,daunt).
@@ -55,22 +55,22 @@ case(1,way,on).
 nmod:poss(1,way,he).
 nmod:on(1,go,way).
 % relations.
-is_with(1,few_lusty_blow,he_club).
-think(1,hero,have_go).
-few_lusty_blow_with(1,hero,he_club).
-give(1,hero,few_blow_with_he_club).
-few_blow_with(1,hero,he_club).
-give(1,hero,few_lusty_blow).
-give(1,hero,lusty_blow_with_he_club).
-give(1,hero,blow).
-lusty_blow_with(1,hero,he_club).
-give(1,hero,blow_with_he_club).
-give(1,hero,few_blow).
-give(1,hero,lusty_blow).
-give(1,hero,he).
-blow_with(1,hero,he_club).
-give(1,hero,few_lusty_blow_with_he_club).
-think(1,hero,have_go_on_he_way).
+aos(1,is_with,few_lusty_blow,he_club).
+aos(1,think,hero,have_go).
+aos(1,few_lusty_blow_with,hero,he_club).
+aos(1,give,hero,few_blow_with_he_club).
+aos(1,few_blow_with,hero,he_club).
+aos(1,give,hero,few_lusty_blow).
+aos(1,give,hero,lusty_blow_with_he_club).
+aos(1,give,hero,blow).
+aos(1,lusty_blow_with,hero,he_club).
+aos(1,give,hero,blow_with_he_club).
+aos(1,give,hero,few_blow).
+aos(1,give,hero,lusty_blow).
+aos(1,give,hero,he).
+aos(1,blow_with,hero,he_club).
+aos(1,give,hero,few_lusty_blow_with_he_club).
+aos(1,think,hero,have_go_on_he_way).
 %% the monster however much to the astonishment of hercules was now three times as big as it was before and of a still more threatening aspect.
 % dependencies.
 root(2,root,be).
@@ -100,10 +100,10 @@ advmod(2,threatening,more).
 amod(2,aspect,threatening).
 conj(2,and,aspect).
 % relations.
-however_much_to(2,monster,astonishment).
-however_much_to(2,monster,astonishment_of_hercule).
-much_to(2,monster,astonishment_of_hercule).
-much_to(2,monster,astonishment).
+aos(2,however_much_to,monster,astonishment).
+aos(2,however_much_to,monster,astonishment_of_hercule).
+aos(2,much_to,monster,astonishment_of_hercule).
+aos(2,much_to,monster,astonishment).
 %% he thereupon redoubled his blows and laid about him fast and furiously.
 % dependencies.
 root(3,root,redouble).
@@ -121,11 +121,11 @@ cc(3,fast,and).
 advmod(3,lay,furiously).
 conj:and(3,fast,furiously).
 % relations.
-lay_fast_and_furiously_about(3,he,he).
-redouble(3,he,he_blow).
-lay_about(3,he,he).
-thereupon_redouble(3,he,he_blow).
-lay_fast_about(3,he,he).
+aos(3,lay_fast_and_furiously_about,he,he).
+aos(3,redouble,he,he_blow).
+aos(3,lay_about,he,he).
+aos(3,thereupon_redouble,he,he_blow).
+aos(3,lay_fast_about,he,he).
 %% but the harder and quicker the strokes of the club the bigger and more frightful grew the monster and now completely filled up the road.
 % dependencies.
 root(4,root,grow).
@@ -157,18 +157,18 @@ case(4,road,up).
 det(4,road,the).
 nmod:up(4,fill,road).
 % relations.
-grow_but(4,monster,stroke_of_club).
-grow_but(4,monster,harder_stroke_of_club).
-grow_but(4,now,stroke_of_club).
-grow_but(4,now,stroke_of_club_bigger).
-grow_but(4,now,harder_stroke_of_club_bigger).
-grow_but(4,now,harder_stroke_of_club).
-grow_but(4,monster,stroke).
-grow_but(4,monster,harder_stroke_of_club_bigger).
-grow_but(4,now,stroke).
-grow_but(4,monster,harder_stroke).
-grow_but(4,now,harder_stroke).
-grow_but(4,monster,stroke_of_club_bigger).
+aos(4,grow_but,monster,stroke_of_club).
+aos(4,grow_but,monster,harder_stroke_of_club).
+aos(4,grow_but,now,stroke_of_club).
+aos(4,grow_but,now,stroke_of_club_bigger).
+aos(4,grow_but,now,harder_stroke_of_club_bigger).
+aos(4,grow_but,now,harder_stroke_of_club).
+aos(4,grow_but,monster,stroke).
+aos(4,grow_but,monster,harder_stroke_of_club_bigger).
+aos(4,grow_but,now,stroke).
+aos(4,grow_but,monster,harder_stroke).
+aos(4,grow_but,now,harder_stroke).
+aos(4,grow_but,monster,stroke_of_club_bigger).
 %% pallas then appeared upon the scene.
 % dependencies.
 root(5,root,pallas).
@@ -203,8 +203,8 @@ case(9,monster,'s).
 nsubj(9,strife,name).
 cop(9,strife,be).
 % relations.
-has(9,monster,name).
-be(9,monster_'s_name,strife).
+aos(9,has,monster,name).
+aos(9,be,monster_'s_name,strife).
 %% let it alone and it will soon become as little as it was at first.
 % dependencies.
 root(10,root,let).

@@ -29,15 +29,15 @@ conj:and(0,gallop,say).
 case(0,himself,to).
 nmod:to(0,say,himself).
 % relations.
-gallop_about_in(0,mule,very_extravagant_manner).
-say_to(0,mule,himself).
-gallop_about_in(0,mule,manner).
-gallop_in(0,mule,very_extravagant_manner).
-gallop_in(0,mule,extravagant_manner).
-gallop_about_in(0,mule,extravagant_manner).
-gallop_in(0,mule,very_manner).
-gallop_about_in(0,mule,very_manner).
-gallop_in(0,mule,manner).
+aos(0,gallop_about_in,mule,very_extravagant_manner).
+aos(0,say_to,mule,himself).
+aos(0,gallop_about_in,mule,manner).
+aos(0,gallop_in,mule,very_extravagant_manner).
+aos(0,gallop_in,mule,extravagant_manner).
+aos(0,gallop_about_in,mule,extravagant_manner).
+aos(0,gallop_in,mule,very_manner).
+aos(0,gallop_about_in,mule,very_manner).
+aos(0,gallop_in,mule,manner).
 %% my father surely was a high-mettled racer and i am his own child in speed and spirit.
 % dependencies.
 root(1,root,racer).
@@ -59,16 +59,16 @@ cc(1,speed,and).
 nmod:in(1,child,spirit).
 conj:and(1,speed,spirit).
 % relations.
-be(1,i,he_own_child).
-is_in(1,he_own_child,speed).
-be(1,my_father,surely_high-mettled_racer).
-be(1,i,he_own_child_in_speed).
-be(1,i,he_child).
-be(1,my_father,high-mettled_racer).
-be(1,father,high-mettled).
-be(1,my_father,racer).
-be(1,my_father,surely_racer).
-be(1,i,he_child_in_speed).
+aos(1,be,i,he_own_child).
+aos(1,is_in,he_own_child,speed).
+aos(1,be,my_father,surely_high-mettled_racer).
+aos(1,be,i,he_own_child_in_speed).
+aos(1,be,i,he_child).
+aos(1,be,my_father,high-mettled_racer).
+aos(1,be,father,high-mettled).
+aos(1,be,my_father,racer).
+aos(1,be,my_father,surely_racer).
+aos(1,be,i,he_child_in_speed).
 %% on the next day being driven a long journey and feeling very wearied he exclaimed in a disconsolate tone.
 % dependencies.
 root(2,root,day).
@@ -92,8 +92,8 @@ det(2,tone,a).
 amod(2,tone,disconsolate).
 nmod:in(2,exclaim,tone).
 % relations.
-exclaim_in(2,he,disconsolate_tone).
-exclaim_in(2,he,tone).
+aos(2,exclaim_in,he,disconsolate_tone).
+aos(2,exclaim_in,he,tone).
 %% i must have made a mistake.
 % dependencies.
 root(3,root,make).
@@ -116,5 +116,5 @@ advmod(4,ass,only).
 det(4,ass,a).
 dep(4,father,ass).
 % relations.
-could(4,all,could_have_ass).
-could(4,all,could_have_only_ass).
+aos(4,could,all,could_have_ass).
+aos(4,could,all,could_have_only_ass).

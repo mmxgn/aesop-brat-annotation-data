@@ -46,21 +46,21 @@ cc(0,poorer,and).
 xcomp(0,become,poorer).
 conj:and(0,poorer,poorer).
 % relations.
-have(0,carpenter,wooden_image).
-become(0,he,poorer).
-make(0,idol,he_become).
-have(0,carpenter,wooden_image_of_mercury).
-become(0,he,poorer).
-make(0,idol,he_become).
-have(0,carpenter,image).
-carpenter_by(0,image,trade).
-have(0,carpenter,image_of_mercury).
-make(0,he,offering).
-beg(0,he,idol).
-make_offering_at_time(0,he,day).
-make(0,idol,he_he_become).
-carpenter_by(0,wooden_image,trade).
-make_offering_by(0,he,day).
+aos(0,have,carpenter,wooden_image).
+aos(0,become,he,poorer).
+aos(0,make,idol,he_become).
+aos(0,have,carpenter,wooden_image_of_mercury).
+aos(0,become,he,poorer).
+aos(0,make,idol,he_become).
+aos(0,have,carpenter,image).
+aos(0,carpenter_by,image,trade).
+aos(0,have,carpenter,image_of_mercury).
+aos(0,make,he,offering).
+aos(0,beg,he,idol).
+aos(0,make_offering_at_time,he,day).
+aos(0,make,idol,he_he_become).
+aos(0,carpenter_by,wooden_image,trade).
+aos(0,make_offering_by,he,day).
 %% at last being very angry he took his image down from its pedestal and dashed it against the wall.
 % dependencies.
 root(1,root,angry).
@@ -85,9 +85,9 @@ case(1,wall,against).
 det(1,wall,the).
 nmod:against(1,dash,wall).
 % relations.
-take_down(1,he,he_image).
-take(1,he,he_image).
-dash(1,he,it).
+aos(1,take_down,he,he_image).
+aos(1,take,he,he_image).
+aos(1,dash,he,it).
 %% when its head was knocked off out came a stream of gold which the carpenter quickly picked up and said.
 % dependencies.
 root(2,root,come).
@@ -154,9 +154,9 @@ nmod:with(4,load,abundance).
 case(4,riches,of).
 nmod:of(4,abundance,riches).
 % relations.
-be_load_with(4,i_maltreat,abundance).
-now_be_load_with(4,i_maltreat,abundance_of_riches).
-be(4,i_maltreat,load).
-be_load_with(4,i_maltreat,abundance_of_riches).
-be(4,i_maltreat,now_load).
-now_be_load_with(4,i_maltreat,abundance).
+aos(4,be_load_with,i_maltreat,abundance).
+aos(4,now_be_load_with,i_maltreat,abundance_of_riches).
+aos(4,be,i_maltreat,load).
+aos(4,be_load_with,i_maltreat,abundance_of_riches).
+aos(4,be,i_maltreat,now_load).
+aos(4,now_be_load_with,i_maltreat,abundance).

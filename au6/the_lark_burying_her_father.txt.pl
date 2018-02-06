@@ -36,8 +36,8 @@ nmod:of(0,place,burial).
 case(0,he,for).
 nmod:for(0,find,he).
 % relations.
-be(0,lark,create).
-be_create(0,lark,itself).
+aos(0,be,lark,create).
+aos(0,be_create,lark,itself).
 %% she let him lie uninterred for five days and on the sixth day not knowing what else to do she buried him in her own head.
 % dependencies.
 root(1,root,let).
@@ -69,8 +69,8 @@ nmod:poss(1,head,she).
 amod(1,head,own).
 nmod:in(1,bury,head).
 % relations.
-lie(1,he,uninterred).
-lie(1,he,uninterred_for_five_day).
+aos(1,lie,he,uninterred).
+aos(1,lie,he,uninterred_for_five_day).
 %% hence she obtained her crest which is popularly said to be her father 's grave-hillock.
 % dependencies.
 root(2,root,obtain).
@@ -91,4 +91,4 @@ nmod:poss(2,grave-hillock,father).
 case(2,father,'s).
 xcomp(2,say,grave-hillock).
 % relations.
-has(2,father,grave-hillock).
+aos(2,has,father,grave-hillock).

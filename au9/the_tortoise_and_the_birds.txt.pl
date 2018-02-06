@@ -31,10 +31,10 @@ case(0,trouble,for).
 nmod:poss(0,trouble,she).
 nmod:for(0,reward,trouble).
 % relations.
-reward_for(0,she,she_trouble).
-change(0,tortoise,its_place_of_residence).
-rich_reward_for(0,she,she_trouble).
-change(0,tortoise,its_place).
+aos(0,reward_for,she,she_trouble).
+aos(0,change,tortoise,its_place_of_residence).
+aos(0,rich_reward_for,she,she_trouble).
+aos(0,change,tortoise,its_place).
 %% the eagle agreed and seizing the tortoise by the shell with her talons soared aloft.
 % dependencies.
 root(1,root,agree).
@@ -53,7 +53,7 @@ nmod:with(1,shell,talon).
 conj:and(1,agree,soar).
 advmod(1,soar,aloft).
 % relations.
-is_with(1,shell,she_talon).
+aos(1,is_with,shell,she_talon).
 %% on their way they met a crow who said to the eagle.
 % dependencies.
 root(2,root,meet).
@@ -77,8 +77,8 @@ nsubj(3,eating,tortoise).
 cop(3,eating,be).
 amod(3,eating,good).
 % relations.
-be(3,tortoise,good_eating).
-be(3,tortoise,eating).
+aos(3,be,tortoise,good_eating).
+aos(3,be,tortoise,eating).
 %% the shell is too hard.
 % dependencies.
 root(4,root,hard).
@@ -87,8 +87,8 @@ nsubj(4,hard,shell).
 cop(4,hard,be).
 advmod(4,hard,too).
 % relations.
-be(4,shell,hard).
-be(4,shell,too_hard).
+aos(4,be,shell,hard).
+aos(4,be,shell,too_hard).
 %% said the eagle in reply.
 % dependencies.
 root(5,root,say).
@@ -97,7 +97,7 @@ nsubj(5,say,eagle).
 case(5,reply,in).
 nmod:in(5,eagle,reply).
 % relations.
-be_in(5,eagle,reply).
+aos(5,be_in,eagle,reply).
 %% the rocks will soon crack the shell.
 % dependencies.
 root(6,root,crack).
@@ -108,8 +108,8 @@ advmod(6,crack,soon).
 det(6,shell,the).
 dobj(6,crack,shell).
 % relations.
-will_soon_crack(6,rock,shell).
-will_crack(6,rock,shell).
+aos(6,will_soon_crack,rock,shell).
+aos(6,will_crack,rock,shell).
 %% was the crow 's answer.
 % dependencies.
 root(7,root,be).
@@ -118,7 +118,7 @@ nmod:poss(7,answer,crow).
 case(7,crow,'s).
 nsubj(7,be,answer).
 % relations.
-has(7,crow,answer).
+aos(7,has,crow,answer).
 %% and the eagle taking the hint let fall the tortoise on a sharp rock and the two birds made a hearty meal of the tortoise.
 % dependencies.
 root(8,root,eagle).
@@ -148,15 +148,15 @@ case(8,tortoise,of).
 det(8,tortoise,the).
 nmod:of(8,meal,tortoise).
 % relations.
-let(8,hint,fall_on_rock).
-let(8,hint,fall_on_sharp_rock).
-fall_tortoise_on(8,hint,sharp_rock).
-make(8,take,hearty_meal).
-fall_on(8,hint,rock).
-make(8,take,meal_of_tortoise).
-fall_tortoise_on(8,hint,rock).
-make(8,take,hearty_meal_of_tortoise).
-fall(8,hint,tortoise).
-let(8,hint,fall).
-fall_on(8,hint,sharp_rock).
-make(8,take,meal).
+aos(8,let,hint,fall_on_rock).
+aos(8,let,hint,fall_on_sharp_rock).
+aos(8,fall_tortoise_on,hint,sharp_rock).
+aos(8,make,take,hearty_meal).
+aos(8,fall_on,hint,rock).
+aos(8,make,take,meal_of_tortoise).
+aos(8,fall_tortoise_on,hint,rock).
+aos(8,make,take,hearty_meal_of_tortoise).
+aos(8,fall,hint,tortoise).
+aos(8,let,hint,fall).
+aos(8,fall_on,hint,sharp_rock).
+aos(8,make,take,meal).

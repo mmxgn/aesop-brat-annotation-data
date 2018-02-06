@@ -26,13 +26,13 @@ dobj(0,give,water).
 mark(0,drink,to).
 acl:to(0,water,drink).
 % relations.
-give(0,thirst,they).
-come_to(0,thirst,farmer).
-overcome(0,partridge,thirst_come).
-give(0,thirst,water_drink).
-overcome(0,wasp,thirst_come).
-overcome(0,wasp,thirst_come_to_farmer).
-overcome(0,partridge,thirst_come_to_farmer).
+aos(0,give,thirst,they).
+aos(0,come_to,thirst,farmer).
+aos(0,overcome,partridge,thirst_come).
+aos(0,give,thirst,water_drink).
+aos(0,overcome,wasp,thirst_come).
+aos(0,overcome,wasp,thirst_come_to_farmer).
+aos(0,overcome,partridge,thirst_come_to_farmer).
 %% they promised amply to repay him the favor which they asked.
 % dependencies.
 root(1,root,promise).
@@ -49,8 +49,8 @@ ref(1,favor,which).
 nsubj(1,ask,they).
 acl:relcl(1,favor,ask).
 % relations.
-promise(1,they,repay).
-promise_amply(1,they,repay).
+aos(1,promise,they,repay).
+aos(1,promise_amply,they,repay).
 %% the partridges declared that they would dig around his vines and make them produce finer grapes.
 % dependencies.
 root(2,root,declare).
@@ -72,8 +72,8 @@ ccomp(2,make,produce).
 compound(2,grape,finer).
 dobj(2,produce,grape).
 % relations.
-dig_around(2,they,he_vine).
-produce(2,they,finer_grape).
+aos(2,dig_around,they,he_vine).
+aos(2,produce,they,finer_grape).
 %% the wasps said that they would keep guard and drive off thieves with their stings.
 % dependencies.
 root(3,root,say).
@@ -94,7 +94,7 @@ case(3,sting,with).
 nmod:poss(3,sting,they).
 nmod:with(3,thief,sting).
 % relations.
-is_with(3,thief,they_sting).
+aos(3,is_with,thief,they_sting).
 %% but the farmer interrupted them saying.
 % dependencies.
 root(4,root,interrupt).
@@ -141,10 +141,10 @@ case(6,you,than).
 case(6,you,to).
 nmod:to(6,give,you).
 % relations.
-be_better_for(6,it,I).
-be_surely_better_for(6,it,I).
-give(6,it,water).
-give_water_to(6,it,they).
-give_water_than(6,it,than_you).
-be(6,it,better).
-be(6,it,surely_better).
+aos(6,be_better_for,it,I).
+aos(6,be_surely_better_for,it,I).
+aos(6,give,it,water).
+aos(6,give_water_to,it,they).
+aos(6,give_water_than,it,than_you).
+aos(6,be,it,better).
+aos(6,be,it,surely_better).

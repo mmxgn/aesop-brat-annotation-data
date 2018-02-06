@@ -32,21 +32,21 @@ case(0,work,without).
 amod(0,work,hard).
 nmod:without(0,enough,work).
 % relations.
-enough_while(0,himself,he).
-scarcely_enough_while(0,himself,he).
-scarcely_enough_without(0,himself,hard_work).
-enough_without(0,himself,work).
-congratulate_horse(0,ass,so_ungrudgingly).
-enough_without(0,himself,hard_work).
-congratulate(0,ass,horse).
-scarcely_enough_without(0,himself,work).
-scarcely_enough(0,himself,eat_that).
-enough(0,himself,eat_that).
-enough(0,himself,eat).
-scarcely_enough(0,himself,eat).
-enough(0,himself,eat_even_that).
-congratulate_horse(0,ass,ungrudgingly).
-scarcely_enough(0,himself,eat_even_that).
+aos(0,enough_while,himself,he).
+aos(0,scarcely_enough_while,himself,he).
+aos(0,scarcely_enough_without,himself,hard_work).
+aos(0,enough_without,himself,work).
+aos(0,congratulate_horse,ass,so_ungrudgingly).
+aos(0,enough_without,himself,hard_work).
+aos(0,congratulate,ass,horse).
+aos(0,scarcely_enough_without,himself,work).
+aos(0,scarcely_enough,himself,eat_that).
+aos(0,enough,himself,eat_that).
+aos(0,enough,himself,eat).
+aos(0,scarcely_enough,himself,eat).
+aos(0,enough,himself,eat_even_that).
+aos(0,congratulate_horse,ass,ungrudgingly).
+aos(0,scarcely_enough,himself,eat_even_that).
 %% but when war broke out a heavily armed soldier mounted the horse and riding him to the charge rushed into the very midst of the enemy.
 % dependencies.
 root(1,root,break).
@@ -90,9 +90,9 @@ case(2,battlefield,on).
 det(2,battlefield,the).
 nmod:on(2,fall,battlefield).
 % relations.
-be(2,horse,wound).
-fall(2,horse,dead).
-fall_on(2,horse,battlefield).
+aos(2,be,horse,wound).
+aos(2,fall,horse,dead).
+aos(2,fall_on,horse,battlefield).
 %% then the ass seeing all these things changed his mind and commiserated the horse.
 % dependencies.
 root(3,root,change).
@@ -111,5 +111,5 @@ conj:and(3,change,commiserate).
 det(3,horse,the).
 dobj(3,commiserate,horse).
 % relations.
-change(3,ass,he_mind).
-commiserate(3,ass,horse).
+aos(3,change,ass,he_mind).
+aos(3,commiserate,ass,horse).

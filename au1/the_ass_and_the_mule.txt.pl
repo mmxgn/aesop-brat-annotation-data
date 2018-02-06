@@ -63,12 +63,12 @@ nsubj(1,bear,he).
 aux(1,bear,could).
 ccomp(1,more,bear).
 % relations.
-ascend(1,he,steep_path).
-ascend(1,he,steep_path_of_mountain).
-carry(1,plain,he_load).
-carry_he_load_with(1,plain,ease).
-ascend(1,he,path).
-ascend(1,he,path_of_mountain).
+aos(1,ascend,he,steep_path).
+aos(1,ascend,he,steep_path_of_mountain).
+aos(1,carry,plain,he_load).
+aos(1,carry_he_load_with,plain,ease).
+aos(1,ascend,he,path).
+aos(1,ascend,he,path_of_mountain).
 %% he entreated his companion to relieve him of a small portion that he might carry home the rest.
 % dependencies.
 root(2,root,entreat).
@@ -90,8 +90,8 @@ advmod(2,carry,home).
 det(2,rest,the).
 dobj(2,carry,rest).
 % relations.
-carry_home(2,he,rest).
-carry(2,he,rest).
+aos(2,carry_home,he,rest).
+aos(2,carry,he,rest).
 %% but the mule paid no attention to the request.
 % dependencies.
 root(3,root,pay).
@@ -180,7 +180,7 @@ nmod:beneath(6,groan,burden).
 case(6,himself,to).
 nmod:to(6,say,himself).
 % relations.
-say_to(6,mule,himself).
+aos(6,say_to,mule,himself).
 %% i am treated according to my deserts.
 % dependencies.
 root(7,root,treat).
@@ -191,8 +191,8 @@ mwe(7,accord,to).
 nmod:poss(7,desert,my).
 nmod:according_to(7,treat,desert).
 % relations.
-be_treat_accord_to(7,i,my_desert).
-be(7,i,treat).
+aos(7,be_treat_accord_to,i,my_desert).
+aos(7,be,i,treat).
 %% if i had only been willing to assist the ass a little in his need i should not now be bearing together with his burden himself as well.
 % dependencies.
 root(8,root,willing).
@@ -225,7 +225,7 @@ nmod:npmod(8,burden,himself).
 advmod(8,bear,as).
 mwe(8,as,well).
 % relations.
-assist_ass_in(8,i,little).
-have(8,i,have_only_willing).
-assist(8,i,ass).
-have(8,i,have_willing).
+aos(8,assist_ass_in,i,little).
+aos(8,have,i,have_only_willing).
+aos(8,assist,i,ass).
+aos(8,have,i,have_willing).

@@ -35,9 +35,9 @@ case(0,oxen,among).
 det(0,oxen,the).
 nmod:among(0,shed,oxen).
 % relations.
-hide(0,stag,himself).
-take_shelter_in(0,stag,farmyard).
-take(0,stag,shelter).
+aos(0,hide,stag,himself).
+aos(0,take_shelter_in,stag,farmyard).
+aos(0,take,stag,shelter).
 %% an ox gave him this kindly warning.
 % dependencies.
 root(1,root,give).
@@ -48,10 +48,10 @@ dobj(1,give,this).
 advmod(1,warn,kindly).
 acl(1,this,warn).
 % relations.
-give(1,ox,this_warn).
-give(1,ox,this_kindly_warn).
-give(1,ox,this).
-give(1,ox,he).
+aos(1,give,ox,this_warn).
+aos(1,give,ox,this_kindly_warn).
+aos(1,give,ox,this).
+aos(1,give,ox,he).
 %% o unhappy creature.
 % dependencies.
 root(2,root,creature).
@@ -81,10 +81,10 @@ case(3,enemy,of).
 nmod:poss(3,enemy,you).
 nmod:of(3,house,enemy).
 % relations.
-should_incur(3,you,trust).
-should_incur(3,you,destruction).
-should_thus_incur(3,you,trust).
-should_thus_incur(3,you,destruction).
+aos(3,should_incur,you,trust).
+aos(3,should_incur,you,destruction).
+aos(3,should_thus_incur,you,trust).
+aos(3,should_thus_incur,you,destruction).
 %% ' the stag replied.
 % dependencies.
 root(4,root,reply).
@@ -143,7 +143,7 @@ conj:but(6,come,see).
 det(6,stag,the).
 dobj(6,see,stag).
 % relations.
-feed(6,herdsman,he_cattle).
+aos(6,feed,herdsman,he_cattle).
 %% and even the farm-bailiff with several laborers passed through the shed and failed to notice him.
 % dependencies.
 root(7,root,even).
@@ -166,8 +166,8 @@ mark(7,notice,to).
 xcomp(7,fail,notice).
 dobj(7,notice,he).
 % relations.
-pass_through(7,farm-bailiff,shed).
-is_with(7,farm-bailiff,several_laborer).
+aos(7,pass_through,farm-bailiff,shed).
+aos(7,is_with,farm-bailiff,several_laborer).
 %% the stag congratulating himself on his safety began to express his sincere thanks to the oxen who had kindly helped him in the hour of need.
 % dependencies.
 root(8,root,begin).
@@ -199,8 +199,8 @@ nmod:in(8,help,hour).
 case(8,need,of).
 nmod:of(8,hour,need).
 % relations.
-express(8,stag_congratulating,he_thanks).
-express(8,stag_congratulating,he_sincere_thanks).
+aos(8,express,stag_congratulating,he_thanks).
+aos(8,express,stag_congratulating,he_sincere_thanks).
 %% one of them again answered him.
 % dependencies.
 root(9,root,answer).
@@ -224,10 +224,10 @@ cop(10,over,be).
 neg(10,over,not).
 dep(10,wish,over).
 % relations.
-wish(10,we,you).
-wish_well(10,we,you).
-indeed_wish(10,we,you).
-indeed_wish_well(10,we,you).
+aos(10,wish,we,you).
+aos(10,wish_well,we,you).
+aos(10,indeed_wish,we,you).
+aos(10,indeed_wish_well,we,you).
 %% there is one other yet to pass through the shed who has as it were a hundred eyes and until he has come and gone your life is still in peril.
 % dependencies.
 root(11,root,be).
@@ -266,9 +266,9 @@ advmod(11,peril,still).
 case(11,peril,in).
 ccomp(11,have,peril).
 % relations.
-be_in(11,you_life,peril).
-be_in(11,you_life,still_peril).
-be(11,it,hundred_eye).
+aos(11,be_in,you_life,peril).
+aos(11,be_in,you_life,still_peril).
+aos(11,be,it,hundred_eye).
 %% at that moment the master himself entered and having had to complain that his oxen had not been properly fed he went up to their racks and cried out.
 % dependencies.
 root(12,root,master).
@@ -304,7 +304,7 @@ conj:and(12,enter,cry).
 conj:and(12,go,cry).
 compound:prt(12,cry,out).
 % relations.
-go_up_to(12,he,they_rack).
+aos(12,go_up_to,he,they_rack).
 %% why is there such a scarcity of fodder.
 % dependencies.
 root(13,root,be).
@@ -368,12 +368,12 @@ case(16,straw,of).
 det(16,straw,the).
 nmod:of(16,peep,straw).
 % relations.
-spy(16,he,tip).
-tip_of(16,he,antler).
-spy(16,he,tip_of_antler).
-tip_of(16,he,antler_of_stag).
-be_in(16,everything,turn).
-spy(16,he,tip_of_antler_of_stag).
+aos(16,spy,he,tip).
+aos(16,tip_of,he,antler).
+aos(16,spy,he,tip_of_antler).
+aos(16,tip_of,he,antler_of_stag).
+aos(16,be_in,everything,turn).
+aos(16,spy,he,tip_of_antler_of_stag).
 %% then summoning his laborers he ordered that the stag should be seized and killed.
 % dependencies.
 root(17,root,summon).
@@ -394,4 +394,4 @@ cc(17,seize,and).
 ccomp(17,order,kill).
 conj:and(17,seize,kill).
 % relations.
-be(17,stag,seize).
+aos(17,be,stag,seize).

@@ -22,14 +22,14 @@ aux(0,pass,be).
 acl:relcl(0,house-dog,pass).
 nmod(0,pass,by).
 % relations.
-be(0,gaunt_wolf,dead).
-be_dead_with(0,gaunt_wolf,hunger).
-be(0,wolf,dead).
-be(0,gaunt_wolf,almost_dead).
-be_almost_dead_with(0,wolf,hunger).
-be(0,wolf,almost_dead).
-be_almost_dead_with(0,gaunt_wolf,hunger).
-be_dead_with(0,wolf,hunger).
+aos(0,be,gaunt_wolf,dead).
+aos(0,be_dead_with,gaunt_wolf,hunger).
+aos(0,be,wolf,dead).
+aos(0,be,gaunt_wolf,almost_dead).
+aos(0,be_almost_dead_with,wolf,hunger).
+aos(0,be,wolf,almost_dead).
+aos(0,be_almost_dead_with,gaunt_wolf,hunger).
+aos(0,be_dead_with,wolf,hunger).
 %% ah cousin.
 % dependencies.
 root(1,root,cousin).
@@ -63,7 +63,7 @@ ccomp(4,be,ruin).
 case(4,you,of).
 nmod:of(4,ruin,you).
 % relations.
-ruin_of(4,the,you).
+aos(4,ruin_of,the,you).
 %% why do you not work steadily as i do and get your food regularly given to you.
 % dependencies.
 root(5,root,work).
@@ -85,8 +85,8 @@ case(5,you,give).
 case(5,you,to).
 advcl:given(5,get,you).
 % relations.
-get(5,you,you_food).
-get_regularly(5,you,you_food).
+aos(5,get,you,you_food).
+aos(5,get_regularly,you,you_food).
 %% i would have no objection.
 % dependencies.
 root(6,root,have).
@@ -111,8 +111,8 @@ advmod(8,get,only).
 det(8,place,a).
 dobj(8,get,place).
 % relations.
-could_get(8,i,place).
-could_only_get(8,i,place).
+aos(8,could_get,i,place).
+aos(8,could_only_get,i,place).
 %% i will easily arrange that for you.
 % dependencies.
 root(9,root,arrange).
@@ -144,7 +144,7 @@ conj:and(11,come,share).
 nmod:poss(11,work,my).
 dobj(11,share,work).
 % relations.
-shall_share(11,you,my_work).
+aos(11,shall_share,you,my_work).
 %% so the wolf and the dog went towards the town together.
 % dependencies.
 root(12,root,go).
@@ -160,10 +160,10 @@ det(12,town,the).
 nmod:towards(12,go,town).
 advmod(12,go,together).
 % relations.
-go_together_towards(12,wolf,town).
-go_towards(12,dog,town).
-go_towards(12,wolf,town).
-go_together_towards(12,dog,town).
+aos(12,go_together_towards,wolf,town).
+aos(12,go_towards,dog,town).
+aos(12,go_towards,wolf,town).
+aos(12,go_together_towards,dog,town).
 %% on the way there the wolf noticed that the hair on a certain part of the dog 's neck was very much worn away so he asked him how that had come about.
 % dependencies.
 root(13,root,notice).
@@ -200,18 +200,18 @@ aux(13,come,have).
 dep(13,ask,come).
 nmod(13,come,about).
 % relations.
-be(13,hair,much_wear_so).
-be(13,hair,very_much_wear).
-be(13,hair,much_wear).
-be(13,hair,wear_so).
-be(13,hair,wear_away_so).
-notice_on(13,wolf,way_there).
-of(13,dog,neck).
-notice_on(13,wolf,there).
-be(13,hair,very_much_wear_away_so).
-be(13,hair,very_much_wear_so).
-be(13,hair,wear).
-be(13,hair,much_wear_away_so).
+aos(13,be,hair,much_wear_so).
+aos(13,be,hair,very_much_wear).
+aos(13,be,hair,much_wear).
+aos(13,be,hair,wear_so).
+aos(13,be,hair,wear_away_so).
+aos(13,notice_on,wolf,way_there).
+aos(13,of,dog,neck).
+aos(13,notice_on,wolf,there).
+aos(13,be,hair,very_much_wear_away_so).
+aos(13,be,hair,very_much_wear_so).
+aos(13,be,hair,wear).
+aos(13,be,hair,much_wear_away_so).
 %% oh it is nothing.
 % dependencies.
 root(14,root,be).
@@ -247,11 +247,11 @@ dobj(16,keep,I).
 amod(16,I,chained).
 advmod(16,keep,up).
 % relations.
-keep_up(16,collar,I_chained).
-keep(16,collar,I).
-keep_up(16,collar,I).
-keep(16,collar,I_chained).
-be_put_on_at(16,collar,night).
+aos(16,keep_up,collar,I_chained).
+aos(16,keep,collar,I).
+aos(16,keep_up,collar,I).
+aos(16,keep,collar,I_chained).
+aos(16,be_put_on_at,collar,night).
 %% it chafes a bit but one soon gets used to it.
 % dependencies.
 root(17,root,chafe).
@@ -267,17 +267,17 @@ conj:but(17,chafe,use).
 case(17,it,to).
 nmod:to(17,use,it).
 % relations.
-get(17,it,use).
-chafe(17,it,bit).
-chafe_soon(17,it,bit).
-get_use_to(17,it,it).
+aos(17,get,it,use).
+aos(17,chafe,it,bit).
+aos(17,chafe_soon,it,bit).
+aos(17,get_use_to,it,it).
 %% is that all.
 % dependencies.
 root(18,root,that).
 cop(18,that,be).
 nsubj(18,that,all).
 % relations.
-be(18,all,that).
+aos(18,be,all,that).
 %% said the wolf.
 % dependencies.
 root(19,root,say).
@@ -293,4 +293,4 @@ case(20,you,to).
 nmod:to(20,good-bye,you).
 dobj(20,master,dog).
 % relations.
-master(20,good-bye,dog).
+aos(20,master,good-bye,dog).

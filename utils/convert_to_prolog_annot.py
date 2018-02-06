@@ -44,7 +44,8 @@ if __name__ == "__main__":
             if regexp_entity.match(annot):
                 groupdict = next(regexp_entity.finditer(annot)).groupdict()
                 relname = groupdict['type'].lower()
-                str_ = "{}({}).".format(relname, _l(groupdict['object']))
+                sent_no = sentence_no(contents, int(groupdict['start']))
+                str_ = "{}({},'{}').".format(relname,sent_no, _l(groupdict['object']))
                 #print("{} -> {}".format(annot, str_))
 
                 variable_to_object[groupdict['variable']] = _l(groupdict['object'])
@@ -76,7 +77,7 @@ if __name__ == "__main__":
 
 
         rels = annot.split('\n')
-        regexp_entity = re.compile('(?P<variable>[A-Z][0-9]+)\s+(?P<type>[A-Z][A-Za-z_]*)\s+(?P<start>[0-9]+)\s+(?P<stop>[0-9]+)\s+(?P<object>[a-z]+)')
+        regexp_entity = re.compile('(?P<variable>[A-Z][0-9]+)\s+(?P<type>[A-Z][A-Za-z_]*)\s+(?P<start>[0-9]+)\s+(?P<stop>[0-9]+)\s+(?P<object>(\w\s)+)')
         regexp_relation = re.compile('(?P<variable>[A-Z][0-9]+)\s+(?P<referers>([A-Z][A-Za-z_]*:[A-Z][0-9]+\s*)+)')
         regexp_transitive = re.compile('(?P<arity>\*)\s+(?P<type>[A-Z][A-Za-z_]*)\s+(?P<refersTo1>[A-Z][0-9]+)\s+(?P<refersTo2>[A-Z][0-9]+)\s*')    
 

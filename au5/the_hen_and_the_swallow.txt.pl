@@ -19,9 +19,9 @@ dobj(0,nourish,they).
 case(0,life,into).
 nmod:into(0,nourish,life).
 % relations.
-carefully_keep(0,egg,they_warm).
-nourish(0,hen,they).
-keep(0,egg,they_warm).
+aos(0,carefully_keep,egg,they_warm).
+aos(0,nourish,hen,they).
+aos(0,keep,egg,they_warm).
 %% a swallow observing what she had done said.
 % dependencies.
 root(1,root,a).

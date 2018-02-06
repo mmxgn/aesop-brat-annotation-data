@@ -29,12 +29,12 @@ det(0,flock,the).
 amod(0,flock,neighbor).
 nmod:from(0,steal,flock).
 % relations.
-find(0,shepherd,whelp).
-once_find(0,shepherd,whelp).
-teach(0,shepherd,it).
-once_find(0,shepherd,whelp_of_wolf).
-find(0,shepherd,whelp_of_wolf).
-bring_up(0,shepherd,it).
+aos(0,find,shepherd,whelp).
+aos(0,once_find,shepherd,whelp).
+aos(0,teach,shepherd,it).
+aos(0,once_find,shepherd,whelp_of_wolf).
+aos(0,find,shepherd,whelp_of_wolf).
+aos(0,bring_up,shepherd,it).
 %% the wolf having shown himself an apt pupil said to the shepherd.
 % dependencies.
 root(1,root,say).
@@ -50,7 +50,7 @@ case(1,shepherd,to).
 det(1,shepherd,the).
 nmod:to(1,say,shepherd).
 % relations.
-say_to(1,wolf,shepherd).
+aos(1,say_to,wolf,shepherd).
 %% since you have taught me to steal you must keep a sharp lookout or you will lose some of your own flock.
 % dependencies.
 root(2,root,teach).
@@ -78,11 +78,11 @@ nmod:poss(2,flock,you).
 amod(2,flock,own).
 nmod:of(2,some,flock).
 % relations.
-keep(2,you,sharp_lookout).
-will_lose(2,you,some_of_you_flock).
-will_lose(2,you,some_of_you_own_flock).
-will_lose(2,you,some_you_own_flock).
-keep(2,you,lookout).
-have_teach(2,you,I).
-will_lose(2,you,some).
-will_lose(2,you,some_you_flock).
+aos(2,keep,you,sharp_lookout).
+aos(2,will_lose,you,some_of_you_flock).
+aos(2,will_lose,you,some_of_you_own_flock).
+aos(2,will_lose,you,some_you_own_flock).
+aos(2,keep,you,lookout).
+aos(2,have_teach,you,I).
+aos(2,will_lose,you,some).
+aos(2,will_lose,you,some_you_flock).

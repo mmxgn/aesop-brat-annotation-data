@@ -15,8 +15,8 @@ case(0,king,as).
 nmod:poss(0,king,they).
 nmod:as(0,lion,king).
 % relations.
-have(0,beast,lion_as_they_king).
-have(0,beast,lion).
+aos(0,have,beast,lion_as_they_king).
+aos(0,have,beast,lion).
 %% he was neither wrathful cruel nor tyrannical but just and gentle as a king could be.
 % dependencies.
 root(1,root,cruel).
@@ -38,8 +38,8 @@ nsubj(1,be,king).
 aux(1,be,could).
 dep(1,gentle,be).
 % relations.
-be(1,he,wrathful_cruel).
-be(1,he,cruel).
+aos(1,be,he,wrathful_cruel).
+aos(1,be,he,cruel).
 %% during his reign he made a royal proclamation for a general assembly of all the birds and beasts and drew up conditions for a universal league in which the wolf and the lamb the panther and the kid the tiger and the stag the dog and the hare should live together in perfect peace and amity.
 % dependencies.
 root(2,root,reign).
@@ -108,15 +108,15 @@ cc(2,peace,and).
 nmod:in(2,live,amity).
 conj:and(2,peace,amity).
 % relations.
-live(2,lamb,kid).
-should_live_together_in(2,lamb,peace).
-make(2,he,proclamation).
-draw_up(2,he,condition).
-should_live_in(2,wolf,peace).
-should_live_together_in(2,wolf,peace).
-should_live_in(2,lamb,peace).
-make(2,he,royal_proclamation).
-live_together(2,lamb,kid).
+aos(2,live,lamb,kid).
+aos(2,should_live_together_in,lamb,peace).
+aos(2,make,he,proclamation).
+aos(2,draw_up,he,condition).
+aos(2,should_live_in,wolf,peace).
+aos(2,should_live_together_in,wolf,peace).
+aos(2,should_live_in,lamb,peace).
+aos(2,make,he,royal_proclamation).
+aos(2,live_together,lamb,kid).
 %% the hare said.
 % dependencies.
 root(3,root,say).
@@ -153,7 +153,7 @@ case(4,strong,of).
 det(4,strong,the).
 nmod:of(4,side,strong).
 % relations.
-shall_take(4,weak,they_place).
+aos(4,shall_take,weak,they_place).
 %% and after the hare said this he ran for his life.
 % dependencies.
 root(5,root,say).
@@ -168,4 +168,4 @@ case(5,life,for).
 nmod:poss(5,life,he).
 nmod:for(5,run,life).
 % relations.
-run_for(5,he,he_life).
+aos(5,run_for,he,he_life).

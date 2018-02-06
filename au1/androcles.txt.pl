@@ -16,10 +16,10 @@ case(0,forest,to).
 det(0,forest,the).
 nmod:to(0,flee,forest).
 % relations.
-escape_from(0,slave,he_master).
-once_escape_from(0,slave,he_master).
-flee_to(0,slave,forest).
-name(0,slave,androcle).
+aos(0,escape_from,slave,he_master).
+aos(0,once_escape_from,slave,he_master).
+aos(0,flee_to,slave,forest).
+aos(0,name,slave,androcle).
 %% as he was wandering about there he came upon a lion lying down moaning and groaning.
 % dependencies.
 root(1,root,wander).
@@ -69,8 +69,8 @@ compound:prt(2,go,up).
 case(2,he,to).
 nmod:to(2,go,he).
 % relations.
-go_up_to(2,he,he).
-turn_at(2,he,first).
+aos(2,go_up_to,he,he).
+aos(2,turn_at,he,first).
 %% as he came near the lion put out his paw which was all swollen and bleeding and androcles found that a huge thorn had got into it and was causing all the pain.
 % dependencies.
 root(3,root,come).
@@ -112,9 +112,9 @@ det:predet(3,pain,all).
 det(3,pain,the).
 dobj(3,cause,pain).
 % relations.
-get_into(3,thorn,it).
-get_into(3,huge_thorn,it).
-cause(3,he,pain).
+aos(3,get_into,thorn,it).
+aos(3,get_into,huge_thorn,it).
+aos(3,cause,he,pain).
 %% he pulled out the thorn and bound up the paw of the lion who was soon able to rise and lick the hand of androcles like a dog.
 % dependencies.
 root(4,root,pull).
@@ -151,8 +151,8 @@ case(4,dog,like).
 det(4,dog,a).
 nmod:like(4,rise,dog).
 % relations.
-pull_out(4,he,thorn).
-bind_up(4,he,paw).
+aos(4,pull_out,he,thorn).
+aos(4,bind_up,he,paw).
 %% then the lion took androcles to his cave and every day used to bring him meat from which to live.
 % dependencies.
 root(5,root,lion).
@@ -215,13 +215,13 @@ case(6,day,for).
 amod(6,day,several).
 nmod:for(6,food,day).
 % relations.
-be_sentence(6,lion,throw).
-have(6,latter,have_keep_without_food).
-have(6,latter,have_keep_without_food_for_day).
-have(6,latter,have_keep).
-have(6,latter,have_keep_without_food_for_several_day).
-be_sentence(6,lion,throw_to_lion).
-be(6,lion,sentence).
+aos(6,be_sentence,lion,throw).
+aos(6,have,latter,have_keep_without_food).
+aos(6,have,latter,have_keep_without_food_for_day).
+aos(6,have,latter,have_keep).
+aos(6,have,latter,have_keep_without_food_for_several_day).
+aos(6,be_sentence,lion,throw_to_lion).
+aos(6,be,lion,sentence).
 %% the emperor and all his court came to see the spectacle and androcles was led out into the middle of the arena.
 % dependencies.
 root(7,root,come).
@@ -251,8 +251,8 @@ case(7,arena,of).
 det(7,arena,the).
 nmod:of(7,middle,arena).
 % relations.
-come(7,court,see).
-come(7,he_court,see).
+aos(7,come,court,see).
+aos(7,come,he_court,see).
 %% soon the lion was let loose from his den and rushed bounding and roaring towards his victim.
 % dependencies.
 root(8,root,lion).
@@ -307,9 +307,9 @@ det(9,dog,a).
 amod(9,dog,friendly).
 nmod:like(9,lick,dog).
 % relations.
-fawn_upon(9,he,he).
-recognise(9,he,he_friend).
-lick(9,he,he_hand).
+aos(9,fawn_upon,he,he).
+aos(9,recognise,he,he_friend).
+aos(9,lick,he,he_hand).
 %% the emperor surprised at this summoned androcles to him who told him the whole story.
 % dependencies.
 root(10,root,surprise).
@@ -329,7 +329,7 @@ det(10,story,the).
 amod(10,story,whole).
 xcomp(10,tell,story).
 % relations.
-surprise_at(10,emperor,this).
+aos(10,surprise_at,emperor,this).
 %% whereupon the slave was pardoned and freed and the lion let loose to his native forest.
 % dependencies.
 root(11,root,pardon).
@@ -350,8 +350,8 @@ nmod:poss(11,forest,he).
 amod(11,forest,native).
 nmod:to(11,lion,forest).
 % relations.
-lion_to(11,whereupon,he_native_forest).
-lion_to(11,whereupon,he_forest).
-lion_loose_to(11,whereupon,he_native_forest).
-lion_loose_to(11,whereupon,he_forest).
-be(11,whereupon,pardon).
+aos(11,lion_to,whereupon,he_native_forest).
+aos(11,lion_to,whereupon,he_forest).
+aos(11,lion_loose_to,whereupon,he_native_forest).
+aos(11,lion_loose_to,whereupon,he_forest).
+aos(11,be,whereupon,pardon).

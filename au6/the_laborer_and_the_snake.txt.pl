@@ -24,11 +24,11 @@ case(0,cottager,'s).
 amod(0,son,infant).
 nmod:on(0,inflict,son).
 % relations.
-inflict(0,snake,mortal_bite).
-inflict(0,snake,bite).
-on(0,cottager,infant_son).
-inflict_bite_on(0,snake,cottager_'s_infant_son).
-inflict_bite_on(0,snake,cottager_'s_son).
+aos(0,inflict,snake,mortal_bite).
+aos(0,inflict,snake,bite).
+aos(0,on,cottager,infant_son).
+aos(0,inflict_bite_on,snake,cottager_'s_infant_son).
+aos(0,inflict_bite_on,snake,cottager_'s_son).
 %% grieving over his loss the father resolved to kill the snake.
 % dependencies.
 root(1,root,grieve).
@@ -81,13 +81,13 @@ case(2,tail,of).
 nmod:poss(2,tail,its).
 nmod:of(2,end,tail).
 % relations.
-take_up(2,he,he_axe).
-come_out_of(2,it,its_hole_for_food).
-swing(2,he,too_hastily).
-swing(2,he_axe,too_hastily).
-come_out_of(2,it,its_hole).
-swing(2,he,hastily).
-swing(2,he_axe,hastily).
+aos(2,take_up,he,he_axe).
+aos(2,come_out_of,it,its_hole_for_food).
+aos(2,swing,he,too_hastily).
+aos(2,swing,he_axe,too_hastily).
+aos(2,come_out_of,it,its_hole).
+aos(2,swing,he,hastily).
+aos(2,swing,he_axe,hastily).
 %% after some time the cottager afraid that the snake would bite him also endeavored to make peace and placed some bread and salt in the hole.
 % dependencies.
 root(3,root,endeavor).
@@ -120,19 +120,19 @@ case(3,hole,in).
 det(3,hole,the).
 nmod:in(3,bread,hole).
 % relations.
-place(3,time,salt).
-afraid(3,time,cottager).
-make(3,time,peace).
-place(3,time,bread).
-place(3,time_afraid,bread).
-place(3,time_afraid,salt).
-place(3,time_afraid,bread_in_hole).
-is_in(3,bread,hole).
-make(3,time_afraid,peace).
-place(3,time,bread_in_hole).
-bite(3,snake,he).
-bite_also(3,snake,he).
-bread_in(3,salt,hole).
+aos(3,place,time,salt).
+aos(3,afraid,time,cottager).
+aos(3,make,time,peace).
+aos(3,place,time,bread).
+aos(3,place,time_afraid,bread).
+aos(3,place,time_afraid,salt).
+aos(3,place,time_afraid,bread_in_hole).
+aos(3,is_in,bread,hole).
+aos(3,make,time_afraid,peace).
+aos(3,place,time,bread_in_hole).
+aos(3,bite,snake,he).
+aos(3,bite_also,snake,he).
+aos(3,bread_in,salt,hole).
 %% the snake slightly hissing said.
 % dependencies.
 root(4,root,say).
@@ -184,9 +184,9 @@ case(6,son,of).
 nmod:poss(6,son,you).
 nmod:of(6,death,son).
 % relations.
-loss_of(6,i,my_tail).
-see(6,you,I).
-see(6,i,you).
+aos(6,loss_of,i,my_tail).
+aos(6,see,you,I).
+aos(6,see,i,you).
 %% no one truly forgets injuries in the presence of him who caused the injury.
 % dependencies.
 root(7,root,forget).

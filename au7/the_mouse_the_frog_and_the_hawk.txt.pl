@@ -79,21 +79,21 @@ xcomp(2,accustom,find).
 nmod:poss(2,food,they).
 dobj(2,find,food).
 % relations.
-join_together(2,mouse,frog_of_all).
-thus_join_together(2,mouse,frog_first_of_all).
-join(2,mouse,frog_of_all).
-be(2,they,where_accustom).
-thus_join(2,mouse,frog_first_of_all).
-join(2,mouse,frog).
-thus_join(2,mouse,frog_of_all).
-find(2,they,they_food).
-thus_join_together(2,mouse,frog).
-join(2,mouse,frog_first_of_all).
-thus_join_together(2,mouse,frog_of_all).
-join_together(2,mouse,frog_first_of_all).
-thus_join(2,mouse,frog).
-join_together(2,mouse,frog).
-be(2,they,accustom).
+aos(2,join_together,mouse,frog_of_all).
+aos(2,thus_join_together,mouse,frog_first_of_all).
+aos(2,join,mouse,frog_of_all).
+aos(2,be,they,where_accustom).
+aos(2,thus_join,mouse,frog_first_of_all).
+aos(2,join,mouse,frog).
+aos(2,thus_join,mouse,frog_of_all).
+aos(2,find,they,they_food).
+aos(2,thus_join_together,mouse,frog).
+aos(2,join,mouse,frog_first_of_all).
+aos(2,thus_join_together,mouse,frog_of_all).
+aos(2,join_together,mouse,frog_first_of_all).
+aos(2,thus_join,mouse,frog).
+aos(2,join_together,mouse,frog).
+aos(2,be,they,accustom).
 %% after this he gradually led him towards the pool in which he lived until reaching the very brink he suddenly jumped in dragging the mouse with him.
 % dependencies.
 root(3,root,lead).
@@ -125,10 +125,10 @@ dobj(3,drag,mouse).
 case(3,he,with).
 nmod:with(3,drag,he).
 % relations.
-lead(3,he,he).
-drag(3,he,mouse).
-gradually_lead(3,he,he).
-drag_mouse_with(3,he,he).
+aos(3,lead,he,he).
+aos(3,drag,he,mouse).
+aos(3,gradually_lead,he,he).
+aos(3,drag_mouse_with,he,he).
 %% the frog enjoyed the water amazingly and swam croaking about as if he had done a good deed.
 % dependencies.
 root(4,root,enjoy).
@@ -151,12 +151,12 @@ det(4,deed,a).
 amod(4,deed,good).
 dobj(4,do,deed).
 % relations.
-swim(4,frog,croak_about).
-have_do(4,he,good_deed).
-swim(4,frog,croak).
-have_do(4,he,deed).
-enjoy(4,frog,water).
-enjoy_amazingly(4,frog,water).
+aos(4,swim,frog,croak_about).
+aos(4,have_do,he,good_deed).
+aos(4,swim,frog,croak).
+aos(4,have_do,he,deed).
+aos(4,enjoy,frog,water).
+aos(4,enjoy_amazingly,frog,water).
 %% the unhappy mouse was soon suffocated by the water and his dead body floated about on the surface tied to the foot of the frog.
 % dependencies.
 root(5,root,float).
@@ -204,10 +204,10 @@ nmod:with(6,pounce,talon).
 dobj(6,carry,it).
 advmod(6,carry,aloft).
 % relations.
-pounce_with(6,it,he_talon).
-carry_aloft(6,hawk,it).
-pounce_upon(6,it,it).
-carry(6,hawk,it).
+aos(6,pounce_with,it,he_talon).
+aos(6,carry_aloft,hawk,it).
+aos(6,pounce_upon,it,it).
+aos(6,carry,hawk,it).
 %% the frog being still fastened to the leg of the mouse was also carried off a prisoner and was eaten by the hawk.
 % dependencies.
 root(7,root,carry).
@@ -235,7 +235,7 @@ case(7,hawk,by).
 det(7,hawk,the).
 nmod:agent(7,eat,hawk).
 % relations.
-be_eat_by(7,frog,hawk).
-be(7,frog,eat).
-be_also_carry_off(7,frog,prisoner).
-be_carry_off(7,frog,prisoner).
+aos(7,be_eat_by,frog,hawk).
+aos(7,be,frog,eat).
+aos(7,be_also_carry_off,frog,prisoner).
+aos(7,be_carry_off,frog,prisoner).

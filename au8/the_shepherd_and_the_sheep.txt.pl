@@ -38,17 +38,17 @@ conj:and(0,climb,shake).
 dobj(0,shake,they).
 compound:prt(0,shake,down).
 % relations.
-see(0,shepherd,oak_of_size_full).
-see(0,shepherd,oak_of_size_full_of_acorn).
-see(0,shepherd,oak_of_unusual_size).
-see(0,shepherd,oak_full_of_acorn).
-see(0,shepherd,oak).
-drive_he_sheep_to(0,shepherd,wood).
-see(0,shepherd,oak_full).
-see(0,shepherd,oak_of_unusual_size_full).
-see(0,shepherd,oak_of_unusual_size_full_of_acorn).
-drive(0,shepherd,he_sheep).
-see(0,shepherd,oak_of_size).
+aos(0,see,shepherd,oak_of_size_full).
+aos(0,see,shepherd,oak_of_size_full_of_acorn).
+aos(0,see,shepherd,oak_of_unusual_size).
+aos(0,see,shepherd,oak_full_of_acorn).
+aos(0,see,shepherd,oak).
+aos(0,drive_he_sheep_to,shepherd,wood).
+aos(0,see,shepherd,oak_full).
+aos(0,see,shepherd,oak_of_unusual_size_full).
+aos(0,see,shepherd,oak_of_unusual_size_full_of_acorn).
+aos(0,drive,shepherd,he_sheep).
+aos(0,see,shepherd,oak_of_size).
 %% the sheep eating the acorns inadvertently frayed and tore the cloak.
 % dependencies.
 root(1,root,sheep).
@@ -112,5 +112,5 @@ ref(4,clothes,who).
 acl:relcl(4,clothes,feed).
 dobj(4,feed,you).
 % relations.
-provide(4,you,wool).
-make_garment_for(4,you,other_man).
+aos(4,provide,you,wool).
+aos(4,make_garment_for,you,other_man).

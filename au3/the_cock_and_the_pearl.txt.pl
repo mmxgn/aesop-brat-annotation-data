@@ -23,14 +23,14 @@ case(0,straw,amid).
 det(0,straw,the).
 nmod:amid(0,shin,straw).
 % relations.
-be_strut_up(0,cock,farmyard).
-suddenly_espy(0,he,something).
-espy(0,he,something).
-espy(0,he,something_shin).
-suddenly_espy(0,he,something_shin).
-suddenly_espy(0,he,something_shin_amid_straw).
-espy(0,he,something_shin_amid_straw).
-be_once_strut_up(0,cock,farmyard).
+aos(0,be_strut_up,cock,farmyard).
+aos(0,suddenly_espy,he,something).
+aos(0,espy,he,something).
+aos(0,espy,he,something_shin).
+aos(0,suddenly_espy,he,something_shin).
+aos(0,suddenly_espy,he,something_shin_amid_straw).
+aos(0,espy,he,something_shin_amid_straw).
+aos(0,be_once_strut_up,cock,farmyard).
 %% ho.
 % dependencies.
 root(1,root,ho).
@@ -51,7 +51,7 @@ nsubj(4,I,that).
 cop(4,I,be).
 case(4,I,for).
 % relations.
-be_for(4,that,I).
+aos(4,be_for,that,I).
 %% and soon rooted it out from beneath the straw.
 % dependencies.
 root(5,root,soon).
@@ -97,7 +97,7 @@ aux(7,treasure,may).
 cop(7,treasure,be).
 det(7,treasure,a).
 % relations.
-may(7,you,may_treasure).
+aos(7,may,you,may_treasure).
 %% quoth master cock.
 % dependencies.
 root(8,root,quoth).
@@ -128,11 +128,11 @@ dobj(9,have,a).
 case(9,pearl,of).
 nmod:of(9,peck,pearl).
 % relations.
-would_have(9,i,single_barley-corn).
-would_have(9,i,a).
-would_rather_have(9,i,barley-corn).
-would_rather_have(9,i,a).
-would_have(9,i,than_a).
-would_have(9,i,barley-corn).
-would_rather_have(9,i,single_barley-corn).
-would_rather_have(9,i,than_a).
+aos(9,would_have,i,single_barley-corn).
+aos(9,would_have,i,a).
+aos(9,would_rather_have,i,barley-corn).
+aos(9,would_rather_have,i,a).
+aos(9,would_have,i,than_a).
+aos(9,would_have,i,barley-corn).
+aos(9,would_rather_have,i,single_barley-corn).
+aos(9,would_rather_have,i,than_a).

@@ -18,7 +18,7 @@ acl:relcl(0,pitcher,full).
 case(0,water,of).
 nmod:of(0,full,water).
 % relations.
-half-dead_with(0,crow,thirst).
+aos(0,half-dead_with,crow,thirst).
 %% but when the crow put its beak into the mouth of the pitcher he found that only very little water was left in it and that he could not reach far enough down to get at it.
 % dependencies.
 root(1,root,put).
@@ -61,12 +61,12 @@ xcomp(1,reach,get).
 case(1,it,at).
 nmod:at(1,get,it).
 % relations.
-be(1,little_water,leave).
-be(1,water,leave).
-be_leave_in(1,little_water,it).
-get_at(1,he,it).
-put(1,crow,its_beak).
-be_leave_in(1,water,it).
+aos(1,be,little_water,leave).
+aos(1,be,water,leave).
+aos(1,be_leave_in,little_water,it).
+aos(1,get_at,he,it).
+aos(1,put,crow,its_beak).
+aos(1,be_leave_in,water,it).
 %% he tried and he tried but at last had to give up in despair.
 % dependencies.
 root(2,root,try).
@@ -87,8 +87,8 @@ compound:prt(2,give,up).
 case(2,despair,in).
 nmod:in(2,give,despair).
 % relations.
-try(2,he,he_try).
-have_at(2,he,last).
+aos(2,try,he,he_try).
+aos(2,have_at,he,last).
 %% then a thought came to him and he took a pebble and dropped it into the pitcher.
 % dependencies.
 root(3,root,come).
@@ -111,9 +111,9 @@ case(3,pitcher,into).
 det(3,pitcher,the).
 nmod:into(3,drop,pitcher).
 % relations.
-take(3,he,pebble).
-come_to(3,thought,he).
-drop(3,he,it).
+aos(3,take,he,pebble).
+aos(3,come_to,thought,he).
+aos(3,drop,he,it).
 %% then he took another pebble and dropped it into the pitcher.
 % dependencies.
 root(4,root,take).
@@ -129,7 +129,7 @@ case(4,pitcher,into).
 det(4,pitcher,the).
 nmod:into(4,drop,pitcher).
 % relations.
-drop(4,he,it).
+aos(4,drop,he,it).
 %% then he took another pebble and dropped that into the pitcher.
 % dependencies.
 root(5,root,take).
@@ -145,7 +145,7 @@ case(5,pitcher,into).
 det(5,pitcher,the).
 nmod:into(5,drop,pitcher).
 % relations.
-drop_into(5,he,pitcher).
+aos(5,drop_into,he,pitcher).
 %% then he took another pebble and dropped that into the pitcher.
 % dependencies.
 root(6,root,take).
@@ -161,7 +161,7 @@ case(6,pitcher,into).
 det(6,pitcher,the).
 nmod:into(6,drop,pitcher).
 % relations.
-drop_into(6,he,pitcher).
+aos(6,drop_into,he,pitcher).
 %% then he took another pebble and dropped that into the pitcher.
 % dependencies.
 root(7,root,take).
@@ -177,7 +177,7 @@ case(7,pitcher,into).
 det(7,pitcher,the).
 nmod:into(7,drop,pitcher).
 % relations.
-drop_into(7,he,pitcher).
+aos(7,drop_into,he,pitcher).
 %% then he took another pebble and dropped that into the pitcher.
 % dependencies.
 root(8,root,take).
@@ -193,7 +193,7 @@ case(8,pitcher,into).
 det(8,pitcher,the).
 nmod:into(8,drop,pitcher).
 % relations.
-drop_into(8,he,pitcher).
+aos(8,drop_into,he,pitcher).
 %% at last at last he saw the water mount up near him and after casting in a few more pebbles he was able to quench his thirst and save his life.
 % dependencies.
 root(9,root,see).
@@ -232,7 +232,7 @@ conj:and(9,quench,save).
 nmod:poss(9,life,he).
 dobj(9,save,life).
 % relations.
-see_at(9,he,last_at_last).
-mount_near(9,water,he).
-mount_up_near(9,water,he).
-see_at(9,he,last).
+aos(9,see_at,he,last_at_last).
+aos(9,mount_near,water,he).
+aos(9,mount_up_near,water,he).
+aos(9,see_at,he,last).

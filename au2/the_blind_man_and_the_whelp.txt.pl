@@ -16,12 +16,12 @@ case(0,hand,with).
 nmod:poss(0,hand,he).
 nmod:with(0,touch,hand).
 % relations.
-be(0,blind_man,accustom).
-distinguish(0,blind_man,different_animal).
-distinguish(0,blind_man,animal).
-distinguish(0,man,animal).
-be(0,man,accustom).
-distinguish(0,man,different_animal).
+aos(0,be,blind_man,accustom).
+aos(0,distinguish,blind_man,different_animal).
+aos(0,distinguish,blind_man,animal).
+aos(0,distinguish,man,animal).
+aos(0,be,man,accustom).
+aos(0,distinguish,man,different_animal).
 %% the whelp of a wolf was brought him with a request that he would feel it and say what it was.
 % dependencies.
 root(1,root,bring).
@@ -48,8 +48,8 @@ dobj(1,be,what).
 nsubj(1,be,it).
 ccomp(1,say,be).
 % relations.
-be_bring(1,whelp,he).
-feel(1,he,it).
+aos(1,be_bring,whelp,he).
+aos(1,feel,he,it).
 %% he felt it and being in doubt said.
 % dependencies.
 root(2,root,feel).
@@ -61,7 +61,7 @@ case(2,doubt,in).
 csubj(2,say,doubt).
 conj:and(2,feel,say).
 % relations.
-feel(2,he,it).
+aos(2,feel,he,it).
 %% i do not quite know whether it is the cub of a fox or the whelp of a wolf but this i know full well.
 % dependencies.
 root(3,root,know).

@@ -24,10 +24,10 @@ case(0,wood,in).
 det(0,wood,the).
 nmod:in(0,hide,wood).
 % relations.
-hide(0,fox,himself).
-see(0,fox,lion).
-be(0,he,terribly_frightened).
-be(0,he,frightened).
+aos(0,hide,fox,himself).
+aos(0,see,fox,lion).
+aos(0,be,he,terribly_frightened).
+aos(0,be,he,frightened).
 %% next time however he came near the king of beasts he stopped at a safe distance and watched him pass by.
 % dependencies.
 root(1,root,next).
@@ -54,8 +54,8 @@ nsubj(1,pass,he).
 ccomp(1,watch,pass).
 nmod(1,pass,by).
 % relations.
-stop_at(1,he,distance).
-stop_at(1,he,safe_distance).
+aos(1,stop_at,he,distance).
+aos(1,stop_at,he,safe_distance).
 %% the third time they came near one another the fox went straight up to the lion and passed the time of day with him asking him how his family were and when he should have the pleasure of seeing him again.
 % dependencies.
 root(2,root,time).
@@ -103,13 +103,13 @@ acl:of(2,pleasure,see).
 dobj(2,see,he).
 advmod(2,see,again).
 % relations.
-go(2,fox,straight).
-pass(2,fox,time).
-time_of(2,pass,day).
-ask(2,he,he).
-go_up(2,fox,straight).
-come_near(2,they,one).
-pass(2,fox,time_of_day).
+aos(2,go,fox,straight).
+aos(2,pass,fox,time).
+aos(2,time_of,pass,day).
+aos(2,ask,he,he).
+aos(2,go_up,fox,straight).
+aos(2,come_near,they,one).
+aos(2,pass,fox,time_of_day).
 %% then turning his tail he parted from the lion without much ceremony.
 % dependencies.
 root(3,root,turn).
@@ -125,6 +125,6 @@ case(3,ceremony,without).
 amod(3,ceremony,much).
 nmod:without(3,part,ceremony).
 % relations.
-part_from(3,he,lion).
-part_without(3,he,ceremony).
-part_without(3,he,much_ceremony).
+aos(3,part_from,he,lion).
+aos(3,part_without,he,ceremony).
+aos(3,part_without,he,much_ceremony).

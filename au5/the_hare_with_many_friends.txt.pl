@@ -19,10 +19,10 @@ cop(0,friend,be).
 nmod:poss(0,friend,she).
 xcomp(0,claim,friend).
 % relations.
-be(0,hare,very_popular).
-be(0,hare,popular).
-claim(0,all,she_friend).
-be(0,all,she_friend).
+aos(0,be,hare,very_popular).
+aos(0,be,hare,popular).
+aos(0,claim,all,she_friend).
+aos(0,be,all,she_friend).
 %% but one day she heard the hounds approaching and hoped to escape them by the aid of her many friends.
 % dependencies.
 root(1,root,day).
@@ -49,8 +49,8 @@ nmod:poss(1,friend,she).
 amod(1,friend,many).
 nmod:of(1,aid,friend).
 % relations.
-hear(1,she,hound).
-hear(1,she,hound_approach).
+aos(1,hear,she,hound).
+aos(1,hear,she,hound_approach).
 %% so she went to the horse and asked him to carry her away from the hounds on his back.
 % dependencies.
 root(2,root,go).
@@ -75,10 +75,10 @@ case(2,back,on).
 nmod:poss(2,back,he).
 nmod:on(2,hound,back).
 % relations.
-go_to(2,she,horse).
-carry(2,he,she).
-carry_away(2,he,she).
-ask(2,she,he).
+aos(2,go_to,she,horse).
+aos(2,carry,he,she).
+aos(2,carry_away,he,she).
+aos(2,ask,she,he).
 %% but he declined stating that he had important work to do for his master.
 % dependencies.
 root(3,root,decline).
@@ -96,20 +96,20 @@ case(3,master,for).
 nmod:poss(3,master,he).
 nmod:for(3,do,master).
 % relations.
-have(3,he,work_do).
-have(3,he,work_do_for_he_master).
-do_for(3,work,he_master).
-have(3,he,important_work_do).
-do_for(3,important_work,he_master).
-decline(3,he,state).
-have(3,he,important_work_do_for_he_master).
+aos(3,have,he,work_do).
+aos(3,have,he,work_do_for_he_master).
+aos(3,do_for,work,he_master).
+aos(3,have,he,important_work_do).
+aos(3,do_for,important_work,he_master).
+aos(3,decline,he,state).
+aos(3,have,he,important_work_do_for_he_master).
 %% he felt sure.
 % dependencies.
 root(4,root,feel).
 nsubj(4,feel,he).
 xcomp(4,feel,sure).
 % relations.
-feel(4,he,sure).
+aos(4,feel,he,sure).
 %% he said.
 % dependencies.
 root(5,root,say).
@@ -128,7 +128,7 @@ case(6,assistance,to).
 nmod:poss(6,assistance,she).
 nmod:to(6,come,assistance).
 % relations.
-would_come_to(6,all,she_assistance).
+aos(6,would_come_to,all,she_assistance).
 %% she then applied to the bull and hoped that he would repel the hounds with his horns.
 % dependencies.
 root(7,root,apply).
@@ -150,9 +150,9 @@ case(7,horn,with).
 nmod:poss(7,horn,he).
 nmod:with(7,repel,horn).
 % relations.
-repel_hound_with(7,he,he_horn).
-apply_to(7,she,bull).
-repel(7,he,hound).
+aos(7,repel_hound_with,he,he_horn).
+aos(7,apply_to,she,bull).
+aos(7,repel,he,hound).
 %% the bull replied.
 % dependencies.
 root(8,root,reply).
@@ -174,11 +174,11 @@ case(9,lady,with).
 det(9,lady,a).
 nmod:with(9,appointment,lady).
 % relations.
-is_with(9,appointment,lady).
-have(9,i,appointment_with_lady).
-be(9,i,sorry).
-be(9,i,very_sorry).
-have(9,i,appointment).
+aos(9,is_with,appointment,lady).
+aos(9,have,i,appointment_with_lady).
+aos(9,be,i,sorry).
+aos(9,be,i,very_sorry).
+aos(9,have,i,appointment).
 %% but i feel sure that our friend the goat will do what you want.
 % dependencies.
 root(10,root,feel).
@@ -196,7 +196,7 @@ dobj(10,want,what).
 nsubj(10,want,you).
 ccomp(10,do,want).
 % relations.
-feel(10,i,sure).
+aos(10,feel,i,sure).
 %% the goat however feared that his back might do her some harm if he took her upon it.
 % dependencies.
 root(11,root,fear).
@@ -218,8 +218,8 @@ dobj(11,take,she).
 case(11,it,upon).
 nmod:upon(11,take,it).
 % relations.
-take(11,he,she).
-do(11,he_back,harm).
+aos(11,take,he,she).
+aos(11,do,he_back,harm).
 %% the ram he felt sure was the proper friend to apply to.
 % dependencies.
 root(12,root,friend).
@@ -235,7 +235,7 @@ mark(12,apply,to).
 acl:to(12,friend,apply).
 nmod(12,apply,to).
 % relations.
-feel(12,he,sure).
+aos(12,feel,he,sure).
 %% so she went to the ram and told him the case.
 % dependencies.
 root(13,root,go).
@@ -251,8 +251,8 @@ nsubj(13,case,he).
 det(13,case,the).
 xcomp(13,tell,case).
 % relations.
-go_to(13,she,ram).
-tell(13,she,he_case).
+aos(13,go_to,she,ram).
+aos(13,tell,she,he_case).
 %% the ram replied.
 % dependencies.
 root(14,root,reply).
@@ -343,8 +343,8 @@ dep(17,person,decline).
 det(17,task,the).
 dobj(17,decline,task).
 % relations.
-be(17,he,unable).
-take_responsibility_upon(17,he,himself).
+aos(17,be,he,unable).
+aos(17,take_responsibility_upon,he,himself).
 %% by this time the hounds were quite near and the hare took to her heels and luckily escaped.
 % dependencies.
 root(18,root,time).
@@ -369,6 +369,6 @@ advmod(18,escape,luckily).
 conj:and(18,near,escape).
 conj:and(18,take,escape).
 % relations.
-be(18,hound,quite_near).
-be(18,hound,near).
-take_to(18,hare,she_heel).
+aos(18,be,hound,quite_near).
+aos(18,be,hound,near).
+aos(18,take_to,hare,she_heel).

@@ -18,7 +18,7 @@ case(0,lair,in).
 nmod:poss(0,lair,he).
 nmod:in(0,maim,lair).
 % relations.
-maim_in(0,wolf,he_lair).
+aos(0,maim_in,wolf,he_lair).
 %% being in want of food he called to a sheep who was passing and asked him to fetch some water from a stream flowing close beside him.
 % dependencies.
 root(1,root,be).
@@ -53,14 +53,14 @@ advmod(1,flow,close).
 case(1,he,beside).
 nmod:beside(1,flow,he).
 % relations.
-fetch_water_from(1,he,stream_flow_close_beside_he).
-ask(1,he,he).
-call_of(1,he,food).
-fetch_water_from(1,he,stream).
-fetch_water_from(1,he,stream_flow_beside_he).
-fetch(1,he,water).
-fetch_water_from(1,he,stream_flow).
-fetch_water_from(1,he,stream_flow_close).
+aos(1,fetch_water_from,he,stream_flow_close_beside_he).
+aos(1,ask,he,he).
+aos(1,call_of,he,food).
+aos(1,fetch_water_from,he,stream).
+aos(1,fetch_water_from,he,stream_flow_beside_he).
+aos(1,fetch,he,water).
+aos(1,fetch_water_from,he,stream_flow).
+aos(1,fetch_water_from,he,stream_flow_close).
 %% for.
 % dependencies.
 root(2,root,for).
@@ -89,8 +89,8 @@ dobj(4,provide,myself).
 case(4,meat,with).
 nmod:with(4,provide,meat).
 % relations.
-find(4,i,means).
-provide(4,means,myself).
+aos(4,find,i,means).
+aos(4,provide,means,myself).
 %% yes.
 % dependencies.
 root(5,root,yes).
@@ -120,7 +120,7 @@ det(7,meat,the).
 dobj(7,provide,meat).
 advmod(7,provide,also).
 % relations.
-provide(7,I,meat).
-should_bring(7,i,you).
-provide_also(7,I,meat).
-would_doubtless(7,you,make).
+aos(7,provide,I,meat).
+aos(7,should_bring,i,you).
+aos(7,provide_also,I,meat).
+aos(7,would_doubtless,you,make).

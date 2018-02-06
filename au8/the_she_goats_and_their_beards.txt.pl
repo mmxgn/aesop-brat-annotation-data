@@ -27,10 +27,10 @@ dobj(0,equal,they).
 case(0,dignity,in).
 nmod:in(0,equal,dignity).
 % relations.
-be(0,she-goat,sorely_displeased).
-be(0,she-goat,displeased).
-make(0,she-goat,complaint).
-equal(0,female,they).
+aos(0,be,she-goat,sorely_displeased).
+aos(0,be,she-goat,displeased).
+aos(0,make,she-goat,complaint).
+aos(0,equal,female,they).
 %% allow them.
 % dependencies.
 root(1,root,allow).
@@ -95,7 +95,7 @@ case(4,appearance,in).
 amod(4,appearance,outside).
 nmod:in(4,we,appearance).
 % relations.
-matter_like(4,it,should_we_in_appearance).
-matter_like(4,it,should_we_in_outside_appearance).
-matter(4,it,little).
-matter_like(4,it,should_we).
+aos(4,matter_like,it,should_we_in_appearance).
+aos(4,matter_like,it,should_we_in_outside_appearance).
+aos(4,matter,it,little).
+aos(4,matter_like,it,should_we).

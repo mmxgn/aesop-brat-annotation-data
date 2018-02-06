@@ -26,8 +26,8 @@ nsubj(1,ask,he).
 dobj(1,ask,he).
 advmod(1,ask,sharply).
 % relations.
-ask(1,he,he).
-ask_sharply(1,he,he).
+aos(1,ask,he,he).
+aos(1,ask_sharply,he,he).
 %% why do you stand there gaping.
 % dependencies.
 root(2,root,stand).
@@ -37,7 +37,7 @@ nsubj(2,stand,you).
 expl(2,gaping,there).
 xcomp(2,stand,gaping).
 % relations.
-do_stand(2,you,gaping).
+aos(2,do_stand,you,gaping).
 %% everything is ready but you so come with me instantly.
 % dependencies.
 root(3,root,ready).
@@ -51,11 +51,11 @@ case(3,I,with).
 nmod:with(3,come,I).
 advmod(3,come,instantly).
 % relations.
-so_come_instantly_with(3,you,I).
-come_instantly_with(3,you,I).
-be(3,everything,ready).
-so_come_with(3,you,I).
-come_with(3,you,I).
+aos(3,so_come_instantly_with,you,I).
+aos(3,come_instantly_with,you,I).
+aos(3,be,everything,ready).
+aos(3,so_come_with,you,I).
+aos(3,come_with,you,I).
 %% the dog wagging his tail replied.
 % dependencies.
 root(4,root,reply).
@@ -77,8 +77,8 @@ nsubj(6,ready,i).
 cop(6,ready,be).
 advmod(6,ready,quite).
 % relations.
-be(6,i,ready).
-be(6,i,quite_ready).
+aos(6,be,i,ready).
+aos(6,be,i,quite_ready).
 %% it is you for whom i am waiting.
 % dependencies.
 root(7,root,you).
@@ -90,5 +90,5 @@ nsubj(7,wait,i).
 aux(7,wait,be).
 advcl:for(7,you,wait).
 % relations.
-be_you(7,it,i_be_wait).
-be(7,it,you).
+aos(7,be_you,it,i_be_wait).
+aos(7,be,it,you).

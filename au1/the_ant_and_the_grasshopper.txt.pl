@@ -22,12 +22,12 @@ nmod:poss(0,content,heart).
 case(0,heart,'s).
 nmod:to(0,chirp,content).
 % relations.
-be_hop_in(0,grasshopper,field_one_summer_'s_day).
-be_hop(0,grasshopper,chirp).
-chirp_to(0,grasshopper,its_heart_'s_content).
-to(0,heart,content).
-in(0,field_one_summer,day).
-be_hop(0,grasshopper,chirp_to_its_heart_'s_content).
+aos(0,be_hop_in,grasshopper,field_one_summer_'s_day).
+aos(0,be_hop,grasshopper,chirp).
+aos(0,chirp_to,grasshopper,its_heart_'s_content).
+aos(0,to,heart,content).
+aos(0,in,field_one_summer,day).
+aos(0,be_hop,grasshopper,chirp_to_its_heart_'s_content).
 %% an ant passed by bearing along with great toil an ear of corn he was taking to the nest.
 % dependencies.
 root(1,root,toil).
@@ -50,7 +50,7 @@ case(1,nest,to).
 det(1,nest,the).
 nmod:to(1,take,nest).
 % relations.
-be_take_to(1,he,nest).
+aos(1,be_take_to,he,nest).
 %% why not come and chat with me.
 % dependencies.
 root(2,root,come).
@@ -78,7 +78,7 @@ case(4,way,in).
 det(4,way,that).
 nmod:in(4,toiling,way).
 % relations.
-is_in(4,toiling,way).
+aos(4,is_in,toiling,way).
 %% i am helping to lay up food for the winter.
 % dependencies.
 root(5,root,help).
@@ -93,8 +93,8 @@ case(5,winter,for).
 det(5,winter,the).
 nmod:for(5,food,winter).
 % relations.
-lay_up(5,i,food).
-lay_up(5,i,food_for_winter).
+aos(5,lay_up,i,food).
+aos(5,lay_up,i,food_for_winter).
 %% said the ant.
 % dependencies.
 root(6,root,say).
@@ -112,7 +112,7 @@ xcomp(7,recommend,do).
 det(7,same,the).
 dobj(7,do,same).
 % relations.
-do(7,you,same).
+aos(7,do,you,same).
 %% why bother about winter.
 % dependencies.
 root(8,root,bother).
@@ -152,7 +152,7 @@ conj:and(11,go,continue).
 nsubj(11,toil,its).
 ccomp(11,continue,toil).
 % relations.
-go_on(11,ant,its_way).
+aos(11,go_on,ant,its_way).
 %% when the winter came the grasshopper had no food and found itself dying of hunger while it saw the ants distributing every day corn and grain from the stores they had collected in the summer.
 % dependencies.
 root(12,root,come).
@@ -194,6 +194,6 @@ case(12,summer,in).
 det(12,summer,the).
 nmod:in(12,collect,summer).
 % relations.
-die_of(12,itself,hunger).
-see(12,it,ant).
-find(12,grasshopper,itself).
+aos(12,die_of,itself,hunger).
+aos(12,see,it,ant).
+aos(12,find,grasshopper,itself).

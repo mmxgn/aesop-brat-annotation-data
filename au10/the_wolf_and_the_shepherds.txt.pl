@@ -19,10 +19,10 @@ case(0,dinner,for).
 nmod:poss(0,dinner,they).
 nmod:for(0,mutton,dinner).
 % relations.
-see_shepherd_in(0,wolf_passing,hut).
-haunch_of(0,eat,mutton).
-haunch_of(0,eat,mutton_for_they_dinner).
-see(0,wolf_passing,shepherd).
+aos(0,see_shepherd_in,wolf_passing,hut).
+aos(0,haunch_of,eat,mutton).
+aos(0,haunch_of,eat,mutton_for_they_dinner).
+aos(0,see,wolf_passing,shepherd).
 %% approaching them he said.
 % dependencies.
 root(1,root,approach).
@@ -49,6 +49,6 @@ nsubj(2,do,you).
 aux(2,do,be).
 advcl:as(2,do,do).
 % relations.
-do(2,i,you_be_do).
-would_raise(2,you,i_be).
-be(2,i,do).
+aos(2,do,i,you_be_do).
+aos(2,would_raise,you,i_be).
+aos(2,be,i,do).

@@ -72,7 +72,7 @@ nmod:of(1,say,he).
 case(1,man,among).
 nmod:among(1,say,man).
 % relations.
-be(1,himself,king).
+aos(1,be,himself,king).
 %% he ordered at the same time that all the apes be arranged in a long row on his right hand and on his left and that a throne be placed for him as was the custom among men.
 % dependencies.
 root(2,root,order).
@@ -118,24 +118,24 @@ ccomp(2,place,custom).
 case(2,man,among).
 nmod:among(2,custom,man).
 % relations.
-be(2,ape,arrange_in_row_on_he_left).
-be(2,ape,arrange_in_row_on_he_hand_on_he_left).
-order_at(2,he,same_time).
-be(2,throne,place).
-be(2,ape,arrange_in_row_on_he_right_hand_on_he_left).
-be(2,ape,arrange).
-be_arrange_in(2,ape,long_row_on_he_right_hand).
-be_arrange_in(2,ape,long_row_on_he_hand).
-be_arrange_in(2,ape,row).
-be_arrange_in(2,ape,row_on_he_hand).
-be(2,ape,arrange_in_long_row_on_he_hand_on_he_left).
-order_at(2,he,time).
-be_arrange_in(2,ape,long_row).
-be(2,ape,arrange_in_long_row_on_he_left).
-be_place_for(2,throne,he).
-be_arrange_in(2,ape,row_on_he_right_hand).
-be_arrange_on(2,ape,he_left).
-be(2,ape,arrange_in_long_row_on_he_right_hand_on_he_left).
+aos(2,be,ape,arrange_in_row_on_he_left).
+aos(2,be,ape,arrange_in_row_on_he_hand_on_he_left).
+aos(2,order_at,he,same_time).
+aos(2,be,throne,place).
+aos(2,be,ape,arrange_in_row_on_he_right_hand_on_he_left).
+aos(2,be,ape,arrange).
+aos(2,be_arrange_in,ape,long_row_on_he_right_hand).
+aos(2,be_arrange_in,ape,long_row_on_he_hand).
+aos(2,be_arrange_in,ape,row).
+aos(2,be_arrange_in,ape,row_on_he_hand).
+aos(2,be,ape,arrange_in_long_row_on_he_hand_on_he_left).
+aos(2,order_at,he,time).
+aos(2,be_arrange_in,ape,long_row).
+aos(2,be,ape,arrange_in_long_row_on_he_left).
+aos(2,be_place_for,throne,he).
+aos(2,be_arrange_in,ape,row_on_he_right_hand).
+aos(2,be_arrange_on,ape,he_left).
+aos(2,be,ape,arrange_in_long_row_on_he_right_hand_on_he_left).
 %% after these preparations he signified that the two men should be brought before him and greeted them with this salutation.
 % dependencies.
 root(3,root,signify).
@@ -160,14 +160,14 @@ case(3,salutation,with).
 det(3,salutation,this).
 nmod:with(3,greet,salutation).
 % relations.
-be(3,man,bring_before_he).
-be(3,two_man,bring_before_he).
-signify_after(3,he,preparation).
-be(3,man,bring_he).
-be(3,man,bring).
-be(3,two_man,bring).
-be(3,two_man,bring_he).
-greet(3,he,they).
+aos(3,be,man,bring_before_he).
+aos(3,be,two_man,bring_before_he).
+aos(3,signify_after,he,preparation).
+aos(3,be,man,bring_he).
+aos(3,be,man,bring).
+aos(3,be,two_man,bring).
+aos(3,be,two_man,bring_he).
+aos(3,greet,he,they).
 %% what sort of a king do i seem to you to be o strangers.
 % dependencies.
 root(4,root,seem).
@@ -186,9 +186,9 @@ cop(4,stranger,be).
 compound(4,stranger,o).
 xcomp(4,seem,stranger).
 % relations.
-do_seem(4,i,o_stranger).
-do_seem_to(4,i,you).
-be(4,i,o_stranger).
+aos(4,do_seem,i,o_stranger).
+aos(4,do_seem_to,i,you).
+aos(4,be,i,o_stranger).
 %% ' the lying traveler replied.
 % dependencies.
 root(5,root,reply).
@@ -222,7 +222,7 @@ acl:relcl(7,those,see).
 case(7,I,around).
 nmod:around(7,see,I).
 % relations.
-see_around(7,you,I).
+aos(7,see_around,you,I).
 %% '.
 % dependencies.
 root(8,root,').
@@ -237,7 +237,7 @@ root(10,root,make).
 nsubj(10,make,he).
 dobj(10,make,answer).
 % relations.
-make(10,he,answer).
+aos(10,make,he,answer).
 %% are worthy companions of yourself fit at least to be ambassadors and leaders of armies.
 % dependencies.
 root(11,root,worthy).
@@ -258,8 +258,8 @@ conj:and(11,ambassador,leader).
 case(11,army,of).
 nmod:of(11,ambassador,army).
 % relations.
-be(11,yourself,ambassador).
-be_ambassador_of(11,yourself,army).
+aos(11,be,yourself,ambassador).
+aos(11,be_ambassador_of,yourself,army).
 %% the ape and all his court gratified with the lie commanded that a handsome present be given to the flatterer.
 % dependencies.
 root(12,root,command).
@@ -284,10 +284,10 @@ case(12,flatterer,to).
 det(12,flatterer,the).
 nmod:to(12,give,flatterer).
 % relations.
-be(12,present,give).
-be_give_to(12,present,flatterer).
-be(12,handsome_present,give).
-be_give_to(12,handsome_present,flatterer).
+aos(12,be,present,give).
+aos(12,be_give_to,present,flatterer).
+aos(12,be,handsome_present,give).
+aos(12,be_give_to,handsome_present,flatterer).
 %% on this the truthful traveler thought to himself.
 % dependencies.
 root(13,root,think).
@@ -299,10 +299,10 @@ nsubj(13,think,traveler).
 case(13,himself,to).
 nmod:to(13,think,himself).
 % relations.
-think_to(13,traveler,himself).
-think_to(13,truthful_traveler,himself).
-think_on(13,traveler,this).
-think_on(13,truthful_traveler,this).
+aos(13,think_to,traveler,himself).
+aos(13,think_to,truthful_traveler,himself).
+aos(13,think_on,traveler,this).
+aos(13,think_on,truthful_traveler,this).
 %% if so great a reward be given for a lie with what gift may not i be rewarded if according to my custom i tell the truth.
 % dependencies.
 root(14,root,give).
@@ -333,8 +333,8 @@ acl:relcl(14,custom,tell).
 det(14,truth,the).
 dobj(14,tell,truth).
 % relations.
-be(14,reward,give).
-be(14,great_reward,give).
+aos(14,be,reward,give).
+aos(14,be,great_reward,give).
 %% ' the ape quickly turned to him.
 % dependencies.
 root(15,root,turn).
@@ -363,7 +363,7 @@ advcl:around(16,do,seem).
 case(16,you,to).
 nmod:to(16,seem,you).
 % relations.
-seem_to(16,I,you).
+aos(16,seem_to,I,you).
 %% '.
 % dependencies.
 root(17,root,').
@@ -423,5 +423,5 @@ case(21,companion,of).
 nmod:poss(21,companion,he).
 nmod:of(21,tooth,companion).
 % relations.
-enrage(21,king,hear).
-give(21,truth,he).
+aos(21,enrage,king,hear).
+aos(21,give,truth,he).

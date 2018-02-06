@@ -33,17 +33,17 @@ nmod:poss(0,profit,he).
 amod(0,profit,own).
 nmod:for(0,sell,profit).
 % relations.
-use(0,groom,spend_day).
-spend_in(0,groom,currycombing).
-use(0,groom,spend_in_currycombing).
-sell(0,he_oats,they).
-use(0,groom,spend_whole_day).
-spend_at_time(0,groom,whole_day).
-spend_at_time(0,groom,day).
-use(0,groom,spend_day_in_currycombing).
-use(0,groom,spend).
-use(0,groom,spend_whole_day_in_currycombing).
-rub_down(0,groom,he_horse).
+aos(0,use,groom,spend_day).
+aos(0,spend_in,groom,currycombing).
+aos(0,use,groom,spend_in_currycombing).
+aos(0,sell,he_oats,they).
+aos(0,use,groom,spend_whole_day).
+aos(0,spend_at_time,groom,whole_day).
+aos(0,spend_at_time,groom,day).
+aos(0,use,groom,spend_day_in_currycombing).
+aos(0,use,groom,spend).
+aos(0,use,groom,spend_whole_day_in_currycombing).
+aos(0,rub_down,groom,he_horse).
 %% alas.
 % dependencies.
 root(1,root,alas).
@@ -79,8 +79,8 @@ conj:and(3,groom,feed).
 dobj(3,feed,I).
 advmod(3,feed,more).
 % relations.
-feed_more(3,you,I).
-really_wish(3,you,I).
-wish(3,you,I).
-feed(3,you,I).
-should_groom(3,you,I_less).
+aos(3,feed_more,you,I).
+aos(3,really_wish,you,I).
+aos(3,wish,you,I).
+aos(3,feed,you,I).
+aos(3,should_groom,you,I_less).

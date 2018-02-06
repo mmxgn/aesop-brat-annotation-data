@@ -11,8 +11,8 @@ acl(0,grasshopper,chirp).
 cop(0,enchanted,be).
 advmod(0,enchanted,highly).
 % relations.
-be(0,ass,highly_enchanted).
-be(0,ass,enchanted).
+aos(0,be,ass,highly_enchanted).
+aos(0,be,ass,enchanted).
 %% and desiring to possess the same charms of melody demanded what sort of food they lived on to give them such beautiful voices.
 % dependencies.
 root(1,root,desire).
@@ -40,11 +40,11 @@ amod(1,voice,such).
 amod(1,voice,beautiful).
 dobj(1,give,voice).
 % relations.
-give(1,they,voice).
-give(1,they,such_beautiful_voice).
-give(1,they,they).
-give(1,they,such_voice).
-give(1,they,beautiful_voice).
+aos(1,give,they,voice).
+aos(1,give,they,such_beautiful_voice).
+aos(1,give,they,they).
+aos(1,give,they,such_voice).
+aos(1,give,they,beautiful_voice).
 %% they replied.
 % dependencies.
 root(2,root,reply).
@@ -77,11 +77,11 @@ conj:and(4,live,die).
 case(4,hunger,of).
 nmod:of(4,die,hunger).
 % relations.
-die_of(4,time,hunger).
-resolve(4,ass,he_would_live_only).
-would_live_upon(4,he,dew).
-would_live_only_upon(4,he,dew).
-die_of(4,short_time,hunger).
-resolve(4,ass,he_would_live_only_upon_dew).
-resolve(4,ass,he_would_live).
-resolve(4,ass,he_would_live_upon_dew).
+aos(4,die_of,time,hunger).
+aos(4,resolve,ass,he_would_live_only).
+aos(4,would_live_upon,he,dew).
+aos(4,would_live_only_upon,he,dew).
+aos(4,die_of,short_time,hunger).
+aos(4,resolve,ass,he_would_live_only_upon_dew).
+aos(4,resolve,ass,he_would_live).
+aos(4,resolve,ass,he_would_live_upon_dew).

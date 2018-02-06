@@ -22,8 +22,8 @@ nsubj(0,all,passenger).
 cop(0,all,be).
 acl:relcl(0,shore,all).
 % relations.
-shipwreck_of(0,crew,vessel_of_which).
-shipwreck_of(0,crew,vessel).
+aos(0,shipwreck_of,crew,vessel_of_which).
+aos(0,shipwreck_of,crew,vessel).
 %% he inveighed against the injustice of providence which would for the sake of one criminal perchance sailing in the ship allow so many innocent persons to perish.
 % dependencies.
 root(1,root,inveigh).
@@ -56,11 +56,11 @@ nsubj:xsubj(1,perish,person).
 mark(1,perish,to).
 xcomp(1,allow,perish).
 % relations.
-sake_of(1,innocent_person,one_criminal_perchance_sailing_in_ship).
-sake_of(1,many_innocent_person,criminal_perchance_sailing_in_ship).
-sake_of(1,many_innocent_person,one_criminal_perchance_sailing_in_ship).
-sake_of(1,innocent_person,criminal_perchance_sailing_in_ship).
-is_in(1,one_criminal_perchance_sailing,ship).
+aos(1,sake_of,innocent_person,one_criminal_perchance_sailing_in_ship).
+aos(1,sake_of,many_innocent_person,criminal_perchance_sailing_in_ship).
+aos(1,sake_of,many_innocent_person,one_criminal_perchance_sailing_in_ship).
+aos(1,sake_of,innocent_person,criminal_perchance_sailing_in_ship).
+aos(1,is_in,one_criminal_perchance_sailing,ship).
 %% as he was indulging in these reflections he found himself surrounded by a whole army of ants near whose nest he was standing.
 % dependencies.
 root(2,root,indulge).
@@ -87,10 +87,10 @@ nsubj(2,stand,he).
 aux(2,stand,be).
 acl:near(2,ant,stand).
 % relations.
-surround_by(2,himself,whole_army_of_ant_he_be_stand).
-surround_by(2,himself,army).
-surround_by(2,himself,whole_army).
-surround_by(2,himself,army_of_ant_he_be_stand).
+aos(2,surround_by,himself,whole_army_of_ant_he_be_stand).
+aos(2,surround_by,himself,army).
+aos(2,surround_by,himself,whole_army).
+aos(2,surround_by,himself,army_of_ant_he_be_stand).
 %% one of them climbed up and stung him and he immediately trampled them all to death with his foot.
 % dependencies.
 root(3,root,climb).
@@ -130,8 +130,8 @@ case(4,wand,with).
 nmod:poss(4,wand,he).
 nmod:with(4,strike,wand).
 % relations.
-strike(4,himself,philosopher).
-strike_philosopher_with(4,himself,he_wand).
+aos(4,strike,himself,philosopher).
+aos(4,strike_philosopher_with,himself,he_wand).
 %% and are you indeed to make yourself a judge of the dealings of providence who hast thyself in a similar manner treated these poor ants.
 % dependencies.
 root(5,root,indeed).
@@ -162,5 +162,5 @@ det(5,ant,these).
 amod(5,ant,poor).
 dobj(5,treat,ant).
 % relations.
-make(5,you,yourself_judge).
-be(5,you,indeed).
+aos(5,make,you,yourself_judge).
+aos(5,be,you,indeed).

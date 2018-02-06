@@ -9,10 +9,10 @@ case(0,mother,to).
 nmod:poss(0,mother,he).
 nmod:to(0,say,mother).
 % relations.
-say_to(0,young_fawn,he_mother).
-say_to(0,fawn,he_mother).
-once_say_to(0,young_fawn,he_mother).
-once_say_to(0,fawn,he_mother).
+aos(0,say_to,young_fawn,he_mother).
+aos(0,say_to,fawn,he_mother).
+aos(0,once_say_to,young_fawn,he_mother).
+aos(0,once_say_to,fawn,he_mother).
 %% you are larger than a dog and swifter and more used to running and you have your horns as a defense.
 % dependencies.
 root(1,root,larger).
@@ -39,9 +39,9 @@ case(1,defense,as).
 det(1,defense,a).
 nmod:as(1,have,defense).
 % relations.
-be(1,you,larger).
-have(1,you,you_horn).
-be_larger_than(1,you,dog).
+aos(1,be,you,larger).
+aos(1,have,you,you_horn).
+aos(1,be_larger_than,you,dog).
 %% why then o mother.
 % dependencies.
 root(2,root,why).
@@ -58,8 +58,8 @@ ccomp(3,do,frighten).
 dobj(3,frighten,you).
 advmod(3,frighten,so).
 % relations.
-frighten_so(3,hound,you).
-frighten(3,hound,you).
+aos(3,frighten_so,hound,you).
+aos(3,frighten,hound,you).
 %% she smiled and said.
 % dependencies.
 root(4,root,smile).
@@ -83,8 +83,8 @@ acl:relcl(5,all,say).
 cop(5,true,be).
 dep(5,know,true).
 % relations.
-know_well(5,my_son,full).
-know(5,my_son,full).
+aos(5,know_well,my_son,full).
+aos(5,know,my_son,full).
 %% i have the advantages you mention but when i hear even the bark of a single dog i feel ready to faint and fly away as fast as i can.
 % dependencies.
 root(6,root,have).
@@ -120,6 +120,6 @@ mark(6,can,as).
 nsubj(6,can,i).
 advcl:as(6,mention,can).
 % relations.
-hear(6,i,even_bark).
-feel(6,i,ready).
-hear(6,i,bark).
+aos(6,hear,i,even_bark).
+aos(6,feel,i,ready).
+aos(6,hear,i,bark).

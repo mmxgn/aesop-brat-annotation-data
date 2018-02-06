@@ -35,10 +35,10 @@ case(1,applause,amidst).
 amod(1,applause,universal).
 nmod:amidst(1,sit,applause).
 % relations.
-sit_down_amidst(1,he,universal_applause).
-sit_amidst(1,he,universal_applause).
-sit_down_amidst(1,he,applause).
-sit_amidst(1,he,applause).
+aos(1,sit_down_amidst,he,universal_applause).
+aos(1,sit_amidst,he,universal_applause).
+aos(1,sit_down_amidst,he,applause).
+aos(1,sit_amidst,he,applause).
 %% the camel envious of the praises bestowed on the monkey and desiring to divert to himself the favor of the guests proposed to stand up in his turn and dance for their amusement.
 % dependencies.
 root(2,root,praise).
@@ -78,14 +78,14 @@ case(2,amusement,for).
 nmod:poss(2,amusement,they).
 nmod:for(2,turn,amusement).
 % relations.
-praise(2,camel_envious,bestow).
-praise(2,camel,bestow_on_monkey).
-bestow_on(2,camel_envious,monkey).
-praise(2,camel_envious,bestow_on_monkey).
-bestow_on(2,camel,monkey).
-stand_up_in(2,favor,he_turn).
-praise(2,camel,bestow).
-stand_up_in(2,favor,he_turn_for_they_amusement).
+aos(2,praise,camel_envious,bestow).
+aos(2,praise,camel,bestow_on_monkey).
+aos(2,bestow_on,camel_envious,monkey).
+aos(2,praise,camel_envious,bestow_on_monkey).
+aos(2,bestow_on,camel,monkey).
+aos(2,stand_up_in,favor,he_turn).
+aos(2,praise,camel,bestow).
+aos(2,stand_up_in,favor,he_turn_for_they_amusement).
 %% he moved about in so utterly ridiculous a manner that the beasts in a fit of indignation set upon him with clubs and drove him out of the assembly.
 % dependencies.
 root(3,root,move).
@@ -119,7 +119,7 @@ case(3,assembly,of).
 det(3,assembly,the).
 nmod:of(3,drive,assembly).
 % relations.
-is_in(3,beast,fit_of_indignation).
-drive_out(3,he,he).
-set_upon(3,beast,he).
-set_with(3,beast,club).
+aos(3,is_in,beast,fit_of_indignation).
+aos(3,drive_out,he,he).
+aos(3,set_upon,beast,he).
+aos(3,set_with,beast,club).

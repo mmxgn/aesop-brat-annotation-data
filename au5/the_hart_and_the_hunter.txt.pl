@@ -18,9 +18,9 @@ nsubj(0,make,he).
 acl:relcl(0,figure,make).
 xcomp(0,make,there).
 % relations.
-make(0,he,there).
-be_once_drink_from(0,hart,pool).
-be_drink_from(0,hart,pool).
+aos(0,make,he,there).
+aos(0,be_once_drink_from,hart,pool).
+aos(0,be_drink_from,hart,pool).
 %% ah.
 % dependencies.
 root(1,root,ah).
@@ -45,13 +45,13 @@ case(3,antler,with).
 amod(3,antler,such).
 nmod:with(3,these,antler).
 % relations.
-can_see(3,you,noble_horn).
-can_see(3,you,such_noble_horn).
-can_see(3,you,horn).
-can_see(3,you,such_horn).
-can_see_horn_as(3,you,these).
-can_see_horn_as(3,you,these_with_antler).
-can_see_horn_as(3,you,these_with_such_antler).
+aos(3,can_see,you,noble_horn).
+aos(3,can_see,you,such_noble_horn).
+aos(3,can_see,you,horn).
+aos(3,can_see,you,such_horn).
+aos(3,can_see_horn_as,you,these).
+aos(3,can_see_horn_as,you,these_with_antler).
+aos(3,can_see_horn_as,you,these_with_such_antler).
 %% i wish i had legs more worthy to bear such a noble crown.
 % dependencies.
 root(4,root,wish).
@@ -69,8 +69,8 @@ det(4,crown,a).
 amod(4,crown,noble).
 dobj(4,bear,crown).
 % relations.
-have(4,i,leg_worthy).
-have(4,i,leg_more_worthy).
+aos(4,have,i,leg_worthy).
+aos(4,have,i,leg_more_worthy).
 %% it is a pity they are so slim and slight.
 % dependencies.
 root(5,root,pity).
@@ -86,10 +86,10 @@ cc(5,slim,and).
 acl:relcl(5,pity,slight).
 conj:and(5,slim,slight).
 % relations.
-be_pity(5,it,slim).
-be(5,they,so_slim).
-be_pity(5,it,so_slim).
-be(5,they,slim).
+aos(5,be_pity,it,slim).
+aos(5,be,they,so_slim).
+aos(5,be_pity,it,so_slim).
+aos(5,be,they,slim).
 %% at that moment a hunter approached and sent an arrow whistling after him.
 % dependencies.
 root(6,root,approach).
@@ -107,11 +107,11 @@ acl(6,arrow,whistle).
 case(6,he,after).
 nmod:after(6,whistle,he).
 % relations.
-approach_arrow_at(6,hunter,moment).
-approach(6,hunter,arrow_whistle).
-whistle_after(6,arrow,he).
-approach(6,hunter,arrow).
-approach(6,hunter,arrow_whistle_after_he).
+aos(6,approach_arrow_at,hunter,moment).
+aos(6,approach,hunter,arrow_whistle).
+aos(6,whistle_after,arrow,he).
+aos(6,approach,hunter,arrow).
+aos(6,approach,hunter,arrow_whistle_after_he).
 %% away bounded the hart and soon by the aid of his nimble legs was nearly out of sight of the hunter.
 % dependencies.
 root(7,root,be).
@@ -172,11 +172,11 @@ mark(8,come,to).
 acl:to(8,time,come).
 compound:prt(8,come,up).
 % relations.
-pass_with(8,he,branch_grow_low_down).
-pass_with(8,he,branch_grow).
-pass_under(8,he,tree).
-pass_with(8,he,branch_grow_down).
-pass_with(8,he,branch).
+aos(8,pass_with,he,branch_grow_low_down).
+aos(8,pass_with,he,branch_grow).
+aos(8,pass_under,he,tree).
+aos(8,pass_with,he,branch_grow_down).
+aos(8,pass_with,he,branch).
 %% alas.
 % dependencies.
 root(9,root,alas).

@@ -55,7 +55,7 @@ conj:but(1,receive,seem).
 mark(1,change,to).
 xcomp(1,seem,change).
 % relations.
-have_receive_from(1,he,he_father).
+aos(1,have_receive_from,he,he_father).
 %% he prayed and he prayed but still he remained as unlucky as ever.
 % dependencies.
 root(2,root,pray).
@@ -73,10 +73,10 @@ advcl:as(2,remain,unlucky).
 case(2,ever,as).
 advcl:as(2,remain,ever).
 % relations.
-remain_as(2,he,ever).
-still_remain_as(2,he,unlucky).
-still_remain_as(2,he,ever).
-remain_as(2,he,unlucky).
+aos(2,remain_as,he,ever).
+aos(2,still_remain_as,he,unlucky).
+aos(2,still_remain_as,he,ever).
+aos(2,remain_as,he,unlucky).
 %% one day in the greatest rage he went to the wooden god and with one blow swept it down from its pedestal.
 % dependencies.
 root(3,root,sweep).
@@ -105,7 +105,7 @@ case(3,pedestal,from).
 nmod:poss(3,pedestal,its).
 nmod:from(3,sweep,pedestal).
 % relations.
-is_in(3,one_day,greatest_rage).
+aos(3,is_in,one_day,greatest_rage).
 %% the idol broke in two and what did he see.
 % dependencies.
 root(4,root,break).
@@ -133,4 +133,4 @@ case(5,place,over).
 det(5,place,the).
 nmod:over(5,all,place).
 % relations.
-all_over(5,fly,place).
+aos(5,all_over,fly,place).

@@ -12,8 +12,8 @@ case(0,pond,through).
 det(0,pond,a).
 nmod:through(0,pass,pond).
 % relations.
-load(0,carry,wood_pass_through_pond).
-load_of(0,carry,wood_pass_through_pond).
+aos(0,load,carry,wood_pass_through_pond).
+aos(0,load_of,carry,wood_pass_through_pond).
 %% as he was crossing through the water he lost his footing stumbled and fell and not being able to rise on account of his load groaned heavily.
 % dependencies.
 root(1,root,cross).
@@ -62,7 +62,7 @@ dobj(2,hear,lamentation).
 cc(2,hear,and).
 conj:and(2,hear,say).
 % relations.
-hear(2,frog,he_lamentation).
+aos(2,hear,frog,he_lamentation).
 %% what would you do if you had to live here always as we do when you make such a fuss about a mere fall into the water.
 % dependencies.
 root(3,root,do).
@@ -94,15 +94,15 @@ case(3,water,into).
 det(3,water,the).
 nmod:into(3,make,water).
 % relations.
-make_into(3,you,water).
-have(3,you,live_here).
-have(3,you,we_do).
-have(3,you,live_here_always).
-make_such(3,you,fuss).
-have(3,you,live).
-make_such(3,you,fuss_about_mere_fall).
-make_such(3,you,fuss_about_fall).
-have(3,you,live_always).
+aos(3,make_into,you,water).
+aos(3,have,you,live_here).
+aos(3,have,you,we_do).
+aos(3,have,you,live_here_always).
+aos(3,make_such,you,fuss).
+aos(3,have,you,live).
+aos(3,make_such,you,fuss_about_mere_fall).
+aos(3,make_such,you,fuss_about_fall).
+aos(3,have,you,live_always).
 %% men often bear little grievances with less courage than they do large misfortunes.
 % dependencies.
 root(4,root,bear).
@@ -119,13 +119,13 @@ dep(4,courage,do).
 amod(4,misfortune,large).
 dobj(4,do,misfortune).
 % relations.
-often_bear_grievance_with(4,man,less_courage).
-often_bear(4,man,grievance).
-bear(4,man,grievance).
-often_bear(4,man,little_grievance).
-often_bear_grievance_with(4,man,courage).
-bear(4,man,little_grievance).
-bear_grievance_with(4,man,less_courage).
-bear_grievance_with(4,man,courage).
-do(4,they,misfortune).
-do(4,they,large_misfortune).
+aos(4,often_bear_grievance_with,man,less_courage).
+aos(4,often_bear,man,grievance).
+aos(4,bear,man,grievance).
+aos(4,often_bear,man,little_grievance).
+aos(4,often_bear_grievance_with,man,courage).
+aos(4,bear,man,little_grievance).
+aos(4,bear_grievance_with,man,less_courage).
+aos(4,bear_grievance_with,man,courage).
+aos(4,do,they,misfortune).
+aos(4,do,they,large_misfortune).

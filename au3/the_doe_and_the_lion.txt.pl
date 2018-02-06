@@ -16,12 +16,12 @@ case(0,lion,to).
 det(0,lion,a).
 nmod:to(0,belong,lion).
 % relations.
-seek_refuge_in(0,doe,cave_belong_to_lion).
-hard_press_by(0,doe,hunter).
-seek_refuge_in(0,doe,cave).
-seek_refuge_in(0,doe,cave_belong).
-seek(0,doe,refuge).
-press_by(0,doe,hunter).
+aos(0,seek_refuge_in,doe,cave_belong_to_lion).
+aos(0,hard_press_by,doe,hunter).
+aos(0,seek_refuge_in,doe,cave).
+aos(0,seek_refuge_in,doe,cave_belong).
+aos(0,seek,doe,refuge).
+aos(0,press_by,doe,hunter).
 %% the lion concealed himself on seeing her approach but when she was safe within the cave sprang upon her and tore her to pieces.
 % dependencies.
 root(1,root,conceal).
@@ -50,16 +50,16 @@ dobj(1,tear,she).
 case(1,piece,to).
 nmod:to(1,tear,piece).
 % relations.
-be(1,she,when_safe).
-be(1,she,safe).
-see(1,lion,she_approach).
+aos(1,be,she,when_safe).
+aos(1,be,she,safe).
+aos(1,see,lion,she_approach).
 %% woe is me.
 % dependencies.
 root(2,root,I).
 nsubj(2,I,woe).
 cop(2,I,be).
 % relations.
-be(2,woe,I).
+aos(2,be,woe,I).
 %% exclaimed the doe.
 % dependencies.
 root(3,root,exclaim).

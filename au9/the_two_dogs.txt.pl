@@ -28,7 +28,7 @@ xcomp(0,teach,watch).
 det(0,house,the).
 dobj(0,watch,house).
 % relations.
-watch(0,hound,house).
+aos(0,watch,hound,house).
 %% when he returned home after a good day 's sport he always gave the housedog a large share of his spoil.
 % dependencies.
 root(1,root,return).
@@ -53,22 +53,22 @@ case(1,spoil,of).
 nmod:poss(1,spoil,he).
 nmod:of(1,share,spoil).
 % relations.
-always_give(1,he,share_of_he_spoil).
-always_give(1,he,share).
-give(1,he,large_share).
-share_of(1,he,he_spoil).
-always_give(1,he,large_share).
-give(1,he,large_share_of_he_spoil).
-return(1,he,home).
-give(1,he,share_of_he_spoil).
-give(1,he,housedog).
-after(1,good_day,sport).
-give(1,he,share).
-large_share_of(1,he,he_spoil).
-large_share_of(1,housedog,he_spoil).
-share_of(1,housedog,he_spoil).
-always_give(1,he,housedog).
-always_give(1,he,large_share_of_he_spoil).
+aos(1,always_give,he,share_of_he_spoil).
+aos(1,always_give,he,share).
+aos(1,give,he,large_share).
+aos(1,share_of,he,he_spoil).
+aos(1,always_give,he,large_share).
+aos(1,give,he,large_share_of_he_spoil).
+aos(1,return,he,home).
+aos(1,give,he,share_of_he_spoil).
+aos(1,give,he,housedog).
+aos(1,after,good_day,sport).
+aos(1,give,he,share).
+aos(1,large_share_of,he,he_spoil).
+aos(1,large_share_of,housedog,he_spoil).
+aos(1,share_of,housedog,he_spoil).
+aos(1,always_give,he,housedog).
+aos(1,always_give,he,large_share_of_he_spoil).
 %% the hound feeling much aggrieved at this reproached his companion saying.
 % dependencies.
 root(2,root,reproach).
@@ -83,9 +83,9 @@ nmod:poss(2,companion,he).
 dobj(2,reproach,companion).
 xcomp(2,reproach,say).
 % relations.
-reproach(2,hound_feeling_much_aggrieved,he_companion).
-reproach(2,hound_feeling_aggrieved,he_companion).
-reproach(2,hound_feeling,he_companion).
+aos(2,reproach,hound_feeling_much_aggrieved,he_companion).
+aos(2,reproach,hound_feeling_aggrieved,he_companion).
+aos(2,reproach,hound_feeling,he_companion).
 %% it is very hard to have all this labor while you who do not assist in the chase luxuriate on the fruits of my exertions.
 % dependencies.
 root(3,root,hard).
@@ -116,7 +116,7 @@ case(3,exertion,of).
 nmod:poss(3,exertion,my).
 nmod:of(3,fruit,exertion).
 % relations.
-have(3,it,labor).
+aos(3,have,it,labor).
 %% the housedog replied.
 % dependencies.
 root(4,root,reply).

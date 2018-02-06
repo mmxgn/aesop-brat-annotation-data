@@ -36,7 +36,7 @@ case(0,clothes,of).
 nmod:poss(0,clothes,he).
 nmod:of(0,man,clothes).
 % relations.
-be(0,he,declare).
+aos(0,be,he,declare).
 %% the north wind first tried his power and blew with all his might but the keener his blasts the closer the traveler wrapped his cloak around him until at last resigning all hope of victory the wind called upon the sun to see what he could do.
 % dependencies.
 root(1,root,wind).
@@ -88,7 +88,7 @@ nsubj(1,do,he).
 aux(1,do,could).
 ccomp(1,see,do).
 % relations.
-blow_but(1,he_power,keener).
+aos(1,blow_but,he_power,keener).
 %% the sun suddenly shone out with all his warmth.
 % dependencies.
 root(2,root,shine).
@@ -101,8 +101,8 @@ nmod:with(2,shine,all).
 nmod:poss(2,warmth,he).
 nsubj(2,shine,warmth).
 % relations.
-suddenly_shine_out_with(2,he_warmth,all).
-shine_out_with(2,he_warmth,all).
+aos(2,suddenly_shine_out_with,he_warmth,all).
+aos(2,shine_out_with,he_warmth,all).
 %% the traveler no sooner felt his genial rays than he took off one garment after another and at last fairly overcome with heat undressed and bathed in a stream that lay in his path.
 % dependencies.
 root(3,root,feel).
@@ -144,9 +144,9 @@ case(3,path,in).
 nmod:poss(3,path,he).
 nmod:in(3,lay,path).
 % relations.
-take_off(3,he,one_garment).
-take_off(3,he,one_garment_at_last).
-feel(3,traveler,he_genial_ray).
-take_off(3,he,one_garment_after_another).
-feel(3,traveler,he_ray).
-take_off(3,he,one_garment_after_another_at_last).
+aos(3,take_off,he,one_garment).
+aos(3,take_off,he,one_garment_at_last).
+aos(3,feel,traveler,he_genial_ray).
+aos(3,take_off,he,one_garment_after_another).
+aos(3,feel,traveler,he_ray).
+aos(3,take_off,he,one_garment_after_another_at_last).

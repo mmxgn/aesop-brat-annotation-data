@@ -46,11 +46,11 @@ advmod(1,go,wherever).
 nsubj(1,go,he).
 advcl(1,give,go).
 % relations.
-suspend(1,he_master,bell).
-suspend_bell_about(1,he_master,he_neck).
-might_give(1,dog,notice).
-notice_of(1,dog,he_presence).
-might_give(1,dog,notice_of_he_presence).
+aos(1,suspend,he_master,bell).
+aos(1,suspend_bell_about,he_master,he_neck).
+aos(1,might_give,dog,notice).
+aos(1,notice_of,dog,he_presence).
+aos(1,might_give,dog,notice_of_he_presence).
 %% thinking it a mark of distinction the dog grew proud of his bell and went tinkling it all over the marketplace.
 % dependencies.
 root(2,root,think).
@@ -77,8 +77,8 @@ case(2,marketplace,over).
 det(2,marketplace,the).
 nmod:over(2,tinkle,marketplace).
 % relations.
-grow(2,dog,proud).
-grow_of(2,dog,he_bell).
+aos(2,grow,dog,proud).
+aos(2,grow_of,dog,he_bell).
 %% one day an old hound said to him why do you make such an exhibition of yourself.
 % dependencies.
 root(3,root,say).

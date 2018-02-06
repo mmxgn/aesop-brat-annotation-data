@@ -63,7 +63,7 @@ dobj(4,do,i).
 aux(4,die,will).
 advmod(4,die,too).
 % relations.
-do(4,i,i).
+aos(4,do,i,i).
 %% the frog is satisfied and they set out but in midstream the scorpion stings the frog.
 % dependencies.
 root(5,root,sting).
@@ -84,7 +84,7 @@ dep(5,midstream,scorpion).
 det(5,frog,the).
 nsubj(5,sting,frog).
 % relations.
-set_out_in(5,they,midstream).
+aos(5,set_out_in,they,midstream).
 %% the frog feels the onset of paralysis and starts to sink knowing they both will drown but has just enough time to gasp.
 % dependencies.
 root(6,root,feel).
@@ -115,9 +115,9 @@ dobj(6,have,time).
 mark(6,gasp,to).
 acl:to(6,time,gasp).
 % relations.
-feel(6,frog,onset).
-start(6,frog,sink).
-feel(6,frog,onset_of_paralysis).
+aos(6,feel,frog,onset).
+aos(6,start,frog,sink).
+aos(6,feel,frog,onset_of_paralysis).
 %% why.
 % dependencies.
 root(7,root,why).

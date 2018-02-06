@@ -20,8 +20,8 @@ advmod(0,come,unexpectedly).
 advcl(0,sit,come).
 nmod(0,come,in).
 % relations.
-sit_down_to(0,birdcatcher,dinner_of_herb).
-sit_down_to(0,birdcatcher,dinner).
+aos(0,sit_down_to,birdcatcher,dinner_of_herb).
+aos(0,sit_down_to,birdcatcher,dinner).
 %% the bird-trap was quite empty as he had caught nothing and he had to kill a pied partridge which he had tamed for a decoy.
 % dependencies.
 root(1,root,empty).
@@ -53,10 +53,10 @@ case(1,decoy,for).
 det(1,decoy,a).
 nmod:for(1,tame,decoy).
 % relations.
-be(1,bird-trap,empty).
-have_tame_for(1,he,decoy).
-have_catch(1,he,nothing).
-be(1,bird-trap,quite_empty).
+aos(1,be,bird-trap,empty).
+aos(1,have_tame_for,he,decoy).
+aos(1,have_catch,he,nothing).
+aos(1,be,bird-trap,quite_empty).
 %% the bird entreated earnestly for his life.
 % dependencies.
 root(2,root,entreat).
@@ -67,8 +67,8 @@ case(2,life,for).
 nmod:poss(2,life,he).
 nmod:for(2,entreat,life).
 % relations.
-entreat_earnestly_for(2,bird,he_life).
-entreat_for(2,bird,he_life).
+aos(2,entreat_earnestly_for,bird,he_life).
+aos(2,entreat_for,bird,he_life).
 %% what would you do without me when next you spread your nets.
 % dependencies.
 root(3,root,do).
@@ -84,9 +84,9 @@ advcl(3,do,spread).
 nmod:poss(3,net,you).
 dobj(3,spread,net).
 % relations.
-spread(3,you,you_net).
-next_spread(3,you,you_net).
-when_next_spread(3,you,you_net).
+aos(3,spread,you,you_net).
+aos(3,next_spread,you,you_net).
+aos(3,when_next_spread,you,you_net).
 %% who would chirp you to sleep or call for you the covey of answering birds.
 % dependencies.
 root(4,root,chirp).
@@ -133,7 +133,7 @@ case(5,he,to).
 nmod:to(5,attain,he).
 dep(5,spare,comb).
 % relations.
-spare(5,birdcatcher,he_life).
+aos(5,spare,birdcatcher,he_life).
 %% but the cock expostulated in piteous tones from his perch.
 % dependencies.
 root(6,root,expostulate).
@@ -147,9 +147,9 @@ case(6,perch,from).
 nmod:poss(6,perch,he).
 nmod:from(6,expostulate,perch).
 % relations.
-expostulate_in(6,cock,tone).
-expostulate_from(6,cock,he_perch).
-expostulate_in(6,cock,piteous_tone).
+aos(6,expostulate_in,cock,tone).
+aos(6,expostulate_from,cock,he_perch).
+aos(6,expostulate_in,cock,piteous_tone).
 %% if you kill me who will announce to you the appearance of the dawn.
 % dependencies.
 root(7,root,kill).
@@ -194,9 +194,9 @@ case(8,morning,in).
 det(8,morning,the).
 nmod:in(8,bird-trap,morning).
 % relations.
-visit(8,it,bird-trap).
-be_in(8,bird-trap,morning).
-visit(8,it,bird-trap_in_morning).
+aos(8,visit,it,bird-trap).
+aos(8,be_in,bird-trap,morning).
+aos(8,visit,it,bird-trap_in_morning).
 %% ' he replied.
 % dependencies.
 root(9,root,reply).
@@ -238,5 +238,5 @@ aux(12,have,must).
 nmod:poss(12,dinner,we).
 dobj(12,have,dinner).
 % relations.
-must_have(12,i,we_dinner).
-must_have(12,my_friend,we_dinner).
+aos(12,must_have,i,we_dinner).
+aos(12,must_have,my_friend,we_dinner).

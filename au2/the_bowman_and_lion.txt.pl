@@ -24,13 +24,13 @@ case(0,approach,at).
 nmod:poss(0,approach,he).
 nmod:at(0,flee,approach).
 % relations.
-is_in(0,mountain,search_of_game).
-go_to(0,skillful_bowman,mountain_in_search).
-go_to(0,bowman,mountain_in_search_of_game).
-go_to(0,skillful_bowman,mountain).
-go_to(0,bowman,mountain_in_search).
-go_to(0,skillful_bowman,mountain_in_search_of_game).
-go_to(0,bowman,mountain).
+aos(0,is_in,mountain,search_of_game).
+aos(0,go_to,skillful_bowman,mountain_in_search).
+aos(0,go_to,bowman,mountain_in_search_of_game).
+aos(0,go_to,skillful_bowman,mountain).
+aos(0,go_to,bowman,mountain_in_search).
+aos(0,go_to,skillful_bowman,mountain_in_search_of_game).
+aos(0,go_to,bowman,mountain).
 %% the lion alone challenged him to combat.
 % dependencies.
 root(1,root,challenge).
@@ -42,8 +42,8 @@ nsubj:xsubj(1,combat,he).
 mark(1,combat,to).
 xcomp(1,challenge,combat).
 % relations.
-alone_challenge(1,lion,he).
-challenge(1,lion,he).
+aos(1,alone_challenge,lion,he).
+aos(1,challenge,lion,he).
 %% the bowman immediately shot out an arrow and said to the lion.
 % dependencies.
 root(2,root,shoot).
@@ -60,9 +60,9 @@ case(2,lion,to).
 det(2,lion,the).
 nmod:to(2,say,lion).
 % relations.
-say_to(2,bowman,lion).
-shoot_out(2,bowman,arrow).
-immediately_shoot_out(2,bowman,arrow).
+aos(2,say_to,bowman,lion).
+aos(2,shoot_out,bowman,arrow).
+aos(2,immediately_shoot_out,bowman,arrow).
 %% i send thee my messenger that from him thou mayest learn what i myself shall be when i assail thee.
 % dependencies.
 root(3,root,send).
@@ -86,7 +86,7 @@ compound(3,assail,i).
 advcl(3,be,assail).
 dep(3,assail,thee).
 % relations.
-send(3,my_messenger,thee).
+aos(3,send,my_messenger,thee).
 %% the wounded lion rushed away in great fear and when a fox who had seen it all happen told him to be of good courage and not to back off at the first attack he replied.
 % dependencies.
 root(4,root,rush).
@@ -129,8 +129,8 @@ nmod:at(4,back,attack).
 nsubj(4,reply,he).
 acl:relcl(4,attack,reply).
 % relations.
-be_of(4,he,good_courage).
-be_of(4,he,courage).
+aos(4,be_of,he,good_courage).
+aos(4,be_of,he,courage).
 %% you counsel me in vain.
 % dependencies.
 root(5,root,counsel).
@@ -160,8 +160,8 @@ det(6,man,the).
 nmod:of(6,attack,man).
 xcomp(6,abide,himself).
 % relations.
-send(6,he,messenger).
-send(6,he,so_fearful_messenger).
-send(6,he,fearful_messenger).
-abide(6,i,attack_of_man_himself).
-abide(6,i,attack_himself).
+aos(6,send,he,messenger).
+aos(6,send,he,so_fearful_messenger).
+aos(6,send,he,fearful_messenger).
+aos(6,abide,i,attack_of_man_himself).
+aos(6,abide,i,attack_himself).

@@ -12,8 +12,8 @@ mark(0,buy,to).
 advcl:to(0,drive,buy).
 dobj(0,buy,salt).
 % relations.
-drive(0,peddler,he_ass).
-buy(0,peddler,salt).
+aos(0,drive,peddler,he_ass).
+aos(0,buy,peddler,salt).
 %% his road home lay across a stream into which his ass making a false step fell by accident and rose up again with his load considerably lighter as the water melted the sack.
 % dependencies.
 root(1,root,lay).
@@ -53,14 +53,14 @@ acl(1,water,melt).
 det(1,sack,the).
 dobj(1,melt,sack).
 % relations.
-rise_up_as(1,he_ass,water).
-rise_up_with(1,he_ass,he_load).
-rise_up_with(1,he_ass,he_load_lighter).
-fall_by(1,he_ass,accident).
-rise_up_with(1,he_ass,again_he_load).
-rise_up_with(1,he_ass,again_he_load_lighter).
-rise_up_with(1,he_ass,he_load_considerably_lighter).
-rise_up_with(1,he_ass,again_he_load_considerably_lighter).
+aos(1,rise_up_as,he_ass,water).
+aos(1,rise_up_with,he_ass,he_load).
+aos(1,rise_up_with,he_ass,he_load_lighter).
+aos(1,fall_by,he_ass,accident).
+aos(1,rise_up_with,he_ass,again_he_load).
+aos(1,rise_up_with,he_ass,again_he_load_lighter).
+aos(1,rise_up_with,he_ass,he_load_considerably_lighter).
+aos(1,rise_up_with,he_ass,again_he_load_considerably_lighter).
 %% the peddler retraced his steps and refilled his panniers with a larger quantity of salt than before.
 % dependencies.
 root(2,root,retrace).
@@ -82,8 +82,8 @@ nmod:of(2,quantity,salt).
 case(2,before,than).
 dep(2,refill,before).
 % relations.
-retrace(2,peddler,he_step).
-refill(2,peddler,he_pannier).
+aos(2,retrace,peddler,he_step).
+aos(2,refill,peddler,he_pannier).
 %% when he came again to the stream the ass fell down on purpose in the same spot and regaining his feet with the weight of his load much diminished brayed triumphantly as if he had obtained what he desired.
 % dependencies.
 root(3,root,come).
@@ -127,9 +127,9 @@ dobj(3,desire,what).
 nsubj(3,desire,he).
 ccomp(3,obtain,desire).
 % relations.
-fall_down_in(3,ass,spot).
-fall_down_on(3,ass,purpose).
-fall_down_in(3,ass,same_spot).
+aos(3,fall_down_in,ass,spot).
+aos(3,fall_down_on,ass,purpose).
+aos(3,fall_down_in,ass,same_spot).
 %% the peddler saw through his trick and drove him for the third time to the coast where he bought a cargo of sponges instead of salt.
 % dependencies.
 root(4,root,see).
@@ -160,11 +160,11 @@ case(4,salt,instead).
 mwe(4,instead,of).
 nmod:instead_of(4,sponge,salt).
 % relations.
-cargo_of(4,he,sponge).
-see_through(4,peddler,he_trick).
-drive(4,peddler,he).
-buy(4,he,cargo).
-buy(4,he,cargo_of_sponge).
+aos(4,cargo_of,he,sponge).
+aos(4,see_through,peddler,he_trick).
+aos(4,drive,peddler,he).
+aos(4,buy,he,cargo).
+aos(4,buy,he,cargo_of_sponge).
 %% the ass again playing the fool fell down on purpose when he reached the stream but the sponges became swollen with water greatly increasing his load.
 % dependencies.
 root(5,root,fall).
@@ -194,10 +194,10 @@ acl(5,water,increase).
 nmod:poss(5,load,he).
 dobj(5,increase,load).
 % relations.
-play(5,ass,fool).
-fall_down_on(5,ass,purpose).
-again_play(5,ass,fool).
-reach(5,he,stream).
+aos(5,play,ass,fool).
+aos(5,fall_down_on,ass,purpose).
+aos(5,again_play,ass,fool).
+aos(5,reach,he,stream).
 %% and thus his trick recoiled on him for he now carried on his back a double burden.
 % dependencies.
 root(6,root,trick).
@@ -218,15 +218,15 @@ amod(6,burden,a).
 amod(6,burden,double).
 nmod:on(6,carry,burden).
 % relations.
-now_carry_on(6,he,he_back_a_double_burden).
-carry_on(6,he,he_double_burden).
-now_carry_on(6,he,he_a_burden).
-now_carry_on(6,he,he_burden).
-carry_on(6,he,he_a_burden).
-carry_on(6,he,he_burden).
-now_carry_on(6,he,he_double_burden).
-carry_on(6,he,he_back_a_double_burden).
-carry_on(6,he,he_a_double_burden).
-now_carry_on(6,he,he_back_a_burden).
-now_carry_on(6,he,he_a_double_burden).
-carry_on(6,he,he_back_a_burden).
+aos(6,now_carry_on,he,he_back_a_double_burden).
+aos(6,carry_on,he,he_double_burden).
+aos(6,now_carry_on,he,he_a_burden).
+aos(6,now_carry_on,he,he_burden).
+aos(6,carry_on,he,he_a_burden).
+aos(6,carry_on,he,he_burden).
+aos(6,now_carry_on,he,he_double_burden).
+aos(6,carry_on,he,he_back_a_double_burden).
+aos(6,carry_on,he,he_a_double_burden).
+aos(6,now_carry_on,he,he_back_a_burden).
+aos(6,now_carry_on,he,he_a_double_burden).
+aos(6,carry_on,he,he_back_a_burden).

@@ -32,7 +32,7 @@ det(0,ship,a).
 amod(0,ship,large).
 ccomp(0,think,ship).
 % relations.
-see_in(0,traveler,distance).
+aos(0,see_in,traveler,distance).
 %% they waited in the hope of seeing it enter the harbor but as the object on which they looked was driven nearer to shore by the wind they found that it could at the most be a small boat and not a ship.
 % dependencies.
 root(1,root,wait).
@@ -82,7 +82,7 @@ det(1,ship,a).
 ccomp(1,find,ship).
 conj:and(1,boat,ship).
 % relations.
-enter(1,it,harbor).
+aos(1,enter,it,harbor).
 %% when however it reached the beach they discovered that it was only a large faggot of sticks and one of them said to his companions.
 % dependencies.
 root(2,root,reach).
@@ -112,15 +112,15 @@ case(2,companion,to).
 nmod:poss(2,companion,he).
 nmod:to(2,say,companion).
 % relations.
-be_faggot_of(2,it,stick).
-be_only_faggot_of(2,it,stick).
-be(2,it,only_faggot).
-be(2,it,only_large_faggot).
-be_only_large_faggot_of(2,it,stick).
-be_large_faggot_of(2,it,stick).
-be(2,it,large).
-be(2,it,faggot).
-be(2,it,large_faggot).
+aos(2,be_faggot_of,it,stick).
+aos(2,be_only_faggot_of,it,stick).
+aos(2,be,it,only_faggot).
+aos(2,be,it,only_large_faggot).
+aos(2,be_only_large_faggot_of,it,stick).
+aos(2,be_large_faggot_of,it,stick).
+aos(2,be,it,large).
+aos(2,be,it,faggot).
+aos(2,be,it,large_faggot).
 %% we have waited for no purpose for after all there is nothing to see but a load of wood.
 % dependencies.
 root(3,root,wait).
@@ -143,5 +143,5 @@ nmod:but(3,see,load).
 case(3,wood,of).
 nmod:of(3,load,wood).
 % relations.
-see_but(3,nothing,load_wood).
-see_but(3,nothing,load_of_wood).
+aos(3,see_but,nothing,load_wood).
+aos(3,see_but,nothing,load_of_wood).

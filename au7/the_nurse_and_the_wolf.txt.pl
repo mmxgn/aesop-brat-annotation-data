@@ -34,10 +34,10 @@ case(2,wolf,to).
 det(2,wolf,the).
 nmod:to(2,throw,wolf).
 % relations.
-again_throw(2,noise,you).
-again_throw(2,i,you).
-throw(2,i,you).
-throw(2,noise,you).
+aos(2,again_throw,noise,you).
+aos(2,again_throw,i,you).
+aos(2,throw,i,you).
+aos(2,throw,noise,you).
 %% now it chanced that a wolf was passing close under the window as this was said.
 % dependencies.
 root(3,root,chance).
@@ -57,8 +57,8 @@ nsubjpass(3,say,this).
 auxpass(3,say,be).
 advcl:as(3,pass,say).
 % relations.
-pass(3,wolf,say).
-pass_close(3,wolf,say).
+aos(3,pass,wolf,say).
+aos(3,pass_close,wolf,say).
 %% so he crouched down by the side of the house and waited.
 % dependencies.
 root(4,root,so).
@@ -76,8 +76,8 @@ cc(4,crouch,and).
 ccomp(4,so,wait).
 conj:and(4,crouch,wait).
 % relations.
-crouch_down_by(4,he,side).
-crouch_down_by(4,he,side_of_house).
+aos(4,crouch_down_by,he,side).
+aos(4,crouch_down_by,he,side_of_house).
 %% i am in good luck to-day.
 % dependencies.
 root(5,root,be).
@@ -115,7 +115,7 @@ det(7,day,a).
 amod(7,day,long).
 nmod:for(7,have,day).
 % relations.
-be(7,it,sure).
+aos(7,be,it,sure).
 %% so he waited and he waited and he waited till at last the child began to cry and the wolf came forward before the window and looked up to the nurse wagging his tail.
 % dependencies.
 root(8,root,so).
@@ -159,13 +159,13 @@ xcomp(8,look,wag).
 nmod:poss(8,tail,he).
 dobj(8,wag,tail).
 % relations.
-come_forward_before(8,wolf,window).
-wait(8,he,at_last_child_begin).
-look_up_to(8,wolf,nurse).
-wait(8,he,child_begin).
-begin_at(8,child,last).
-come_before(8,wolf,window).
-begin(8,child,cry).
+aos(8,come_forward_before,wolf,window).
+aos(8,wait,he,at_last_child_begin).
+aos(8,look_up_to,wolf,nurse).
+aos(8,wait,he,child_begin).
+aos(8,begin_at,child,last).
+aos(8,come_before,wolf,window).
+aos(8,begin,child,cry).
 %% but all the nurse did was to shut down the window and call for help and the dogs of the house came rushing out.
 % dependencies.
 root(9,root,do).
@@ -195,12 +195,12 @@ advcl:for(9,call,come).
 xcomp(9,come,rush).
 compound:prt(9,rush,out).
 % relations.
-dog_of(9,help,house).
-call(9,window,dog_of_house_come).
-call(9,window,help_come).
-call(9,window,dog_come).
-call(9,window,help_dog_come).
-call(9,window,help_dog_of_house_come).
+aos(9,dog_of,help,house).
+aos(9,call,window,dog_of_house_come).
+aos(9,call,window,help_come).
+aos(9,call,window,dog_come).
+aos(9,call,window,help_dog_come).
+aos(9,call,window,help_dog_of_house_come).
 %% ah.
 % dependencies.
 root(10,root,ah).

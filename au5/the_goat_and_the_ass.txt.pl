@@ -11,10 +11,10 @@ det(0,ass,a).
 dobj(0,keep,ass).
 conj:and(0,goat,ass).
 % relations.
-once_keep(0,man,ass).
-once_keep(0,man,goat).
-keep(0,man,goat).
-keep(0,man,ass).
+aos(0,once_keep,man,ass).
+aos(0,once_keep,man,goat).
+aos(0,keep,man,goat).
+aos(0,keep,man,ass).
 %% the goat envying the ass on account of his greater abundance of food said.
 % dependencies.
 root(1,root,say).
@@ -53,22 +53,22 @@ amod(2,burden,carry).
 amod(2,burden,heavy).
 conj:and(2,treat,burden).
 % relations.
-be(2,you,how_treat).
-be(2,you,how_treat_at_one_time_grind).
-be_treat_at(2,you,one_time_grind).
-be(2,you,how_treat_at_one_time).
-be(2,you,treat).
-be_treat_at(2,you,one_time).
-be(2,you,how_shamefully_treat).
-shamefully_be_treat_at(2,you,one_time_grind_in_mill).
-shamefully_be_treat_at(2,you,one_time).
-be_treat_at(2,you,one_time_grind_in_mill).
-shamefully_be_treat_at(2,you,one_time_grind).
-be(2,you,how_shamefully_treat_at_one_time).
-be(2,you,shamefully_treat).
-be(2,you,how_treat_at_one_time_grind_in_mill).
-be(2,you,how_shamefully_treat_at_one_time_grind_in_mill).
-be(2,you,how_shamefully_treat_at_one_time_grind).
+aos(2,be,you,how_treat).
+aos(2,be,you,how_treat_at_one_time_grind).
+aos(2,be_treat_at,you,one_time_grind).
+aos(2,be,you,how_treat_at_one_time).
+aos(2,be,you,treat).
+aos(2,be_treat_at,you,one_time).
+aos(2,be,you,how_shamefully_treat).
+aos(2,shamefully_be_treat_at,you,one_time_grind_in_mill).
+aos(2,shamefully_be_treat_at,you,one_time).
+aos(2,be_treat_at,you,one_time_grind_in_mill).
+aos(2,shamefully_be_treat_at,you,one_time_grind).
+aos(2,be,you,how_shamefully_treat_at_one_time).
+aos(2,be,you,shamefully_treat).
+aos(2,be,you,how_treat_at_one_time_grind_in_mill).
+aos(2,be,you,how_shamefully_treat_at_one_time_grind_in_mill).
+aos(2,be,you,how_shamefully_treat_at_one_time_grind).
 %% and he further advised him to pretend to be epileptic and fall into a ditch and so obtain rest.
 % dependencies.
 root(3,root,advise).
@@ -94,9 +94,9 @@ conj:and(3,epileptic,obtain).
 conj:and(3,fall,obtain).
 dobj(3,obtain,rest).
 % relations.
-advise(3,he,he).
-pretend(3,he,epileptic).
-further_advise(3,he,he).
+aos(3,advise,he,he).
+aos(3,pretend,he,epileptic).
+aos(3,further_advise,he,he).
 %% the ass listened to his words and falling into a ditch was very much bruised.
 % dependencies.
 root(4,root,bruise).
@@ -116,9 +116,9 @@ auxpass(4,bruise,be).
 advmod(4,much,very).
 advmod(4,bruise,much).
 % relations.
-be(4,ass,very_much_bruise).
-be(4,ass,bruise).
-be(4,ass,much_bruise).
+aos(4,be,ass,very_much_bruise).
+aos(4,be,ass,bruise).
+aos(4,be,ass,much_bruise).
 %% his master sending for a leech asked his advice.
 % dependencies.
 root(5,root,ask).
@@ -131,7 +131,7 @@ nmod:for(5,send,leech).
 nmod:poss(5,advice,he).
 dobj(5,ask,advice).
 % relations.
-ask(5,he_master,he_advice).
+aos(5,ask,he_master,he_advice).
 %% he bade him pour upon the wounds the lungs of a goat.
 % dependencies.
 root(6,root,bid).
@@ -147,10 +147,10 @@ case(6,goat,of).
 det(6,goat,a).
 nmod:of(6,lung,goat).
 % relations.
-pour(6,he,lung_of_goat).
-lung_of(6,he,goat).
-pour_lung_upon(6,he,wound).
-pour(6,he,lung).
+aos(6,pour,he,lung_of_goat).
+aos(6,lung_of,he,goat).
+aos(6,pour_lung_upon,he,wound).
+aos(6,pour,he,lung).
 %% they at once killed the goat and so healed the ass.
 % dependencies.
 root(7,root,kill).
@@ -166,7 +166,7 @@ conj:and(7,kill,heal).
 det(7,ass,the).
 dobj(7,heal,ass).
 % relations.
-heal(7,they,ass).
-once_kill(7,they,goat).
-kill(7,they,goat).
-so_heal(7,they,ass).
+aos(7,heal,they,ass).
+aos(7,once_kill,they,goat).
+aos(7,kill,they,goat).
+aos(7,so_heal,they,ass).

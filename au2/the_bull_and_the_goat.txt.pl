@@ -17,8 +17,8 @@ ccomp(0,hide,have).
 advmod(0,occupy,recently).
 xcomp(0,have,occupy).
 % relations.
-hide_in(0,bull,cave).
-escape_from(0,bull,lion).
+aos(0,hide_in,bull,cave).
+aos(0,escape_from,bull,lion).
 %% as soon as he entered a he-goat left in the cave sharply attacked him with his horns.
 % dependencies.
 root(1,root,soon).
@@ -39,13 +39,13 @@ case(1,horn,with).
 nmod:poss(1,horn,he).
 nmod:with(1,attack,horn).
 % relations.
-left_in(1,he,cave).
-sharply_attack(1,he-goat_left,he).
-sharply_attack(1,left,he).
-is_in(1,he-goat_left,cave).
-attack(1,left,he).
-attack(1,he-goat_left,he).
-he-goat_left_in(1,he,cave).
+aos(1,left_in,he,cave).
+aos(1,sharply_attack,he-goat_left,he).
+aos(1,sharply_attack,left,he).
+aos(1,is_in,he-goat_left,cave).
+aos(1,attack,left,he).
+aos(1,attack,he-goat_left,he).
+aos(1,he-goat_left_in,he,cave).
 %% the bull quietly addressed him.
 % dependencies.
 root(2,root,address).
@@ -54,8 +54,8 @@ nsubj(2,address,bull).
 advmod(2,address,quietly).
 dobj(2,address,he).
 % relations.
-address(2,bull,he).
-quietly_address(2,bull,he).
+aos(2,address,bull,he).
+aos(2,quietly_address,bull,he).
 %% butt away as much as you will.
 % dependencies.
 root(3,root,butt).

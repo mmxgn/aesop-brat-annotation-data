@@ -23,10 +23,10 @@ nmod:on(0,lay,shore).
 mark(0,die,to).
 xcomp(0,lay,die).
 % relations.
-lay_down_on(0,its_deep_gullet-bag,shore).
-lay_down_on(0,its_gullet-bag,shore).
-lay_down(0,its_deep_gullet-bag,die).
-lay_down(0,its_gullet-bag,die).
+aos(0,lay_down_on,its_deep_gullet-bag,shore).
+aos(0,lay_down_on,its_gullet-bag,shore).
+aos(0,lay_down,its_deep_gullet-bag,die).
+aos(0,lay_down,its_gullet-bag,die).
 %% a kite saw him and exclaimed.
 % dependencies.
 root(1,root,see).
@@ -37,7 +37,7 @@ dobj(1,see,he).
 cc(1,see,and).
 conj:and(1,see,exclaim).
 % relations.
-see(1,kite,he).
+aos(1,see,kite,he).
 %% you richly deserve your fate.
 % dependencies.
 root(2,root,you).

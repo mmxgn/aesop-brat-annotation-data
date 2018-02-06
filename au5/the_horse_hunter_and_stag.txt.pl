@@ -30,7 +30,7 @@ case(0,stag,on).
 det(0,stag,the).
 nmod:on(0,take,stag).
 % relations.
-come_to(0,horse,hunter).
+aos(0,come_to,horse,hunter).
 %% the hunter agreed but said.
 % dependencies.
 root(1,root,agree).
@@ -100,16 +100,16 @@ case(2,enemy,after).
 det(2,enemy,the).
 nmod:after(2,follow,enemy).
 % relations.
-must_permit(2,you,I).
-may_keep(2,i,steady_upon_you).
-may_guide(2,i,you).
-saddle(2,allow,place).
-may_keep(2,i,we_follow_after_enemy).
-follow_after(2,we,enemy).
-may_keep(2,i,steady).
-may_keep(2,i,we_follow).
-place(2,I,piece).
-saddle(2,allow,place_upon_you_back).
+aos(2,must_permit,you,I).
+aos(2,may_keep,i,steady_upon_you).
+aos(2,may_guide,i,you).
+aos(2,saddle,allow,place).
+aos(2,may_keep,i,we_follow_after_enemy).
+aos(2,follow_after,we,enemy).
+aos(2,may_keep,i,steady).
+aos(2,may_keep,i,we_follow).
+aos(2,place,I,piece).
+aos(2,saddle,allow,place_upon_you_back).
 %% the horse agreed to the conditions and the hunter soon saddled and bridled him.
 % dependencies.
 root(3,root,agree).
@@ -129,9 +129,9 @@ conj:and(3,agree,bridle).
 conj:and(3,saddle,bridle).
 dobj(3,saddle,he).
 % relations.
-agree_to(3,horse,condition).
-saddle(3,horse,he).
-soon_saddle(3,horse,he).
+aos(3,agree_to,horse,condition).
+aos(3,saddle,horse,he).
+aos(3,soon_saddle,horse,he).
 %% then with the aid of the hunter the horse soon overcame the stag and said to the hunter.
 % dependencies.
 root(4,root,then).
@@ -208,10 +208,10 @@ cop(8,present,be).
 advmod(8,present,at).
 advcl:as(8,keep,present).
 % relations.
-have_now_get(8,i,you).
-be(8,you,present).
-have_get(8,i,you).
-be(8,you,at_present).
+aos(8,have_now_get,i,you).
+aos(8,be,you,present).
+aos(8,have_get,i,you).
+aos(8,be,you,at_present).
 %% if you allow men to use you for your own purposes they will use you for theirs.
 % dependencies.
 root(9,root,allow).
@@ -233,6 +233,6 @@ dobj(9,use,you).
 case(9,theirs,for).
 nmod:for(9,use,theirs).
 % relations.
-allow(9,you,man).
-use(9,man,you).
-will_use(9,they,you).
+aos(9,allow,you,man).
+aos(9,use,man,you).
+aos(9,will_use,they,you).

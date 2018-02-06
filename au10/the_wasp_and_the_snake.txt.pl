@@ -23,7 +23,7 @@ dobj(0,wound,he).
 case(0,death,to).
 nmod:to(0,wound,death).
 % relations.
-wound(0,wasp,he).
+aos(0,wound,wasp,he).
 %% the snake being in great torment and not knowing how to rid himself of his enemy saw a wagon heavily laden with wood and went and purposely placed his head under the wheels saying.
 % dependencies.
 root(1,root,see).
@@ -63,7 +63,7 @@ det(1,wheel,the).
 nmod:under(1,place,wheel).
 xcomp(1,place,say).
 % relations.
-heavily_laden_with(1,wagon,wood).
+aos(1,heavily_laden_with,wagon,wood).
 %% at least my enemy and i shall perish together.
 % dependencies.
 root(2,root,perish).

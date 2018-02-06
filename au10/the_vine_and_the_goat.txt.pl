@@ -15,12 +15,12 @@ cc(0,leaf,and).
 nmod:with(0,luxuriant,grape).
 conj:and(0,leaf,grape).
 % relations.
-be_luxuriant_in(0,vine,time).
-be(0,vine,luxuriant_in_time_of_vintage_with_leaf).
-be(0,vine,luxuriant_in_time_with_leaf).
-be_luxuriant_with(0,vine,leaf).
-be_luxuriant_in(0,vine,time_of_vintage).
-be(0,vine,luxuriant).
+aos(0,be_luxuriant_in,vine,time).
+aos(0,be,vine,luxuriant_in_time_of_vintage_with_leaf).
+aos(0,be,vine,luxuriant_in_time_with_leaf).
+aos(0,be_luxuriant_with,vine,leaf).
+aos(0,be_luxuriant_in,vine,time_of_vintage).
+aos(0,be,vine,luxuriant).
 %% a goat passing by nibbled its young tendrils and its leaves.
 % dependencies.
 root(1,root,nibble).
@@ -36,9 +36,9 @@ nmod:poss(1,leaf,its).
 dobj(1,nibble,leaf).
 conj:and(1,tendril,leaf).
 % relations.
-nibble(1,goat_passing,its_young_tendril).
-nibble(1,goat_passing,its_leaf).
-nibble(1,goat_passing,its_tendril).
+aos(1,nibble,goat_passing,its_young_tendril).
+aos(1,nibble,goat_passing,its_leaf).
+aos(1,nibble,goat_passing,its_tendril).
 %% the vine addressed him and said.
 % dependencies.
 root(2,root,address).
@@ -49,7 +49,7 @@ dobj(2,address,he).
 cc(2,address,and).
 conj:and(2,address,say).
 % relations.
-address(2,vine,he).
+aos(2,address,vine,he).
 %% why do you thus injure me without a cause and crop my leaves.
 % dependencies.
 root(3,root,injure).
@@ -67,8 +67,8 @@ conj:and(3,cause,crop).
 nmod:poss(3,leaf,my).
 dep(3,cause,leaf).
 % relations.
-do_thus_injure(3,you,I).
-do_injure(3,you,I).
+aos(3,do_thus_injure,you,I).
+aos(3,do_injure,you,I).
 %% is there no young grass left.
 % dependencies.
 root(4,root,there).
@@ -133,17 +133,17 @@ case(6,sacrifice,to).
 det(6,sacrifice,the).
 nmod:to(6,lead,sacrifice).
 % relations.
-shall_provide(6,i,wine_pour).
-be(6,you,when_lead_to_sacrifice).
-shall_provide(6,i,wine_pour_over_you).
-be_lead_as(6,you,victim).
-should_crop(6,you,my_leaf).
-be(6,you,when_lead_as_victim_to_sacrifice).
-cut(6,you,I).
-now_should_crop(6,you,my_leaf).
-be(6,you,when_lead_as_victim).
-cut_down(6,you,I).
-be(6,you,lead).
-be(6,you,when_lead).
-be_lead_to(6,you,sacrifice).
-be(6,you,lead_as_victim_to_sacrifice).
+aos(6,shall_provide,i,wine_pour).
+aos(6,be,you,when_lead_to_sacrifice).
+aos(6,shall_provide,i,wine_pour_over_you).
+aos(6,be_lead_as,you,victim).
+aos(6,should_crop,you,my_leaf).
+aos(6,be,you,when_lead_as_victim_to_sacrifice).
+aos(6,cut,you,I).
+aos(6,now_should_crop,you,my_leaf).
+aos(6,be,you,when_lead_as_victim).
+aos(6,cut_down,you,I).
+aos(6,be,you,lead).
+aos(6,be,you,when_lead).
+aos(6,be_lead_to,you,sacrifice).
+aos(6,be,you,lead_as_victim_to_sacrifice).

@@ -24,7 +24,7 @@ case(0,reach,beyond).
 nmod:poss(0,reach,he).
 nmod:beyond(0,roost,reach).
 % relations.
-about(0,farmer,hen-coop).
+aos(0,about,farmer,hen-coop).
 %% good news good news.
 % dependencies.
 root(1,root,news).
@@ -60,8 +60,8 @@ det(5,truce,a).
 amod(5,truce,universal).
 dobj(5,declare,truce).
 % relations.
-have_declare(5,king_lion,truce).
-have_declare(5,king_lion,universal_truce).
+aos(5,have_declare,king_lion,truce).
+aos(5,have_declare,king_lion,universal_truce).
 %% no beast may hurt a bird henceforth but all shall dwell together in brotherly friendship.
 % dependencies.
 root(6,root,hurt).
@@ -88,7 +88,7 @@ nsubj(7,news,that).
 cop(7,news,be).
 amod(7,news,good).
 % relations.
-be(7,that,why_good_news).
+aos(7,be,that,why_good_news).
 %% said the cock.
 % dependencies.
 root(8,root,say).
@@ -159,8 +159,8 @@ ccomp(13,dog,come).
 case(13,we,towards).
 nmod:towards(13,come,we).
 % relations.
-be(13,it,only_my_master_'s_dog).
-be(13,it,my_master_'s_dog).
+aos(13,be,it,only_my_master_'s_dog).
+aos(13,be,it,my_master_'s_dog).
 %% what going so soon.
 % dependencies.
 root(14,root,go).
@@ -189,7 +189,7 @@ advcl:as(15,soon,hear).
 det(15,news,the).
 dobj(15,hear,news).
 % relations.
-continue(15,he,fox_begin).
+aos(15,continue,he,fox_begin).
 %% will you not stop and congratulate the dog on the reign of universal peace.
 % dependencies.
 root(16,root,stop).
@@ -208,10 +208,10 @@ case(16,peace,of).
 amod(16,peace,universal).
 nmod:of(16,reign,peace).
 % relations.
-congratulate_dog_on(16,you,reign_of_universal_peace).
-congratulate_dog_on(16,you,reign).
-congratulate(16,you,dog).
-congratulate_dog_on(16,you,reign_of_peace).
+aos(16,congratulate_dog_on,you,reign_of_universal_peace).
+aos(16,congratulate_dog_on,you,reign).
+aos(16,congratulate,you,dog).
+aos(16,congratulate_dog_on,you,reign_of_peace).
 %% i would gladly do so.
 % dependencies.
 root(17,root,do).

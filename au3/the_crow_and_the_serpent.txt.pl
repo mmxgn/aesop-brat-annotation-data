@@ -23,13 +23,13 @@ advcl:of(0,want,seize).
 conj:and(0,see,seize).
 dobj(0,seize,he).
 % relations.
-want(0,crow,food_see).
-see(0,food,serpent_asleep).
-see_in(0,food,nook).
-is_in(0,crow,great).
-see_in(0,food,sunny_nook).
-want(0,crow,food_see_in_sunny_nook).
-want(0,crow,food_see_in_nook).
+aos(0,want,crow,food_see).
+aos(0,see,food,serpent_asleep).
+aos(0,see_in,food,nook).
+aos(0,is_in,crow,great).
+aos(0,see_in,food,sunny_nook).
+aos(0,want,crow,food_see_in_sunny_nook).
+aos(0,want,crow,food_see_in_nook).
 %% the serpent turning about bit the crow with a mortal wound.
 % dependencies.
 root(1,root,serpent).
@@ -44,7 +44,7 @@ det(1,wound,a).
 amod(1,wound,mortal).
 nmod:with(1,crow,wound).
 % relations.
-is_with(1,crow,mortal_wound).
+aos(1,is_with,crow,mortal_wound).
 %% in the agony of death the bird exclaimed.
 % dependencies.
 root(2,root,exclaim).
@@ -56,8 +56,8 @@ nmod:of(2,agony,death).
 det(2,bird,the).
 nsubj(2,exclaim,bird).
 % relations.
-exclaim_in(2,bird,agony_of_death).
-exclaim_in(2,bird,agony).
+aos(2,exclaim_in,bird,agony_of_death).
+aos(2,exclaim_in,bird,agony).
 %% o unhappy me.
 % dependencies.
 root(3,root,o).
@@ -84,9 +84,9 @@ case(4,destruction,of).
 nmod:poss(4,destruction,my).
 nmod:of(4,source,destruction).
 % relations.
-deem(4,i,windfall_source).
-deem(4,i,windfall_source_of_my_destruction).
-source_of(4,windfall,my_destruction).
-source_of(4,happy_windfall,my_destruction).
-deem(4,i,happy_windfall_source_of_my_destruction).
-deem(4,i,happy_windfall_source).
+aos(4,deem,i,windfall_source).
+aos(4,deem,i,windfall_source_of_my_destruction).
+aos(4,source_of,windfall,my_destruction).
+aos(4,source_of,happy_windfall,my_destruction).
+aos(4,deem,i,happy_windfall_source_of_my_destruction).
+aos(4,deem,i,happy_windfall_source).

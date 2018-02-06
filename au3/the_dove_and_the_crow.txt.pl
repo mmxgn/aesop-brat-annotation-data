@@ -65,4 +65,4 @@ case(3,prison-house,in).
 det(3,prison-house,this).
 nmod:in(3,shut,prison-house).
 % relations.
-shut_up_in(3,they,prison-house).
+aos(3,shut_up_in,they,prison-house).

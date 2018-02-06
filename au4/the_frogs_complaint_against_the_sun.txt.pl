@@ -26,7 +26,7 @@ case(0,sky,to).
 det(0,sky,the).
 nmod:to(0,lift,sky).
 % relations.
-lift_up(0,frog,they_voice).
+aos(0,lift_up,frog,they_voice).
 %% jupiter disturbed by the noise of their croaking inquired the cause of their complaint.
 % dependencies.
 root(1,root,inquire).
@@ -44,11 +44,11 @@ case(1,complaint,of).
 nmod:poss(1,complaint,they).
 nmod:of(1,cause,complaint).
 % relations.
-inquire(1,jupiter,cause).
-disturb_by(1,jupiter,noise_of_they_croak).
-disturb_by(1,jupiter,noise_of_they).
-disturb_by(1,jupiter,noise).
-inquire(1,jupiter,cause_of_they_complaint).
+aos(1,inquire,jupiter,cause).
+aos(1,disturb_by,jupiter,noise_of_they_croak).
+aos(1,disturb_by,jupiter,noise_of_they).
+aos(1,disturb_by,jupiter,noise).
+aos(1,inquire,jupiter,cause_of_they_complaint).
 %% one of them said.
 % dependencies.
 root(2,root,say).
@@ -83,11 +83,11 @@ nmod:poss(3,home,we).
 amod(3,home,arid).
 nmod:in(3,miserably,home).
 % relations.
-compel(3,he,we).
-be(3,he,parch).
-be_single_parch_up(3,he,marsh).
-be(3,he,single_parch).
-be_parch_up(3,he,marsh).
+aos(3,compel,he,we).
+aos(3,be,he,parch).
+aos(3,be_single_parch_up,he,marsh).
+aos(3,be,he,single_parch).
+aos(3,be_parch_up,he,marsh).
 %% what will be our future condition if he should beget other suns.
 % dependencies.
 root(4,root,condition).
@@ -103,5 +103,5 @@ advcl:if(4,condition,beget).
 amod(4,sun,other).
 dobj(4,beget,sun).
 % relations.
-should_beget(4,he,sun).
-should_beget(4,he,other_sun).
+aos(4,should_beget,he,sun).
+aos(4,should_beget,he,other_sun).

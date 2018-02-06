@@ -37,7 +37,7 @@ conj:and(1,revile,attack).
 nmod:poss(1,enemy,he).
 dobj(1,revile,enemy).
 % relations.
-revile(1,he,he_enemy).
+aos(1,revile,he,he_enemy).
 %% murderer and thief.
 % dependencies.
 root(2,root,murderer).
@@ -76,11 +76,11 @@ nsubjpass(5,know,deed).
 auxpass(5,know,be).
 advcl(5,make,know).
 % relations.
-be(5,you_deed,where_know).
-be(5,you_vile_deed,know).
-make(5,you,appearance).
-be(5,you_deed,know).
-be(5,you_vile_deed,where_know).
+aos(5,be,you_deed,where_know).
+aos(5,be,you_vile_deed,know).
+aos(5,make,you,appearance).
+aos(5,be,you_deed,know).
+aos(5,be,you_vile_deed,where_know).
 %% curse away my young friend.
 % dependencies.
 root(6,root,curse).

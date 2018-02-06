@@ -16,7 +16,7 @@ compound:prt(0,rush,out).
 case(0,they,upon).
 nmod:upon(0,rush,they).
 % relations.
-rush_out_upon(0,bear,they).
+aos(0,rush_out_upon,bear,they).
 %% one of the travellers happened to be in front and he seized hold of the branch of a tree and hid himself among the leaves.
 % dependencies.
 root(1,root,happen).
@@ -49,12 +49,12 @@ case(1,leaf,among).
 det(1,leaf,the).
 nmod:among(1,hide,leaf).
 % relations.
-seize(1,he,hold_of_branch_of_tree).
-hold_of(1,he,branch_of_tree).
-hide(1,he,himself).
-hold_of(1,he,branch).
-seize(1,he,hold).
-seize(1,he,hold_of_branch).
+aos(1,seize,he,hold_of_branch_of_tree).
+aos(1,hold_of,he,branch_of_tree).
+aos(1,hide,he,himself).
+aos(1,hold_of,he,branch).
+aos(1,seize,he,hold).
+aos(1,seize,he,hold_of_branch).
 %% the other seeing no help for it threw himself flat down upon the ground with his face in the dust.
 % dependencies.
 root(2,root,throw).
@@ -78,8 +78,8 @@ case(2,dust,in).
 det(2,dust,the).
 nmod:in(2,flat,dust).
 % relations.
-throw(2,other,himself_flat_down_upon_ground_with_face_in_dust).
-throw(2,other,himself_flat_down_upon_ground_with_he_face_in_dust).
+aos(2,throw,other,himself_flat_down_upon_ground_with_face_in_dust).
+aos(2,throw,other,himself_flat_down_upon_ground_with_he_face_in_dust).
 %% the bear coming up to him put his muzzle close to his ear and sniffed and sniffed.
 % dependencies.
 root(3,root,put).
@@ -102,7 +102,7 @@ cc(3,sniff,and).
 conj:and(3,put,sniff).
 conj:and(3,sniff,sniff).
 % relations.
-put(3,bear,he_muzzle_close).
+aos(3,put,bear,he_muzzle_close).
 %% but at last with a growl he shook his head and slouched off for bears will not touch dead meat.
 % dependencies.
 root(4,root,but).
@@ -128,8 +128,8 @@ acl:relcl(4,growl,touch).
 amod(4,meat,dead).
 dobj(4,touch,meat).
 % relations.
-shake(4,he,he_head).
-slouch_off_for(4,he,bear).
+aos(4,shake,he,he_head).
+aos(4,slouch_off_for,he,bear).
 %% then the fellow in the tree came down to his comrade and laughing said.
 % dependencies.
 root(5,root,come).
@@ -148,7 +148,7 @@ nmod:to(5,down,laughing).
 conj:and(5,comrade,laughing).
 acl(5,comrade,say).
 % relations.
-is_in(5,fellow,tree).
+aos(5,is_in,fellow,tree).
 %% what was it that master bruin whispered to you.
 % dependencies.
 root(6,root,what).
@@ -167,4 +167,4 @@ root(7,root,tell).
 nsubj(7,tell,he).
 dobj(7,tell,I).
 % relations.
-tell(7,he,I).
+aos(7,tell,he,I).

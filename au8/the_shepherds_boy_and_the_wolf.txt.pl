@@ -51,9 +51,9 @@ case(3,pain,for).
 nmod:poss(3,pain,they).
 nmod:for(3,laugh,pain).
 % relations.
-come(3,he_neighbor,help).
-laugh_for(3,he,they_pain).
-laugh_at(3,he,they).
+aos(3,come,he_neighbor,help).
+aos(3,laugh_for,he,they_pain).
+aos(3,laugh_at,he,they).
 %% the wolf however did truly come at last.
 % dependencies.
 root(4,root,do).
@@ -79,10 +79,10 @@ nmod:in(5,shout,agony).
 case(5,terror,of).
 nmod:of(5,agony,terror).
 % relations.
-shout_in(5,shepherd-boy_alarmed,agony_of_terror).
-shout_in(5,shepherd-boy,agony).
-shout_in(5,shepherd-boy_alarmed,agony).
-shout_in(5,shepherd-boy,agony_of_terror).
+aos(5,shout_in,shepherd-boy_alarmed,agony_of_terror).
+aos(5,shout_in,shepherd-boy,agony).
+aos(5,shout_in,shepherd-boy_alarmed,agony).
+aos(5,shout_in,shepherd-boy,agony_of_terror).
 %% pray do come and help me.
 % dependencies.
 root(6,root,come).
@@ -93,7 +93,7 @@ cc(6,come,and).
 conj:and(6,come,help).
 dobj(6,come,I).
 % relations.
-do_come(6,pray,I).
+aos(6,do_come,pray,I).
 %% the wolf is killing the sheep.
 % dependencies.
 root(7,root,kill).
@@ -103,7 +103,7 @@ aux(7,kill,be).
 det(7,sheep,the).
 dobj(7,kill,sheep).
 % relations.
-be_kill(7,wolf,sheep).
+aos(7,be_kill,wolf,sheep).
 %% but no one paid any heed to his cries nor rendered any assistance.
 % dependencies.
 root(8,root,pay).
@@ -142,5 +142,5 @@ det(9,flock,the).
 amod(9,flock,whole).
 dobj(9,destroy,flock).
 % relations.
-destroy(9,wolf,flock).
-destroy(9,wolf,whole_flock).
+aos(9,destroy,wolf,flock).
+aos(9,destroy,wolf,whole_flock).
