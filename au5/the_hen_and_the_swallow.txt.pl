@@ -1,53 +1,65 @@
-root(0,ROOT,nourished).
+%% a hen finding the eggs of a viper and carefully keeping them warm nourished them into life.
+% dependencies.
+root(0,root,nourish).
 det(0,hen,a).
-nsubj(0,nourished,hen).
-dep(0,hen,finding).
-det(0,eggs,the).
-dobj(0,finding,eggs).
+nsubj(0,nourish,hen).
+dep(0,hen,find).
+det(0,egg,the).
+dobj(0,find,egg).
 case(0,viper,of).
 det(0,viper,a).
-nmod:of(0,eggs,viper).
-cc(0,finding,and).
-advmod(0,keeping,carefully).
-dep(0,hen,keeping).
-conj:and(0,finding,keeping).
-nsubj(0,warm,them).
-xcomp(0,keeping,warm).
-dobj(0,nourished,them).
+nmod:of(0,egg,viper).
+cc(0,find,and).
+advmod(0,keep,carefully).
+dep(0,hen,keep).
+conj:and(0,find,keep).
+nsubj(0,warm,they).
+xcomp(0,keep,warm).
+dobj(0,nourish,they).
 case(0,life,into).
-nmod:into(0,nourished,life).
-carefully_keeping(0,eggs,them_warm).
-nourished(0,hen,them).
-keeping(0,eggs,them_warm).
-root(1,ROOT,a).
+nmod:into(0,nourish,life).
+% relations.
+carefully_keep(0,egg,they_warm).
+nourish(0,hen,they).
+keep(0,egg,they_warm).
+%% a swallow observing what she had done said.
+% dependencies.
+root(1,root,a).
 dep(1,a,swallow).
-csubj(1,said,observing).
-dobj(1,done,what).
-nsubj(1,done,she).
-aux(1,done,had).
-ccomp(1,observing,done).
-ccomp(1,swallow,said).
-root(2,ROOT,creature).
+csubj(1,say,observe).
+dobj(1,do,what).
+nsubj(1,do,she).
+aux(1,do,have).
+ccomp(1,observe,do).
+ccomp(1,swallow,say).
+% relations.
+%% you silly creature.
+% dependencies.
+root(2,root,creature).
 dep(2,silly,you).
 dep(2,creature,silly).
-root(3,ROOT,hatched).
-advmod(3,hatched,why).
-aux(3,hatched,have).
-nsubj(3,hatched,you).
-det(3,vipers,these).
-dobj(3,hatched,vipers).
-dep(3,inflict,vipers).
-ref(3,vipers,which).
-advmod(3,grown,when).
-nsubj(3,grown,they).
-aux(3,grown,shall).
-aux(3,grown,have).
-advcl(3,inflict,grown).
+% relations.
+%% why have you hatched these vipers which when they shall have grown will inflict injury on all beginning with yourself.
+% dependencies.
+root(3,root,hatch).
+advmod(3,hatch,why).
+aux(3,hatch,have).
+nsubj(3,hatch,you).
+det(3,viper,these).
+dobj(3,hatch,viper).
+dep(3,inflict,viper).
+ref(3,viper,which).
+advmod(3,grow,when).
+nsubj(3,grow,they).
+aux(3,grow,shall).
+aux(3,grow,have).
+advcl(3,inflict,grow).
 aux(3,inflict,will).
-acl:relcl(3,vipers,inflict).
+acl:relcl(3,viper,inflict).
 dobj(3,inflict,injury).
 case(3,all,on).
 nmod:on(3,inflict,all).
-acl(3,all,beginning).
+acl(3,all,begin).
 case(3,yourself,with).
-nmod:with(3,beginning,yourself).
+nmod:with(3,begin,yourself).
+% relations.

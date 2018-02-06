@@ -1,91 +1,112 @@
-root(0,ROOT,took).
+%% a fisher once took his bagpipes to the bank of a river and played upon them with the hope of making the fish rise.
+% dependencies.
+root(0,root,take).
 det(0,fisher,a).
-nsubj(0,took,fisher).
-nsubj(0,played,fisher).
-advmod(0,took,once).
-nmod:poss(0,bagpipes,his).
-dobj(0,took,bagpipes).
+nsubj(0,take,fisher).
+nsubj(0,play,fisher).
+advmod(0,take,once).
+nmod:poss(0,bagpipe,he).
+dobj(0,take,bagpipe).
 case(0,bank,to).
 det(0,bank,the).
-nmod:to(0,took,bank).
+nmod:to(0,take,bank).
 case(0,river,of).
 det(0,river,a).
 nmod:of(0,bank,river).
-cc(0,took,and).
-conj:and(0,took,played).
-case(0,them,upon).
-nmod:upon(0,played,them).
+cc(0,take,and).
+conj:and(0,take,play).
+case(0,they,upon).
+nmod:upon(0,play,they).
 case(0,hope,with).
 det(0,hope,the).
-nmod:with(0,played,hope).
-mark(0,making,of).
-acl:of(0,hope,making).
+nmod:with(0,play,hope).
+mark(0,make,of).
+acl:of(0,hope,make).
 det(0,rise,the).
 compound(0,rise,fish).
-dobj(0,making,rise).
-once_took(0,fisher,his_bagpipes).
-took(0,fisher,his_bagpipes).
-played_upon(0,fisher,them).
-root(1,ROOT,put).
+dobj(0,make,rise).
+% relations.
+once_take(0,fisher,he_bagpipe).
+take(0,fisher,he_bagpipe).
+play_upon(0,fisher,they).
+%% but never a one put his nose out of the water.
+% dependencies.
+root(1,root,put).
 cc(1,put,but).
 neg(1,put,never).
 det(1,one,a).
 nsubj(1,put,one).
-nmod:poss(1,nose,his).
+nmod:poss(1,nose,he).
 dobj(1,put,nose).
 case(1,water,out).
 mwe(1,out,of).
 det(1,water,the).
 nmod:out_of(1,put,water).
-root(2,ROOT,so).
+% relations.
+%% so he cast his net into the river and soon drew it forth filled with fish.
+% dependencies.
+root(2,root,so).
 nsubj(2,cast,he).
-nsubj(2,drew,he).
+nsubj(2,draw,he).
 ccomp(2,so,cast).
-nmod:poss(2,net,his).
+nmod:poss(2,net,he).
 dobj(2,cast,net).
 case(2,river,into).
 det(2,river,the).
 nmod:into(2,cast,river).
 cc(2,cast,and).
-advmod(2,drew,soon).
-ccomp(2,so,drew).
-conj:and(2,cast,drew).
-nsubj(2,filled,it).
-advmod(2,filled,forth).
-ccomp(2,drew,filled).
+advmod(2,draw,soon).
+ccomp(2,so,draw).
+conj:and(2,cast,draw).
+nsubj(2,fill,it).
+advmod(2,fill,forth).
+ccomp(2,draw,fill).
 case(2,fish,with).
-nmod:with(2,filled,fish).
-cast(2,he,his_net).
-filled_with(2,it,fish).
-forth_filled_with(2,it,fish).
-root(3,ROOT,took).
-advmod(3,took,then).
-nsubj(3,took,he).
-nmod:poss(3,bagpipes,his).
-dobj(3,took,bagpipes).
-advmod(3,took,again).
-cc(3,took,and).
-mark(3,played,as).
-nsubj(3,played,he).
-advcl:as(3,leapt,played).
+nmod:with(2,fill,fish).
+% relations.
+cast(2,he,he_net).
+fill_with(2,it,fish).
+forth_fill_with(2,it,fish).
+%% then he took his bagpipes again and as he played the fish leapt up in the net.
+% dependencies.
+root(3,root,take).
+advmod(3,take,then).
+nsubj(3,take,he).
+nmod:poss(3,bagpipe,he).
+dobj(3,take,bagpipe).
+advmod(3,take,again).
+cc(3,take,and).
+mark(3,play,as).
+nsubj(3,play,he).
+advcl:as(3,leap,play).
 det(3,fish,the).
-nsubj(3,leapt,fish).
-conj:and(3,took,leapt).
-compound:prt(3,leapt,up).
+nsubj(3,leap,fish).
+conj:and(3,take,leap).
+compound:prt(3,leap,up).
 case(3,net,in).
 det(3,net,the).
-nmod:in(3,leapt,net).
-took(3,he,his_bagpipes).
-took_again(3,he,his_bagpipes).
-leapt_up(3,fish,he_played).
-leapt_up_in(3,fish,net).
-root(4,ROOT,dance).
+nmod:in(3,leap,net).
+% relations.
+take(3,he,he_bagpipe).
+take_again(3,he,he_bagpipe).
+leap_up(3,fish,he_play).
+leap_up_in(3,fish,net).
+%% ah you dance now when i play.
+% dependencies.
+root(4,root,dance).
 dep(4,you,ah).
 dep(4,dance,you).
 dobj(4,dance,now).
 advmod(4,i,when).
 advcl(4,dance,i).
 dep(4,i,play).
-root(5,ROOT,said).
-nsubj(5,said,he).
-root(6,ROOT,yes).
+% relations.
+%% said he.
+% dependencies.
+root(5,root,say).
+nsubj(5,say,he).
+% relations.
+%% yes.
+% dependencies.
+root(6,root,yes).
+% relations.

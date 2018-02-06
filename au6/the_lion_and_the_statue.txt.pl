@@ -1,77 +1,91 @@
-root(0,ROOT,discussing).
+%% a man and a lion were discussing the relative strength of men and lions in general.
+% dependencies.
+root(0,root,discuss).
 det(0,man,a).
-nsubj(0,discussing,man).
+nsubj(0,discuss,man).
 cc(0,man,and).
 det(0,lion,a).
 conj:and(0,man,lion).
-nsubj(0,discussing,lion).
-aux(0,discussing,were).
+nsubj(0,discuss,lion).
+aux(0,discuss,be).
 det(0,strength,the).
 amod(0,strength,relative).
-dobj(0,discussing,strength).
-case(0,men,of).
-nmod:of(0,strength,men).
-cc(0,men,and).
-nmod:of(0,strength,lions).
-conj:and(0,men,lions).
+dobj(0,discuss,strength).
+case(0,man,of).
+nmod:of(0,strength,man).
+cc(0,man,and).
+nmod:of(0,strength,lion).
+conj:and(0,man,lion).
 case(0,general,in).
-advcl:in(0,discussing,general).
-were_discussing(0,lion,strength).
-were_discussing(0,lion,relative_strength).
-were_discussing(0,man,relative_strength).
-were_discussing(0,lion,strength_of_men).
-were_discussing_strength_in(0,man,general).
-were_discussing(0,man,strength_of_men).
-were_discussing(0,man,strength).
-were_discussing(0,man,relative_strength_of_men).
-were_discussing(0,lion,relative_strength_of_men).
-were_discussing_strength_in(0,lion,general).
-root(1,ROOT,contended).
+advcl:in(0,discuss,general).
+% relations.
+be_discuss(0,lion,strength).
+be_discuss(0,lion,relative_strength).
+be_discuss(0,man,relative_strength).
+be_discuss(0,lion,strength_of_man).
+be_discuss_strength_in(0,man,general).
+be_discuss(0,man,strength_of_man).
+be_discuss(0,man,strength).
+be_discuss(0,man,relative_strength_of_man).
+be_discuss(0,lion,relative_strength_of_man).
+be_discuss_strength_in(0,lion,general).
+%% the man contended that he and his fellows were stronger than lions by reason of their greater intelligence.
+% dependencies.
+root(1,root,contend).
 det(1,man,the).
-nsubj(1,contended,man).
+nsubj(1,contend,man).
 mark(1,stronger,that).
 nsubj(1,stronger,he).
 cc(1,he,and).
-nmod:poss(1,fellows,his).
-conj:and(1,he,fellows).
-nsubj(1,stronger,fellows).
-cop(1,stronger,were).
-ccomp(1,contended,stronger).
-case(1,lions,than).
-nmod:than(1,stronger,lions).
+nmod:poss(1,fellow,he).
+conj:and(1,he,fellow).
+nsubj(1,stronger,fellow).
+cop(1,stronger,be).
+ccomp(1,contend,stronger).
+case(1,lion,than).
+nmod:than(1,stronger,lion).
 case(1,reason,by).
 nmod:by(1,stronger,reason).
 case(1,intelligence,of).
-nmod:poss(1,intelligence,their).
+nmod:poss(1,intelligence,they).
 amod(1,intelligence,greater).
 nmod:of(1,reason,intelligence).
-were_stronger_by(1,his_fellows,reason).
-were(1,his_fellows,stronger_than_lions_by_reason_of_their_greater_intelligence).
-were(1,he,stronger_by_reason).
-were(1,he,stronger_than_lions_by_reason_of_their_greater_intelligence).
-were(1,he,stronger_than_lions_by_reason).
-were(1,he,stronger_by_reason_of_their_greater_intelligence).
-were(1,his_fellows,stronger_than_lions_by_reason).
-were(1,he,stronger_than_lions_by_reason_of_their_intelligence).
-were_stronger_by(1,he,reason_of_their_greater_intelligence).
-were(1,his_fellows,stronger_than_lions_by_reason_of_their_intelligence).
-were_stronger_than(1,his_fellows,lions).
-were(1,he,stronger).
-were(1,he,stronger_by_reason_of_their_intelligence).
-were_stronger_by(1,he,reason).
-were(1,he,stronger_than_lions).
-were(1,his_fellows,stronger).
-were_stronger_by(1,his_fellows,reason_of_their_greater_intelligence).
-were_stronger_than(1,he,lions).
-were_stronger_by(1,his_fellows,reason_of_their_intelligence).
-were_stronger_by(1,he,reason_of_their_intelligence).
-root(2,ROOT,come).
+% relations.
+be_stronger_by(1,he_fellow,reason).
+be(1,he_fellow,stronger_than_lion_by_reason_of_they_greater_intelligence).
+be(1,he,stronger_by_reason).
+be(1,he,stronger_than_lion_by_reason_of_they_greater_intelligence).
+be(1,he,stronger_than_lion_by_reason).
+be(1,he,stronger_by_reason_of_they_greater_intelligence).
+be(1,he_fellow,stronger_than_lion_by_reason).
+be(1,he,stronger_than_lion_by_reason_of_they_intelligence).
+be_stronger_by(1,he,reason_of_they_greater_intelligence).
+be(1,he_fellow,stronger_than_lion_by_reason_of_they_intelligence).
+be_stronger_than(1,he_fellow,lion).
+be(1,he,stronger).
+be(1,he,stronger_by_reason_of_they_intelligence).
+be_stronger_by(1,he,reason).
+be(1,he,stronger_than_lion).
+be(1,he_fellow,stronger).
+be_stronger_by(1,he_fellow,reason_of_they_greater_intelligence).
+be_stronger_than(1,he,lion).
+be_stronger_by(1,he_fellow,reason_of_they_intelligence).
+be_stronger_by(1,he,reason_of_they_intelligence).
+%% come now with me.
+% dependencies.
+root(2,root,come).
 advmod(2,come,now).
-case(2,me,with).
-nmod:with(2,come,me).
-root(3,ROOT,cried).
-nsubj(3,cried,he).
-root(4,ROOT,i).
+case(2,I,with).
+nmod:with(2,come,I).
+% relations.
+%% he cried.
+% dependencies.
+root(3,root,cry).
+nsubj(3,cry,he).
+% relations.
+%% and i will soon prove that i am right.
+% dependencies.
+root(4,root,i).
 cc(4,i,and).
 mark(4,i,i).
 aux(4,prove,will).
@@ -81,56 +95,69 @@ ref(4,i,that).
 dep(4,prove,i).
 advmod(4,right,am).
 dep(4,i,right).
-root(5,ROOT,so).
-nsubj(5,took,he).
-nsubj(5,showed,he).
-ccomp(5,so,took).
-dobj(5,took,him).
-case(5,gardens,into).
-det(5,gardens,the).
-amod(5,gardens,public).
-nmod:into(5,took,gardens).
-cc(5,took,and).
-ccomp(5,so,showed).
-conj:and(5,took,showed).
-nsubj(5,statue,him).
+% relations.
+%% so he took him into the public gardens and showed him a statue of hercules overcoming the lion and tearing his mouth in two.
+% dependencies.
+root(5,root,so).
+nsubj(5,take,he).
+nsubj(5,show,he).
+ccomp(5,so,take).
+dobj(5,take,he).
+case(5,garden,into).
+det(5,garden,the).
+amod(5,garden,public).
+nmod:into(5,take,garden).
+cc(5,take,and).
+ccomp(5,so,show).
+conj:and(5,take,show).
+nsubj(5,statue,he).
 det(5,statue,a).
-xcomp(5,showed,statue).
-case(5,hercules,of).
-nmod:of(5,statue,hercules).
-dep(5,hercules,overcoming).
+xcomp(5,show,statue).
+case(5,hercule,of).
+nmod:of(5,statue,hercule).
+dep(5,hercule,overcome).
 det(5,lion,the).
-dobj(5,overcoming,lion).
-cc(5,overcoming,and).
-dep(5,hercules,tearing).
-conj:and(5,overcoming,tearing).
-nmod:poss(5,mouth,his).
-dobj(5,tearing,mouth).
+dobj(5,overcome,lion).
+cc(5,overcome,and).
+dep(5,hercule,tear).
+conj:and(5,overcome,tear).
+nmod:poss(5,mouth,he).
+dobj(5,tear,mouth).
 case(5,two,in).
-nmod:in(5,tearing,two).
-took(5,he,him).
-showed(5,he,him_statue).
-showed(5,he,him_statue_of_hercules).
-statue_of(5,him,hercules).
-tearing(5,lion,his_mouth).
-root(6,ROOT,is).
-nsubj(6,is,that).
+nmod:in(5,tear,two).
+% relations.
+take(5,he,he).
+show(5,he,he_statue).
+show(5,he,he_statue_of_hercule).
+statue_of(5,he,hercule).
+tear(5,lion,he_mouth).
+%% that is all very well.
+% dependencies.
+root(6,root,be).
+nsubj(6,be,that).
 dep(6,very,all).
-advmod(6,is,very).
-advmod(6,is,well).
-root(7,ROOT,said).
+advmod(6,be,very).
+advmod(6,be,well).
+% relations.
+%% said the lion.
+% dependencies.
+root(7,root,say).
 det(7,lion,the).
-nsubj(7,said,lion).
-root(8,ROOT,proves).
-cc(8,proves,but).
-dobj(8,proves,nothing).
+nsubj(7,say,lion).
+% relations.
+%% but proves nothing for it was a man who made the statue.
+% dependencies.
+root(8,root,prove).
+cc(8,prove,but).
+dobj(8,prove,nothing).
 mark(8,man,for).
 nsubj(8,man,it).
-cop(8,man,was).
+cop(8,man,be).
 det(8,man,a).
-advcl:for(8,proves,man).
-nsubj(8,made,man).
+advcl:for(8,prove,man).
+nsubj(8,make,man).
 ref(8,man,who).
-acl:relcl(8,man,made).
+acl:relcl(8,man,make).
 det(8,statue,the).
-dobj(8,made,statue).
+dobj(8,make,statue).
+% relations.

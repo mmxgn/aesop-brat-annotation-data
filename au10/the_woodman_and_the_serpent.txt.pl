@@ -1,69 +1,80 @@
-root(0,ROOT,tramping).
+%% one wintry day a woodman was tramping home from his work when he saw something black lying on the snow.
+% dependencies.
+root(0,root,tramp).
 nummod(0,day,one).
 amod(0,day,wintry).
-nsubj(0,tramping,day).
+nsubj(0,tramp,day).
 det(0,woodman,a).
 dep(0,day,woodman).
-aux(0,tramping,was).
-dobj(0,tramping,home).
+aux(0,tramp,be).
+dobj(0,tramp,home).
 case(0,work,from).
-nmod:poss(0,work,his).
-nmod:from(0,tramping,work).
-advmod(0,saw,when).
-nsubj(0,saw,he).
-acl:relcl(0,work,saw).
-nsubj(0,lying,something).
-dep(0,lying,black).
-xcomp(0,saw,lying).
+nmod:poss(0,work,he).
+nmod:from(0,tramp,work).
+advmod(0,see,when).
+nsubj(0,see,he).
+acl:relcl(0,work,see).
+nsubj(0,lie,something).
+dep(0,lie,black).
+xcomp(0,see,lie).
 case(0,snow,on).
 det(0,snow,the).
-nmod:on(0,lying,snow).
-saw(0,he,something_lying).
-lying_on(0,something,snow).
-saw(0,he,something_lying_on_snow).
-root(1,ROOT,came).
-advmod(1,came,when).
-nsubj(1,came,he).
-advmod(1,came,closer).
-nsubj(1,saw,he).
-ccomp(1,came,saw).
+nmod:on(0,lie,snow).
+% relations.
+see(0,he,something_lie).
+lie_on(0,something,snow).
+see(0,he,something_lie_on_snow).
+%% when he came closer he saw it was a serpent to all appearance dead.
+% dependencies.
+root(1,root,come).
+advmod(1,come,when).
+nsubj(1,come,he).
+advmod(1,come,closer).
+nsubj(1,see,he).
+ccomp(1,come,see).
 nsubj(1,serpent,it).
-cop(1,serpent,was).
+cop(1,serpent,be).
 det(1,serpent,a).
-ccomp(1,saw,serpent).
+ccomp(1,see,serpent).
 case(1,appearance,to).
 det(1,appearance,all).
 nmod:to(1,serpent,appearance).
 amod(1,appearance,dead).
-was_serpent_to(1,it,appearance_dead).
-root(2,ROOT,took).
-cc(2,took,but).
-nsubj(2,took,he).
+% relations.
+be_serpent_to(1,it,appearance_dead).
+%% but he took it up and put it in his bosom to warm while he hurried home.
+% dependencies.
+root(2,root,take).
+cc(2,take,but).
+nsubj(2,take,he).
 nsubj(2,put,he).
-dobj(2,took,it).
-compound:prt(2,took,up).
-cc(2,took,and).
-conj:and(2,took,put).
+dobj(2,take,it).
+compound:prt(2,take,up).
+cc(2,take,and).
+conj:and(2,take,put).
 dobj(2,put,it).
 case(2,bosom,in).
-nmod:poss(2,bosom,his).
+nmod:poss(2,bosom,he).
 nmod:in(2,put,bosom).
 mark(2,warm,to).
 acl:to(2,bosom,warm).
-mark(2,hurried,while).
-nsubj(2,hurried,he).
-advcl:while(2,warm,hurried).
-dobj(2,hurried,home).
-took_up(2,he,it).
+mark(2,hurry,while).
+nsubj(2,hurry,he).
+advcl:while(2,warm,hurry).
+dobj(2,hurry,home).
+% relations.
+take_up(2,he,it).
 put(2,he,it).
-root(3,ROOT,soon).
+%% as soon as he got indoors he put the serpent down on the hearth before the fire.
+% dependencies.
+root(3,root,soon).
 advmod(3,soon,as).
-mark(3,got,as).
-nsubj(3,got,he).
-dep(3,soon,got).
-advmod(3,got,indoors).
+mark(3,get,as).
+nsubj(3,get,he).
+dep(3,soon,get).
+advmod(3,get,indoors).
 nsubj(3,put,he).
-ccomp(3,got,put).
+ccomp(3,get,put).
 det(3,serpent,the).
 dobj(3,put,serpent).
 compound:prt(3,put,down).
@@ -73,79 +84,92 @@ nmod:on(3,put,hearth).
 case(3,fire,before).
 det(3,fire,the).
 nmod:before(3,hearth,fire).
+% relations.
 put_serpent_down_on(3,he,hearth_before_fire).
 put_down(3,he,serpent).
 put_serpent_down_on(3,he,hearth).
-root(4,ROOT,watched).
-det(4,children,the).
-nsubj(4,watched,children).
-nsubj(4,saw,children).
-dobj(4,watched,it).
-cc(4,watched,and).
-conj:and(4,watched,saw).
+%% the children watched it and saw it slowly come to life again.
+% dependencies.
+root(4,root,watch).
+det(4,child,the).
+nsubj(4,watch,child).
+nsubj(4,see,child).
+dobj(4,watch,it).
+cc(4,watch,and).
+conj:and(4,watch,see).
 nsubj(4,come,it).
 advmod(4,come,slowly).
-ccomp(4,saw,come).
+ccomp(4,see,come).
 case(4,life,to).
 nmod:to(4,come,life).
 advmod(4,come,again).
+% relations.
 slowly_come_again_to(4,it,life).
 slowly_come_to(4,it,life).
 come_again_to(4,it,life).
-watched(4,children,it).
+watch(4,child,it).
 come_to(4,it,life).
-root(5,ROOT,stooped).
+%% then one of them stooped down to stroke it but thc serpent raised its head and put out its fangs and was about to sting the child to death.
+% dependencies.
+root(5,root,stoop).
 advmod(5,one,then).
-det:qmod(5,them,one).
+det:qmod(5,they,one).
 mwe(5,one,of).
-nsubj(5,stooped,them).
-nsubj(5,was,them).
-compound:prt(5,stooped,down).
+nsubj(5,stoop,they).
+nsubj(5,be,they).
+compound:prt(5,stoop,down).
 case(5,stroke,to).
-nmod:to(5,stooped,stroke).
-nsubj(5,raised,it).
+nmod:to(5,stoop,stroke).
+nsubj(5,raise,it).
 nsubj(5,put,it).
 case(5,serpent,but).
 amod(5,serpent,thc).
 nmod:but(5,it,serpent).
-acl:relcl(5,stroke,raised).
+acl:relcl(5,stroke,raise).
 nmod:poss(5,head,its).
-dobj(5,raised,head).
-cc(5,raised,and).
+dobj(5,raise,head).
+cc(5,raise,and).
 acl:relcl(5,stroke,put).
-conj:and(5,raised,put).
+conj:and(5,raise,put).
 compound:prt(5,put,out).
-nmod:poss(5,fangs,its).
-dobj(5,put,fangs).
-cc(5,stooped,and).
-conj:and(5,stooped,was).
-advmod(5,was,about).
+nmod:poss(5,fang,its).
+dobj(5,put,fang).
+cc(5,stoop,and).
+conj:and(5,stoop,be).
+advmod(5,be,about).
 mark(5,sting,to).
 advcl:to(5,about,sting).
 det(5,child,the).
 dobj(5,sting,child).
 case(5,death,to).
 nmod:to(5,sting,death).
-put_out(5,it,its_fangs).
-raised(5,it,its_head).
-root(6,ROOT,seized).
-mark(6,seized,so).
+% relations.
+put_out(5,it,its_fang).
+raise(5,it,its_head).
+%% so the woodman seized his axe and with one stroke cut the serpent in two.
+% dependencies.
+root(6,root,seize).
+mark(6,seize,so).
 det(6,woodman,the).
-nsubj(6,seized,woodman).
-nmod:poss(6,axe,his).
-dobj(6,seized,axe).
-cc(6,seized,and).
+nsubj(6,seize,woodman).
+nmod:poss(6,axe,he).
+dobj(6,seize,axe).
+cc(6,seize,and).
 mark(6,cut,with).
 nummod(6,stroke,one).
 nsubj(6,cut,stroke).
-conj:and(6,seized,cut).
+conj:and(6,seize,cut).
 det(6,serpent,the).
 dobj(6,cut,serpent).
 case(6,two,in).
 nmod:in(6,cut,two).
-seized(6,woodman,his_axe).
+% relations.
+seize(6,woodman,he_axe).
 cut(6,one_stroke,serpent).
 cut_serpent_in(6,one_stroke,two).
 cut_serpent_in(6,stroke,two).
 cut(6,stroke,serpent).
-root(7,ROOT,ah).
+%% ah.
+% dependencies.
+root(7,root,ah).
+% relations.

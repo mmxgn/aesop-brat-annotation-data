@@ -1,86 +1,106 @@
-root(0,ROOT,placed).
+%% a farmer placed nets on his newly-sown plowlands and caught a number of cranes which came to pick up his seed.
+% dependencies.
+root(0,root,place).
 det(0,farmer,a).
-nsubj(0,placed,farmer).
-nsubj(0,caught,farmer).
-dobj(0,placed,nets).
-case(0,plowlands,on).
-nmod:poss(0,plowlands,his).
-amod(0,plowlands,newly-sown).
-nmod:on(0,placed,plowlands).
-cc(0,placed,and).
-conj:and(0,placed,caught).
-det:qmod(0,cranes,a).
+nsubj(0,place,farmer).
+nsubj(0,catch,farmer).
+dobj(0,place,net).
+case(0,plowland,on).
+nmod:poss(0,plowland,he).
+amod(0,plowland,newly-sown).
+nmod:on(0,place,plowland).
+cc(0,place,and).
+conj:and(0,place,catch).
+det:qmod(0,crane,a).
 mwe(0,a,number).
 mwe(0,a,of).
-dobj(0,caught,cranes).
-nsubj(0,came,cranes).
-nsubj:xsubj(0,pick,cranes).
-ref(0,cranes,which).
-acl:relcl(0,cranes,came).
+dobj(0,catch,crane).
+nsubj(0,come,crane).
+nsubj:xsubj(0,pick,crane).
+ref(0,crane,which).
+acl:relcl(0,crane,come).
 mark(0,pick,to).
-xcomp(0,came,pick).
+xcomp(0,come,pick).
 compound:prt(0,pick,up).
-nmod:poss(0,seed,his).
+nmod:poss(0,seed,he).
 dobj(0,pick,seed).
-placed_nets_on(0,farmer,his_plowlands).
-placed(0,farmer,nets).
-placed_nets_on(0,farmer,his_newly-sown_plowlands).
-root(1,ROOT,trapped).
-case(1,them,with).
-nmod:with(1,trapped,them).
-nsubj(1,trapped,he).
-nsubj(1,beseeching,he).
+% relations.
+place_net_on(0,farmer,he_plowland).
+place(0,farmer,net).
+place_net_on(0,farmer,he_newly-sown_plowland).
+%% with them he trapped a stork that had fractured his leg in the net and was earnestly beseeching the farmer to spare his life.
+% dependencies.
+root(1,root,trap).
+case(1,they,with).
+nmod:with(1,trap,they).
+nsubj(1,trap,he).
+nsubj(1,beseech,he).
 det(1,stork,a).
-dobj(1,trapped,stork).
-nsubj(1,fractured,stork).
+dobj(1,trap,stork).
+nsubj(1,fracture,stork).
 ref(1,stork,that).
-aux(1,fractured,had).
-acl:relcl(1,stork,fractured).
-nmod:poss(1,leg,his).
-dobj(1,fractured,leg).
+aux(1,fracture,have).
+acl:relcl(1,stork,fracture).
+nmod:poss(1,leg,he).
+dobj(1,fracture,leg).
 case(1,net,in).
 det(1,net,the).
-nmod:in(1,fractured,net).
-cc(1,trapped,and).
-aux(1,beseeching,was).
-advmod(1,beseeching,earnestly).
-conj:and(1,trapped,beseeching).
+nmod:in(1,fracture,net).
+cc(1,trap,and).
+aux(1,beseech,be).
+advmod(1,beseech,earnestly).
+conj:and(1,trap,beseech).
 det(1,farmer,the).
-dobj(1,beseeching,farmer).
+dobj(1,beseech,farmer).
 mark(1,spare,to).
 acl:to(1,farmer,spare).
-nmod:poss(1,life,his).
+nmod:poss(1,life,he).
 dobj(1,spare,life).
-root(2,ROOT,pray).
+% relations.
+%% pray save me master.
+% dependencies.
+root(2,root,pray).
 xcomp(2,pray,save).
-iobj(2,save,me).
+iobj(2,save,I).
 dobj(2,save,master).
-root(3,ROOT,said).
-nsubj(3,said,he).
-root(4,ROOT,let).
+% relations.
+%% he said.
+% dependencies.
+root(3,root,say).
+nsubj(3,say,he).
+% relations.
+%% and let me go free this once.
+% dependencies.
+root(4,root,let).
 cc(4,let,and).
-nsubj(4,go,me).
+nsubj(4,go,I).
 ccomp(4,let,go).
 xcomp(4,go,free).
 det(4,once,this).
 dep(4,free,once).
-go(4,me,free).
-root(5,ROOT,excite).
+% relations.
+go(4,I,free).
+%% my broken limb should excite your pity.
+% dependencies.
+root(5,root,excite).
 nmod:poss(5,limb,my).
 amod(5,limb,broken).
 nsubj(5,excite,limb).
 aux(5,excite,should).
-nmod:poss(5,pity,your).
+nmod:poss(5,pity,you).
 dobj(5,excite,pity).
-should_excite(5,my_broken_limb,your_pity).
-should_excite(5,my_limb,your_pity).
-root(6,ROOT,crane).
+% relations.
+should_excite(5,my_broken_limb,you_pity).
+should_excite(5,my_limb,you_pity).
+%% besides i am no crane i am a stork a bird of excellent character.
+% dependencies.
+root(6,root,crane).
 case(6,i,besides).
 nmod:besides(6,crane,i).
-cop(6,crane,am).
+cop(6,crane,be).
 neg(6,crane,no).
 nsubj(6,stork,i).
-cop(6,stork,am).
+cop(6,stork,be).
 det(6,stork,a).
 ccomp(6,crane,stork).
 det(6,bird,a).
@@ -88,7 +108,10 @@ nsubj(6,crane,bird).
 case(6,character,of).
 amod(6,character,excellent).
 nmod:of(6,bird,character).
-root(7,ROOT,see).
+% relations.
+%% and see how i love and slave for my father and mother.
+% dependencies.
+root(7,root,see).
 cc(7,see,and).
 dobj(7,see,how).
 nmod(7,see,i).
@@ -102,14 +125,17 @@ nmod:for(7,love,father).
 cc(7,father,and).
 nmod:for(7,love,mother).
 conj:and(7,father,mother).
-root(8,ROOT,look).
-advmod(8,feathers,too).
-case(8,feathers,at).
-nmod:poss(8,feathers,my).
-nmod:at(8,look,feathers).
+% relations.
+%% look too at my feathers -- they are not the least like those of a crane.
+% dependencies.
+root(8,root,look).
+advmod(8,feather,too).
+case(8,feather,at).
+nmod:poss(8,feather,my).
+nmod:at(8,look,feather).
 punct(8,look,--).
 nsubj(8,least,they).
-cop(8,least,are).
+cop(8,least,be).
 neg(8,least,not).
 det(8,least,the).
 ccomp(8,look,least).
@@ -118,14 +144,20 @@ nmod:like(8,least,those).
 case(8,crane,of).
 det(8,crane,a).
 nmod:of(8,those,crane).
-root(9,ROOT,laughed).
+% relations.
+%% the farmer laughed aloud and said.
+% dependencies.
+root(9,root,laugh).
 det(9,farmer,the).
-nsubj(9,laughed,farmer).
-nsubj(9,said,farmer).
-advmod(9,laughed,aloud).
-cc(9,laughed,and).
-conj:and(9,laughed,said).
-root(10,ROOT,all).
+nsubj(9,laugh,farmer).
+nsubj(9,say,farmer).
+advmod(9,laugh,aloud).
+cc(9,laugh,and).
+conj:and(9,laugh,say).
+% relations.
+%% it may be all as you say i only know this i have taken you with these robbers the cranes and you must die in their company.
+% dependencies.
+root(10,root,all).
 nsubj(10,all,it).
 aux(10,all,may).
 cop(10,all,be).
@@ -136,23 +168,24 @@ nsubj(10,know,i).
 advmod(10,know,only).
 dep(10,say,know).
 det(10,i,this).
-nsubj(10,taken,i).
-aux(10,taken,have).
-ccomp(10,know,taken).
-dobj(10,taken,you).
-case(10,robbers,with).
-det(10,robbers,these).
-nmod:with(10,taken,robbers).
-det(10,cranes,the).
-dep(10,robbers,cranes).
+nsubj(10,take,i).
+aux(10,take,have).
+ccomp(10,know,take).
+dobj(10,take,you).
+case(10,robber,with).
+det(10,robber,these).
+nmod:with(10,take,robber).
+det(10,crane,the).
+dep(10,robber,crane).
 cc(10,know,and).
 nsubj(10,die,you).
 aux(10,die,must).
 dep(10,say,die).
 conj:and(10,know,die).
 case(10,company,in).
-nmod:poss(10,company,their).
+nmod:poss(10,company,they).
 nmod:in(10,die,company).
-must_die_in(10,you,their_company).
+% relations.
+must_die_in(10,you,they_company).
 may(10,it,may_all).
-taken(10,i,you).
+take(10,i,you).

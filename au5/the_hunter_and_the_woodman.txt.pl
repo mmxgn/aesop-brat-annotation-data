@@ -1,98 +1,125 @@
-root(0,ROOT,searching).
+%% a hunter not very bold was searching for the tracks of a lion.
+% dependencies.
+root(0,root,search).
 det(0,hunter,a).
-nsubj(0,searching,hunter).
+nsubj(0,search,hunter).
 neg(0,bold,not).
 advmod(0,bold,very).
 amod(0,hunter,bold).
-aux(0,searching,was).
-case(0,tracks,for).
-det(0,tracks,the).
-nmod:for(0,searching,tracks).
+aux(0,search,be).
+case(0,track,for).
+det(0,track,the).
+nmod:for(0,search,track).
 case(0,lion,of).
 det(0,lion,a).
-nmod:of(0,tracks,lion).
-root(1,ROOT,asked).
-nsubj(1,asked,he).
-nsubj(1,knew,he).
+nmod:of(0,track,lion).
+% relations.
+%% he asked a man felling oaks in the forest if he had seen any marks of his footsteps or knew where his lair was.
+% dependencies.
+root(1,root,ask).
+nsubj(1,ask,he).
+nsubj(1,know,he).
 det(1,man,a).
-dobj(1,asked,man).
-amod(1,oaks,felling).
-nmod:in(1,asked,oaks).
-case(1,oaks,in).
+dobj(1,ask,man).
+amod(1,oak,felling).
+nmod:in(1,ask,oak).
+case(1,oak,in).
 det(1,forest,the).
-dep(1,oaks,forest).
-mark(1,seen,if).
-nsubj(1,seen,he).
-aux(1,seen,had).
-advcl:if(1,asked,seen).
-det(1,marks,any).
-dobj(1,seen,marks).
-case(1,footsteps,of).
-nmod:poss(1,footsteps,his).
-nmod:of(1,marks,footsteps).
-cc(1,asked,or).
-conj:or(1,asked,knew).
-advmod(1,was,where).
-nmod:poss(1,lair,his).
-nsubj(1,was,lair).
-ccomp(1,knew,was).
-had_seen(1,he,marks_of_footsteps).
-had_seen(1,he,marks_of_his_footsteps).
-asked_man_in(1,he,felling_oaks).
-asked(1,he,man).
-asked_man_in(1,he,oaks).
-marks_of(1,he,his_footsteps).
-marks_of(1,he,footsteps).
-root(2,ROOT,will).
+dep(1,oak,forest).
+mark(1,see,if).
+nsubj(1,see,he).
+aux(1,see,have).
+advcl:if(1,ask,see).
+det(1,mark,any).
+dobj(1,see,mark).
+case(1,footstep,of).
+nmod:poss(1,footstep,he).
+nmod:of(1,mark,footstep).
+cc(1,ask,or).
+conj:or(1,ask,know).
+advmod(1,be,where).
+nmod:poss(1,lair,he).
+nsubj(1,be,lair).
+ccomp(1,know,be).
+% relations.
+have_see(1,he,mark_of_footstep).
+have_see(1,he,mark_of_he_footstep).
+ask_man_in(1,he,felling_oak).
+ask(1,he,man).
+ask_man_in(1,he,oak).
+mark_of(1,he,he_footstep).
+mark_of(1,he,footstep).
+%% i will.
+% dependencies.
+root(2,root,will).
 nsubj(2,will,i).
-root(3,ROOT,said).
+% relations.
+%% said the man.
+% dependencies.
+root(3,root,say).
 det(3,man,the).
-nsubj(3,said,man).
-root(4,ROOT,show).
+nsubj(3,say,man).
+% relations.
+%% at once show you the lion himself.
+% dependencies.
+root(4,root,show).
 case(4,once,at).
 advmod(4,show,once).
 nsubj(4,lion,you).
 det(4,lion,the).
 xcomp(4,show,lion).
 nsubj(4,show,himself).
+% relations.
 show(4,himself,you_lion).
 once_show(4,himself,you_lion).
-root(5,ROOT,replied).
+%% the hunter turning very pale and chattering with his teeth from fear replied.
+% dependencies.
+root(5,root,reply).
 det(5,hunter,the).
-nsubj(5,replied,hunter).
-dep(5,hunter,turning).
+nsubj(5,reply,hunter).
+dep(5,hunter,turn).
 advmod(5,pale,very).
-xcomp(5,turning,pale).
-cc(5,turning,and).
-dep(5,hunter,chattering).
-conj:and(5,turning,chattering).
-case(5,teeth,with).
-nmod:poss(5,teeth,his).
-nmod:with(5,chattering,teeth).
+xcomp(5,turn,pale).
+cc(5,turn,and).
+dep(5,hunter,chatter).
+conj:and(5,turn,chatter).
+case(5,tooth,with).
+nmod:poss(5,tooth,he).
+nmod:with(5,chatter,tooth).
 case(5,fear,from).
-nmod:from(5,chattering,fear).
-root(6,ROOT,no).
+nmod:from(5,chatter,fear).
+% relations.
+%% no thank you.
+% dependencies.
+root(6,root,no).
 dep(6,no,thank).
 dobj(6,thank,you).
-root(7,ROOT,ask).
+% relations.
+%% i did not ask that.
+% dependencies.
+root(7,root,ask).
 nsubj(7,ask,i).
-aux(7,ask,did).
+aux(7,ask,do).
 neg(7,ask,not).
 advmod(7,ask,that).
-root(8,ROOT,search).
+% relations.
+%% it is his track only i am in search of not the lion himself.
+% dependencies.
+root(8,root,search).
 nsubj(8,track,it).
-cop(8,track,is).
-nmod:poss(8,track,his).
+cop(8,track,be).
+nmod:poss(8,track,he).
 dep(8,search,track).
 advmod(8,i,only).
 nmod(8,track,i).
-cop(8,search,am).
+cop(8,search,be).
 case(8,search,in).
 case(8,lion,of).
 neg(8,lion,not).
 det(8,lion,the).
 nmod:of(8,search,lion).
 nsubj(8,search,himself).
-is(8,it,his_track_only_i).
-is(8,it,his_track_i).
-is(8,it,his_track).
+% relations.
+be(8,it,he_track_only_i).
+be(8,it,he_track_i).
+be(8,it,he_track).

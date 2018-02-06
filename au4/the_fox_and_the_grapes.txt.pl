@@ -1,131 +1,152 @@
-root(0,ROOT,strolling).
-nsubj(0,strolling,one).
+%% one hot summer 's day a fox was strolling through an orchard till he came to a bunch of grapes just ripening on a vine which had been trained over a lofty branch.
+% dependencies.
+root(0,root,stroll).
+nsubj(0,stroll,one).
 amod(0,summer,hot).
 nmod:poss(0,day,summer).
 case(0,summer,'s).
 dep(0,one,day).
 det(0,fox,a).
 dep(0,one,fox).
-aux(0,strolling,was).
+aux(0,stroll,be).
 case(0,orchard,through).
-det(0,orchard,an).
-nmod:through(0,strolling,orchard).
-mark(0,came,till).
-nsubj(0,came,he).
-advcl:till(0,strolling,came).
+det(0,orchard,a).
+nmod:through(0,stroll,orchard).
+mark(0,come,till).
+nsubj(0,come,he).
+advcl:till(0,stroll,come).
 case(0,bunch,to).
-det:qmod(0,grapes,a).
+det:qmod(0,grape,a).
 mwe(0,a,bunch).
 mwe(0,a,of).
-nmod(0,came,grapes).
-advmod(0,ripening,just).
-acl(0,grapes,ripening).
+nmod(0,come,grape).
+advmod(0,ripen,just).
+acl(0,grape,ripen).
 case(0,vine,on).
 det(0,vine,a).
-nmod:on(0,ripening,vine).
-nsubjpass(0,trained,vine).
+nmod:on(0,ripen,vine).
+nsubjpass(0,train,vine).
 ref(0,vine,which).
-aux(0,trained,had).
-auxpass(0,trained,been).
-acl:relcl(0,vine,trained).
+aux(0,train,have).
+auxpass(0,train,be).
+acl:relcl(0,vine,train).
 case(0,branch,over).
 det(0,branch,a).
 amod(0,branch,lofty).
-nmod:over(0,trained,branch).
+nmod:over(0,train,branch).
+% relations.
 has(0,hot_summer,day).
-root(1,ROOT,thing).
+%% just the thing to quench my thirst.
+% dependencies.
+root(1,root,thing).
 advmod(1,thing,just).
 det(1,thing,the).
 mark(1,quench,to).
 dep(1,thing,quench).
 nmod:poss(1,thirst,my).
 dobj(1,quench,thirst).
-root(2,ROOT,he).
+% relations.
+%% quoth he.
+% dependencies.
+root(2,root,he).
 case(2,he,quoth).
-root(3,ROOT,drawing).
-compound:prt(3,drawing,back).
-det(3,paces,a).
-amod(3,paces,few).
-dobj(3,drawing,paces).
-nsubj(3,took,he).
-nsubj(3,missed,he).
-acl:relcl(3,paces,took).
+% relations.
+%% drawing back a few paces he took a run and a jump and just missed the bunch.
+% dependencies.
+root(3,root,draw).
+compound:prt(3,draw,back).
+det(3,pace,a).
+amod(3,pace,few).
+dobj(3,draw,pace).
+nsubj(3,take,he).
+nsubj(3,miss,he).
+acl:relcl(3,pace,take).
 det(3,run,a).
-dobj(3,took,run).
+dobj(3,take,run).
 cc(3,run,and).
 det(3,jump,a).
-dobj(3,took,jump).
+dobj(3,take,jump).
 conj:and(3,run,jump).
-cc(3,took,and).
-advmod(3,missed,just).
-acl:relcl(3,paces,missed).
-conj:and(3,took,missed).
+cc(3,take,and).
+advmod(3,miss,just).
+acl:relcl(3,pace,miss).
+conj:and(3,take,miss).
 det(3,bunch,the).
-dobj(3,missed,bunch).
-took(3,he,run).
-just_missed(3,he,bunch).
-took(3,he,jump).
-missed(3,he,bunch).
-root(4,ROOT,turning).
-dobj(4,turning,round).
-advmod(4,turning,again).
+dobj(3,miss,bunch).
+% relations.
+take(3,he,run).
+just_miss(3,he,bunch).
+take(3,he,jump).
+miss(3,he,bunch).
+%% turning round again with a one two three he jumped up but with no greater success.
+% dependencies.
+root(4,root,turn).
+dobj(4,turn,round).
+advmod(4,turn,again).
 case(4,one,with).
 det(4,one,a).
-nmod:with(4,turning,one).
+nmod:with(4,turn,one).
 nummod(4,three,two).
-dobj(4,turning,three).
-nsubj(4,jumped,he).
-acl:relcl(4,three,jumped).
-compound:prt(4,jumped,up).
+dobj(4,turn,three).
+nsubj(4,jump,he).
+acl:relcl(4,three,jump).
+compound:prt(4,jump,up).
 cc(4,success,but).
 case(4,success,with).
 neg(4,success,no).
 amod(4,success,greater).
-nmod:with(4,jumped,success).
-root(5,ROOT,he).
+nmod:with(4,jump,success).
+% relations.
+%% again and again he tried after the tempting morsel but at last had to give it up and walked away with his nose in the air saying.
+% dependencies.
+root(5,root,he).
 dep(5,he,again).
 cc(5,again,and).
 conj:and(5,again,again).
 dep(5,he,again).
-acl:relcl(5,he,tried).
-mark(5,had,after).
+acl:relcl(5,he,try).
+mark(5,have,after).
 det(5,morsel,the).
 amod(5,morsel,tempting).
-nsubj(5,had,morsel).
+nsubj(5,have,morsel).
 nsubj:xsubj(5,give,morsel).
-nsubj(5,walked,morsel).
+nsubj(5,walk,morsel).
 cc(5,last,but).
 case(5,last,at).
 nmod:at(5,morsel,last).
-advcl:after(5,tried,had).
+advcl:after(5,try,have).
 mark(5,give,to).
-xcomp(5,had,give).
+xcomp(5,have,give).
 dobj(5,give,it).
 compound:prt(5,give,up).
-cc(5,had,and).
-advcl:after(5,tried,walked).
-conj:and(5,had,walked).
-compound:prt(5,walked,away).
+cc(5,have,and).
+advcl:after(5,try,walk).
+conj:and(5,have,walk).
+compound:prt(5,walk,away).
 case(5,nose,with).
-nmod:poss(5,nose,his).
-nmod:with(5,walked,nose).
+nmod:poss(5,nose,he).
+nmod:with(5,walk,nose).
 case(5,air,in).
 det(5,air,the).
-nmod:in(5,walked,air).
-acl(5,air,saying).
+nmod:in(5,walk,air).
+acl(5,air,say).
+% relations.
 give_up(5,morsel,it).
-walked_away_with(5,morsel,his_nose).
-walked_away_in(5,tempting_morsel,air).
-walked_away_in(5,morsel,air_saying).
+walk_away_with(5,morsel,he_nose).
+walk_away_in(5,tempting_morsel,air).
+walk_away_in(5,morsel,air_say).
 give_up(5,tempting_morsel,it).
-walked_away_with(5,tempting_morsel,his_nose).
-walked_away_in(5,tempting_morsel,air_saying).
-walked_away_in(5,morsel,air).
-root(6,ROOT,sure).
+walk_away_with(5,tempting_morsel,he_nose).
+walk_away_in(5,tempting_morsel,air_say).
+walk_away_in(5,morsel,air).
+%% i am sure they are sour.
+% dependencies.
+root(6,root,sure).
 nsubj(6,sure,i).
-cop(6,sure,am).
+cop(6,sure,be).
 nsubj(6,sour,they).
-cop(6,sour,are).
+cop(6,sour,be).
 ccomp(6,sure,sour).
-am(6,i,sure).
-are(6,they,sour).
+% relations.
+be(6,i,sure).
+be(6,they,sour).

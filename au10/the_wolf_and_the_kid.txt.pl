@@ -1,73 +1,97 @@
-root(0,ROOT,saw).
+%% a kid was perched up on the top of a house and looking down saw a wolf passing under him.
+% dependencies.
+root(0,root,see).
 det(0,kid,a).
-nsubj(0,saw,kid).
-auxpass(0,perched,was).
-acl:relcl(0,kid,perched).
-compound:prt(0,perched,up).
+nsubj(0,see,kid).
+auxpass(0,perch,be).
+acl:relcl(0,kid,perch).
+compound:prt(0,perch,up).
 case(0,top,on).
 det(0,top,the).
-nmod:on(0,perched,top).
+nmod:on(0,perch,top).
 case(0,house,of).
 det(0,house,a).
 nmod:of(0,top,house).
-cc(0,perched,and).
-acl:relcl(0,kid,looking).
-conj:and(0,perched,looking).
-compound:prt(0,looking,down).
+cc(0,perch,and).
+acl:relcl(0,kid,look).
+conj:and(0,perch,look).
+compound:prt(0,look,down).
 det(0,wolf,a).
-dobj(0,saw,wolf).
-acl(0,wolf,passing).
-case(0,him,under).
-nmod:under(0,passing,him).
-root(1,ROOT,began).
-advmod(1,began,immediately).
-nsubj(1,began,he).
+dobj(0,see,wolf).
+acl(0,wolf,pass).
+case(0,he,under).
+nmod:under(0,pass,he).
+% relations.
+%% immediately he began to revile and attack his enemy.
+% dependencies.
+root(1,root,begin).
+advmod(1,begin,immediately).
+nsubj(1,begin,he).
 nsubj:xsubj(1,revile,he).
 nsubj:xsubj(1,attack,he).
 mark(1,revile,to).
-xcomp(1,began,revile).
+xcomp(1,begin,revile).
 cc(1,revile,and).
-xcomp(1,began,attack).
+xcomp(1,begin,attack).
 conj:and(1,revile,attack).
-nmod:poss(1,enemy,his).
+nmod:poss(1,enemy,he).
 dobj(1,revile,enemy).
-revile(1,he,his_enemy).
-root(2,ROOT,murderer).
+% relations.
+revile(1,he,he_enemy).
+%% murderer and thief.
+% dependencies.
+root(2,root,murderer).
 cc(2,murderer,and).
 conj:and(2,murderer,thief).
-root(3,ROOT,cried).
-nsubj(3,cried,he).
-root(4,ROOT,do).
+% relations.
+%% he cried.
+% dependencies.
+root(3,root,cry).
+nsubj(3,cry,he).
+% relations.
+%% what do you here near honest folks ' houses.
+% dependencies.
+root(4,root,do).
 nsubj(4,do,what).
 dobj(4,do,you).
 advmod(4,do,here).
-case(4,houses,near).
-amod(4,folks,honest).
-nmod:poss(4,houses,folks).
-case(4,folks,').
-nmod:near(4,do,houses).
-root(5,ROOT,dare).
+case(4,house,near).
+amod(4,folk,honest).
+nmod:poss(4,house,folk).
+case(4,folk,').
+nmod:near(4,do,house).
+% relations.
+%% how dare you make an appearance where your vile deeds are known.
+% dependencies.
+root(5,root,dare).
 advmod(5,dare,how).
 nsubj(5,make,you).
 ccomp(5,dare,make).
-det(5,appearance,an).
+det(5,appearance,a).
 dobj(5,make,appearance).
-advmod(5,known,where).
-nmod:poss(5,deeds,your).
-amod(5,deeds,vile).
-nsubjpass(5,known,deeds).
-auxpass(5,known,are).
-advcl(5,make,known).
-are(5,your_deeds,where_known).
-are(5,your_vile_deeds,known).
+advmod(5,know,where).
+nmod:poss(5,deed,you).
+amod(5,deed,vile).
+nsubjpass(5,know,deed).
+auxpass(5,know,be).
+advcl(5,make,know).
+% relations.
+be(5,you_deed,where_know).
+be(5,you_vile_deed,know).
 make(5,you,appearance).
-are(5,your_deeds,known).
-are(5,your_vile_deeds,where_known).
-root(6,ROOT,curse).
+be(5,you_deed,know).
+be(5,you_vile_deed,where_know).
+%% curse away my young friend.
+% dependencies.
+root(6,root,curse).
 advmod(6,curse,away).
 nmod:poss(6,friend,my).
 amod(6,friend,young).
 dep(6,curse,friend).
-root(7,ROOT,said).
+% relations.
+%% said the wolf.
+% dependencies.
+root(7,root,say).
 det(7,wolf,the).
-nsubj(7,said,wolf).
+nsubj(7,say,wolf).
+% relations.

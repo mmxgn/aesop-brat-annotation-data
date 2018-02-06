@@ -1,79 +1,97 @@
-root(0,ROOT,found).
+%% one winter a farmer found a snake stiff and frozen with cold.
+% dependencies.
+root(0,root,find).
 nummod(0,winter,one).
-nsubj(0,found,winter).
-nsubj(0,frozen,winter).
+nsubj(0,find,winter).
+nsubj(0,freeze,winter).
 det(0,farmer,a).
 dep(0,winter,farmer).
 det(0,stiff,a).
 compound(0,stiff,snake).
-dobj(0,found,stiff).
-cc(0,found,and).
-conj:and(0,found,frozen).
+dobj(0,find,stiff).
+cc(0,find,and).
+conj:and(0,find,freeze).
 case(0,cold,with).
-nmod:with(0,frozen,cold).
-root(1,ROOT,had).
-nsubj(1,had,he).
-dobj(1,had,compassion).
+nmod:with(0,freeze,cold).
+% relations.
+%% he had compassion on it and taking it up placed it in his bosom.
+% dependencies.
+root(1,root,have).
+nsubj(1,have,he).
+dobj(1,have,compassion).
 case(1,it,on).
 nmod:on(1,compassion,it).
 cc(1,it,and).
-nmod:on(1,compassion,taking).
-conj:and(1,it,taking).
-dobj(1,taking,it).
-compound:prt(1,taking,up).
-acl(1,compassion,placed).
-dobj(1,placed,it).
+nmod:on(1,compassion,take).
+conj:and(1,it,take).
+dobj(1,take,it).
+compound:prt(1,take,up).
+acl(1,compassion,place).
+dobj(1,place,it).
 case(1,bosom,in).
-nmod:poss(1,bosom,his).
-nmod:in(1,placed,bosom).
-had(1,he,compassion).
-had(1,he,compassion_on_it).
-root(2,ROOT,bit).
+nmod:poss(1,bosom,he).
+nmod:in(1,place,bosom).
+% relations.
+have(1,he,compassion).
+have(1,he,compassion_on_it).
+%% the snake was quickly revived by the warmth and resuming its natural instincts bit its benefactor inflicting on him a mortal wound.
+% dependencies.
+root(2,root,bite).
 det(2,snake,the).
-nsubjpass(2,revived,snake).
-nsubjpass(2,resuming,snake).
-auxpass(2,revived,was).
-advmod(2,revived,quickly).
-dep(2,bit,revived).
+nsubjpass(2,revive,snake).
+nsubjpass(2,resume,snake).
+auxpass(2,revive,be).
+advmod(2,revive,quickly).
+dep(2,bite,revive).
 case(2,warmth,by).
 det(2,warmth,the).
-nmod:agent(2,revived,warmth).
-cc(2,revived,and).
-conj:and(2,revived,resuming).
-dep(2,bit,resuming).
-nmod:poss(2,instincts,its).
-amod(2,instincts,natural).
-dobj(2,resuming,instincts).
+nmod:agent(2,revive,warmth).
+cc(2,revive,and).
+conj:and(2,revive,resume).
+dep(2,bite,resume).
+nmod:poss(2,instinct,its).
+amod(2,instinct,natural).
+dobj(2,resume,instinct).
 nmod:poss(2,benefactor,its).
-dobj(2,bit,benefactor).
-xcomp(2,bit,inflicting).
-case(2,him,on).
-nmod:on(2,inflicting,him).
+dobj(2,bite,benefactor).
+xcomp(2,bite,inflict).
+case(2,he,on).
+nmod:on(2,inflict,he).
 det(2,wound,a).
 amod(2,wound,mortal).
-nsubj(2,bit,wound).
-resuming(2,snake,its_natural_instincts).
-bit(2,mortal_wound,its_benefactor).
-inflicting_on(2,its_benefactor,him).
-resuming(2,snake,its_instincts).
-bit(2,wound,its_benefactor).
-root(3,ROOT,oh).
-root(4,ROOT,cried).
+nsubj(2,bite,wound).
+% relations.
+resume(2,snake,its_natural_instinct).
+bite(2,mortal_wound,its_benefactor).
+inflict_on(2,its_benefactor,he).
+resume(2,snake,its_instinct).
+bite(2,wound,its_benefactor).
+%% oh.
+% dependencies.
+root(3,root,oh).
+% relations.
+%% cried the farmer with his last breath.
+% dependencies.
+root(4,root,cry).
 det(4,farmer,the).
-nsubj(4,cried,farmer).
+nsubj(4,cry,farmer).
 case(4,breath,with).
-nmod:poss(4,breath,his).
+nmod:poss(4,breath,he).
 amod(4,breath,last).
 nmod:with(4,farmer,breath).
-is_with(4,farmer,his_last_breath).
-root(5,ROOT,served).
-nsubjpass(5,served,i).
-auxpass(5,served,am).
-advmod(5,served,rightly).
-mark(5,pitying,for).
-advcl:for(5,served,pitying).
+% relations.
+is_with(4,farmer,he_last_breath).
+%% i am rightly served for pitying a scoundrel.
+% dependencies.
+root(5,root,serve).
+nsubjpass(5,serve,i).
+auxpass(5,serve,be).
+advmod(5,serve,rightly).
+mark(5,pity,for).
+advcl:for(5,serve,pity).
 det(5,scoundrel,a).
-dobj(5,pitying,scoundrel).
-pitying(5,i,scoundrel).
-am(5,i,served).
-am(5,i,rightly_served).
+dobj(5,pity,scoundrel).
+% relations.
+pity(5,i,scoundrel).
+be(5,i,serve).
+be(5,i,rightly_serve).

@@ -1,13 +1,15 @@
-root(0,ROOT,came).
+%% one fine day two crabs came out from their home to take a stroll on the sand.
+% dependencies.
+root(0,root,come).
 nummod(0,day,one).
 amod(0,day,fine).
-nsubj(0,came,day).
-nummod(0,crabs,two).
-dep(0,day,crabs).
-compound:prt(0,came,out).
+nsubj(0,come,day).
+nummod(0,crab,two).
+dep(0,day,crab).
+compound:prt(0,come,out).
 case(0,home,from).
-nmod:poss(0,home,their).
-nmod:from(0,came,home).
+nmod:poss(0,home,they).
+nmod:from(0,come,home).
 mark(0,take,to).
 acl:to(0,home,take).
 nsubj(0,stroll,a).
@@ -15,52 +17,73 @@ ccomp(0,take,stroll).
 case(0,sand,on).
 det(0,sand,the).
 nmod:on(0,stroll,sand).
-came_out_from(0,one_fine_day,their_home_take).
-came_out_from(0,fine_day,their_home_take).
-root(1,ROOT,child).
-root(2,ROOT,said).
+% relations.
+come_out_from(0,one_fine_day,they_home_take).
+come_out_from(0,fine_day,they_home_take).
+%% child.
+% dependencies.
+root(1,root,child).
+% relations.
+%% said the mother.
+% dependencies.
+root(2,root,say).
 det(2,mother,the).
-nsubj(2,said,mother).
-root(3,ROOT,walking).
-nsubj(3,walking,you).
-aux(3,walking,are).
+nsubj(2,say,mother).
+% relations.
+%% you are walking very ungracefully.
+% dependencies.
+root(3,root,walk).
+nsubj(3,walk,you).
+aux(3,walk,be).
 advmod(3,ungracefully,very).
-xcomp(3,walking,ungracefully).
-are_walking(3,you,ungracefully).
-are_walking(3,you,very_ungracefully).
-root(4,ROOT,accustom).
+xcomp(3,walk,ungracefully).
+% relations.
+be_walk(3,you,ungracefully).
+be_walk(3,you,very_ungracefully).
+%% you should accustom yourself to walking straight forward without twisting from side to side.
+% dependencies.
+root(4,root,accustom).
 nsubj(4,accustom,you).
 aux(4,accustom,should).
 dobj(4,accustom,yourself).
-mark(4,walking,to).
-advcl:to(4,accustom,walking).
-dobj(4,walking,straight).
-advmod(4,walking,forward).
-mark(4,twisting,without).
-advcl:without(4,walking,twisting).
+mark(4,walk,to).
+advcl:to(4,accustom,walk).
+dobj(4,walk,straight).
+advmod(4,walk,forward).
+mark(4,twist,without).
+advcl:without(4,walk,twist).
 case(4,side,from).
-nmod:from(4,twisting,side).
+nmod:from(4,twist,side).
 case(4,side,to).
-nmod:to(4,twisting,side).
+nmod:to(4,twist,side).
+% relations.
 should_accustom(4,you,yourself).
-walking_forward(4,you,twisting_to_side).
-walking_forward(4,you,straight).
-walking(4,you,twisting_to_side).
-walking(4,you,twisting_from_side).
-walking(4,you,twisting_from_side_to_side).
-walking_forward(4,you,twisting_from_side_to_side).
-walking_forward(4,you,twisting).
-walking(4,you,straight).
-walking(4,you,twisting).
-walking_forward(4,you,twisting_from_side).
-root(5,ROOT,mother).
+walk_forward(4,you,twist_to_side).
+walk_forward(4,you,straight).
+walk(4,you,twist_to_side).
+walk(4,you,twist_from_side).
+walk(4,you,twist_from_side_to_side).
+walk_forward(4,you,twist_from_side_to_side).
+walk_forward(4,you,twist).
+walk(4,you,straight).
+walk(4,you,twist).
+walk_forward(4,you,twist_from_side).
+%% pray mother.
+% dependencies.
+root(5,root,mother).
 compound(5,mother,pray).
-root(6,ROOT,said).
+% relations.
+%% said the young one.
+% dependencies.
+root(6,root,say).
 det(6,young,the).
-dobj(6,said,young).
-nsubj(6,said,one).
-said(6,one,young).
-root(7,ROOT,do).
+dobj(6,say,young).
+nsubj(6,say,one).
+% relations.
+say(6,one,young).
+%% do but set the example yourself and i will follow you.
+% dependencies.
+root(7,root,do).
 cc(7,do,but).
 conj:but(7,do,set).
 det(7,example,the).
@@ -72,5 +95,6 @@ nsubj(7,follow,i).
 aux(7,follow,will).
 acl:relcl(7,example,follow).
 dobj(7,follow,you).
+% relations.
 will_follow(7,i,you).
 will_follow(7,yourself,you).

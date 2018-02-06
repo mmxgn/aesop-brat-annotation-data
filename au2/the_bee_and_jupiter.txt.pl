@@ -1,36 +1,41 @@
-root(0,ROOT,bee).
+%% a bee from mount hymettus the queen of the hive ascended to olympus to present jupiter some honey fresh from her combs.
+% dependencies.
+root(0,root,bee).
 det(0,bee,a).
 mark(0,mount,from).
 dep(0,bee,mount).
 dobj(0,mount,hymettus).
 det(0,queen,the).
-nsubj(0,ascended,queen).
+nsubj(0,ascend,queen).
 case(0,hive,of).
 det(0,hive,the).
 nmod:of(0,queen,hive).
-dep(0,mount,ascended).
+dep(0,mount,ascend).
 case(0,olympus,to).
-nmod:to(0,ascended,olympus).
+nmod:to(0,ascend,olympus).
 case(0,jupiter,to).
 amod(0,jupiter,present).
-nmod:to(0,ascended,jupiter).
+nmod:to(0,ascend,jupiter).
 det(0,honey,some).
-dobj(0,ascended,honey).
+dobj(0,ascend,honey).
 amod(0,honey,fresh).
-case(0,combs,from).
-nmod:poss(0,combs,her).
-nmod:from(0,fresh,combs).
-ascended_honey_to(0,queen,olympus).
-ascended_honey_to(0,queen,jupiter).
-ascended(0,queen,honey_fresh).
+case(0,comb,from).
+nmod:poss(0,comb,she).
+nmod:from(0,fresh,comb).
+% relations.
+ascend_honey_to(0,queen,olympus).
+ascend_honey_to(0,queen,jupiter).
+ascend(0,queen,honey_fresh).
 queen_of(0,honey,hive).
-ascended_honey_to(0,queen,present_jupiter).
-fresh_from(0,honey,her_combs).
+ascend_honey_to(0,queen,present_jupiter).
+fresh_from(0,honey,she_comb).
 queen_of(0,honey_fresh,hive).
-ascended(0,queen,honey_fresh_from_her_combs).
-ascended(0,queen,honey).
-root(1,ROOT,promised).
-nsubj(1,promised,jupiter).
+ascend(0,queen,honey_fresh_from_she_comb).
+ascend(0,queen,honey).
+%% jupiter delighted with the offering of honey promised to give whatever she should ask.
+% dependencies.
+root(1,root,promise).
+nsubj(1,promise,jupiter).
 nsubj:xsubj(1,give,jupiter).
 amod(1,jupiter,delighted).
 case(1,offering,with).
@@ -39,24 +44,30 @@ nmod:with(1,delighted,offering).
 case(1,honey,of).
 nmod:of(1,offering,honey).
 mark(1,give,to).
-xcomp(1,promised,give).
+xcomp(1,promise,give).
 dobj(1,ask,whatever).
 nsubj(1,ask,she).
 aux(1,ask,should).
 ccomp(1,give,ask).
-promised(1,jupiter,give).
-promised(1,jupiter_delighted,give).
+% relations.
+promise(1,jupiter,give).
+promise(1,jupiter_delighted,give).
 delighted_with(1,jupiter,offering).
 delighted_with(1,jupiter,offering_of_honey).
-root(2,ROOT,besought).
-nsubj(2,besought,she).
-advmod(2,besought,therefore).
-dobj(2,besought,him).
-xcomp(2,besought,saying).
-therefore_besought(2,she,him).
-besought(2,she,him).
-root(3,ROOT,give).
-iobj(3,give,me).
+%% she therefore besought him saying.
+% dependencies.
+root(2,root,beseech).
+nsubj(2,beseech,she).
+advmod(2,beseech,therefore).
+dobj(2,beseech,he).
+xcomp(2,beseech,say).
+% relations.
+therefore_beseech(2,she,he).
+beseech(2,she,he).
+%% give me i pray thee a sting that if any mortal shall approach to take my honey i may kill him.
+% dependencies.
+root(3,root,give).
+iobj(3,give,I).
 compound(3,pray,i).
 dobj(3,give,pray).
 nsubj(3,give,thee).
@@ -76,44 +87,53 @@ dobj(3,take,honey).
 nsubj(3,kill,i).
 aux(3,kill,may).
 dep(3,thee,kill).
-dobj(3,kill,him).
-root(4,ROOT,displeased).
+dobj(3,kill,he).
+% relations.
+%% jupiter was much displeased for he loved the race of man but could not refuse the request because of his promise.
+% dependencies.
+root(4,root,displeased).
 nsubj(4,displeased,jupiter).
-cop(4,displeased,was).
+cop(4,displeased,be).
 amod(4,displeased,much).
-mark(4,loved,for).
-nsubj(4,loved,he).
+mark(4,love,for).
+nsubj(4,love,he).
 nsubj(4,refuse,he).
-ccomp(4,displeased,loved).
+ccomp(4,displeased,love).
 det(4,race,the).
-dobj(4,loved,race).
+dobj(4,love,race).
 case(4,man,of).
 nmod:of(4,race,man).
-cc(4,loved,but).
+cc(4,love,but).
 aux(4,refuse,could).
 neg(4,refuse,not).
 ccomp(4,displeased,refuse).
-conj:but(4,loved,refuse).
+conj:but(4,love,refuse).
 det(4,request,the).
 dobj(4,refuse,request).
 case(4,promise,because).
 case(4,promise,of).
-nmod:poss(4,promise,his).
+nmod:poss(4,promise,he).
 nmod:of(4,refuse,promise).
+% relations.
 race_of(4,he,man).
-was(4,jupiter,much_displeased).
-was(4,jupiter,displeased).
-root(5,ROOT,answered).
-nsubj(5,answered,he).
-advmod(5,answered,thus).
+be(4,jupiter,much_displeased).
+be(4,jupiter,displeased).
+%% he thus answered the bee.
+% dependencies.
+root(5,root,answer).
+nsubj(5,answer,he).
+advmod(5,answer,thus).
 det(5,bee,the).
-dobj(5,answered,bee).
-answered(5,he,bee).
-thus_answered(5,he,bee).
-root(6,ROOT,have).
+dobj(5,answer,bee).
+% relations.
+answer(5,he,bee).
+thus_answer(5,he,bee).
+%% you shall have your request but it will be at the peril of your own life.
+% dependencies.
+root(6,root,have).
 nsubj(6,have,you).
 aux(6,have,shall).
-nmod:poss(6,request,your).
+nmod:poss(6,request,you).
 dobj(6,have,request).
 cc(6,peril,but).
 nsubj(6,peril,it).
@@ -123,16 +143,19 @@ case(6,peril,at).
 det(6,peril,the).
 dep(6,have,peril).
 case(6,life,of).
-nmod:poss(6,life,your).
+nmod:poss(6,life,you).
 amod(6,life,own).
 nmod:of(6,peril,life).
-shall_have(6,you,your_request).
-root(7,ROOT,make).
+% relations.
+shall_have(6,you,you_request).
+%% for if you use your sting it shall remain in the wound you make and then you will die from the loss of it.
+% dependencies.
+root(7,root,make).
 mark(7,make,for).
 mark(7,use,if).
 nsubj(7,use,you).
 advcl:if(7,make,use).
-nmod:poss(7,sting,your).
+nmod:poss(7,sting,you).
 dobj(7,use,sting).
 nsubj(7,remain,it).
 aux(7,remain,shall).
@@ -151,6 +174,7 @@ det(7,loss,the).
 nmod:from(7,die,loss).
 case(7,it,of).
 nmod:of(7,loss,it).
+% relations.
 will_die_from(7,you,loss_of_it).
 will_die_from(7,you,loss).
 shall_remain_in(7,it,wound).

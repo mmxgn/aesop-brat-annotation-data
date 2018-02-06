@@ -1,30 +1,38 @@
-root(0,ROOT,stayed).
-det(0,eagle,an).
-nsubj(0,stayed,eagle).
-nsubj(0,entreated,eagle).
-nmod:poss(0,flight,his).
-dobj(0,stayed,flight).
-cc(0,stayed,and).
-conj:and(0,stayed,entreated).
+%% an eagle stayed his flight and entreated a lion to make an alliance with him to their mutual advantage.
+% dependencies.
+root(0,root,stay).
+det(0,eagle,a).
+nsubj(0,stay,eagle).
+nsubj(0,entreat,eagle).
+nmod:poss(0,flight,he).
+dobj(0,stay,flight).
+cc(0,stay,and).
+conj:and(0,stay,entreat).
 det(0,lion,a).
-dobj(0,entreated,lion).
+dobj(0,entreat,lion).
 mark(0,make,to).
-advcl:to(0,entreated,make).
-det(0,alliance,an).
+advcl:to(0,entreat,make).
+det(0,alliance,a).
 dobj(0,make,alliance).
-case(0,him,with).
-nmod:with(0,alliance,him).
+case(0,he,with).
+nmod:with(0,alliance,he).
 case(0,advantage,to).
-nmod:poss(0,advantage,their).
+nmod:poss(0,advantage,they).
 amod(0,advantage,mutual).
 nmod:to(0,make,advantage).
-entreated(0,eagle,lion).
-is_with(0,alliance,him).
-stayed(0,eagle,his_flight).
-root(1,ROOT,replied).
+% relations.
+entreat(0,eagle,lion).
+is_with(0,alliance,he).
+stay(0,eagle,he_flight).
+%% the lion replied.
+% dependencies.
+root(1,root,reply).
 det(1,lion,the).
-nsubj(1,replied,lion).
-root(2,ROOT,have).
+nsubj(1,reply,lion).
+% relations.
+%% i have no objection but you must excuse me for requiring you to find surety for your good faith for how can i trust anyone as a friend who is able to fly away from his bargain whenever he pleases.
+% dependencies.
+root(2,root,have).
 nsubj(2,have,i).
 neg(2,objection,no).
 dobj(2,have,objection).
@@ -32,16 +40,16 @@ cc(2,excuse,but).
 nsubj(2,excuse,you).
 aux(2,excuse,must).
 dep(2,have,excuse).
-dobj(2,excuse,me).
-mark(2,requiring,for).
-advcl:for(2,excuse,requiring).
-dobj(2,requiring,you).
+dobj(2,excuse,I).
+mark(2,require,for).
+advcl:for(2,excuse,require).
+dobj(2,require,you).
 nsubj:xsubj(2,find,you).
 mark(2,find,to).
-xcomp(2,requiring,find).
+xcomp(2,require,find).
 dobj(2,find,surety).
 case(2,faith,for).
-nmod:poss(2,faith,your).
+nmod:poss(2,faith,you).
 amod(2,faith,good).
 nmod:for(2,surety,faith).
 mark(2,can,for).
@@ -56,19 +64,20 @@ nmod:as(2,anyone,friend).
 nsubj(2,able,friend).
 nsubj:xsubj(2,fly,friend).
 ref(2,friend,who).
-cop(2,able,is).
+cop(2,able,be).
 acl:relcl(2,friend,able).
 mark(2,fly,to).
 xcomp(2,able,fly).
 advmod(2,fly,away).
 case(2,bargain,from).
-nmod:poss(2,bargain,his).
+nmod:poss(2,bargain,he).
 nmod:from(2,fly,bargain).
-advmod(2,pleases,whenever).
-nsubj(2,pleases,he).
-advcl(2,fly,pleases).
-must_excuse(2,you,me).
-requiring(2,you,you).
-find(2,you,surety_for_your_faith).
-find(2,you,surety_for_your_good_faith).
+advmod(2,please,whenever).
+nsubj(2,please,he).
+advcl(2,fly,please).
+% relations.
+must_excuse(2,you,I).
+require(2,you,you).
+find(2,you,surety_for_you_faith).
+find(2,you,surety_for_you_good_faith).
 find(2,you,surety).

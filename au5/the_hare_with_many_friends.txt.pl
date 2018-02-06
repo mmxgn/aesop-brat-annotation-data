@@ -1,160 +1,192 @@
-root(0,ROOT,popular).
+%% a hare was very popular with the other beasts who all claimed to be her friends.
+% dependencies.
+root(0,root,popular).
 det(0,hare,a).
 nsubj(0,popular,hare).
-cop(0,popular,was).
+cop(0,popular,be).
 advmod(0,popular,very).
-case(0,beasts,with).
-det(0,beasts,the).
-amod(0,beasts,other).
-nmod:with(0,popular,beasts).
-dobj(0,claimed,beasts).
-nsubj:xsubj(0,friends,beasts).
-ref(0,beasts,who).
-nsubj(0,claimed,all).
-acl:relcl(0,beasts,claimed).
-mark(0,friends,to).
-cop(0,friends,be).
-nmod:poss(0,friends,her).
-xcomp(0,claimed,friends).
-was(0,hare,very_popular).
-was(0,hare,popular).
-claimed(0,all,her_friends).
-be(0,all,her_friends).
-root(1,ROOT,day).
+case(0,beast,with).
+det(0,beast,the).
+amod(0,beast,other).
+nmod:with(0,popular,beast).
+dobj(0,claim,beast).
+nsubj:xsubj(0,friend,beast).
+ref(0,beast,who).
+nsubj(0,claim,all).
+acl:relcl(0,beast,claim).
+mark(0,friend,to).
+cop(0,friend,be).
+nmod:poss(0,friend,she).
+xcomp(0,claim,friend).
+% relations.
+be(0,hare,very_popular).
+be(0,hare,popular).
+claim(0,all,she_friend).
+be(0,all,she_friend).
+%% but one day she heard the hounds approaching and hoped to escape them by the aid of her many friends.
+% dependencies.
+root(1,root,day).
 cc(1,day,but).
 nummod(1,day,one).
-nsubj(1,heard,she).
-nsubj(1,hoped,she).
+nsubj(1,hear,she).
+nsubj(1,hope,she).
 nsubj:xsubj(1,escape,she).
-acl:relcl(1,day,heard).
-det(1,hounds,the).
-dobj(1,heard,hounds).
-acl(1,hounds,approaching).
-cc(1,heard,and).
-acl:relcl(1,day,hoped).
-conj:and(1,heard,hoped).
+acl:relcl(1,day,hear).
+det(1,hound,the).
+dobj(1,hear,hound).
+acl(1,hound,approach).
+cc(1,hear,and).
+acl:relcl(1,day,hope).
+conj:and(1,hear,hope).
 mark(1,escape,to).
-xcomp(1,hoped,escape).
-dobj(1,escape,them).
+xcomp(1,hope,escape).
+dobj(1,escape,they).
 case(1,aid,by).
 det(1,aid,the).
 nmod:by(1,escape,aid).
-case(1,friends,of).
-nmod:poss(1,friends,her).
-amod(1,friends,many).
-nmod:of(1,aid,friends).
-heard(1,she,hounds).
-heard(1,she,hounds_approaching).
-root(2,ROOT,went).
-mark(2,went,so).
-nsubj(2,went,she).
-nsubj(2,asked,she).
+case(1,friend,of).
+nmod:poss(1,friend,she).
+amod(1,friend,many).
+nmod:of(1,aid,friend).
+% relations.
+hear(1,she,hound).
+hear(1,she,hound_approach).
+%% so she went to the horse and asked him to carry her away from the hounds on his back.
+% dependencies.
+root(2,root,go).
+mark(2,go,so).
+nsubj(2,go,she).
+nsubj(2,ask,she).
 case(2,horse,to).
 det(2,horse,the).
-nmod:to(2,went,horse).
-cc(2,went,and).
-conj:and(2,went,asked).
-dobj(2,asked,him).
-nsubj:xsubj(2,carry,him).
+nmod:to(2,go,horse).
+cc(2,go,and).
+conj:and(2,go,ask).
+dobj(2,ask,he).
+nsubj:xsubj(2,carry,he).
 mark(2,carry,to).
-xcomp(2,asked,carry).
-dobj(2,carry,her).
+xcomp(2,ask,carry).
+dobj(2,carry,she).
 advmod(2,carry,away).
-case(2,hounds,from).
-det(2,hounds,the).
-nmod:from(2,carry,hounds).
+case(2,hound,from).
+det(2,hound,the).
+nmod:from(2,carry,hound).
 case(2,back,on).
-nmod:poss(2,back,his).
-nmod:on(2,hounds,back).
-went_to(2,she,horse).
-carry(2,him,her).
-carry_away(2,him,her).
-asked(2,she,him).
-root(3,ROOT,declined).
-cc(3,declined,but).
-nsubj(3,declined,he).
-xcomp(3,declined,stating).
-mark(3,had,that).
-nsubj(3,had,he).
-ccomp(3,stating,had).
+nmod:poss(2,back,he).
+nmod:on(2,hound,back).
+% relations.
+go_to(2,she,horse).
+carry(2,he,she).
+carry_away(2,he,she).
+ask(2,she,he).
+%% but he declined stating that he had important work to do for his master.
+% dependencies.
+root(3,root,decline).
+cc(3,decline,but).
+nsubj(3,decline,he).
+xcomp(3,decline,state).
+mark(3,have,that).
+nsubj(3,have,he).
+ccomp(3,state,have).
 amod(3,work,important).
-dobj(3,had,work).
+dobj(3,have,work).
 mark(3,do,to).
 acl:to(3,work,do).
 case(3,master,for).
-nmod:poss(3,master,his).
+nmod:poss(3,master,he).
 nmod:for(3,do,master).
-had(3,he,work_do).
-had(3,he,work_do_for_his_master).
-do_for(3,work,his_master).
-had(3,he,important_work_do).
-do_for(3,important_work,his_master).
-declined(3,he,stating).
-had(3,he,important_work_do_for_his_master).
-root(4,ROOT,felt).
-nsubj(4,felt,he).
-xcomp(4,felt,sure).
-felt(4,he,sure).
-root(5,ROOT,said).
-nsubj(5,said,he).
-root(6,ROOT,come).
+% relations.
+have(3,he,work_do).
+have(3,he,work_do_for_he_master).
+do_for(3,work,he_master).
+have(3,he,important_work_do).
+do_for(3,important_work,he_master).
+decline(3,he,state).
+have(3,he,important_work_do_for_he_master).
+%% he felt sure.
+% dependencies.
+root(4,root,feel).
+nsubj(4,feel,he).
+xcomp(4,feel,sure).
+% relations.
+feel(4,he,sure).
+%% he said.
+% dependencies.
+root(5,root,say).
+nsubj(5,say,he).
+% relations.
+%% that all her other friends would come to her assistance.
+% dependencies.
+root(6,root,come).
 mark(6,come,that).
 nsubj(6,come,all).
-nmod:poss(6,friends,her).
-amod(6,friends,other).
-dep(6,all,friends).
+nmod:poss(6,friend,she).
+amod(6,friend,other).
+dep(6,all,friend).
 aux(6,come,would).
 case(6,assistance,to).
-nmod:poss(6,assistance,her).
+nmod:poss(6,assistance,she).
 nmod:to(6,come,assistance).
-would_come_to(6,all,her_assistance).
-root(7,ROOT,applied).
-nsubj(7,applied,she).
-nsubj(7,hoped,she).
-advmod(7,applied,then).
+% relations.
+would_come_to(6,all,she_assistance).
+%% she then applied to the bull and hoped that he would repel the hounds with his horns.
+% dependencies.
+root(7,root,apply).
+nsubj(7,apply,she).
+nsubj(7,hope,she).
+advmod(7,apply,then).
 case(7,bull,to).
 det(7,bull,the).
-nmod:to(7,applied,bull).
-cc(7,applied,and).
-conj:and(7,applied,hoped).
+nmod:to(7,apply,bull).
+cc(7,apply,and).
+conj:and(7,apply,hope).
 mark(7,repel,that).
 nsubj(7,repel,he).
 aux(7,repel,would).
-ccomp(7,hoped,repel).
-det(7,hounds,the).
-dobj(7,repel,hounds).
-case(7,horns,with).
-nmod:poss(7,horns,his).
-nmod:with(7,repel,horns).
-repel_hounds_with(7,he,his_horns).
-applied_to(7,she,bull).
-repel(7,he,hounds).
-root(8,ROOT,replied).
+ccomp(7,hope,repel).
+det(7,hound,the).
+dobj(7,repel,hound).
+case(7,horn,with).
+nmod:poss(7,horn,he).
+nmod:with(7,repel,horn).
+% relations.
+repel_hound_with(7,he,he_horn).
+apply_to(7,she,bull).
+repel(7,he,hound).
+%% the bull replied.
+% dependencies.
+root(8,root,reply).
 det(8,bull,the).
-nsubj(8,replied,bull).
-root(9,ROOT,sorry).
+nsubj(8,reply,bull).
+% relations.
+%% i am very sorry but i have an appointment with a lady.
+% dependencies.
+root(9,root,sorry).
 nsubj(9,sorry,i).
-cop(9,sorry,am).
+cop(9,sorry,be).
 advmod(9,sorry,very).
 cc(9,have,but).
 nsubj(9,have,i).
 ccomp(9,sorry,have).
-det(9,appointment,an).
+det(9,appointment,a).
 dobj(9,have,appointment).
 case(9,lady,with).
 det(9,lady,a).
 nmod:with(9,appointment,lady).
+% relations.
 is_with(9,appointment,lady).
 have(9,i,appointment_with_lady).
-am(9,i,sorry).
-am(9,i,very_sorry).
+be(9,i,sorry).
+be(9,i,very_sorry).
 have(9,i,appointment).
-root(10,ROOT,feel).
+%% but i feel sure that our friend the goat will do what you want.
+% dependencies.
+root(10,root,feel).
 cc(10,feel,but).
 nsubj(10,feel,i).
 xcomp(10,feel,sure).
 mark(10,do,that).
-nmod:poss(10,friend,our).
+nmod:poss(10,friend,we).
 nsubj(10,do,friend).
 det(10,goat,the).
 dep(10,friend,goat).
@@ -163,63 +195,81 @@ ccomp(10,sure,do).
 dobj(10,want,what).
 nsubj(10,want,you).
 ccomp(10,do,want).
+% relations.
 feel(10,i,sure).
-root(11,ROOT,feared).
+%% the goat however feared that his back might do her some harm if he took her upon it.
+% dependencies.
+root(11,root,fear).
 det(11,goat,the).
-nsubj(11,feared,goat).
-advmod(11,feared,however).
+nsubj(11,fear,goat).
+advmod(11,fear,however).
 mark(11,do,that).
-nmod:poss(11,back,his).
+nmod:poss(11,back,he).
 nsubj(11,do,back).
 aux(11,do,might).
-ccomp(11,feared,do).
-dep(11,do,her).
+ccomp(11,fear,do).
+dep(11,do,she).
 det(11,harm,some).
 dobj(11,do,harm).
-mark(11,took,if).
-nsubj(11,took,he).
-dep(11,harm,took).
-dobj(11,took,her).
+mark(11,take,if).
+nsubj(11,take,he).
+dep(11,harm,take).
+dobj(11,take,she).
 case(11,it,upon).
-nmod:upon(11,took,it).
-took(11,he,her).
-do(11,his_back,harm).
-root(12,ROOT,friend).
+nmod:upon(11,take,it).
+% relations.
+take(11,he,she).
+do(11,he_back,harm).
+%% the ram he felt sure was the proper friend to apply to.
+% dependencies.
+root(12,root,friend).
 det(12,ram,the).
 nsubj(12,friend,ram).
-nsubj(12,felt,he).
-acl:relcl(12,ram,felt).
-xcomp(12,felt,sure).
-cop(12,friend,was).
+nsubj(12,feel,he).
+acl:relcl(12,ram,feel).
+xcomp(12,feel,sure).
+cop(12,friend,be).
 det(12,friend,the).
 amod(12,friend,proper).
 mark(12,apply,to).
 acl:to(12,friend,apply).
 nmod(12,apply,to).
-felt(12,he,sure).
-root(13,ROOT,went).
-mark(13,went,so).
-nsubj(13,went,she).
-nsubj(13,told,she).
+% relations.
+feel(12,he,sure).
+%% so she went to the ram and told him the case.
+% dependencies.
+root(13,root,go).
+mark(13,go,so).
+nsubj(13,go,she).
+nsubj(13,tell,she).
 case(13,ram,to).
 det(13,ram,the).
-nmod:to(13,went,ram).
-cc(13,went,and).
-conj:and(13,went,told).
-nsubj(13,case,him).
+nmod:to(13,go,ram).
+cc(13,go,and).
+conj:and(13,go,tell).
+nsubj(13,case,he).
 det(13,case,the).
-xcomp(13,told,case).
-went_to(13,she,ram).
-told(13,she,him_case).
-root(14,ROOT,replied).
+xcomp(13,tell,case).
+% relations.
+go_to(13,she,ram).
+tell(13,she,he_case).
+%% the ram replied.
+% dependencies.
+root(14,root,reply).
 det(14,ram,the).
-nsubj(14,replied,ram).
-root(15,ROOT,time).
+nsubj(14,reply,ram).
+% relations.
+%% another time my dear friend.
+% dependencies.
+root(15,root,time).
 det(15,time,another).
 nmod:poss(15,friend,my).
 amod(15,friend,dear).
 dep(15,time,friend).
-root(16,ROOT,like).
+% relations.
+%% i do not like to interfere on the present occasion as hounds have been known to eat sheep as well as hares.
+% dependencies.
+root(16,root,like).
 nsubj(16,like,i).
 nsubj:xsubj(16,interfere,i).
 aux(16,like,do).
@@ -230,46 +280,49 @@ case(16,occasion,on).
 det(16,occasion,the).
 amod(16,occasion,present).
 nmod:on(16,interfere,occasion).
-mark(16,known,as).
-nsubjpass(16,known,hounds).
-nsubj:xsubj(16,eat,hounds).
-aux(16,known,have).
-auxpass(16,known,been).
-advcl:as(16,interfere,known).
+mark(16,know,as).
+nsubjpass(16,know,hound).
+nsubj:xsubj(16,eat,hound).
+aux(16,know,have).
+auxpass(16,know,be).
+advcl:as(16,interfere,know).
 mark(16,eat,to).
-xcomp(16,known,eat).
+xcomp(16,know,eat).
 dobj(16,eat,sheep).
 cc(16,sheep,as).
 mwe(16,as,well).
 mwe(16,as,as).
-dobj(16,eat,hares).
-conj:and(16,sheep,hares).
-root(17,ROOT,applied).
+dobj(16,eat,hare).
+conj:and(16,sheep,hare).
+% relations.
+%% the hare then applied as a last hope to the calf who regretted that he was unable to help her as he did not like to take the responsibility upon himself as so many older persons than himself had declined the task.
+% dependencies.
+root(17,root,apply).
 det(17,hare,the).
-nsubj(17,applied,hare).
-advmod(17,applied,then).
+nsubj(17,apply,hare).
+advmod(17,apply,then).
 case(17,hope,as).
 det(17,hope,a).
 amod(17,hope,last).
-nmod:as(17,applied,hope).
+nmod:as(17,apply,hope).
 case(17,calf,to).
 det(17,calf,the).
 nmod:to(17,hope,calf).
-nsubj(17,regretted,calf).
+nsubj(17,regret,calf).
 ref(17,calf,who).
-acl:relcl(17,calf,regretted).
+acl:relcl(17,calf,regret).
 mark(17,unable,that).
 nsubj(17,unable,he).
 nsubj:xsubj(17,help,he).
-cop(17,unable,was).
-ccomp(17,regretted,unable).
+cop(17,unable,be).
+ccomp(17,regret,unable).
 mark(17,help,to).
 xcomp(17,unable,help).
-dobj(17,help,her).
+dobj(17,help,she).
 mark(17,like,as).
 nsubj(17,like,he).
 nsubj:xsubj(17,take,he).
-aux(17,like,did).
+aux(17,like,do).
 neg(17,like,not).
 advcl:as(17,help,like).
 mark(17,take,to).
@@ -278,40 +331,44 @@ det(17,responsibility,the).
 dobj(17,take,responsibility).
 case(17,himself,upon).
 nmod:upon(17,take,himself).
-case(17,persons,as).
+case(17,person,as).
 advmod(17,many,so).
-amod(17,persons,many).
-amod(17,persons,older).
-nmod:as(17,applied,persons).
-mark(17,declined,than).
-nsubj(17,declined,himself).
-aux(17,declined,had).
-dep(17,persons,declined).
+amod(17,person,many).
+amod(17,person,older).
+nmod:as(17,apply,person).
+mark(17,decline,than).
+nsubj(17,decline,himself).
+aux(17,decline,have).
+dep(17,person,decline).
 det(17,task,the).
-dobj(17,declined,task).
-was(17,he,unable).
+dobj(17,decline,task).
+% relations.
+be(17,he,unable).
 take_responsibility_upon(17,he,himself).
-root(18,ROOT,time).
+%% by this time the hounds were quite near and the hare took to her heels and luckily escaped.
+% dependencies.
+root(18,root,time).
 case(18,time,by).
 det(18,time,this).
-det(18,hounds,the).
-nsubj(18,near,hounds).
-cop(18,near,were).
+det(18,hound,the).
+nsubj(18,near,hound).
+cop(18,near,be).
 advmod(18,near,quite).
 acl:relcl(18,time,near).
 cc(18,near,and).
 det(18,hare,the).
-nsubj(18,took,hare).
-nsubj(18,escaped,hare).
-acl:relcl(18,time,took).
-conj:and(18,near,took).
-case(18,heels,to).
-nmod:poss(18,heels,her).
-nmod:to(18,took,heels).
-cc(18,took,and).
-advmod(18,escaped,luckily).
-conj:and(18,near,escaped).
-conj:and(18,took,escaped).
-were(18,hounds,quite_near).
-were(18,hounds,near).
-took_to(18,hare,her_heels).
+nsubj(18,take,hare).
+nsubj(18,escape,hare).
+acl:relcl(18,time,take).
+conj:and(18,near,take).
+case(18,heel,to).
+nmod:poss(18,heel,she).
+nmod:to(18,take,heel).
+cc(18,take,and).
+advmod(18,escape,luckily).
+conj:and(18,near,escape).
+conj:and(18,take,escape).
+% relations.
+be(18,hound,quite_near).
+be(18,hound,near).
+take_to(18,hare,she_heel).

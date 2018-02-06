@@ -1,59 +1,76 @@
-root(0,ROOT,said).
+%% a young fawn once said to his mother.
+% dependencies.
+root(0,root,say).
 det(0,fawn,a).
 amod(0,fawn,young).
-nsubj(0,said,fawn).
-advmod(0,said,once).
+nsubj(0,say,fawn).
+advmod(0,say,once).
 case(0,mother,to).
-nmod:poss(0,mother,his).
-nmod:to(0,said,mother).
-said_to(0,young_fawn,his_mother).
-said_to(0,fawn,his_mother).
-once_said_to(0,young_fawn,his_mother).
-once_said_to(0,fawn,his_mother).
-root(1,ROOT,larger).
+nmod:poss(0,mother,he).
+nmod:to(0,say,mother).
+% relations.
+say_to(0,young_fawn,he_mother).
+say_to(0,fawn,he_mother).
+once_say_to(0,young_fawn,he_mother).
+once_say_to(0,fawn,he_mother).
+%% you are larger than a dog and swifter and more used to running and you have your horns as a defense.
+% dependencies.
+root(1,root,larger).
 nsubj(1,larger,you).
 nsubj(1,swifter,you).
-cop(1,larger,are).
+cop(1,larger,be).
 case(1,dog,than).
 det(1,dog,a).
 nmod:than(1,larger,dog).
 cc(1,larger,and).
 conj:and(1,larger,swifter).
 cc(1,swifter,and).
-advmod(1,used,more).
-conj:and(1,larger,used).
-conj:and(1,swifter,used).
-mark(1,running,to).
-advcl:to(1,used,running).
+advmod(1,use,more).
+conj:and(1,larger,use).
+conj:and(1,swifter,use).
+mark(1,run,to).
+advcl:to(1,use,run).
 cc(1,larger,and).
 nsubj(1,have,you).
 conj:and(1,larger,have).
-nmod:poss(1,horns,your).
-dobj(1,have,horns).
+nmod:poss(1,horn,you).
+dobj(1,have,horn).
 case(1,defense,as).
 det(1,defense,a).
 nmod:as(1,have,defense).
-are(1,you,larger).
-have(1,you,your_horns).
-are_larger_than(1,you,dog).
-root(2,ROOT,why).
+% relations.
+be(1,you,larger).
+have(1,you,you_horn).
+be_larger_than(1,you,dog).
+%% why then o mother.
+% dependencies.
+root(2,root,why).
 dep(2,why,then).
 compound(2,mother,o).
 dep(2,then,mother).
-root(3,ROOT,do).
-det(3,hounds,the).
-nsubj(3,frighten,hounds).
+% relations.
+%% do the hounds frighten you so.
+% dependencies.
+root(3,root,do).
+det(3,hound,the).
+nsubj(3,frighten,hound).
 ccomp(3,do,frighten).
 dobj(3,frighten,you).
 advmod(3,frighten,so).
-frighten_so(3,hounds,you).
-frighten(3,hounds,you).
-root(4,ROOT,smiled).
-nsubj(4,smiled,she).
-nsubj(4,said,she).
-cc(4,smiled,and).
-conj:and(4,smiled,said).
-root(5,ROOT,know).
+% relations.
+frighten_so(3,hound,you).
+frighten(3,hound,you).
+%% she smiled and said.
+% dependencies.
+root(4,root,smile).
+nsubj(4,smile,she).
+nsubj(4,say,she).
+cc(4,smile,and).
+conj:and(4,smile,say).
+% relations.
+%% i know full well my son that all you say is true.
+% dependencies.
+root(5,root,know).
 dep(5,know,i).
 xcomp(5,know,full).
 advmod(5,know,well).
@@ -63,16 +80,19 @@ mark(5,true,that).
 nsubj(5,true,all).
 nsubj(5,say,you).
 acl:relcl(5,all,say).
-cop(5,true,is).
+cop(5,true,be).
 dep(5,know,true).
+% relations.
 know_well(5,my_son,full).
 know(5,my_son,full).
-root(6,ROOT,have).
+%% i have the advantages you mention but when i hear even the bark of a single dog i feel ready to faint and fly away as fast as i can.
+% dependencies.
+root(6,root,have).
 nsubj(6,have,i).
-det(6,advantages,the).
-dobj(6,have,advantages).
+det(6,advantage,the).
+dobj(6,have,advantage).
 nsubj(6,mention,you).
-acl:relcl(6,advantages,mention).
+acl:relcl(6,advantage,mention).
 cc(6,hear,but).
 advmod(6,hear,when).
 nsubj(6,hear,i).
@@ -99,6 +119,7 @@ advmod(6,fly,fast).
 mark(6,can,as).
 nsubj(6,can,i).
 advcl:as(6,mention,can).
+% relations.
 hear(6,i,even_bark).
 feel(6,i,ready).
 hear(6,i,bark).

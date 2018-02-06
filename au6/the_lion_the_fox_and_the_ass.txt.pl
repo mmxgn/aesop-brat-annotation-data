@@ -1,178 +1,211 @@
-root(0,ROOT,lion).
+%% the lion the fox and the ass entered into an agreement to assist each other in the chase.
+% dependencies.
+root(0,root,lion).
 det(0,lion,the).
 det(0,fox,the).
-nsubj(0,entered,fox).
+nsubj(0,enter,fox).
 nsubj:xsubj(0,assist,fox).
 cc(0,fox,and).
 det(0,ass,the).
 conj:and(0,fox,ass).
-nsubj(0,entered,ass).
+nsubj(0,enter,ass).
 nsubj:xsubj(0,assist,ass).
-ccomp(0,lion,entered).
+ccomp(0,lion,enter).
 case(0,agreement,into).
-det(0,agreement,an).
-nmod:into(0,entered,agreement).
+det(0,agreement,a).
+nmod:into(0,enter,agreement).
 mark(0,assist,to).
-xcomp(0,entered,assist).
+xcomp(0,enter,assist).
 det(0,other,each).
 dobj(0,assist,other).
 case(0,chase,in).
 det(0,chase,the).
 nmod:in(0,assist,chase).
-entered_into(0,fox,agreement).
-entered_into(0,ass,agreement).
-root(1,ROOT,secured).
-aux(1,secured,having).
+% relations.
+enter_into(0,fox,agreement).
+enter_into(0,ass,agreement).
+%% having secured a large booty the lion on their return from the forest asked the ass to allot his due portion to each of the three partners in the treaty.
+% dependencies.
+root(1,root,secure).
+aux(1,secure,have).
 det(1,booty,a).
 amod(1,booty,large).
-dobj(1,secured,booty).
+dobj(1,secure,booty).
 det(1,lion,the).
-nsubj(1,asked,lion).
+nsubj(1,ask,lion).
 case(1,return,on).
-nmod:poss(1,return,their).
+nmod:poss(1,return,they).
 nmod:on(1,lion,return).
 case(1,forest,from).
 det(1,forest,the).
 nmod:from(1,return,forest).
-acl:relcl(1,booty,asked).
+acl:relcl(1,booty,ask).
 det(1,ass,the).
-dobj(1,asked,ass).
+dobj(1,ask,ass).
 mark(1,allot,to).
 acl:to(1,ass,allot).
-nmod:poss(1,portion,his).
+nmod:poss(1,portion,he).
 amod(1,portion,due).
 dobj(1,allot,portion).
 case(1,each,to).
 nmod:to(1,allot,each).
-case(1,partners,of).
-det(1,partners,the).
-nummod(1,partners,three).
-nmod:of(1,each,partners).
+case(1,partner,of).
+det(1,partner,the).
+nummod(1,partner,three).
+nmod:of(1,each,partner).
 case(1,treaty,in).
 det(1,treaty,the).
-nmod:in(1,partners,treaty).
-root(2,ROOT,divided).
+nmod:in(1,partner,treaty).
+% relations.
+%% the ass carefully divided the spoil into three equal shares and modestly requested the two others to make the first choice.
+% dependencies.
+root(2,root,divide).
 det(2,ass,the).
-nsubj(2,divided,ass).
-nsubj(2,requested,ass).
-advmod(2,divided,carefully).
+nsubj(2,divide,ass).
+nsubj(2,request,ass).
+advmod(2,divide,carefully).
 det(2,spoil,the).
-dobj(2,divided,spoil).
-case(2,shares,into).
-nummod(2,shares,three).
-amod(2,shares,equal).
-nmod:into(2,divided,shares).
-cc(2,divided,and).
-advmod(2,requested,modestly).
-conj:and(2,divided,requested).
-det(2,others,the).
-nummod(2,others,two).
-dobj(2,requested,others).
-nsubj:xsubj(2,make,others).
+dobj(2,divide,spoil).
+case(2,share,into).
+nummod(2,share,three).
+amod(2,share,equal).
+nmod:into(2,divide,share).
+cc(2,divide,and).
+advmod(2,request,modestly).
+conj:and(2,divide,request).
+det(2,other,the).
+nummod(2,other,two).
+dobj(2,request,other).
+nsubj:xsubj(2,make,other).
 mark(2,make,to).
-xcomp(2,requested,make).
+xcomp(2,request,make).
 det(2,choice,the).
 amod(2,choice,first).
 dobj(2,make,choice).
-make(2,two_others,choice).
-carefully_divided_into(2,ass,three_shares).
-divided_spoil_into(2,ass,three_shares).
-divided_into(2,ass,three_equal_shares).
-make(2,two_others,first_choice).
-divided_into(2,ass,three_shares).
-carefully_divided(2,ass,spoil).
-modestly_requested(2,ass,two_others).
-divided_spoil_into(2,ass,three_equal_shares).
-divided(2,ass,spoil).
-requested(2,ass,two_others).
-carefully_divided_spoil_into(2,ass,three_equal_shares).
-carefully_divided_spoil_into(2,ass,three_shares).
-carefully_divided_into(2,ass,three_equal_shares).
-root(3,ROOT,devoured).
+% relations.
+make(2,two_other,choice).
+carefully_divide_into(2,ass,three_share).
+divide_spoil_into(2,ass,three_share).
+divide_into(2,ass,three_equal_share).
+make(2,two_other,first_choice).
+divide_into(2,ass,three_share).
+carefully_divide(2,ass,spoil).
+modestly_request(2,ass,two_other).
+divide_spoil_into(2,ass,three_equal_share).
+divide(2,ass,spoil).
+request(2,ass,two_other).
+carefully_divide_spoil_into(2,ass,three_equal_share).
+carefully_divide_spoil_into(2,ass,three_share).
+carefully_divide_into(2,ass,three_equal_share).
+%% the lion bursting out into a great rage devoured the ass.
+% dependencies.
+root(3,root,devour).
 det(3,lion,the).
-nsubj(3,devoured,lion).
-acl(3,lion,bursting).
-compound:prt(3,bursting,out).
+nsubj(3,devour,lion).
+acl(3,lion,burst).
+compound:prt(3,burst,out).
 case(3,rage,into).
 det(3,rage,a).
 amod(3,rage,great).
-nmod:into(3,bursting,rage).
+nmod:into(3,burst,rage).
 det(3,ass,the).
-dobj(3,devoured,ass).
-devoured(3,lion,ass).
-root(4,ROOT,requested).
+dobj(3,devour,ass).
+% relations.
+devour(3,lion,ass).
+%% then he requested the fox to do him the favor to make a division.
+% dependencies.
+root(4,root,request).
 advmod(4,he,then).
-nsubj(4,requested,he).
+nsubj(4,request,he).
 det(4,fox,the).
-dobj(4,requested,fox).
+dobj(4,request,fox).
 mark(4,do,to).
 acl:to(4,fox,do).
-iobj(4,do,him).
+iobj(4,do,he).
 det(4,favor,the).
 dobj(4,do,favor).
 mark(4,make,to).
 acl:to(4,favor,make).
 det(4,division,a).
 dobj(4,make,division).
-root(5,ROOT,accumulated).
+% relations.
+%% the fox accumulated all that they had killed into one large heap and left to himself the smallest possible morsel.
+% dependencies.
+root(5,root,accumulate).
 det(5,fox,the).
-nsubj(5,accumulated,fox).
-advmod(5,accumulated,all).
-mark(5,killed,that).
-nsubj(5,killed,they).
-nsubj(5,left,they).
-aux(5,killed,had).
-ccomp(5,accumulated,killed).
+nsubj(5,accumulate,fox).
+advmod(5,accumulate,all).
+mark(5,kill,that).
+nsubj(5,kill,they).
+nsubj(5,leave,they).
+aux(5,kill,have).
+ccomp(5,accumulate,kill).
 case(5,heap,into).
 nummod(5,heap,one).
 amod(5,heap,large).
-nmod:into(5,killed,heap).
-cc(5,killed,and).
-ccomp(5,accumulated,left).
-conj:and(5,killed,left).
+nmod:into(5,kill,heap).
+cc(5,kill,and).
+ccomp(5,accumulate,leave).
+conj:and(5,kill,leave).
 case(5,himself,to).
-nmod:to(5,left,himself).
+nmod:to(5,leave,himself).
 det(5,morsel,the).
 amod(5,morsel,smallest).
 amod(5,morsel,possible).
-dobj(5,killed,morsel).
-killed(5,they,smallest_possible_morsel).
-left_to(5,they,himself).
-killed(5,they,possible_morsel).
-root(6,ROOT,said).
+dobj(5,kill,morsel).
+% relations.
+kill(5,they,smallest_possible_morsel).
+leave_to(5,they,himself).
+kill(5,they,possible_morsel).
+%% the lion said.
+% dependencies.
+root(6,root,say).
 det(6,lion,the).
-nsubj(6,said,lion).
-root(7,ROOT,taught).
-nsubj(7,taught,who).
-aux(7,taught,has).
+nsubj(6,say,lion).
+% relations.
+%% who has taught you my very excellent fellow the art of division.
+% dependencies.
+root(7,root,teach).
+nsubj(7,teach,who).
+aux(7,teach,have).
 nsubj(7,fellow,you).
 nmod:poss(7,fellow,my).
 advmod(7,excellent,very).
 amod(7,fellow,excellent).
-xcomp(7,taught,fellow).
+xcomp(7,teach,fellow).
 det(7,art,the).
 dep(7,fellow,art).
 case(7,division,of).
 nmod:of(7,fellow,division).
-root(8,ROOT,perfect).
+% relations.
+%% you are perfect to a fraction.
+% dependencies.
+root(8,root,perfect).
 nsubj(8,perfect,you).
-cop(8,perfect,are).
+cop(8,perfect,be).
 case(8,fraction,to).
 det(8,fraction,a).
 nmod:to(8,perfect,fraction).
-are(8,you,perfect).
-are_perfect_to(8,you,fraction).
-root(9,ROOT,replied).
-nsubj(9,replied,he).
-root(10,ROOT,learned).
-nsubj(10,learned,i).
-dobj(10,learned,it).
+% relations.
+be(8,you,perfect).
+be_perfect_to(8,you,fraction).
+%% he replied.
+% dependencies.
+root(9,root,reply).
+nsubj(9,reply,he).
+% relations.
+%% i learned it from the ass by witnessing his fate.
+% dependencies.
+root(10,root,learn).
+nsubj(10,learn,i).
+dobj(10,learn,it).
 case(10,ass,from).
 det(10,ass,the).
-nmod:from(10,learned,ass).
-mark(10,witnessing,by).
-advcl:by(10,learned,witnessing).
-nmod:poss(10,fate,his).
-dobj(10,witnessing,fate).
-learned(10,i,it).
-witnessing(10,i,his_fate).
+nmod:from(10,learn,ass).
+mark(10,witness,by).
+advcl:by(10,learn,witness).
+nmod:poss(10,fate,he).
+dobj(10,witness,fate).
+% relations.
+learn(10,i,it).
+witness(10,i,he_fate).

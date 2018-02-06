@@ -1,97 +1,121 @@
-root(0,ROOT,mole).
+%% a mole a creature blind from birth once said to his mother.
+% dependencies.
+root(0,root,mole).
 det(0,mole,a).
 det(0,creature,a).
-nsubj(0,said,creature).
+nsubj(0,say,creature).
 amod(0,creature,blind).
 case(0,birth,from).
 nmod:from(0,blind,birth).
-advmod(0,said,once).
-ccomp(0,mole,said).
+advmod(0,say,once).
+ccomp(0,mole,say).
 case(0,mother,to).
-nmod:poss(0,mother,his).
-nmod:to(0,said,mother).
-said_to(0,creature,his_mother).
-said_to(0,creature_blind,his_mother).
-once_said_to(0,creature_blind,his_mother).
+nmod:poss(0,mother,he).
+nmod:to(0,say,mother).
+% relations.
+say_to(0,creature,he_mother).
+say_to(0,creature_blind,he_mother).
+once_say_to(0,creature_blind,he_mother).
 blind_from(0,creature,birth).
-once_said_to(0,creature,his_mother).
-root(1,ROOT,sure).
+once_say_to(0,creature,he_mother).
+%% i am sure than i can see mother.
+% dependencies.
+root(1,root,sure).
 nsubj(1,sure,i).
-cop(1,sure,am).
+cop(1,sure,be).
 mark(1,see,than).
 nsubj(1,see,i).
 aux(1,see,can).
 ccomp(1,sure,see).
 dobj(1,see,mother).
+% relations.
 see(1,i,mother).
-am(1,i,sure).
-root(2,ROOT,desire).
+be(1,i,sure).
+%% in the desire to prove to him his mistake his mother placed before him a few grains of frankincense and asked.
+% dependencies.
+root(2,root,desire).
 case(2,desire,in).
 det(2,desire,the).
 mark(2,prove,to).
 acl:to(2,desire,prove).
-case(2,him,to).
-nmod:to(2,prove,him).
-nmod:poss(2,mistake,his).
+case(2,he,to).
+nmod:to(2,prove,he).
+nmod:poss(2,mistake,he).
 dobj(2,prove,mistake).
-nmod:poss(2,mother,his).
-nsubj(2,placed,mother).
-nsubj(2,asked,mother).
-acl:relcl(2,mistake,placed).
-case(2,him,before).
-nmod:before(2,placed,him).
-det(2,grains,a).
-amod(2,grains,few).
-dobj(2,placed,grains).
+nmod:poss(2,mother,he).
+nsubj(2,place,mother).
+nsubj(2,ask,mother).
+acl:relcl(2,mistake,place).
+case(2,he,before).
+nmod:before(2,place,he).
+det(2,grain,a).
+amod(2,grain,few).
+dobj(2,place,grain).
 case(2,frankincense,of).
-nmod:of(2,grains,frankincense).
-cc(2,placed,and).
-acl:relcl(2,mistake,asked).
-conj:and(2,placed,asked).
-few_grains_of(2,his_mother,frankincense).
-grains_of(2,his_mother,frankincense).
-placed_grains_before(2,his_mother,him).
-placed(2,his_mother,few_grains_of_frankincense).
-placed(2,his_mother,few_grains).
-placed(2,his_mother,grains_of_frankincense).
-placed(2,his_mother,grains).
-root(3,ROOT,what).
-cop(3,what,is).
+nmod:of(2,grain,frankincense).
+cc(2,place,and).
+acl:relcl(2,mistake,ask).
+conj:and(2,place,ask).
+% relations.
+few_grain_of(2,he_mother,frankincense).
+grain_of(2,he_mother,frankincense).
+place_grain_before(2,he_mother,he).
+place(2,he_mother,few_grain_of_frankincense).
+place(2,he_mother,few_grain).
+place(2,he_mother,grain_of_frankincense).
+place(2,he_mother,grain).
+%% what is it.
+% dependencies.
+root(3,root,what).
+cop(3,what,be).
 nsubj(3,what,it).
-root(4,ROOT,said).
-punct(4,said,').
+% relations.
+%% ' the young mole said.
+% dependencies.
+root(4,root,say).
+punct(4,say,').
 det(4,mole,the).
 amod(4,mole,young).
-dep(4,said,mole).
-root(5,ROOT,pebble).
+dep(4,say,mole).
+% relations.
+%% it is a pebble.
+% dependencies.
+root(5,root,pebble).
 nsubj(5,pebble,it).
-cop(5,pebble,is).
+cop(5,pebble,be).
 det(5,pebble,a).
-is(5,it,pebble).
-root(6,ROOT,exclaimed).
-nmod:poss(6,mother,his).
-nsubj(6,exclaimed,mother).
-root(7,ROOT,son).
+% relations.
+be(5,it,pebble).
+%% his mother exclaimed.
+% dependencies.
+root(6,root,exclaim).
+nmod:poss(6,mother,he).
+nsubj(6,exclaim,mother).
+% relations.
+%% my son i am afraid that you are not only blind but that you have lost your sense of smell.
+% dependencies.
+root(7,root,son).
 nmod:poss(7,son,my).
 mark(7,blind,son).
 nsubj(7,afraid,i).
-cop(7,afraid,am).
+cop(7,afraid,be).
 acl:relcl(7,son,afraid).
 ref(7,son,that).
 nsubj(7,blind,you).
-cop(7,blind,are).
+cop(7,blind,be).
 neg(7,blind,not).
 advmod(7,blind,only).
 ccomp(7,afraid,blind).
 cc(7,blind,but).
-mark(7,lost,that).
-nsubj(7,lost,you).
-aux(7,lost,have).
-ccomp(7,afraid,lost).
-conj:but(7,blind,lost).
-nmod:poss(7,sense,your).
-dobj(7,lost,sense).
+mark(7,lose,that).
+nsubj(7,lose,you).
+aux(7,lose,have).
+ccomp(7,afraid,lose).
+conj:but(7,blind,lose).
+nmod:poss(7,sense,you).
+dobj(7,lose,sense).
 case(7,smell,of).
 nmod:of(7,sense,smell).
-have_lost(7,you,your_sense).
-have_lost(7,you,your_sense_of_smell).
+% relations.
+have_lose(7,you,you_sense).
+have_lose(7,you,you_sense_of_smell).

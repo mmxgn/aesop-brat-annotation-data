@@ -1,69 +1,84 @@
-root(0,ROOT,accused).
+%% a wolf accused a fox of theft but the fox entirely denied the charge.
+% dependencies.
+root(0,root,accuse).
 det(0,wolf,a).
-nsubj(0,accused,wolf).
-nsubj(0,denied,wolf).
+nsubj(0,accuse,wolf).
+nsubj(0,deny,wolf).
 det(0,fox,a).
-dobj(0,accused,fox).
+dobj(0,accuse,fox).
 case(0,theft,of).
 nmod:of(0,fox,theft).
-cc(0,accused,but).
+cc(0,accuse,but).
 det(0,fox,the).
 nmod:npmod(0,entirely,fox).
-advmod(0,denied,entirely).
-conj:but(0,accused,denied).
+advmod(0,deny,entirely).
+conj:but(0,accuse,deny).
 det(0,charge,the).
-dobj(0,denied,charge).
-denied(0,wolf,charge).
-entirely_denied(0,wolf,charge).
-accused(0,wolf,fox_of_theft).
-accused(0,wolf,fox).
-root(1,ROOT,undertook).
-det(1,ape,an).
-nsubj(1,undertook,ape).
+dobj(0,deny,charge).
+% relations.
+deny(0,wolf,charge).
+entirely_deny(0,wolf,charge).
+accuse(0,wolf,fox_of_theft).
+accuse(0,wolf,fox).
+%% an ape undertook to adjudge the matter between them.
+% dependencies.
+root(1,root,undertake).
+det(1,ape,a).
+nsubj(1,undertake,ape).
 nsubj:xsubj(1,adjudge,ape).
 mark(1,adjudge,to).
-xcomp(1,undertook,adjudge).
+xcomp(1,undertake,adjudge).
 det(1,matter,the).
 dobj(1,adjudge,matter).
-case(1,them,between).
-nmod:between(1,matter,them).
-adjudge(1,ape,matter_between_them).
+case(1,they,between).
+nmod:between(1,matter,they).
+% relations.
+adjudge(1,ape,matter_between_they).
 adjudge(1,ape,matter).
-root(2,ROOT,stated).
-advmod(2,stated,when).
-nsubj(2,stated,each).
-aux(2,stated,had).
-advmod(2,stated,fully).
-nmod:poss(2,case,his).
-dobj(2,stated,case).
+%% when each had fully stated his case the ape announced this sentence.
+% dependencies.
+root(2,root,state).
+advmod(2,state,when).
+nsubj(2,state,each).
+aux(2,state,have).
+advmod(2,state,fully).
+nmod:poss(2,case,he).
+dobj(2,state,case).
 det(2,ape,the).
-nsubj(2,announced,ape).
-acl:relcl(2,case,announced).
+nsubj(2,announce,ape).
+acl:relcl(2,case,announce).
 det(2,sentence,this).
-dobj(2,announced,sentence).
-announced(2,ape,sentence).
-root(3,ROOT,think).
+dobj(2,announce,sentence).
+% relations.
+announce(2,ape,sentence).
+%% i do not think you wolf ever lost what you claim.
+% dependencies.
+root(3,root,think).
 nsubj(3,think,i).
 aux(3,think,do).
 neg(3,think,not).
 nsubj(3,wolf,you).
 ccomp(3,think,wolf).
-advmod(3,lost,ever).
-dep(3,wolf,lost).
+advmod(3,lose,ever).
+dep(3,wolf,lose).
 dobj(3,claim,what).
 nsubj(3,claim,you).
-ccomp(3,lost,claim).
-root(4,ROOT,i).
+ccomp(3,lose,claim).
+% relations.
+%% and i do believe you fox to have stolen what you so stoutly deny.
+% dependencies.
+root(4,root,i).
 cc(4,i,and).
 acl:relcl(4,i,do).
 ccomp(4,do,believe).
 dobj(4,believe,you).
 nsubj(4,deny,fox).
-mark(4,stolen,to).
-aux(4,stolen,have).
-acl:to(4,fox,stolen).
+mark(4,steal,to).
+aux(4,steal,have).
+acl:to(4,fox,steal).
 nsubj(4,you,what).
-xcomp(4,stolen,you).
+xcomp(4,steal,you).
 advmod(4,deny,so).
 advmod(4,deny,stoutly).
 dep(4,believe,deny).
+% relations.

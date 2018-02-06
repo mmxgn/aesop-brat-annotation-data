@@ -1,14 +1,19 @@
-root(0,ROOT,came).
+%% a gnat came and said to a lion.
+% dependencies.
+root(0,root,come).
 det(0,gnat,a).
-nsubj(0,came,gnat).
-nsubj(0,said,gnat).
-cc(0,came,and).
-conj:and(0,came,said).
+nsubj(0,come,gnat).
+nsubj(0,say,gnat).
+cc(0,come,and).
+conj:and(0,come,say).
 case(0,lion,to).
 det(0,lion,a).
-nmod:to(0,came,lion).
-came_to(0,gnat,lion).
-root(1,ROOT,do).
+nmod:to(0,come,lion).
+% relations.
+come_to(0,gnat,lion).
+%% i do not in the least fear you nor are you stronger than i am.
+% dependencies.
+root(1,root,do).
 nsubj(1,do,i).
 nsubj(1,stronger,i).
 xcomp(1,do,not).
@@ -18,71 +23,83 @@ amod(1,fear,least).
 nmod:in(1,not,fear).
 dep(1,not,you).
 cc(1,do,nor).
-cop(1,stronger,are).
+cop(1,stronger,be).
 nmod:npmod(1,stronger,you).
 conj:nor(1,do,stronger).
-mark(1,am,than).
-nsubj(1,am,i).
-ccomp(1,stronger,am).
+mark(1,be,than).
+nsubj(1,be,i).
+ccomp(1,stronger,be).
+% relations.
 do(1,i,not_in_least_fear).
 do(1,i,not).
 do(1,i,not_in_fear).
-root(2,ROOT,does).
-dep(2,does,for).
-mark(2,does,in).
-nsubj(2,does,what).
-nmod:poss(2,strength,your).
+%% for in what does your strength consist.
+% dependencies.
+root(2,root,do).
+dep(2,do,for).
+mark(2,do,in).
+nsubj(2,do,what).
+nmod:poss(2,strength,you).
 nsubj(2,consist,strength).
-ccomp(2,does,consist).
-root(3,ROOT,scratch).
+ccomp(2,do,consist).
+% relations.
+%% you can scratch with your claws and bite with your teeth an a woman in her quarrels.
+% dependencies.
+root(3,root,scratch).
 nsubj(3,scratch,you).
 nsubj(3,bite,you).
 aux(3,scratch,can).
-case(3,claws,with).
-nmod:poss(3,claws,your).
-nmod:with(3,scratch,claws).
+case(3,claw,with).
+nmod:poss(3,claw,you).
+nmod:with(3,scratch,claw).
 cc(3,scratch,and).
 conj:and(3,scratch,bite).
-case(3,teeth,with).
-nmod:poss(3,teeth,your).
-nmod:with(3,bite,teeth).
-det:predet(3,woman,an).
+case(3,tooth,with).
+nmod:poss(3,tooth,you).
+nmod:with(3,bite,tooth).
+det:predet(3,woman,a).
 det(3,woman,a).
 dobj(3,bite,woman).
-case(3,quarrels,in).
-nmod:poss(3,quarrels,her).
-nmod:in(3,woman,quarrels).
-bite(3,you,woman_in_her_quarrels).
-can_scratch_with(3,you,your_claws).
-is_in(3,woman,her_quarrels).
-bite_woman_with(3,you,your_teeth).
+case(3,quarrel,in).
+nmod:poss(3,quarrel,she).
+nmod:in(3,woman,quarrel).
+% relations.
+bite(3,you,woman_in_she_quarrel).
+can_scratch_with(3,you,you_claw).
+is_in(3,woman,she_quarrel).
+bite_woman_with(3,you,you_tooth).
 bite(3,you,woman).
-root(4,ROOT,repeat).
+%% i repeat that i am altogether more powerful than you.
+% dependencies.
+root(4,root,repeat).
 dep(4,repeat,i).
 dobj(4,powerful,that).
 nsubj(4,powerful,i).
-cop(4,powerful,am).
+cop(4,powerful,be).
 advmod(4,powerful,altogether).
 advmod(4,powerful,more).
 dep(4,repeat,powerful).
 case(4,you,than).
 nmod:than(4,powerful,you).
-am(4,i,powerful).
-am_powerful_than(4,i,you).
-am_altogether_powerful_than(4,i,you).
-am(4,i,more_powerful).
-am_altogether_more_powerful_than(4,i,you).
-am_more_powerful_than(4,i,you).
-am(4,i,altogether_powerful).
-am(4,i,altogether_more_powerful).
-root(5,ROOT,doubt).
+% relations.
+be(4,i,powerful).
+be_powerful_than(4,i,you).
+be_altogether_powerful_than(4,i,you).
+be(4,i,more_powerful).
+be_altogether_more_powerful_than(4,i,you).
+be_more_powerful_than(4,i,you).
+be(4,i,altogether_powerful).
+be(4,i,altogether_more_powerful).
+%% and if you doubt it let us fight and see who will conquer.
+% dependencies.
+root(5,root,doubt).
 cc(5,doubt,and).
 mark(5,doubt,if).
 nsubj(5,doubt,you).
 nsubj(5,let,it).
 ccomp(5,doubt,let).
-nsubj(5,fight,us).
-nsubj(5,see,us).
+nsubj(5,fight,we).
+nsubj(5,see,we).
 ccomp(5,let,fight).
 cc(5,fight,and).
 ccomp(5,let,see).
@@ -90,112 +107,133 @@ conj:and(5,fight,see).
 nsubj(5,conquer,who).
 aux(5,conquer,will).
 ccomp(5,doubt,conquer).
-root(6,ROOT,gnat).
+% relations.
+%% the gnat having sounded his horn fastened himself upon the lion and stung him on the nostrils and the parts of the face devoid of hair.
+% dependencies.
+root(6,root,gnat).
 det(6,gnat,the).
-aux(6,sounded,having).
-dep(6,gnat,sounded).
-nmod:poss(6,horn,his).
-nsubj(6,fastened,horn).
-nsubj(6,stung,horn).
+aux(6,sound,have).
+dep(6,gnat,sound).
+nmod:poss(6,horn,he).
+nsubj(6,fasten,horn).
+nsubj(6,sting,horn).
 nsubj(6,devoid,horn).
-dep(6,sounded,fastened).
-dobj(6,fastened,himself).
+dep(6,sound,fasten).
+dobj(6,fasten,himself).
 case(6,lion,upon).
 det(6,lion,the).
-nmod:upon(6,fastened,lion).
-cc(6,fastened,and).
-dep(6,sounded,stung).
-conj:and(6,fastened,stung).
-dobj(6,stung,him).
-case(6,nostrils,on).
-det(6,nostrils,the).
-nmod:on(6,stung,nostrils).
-cc(6,fastened,and).
-det(6,parts,the).
-dep(6,devoid,parts).
+nmod:upon(6,fasten,lion).
+cc(6,fasten,and).
+dep(6,sound,sting).
+conj:and(6,fasten,sting).
+dobj(6,sting,he).
+case(6,nostril,on).
+det(6,nostril,the).
+nmod:on(6,sting,nostril).
+cc(6,fasten,and).
+det(6,part,the).
+dep(6,devoid,part).
 case(6,face,of).
 det(6,face,the).
-nmod:of(6,parts,face).
-dep(6,sounded,devoid).
-conj:and(6,fastened,devoid).
+nmod:of(6,part,face).
+dep(6,sound,devoid).
+conj:and(6,fasten,devoid).
 case(6,hair,of).
 nmod:of(6,gnat,hair).
-fastened(6,his_horn,himself).
-stung(6,his_horn,him).
-root(7,ROOT,tore).
-mark(7,tore,while).
-csubj(7,tore,trying).
+% relations.
+fasten(6,he_horn,himself).
+sting(6,he_horn,he).
+%% while trying to crush him the lion tore himself with his claws until he punished himself severely.
+% dependencies.
+root(7,root,tear).
+mark(7,tear,while).
+csubj(7,tear,try).
 mark(7,crush,to).
-xcomp(7,trying,crush).
-nsubj(7,lion,him).
+xcomp(7,try,crush).
+nsubj(7,lion,he).
 det(7,lion,the).
 xcomp(7,crush,lion).
-dobj(7,tore,himself).
-case(7,claws,with).
-nmod:poss(7,claws,his).
-nmod:with(7,tore,claws).
-mark(7,punished,until).
-nsubj(7,punished,he).
-advcl:until(7,tore,punished).
-dobj(7,punished,himself).
-advmod(7,punished,severely).
-trying(7,himself,crush).
-punished_severely(7,he,himself).
-tore(7,trying,himself).
-punished(7,he,himself).
-root(8,ROOT,flew).
+dobj(7,tear,himself).
+case(7,claw,with).
+nmod:poss(7,claw,he).
+nmod:with(7,tear,claw).
+mark(7,punish,until).
+nsubj(7,punish,he).
+advcl:until(7,tear,punish).
+dobj(7,punish,himself).
+advmod(7,punish,severely).
+% relations.
+try(7,himself,crush).
+punish_severely(7,he,himself).
+tear(7,try,himself).
+punish(7,he,himself).
+%% the gnat thus prevailed over the lion and buzzing about in a song of triumph flew away.
+% dependencies.
+root(8,root,fly).
 det(8,gnat,the).
-nsubj(8,flew,gnat).
-advmod(8,prevailed,thus).
-dep(8,gnat,prevailed).
+nsubj(8,fly,gnat).
+advmod(8,prevail,thus).
+dep(8,gnat,prevail).
 case(8,lion,over).
 det(8,lion,the).
-nmod:over(8,prevailed,lion).
-cc(8,prevailed,and).
-dep(8,gnat,buzzing).
-conj:and(8,prevailed,buzzing).
-advmod(8,buzzing,about).
+nmod:over(8,prevail,lion).
+cc(8,prevail,and).
+dep(8,gnat,buzz).
+conj:and(8,prevail,buzz).
+advmod(8,buzz,about).
 case(8,song,in).
 det(8,song,a).
-nmod:in(8,buzzing,song).
+nmod:in(8,buzz,song).
 case(8,triumph,of).
 nmod:of(8,song,triumph).
-advmod(8,flew,away).
-root(9,ROOT,shortly).
+advmod(8,fly,away).
+% relations.
+%% but shortly afterwards he became entangled in the meshes of a cobweb and was eaten by a spider.
+% dependencies.
+root(9,root,shortly).
 cc(9,shortly,but).
-advmod(9,became,afterwards).
-nsubj(9,became,he).
-nsubjpass(9,eaten,he).
-dep(9,shortly,became).
-xcomp(9,became,entangled).
-case(9,meshes,in).
-det(9,meshes,the).
-nmod:in(9,became,meshes).
+advmod(9,become,afterwards).
+nsubj(9,become,he).
+nsubjpass(9,eat,he).
+dep(9,shortly,become).
+xcomp(9,become,entangled).
+case(9,mesh,in).
+det(9,mesh,the).
+nmod:in(9,become,mesh).
 case(9,cobweb,of).
 det(9,cobweb,a).
-nmod:of(9,meshes,cobweb).
-cc(9,became,and).
-auxpass(9,eaten,was).
-dep(9,shortly,eaten).
-conj:and(9,became,eaten).
+nmod:of(9,mesh,cobweb).
+cc(9,become,and).
+auxpass(9,eat,be).
+dep(9,shortly,eat).
+conj:and(9,become,eat).
 case(9,spider,by).
 det(9,spider,a).
-nmod:agent(9,eaten,spider).
-was(9,he,eaten).
-was_eaten_by(9,he,spider).
-root(10,ROOT,lamented).
-nsubj(10,lamented,he).
-advmod(10,lamented,greatly).
-nmod:poss(10,fate,his).
-dobj(10,lamented,fate).
-xcomp(10,lamented,saying).
-greatly_lamented(10,he,his_fate).
-lamented(10,he,his_fate).
-root(11,ROOT,me).
-nsubj(11,me,woe).
-cop(11,me,is).
-is(11,woe,me).
-root(12,ROOT,perish).
+nmod:agent(9,eat,spider).
+% relations.
+be(9,he,eat).
+be_eat_by(9,he,spider).
+%% he greatly lamented his fate saying.
+% dependencies.
+root(10,root,lament).
+nsubj(10,lament,he).
+advmod(10,lament,greatly).
+nmod:poss(10,fate,he).
+dobj(10,lament,fate).
+xcomp(10,lament,say).
+% relations.
+greatly_lament(10,he,he_fate).
+lament(10,he,he_fate).
+%% woe is me.
+% dependencies.
+root(11,root,I).
+nsubj(11,I,woe).
+cop(11,I,be).
+% relations.
+be(11,woe,I).
+%% that i who can wage war successfully with the hugest beasts should perish myself from this spider the most inconsiderable of insects.
+% dependencies.
+root(12,root,perish).
 mark(12,perish,that).
 nsubj(12,wage,i).
 nsubj(12,perish,i).
@@ -204,10 +242,10 @@ aux(12,wage,can).
 acl:relcl(12,i,wage).
 dobj(12,wage,war).
 advmod(12,wage,successfully).
-case(12,beasts,with).
-det(12,beasts,the).
-amod(12,beasts,hugest).
-nmod:with(12,wage,beasts).
+case(12,beast,with).
+det(12,beast,the).
+amod(12,beast,hugest).
+nmod:with(12,wage,beast).
 aux(12,perish,should).
 dobj(12,perish,myself).
 case(12,spider,from).
@@ -216,5 +254,6 @@ nmod:from(12,perish,spider).
 det(12,inconsiderable,the).
 advmod(12,inconsiderable,most).
 dep(12,spider,inconsiderable).
-case(12,insects,of).
-nmod:of(12,inconsiderable,insects).
+case(12,insect,of).
+nmod:of(12,inconsiderable,insect).
+% relations.

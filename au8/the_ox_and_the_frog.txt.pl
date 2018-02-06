@@ -1,121 +1,150 @@
-root(0,ROOT,trod).
-det(0,drinking,an).
+%% an ox drinking at a pool trod on a brood of young frogs and crushed one of them to death.
+% dependencies.
+root(0,root,tread).
+det(0,drinking,a).
 compound(0,drinking,ox).
-nsubj(0,trod,drinking).
+nsubj(0,tread,drinking).
 case(0,pool,at).
 det(0,pool,a).
 nmod:at(0,drinking,pool).
 case(0,brood,on).
 det(0,brood,a).
-nmod:on(0,trod,brood).
-case(0,frogs,of).
-amod(0,frogs,young).
-nmod:of(0,brood,frogs).
+nmod:on(0,tread,brood).
+case(0,frog,of).
+amod(0,frog,young).
+nmod:of(0,brood,frog).
 cc(0,brood,and).
 amod(0,one,crushed).
-det:qmod(0,them,one).
+det:qmod(0,they,one).
 mwe(0,one,of).
-nmod:on(0,trod,them).
-conj:and(0,brood,them).
+nmod:on(0,tread,they).
+conj:and(0,brood,they).
 case(0,death,to).
-nmod:to(0,trod,death).
-trod_on(0,ox_drinking,brood_of_frogs).
-trod_to(0,ox_drinking,death).
-trod_on(0,ox_drinking,brood).
-trod_on(0,ox_drinking,brood_of_young_frogs).
-root(1,ROOT,inquired).
+nmod:to(0,tread,death).
+% relations.
+tread_on(0,ox_drinking,brood_of_frog).
+tread_to(0,ox_drinking,death).
+tread_on(0,ox_drinking,brood).
+tread_on(0,ox_drinking,brood_of_young_frog).
+%% the mother coming up and missing one of her sons inquired of his brothers what had become of him.
+% dependencies.
+root(1,root,inquire).
 det(1,mother,the).
-nsubj(1,inquired,mother).
-dep(1,mother,coming).
-advmod(1,coming,up).
-cc(1,coming,and).
-dep(1,mother,missing).
-conj:and(1,coming,missing).
-dobj(1,missing,one).
-case(1,sons,of).
-nmod:poss(1,sons,her).
-nmod:of(1,one,sons).
-case(1,brothers,of).
-nmod:poss(1,brothers,his).
-nmod:of(1,inquired,brothers).
-nsubj(1,become,brothers).
-ref(1,brothers,what).
-aux(1,become,had).
-acl:relcl(1,brothers,become).
-case(1,him,of).
-nmod:of(1,become,him).
-root(2,ROOT,mother).
+nsubj(1,inquire,mother).
+dep(1,mother,come).
+advmod(1,come,up).
+cc(1,come,and).
+dep(1,mother,miss).
+conj:and(1,come,miss).
+dobj(1,miss,one).
+case(1,son,of).
+nmod:poss(1,son,she).
+nmod:of(1,one,son).
+case(1,brother,of).
+nmod:poss(1,brother,he).
+nmod:of(1,inquire,brother).
+nsubj(1,become,brother).
+ref(1,brother,what).
+aux(1,become,have).
+acl:relcl(1,brother,become).
+case(1,he,of).
+nmod:of(1,become,he).
+% relations.
+%% he is dead dear mother.
+% dependencies.
+root(2,root,mother).
 nsubj(2,mother,he).
-cop(2,mother,is).
+cop(2,mother,be).
 amod(2,mother,dead).
 amod(2,mother,dear).
-is(2,he,dead_mother).
-is(2,he,dead_dear_mother).
-is(2,he,mother).
-is(2,he,dear_mother).
-root(3,ROOT,came).
-mark(3,came,for).
+% relations.
+be(2,he,dead_mother).
+be(2,he,dead_dear_mother).
+be(2,he,mother).
+be(2,he,dear_mother).
+%% for just now a very huge beast with four great feet came to the pool and crushed him to death with his cloven heel.
+% dependencies.
+root(3,root,come).
+mark(3,come,for).
 advmod(3,now,just).
-advmod(3,came,now).
+advmod(3,come,now).
 det(3,beast,a).
 advmod(3,huge,very).
 amod(3,beast,huge).
-nsubj(3,came,beast).
-nsubj(3,crushed,beast).
-case(3,feet,with).
-nummod(3,feet,four).
-amod(3,feet,great).
-nmod:with(3,beast,feet).
+nsubj(3,come,beast).
+nsubj(3,crush,beast).
+case(3,foot,with).
+nummod(3,foot,four).
+amod(3,foot,great).
+nmod:with(3,beast,foot).
 case(3,pool,to).
 det(3,pool,the).
-nmod:to(3,came,pool).
-cc(3,came,and).
-conj:and(3,came,crushed).
-dobj(3,crushed,him).
+nmod:to(3,come,pool).
+cc(3,come,and).
+conj:and(3,come,crush).
+dobj(3,crush,he).
 case(3,death,to).
-nmod:to(3,crushed,death).
+nmod:to(3,crush,death).
 case(3,heel,with).
-nmod:poss(3,heel,his).
+nmod:poss(3,heel,he).
 amod(3,heel,cloven).
-nmod:with(3,crushed,heel).
-is_with(3,huge_beast,four_great_feet).
-root(4,ROOT,frog).
+nmod:with(3,crush,heel).
+% relations.
+be_with(3,huge_beast,four_great_foot).
+%% the frog puffing herself out inquired.
+% dependencies.
+root(4,root,frog).
 det(4,frog,the).
-dep(4,frog,puffing).
-dobj(4,puffing,herself).
-compound:prt(4,puffing,out).
-dep(4,puffing,inquired).
-root(5,ROOT,big).
+dep(4,frog,puff).
+dobj(4,puff,herself).
+compound:prt(4,puff,out).
+dep(4,puff,inquire).
+% relations.
+%% if the beast was as big as that in size.
+% dependencies.
+root(5,root,big).
 mark(5,big,if).
 det(5,beast,the).
 nsubj(5,big,beast).
-cop(5,big,was).
+cop(5,big,be).
 advmod(5,big,as).
 case(5,that,as).
 nmod:as(5,big,that).
 case(5,size,in).
 nmod:in(5,that,size).
-was(5,beast,big).
-was_big_as(5,beast,that_in_size).
-was_as_big_as(5,beast,that_in_size).
-was_big_as(5,beast,that).
-was(5,beast,as_big).
-was_as_big_as(5,beast,that).
-root(6,ROOT,cease).
+% relations.
+be(5,beast,big).
+be_big_as(5,beast,that_in_size).
+be_as_big_as(5,beast,that_in_size).
+be_big_as(5,beast,that).
+be(5,beast,as_big).
+be_as_big_as(5,beast,that).
+%% cease mother to puff yourself out.
+% dependencies.
+root(6,root,cease).
 dobj(6,cease,mother).
 mark(6,puff,to).
 advcl:to(6,cease,puff).
 dobj(6,puff,yourself).
 advmod(6,puff,out).
-root(7,ROOT,said).
-nmod:poss(7,son,her).
-nsubj(7,said,son).
-root(8,ROOT,angry).
+% relations.
+%% said her son.
+% dependencies.
+root(7,root,say).
+nmod:poss(7,son,she).
+nsubj(7,say,son).
+% relations.
+%% and do not be angry.
+% dependencies.
+root(8,root,angry).
 cc(8,angry,and).
 aux(8,angry,do).
 neg(8,angry,not).
 cop(8,angry,be).
-root(9,ROOT,assure).
+% relations.
+%% for you would i assure you sooner burst than successfully imitate the hugeness of that monster.
+% dependencies.
+root(9,root,assure).
 case(9,you,for).
 nmod:for(9,assure,you).
 aux(9,assure,would).
@@ -131,6 +160,7 @@ dobj(9,imitate,hugeness).
 case(9,monster,of).
 det(9,monster,that).
 nmod:of(9,hugeness,monster).
+% relations.
 would_assure(9,i,sooner_burst).
 would_assure(9,i,you).
 would_assure(9,i,burst).

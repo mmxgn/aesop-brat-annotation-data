@@ -1,101 +1,122 @@
-root(0,ROOT,carried).
-det(0,ass,an).
-nsubj(0,carried,ass).
+%% an ass once carried through the streets of a city a famous wooden image to be placed in one of its temples.
+% dependencies.
+root(0,root,carry).
+det(0,ass,a).
+nsubj(0,carry,ass).
 advmod(0,ass,once).
-case(0,streets,through).
-det(0,streets,the).
-nmod:through(0,carried,streets).
+case(0,street,through).
+det(0,street,the).
+nmod:through(0,carry,street).
 case(0,city,of).
 det(0,city,a).
-nmod:of(0,streets,city).
+nmod:of(0,street,city).
 det(0,image,a).
 amod(0,image,famous).
 amod(0,image,wooden).
-dobj(0,carried,image).
-mark(0,placed,to).
-auxpass(0,placed,be).
-acl:to(0,image,placed).
+dobj(0,carry,image).
+mark(0,place,to).
+auxpass(0,place,be).
+acl:to(0,image,place).
 case(0,one,in).
-nmod:in(0,placed,one).
-case(0,temples,of).
-nmod:poss(0,temples,its).
-nmod:of(0,one,temples).
-root(1,ROOT,passed).
-mark(1,passed,as).
-nsubj(1,passed,he).
+nmod:in(0,place,one).
+case(0,temple,of).
+nmod:poss(0,temple,its).
+nmod:of(0,one,temple).
+% relations.
+%% as he passed along the crowd made lowly prostration before the image.
+% dependencies.
+root(1,root,pass).
+mark(1,pass,as).
+nsubj(1,pass,he).
 case(1,crowd,along).
 det(1,crowd,the).
-nmod:along(1,passed,crowd).
-acl(1,crowd,made).
+nmod:along(1,pass,crowd).
+acl(1,crowd,make).
 amod(1,prostration,lowly).
-dobj(1,made,prostration).
+dobj(1,make,prostration).
 case(1,image,before).
 det(1,image,the).
-nmod:before(1,made,image).
-passed_along(1,he,crowd).
-root(2,ROOT,gave).
+nmod:before(1,make,image).
+% relations.
+pass_along(1,he,crowd).
+%% the ass thinking that they bowed their heads in token of respect for himself bristled up with pride gave himself airs and refused to move another step.
+% dependencies.
+root(2,root,give).
 det(2,ass,the).
-nsubj(2,gave,ass).
-acl(2,ass,thinking).
-mark(2,bowed,that).
-nsubj(2,bowed,they).
-ccomp(2,thinking,bowed).
-nmod:poss(2,heads,their).
-dobj(2,bowed,heads).
+nsubj(2,give,ass).
+acl(2,ass,think).
+mark(2,bow,that).
+nsubj(2,bow,they).
+ccomp(2,think,bow).
+nmod:poss(2,head,they).
+dobj(2,bow,head).
 case(2,token,in).
-nmod:in(2,bowed,token).
+nmod:in(2,bow,token).
 case(2,respect,of).
 nmod:of(2,token,respect).
-mark(2,bristled,for).
-nsubj(2,bristled,himself).
-advcl:for(2,bowed,bristled).
-compound:prt(2,bristled,up).
+mark(2,bristle,for).
+nsubj(2,bristle,himself).
+advcl:for(2,bow,bristle).
+compound:prt(2,bristle,up).
 case(2,pride,with).
-nmod:with(2,bristled,pride).
-nsubj(2,airs,himself).
-nsubj(2,refused,himself).
+nmod:with(2,bristle,pride).
+nsubj(2,air,himself).
+nsubj(2,refuse,himself).
 nsubj:xsubj(2,move,himself).
-ccomp(2,gave,airs).
-cc(2,airs,and).
-ccomp(2,gave,refused).
-conj:and(2,airs,refused).
+ccomp(2,give,air).
+cc(2,air,and).
+ccomp(2,give,refuse).
+conj:and(2,air,refuse).
 mark(2,move,to).
-xcomp(2,refused,move).
+xcomp(2,refuse,move).
 det(2,step,another).
 dobj(2,move,step).
-root(3,ROOT,stop).
+% relations.
+%% the driver seeing him thus stop laid his whip lustily about his shoulders and said.
+% dependencies.
+root(3,root,stop).
 det(3,driver,the).
 nsubj(3,stop,driver).
-nsubj(3,said,driver).
-acl(3,driver,seeing).
-dobj(3,seeing,him).
+nsubj(3,say,driver).
+acl(3,driver,see).
+dobj(3,see,he).
 advmod(3,stop,thus).
-dep(3,stop,laid).
-nmod:poss(3,whip,his).
-dobj(3,laid,whip).
-advmod(3,shoulders,lustily).
-case(3,shoulders,about).
-nmod:poss(3,shoulders,his).
-nmod:about(3,laid,shoulders).
+dep(3,stop,lay).
+nmod:poss(3,whip,he).
+dobj(3,lay,whip).
+advmod(3,shoulder,lustily).
+case(3,shoulder,about).
+nmod:poss(3,shoulder,he).
+nmod:about(3,lay,shoulder).
 cc(3,stop,and).
-conj:and(3,stop,said).
-root(4,ROOT,o).
+conj:and(3,stop,say).
+% relations.
+%% o you perverse dull-head.
+% dependencies.
+root(4,root,o).
 dep(4,o,you).
 amod(4,dull-head,perverse).
 amod(4,you,dull-head).
-root(5,ROOT,come).
+% relations.
+%% it is not yet come to this that men pay worship to an ass.
+% dependencies.
+root(5,root,come).
 nsubjpass(5,come,it).
-auxpass(5,come,is).
+auxpass(5,come,be).
 neg(5,come,not).
 advmod(5,come,yet).
 case(5,this,to).
 nmod:to(5,come,this).
 dobj(5,pay,this).
 ref(5,this,that).
-nsubj(5,pay,men).
+nsubj(5,pay,man).
 acl:relcl(5,this,pay).
 dobj(5,pay,worship).
 case(5,ass,to).
-det(5,ass,an).
+det(5,ass,a).
 nmod:to(5,pay,ass).
-root(6,ROOT,others).
+% relations.
+%% others.
+% dependencies.
+root(6,root,other).
+% relations.

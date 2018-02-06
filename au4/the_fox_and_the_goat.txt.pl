@@ -1,121 +1,144 @@
-root(0,ROOT,fell).
+%% by an unlucky chance a fox fell into a deep well from which he could not get out.
+% dependencies.
+root(0,root,fall).
 case(0,chance,by).
-det(0,chance,an).
+det(0,chance,a).
 amod(0,chance,unlucky).
-nmod:by(0,fell,chance).
+nmod:by(0,fall,chance).
 det(0,fox,a).
-nsubj(0,fell,fox).
+nsubj(0,fall,fox).
 case(0,well,into).
 dep(0,well,a).
 advmod(0,well,deep).
-advcl:into(0,fell,well).
+advcl:into(0,fall,well).
 mark(0,get,from).
 dobj(0,get,which).
 nsubj(0,get,he).
 aux(0,get,could).
 neg(0,get,not).
-advcl:from(0,fell,get).
+advcl:from(0,fall,get).
 compound:prt(0,get,out).
-root(1,ROOT,passed).
+% relations.
+%% a goat passed by shortly afterwards and asked the fox what he was doing down there.
+% dependencies.
+root(1,root,pass).
 det(1,goat,a).
-nsubj(1,passed,goat).
-nsubj(1,asked,goat).
+nsubj(1,pass,goat).
+nsubj(1,ask,goat).
 case(1,shortly,by).
-advcl:by(1,passed,shortly).
-advmod(1,passed,afterwards).
-cc(1,passed,and).
-conj:and(1,passed,asked).
+advcl:by(1,pass,shortly).
+advmod(1,pass,afterwards).
+cc(1,pass,and).
+conj:and(1,pass,ask).
 det(1,fox,the).
-dobj(1,asked,fox).
-dobj(1,doing,fox).
+dobj(1,ask,fox).
+dobj(1,do,fox).
 ref(1,fox,what).
-nsubj(1,doing,he).
-aux(1,doing,was).
-acl:relcl(1,fox,doing).
+nsubj(1,do,he).
+aux(1,do,be).
+acl:relcl(1,fox,do).
 advmod(1,there,down).
-advmod(1,doing,there).
-passed_afterwards_by(1,goat,shortly).
-passed_by(1,goat,shortly).
-root(2,ROOT,have).
+advmod(1,do,there).
+% relations.
+pass_afterwards_by(1,goat,shortly).
+pass_by(1,goat,shortly).
+%% oh have you not heard.
+% dependencies.
+root(2,root,have).
 nsubj(2,have,oh).
 dobj(2,have,you).
 neg(2,have,not).
-dep(2,have,heard).
-root(3,ROOT,said).
+dep(2,have,hear).
+% relations.
+%% said the fox.
+% dependencies.
+root(3,root,say).
 det(3,fox,the).
-nsubj(3,said,fox).
-root(4,ROOT,going).
-expl(4,going,there).
-aux(4,going,is).
+nsubj(3,say,fox).
+% relations.
+%% there is going to be a great drought so i jumped down here in order to be sure to have water by me.
+% dependencies.
+root(4,root,go).
+expl(4,go,there).
+aux(4,go,be).
 mark(4,drought,to).
 cop(4,drought,be).
 det(4,drought,a).
 amod(4,drought,great).
-xcomp(4,going,drought).
-mark(4,jumped,so).
-nsubj(4,jumped,i).
-advcl:so(4,drought,jumped).
+xcomp(4,go,drought).
+mark(4,jump,so).
+nsubj(4,jump,i).
+advcl:so(4,drought,jump).
 advmod(4,here,down).
-advmod(4,jumped,here).
+advmod(4,jump,here).
 mark(4,sure,in).
 mwe(4,in,order).
 mark(4,sure,to).
 cop(4,sure,be).
-advcl:in_order(4,jumped,sure).
+advcl:in_order(4,jump,sure).
 mark(4,have,to).
 xcomp(4,sure,have).
 dobj(4,have,water).
-case(4,me,by).
-nmod:by(4,have,me).
-jumped(4,i,sure).
-jumped_here(4,i,sure).
-jumped_down_here(4,i,sure).
-root(5,ROOT,do).
+case(4,I,by).
+nmod:by(4,have,I).
+% relations.
+jump(4,i,sure).
+jump_here(4,i,sure).
+jump_down_here(4,i,sure).
+%% why do n't you come down too.
+% dependencies.
+root(5,root,do).
 advmod(5,do,why).
-neg(5,do,n't).
+neg(5,do,not).
 nsubj(5,come,you).
 ccomp(5,do,come).
 advmod(5,too,down).
 advmod(5,come,too).
-root(6,ROOT,thought).
+% relations.
+%% the goat thought well of this advice and jumped down into the well.
+% dependencies.
+root(6,root,think).
 det(6,goat,the).
-nsubj(6,thought,goat).
-nsubj(6,jumped,goat).
-advmod(6,thought,well).
+nsubj(6,think,goat).
+nsubj(6,jump,goat).
+advmod(6,think,well).
 case(6,advice,of).
 det(6,advice,this).
-nmod:of(6,thought,advice).
-cc(6,thought,and).
-conj:and(6,thought,jumped).
-compound:prt(6,jumped,down).
+nmod:of(6,think,advice).
+cc(6,think,and).
+conj:and(6,think,jump).
+compound:prt(6,jump,down).
 case(6,well,into).
 det(6,well,the).
-nmod:into(6,jumped,well).
-thought_of(6,goat,advice).
-thought_well_of(6,goat,advice).
-jumped_down_into(6,goat,well).
-root(7,ROOT,jumped).
-cc(7,jumped,but).
+nmod:into(6,jump,well).
+% relations.
+think_of(6,goat,advice).
+think_well_of(6,goat,advice).
+jump_down_into(6,goat,well).
+%% but the fox immediately jumped on her back and by putting his foot on her long horns managed to jump up to the edge of the well.
+% dependencies.
+root(7,root,jump).
+cc(7,jump,but).
 det(7,fox,the).
-nsubj(7,jumped,fox).
-advmod(7,jumped,immediately).
+nsubj(7,jump,fox).
+advmod(7,jump,immediately).
 case(7,back,on).
-nmod:poss(7,back,her).
-nmod:on(7,jumped,back).
+nmod:poss(7,back,she).
+nmod:on(7,jump,back).
 cc(7,back,and).
-mark(7,putting,by).
-nmod:on(7,jumped,putting).
-conj:and(7,back,putting).
-nmod:poss(7,foot,his).
-nsubj(7,managed,foot).
+mark(7,put,by).
+nmod:on(7,jump,put).
+conj:and(7,back,put).
+nmod:poss(7,foot,he).
+nsubj(7,manage,foot).
 nsubj:xsubj(7,jump,foot).
-case(7,horns,on).
-nmod:poss(7,horns,her).
-amod(7,horns,long).
-nmod:on(7,foot,horns).
-ccomp(7,putting,managed).
+case(7,horn,on).
+nmod:poss(7,horn,she).
+amod(7,horn,long).
+nmod:on(7,foot,horn).
+ccomp(7,put,manage).
 mark(7,jump,to).
-xcomp(7,managed,jump).
+xcomp(7,manage,jump).
 compound:prt(7,jump,up).
 case(7,edge,to).
 det(7,edge,the).
@@ -123,12 +146,19 @@ nmod:to(7,jump,edge).
 case(7,well,of).
 det(7,well,the).
 nmod:of(7,edge,well).
-jump_up_to(7,his_foot,edge_of_well).
-immediately_jumped_on(7,fox,her_back).
-jump_up_to(7,his_foot,edge).
-jumped_on(7,fox,her_back).
-root(8,ROOT,friend).
+% relations.
+jump_up_to(7,he_foot,edge_of_well).
+immediately_jump_on(7,fox,she_back).
+jump_up_to(7,he_foot,edge).
+jump_on(7,fox,she_back).
+%% good-bye friend.
+% dependencies.
+root(8,root,friend).
 compound(8,friend,good-bye).
-root(9,ROOT,said).
+% relations.
+%% said the fox.
+% dependencies.
+root(9,root,say).
 det(9,fox,the).
-nsubj(9,said,fox).
+nsubj(9,say,fox).
+% relations.

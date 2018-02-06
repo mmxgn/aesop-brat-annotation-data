@@ -1,21 +1,23 @@
-root(0,ROOT,time).
+%% once upon a time there was a miser who used to hide his gold at the foot of a tree in his garden.
+% dependencies.
+root(0,root,time).
 advmod(0,time,once).
 case(0,time,upon).
 det(0,time,a).
-nsubj(0,used,time).
+nsubj(0,use,time).
 nsubj:xsubj(0,hide,time).
-expl(0,was,there).
-acl:relcl(0,time,was).
+expl(0,be,there).
+acl:relcl(0,time,be).
 det(0,miser,a).
-nsubj(0,was,miser).
-nsubj(0,used,miser).
+nsubj(0,be,miser).
+nsubj(0,use,miser).
 nsubj:xsubj(0,hide,miser).
 ref(0,time,who).
 ref(0,miser,who).
-acl:relcl(0,miser,used).
+acl:relcl(0,miser,use).
 mark(0,hide,to).
-xcomp(0,used,hide).
-nmod:poss(0,gold,his).
+xcomp(0,use,hide).
+nmod:poss(0,gold,he).
 dobj(0,hide,gold).
 case(0,foot,at).
 det(0,foot,the).
@@ -24,143 +26,173 @@ case(0,tree,of).
 det(0,tree,a).
 nmod:of(0,foot,tree).
 case(0,garden,in).
-nmod:poss(0,garden,his).
+nmod:poss(0,garden,he).
 nmod:in(0,tree,garden).
-is_in(0,tree,his_garden).
-root(1,ROOT,week).
+% relations.
+is_in(0,tree,he_garden).
+%% but every week he used to go and dig it up and gloat over his gains.
+% dependencies.
+root(1,root,week).
 cc(1,week,but).
 det(1,week,every).
-nsubj(1,used,he).
+nsubj(1,use,he).
 nsubj:xsubj(1,go,he).
 nsubj:xsubj(1,dig,he).
-acl:relcl(1,week,used).
+acl:relcl(1,week,use).
 mark(1,go,to).
-xcomp(1,used,go).
+xcomp(1,use,go).
 cc(1,go,and).
-xcomp(1,used,dig).
+xcomp(1,use,dig).
 conj:and(1,go,dig).
 dobj(1,dig,it).
 compound:prt(1,dig,up).
 cc(1,dig,and).
 conj:and(1,go,gloat).
 conj:and(1,dig,gloat).
-case(1,gains,over).
-nmod:poss(1,gains,his).
-nmod:over(1,gloat,gains).
-root(2,ROOT,robber).
+case(1,gain,over).
+nmod:poss(1,gain,he).
+nmod:over(1,gloat,gain).
+% relations.
+%% a robber who had noticed this went and dug up the gold and decamped with it.
+% dependencies.
+root(2,root,robber).
 det(2,robber,a).
-nsubj(2,noticed,robber).
-nsubj(2,decamped,robber).
+nsubj(2,notice,robber).
+nsubj(2,decamp,robber).
 ref(2,robber,who).
-aux(2,noticed,had).
-acl:relcl(2,robber,noticed).
-nsubj(2,went,this).
-nsubj(2,dug,this).
-ccomp(2,noticed,went).
-cc(2,went,and).
-ccomp(2,noticed,dug).
-conj:and(2,went,dug).
-compound:prt(2,went,up).
+aux(2,notice,have).
+acl:relcl(2,robber,notice).
+nsubj(2,go,this).
+nsubj(2,dig,this).
+ccomp(2,notice,go).
+cc(2,go,and).
+ccomp(2,notice,dig).
+conj:and(2,go,dig).
+compound:prt(2,go,up).
 det(2,gold,the).
-dobj(2,went,gold).
-cc(2,noticed,and).
-acl:relcl(2,robber,decamped).
-conj:and(2,noticed,decamped).
+dobj(2,go,gold).
+cc(2,notice,and).
+acl:relcl(2,robber,decamp).
+conj:and(2,notice,decamp).
 case(2,it,with).
-nmod:with(2,decamped,it).
-root(3,ROOT,came).
-advmod(3,came,when).
+nmod:with(2,decamp,it).
+% relations.
+%% when the miser next came to gloat over his treasures he found nothing but the empty hole.
+% dependencies.
+root(3,root,come).
+advmod(3,come,when).
 det(3,miser,the).
-advmod(3,came,miser).
+advmod(3,come,miser).
 case(3,miser,next).
 mark(3,gloat,to).
-xcomp(3,came,gloat).
-case(3,treasures,over).
-nmod:poss(3,treasures,his).
-nmod:over(3,gloat,treasures).
-nsubj(3,found,he).
-acl:relcl(3,treasures,found).
-dobj(3,found,nothing).
+xcomp(3,come,gloat).
+case(3,treasure,over).
+nmod:poss(3,treasure,he).
+nmod:over(3,gloat,treasure).
+nsubj(3,find,he).
+acl:relcl(3,treasure,find).
+dobj(3,find,nothing).
 case(3,hole,but).
 det(3,hole,the).
 amod(3,hole,empty).
 nmod:but(3,nothing,hole).
+% relations.
 nothing_but(3,he,hole).
 nothing_but(3,he,empty_hole).
-found(3,he,nothing_but_empty_hole).
-found(3,he,nothing).
-found(3,he,nothing_but_hole).
-root(4,ROOT,tore).
-nsubj(4,tore,he).
-nsubj(4,raised,he).
-nmod:poss(4,hair,his).
-dobj(4,tore,hair).
-cc(4,tore,and).
-conj:and(4,tore,raised).
+find(3,he,nothing_but_empty_hole).
+find(3,he,nothing).
+find(3,he,nothing_but_hole).
+%% he tore his hair and raised such an outcry that all the neighbours came around him and he told them how he used to come and visit his gold.
+% dependencies.
+root(4,root,tear).
+nsubj(4,tear,he).
+nsubj(4,raise,he).
+nmod:poss(4,hair,he).
+dobj(4,tear,hair).
+cc(4,tear,and).
+conj:and(4,tear,raise).
 det:predet(4,outcry,such).
-det(4,outcry,an).
-dobj(4,raised,outcry).
-mark(4,came,that).
-det:predet(4,neighbours,all).
-det(4,neighbours,the).
-nsubj(4,came,neighbours).
-ccomp(4,raised,came).
-case(4,him,around).
-nmod:around(4,came,him).
-cc(4,came,and).
-nsubj(4,told,he).
-ccomp(4,raised,told).
-conj:and(4,came,told).
-dobj(4,told,them).
-advmod(4,used,how).
-nsubj(4,used,he).
+det(4,outcry,a).
+dobj(4,raise,outcry).
+mark(4,come,that).
+det:predet(4,neighbour,all).
+det(4,neighbour,the).
+nsubj(4,come,neighbour).
+ccomp(4,raise,come).
+case(4,he,around).
+nmod:around(4,come,he).
+cc(4,come,and).
+nsubj(4,tell,he).
+ccomp(4,raise,tell).
+conj:and(4,come,tell).
+dobj(4,tell,they).
+advmod(4,use,how).
+nsubj(4,use,he).
 nsubj:xsubj(4,come,he).
 nsubj:xsubj(4,visit,he).
-dep(4,told,used).
+dep(4,tell,use).
 mark(4,come,to).
-xcomp(4,used,come).
+xcomp(4,use,come).
 cc(4,come,and).
-xcomp(4,used,visit).
+xcomp(4,use,visit).
 conj:and(4,come,visit).
-nmod:poss(4,gold,his).
+nmod:poss(4,gold,he).
 dobj(4,come,gold).
-came_around(4,neighbours,him).
-tore(4,he,his_hair).
-come(4,he,his_gold).
-told(4,he,them).
-root(5,ROOT,did).
+% relations.
+come_around(4,neighbour,he).
+tear(4,he,he_hair).
+come(4,he,he_gold).
+tell(4,he,they).
+%% did you ever take any of it out.
+% dependencies.
+root(5,root,do).
 nsubj(5,take,you).
 advmod(5,take,ever).
-ccomp(5,did,take).
+ccomp(5,do,take).
 dobj(5,take,any).
 case(5,it,of).
 nmod:of(5,any,it).
 compound:prt(5,take,out).
+% relations.
 take_out(5,you,any).
 ever_take_out(5,you,any_of_it).
 take_out(5,you,any_of_it).
 ever_take_out(5,you,any).
-root(6,ROOT,asked).
-det:qmod(6,them,one).
+%% asked one of them.
+% dependencies.
+root(6,root,ask).
+det:qmod(6,they,one).
 mwe(6,one,of).
-nsubj(6,asked,them).
-root(7,ROOT,nay).
-root(8,ROOT,said).
-nsubj(8,said,he).
-root(9,ROOT,came).
-nsubj(9,came,i).
+nsubj(6,ask,they).
+% relations.
+%% nay.
+% dependencies.
+root(7,root,nay).
+% relations.
+%% said he.
+% dependencies.
+root(8,root,say).
+nsubj(8,say,he).
+% relations.
+%% i only came to look at it.
+% dependencies.
+root(9,root,come).
+nsubj(9,come,i).
 nsubj:xsubj(9,look,i).
-advmod(9,came,only).
+advmod(9,come,only).
 mark(9,look,to).
-xcomp(9,came,look).
+xcomp(9,come,look).
 case(9,it,at).
 nmod:at(9,look,it).
-came(9,i,look_at_it).
-only_came(9,i,look).
+% relations.
+come(9,i,look_at_it).
+only_come(9,i,look).
 look_at(9,i,it).
-only_came(9,i,look_at_it).
-came(9,i,look).
-root(10,ROOT,come).
+only_come(9,i,look_at_it).
+come(9,i,look).
+%% then come again and look at the hole.
+% dependencies.
+root(10,root,come).
 advmod(10,come,then).
 advmod(10,come,again).
 cc(10,come,and).
@@ -168,10 +200,16 @@ conj:and(10,come,look).
 case(10,hole,at).
 det(10,hole,the).
 nmod:at(10,look,hole).
-root(11,ROOT,said).
+% relations.
+%% said a neighbour.
+% dependencies.
+root(11,root,say).
 det(11,neighbour,a).
-nsubj(11,said,neighbour).
-root(12,ROOT,do).
+nsubj(11,say,neighbour).
+% relations.
+%% it will do you just as much good.
+% dependencies.
+root(12,root,do).
 nsubj(12,do,it).
 aux(12,do,will).
 nsubj(12,good,you).
@@ -179,6 +217,7 @@ advmod(12,much,just).
 advmod(12,much,as).
 nmod:npmod(12,good,much).
 xcomp(12,do,good).
+% relations.
 will_do(12,it,you_as_much_good).
 will_do(12,it,you_good).
 will_do(12,it,you_just_much_good).

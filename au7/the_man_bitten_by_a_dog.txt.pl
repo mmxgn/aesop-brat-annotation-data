@@ -1,53 +1,61 @@
-root(0,ROOT,went).
+%% a man who had been bitten by a dog went about in quest of someone who might heal him.
+% dependencies.
+root(0,root,go).
 det(0,man,a).
-nsubjpass(0,bitten,man).
-nsubj(0,went,man).
+nsubjpass(0,bite,man).
+nsubj(0,go,man).
 ref(0,man,who).
-aux(0,bitten,had).
-auxpass(0,bitten,been).
-acl:relcl(0,man,bitten).
+aux(0,bite,have).
+auxpass(0,bite,be).
+acl:relcl(0,man,bite).
 case(0,dog,by).
 det(0,dog,a).
-nmod:agent(0,bitten,dog).
-advmod(0,went,about).
+nmod:agent(0,bite,dog).
+advmod(0,go,about).
 case(0,quest,in).
-nmod:in(0,went,quest).
+nmod:in(0,go,quest).
 nsubj(0,heal,quest).
 case(0,someone,of).
 nmod:of(0,quest,someone).
 ref(0,quest,who).
 aux(0,heal,might).
 acl:relcl(0,quest,heal).
-dobj(0,heal,him).
-root(1,ROOT,said).
+dobj(0,heal,he).
+% relations.
+%% a friend meeting him and learning what he wanted said.
+% dependencies.
+root(1,root,say).
 det(1,meeting,a).
 compound(1,meeting,friend).
-nsubj(1,said,meeting).
-dep(1,meeting,him).
-cc(1,him,and).
-acl(1,him,learning).
-dobj(1,wanted,what).
-nsubj(1,wanted,he).
-ccomp(1,learning,wanted).
-root(2,ROOT,cured).
-mark(2,cured,if).
-nsubjpass(2,cured,you).
-aux(2,cured,would).
-auxpass(2,cured,be).
-ccomp(2,cured,take).
+nsubj(1,say,meeting).
+dep(1,meeting,he).
+cc(1,he,and).
+acl(1,he,learn).
+dobj(1,want,what).
+nsubj(1,want,he).
+ccomp(1,learn,want).
+% relations.
+%% if you would be cured take a piece of bread and dip it in the blood from your wound and go and give it to the dog that bit you.
+% dependencies.
+root(2,root,cure).
+mark(2,cure,if).
+nsubjpass(2,cure,you).
+aux(2,cure,would).
+auxpass(2,cure,be).
+ccomp(2,cure,take).
 det(2,piece,a).
 dobj(2,take,piece).
 case(2,bread,of).
 nmod:of(2,piece,bread).
 cc(2,take,and).
-ccomp(2,cured,dip).
+ccomp(2,cure,dip).
 conj:and(2,take,dip).
 dobj(2,dip,it).
 case(2,blood,in).
 det(2,blood,the).
 nmod:in(2,dip,blood).
 case(2,wound,from).
-nmod:poss(2,wound,your).
+nmod:poss(2,wound,you).
 nmod:from(2,blood,wound).
 cc(2,dip,and).
 conj:and(2,take,go).
@@ -62,28 +70,37 @@ nmod:to(2,go,dog).
 case(2,bit,that).
 nmod:that(2,dog,bit).
 dobj(2,dip,you).
+% relations.
 dip(2,piece,you).
 go_to(2,you,dog_bit).
 dip(2,piece,it).
 go(2,you,it).
-would(2,you,would_cured).
+would(2,you,would_cure).
 go_to(2,you,dog).
-root(3,ROOT,laughed).
+%% the man who had been bitten laughed at this advice and said.
+% dependencies.
+root(3,root,laugh).
 det(3,man,the).
-nsubjpass(3,bitten,man).
-nsubj(3,laughed,man).
-nsubj(3,said,man).
+nsubjpass(3,bite,man).
+nsubj(3,laugh,man).
+nsubj(3,say,man).
 ref(3,man,who).
-aux(3,bitten,had).
-auxpass(3,bitten,been).
-acl:relcl(3,man,bitten).
+aux(3,bite,have).
+auxpass(3,bite,be).
+acl:relcl(3,man,bite).
 case(3,advice,at).
 det(3,advice,this).
-nmod:at(3,laughed,advice).
-cc(3,laughed,and).
-conj:and(3,laughed,said).
-root(4,ROOT,why).
-root(5,ROOT,do).
+nmod:at(3,laugh,advice).
+cc(3,laugh,and).
+conj:and(3,laugh,say).
+% relations.
+%% why.
+% dependencies.
+root(4,root,why).
+% relations.
+%% if i should do so it would be as if i should beg every dog in the town to bite me.
+% dependencies.
+root(5,root,do).
 mark(5,do,if).
 nsubj(5,do,i).
 aux(5,do,should).
@@ -103,16 +120,20 @@ det(5,town,the).
 nmod:in(5,beg,town).
 mark(5,bite,to).
 acl:to(5,town,bite).
-dobj(5,bite,me).
+dobj(5,bite,I).
+% relations.
 should_beg(5,i,dog).
-root(6,ROOT,bestowed).
-nsubj(6,bestowed,benefits).
+%% benefits bestowed upon the evil-disposed increase their means of injuring you.
+% dependencies.
+root(6,root,bestow).
+nsubj(6,bestow,benefit).
 case(6,increase,upon).
 det(6,increase,the).
 amod(6,increase,evil-disposed).
-nmod:upon(6,bestowed,increase).
-nmod:poss(6,means,their).
-dobj(6,bestowed,means).
-mark(6,injuring,of).
-acl:of(6,means,injuring).
-dobj(6,injuring,you).
+nmod:upon(6,bestow,increase).
+nmod:poss(6,means,they).
+dobj(6,bestow,means).
+mark(6,injure,of).
+acl:of(6,means,injure).
+dobj(6,injure,you).
+% relations.

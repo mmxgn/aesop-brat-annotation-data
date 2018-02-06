@@ -1,28 +1,36 @@
-root(0,ROOT,pursued).
+%% a wolf pursued a lamb which fled for refuge to a certain temple.
+% dependencies.
+root(0,root,pursue).
 det(0,wolf,a).
-nsubj(0,pursued,wolf).
+nsubj(0,pursue,wolf).
 det(0,lamb,a).
-dobj(0,pursued,lamb).
-nsubj(0,fled,lamb).
+dobj(0,pursue,lamb).
+nsubj(0,flee,lamb).
 ref(0,lamb,which).
-acl:relcl(0,lamb,fled).
+acl:relcl(0,lamb,flee).
 case(0,refuge,for).
-nmod:for(0,fled,refuge).
+nmod:for(0,flee,refuge).
 case(0,temple,to).
 det(0,temple,a).
 amod(0,temple,certain).
-nmod:to(0,fled,temple).
-root(1,ROOT,called).
+nmod:to(0,flee,temple).
+% relations.
+%% the wolf called out to him and said.
+% dependencies.
+root(1,root,call).
 det(1,wolf,the).
-nsubj(1,called,wolf).
-nsubj(1,said,wolf).
-compound:prt(1,called,out).
-case(1,him,to).
-nmod:to(1,called,him).
-cc(1,called,and).
-conj:and(1,called,said).
-called_out_to(1,wolf,him).
-root(2,ROOT,slay).
+nsubj(1,call,wolf).
+nsubj(1,say,wolf).
+compound:prt(1,call,out).
+case(1,he,to).
+nmod:to(1,call,he).
+cc(1,call,and).
+conj:and(1,call,say).
+% relations.
+call_out_to(1,wolf,he).
+%% the priest will slay you in sacrifice if he should catch you.
+% dependencies.
+root(2,root,slay).
 det(2,priest,the).
 nsubj(2,slay,priest).
 aux(2,slay,will).
@@ -34,35 +42,42 @@ nsubj(2,catch,he).
 aux(2,catch,should).
 advcl:if(2,slay,catch).
 dobj(2,catch,you).
+% relations.
 should_catch(2,he,you).
 will_slay(2,priest,you).
-root(3,ROOT,replied).
+%% on which the lamb replied.
+% dependencies.
+root(3,root,reply).
 case(3,which,on).
-nmod:on(3,replied,which).
+nmod:on(3,reply,which).
 det(3,lamb,the).
-nsubj(3,replied,lamb).
-root(4,ROOT,better).
+nsubj(3,reply,lamb).
+% relations.
+%% it would be better for me to be sacrificed in the temple than to be eaten by you.
+% dependencies.
+root(4,root,better).
 nsubj(4,better,it).
-nsubjpass:xsubj(4,sacrificed,it).
+nsubjpass:xsubj(4,sacrifice,it).
 aux(4,better,would).
 cop(4,better,be).
-case(4,me,for).
-nmod:for(4,better,me).
-mark(4,sacrificed,to).
-auxpass(4,sacrificed,be).
-xcomp(4,better,sacrificed).
+case(4,I,for).
+nmod:for(4,better,I).
+mark(4,sacrifice,to).
+auxpass(4,sacrifice,be).
+xcomp(4,better,sacrifice).
 case(4,temple,in).
 det(4,temple,the).
-nmod:in(4,sacrificed,temple).
-mark(4,eaten,than).
-mark(4,eaten,to).
-auxpass(4,eaten,be).
-advcl:to(4,better,eaten).
+nmod:in(4,sacrifice,temple).
+mark(4,eat,than).
+mark(4,eat,to).
+auxpass(4,eat,be).
+advcl:to(4,better,eat).
 case(4,you,by).
-nmod:agent(4,eaten,you).
-be_eaten_by(4,it,you).
-be(4,it,sacrificed).
-be(4,it,eaten).
+nmod:agent(4,eat,you).
+% relations.
+be_eat_by(4,it,you).
+be(4,it,sacrifice).
+be(4,it,eat).
 would(4,it,would_better).
-be_sacrificed_in(4,it,temple).
-would(4,it,would_better_for_me).
+be_sacrifice_in(4,it,temple).
+would(4,it,would_better_for_I).

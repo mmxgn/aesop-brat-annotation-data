@@ -1,23 +1,28 @@
-root(0,ROOT,had).
-det(0,beasts,the).
-nsubj(0,had,beasts).
+%% the beasts of the field and forest had a lion as their king.
+% dependencies.
+root(0,root,have).
+det(0,beast,the).
+nsubj(0,have,beast).
 case(0,field,of).
 det(0,field,the).
-nmod:of(0,beasts,field).
+nmod:of(0,beast,field).
 cc(0,field,and).
-nmod:of(0,beasts,forest).
+nmod:of(0,beast,forest).
 conj:and(0,field,forest).
 det(0,lion,a).
-dobj(0,had,lion).
+dobj(0,have,lion).
 case(0,king,as).
-nmod:poss(0,king,their).
+nmod:poss(0,king,they).
 nmod:as(0,lion,king).
-had(0,beasts,lion_as_their_king).
-had(0,beasts,lion).
-root(1,ROOT,cruel).
+% relations.
+have(0,beast,lion_as_they_king).
+have(0,beast,lion).
+%% he was neither wrathful cruel nor tyrannical but just and gentle as a king could be.
+% dependencies.
+root(1,root,cruel).
 nsubj(1,cruel,he).
 nsubj(1,tyrannical,he).
-cop(1,cruel,was).
+cop(1,cruel,be).
 cc:preconj(1,cruel,neither).
 amod(1,cruel,wrathful).
 cc(1,cruel,nor).
@@ -32,33 +37,36 @@ det(1,king,a).
 nsubj(1,be,king).
 aux(1,be,could).
 dep(1,gentle,be).
-was(1,he,wrathful_cruel).
-was(1,he,cruel).
-root(2,ROOT,reign).
+% relations.
+be(1,he,wrathful_cruel).
+be(1,he,cruel).
+%% during his reign he made a royal proclamation for a general assembly of all the birds and beasts and drew up conditions for a universal league in which the wolf and the lamb the panther and the kid the tiger and the stag the dog and the hare should live together in perfect peace and amity.
+% dependencies.
+root(2,root,reign).
 dep(2,reign,during).
-nmod:poss(2,reign,his).
-nsubj(2,made,he).
-nsubj(2,drew,he).
-acl:relcl(2,reign,made).
+nmod:poss(2,reign,he).
+nsubj(2,make,he).
+nsubj(2,draw,he).
+acl:relcl(2,reign,make).
 det(2,proclamation,a).
 amod(2,proclamation,royal).
-dobj(2,made,proclamation).
+dobj(2,make,proclamation).
 case(2,assembly,for).
 det(2,assembly,a).
 amod(2,assembly,general).
-nmod:for(2,made,assembly).
-case(2,birds,of).
-det:predet(2,birds,all).
-det(2,birds,the).
-nmod:of(2,assembly,birds).
-cc(2,birds,and).
-nmod:of(2,assembly,beasts).
-conj:and(2,birds,beasts).
-cc(2,made,and).
-acl:relcl(2,reign,drew).
-conj:and(2,made,drew).
-compound:prt(2,drew,up).
-dobj(2,drew,conditions).
+nmod:for(2,make,assembly).
+case(2,bird,of).
+det:predet(2,bird,all).
+det(2,bird,the).
+nmod:of(2,assembly,bird).
+cc(2,bird,and).
+nmod:of(2,assembly,beast).
+conj:and(2,bird,beast).
+cc(2,make,and).
+acl:relcl(2,reign,draw).
+conj:and(2,make,draw).
+compound:prt(2,draw,up).
+dobj(2,draw,condition).
 case(2,league,for).
 det(2,league,a).
 amod(2,league,universal).
@@ -99,26 +107,32 @@ nmod:in(2,live,peace).
 cc(2,peace,and).
 nmod:in(2,live,amity).
 conj:and(2,peace,amity).
+% relations.
 live(2,lamb,kid).
 should_live_together_in(2,lamb,peace).
-made(2,he,proclamation).
-drew_up(2,he,conditions).
+make(2,he,proclamation).
+draw_up(2,he,condition).
 should_live_in(2,wolf,peace).
 should_live_together_in(2,wolf,peace).
 should_live_in(2,lamb,peace).
-made(2,he,royal_proclamation).
+make(2,he,royal_proclamation).
 live_together(2,lamb,kid).
-root(3,ROOT,said).
+%% the hare said.
+% dependencies.
+root(3,root,say).
 det(3,hare,the).
-nsubj(3,said,hare).
-root(4,ROOT,oh).
-advmod(4,longed,how).
-nsubj(4,longed,i).
+nsubj(3,say,hare).
+% relations.
+%% oh how i have longed to see this day in which the weak shall take their place with impunity by the side of the strong.
+% dependencies.
+root(4,root,oh).
+advmod(4,long,how).
+nsubj(4,long,i).
 nsubj:xsubj(4,see,i).
-aux(4,longed,have).
-ccomp(4,oh,longed).
+aux(4,long,have).
+ccomp(4,oh,long).
 mark(4,see,to).
-xcomp(4,longed,see).
+xcomp(4,long,see).
 det(4,day,this).
 dobj(4,see,day).
 nmod:in(4,take,day).
@@ -128,7 +142,7 @@ det(4,weak,the).
 nsubj(4,take,weak).
 aux(4,take,shall).
 acl:relcl(4,day,take).
-nmod:poss(4,place,their).
+nmod:poss(4,place,they).
 dobj(4,take,place).
 case(4,impunity,with).
 nmod:with(4,take,impunity).
@@ -138,16 +152,20 @@ nmod:by(4,take,side).
 case(4,strong,of).
 det(4,strong,the).
 nmod:of(4,side,strong).
-shall_take(4,weak,their_place).
-root(5,ROOT,said).
-cc(5,said,and).
-mark(5,said,after).
+% relations.
+shall_take(4,weak,they_place).
+%% and after the hare said this he ran for his life.
+% dependencies.
+root(5,root,say).
+cc(5,say,and).
+mark(5,say,after).
 det(5,hare,the).
-nsubj(5,said,hare).
-dobj(5,said,this).
-nsubj(5,ran,he).
-acl:relcl(5,this,ran).
+nsubj(5,say,hare).
+dobj(5,say,this).
+nsubj(5,run,he).
+acl:relcl(5,this,run).
 case(5,life,for).
-nmod:poss(5,life,his).
-nmod:for(5,ran,life).
-ran_for(5,he,his_life).
+nmod:poss(5,life,he).
+nmod:for(5,run,life).
+% relations.
+run_for(5,he,he_life).

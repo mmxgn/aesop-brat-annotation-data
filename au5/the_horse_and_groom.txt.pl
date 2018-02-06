@@ -1,56 +1,67 @@
-root(0,ROOT,used).
+%% a groom used to spend whole days in currycombing and rubbing down his horse but at the same time stole his oats and sold them for his own profit.
+% dependencies.
+root(0,root,use).
 det(0,groom,a).
-nsubj(0,used,groom).
+nsubj(0,use,groom).
 nsubj:xsubj(0,spend,groom).
-nsubj(0,rubbing,groom).
+nsubj(0,rub,groom).
 mark(0,spend,to).
-xcomp(0,used,spend).
-amod(0,days,whole).
-nmod:tmod(0,spend,days).
+xcomp(0,use,spend).
+amod(0,day,whole).
+nmod:tmod(0,spend,day).
 case(0,currycombing,in).
 nmod:in(0,spend,currycombing).
-cc(0,used,and).
-conj:and(0,used,rubbing).
-compound:prt(0,rubbing,down).
-nmod:poss(0,horse,his).
-dobj(0,rubbing,horse).
+cc(0,use,and).
+conj:and(0,use,rub).
+compound:prt(0,rub,down).
+nmod:poss(0,horse,he).
+dobj(0,rub,horse).
 cc(0,time,but).
 case(0,time,at).
 det(0,time,the).
 amod(0,time,same).
-nmod:at(0,rubbing,time).
-acl:relcl(0,time,stole).
-nmod:poss(0,oats,his).
-dobj(0,stole,oats).
-cc(0,stole,and).
-acl:relcl(0,time,sold).
-conj:and(0,stole,sold).
-dobj(0,sold,them).
+nmod:at(0,rub,time).
+acl:relcl(0,time,steal).
+nmod:poss(0,oats,he).
+dobj(0,steal,oats).
+cc(0,steal,and).
+acl:relcl(0,time,sell).
+conj:and(0,steal,sell).
+dobj(0,sell,they).
 case(0,profit,for).
-nmod:poss(0,profit,his).
+nmod:poss(0,profit,he).
 amod(0,profit,own).
-nmod:for(0,sold,profit).
-used(0,groom,spend_days).
+nmod:for(0,sell,profit).
+% relations.
+use(0,groom,spend_day).
 spend_in(0,groom,currycombing).
-used(0,groom,spend_in_currycombing).
-sold(0,his_oats,them).
-used(0,groom,spend_whole_days).
-spend_at_time(0,groom,whole_days).
-spend_at_time(0,groom,days).
-used(0,groom,spend_days_in_currycombing).
-used(0,groom,spend).
-used(0,groom,spend_whole_days_in_currycombing).
-rubbing_down(0,groom,his_horse).
-root(1,ROOT,alas).
-root(2,ROOT,said).
+use(0,groom,spend_in_currycombing).
+sell(0,he_oats,they).
+use(0,groom,spend_whole_day).
+spend_at_time(0,groom,whole_day).
+spend_at_time(0,groom,day).
+use(0,groom,spend_day_in_currycombing).
+use(0,groom,spend).
+use(0,groom,spend_whole_day_in_currycombing).
+rub_down(0,groom,he_horse).
+%% alas.
+% dependencies.
+root(1,root,alas).
+% relations.
+%% said the horse.
+% dependencies.
+root(2,root,say).
 det(2,horse,the).
-nsubj(2,said,horse).
-root(3,ROOT,wish).
+nsubj(2,say,horse).
+% relations.
+%% if you really wish me to be in good condition you should groom me less and feed me more.
+% dependencies.
+root(3,root,wish).
 mark(3,wish,if).
 nsubj(3,wish,you).
 advmod(3,wish,really).
-dobj(3,wish,me).
-nsubj:xsubj(3,condition,me).
+dobj(3,wish,I).
+nsubj:xsubj(3,condition,I).
 mark(3,condition,to).
 cop(3,condition,be).
 case(3,condition,in).
@@ -60,15 +71,16 @@ nsubj(3,groom,you).
 nsubj(3,feed,you).
 aux(3,groom,should).
 acl:relcl(3,condition,groom).
-nsubj(3,less,me).
+nsubj(3,less,I).
 xcomp(3,groom,less).
 cc(3,groom,and).
 acl:relcl(3,condition,feed).
 conj:and(3,groom,feed).
-dobj(3,feed,me).
+dobj(3,feed,I).
 advmod(3,feed,more).
-feed_more(3,you,me).
-really_wish(3,you,me).
-wish(3,you,me).
-feed(3,you,me).
-should_groom(3,you,me_less).
+% relations.
+feed_more(3,you,I).
+really_wish(3,you,I).
+wish(3,you,I).
+feed(3,you,I).
+should_groom(3,you,I_less).

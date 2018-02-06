@@ -1,133 +1,156 @@
-root(0,ROOT,gorging).
+%% a wolf had been gorging on an animal he had killed when suddenly a small bone in the meat stuck in his throat and he could not swallow it.
+% dependencies.
+root(0,root,gorge).
 det(0,wolf,a).
-nsubj(0,gorging,wolf).
-aux(0,gorging,had).
-aux(0,gorging,been).
+nsubj(0,gorge,wolf).
+aux(0,gorge,have).
+aux(0,gorge,be).
 case(0,animal,on).
-det(0,animal,an).
-nmod:on(0,gorging,animal).
-nsubj(0,killed,he).
-aux(0,killed,had).
-acl:relcl(0,animal,killed).
-advmod(0,stuck,when).
-advmod(0,stuck,suddenly).
+det(0,animal,a).
+nmod:on(0,gorge,animal).
+nsubj(0,kill,he).
+aux(0,kill,have).
+acl:relcl(0,animal,kill).
+advmod(0,stick,when).
+advmod(0,stick,suddenly).
 det(0,bone,a).
 amod(0,bone,small).
-nsubj(0,stuck,bone).
+nsubj(0,stick,bone).
 case(0,meat,in).
 det(0,meat,the).
 nmod:in(0,bone,meat).
-advcl(0,killed,stuck).
+advcl(0,kill,stick).
 case(0,throat,in).
-nmod:poss(0,throat,his).
-nmod:in(0,stuck,throat).
-cc(0,stuck,and).
+nmod:poss(0,throat,he).
+nmod:in(0,stick,throat).
+cc(0,stick,and).
 nsubj(0,swallow,he).
 aux(0,swallow,could).
 neg(0,swallow,not).
-advcl(0,killed,swallow).
-conj:and(0,stuck,swallow).
+advcl(0,kill,swallow).
+conj:and(0,stick,swallow).
 dobj(0,swallow,it).
+% relations.
 is_in(0,small_bone,meat).
-root(1,ROOT,felt).
-nsubj(1,felt,he).
-nsubj(1,ran,he).
-advmod(1,felt,soon).
+%% he soon felt terrible pain in his throat and ran up and down groaning and groaning and seeking for something to relieve the pain.
+% dependencies.
+root(1,root,feel).
+nsubj(1,feel,he).
+nsubj(1,run,he).
+advmod(1,feel,soon).
 amod(1,pain,terrible).
-dobj(1,felt,pain).
+dobj(1,feel,pain).
 case(1,throat,in).
-nmod:poss(1,throat,his).
-nmod:in(1,felt,throat).
-cc(1,felt,and).
-conj:and(1,felt,ran).
-advmod(1,ran,up).
+nmod:poss(1,throat,he).
+nmod:in(1,feel,throat).
+cc(1,feel,and).
+conj:and(1,feel,run).
+advmod(1,run,up).
 cc(1,up,and).
-advmod(1,ran,down).
+advmod(1,run,down).
 conj:and(1,up,down).
-ccomp(1,ran,groaning).
-cc(1,groaning,and).
-ccomp(1,ran,groaning).
-conj:and(1,groaning,groaning).
-cc(1,groaning,and).
-ccomp(1,ran,seeking).
-conj:and(1,groaning,seeking).
+ccomp(1,run,groan).
+cc(1,groan,and).
+ccomp(1,run,groan).
+conj:and(1,groan,groan).
+cc(1,groan,and).
+ccomp(1,run,seek).
+conj:and(1,groan,seek).
 case(1,something,for).
-nmod:for(1,seeking,something).
+nmod:for(1,seek,something).
 mark(1,relieve,to).
-xcomp(1,seeking,relieve).
+xcomp(1,seek,relieve).
 det(1,pain,the).
 dobj(1,relieve,pain).
-soon_felt(1,he,terrible_pain).
-felt(1,he,pain).
-soon_felt_in(1,he,his_throat).
-felt(1,he,terrible_pain).
-soon_felt(1,he,pain).
-felt_in(1,he,his_throat).
-felt_pain_in(1,he,his_throat).
-soon_felt_pain_in(1,he,his_throat).
-root(2,ROOT,tried).
-nsubj(2,tried,he).
+% relations.
+soon_feel(1,he,terrible_pain).
+feel(1,he,pain).
+soon_feel_in(1,he,he_throat).
+feel(1,he,terrible_pain).
+soon_feel(1,he,pain).
+feel_in(1,he,he_throat).
+feel_pain_in(1,he,he_throat).
+soon_feel_pain_in(1,he,he_throat).
+%% he tried to induce every one he met to remove the bone.
+% dependencies.
+root(2,root,try).
+nsubj(2,try,he).
 nsubj:xsubj(2,induce,he).
 mark(2,induce,to).
-xcomp(2,tried,induce).
+xcomp(2,try,induce).
 det(2,one,every).
 dobj(2,induce,one).
-nsubj(2,met,he).
+nsubj(2,meet,he).
 nsubj:xsubj(2,remove,he).
-acl:relcl(2,one,met).
+acl:relcl(2,one,meet).
 mark(2,remove,to).
-xcomp(2,met,remove).
+xcomp(2,meet,remove).
 det(2,bone,the).
 dobj(2,remove,bone).
-root(3,ROOT,give).
+% relations.
+%% i would give anything.
+% dependencies.
+root(3,root,give).
 nsubj(3,give,i).
 aux(3,give,would).
 dobj(3,give,anything).
+% relations.
 would_give(3,i,anything).
-root(4,ROOT,said).
-nsubj(4,said,he).
-root(5,ROOT,take).
+%% said he.
+% dependencies.
+root(4,root,say).
+nsubj(4,say,he).
+% relations.
+%% if you would take it out.
+% dependencies.
+root(5,root,take).
 mark(5,take,if).
 nsubj(5,take,you).
 aux(5,take,would).
 dobj(5,take,it).
 compound:prt(5,take,out).
+% relations.
 would_take_out(5,you,it).
-root(6,ROOT,agreed).
+%% at last the crane agreed to try and told the wolf to lie on his side and open his jaws as wide as he could.
+% dependencies.
+root(6,root,agree).
 case(6,last,at).
-nmod:at(6,agreed,last).
+nmod:at(6,agree,last).
 det(6,crane,the).
-nsubj(6,agreed,crane).
+nsubj(6,agree,crane).
 nsubj:xsubj(6,try,crane).
-nsubj(6,told,crane).
+nsubj(6,tell,crane).
 mark(6,try,to).
-xcomp(6,agreed,try).
-cc(6,agreed,and).
-conj:and(6,agreed,told).
+xcomp(6,agree,try).
+cc(6,agree,and).
+conj:and(6,agree,tell).
 det(6,wolf,the).
-dobj(6,told,wolf).
+dobj(6,tell,wolf).
 nsubj:xsubj(6,lie,wolf).
 nsubj:xsubj(6,open,wolf).
 mark(6,lie,to).
-xcomp(6,told,lie).
+xcomp(6,tell,lie).
 case(6,side,on).
-nmod:poss(6,side,his).
+nmod:poss(6,side,he).
 nmod:on(6,lie,side).
 cc(6,lie,and).
-xcomp(6,told,open).
+xcomp(6,tell,open).
 conj:and(6,lie,open).
-nmod:poss(6,jaws,his).
-dobj(6,open,jaws).
+nmod:poss(6,jaw,he).
+dobj(6,open,jaw).
 case(6,wide,as).
 advcl:as(6,open,wide).
 mark(6,could,as).
 nsubj(6,could,he).
 advcl:as(6,open,could).
-agreed_at(6,crane,last).
-told(6,crane,wolf).
-agreed(6,crane,try).
-lie_on(6,wolf,his_side).
-root(7,ROOT,crane).
+% relations.
+agree_at(6,crane,last).
+tell(6,crane,wolf).
+agree(6,crane,try).
+lie_on(6,wolf,he_side).
+%% then the crane put its long neck down the wolf 's throat and with its beak loosened the bone till at last it got it out.
+% dependencies.
+root(7,root,crane).
 dep(7,crane,then).
 det(7,crane,the).
 ccomp(7,crane,put).
@@ -142,54 +165,69 @@ nmod:down(7,put,throat).
 cc(7,put,and).
 case(7,beak,with).
 nmod:poss(7,beak,its).
-nmod:with(7,loosened,beak).
-ccomp(7,crane,loosened).
-conj:and(7,put,loosened).
+nmod:with(7,loosen,beak).
+ccomp(7,crane,loosen).
+conj:and(7,put,loosen).
 det(7,bone,the).
-dobj(7,loosened,bone).
-mark(7,got,till).
+dobj(7,loosen,bone).
+mark(7,get,till).
 case(7,last,at).
-nmod:at(7,got,last).
-nsubj(7,got,it).
-dep(7,bone,got).
-dobj(7,got,it).
-compound:prt(7,got,out).
-loosened(7,its_neck,bone).
+nmod:at(7,get,last).
+nsubj(7,get,it).
+dep(7,bone,get).
+dobj(7,get,it).
+compound:prt(7,get,out).
+% relations.
+loosen(7,its_neck,bone).
 down(7,wolf,throat).
-loosened_bone_with(7,its_neck,its_beak).
-loosened(7,its_long_neck,bone).
-loosened_bone_with(7,its_long_neck,its_beak).
-root(8,ROOT,give).
+loosen_bone_with(7,its_neck,its_beak).
+loosen(7,its_long_neck,bone).
+loosen_bone_with(7,its_long_neck,its_beak).
+%% will you kindly give me the reward you promised.
+% dependencies.
+root(8,root,give).
 aux(8,give,will).
 nsubj(8,give,you).
 advmod(8,give,kindly).
-dobj(8,give,me).
+dobj(8,give,I).
 det(8,reward,the).
-dep(8,me,reward).
-nsubj(8,promised,you).
-acl:relcl(8,me,promised).
-root(9,ROOT,said).
+dep(8,I,reward).
+nsubj(8,promise,you).
+acl:relcl(8,I,promise).
+% relations.
+%% said the crane.
+% dependencies.
+root(9,root,say).
 det(9,crane,the).
-nsubj(9,said,crane).
-root(10,ROOT,grinned).
+nsubj(9,say,crane).
+% relations.
+%% the wolf grinned and showed his teeth and said.
+% dependencies.
+root(10,root,grin).
 det(10,wolf,the).
-nsubj(10,grinned,wolf).
-nsubj(10,showed,wolf).
-nsubj(10,said,wolf).
-cc(10,grinned,and).
-conj:and(10,grinned,showed).
-nmod:poss(10,teeth,his).
-dobj(10,grinned,teeth).
-cc(10,grinned,and).
-conj:and(10,grinned,said).
-grinned(10,wolf,his_teeth).
-root(11,ROOT,content).
+nsubj(10,grin,wolf).
+nsubj(10,show,wolf).
+nsubj(10,say,wolf).
+cc(10,grin,and).
+conj:and(10,grin,show).
+nmod:poss(10,tooth,he).
+dobj(10,grin,tooth).
+cc(10,grin,and).
+conj:and(10,grin,say).
+% relations.
+grin(10,wolf,he_tooth).
+%% be content.
+% dependencies.
+root(11,root,content).
 cop(11,content,be).
-root(12,ROOT,put).
+% relations.
+%% you have put your head inside a wolf 's mouth and taken it out again in safety.
+% dependencies.
+root(12,root,put).
 nsubj(12,put,you).
-nsubj(12,taken,you).
+nsubj(12,take,you).
 aux(12,put,have).
-nmod:poss(12,head,your).
+nmod:poss(12,head,you).
 dobj(12,put,head).
 case(12,mouth,inside).
 det(12,wolf,a).
@@ -197,16 +235,19 @@ nmod:poss(12,mouth,wolf).
 case(12,wolf,'s).
 nmod:inside(12,put,mouth).
 cc(12,put,and).
-conj:and(12,put,taken).
-dobj(12,taken,it).
-compound:prt(12,taken,out).
+conj:and(12,put,take).
+dobj(12,take,it).
+compound:prt(12,take,out).
 advmod(12,safety,again).
 case(12,safety,in).
-nmod:in(12,taken,safety).
+nmod:in(12,take,safety).
+% relations.
 inside(12,wolf,mouth).
-taken_out(12,you,it).
-have_put(12,you,your_head).
-root(13,ROOT,ought).
+take_out(12,you,it).
+have_put(12,you,you_head).
+%% that ought to be reward enough for you.
+% dependencies.
+root(13,root,ought).
 mark(13,ought,that).
 mark(13,reward,to).
 cop(13,reward,be).
@@ -214,3 +255,4 @@ xcomp(13,ought,reward).
 advmod(13,reward,enough).
 case(13,you,for).
 nmod:for(13,reward,you).
+% relations.

@@ -1,57 +1,68 @@
-root(0,ROOT,came).
+%% a lion came across a hare who was fast asleep.
+% dependencies.
+root(0,root,come).
 det(0,lion,a).
-nsubj(0,came,lion).
+nsubj(0,come,lion).
 case(0,hare,across).
 det(0,hare,a).
-nmod:across(0,came,hare).
+nmod:across(0,come,hare).
 nsubj(0,asleep,hare).
 ref(0,hare,who).
-cop(0,asleep,was).
+cop(0,asleep,be).
 advmod(0,asleep,fast).
 acl:relcl(0,hare,asleep).
-root(1,ROOT,act).
+% relations.
+%% he was just in the act of seizing her when a fine young hart trotted by and he left the hare to follow him.
+% dependencies.
+root(1,root,act).
 nsubj(1,act,he).
-cop(1,act,was).
+cop(1,act,be).
 advmod(1,act,just).
 case(1,act,in).
 det(1,act,the).
-mark(1,seizing,of).
-acl:of(1,act,seizing).
-dobj(1,seizing,her).
-advmod(1,trotted,when).
+mark(1,seize,of).
+acl:of(1,act,seize).
+dobj(1,seize,she).
+advmod(1,trot,when).
 det(1,hart,a).
 amod(1,hart,fine).
 amod(1,hart,young).
-nsubj(1,trotted,hart).
-advcl(1,seizing,trotted).
-nmod(1,trotted,by).
-cc(1,trotted,and).
-nsubj(1,left,he).
-advcl(1,seizing,left).
-conj:and(1,trotted,left).
+nsubj(1,trot,hart).
+advcl(1,seize,trot).
+nmod(1,trot,by).
+cc(1,trot,and).
+nsubj(1,leave,he).
+advcl(1,seize,leave).
+conj:and(1,trot,leave).
 det(1,hare,the).
-dobj(1,left,hare).
+dobj(1,leave,hare).
 mark(1,follow,to).
 acl:to(1,hare,follow).
-dobj(1,follow,him).
-root(2,ROOT,awoke).
+dobj(1,follow,he).
+% relations.
+%% the hare scared by the noise awoke and scudded away.
+% dependencies.
+root(2,root,awake).
 det(2,hare,the).
-nsubj(2,awoke,hare).
-nsubj(2,scudded,hare).
-acl(2,hare,scared).
+nsubj(2,awake,hare).
+nsubj(2,scud,hare).
+acl(2,hare,scare).
 case(2,noise,by).
 det(2,noise,the).
-nmod:by(2,scared,noise).
-cc(2,awoke,and).
-conj:and(2,awoke,scudded).
-advmod(2,scudded,away).
-root(3,ROOT,unable).
+nmod:by(2,scare,noise).
+cc(2,awake,and).
+conj:and(2,awake,scud).
+advmod(2,scud,away).
+% relations.
+%% the lion was unable after a long chase to catch the hart and returned to feed upon the hare.
+% dependencies.
+root(3,root,unable).
 det(3,lion,the).
 nsubj(3,unable,lion).
 nsubj:xsubj(3,catch,lion).
-nsubj(3,returned,lion).
+nsubj(3,return,lion).
 nsubj:xsubj(3,feed,lion).
-cop(3,unable,was).
+cop(3,unable,be).
 case(3,chase,after).
 det(3,chase,a).
 amod(3,chase,long).
@@ -61,57 +72,64 @@ xcomp(3,unable,catch).
 det(3,hart,the).
 dobj(3,catch,hart).
 cc(3,unable,and).
-conj:and(3,unable,returned).
+conj:and(3,unable,return).
 mark(3,feed,to).
-xcomp(3,returned,feed).
+xcomp(3,return,feed).
 case(3,hare,upon).
 det(3,hare,the).
 nmod:upon(3,feed,hare).
-was(3,lion,unable).
+% relations.
+be(3,lion,unable).
 catch(3,lion,hart).
-was_unable_after(3,lion,chase).
-returned(3,lion,feed).
-was_unable_after(3,lion,long_chase).
-returned(3,lion,feed_upon_hare).
-root(4,ROOT,finding).
-mark(4,finding,on).
+be_unable_after(3,lion,chase).
+return(3,lion,feed).
+be_unable_after(3,lion,long_chase).
+return(3,lion,feed_upon_hare).
+%% on finding that the hare also had run off he said.
+% dependencies.
+root(4,root,find).
+mark(4,find,on).
 mark(4,run,that).
 det(4,hare,the).
 nsubj(4,run,hare).
 advmod(4,run,also).
-aux(4,run,had).
-ccomp(4,finding,run).
-mark(4,said,off).
-nsubj(4,said,he).
-advcl:off(4,run,said).
-run(4,hare,he_said).
-also_run(4,hare,he_said).
-root(5,ROOT,served).
-nsubjpass(5,served,i).
-auxpass(5,served,am).
-advmod(5,served,rightly).
-mark(5,having,for).
-advcl:for(5,served,having).
-ccomp(5,having,let).
+aux(4,run,have).
+ccomp(4,find,run).
+mark(4,say,off).
+nsubj(4,say,he).
+advcl:off(4,run,say).
+% relations.
+run(4,hare,he_say).
+also_run(4,hare,he_say).
+%% i am rightly served for having let go of the food that i had in my hand for the chance of obtaining more.
+% dependencies.
+root(5,root,serve).
+nsubjpass(5,serve,i).
+auxpass(5,serve,be).
+advmod(5,serve,rightly).
+mark(5,have,for).
+advcl:for(5,serve,have).
+ccomp(5,have,let).
 xcomp(5,let,go).
 case(5,food,of).
 det(5,food,the).
 nmod:of(5,go,food).
-dobj(5,had,food).
+dobj(5,have,food).
 ref(5,food,that).
-nsubj(5,had,i).
-acl:relcl(5,food,had).
+nsubj(5,have,i).
+acl:relcl(5,food,have).
 case(5,hand,in).
 nmod:poss(5,hand,my).
-nmod:in(5,had,hand).
+nmod:in(5,have,hand).
 case(5,chance,for).
 det(5,chance,the).
 nmod:for(5,go,chance).
-mark(5,obtaining,of).
-acl:of(5,chance,obtaining).
-dobj(5,obtaining,more).
-am_served(5,i,having).
-am(5,i,served).
-am_rightly_served(5,i,having).
-am(5,i,rightly_served).
-had_in(5,i,my_hand).
+mark(5,obtain,of).
+acl:of(5,chance,obtain).
+dobj(5,obtain,more).
+% relations.
+be_serve(5,i,have).
+be(5,i,serve).
+be_rightly_serve(5,i,have).
+be(5,i,rightly_serve).
+have_in(5,i,my_hand).

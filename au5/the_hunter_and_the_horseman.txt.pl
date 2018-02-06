@@ -1,116 +1,136 @@
-root(0,ROOT,hunter).
+%% a certain hunter having snared a hare placed it upon his shoulders and set out homewards.
+% dependencies.
+root(0,root,hunter).
 det(0,hunter,a).
 amod(0,hunter,certain).
-aux(0,snared,having).
-dep(0,hunter,snared).
+aux(0,snare,have).
+dep(0,hunter,snare).
 det(0,hare,a).
-nsubj(0,placed,hare).
-ccomp(0,snared,placed).
-dobj(0,placed,it).
-case(0,shoulders,upon).
-nmod:poss(0,shoulders,his).
-nmod:upon(0,placed,shoulders).
-cc(0,snared,and).
+nsubj(0,place,hare).
+ccomp(0,snare,place).
+dobj(0,place,it).
+case(0,shoulder,upon).
+nmod:poss(0,shoulder,he).
+nmod:upon(0,place,shoulder).
+cc(0,snare,and).
 dep(0,hunter,set).
-conj:and(0,snared,set).
+conj:and(0,snare,set).
 compound:prt(0,set,out).
 advmod(0,set,homewards).
-placed(0,hare,it).
-root(1,ROOT,met).
+% relations.
+place(0,hare,it).
+%% on his way he met a man on horseback who begged the hare of him under the pretense of purchasing it.
+% dependencies.
+root(1,root,meet).
 case(1,way,on).
-nmod:poss(1,way,his).
-nmod:on(1,met,way).
-nsubj(1,met,he).
+nmod:poss(1,way,he).
+nmod:on(1,meet,way).
+nsubj(1,meet,he).
 det(1,man,a).
-dobj(1,met,man).
-nsubj(1,begged,man).
+dobj(1,meet,man).
+nsubj(1,beg,man).
 case(1,horseback,on).
 nmod:on(1,man,horseback).
 ref(1,man,who).
-acl:relcl(1,man,begged).
+acl:relcl(1,man,beg).
 det(1,hare,the).
-dobj(1,begged,hare).
-case(1,him,of).
-nmod:of(1,hare,him).
+dobj(1,beg,hare).
+case(1,he,of).
+nmod:of(1,hare,he).
 case(1,pretense,under).
 det(1,pretense,the).
-nmod:under(1,begged,pretense).
-mark(1,purchasing,of).
-acl:of(1,pretense,purchasing).
-dobj(1,purchasing,it).
-root(2,ROOT,however).
-advmod(2,got,when).
+nmod:under(1,beg,pretense).
+mark(1,purchase,of).
+acl:of(1,pretense,purchase).
+dobj(1,purchase,it).
+% relations.
+%% however when the horseman got the hare he rode off as fast as he could.
+% dependencies.
+root(2,root,however).
+advmod(2,get,when).
 det(2,horseman,the).
-nsubj(2,got,horseman).
-dep(2,however,got).
+nsubj(2,get,horseman).
+dep(2,however,get).
 det(2,hare,the).
-dobj(2,got,hare).
-nsubj(2,rode,he).
-acl:relcl(2,hare,rode).
-compound:prt(2,rode,off).
+dobj(2,get,hare).
+nsubj(2,ride,he).
+acl:relcl(2,hare,ride).
+compound:prt(2,ride,off).
 case(2,fast,as).
-advmod(2,rode,fast).
+advmod(2,ride,fast).
 mark(2,could,as).
 nsubj(2,could,he).
-advcl:as(2,rode,could).
-rode_off_fast(2,he,he_could).
-rode_off(2,he,he_could).
-root(3,ROOT,ran).
+advcl:as(2,ride,could).
+% relations.
+ride_off_fast(2,he,he_could).
+ride_off(2,he,he_could).
+%% the hunter ran after him as if he was sure of overtaking him but the horseman increased more and more the distance between them.
+% dependencies.
+root(3,root,run).
 det(3,hunter,the).
-nsubj(3,ran,hunter).
-case(3,him,after).
-nmod:after(3,ran,him).
+nsubj(3,run,hunter).
+case(3,he,after).
+nmod:after(3,run,he).
 mark(3,sure,as).
 mwe(3,as,if).
 nsubj(3,sure,he).
-cop(3,sure,was).
-advcl:as_if(3,ran,sure).
-mark(3,overtaking,of).
-advcl:of(3,sure,overtaking).
-dobj(3,overtaking,him).
+cop(3,sure,be).
+advcl:as_if(3,run,sure).
+mark(3,overtake,of).
+advcl:of(3,sure,overtake).
+dobj(3,overtake,he).
 cc(3,sure,but).
 det(3,horseman,the).
-nsubj(3,increased,horseman).
-advcl:as_if(3,ran,increased).
-conj:but(3,sure,increased).
-advmod(3,increased,more).
+nsubj(3,increase,horseman).
+advcl:as_if(3,run,increase).
+conj:but(3,sure,increase).
+advmod(3,increase,more).
 cc(3,more,and).
-advmod(3,increased,more).
+advmod(3,increase,more).
 conj:and(3,more,more).
 det(3,distance,the).
-dobj(3,increased,distance).
-case(3,them,between).
-nmod:between(3,distance,them).
-increased_more(3,horseman,distance).
-increased_more_and_more(3,horseman,distance).
-was(3,he,sure).
-distance_between(3,horseman,them).
-increased_more(3,horseman,distance_between_them).
-overtaking(3,he,him).
-increased_more_and_more(3,horseman,distance_between_them).
-ran_after(3,hunter,him).
-increased(3,horseman,distance).
-increased(3,horseman,distance_between_them).
-ran(3,hunter,sure).
-root(4,ROOT,called).
+dobj(3,increase,distance).
+case(3,they,between).
+nmod:between(3,distance,they).
+% relations.
+increase_more(3,horseman,distance).
+increase_more_and_more(3,horseman,distance).
+be(3,he,sure).
+distance_between(3,horseman,they).
+increase_more(3,horseman,distance_between_they).
+overtake(3,he,he).
+increase_more_and_more(3,horseman,distance_between_they).
+run_after(3,hunter,he).
+increase(3,horseman,distance).
+increase(3,horseman,distance_between_they).
+run(3,hunter,sure).
+%% the hunter sorely against his will called out to him and said.
+% dependencies.
+root(4,root,call).
 det(4,hunter,the).
-nsubj(4,called,hunter).
-nsubj(4,said,hunter).
-advmod(4,his,sorely).
-case(4,his,against).
-nmod:against(4,hunter,his).
-aux(4,called,will).
-compound:prt(4,called,out).
-case(4,him,to).
-nmod:to(4,called,him).
-cc(4,called,and).
-conj:and(4,called,said).
-will_called_out_to(4,hunter,him).
-root(5,ROOT,get).
+nsubj(4,call,hunter).
+nsubj(4,say,hunter).
+advmod(4,he,sorely).
+case(4,he,against).
+nmod:against(4,hunter,he).
+aux(4,call,will).
+compound:prt(4,call,out).
+case(4,he,to).
+nmod:to(4,call,he).
+cc(4,call,and).
+conj:and(4,call,say).
+% relations.
+will_call_out_to(4,hunter,he).
+%% get along with you.
+% dependencies.
+root(5,root,get).
 compound:prt(5,get,along).
 case(5,you,with).
 nmod:with(5,get,you).
-root(6,ROOT,make).
+% relations.
+%% for i will now make you a present of the hare.
+% dependencies.
+root(6,root,make).
 case(6,i,for).
 nmod:for(6,make,i).
 aux(6,make,will).
@@ -121,5 +141,6 @@ nsubj(6,make,present).
 case(6,hare,of).
 det(6,hare,the).
 nmod:of(6,present,hare).
+% relations.
 will_now_make(6,present,you).
 will_make(6,present,you).

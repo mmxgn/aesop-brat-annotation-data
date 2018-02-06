@@ -1,6 +1,8 @@
-root(0,ROOT,came).
+%% a serpent in the course of its wanderings came into an armourer 's shop.
+% dependencies.
+root(0,root,come).
 det(0,serpent,a).
-nsubj(0,came,serpent).
+nsubj(0,come,serpent).
 case(0,course,in).
 det(0,course,the).
 nmod:in(0,serpent,course).
@@ -8,61 +10,70 @@ case(0,wanderings,of).
 nmod:poss(0,wanderings,its).
 nmod:of(0,course,wanderings).
 case(0,shop,into).
-det(0,armourer,an).
+det(0,armourer,a).
 nmod:poss(0,shop,armourer).
 case(0,armourer,'s).
-nmod:into(0,came,shop).
+nmod:into(0,come,shop).
+% relations.
 is_in(0,serpent,course_of_its_wanderings).
-came_into(0,serpent,armourer_s_shop).
+come_into(0,serpent,armourer_'s_shop).
 into(0,armourer,shop).
-root(1,ROOT,glided).
-mark(1,glided,as).
-nsubj(1,glided,he).
+%% as he glided over the floor he felt his skin pricked by a file lying there.
+% dependencies.
+root(1,root,glide).
+mark(1,glide,as).
+nsubj(1,glide,he).
 case(1,floor,over).
 det(1,floor,the).
-nmod:over(1,glided,floor).
-nsubj(1,felt,he).
-acl:relcl(1,floor,felt).
-nmod:poss(1,skin,his).
-dobj(1,felt,skin).
-acl(1,skin,pricked).
+nmod:over(1,glide,floor).
+nsubj(1,feel,he).
+acl:relcl(1,floor,feel).
+nmod:poss(1,skin,he).
+dobj(1,feel,skin).
+acl(1,skin,prick).
 case(1,file,by).
 det(1,file,a).
-nmod:by(1,pricked,file).
-acl(1,file,lying).
-advmod(1,lying,there).
-felt(1,he,his_skin_pricked_by_file).
-felt(1,he,his_skin_pricked_by_file_lying_there).
-felt(1,he,his_skin).
-felt(1,he,his_skin_pricked_by_file_lying).
-felt(1,he,his_skin_pricked).
-root(2,ROOT,turned).
+nmod:by(1,prick,file).
+acl(1,file,lie).
+advmod(1,lie,there).
+% relations.
+feel(1,he,he_skin_prick_by_file).
+feel(1,he,he_skin_prick_by_file_lie_there).
+feel(1,he,he_skin).
+feel(1,he,he_skin_prick_by_file_lie).
+feel(1,he,he_skin_prick).
+%% in a rage he turned round upon it and tried to dart his fangs into it.
+% dependencies.
+root(2,root,turn).
 case(2,rage,in).
 det(2,rage,a).
-nmod:in(2,turned,rage).
-nsubj(2,turned,he).
-nsubj(2,tried,he).
+nmod:in(2,turn,rage).
+nsubj(2,turn,he).
+nsubj(2,try,he).
 nsubj:xsubj(2,dart,he).
-dobj(2,turned,round).
+dobj(2,turn,round).
 case(2,it,upon).
-nmod:upon(2,turned,it).
-cc(2,turned,and).
-conj:and(2,turned,tried).
+nmod:upon(2,turn,it).
+cc(2,turn,and).
+conj:and(2,turn,try).
 mark(2,dart,to).
-xcomp(2,tried,dart).
-nmod:poss(2,fangs,his).
-dobj(2,dart,fangs).
+xcomp(2,try,dart).
+nmod:poss(2,fang,he).
+dobj(2,dart,fang).
 case(2,it,into).
 nmod:into(2,dart,it).
-turned_in(2,he,rage).
-turned_round_in(2,he,rage).
-turned_upon(2,he,it).
-turned(2,he,round).
-turned_round_upon(2,he,it).
-root(3,ROOT,do).
+% relations.
+turn_in(2,he,rage).
+turn_round_in(2,he,rage).
+turn_upon(2,he,it).
+turn(2,he,round).
+turn_round_upon(2,he,it).
+%% but he could do no harm to heavy iron and had soon to give over his wrath.
+% dependencies.
+root(3,root,do).
 cc(3,do,but).
 nsubj(3,do,he).
-nsubj(3,had,he).
+nsubj(3,have,he).
 aux(3,do,could).
 neg(3,harm,no).
 dobj(3,do,harm).
@@ -70,10 +81,11 @@ case(3,iron,to).
 amod(3,iron,heavy).
 nmod:to(3,do,iron).
 cc(3,do,and).
-conj:and(3,do,had).
+conj:and(3,do,have).
 advmod(3,give,soon).
 mark(3,give,to).
-ccomp(3,had,give).
+ccomp(3,have,give).
 compound:prt(3,give,over).
-nmod:poss(3,wrath,his).
+nmod:poss(3,wrath,he).
 dobj(3,give,wrath).
+% relations.

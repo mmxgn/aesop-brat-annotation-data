@@ -1,72 +1,84 @@
-root(0,ROOT,found).
+%% a cock scratching for food for himself and his hens found a precious stone and exclaimed.
+% dependencies.
+root(0,root,find).
 det(0,cock,a).
-nsubj(0,found,cock).
-nsubj(0,exclaimed,cock).
-acl(0,cock,scratching).
+nsubj(0,find,cock).
+nsubj(0,exclaim,cock).
+acl(0,cock,scratch).
 case(0,food,for).
-nmod:for(0,scratching,food).
+nmod:for(0,scratch,food).
 case(0,himself,for).
 nmod:for(0,food,himself).
 cc(0,himself,and).
-nmod:poss(0,hens,his).
-nmod:for(0,food,hens).
-conj:and(0,himself,hens).
+nmod:poss(0,hen,he).
+nmod:for(0,food,hen).
+conj:and(0,himself,hen).
 det(0,stone,a).
 amod(0,stone,precious).
-dobj(0,found,stone).
-cc(0,found,and).
-conj:and(0,found,exclaimed).
-scratching_for(0,cock,food_himself).
-found(0,cock,precious_stone).
-found(0,cock,stone).
-scratching_for(0,cock,food).
-root(1,ROOT,found).
-mark(1,found,if).
-nmod:poss(1,owner,your).
-nsubj(1,found,owner).
-aux(1,found,had).
-dobj(1,found,thee).
-cc(1,found,and).
+dobj(0,find,stone).
+cc(0,find,and).
+conj:and(0,find,exclaim).
+% relations.
+scratch_for(0,cock,food_himself).
+find(0,cock,precious_stone).
+find(0,cock,stone).
+scratch_for(0,cock,food).
+%% if your owner had found thee and not i he would have taken thee up and have set thee in thy first estate.
+% dependencies.
+root(1,root,find).
+mark(1,find,if).
+nmod:poss(1,owner,you).
+nsubj(1,find,owner).
+aux(1,find,have).
+dobj(1,find,thee).
+cc(1,find,and).
 neg(1,i,not).
-nmod(1,taken,i).
-nsubj(1,taken,he).
+nmod(1,take,i).
+nsubj(1,take,he).
 nsubj(1,set,he).
-aux(1,taken,would).
-aux(1,taken,have).
-conj:and(1,found,taken).
-xcomp(1,taken,thee).
+aux(1,take,would).
+aux(1,take,have).
+conj:and(1,find,take).
+xcomp(1,take,thee).
 advmod(1,thee,up).
-cc(1,taken,and).
+cc(1,take,and).
 aux(1,set,have).
-conj:and(1,found,set).
-conj:and(1,taken,set).
+conj:and(1,find,set).
+conj:and(1,take,set).
 dobj(1,set,thee).
 case(1,estate,in).
 nmod:poss(1,estate,thy).
 amod(1,estate,first).
 nmod:in(1,set,estate).
+% relations.
 set(1,he,thee).
-had_found(1,your_owner,thee).
-root(2,ROOT,found).
-cc(2,found,but).
-nsubj(2,found,i).
-aux(2,found,have).
-dobj(2,found,thee).
+have_find(1,you_owner,thee).
+%% but i have found thee for no purpose.
+% dependencies.
+root(2,root,find).
+cc(2,find,but).
+nsubj(2,find,i).
+aux(2,find,have).
+dobj(2,find,thee).
 case(2,purpose,for).
 neg(2,purpose,no).
-nmod:for(2,found,purpose).
-root(3,ROOT,have).
+nmod:for(2,find,purpose).
+% relations.
+%% i would rather have one barleycorn than all the jewels in the world.
+% dependencies.
+root(3,root,have).
 nsubj(3,have,i).
 aux(3,have,would).
 advmod(3,have,rather).
 nummod(3,barleycorn,one).
 dobj(3,have,barleycorn).
-case(3,jewels,than).
-det:predet(3,jewels,all).
-det(3,jewels,the).
-nmod:than(3,barleycorn,jewels).
+case(3,jewel,than).
+det:predet(3,jewel,all).
+det(3,jewel,the).
+nmod:than(3,barleycorn,jewel).
 case(3,world,in).
 det(3,world,the).
-nmod:in(3,jewels,world).
-would_have(3,i,one_barleycorn_than_jewels_in_world).
-would_rather_have(3,i,one_barleycorn_than_jewels_in_world).
+nmod:in(3,jewel,world).
+% relations.
+would_have(3,i,one_barleycorn_than_jewel_in_world).
+would_rather_have(3,i,one_barleycorn_than_jewel_in_world).

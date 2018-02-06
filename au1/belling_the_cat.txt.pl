@@ -1,87 +1,107 @@
-root(0,ROOT,had).
-advmod(0,mice,long).
+%% long ago the mice had a general council to consider what measures they could take to outwit their common enemy the cat.
+% dependencies.
+root(0,root,have).
+advmod(0,mouse,long).
 case(0,long,ago).
-det(0,mice,the).
-nsubj(0,had,mice).
+det(0,mouse,the).
+nsubj(0,have,mouse).
 det(0,council,a).
 amod(0,council,general).
-dobj(0,had,council).
+dobj(0,have,council).
 mark(0,consider,to).
 acl:to(0,council,consider).
-det(0,measures,what).
-dobj(0,take,measures).
-nsubj:xsubj(0,outwit,measures).
+det(0,measure,what).
+dobj(0,take,measure).
+nsubj:xsubj(0,outwit,measure).
 nsubj(0,take,they).
 aux(0,take,could).
 ccomp(0,consider,take).
 mark(0,outwit,to).
 xcomp(0,take,outwit).
-nmod:poss(0,enemy,their).
+nmod:poss(0,enemy,they).
 amod(0,enemy,common).
 nsubj(0,cat,enemy).
 det(0,cat,the).
 xcomp(0,outwit,cat).
-had(0,mice,council_consider).
-had(0,mice,general_council_consider).
-root(1,ROOT,said).
-nsubj(1,said,some).
-nsubj(1,said,this).
+% relations.
+have(0,mouse,council_consider).
+have(0,mouse,general_council_consider).
+%% some said this and some said that.
+% dependencies.
+root(1,root,say).
+nsubj(1,say,some).
+nsubj(1,say,this).
 cc(1,this,and).
 conj:and(1,this,some).
-nsubj(1,said,some).
-ccomp(1,said,said).
-advmod(1,said,that).
-root(2,ROOT,but).
+nsubj(1,say,some).
+ccomp(1,say,say).
+advmod(1,say,that).
+% relations.
+%% but at last a young mouse got up and said he had a proposal to make which he thought would meet the case.
+% dependencies.
+root(2,root,but).
 case(2,mouse,at).
 amod(2,mouse,last).
 det(2,mouse,a).
 amod(2,mouse,young).
 nmod:at(2,but,mouse).
-acl:relcl(2,mouse,got).
-advmod(2,got,up).
-cc(2,got,and).
-acl:relcl(2,mouse,said).
-conj:and(2,got,said).
-nsubj(2,had,he).
-ccomp(2,said,had).
+acl:relcl(2,mouse,get).
+advmod(2,get,up).
+cc(2,get,and).
+acl:relcl(2,mouse,say).
+conj:and(2,get,say).
+nsubj(2,have,he).
+ccomp(2,say,have).
 det(2,proposal,a).
-dobj(2,had,proposal).
+dobj(2,have,proposal).
 mark(2,make,to).
 acl:to(2,proposal,make).
-dobj(2,thought,which).
-nsubj(2,thought,he).
-ccomp(2,make,thought).
+dobj(2,think,which).
+nsubj(2,think,he).
+ccomp(2,make,think).
 aux(2,meet,would).
-ccomp(2,thought,meet).
+ccomp(2,think,meet).
 det(2,case,the).
 dobj(2,meet,case).
-root(3,ROOT,agree).
+% relations.
+%% you will all agree.
+% dependencies.
+root(3,root,agree).
 nsubj(3,agree,you).
 aux(3,agree,will).
 advmod(3,agree,all).
-root(4,ROOT,said).
-nsubj(4,said,he).
-root(5,ROOT,consists).
-mark(5,consists,that).
-nmod:poss(5,danger,our).
+% relations.
+%% said he.
+% dependencies.
+root(4,root,say).
+nsubj(4,say,he).
+% relations.
+%% that our chief danger consists in the sly and treacherous manner in which the enemy approaches us.
+% dependencies.
+root(5,root,consist).
+mark(5,consist,that).
+nmod:poss(5,danger,we).
 compound(5,danger,chief).
-nsubj(5,consists,danger).
+nsubj(5,consist,danger).
 case(5,manner,in).
 det(5,manner,the).
 amod(5,manner,sly).
 cc(5,sly,and).
 conj:and(5,sly,treacherous).
 amod(5,manner,treacherous).
-nmod:in(5,consists,manner).
-nmod:in(5,approaches,manner).
+nmod:in(5,consist,manner).
+nmod:in(5,approach,manner).
 case(5,which,in).
 ref(5,manner,which).
 det(5,enemy,the).
-nsubj(5,approaches,enemy).
-acl:relcl(5,manner,approaches).
-dobj(5,approaches,us).
-approaches(5,enemy,us).
-root(6,ROOT,now).
+nsubj(5,approach,enemy).
+acl:relcl(5,manner,approach).
+dobj(5,approach,we).
+% relations.
+approach(5,enemy,we).
+%% now if we could receive some signal of her approach we could easily escape from her.
+% dependencies.
+root(6,root,now).
 mark(6,receive,if).
 nsubj(6,receive,we).
 aux(6,receive,could).
@@ -89,112 +109,128 @@ dep(6,now,receive).
 det(6,signal,some).
 dobj(6,receive,signal).
 case(6,approach,of).
-nmod:poss(6,approach,her).
+nmod:poss(6,approach,she).
 nmod:of(6,signal,approach).
 nsubj(6,escape,we).
 aux(6,escape,could).
 advmod(6,escape,easily).
 acl:relcl(6,signal,escape).
-case(6,her,from).
-nmod:from(6,escape,her).
-root(7,ROOT,venture).
+case(6,she,from).
+nmod:from(6,escape,she).
+% relations.
+%% i venture therefore to propose that a small bell be procured and attached by a ribbon round the neck of the cat.
+% dependencies.
+root(7,root,venture).
 dep(7,venture,i).
 advmod(7,venture,therefore).
 mark(7,propose,to).
 advcl:to(7,venture,propose).
-mark(7,procured,that).
+mark(7,procure,that).
 det(7,bell,a).
 amod(7,bell,small).
-nsubjpass(7,procured,bell).
-nsubjpass(7,attached,bell).
-auxpass(7,procured,be).
-ccomp(7,propose,procured).
-cc(7,procured,and).
-ccomp(7,propose,attached).
-conj:and(7,procured,attached).
+nsubjpass(7,procure,bell).
+nsubjpass(7,attach,bell).
+auxpass(7,procure,be).
+ccomp(7,propose,procure).
+cc(7,procure,and).
+ccomp(7,propose,attach).
+conj:and(7,procure,attach).
 case(7,round,by).
 det(7,round,a).
 compound(7,round,ribbon).
-nmod:agent(7,procured,round).
+nmod:agent(7,procure,round).
 det(7,neck,the).
 nsubj(7,venture,neck).
 case(7,cat,of).
 det(7,cat,the).
 nmod:of(7,neck,cat).
+% relations.
 venture_therefore(7,neck,propose).
-be_procured_by(7,small_bell,ribbon_round).
-be(7,small_bell,procured).
+be_procure_by(7,small_bell,ribbon_round).
+be(7,small_bell,procure).
 venture(7,neck,propose).
-be(7,bell,procured).
-be_procured_by(7,bell,ribbon_round).
-root(8,ROOT,means).
-mark(8,means,by).
-nsubj(8,means,this).
+be(7,bell,procure).
+be_procure_by(7,bell,ribbon_round).
+%% by this means we should always know when she was about and could easily retire while she was in the neighbourhood.
+% dependencies.
+root(8,root,mean).
+mark(8,mean,by).
+nsubj(8,mean,this).
 nsubj(8,know,we).
 aux(8,know,should).
 advmod(8,know,always).
-ccomp(8,means,know).
-advmod(8,was,when).
-nsubj(8,was,she).
+ccomp(8,mean,know).
+advmod(8,be,when).
+nsubj(8,be,she).
 nsubj(8,retire,she).
-ccomp(8,know,was).
-advmod(8,was,about).
-cc(8,was,and).
+ccomp(8,know,be).
+advmod(8,be,about).
+cc(8,be,and).
 aux(8,retire,could).
 advmod(8,retire,easily).
 ccomp(8,know,retire).
-conj:and(8,was,retire).
+conj:and(8,be,retire).
 mark(8,neighbourhood,while).
 nsubj(8,neighbourhood,she).
-cop(8,neighbourhood,was).
+cop(8,neighbourhood,be).
 case(8,neighbourhood,in).
 det(8,neighbourhood,the).
 advcl:in(8,retire,neighbourhood).
+% relations.
 easily_retire_in(8,she,neighbourhood).
 retire_in(8,she,neighbourhood).
-was_in(8,she,neighbourhood).
-root(9,ROOT,met).
+be_in(8,she,neighbourhood).
+%% this proposal met with general applause until an old mouse got up and said.
+% dependencies.
+root(9,root,meet).
 det(9,proposal,this).
-nsubj(9,met,proposal).
+nsubj(9,meet,proposal).
 case(9,applause,with).
 amod(9,applause,general).
-nmod:with(9,met,applause).
-mark(9,got,until).
-det(9,mouse,an).
+nmod:with(9,meet,applause).
+mark(9,get,until).
+det(9,mouse,a).
 amod(9,mouse,old).
-nsubj(9,got,mouse).
-nsubj(9,said,mouse).
-advcl:until(9,met,got).
-advmod(9,got,up).
-cc(9,got,and).
-advcl:until(9,met,said).
-conj:and(9,got,said).
-met(9,proposal,old_mouse_got).
-met(9,proposal,old_mouse_got_up).
-met(9,proposal,mouse_got).
-met_with(9,proposal,applause).
-met_with(9,proposal,general_applause).
-met(9,proposal,mouse_got_up).
-root(10,ROOT,all).
+nsubj(9,get,mouse).
+nsubj(9,say,mouse).
+advcl:until(9,meet,get).
+advmod(9,get,up).
+cc(9,get,and).
+advcl:until(9,meet,say).
+conj:and(9,get,say).
+% relations.
+meet(9,proposal,old_mouse_get).
+meet(9,proposal,old_mouse_get_up).
+meet(9,proposal,mouse_get).
+meet_with(9,proposal,applause).
+meet_with(9,proposal,general_applause).
+meet(9,proposal,mouse_get_up).
+%% that is all very well but who is to bell the cat.
+% dependencies.
+root(10,root,all).
 nsubj(10,all,that).
-cop(10,all,is).
+cop(10,all,be).
 advmod(10,well,very).
 advmod(10,all,well).
 cc(10,bell,but).
 nsubj(10,bell,who).
-cop(10,bell,is).
+cop(10,bell,be).
 case(10,bell,to).
 dep(10,well,bell).
 det(10,cat,the).
 dep(10,bell,cat).
-root(11,ROOT,looked).
-det(11,mice,the).
-nsubj(11,looked,mice).
+% relations.
+%% the mice looked at one another and nobody spoke.
+% dependencies.
+root(11,root,look).
+det(11,mouse,the).
+nsubj(11,look,mouse).
 case(11,one,at).
-nmod:at(11,looked,one).
-nsubj(11,spoke,another).
+nmod:at(11,look,one).
+nsubj(11,speak,another).
 cc(11,another,and).
 conj:and(11,another,nobody).
-nsubj(11,spoke,nobody).
-ccomp(11,looked,spoke).
-looked_at(11,mice,one).
+nsubj(11,speak,nobody).
+ccomp(11,look,speak).
+% relations.
+look_at(11,mouse,one).

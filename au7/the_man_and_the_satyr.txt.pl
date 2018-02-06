@@ -1,9 +1,11 @@
-root(0,ROOT,lost).
+%% a man had lost his way in a wood one bitter winter 's night.
+% dependencies.
+root(0,root,lose).
 det(0,man,a).
-nsubj(0,lost,man).
-aux(0,lost,had).
-nmod:poss(0,way,his).
-dobj(0,lost,way).
+nsubj(0,lose,man).
+aux(0,lose,have).
+nmod:poss(0,way,he).
+dobj(0,lose,way).
 case(0,night,in).
 det(0,winter,a).
 nmod:npmod(0,bitter,wood).
@@ -11,34 +13,37 @@ nummod(0,wood,one).
 amod(0,winter,bitter).
 nmod:poss(0,night,winter).
 case(0,winter,'s).
-nmod:in(0,lost,night).
+nmod:in(0,lose,night).
+% relations.
 in(0,bitter_winter,night).
-had_lost(0,man,his_way).
-root(1,ROOT,roaming).
-mark(1,roaming,as).
-nsubj(1,roaming,he).
-nsubj(1,finding,he).
-aux(1,roaming,was).
+have_lose(0,man,he_way).
+%% as he was roaming about a satyr came up to him and finding that he had lost his way promised to give him a lodging for the night and guide him out of the forest in the morning.
+% dependencies.
+root(1,root,roam).
+mark(1,roam,as).
+nsubj(1,roam,he).
+nsubj(1,find,he).
+aux(1,roam,be).
 case(1,satyr,about).
 det(1,satyr,a).
-nmod:about(1,roaming,satyr).
-acl(1,satyr,came).
-compound:prt(1,came,up).
-case(1,him,to).
-nmod:to(1,came,him).
-cc(1,roaming,and).
-conj:and(1,roaming,finding).
-mark(1,lost,that).
-nsubj(1,lost,he).
-aux(1,lost,had).
-ccomp(1,finding,lost).
-nmod:poss(1,way,his).
-nsubj(1,promised,way).
+nmod:about(1,roam,satyr).
+acl(1,satyr,come).
+compound:prt(1,come,up).
+case(1,he,to).
+nmod:to(1,come,he).
+cc(1,roam,and).
+conj:and(1,roam,find).
+mark(1,lose,that).
+nsubj(1,lose,he).
+aux(1,lose,have).
+ccomp(1,find,lose).
+nmod:poss(1,way,he).
+nsubj(1,promise,way).
 nsubj:xsubj(1,give,way).
-ccomp(1,lost,promised).
+ccomp(1,lose,promise).
 mark(1,give,to).
-xcomp(1,promised,give).
-iobj(1,give,him).
+xcomp(1,promise,give).
+iobj(1,give,he).
 det(1,lodging,a).
 dobj(1,give,lodging).
 case(1,night,for).
@@ -47,127 +52,154 @@ nmod:for(1,lodging,night).
 cc(1,night,and).
 nmod:for(1,lodging,guide).
 conj:and(1,night,guide).
-dobj(1,roaming,him).
+dobj(1,roam,he).
 case(1,forest,out).
 mwe(1,out,of).
 det(1,forest,the).
-nmod:out_of(1,roaming,forest).
+nmod:out_of(1,roam,forest).
 case(1,morning,in).
 det(1,morning,the).
 nmod:in(1,forest,morning).
-was_roaming(1,he,him).
-give(1,his_way,him).
-give(1,his_way,lodging_for_night).
-give(1,his_way,lodging).
+% relations.
+be_roam(1,he,he).
+give(1,he_way,he).
+give(1,he_way,lodging_for_night).
+give(1,he_way,lodging).
 is_in(1,forest,morning).
-root(2,ROOT,went).
-mark(2,went,as).
-nsubj(2,went,he).
-advmod(2,went,along).
+%% as he went along to the satyr 's cell the man raised both his hands to his mouth and kept on blowing at them.
+% dependencies.
+root(2,root,go).
+mark(2,go,as).
+nsubj(2,go,he).
+advmod(2,go,along).
 case(2,cell,to).
 det(2,satyr,the).
 nmod:poss(2,cell,satyr).
 case(2,satyr,'s).
 nmod:to(2,along,cell).
 det(2,man,the).
-nsubj(2,raised,man).
-nsubj(2,kept,man).
-ccomp(2,went,raised).
-case(2,hands,both).
-nmod:poss(2,hands,his).
-nmod:both(2,raised,hands).
+nsubj(2,raise,man).
+nsubj(2,keep,man).
+ccomp(2,go,raise).
+case(2,hand,both).
+nmod:poss(2,hand,he).
+nmod:both(2,raise,hand).
 case(2,mouth,to).
-nmod:poss(2,mouth,his).
-nmod:to(2,raised,mouth).
-cc(2,raised,and).
-ccomp(2,went,kept).
-conj:and(2,raised,kept).
-mark(2,blowing,on).
-advcl:on(2,kept,blowing).
-case(2,them,at).
-nmod:at(2,blowing,them).
-kept(2,man,blowing_at_them).
-kept(2,man,blowing).
-raised(2,man,his_hands).
+nmod:poss(2,mouth,he).
+nmod:to(2,raise,mouth).
+cc(2,raise,and).
+ccomp(2,go,keep).
+conj:and(2,raise,keep).
+mark(2,blow,on).
+advcl:on(2,keep,blow).
+case(2,they,at).
+nmod:at(2,blow,they).
+% relations.
+keep(2,man,blow_at_they).
+keep(2,man,blow).
+raise(2,man,he_hand).
 to(2,satyr,cell).
-raised_both(2,man,his_hands).
-root(3,ROOT,do).
+raise_both(2,man,he_hand).
+%% what do you do that for.
+% dependencies.
+root(3,root,do).
 nmod:for(3,do,what).
 aux(3,do,do).
 nsubj(3,do,you).
 dobj(3,do,that).
 case(3,what,for).
-root(4,ROOT,said).
+% relations.
+%% said the satyr.
+% dependencies.
+root(4,root,say).
 det(4,satyr,the).
-nsubj(4,said,satyr).
-root(5,ROOT,numb).
-nmod:poss(5,hands,my).
-nsubj(5,numb,hands).
-cop(5,numb,are).
+nsubj(4,say,satyr).
+% relations.
+%% my hands are numb with the cold.
+% dependencies.
+root(5,root,numb).
+nmod:poss(5,hand,my).
+nsubj(5,numb,hand).
+cop(5,numb,be).
 case(5,cold,with).
 det(5,cold,the).
 nmod:with(5,numb,cold).
-are(5,my_hands,numb).
-are_numb_with(5,my_hands,cold).
-root(6,ROOT,said).
+% relations.
+be(5,my_hand,numb).
+be_numb_with(5,my_hand,cold).
+%% said the man.
+% dependencies.
+root(6,root,say).
 det(6,man,the).
-nsubj(6,said,man).
-root(7,ROOT,breath).
+nsubj(6,say,man).
+% relations.
+%% and my breath warms them.
+% dependencies.
+root(7,root,breath).
 cc(7,breath,and).
 nmod:poss(7,breath,my).
-acl:relcl(7,breath,warms).
-dobj(7,warms,them).
-root(8,ROOT,arrived).
+acl:relcl(7,breath,warm).
+dobj(7,warm,they).
+% relations.
+%% after this they arrived at the satyr 's home and soon the satyr put a smoking dish of porridge before him.
+% dependencies.
+root(8,root,arrive).
 case(8,this,after).
-nmod:after(8,arrived,this).
-nsubj(8,arrived,they).
+nmod:after(8,arrive,this).
+nsubj(8,arrive,they).
 nsubj(8,put,they).
 case(8,home,at).
 det(8,satyr,the).
 nmod:poss(8,home,satyr).
 case(8,satyr,'s).
-nmod:at(8,arrived,home).
-cc(8,arrived,and).
+nmod:at(8,arrive,home).
+cc(8,arrive,and).
 advmod(8,put,soon).
 det(8,satyr,the).
 nmod:npmod(8,soon,satyr).
-conj:and(8,arrived,put).
+conj:and(8,arrive,put).
 det(8,dish,a).
 compound(8,dish,smoking).
 dobj(8,put,dish).
 case(8,porridge,of).
 nmod:of(8,dish,porridge).
-case(8,him,before).
-nmod:before(8,put,him).
-arrived_after(8,they,this).
+case(8,he,before).
+nmod:before(8,put,he).
+% relations.
+arrive_after(8,they,this).
 put(8,they,smoking_dish_of_porridge).
-soon_put_smoking_dish_before(8,they,him).
+soon_put_smoking_dish_before(8,they,he).
 soon_put(8,they,smoking_dish_of_porridge).
 put(8,they,smoking_dish).
 at(8,satyr,home).
-arrived_at(8,they,satyr_s_home).
-put_smoking_dish_before(8,they,him).
+arrive_at(8,they,satyr_'s_home).
+put_smoking_dish_before(8,they,he).
 soon_put(8,they,smoking_dish).
-root(9,ROOT,raised).
-cc(9,raised,but).
-advmod(9,raised,when).
+%% but when the man raised his spoon to his mouth he began blowing upon it.
+% dependencies.
+root(9,root,raise).
+cc(9,raise,but).
+advmod(9,raise,when).
 det(9,man,the).
-nsubj(9,raised,man).
-nmod:poss(9,spoon,his).
-dobj(9,raised,spoon).
+nsubj(9,raise,man).
+nmod:poss(9,spoon,he).
+dobj(9,raise,spoon).
 case(9,mouth,to).
-nmod:poss(9,mouth,his).
-nmod:to(9,raised,mouth).
-nsubj(9,began,he).
-acl:relcl(9,mouth,began).
-xcomp(9,began,blowing).
+nmod:poss(9,mouth,he).
+nmod:to(9,raise,mouth).
+nsubj(9,begin,he).
+acl:relcl(9,mouth,begin).
+xcomp(9,begin,blow).
 case(9,it,upon).
-nmod:upon(9,blowing,it).
-blowing_upon(9,he,it).
-began(9,he,blowing).
-began(9,he,blowing_upon_it).
-raised(9,man,his_spoon).
-root(10,ROOT,what).
+nmod:upon(9,blow,it).
+% relations.
+blow_upon(9,he,it).
+begin(9,he,blow).
+begin(9,he,blow_upon_it).
+raise(9,man,he_spoon).
+%% and what do you do that for.
+% dependencies.
+root(10,root,what).
 cc(10,what,and).
 dobj(10,do,what).
 acl:relcl(10,what,do).
@@ -175,13 +207,19 @@ nsubj(10,do,you).
 ccomp(10,do,do).
 ref(10,what,that).
 nmod(10,do,for).
-root(11,ROOT,said).
+% relations.
+%% said the satyr.
+% dependencies.
+root(11,root,say).
 det(11,satyr,the).
-nsubj(11,said,satyr).
-root(12,ROOT,hot).
+nsubj(11,say,satyr).
+% relations.
+%% the porridge is too hot and my breath will cool it.
+% dependencies.
+root(12,root,hot).
 det(12,porridge,the).
 nsubj(12,hot,porridge).
-cop(12,hot,is).
+cop(12,hot,be).
 advmod(12,hot,too).
 cc(12,hot,and).
 nmod:poss(12,breath,my).
@@ -189,16 +227,25 @@ nsubj(12,cool,breath).
 aux(12,cool,will).
 conj:and(12,hot,cool).
 dobj(12,cool,it).
-is(12,porridge,too_hot).
+% relations.
+be(12,porridge,too_hot).
 will_cool(12,my_breath,it).
-is(12,porridge,hot).
-root(13,ROOT,go).
+be(12,porridge,hot).
+%% out you go.
+% dependencies.
+root(13,root,go).
 mark(13,go,out).
 nsubj(13,go,you).
-root(14,ROOT,said).
+% relations.
+%% said the satyr.
+% dependencies.
+root(14,root,say).
 det(14,satyr,the).
-nsubj(14,said,satyr).
-root(15,ROOT,have).
+nsubj(14,say,satyr).
+% relations.
+%% i will have nought to do with a man who can blow hot and cold with the same breath.
+% dependencies.
+root(15,root,have).
 nsubj(15,have,i).
 nsubj:xsubj(15,do,i).
 aux(15,have,will).
@@ -220,5 +267,6 @@ case(15,breath,with).
 det(15,breath,the).
 amod(15,breath,same).
 nmod:with(15,blow,breath).
+% relations.
 will_have(15,i,nought_do).
 will_have(15,i,do).

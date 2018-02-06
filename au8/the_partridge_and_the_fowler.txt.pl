@@ -1,75 +1,89 @@
-root(0,ROOT,caught).
+%% a fowler caught a partridge and was about to kill it.
+% dependencies.
+root(0,root,catch).
 det(0,fowler,a).
-nsubj(0,caught,fowler).
+nsubj(0,catch,fowler).
 det(0,partridge,a).
-dobj(0,caught,partridge).
-cc(0,caught,and).
-aux(0,about,was).
-conj:and(0,caught,about).
+dobj(0,catch,partridge).
+cc(0,catch,and).
+aux(0,about,be).
+conj:and(0,catch,about).
 mark(0,kill,to).
 xcomp(0,about,kill).
 dobj(0,kill,it).
-caught(0,fowler,partridge).
-root(1,ROOT,begged).
+% relations.
+catch(0,fowler,partridge).
+%% the partridge earnestly begged him to spare his life saying.
+% dependencies.
+root(1,root,beg).
 det(1,partridge,the).
-nsubj(1,begged,partridge).
-advmod(1,begged,earnestly).
-dobj(1,begged,him).
-nsubj:xsubj(1,spare,him).
+nsubj(1,beg,partridge).
+advmod(1,beg,earnestly).
+dobj(1,beg,he).
+nsubj:xsubj(1,spare,he).
 mark(1,spare,to).
-xcomp(1,begged,spare).
-nmod:poss(1,life,his).
+xcomp(1,beg,spare).
+nmod:poss(1,life,he).
 dobj(1,spare,life).
-acl(1,life,saying).
-begged(1,partridge,him).
-spare(1,him,his_life_saying).
-earnestly_begged(1,partridge,him).
-spare(1,him,his_life).
-root(2,ROOT,permit).
+acl(1,life,say).
+% relations.
+beg(1,partridge,he).
+spare(1,he,he_life_say).
+earnestly_beg(1,partridge,he).
+spare(1,he,he_life).
+%% pray master permit me to live and i will entice many partridges to you in recompense for your mercy to me.
+% dependencies.
+root(2,root,permit).
 compound(2,master,pray).
 nsubj(2,permit,master).
-dobj(2,permit,me).
-nsubj:xsubj(2,live,me).
+dobj(2,permit,I).
+nsubj:xsubj(2,live,I).
 mark(2,live,to).
 xcomp(2,permit,live).
 cc(2,permit,and).
 nsubj(2,entice,i).
 aux(2,entice,will).
 conj:and(2,permit,entice).
-amod(2,partridges,many).
-dobj(2,entice,partridges).
+amod(2,partridge,many).
+dobj(2,entice,partridge).
 case(2,you,to).
 nmod:to(2,entice,you).
 case(2,recompense,in).
 nmod:in(2,entice,recompense).
 case(2,mercy,for).
-nmod:poss(2,mercy,your).
+nmod:poss(2,mercy,you).
 nmod:for(2,recompense,mercy).
-case(2,me,to).
-nmod:to(2,entice,me).
-permit(2,pray_master,me).
-will_entice_partridges_in(2,i,recompense).
-will_entice(2,i,partridges).
-will_entice_partridges_in(2,i,recompense_for_your_mercy).
-will_entice_partridges_to(2,i,me).
-will_entice(2,i,many_partridges).
-will_entice_partridges_to(2,i,you).
-root(3,ROOT,replied).
+case(2,I,to).
+nmod:to(2,entice,I).
+% relations.
+permit(2,pray_master,I).
+will_entice_partridge_in(2,i,recompense).
+will_entice(2,i,partridge).
+will_entice_partridge_in(2,i,recompense_for_you_mercy).
+will_entice_partridge_to(2,i,I).
+will_entice(2,i,many_partridge).
+will_entice_partridge_to(2,i,you).
+%% the fowler replied.
+% dependencies.
+root(3,root,reply).
 det(3,fowler,the).
-nsubj(3,replied,fowler).
-root(4,ROOT,take).
+nsubj(3,reply,fowler).
+% relations.
+%% i shall now with less scruple take your life because you are willing to save it at the cost of betraying your friends and relations.
+% dependencies.
+root(4,root,take).
 nsubj(4,take,i).
 aux(4,take,shall).
 advmod(4,take,now).
 case(4,scruple,with).
 amod(4,scruple,less).
 nmod:with(4,now,scruple).
-nmod:poss(4,life,your).
+nmod:poss(4,life,you).
 dobj(4,take,life).
 mark(4,willing,because).
 nsubj(4,willing,you).
 nsubj:xsubj(4,save,you).
-cop(4,willing,are).
+cop(4,willing,be).
 advcl:because(4,take,willing).
 mark(4,save,to).
 xcomp(4,willing,save).
@@ -77,14 +91,15 @@ dobj(4,save,it).
 case(4,cost,at).
 det(4,cost,the).
 nmod:at(4,save,cost).
-mark(4,betraying,of).
-acl:of(4,cost,betraying).
-nmod:poss(4,friends,your).
-dobj(4,betraying,friends).
-cc(4,friends,and).
-dobj(4,betraying,relations).
-conj:and(4,friends,relations).
-are(4,you,willing).
-shall_take(4,i,your_life).
-shall_now_take(4,i,your_life).
+mark(4,betray,of).
+acl:of(4,cost,betray).
+nmod:poss(4,friend,you).
+dobj(4,betray,friend).
+cc(4,friend,and).
+dobj(4,betray,relation).
+conj:and(4,friend,relation).
+% relations.
+be(4,you,willing).
+shall_take(4,i,you_life).
+shall_now_take(4,i,you_life).
 save(4,you,it).

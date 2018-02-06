@@ -1,123 +1,140 @@
-root(0,ROOT,caught).
+%% a young man had been caught in a daring act of theft and had been condemned to be executed for it.
+% dependencies.
+root(0,root,catch).
 det(0,man,a).
 amod(0,man,young).
-nsubjpass(0,caught,man).
-nsubjpass(0,condemned,man).
-nsubjpass:xsubj(0,executed,man).
-aux(0,caught,had).
-auxpass(0,caught,been).
+nsubjpass(0,catch,man).
+nsubjpass(0,condemn,man).
+nsubjpass:xsubj(0,execute,man).
+aux(0,catch,have).
+auxpass(0,catch,be).
 case(0,act,in).
 det(0,act,a).
 amod(0,act,daring).
-nmod:in(0,caught,act).
+nmod:in(0,catch,act).
 case(0,theft,of).
 nmod:of(0,act,theft).
-cc(0,caught,and).
-aux(0,condemned,had).
-auxpass(0,condemned,been).
-conj:and(0,caught,condemned).
-mark(0,executed,to).
-auxpass(0,executed,be).
-xcomp(0,condemned,executed).
+cc(0,catch,and).
+aux(0,condemn,have).
+auxpass(0,condemn,be).
+conj:and(0,catch,condemn).
+mark(0,execute,to).
+auxpass(0,execute,be).
+xcomp(0,condemn,execute).
 case(0,it,for).
-nmod:for(0,executed,it).
-had(0,man,had_caught).
-had(0,man,had_caught_in_daring_act_of_theft).
-been(0,young_man,condemned).
-been_condemned(0,man,executed).
-had(0,young_man,had_caught).
-been_condemned(0,man,executed_for_it).
-had(0,man,had_caught_in_act).
-had(0,young_man,had_caught_in_act).
-been(0,man,condemned).
-had(0,young_man,had_caught_in_daring_act).
-had(0,young_man,had_caught_in_act_of_theft).
-had(0,man,had_caught_in_act_of_theft).
-had(0,man,had_caught_in_daring_act).
-had(0,young_man,had_caught_in_daring_act_of_theft).
-been_condemned(0,young_man,executed).
-been_condemned(0,young_man,executed_for_it).
-root(1,ROOT,expressed).
-nsubj(1,expressed,he).
-nmod:poss(1,desire,his).
-dobj(1,expressed,desire).
+nmod:for(0,execute,it).
+% relations.
+have(0,man,have_catch).
+have(0,man,have_catch_in_daring_act_of_theft).
+be(0,young_man,condemn).
+be_condemn(0,man,execute).
+have(0,young_man,have_catch).
+be_condemn(0,man,execute_for_it).
+have(0,man,have_catch_in_act).
+have(0,young_man,have_catch_in_act).
+be(0,man,condemn).
+have(0,young_man,have_catch_in_daring_act).
+have(0,young_man,have_catch_in_act_of_theft).
+have(0,man,have_catch_in_act_of_theft).
+have(0,man,have_catch_in_daring_act).
+have(0,young_man,have_catch_in_daring_act_of_theft).
+be_condemn(0,young_man,execute).
+be_condemn(0,young_man,execute_for_it).
+%% he expressed his desire to see his mother and to speak with her before he was led to execution and of course this was granted.
+% dependencies.
+root(1,root,express).
+nsubj(1,express,he).
+nmod:poss(1,desire,he).
+dobj(1,express,desire).
 mark(1,see,to).
 dep(1,desire,see).
-nmod:poss(1,mother,his).
+nmod:poss(1,mother,he).
 dobj(1,see,mother).
 cc(1,see,and).
 mark(1,speak,to).
 dep(1,desire,speak).
 conj:and(1,see,speak).
-case(1,her,with).
-nmod:with(1,speak,her).
-mark(1,led,before).
-nsubjpass(1,led,he).
-auxpass(1,led,was).
-advcl:before(1,speak,led).
+case(1,she,with).
+nmod:with(1,speak,she).
+mark(1,lead,before).
+nsubjpass(1,lead,he).
+auxpass(1,lead,be).
+advcl:before(1,speak,lead).
 case(1,execution,to).
-nmod:to(1,led,execution).
-cc(1,led,and).
+nmod:to(1,lead,execution).
+cc(1,lead,and).
 case(1,course,of).
-nmod:of(1,granted,course).
-nsubjpass(1,granted,this).
-auxpass(1,granted,was).
-advcl:before(1,speak,granted).
-conj:and(1,led,granted).
-speak(1,his_mother,led).
-speak_with(1,his_mother,her).
-was_led_to(1,he,execution).
-speak(1,his_mother,led_to_execution).
-was(1,he,led).
-expressed(1,he,his_desire).
-was_granted_of(1,this,course).
-root(2,ROOT,came).
-advmod(2,came,when).
-nmod:poss(2,mother,his).
-nsubj(2,came,mother).
-case(2,him,to).
-nmod:to(2,came,him).
-nsubj(2,said,he).
-ccomp(2,came,said).
-came_to(2,his_mother,him).
-root(3,ROOT,want).
+nmod:of(1,grant,course).
+nsubjpass(1,grant,this).
+auxpass(1,grant,be).
+advcl:before(1,speak,grant).
+conj:and(1,lead,grant).
+% relations.
+speak(1,he_mother,lead).
+speak_with(1,he_mother,she).
+be_lead_to(1,he,execution).
+speak(1,he_mother,lead_to_execution).
+be(1,he,lead).
+express(1,he,he_desire).
+be_grant_of(1,this,course).
+%% when his mother came to him he said.
+% dependencies.
+root(2,root,come).
+advmod(2,come,when).
+nmod:poss(2,mother,he).
+nsubj(2,come,mother).
+case(2,he,to).
+nmod:to(2,come,he).
+nsubj(2,say,he).
+ccomp(2,come,say).
+% relations.
+come_to(2,he_mother,he).
+%% i want to whisper to you.
+% dependencies.
+root(3,root,want).
 nsubj(3,want,i).
 nsubj:xsubj(3,whisper,i).
 mark(3,whisper,to).
 xcomp(3,want,whisper).
 case(3,you,to).
 nmod:to(3,whisper,you).
+% relations.
 whisper_to(3,i,you).
 want(3,i,whisper).
 want(3,i,whisper_to_you).
-root(4,ROOT,brought).
-cc(4,brought,and).
-advmod(4,brought,when).
-nsubj(4,brought,she).
-nmod:poss(4,ear,her).
-dobj(4,brought,ear).
-case(4,him,near).
-nmod:near(4,ear,him).
-nsubj(4,bit,he).
-advmod(4,bit,nearly).
-acl:relcl(4,ear,bit).
-dobj(4,bit,it).
-compound:prt(4,bit,off).
-bit_off(4,he,it).
-nearly_bit_off(4,he,it).
-root(5,ROOT,horrified).
-det:predet(5,bystanders,all).
-det(5,bystanders,the).
-nsubjpass(5,horrified,bystanders).
-nsubjpass(5,asked,bystanders).
-auxpass(5,horrified,were).
-cc(5,horrified,and).
-conj:and(5,horrified,asked).
-dobj(5,asked,him).
+%% and when she brought her ear near him he nearly bit it off.
+% dependencies.
+root(4,root,bring).
+cc(4,bring,and).
+advmod(4,bring,when).
+nsubj(4,bring,she).
+nmod:poss(4,ear,she).
+dobj(4,bring,ear).
+case(4,he,near).
+nmod:near(4,ear,he).
+nsubj(4,bite,he).
+advmod(4,bite,nearly).
+acl:relcl(4,ear,bite).
+dobj(4,bite,it).
+compound:prt(4,bite,off).
+% relations.
+bite_off(4,he,it).
+nearly_bite_off(4,he,it).
+%% all the bystanders were horrified and asked him what he could mean by such brutal and inhuman conduct.
+% dependencies.
+root(5,root,horrify).
+det:predet(5,bystander,all).
+det(5,bystander,the).
+nsubjpass(5,horrify,bystander).
+nsubjpass(5,ask,bystander).
+auxpass(5,horrify,be).
+cc(5,horrify,and).
+conj:and(5,horrify,ask).
+dobj(5,ask,he).
 dobj(5,mean,what).
 nsubj(5,mean,he).
 aux(5,mean,could).
-dep(5,asked,mean).
+dep(5,ask,mean).
 case(5,brutal,by).
 amod(5,brutal,such).
 nmod:by(5,mean,brutal).
@@ -125,85 +142,115 @@ cc(5,brutal,and).
 amod(5,conduct,inhuman).
 nmod:by(5,mean,conduct).
 conj:and(5,brutal,conduct).
-asked(5,bystanders,him).
-were(5,bystanders,horrified).
-root(6,ROOT,is).
-nsubj(6,is,it).
+% relations.
+ask(5,bystander,he).
+be(5,bystander,horrify).
+%% it is to punish her.
+% dependencies.
+root(6,root,be).
+nsubj(6,be,it).
 nsubj:xsubj(6,punish,it).
 mark(6,punish,to).
-xcomp(6,is,punish).
-dobj(6,punish,her).
-punish(6,it,her).
-root(7,ROOT,said).
-nsubj(7,said,he).
-root(8,ROOT,young).
+xcomp(6,be,punish).
+dobj(6,punish,she).
+% relations.
+punish(6,it,she).
+%% he said.
+% dependencies.
+root(7,root,say).
+nsubj(7,say,he).
+% relations.
+%% when i was young i began with stealing little things and brought them home to mother.
+% dependencies.
+root(8,root,young).
 advmod(8,young,when).
 nsubj(8,young,i).
-cop(8,young,was).
-nsubj(8,began,i).
-nsubj(8,brought,i).
-ccomp(8,young,began).
-mark(8,stealing,with).
-advcl:with(8,began,stealing).
-amod(8,things,little).
-dobj(8,stealing,things).
-cc(8,began,and).
-ccomp(8,young,brought).
-conj:and(8,began,brought).
-dobj(8,brought,them).
-advmod(8,brought,home).
+cop(8,young,be).
+nsubj(8,begin,i).
+nsubj(8,bring,i).
+ccomp(8,young,begin).
+mark(8,steal,with).
+advcl:with(8,begin,steal).
+amod(8,thing,little).
+dobj(8,steal,thing).
+cc(8,begin,and).
+ccomp(8,young,bring).
+conj:and(8,begin,bring).
+dobj(8,bring,they).
+advmod(8,bring,home).
 case(8,mother,to).
 nmod:to(8,home,mother).
-was(8,i,when_young).
-was(8,i,young).
-brought_home(8,i,them).
-stealing(8,i,things).
-brought(8,i,them).
-stealing(8,i,little_things).
-root(9,ROOT,rebuking).
-cc(9,rebuking,instead).
+% relations.
+be(8,i,when_young).
+be(8,i,young).
+bring_home(8,i,they).
+steal(8,i,thing).
+bring(8,i,they).
+steal(8,i,little_thing).
+%% instead of rebuking and punishing me she laughed and said.
+% dependencies.
+root(9,root,rebuke).
+cc(9,rebuke,instead).
 mwe(9,instead,of).
-cc(9,rebuking,and).
-conj:and(9,rebuking,punishing).
-dobj(9,rebuking,me).
-nsubj(9,laughed,she).
-nsubj(9,said,she).
-acl:relcl(9,me,laughed).
-cc(9,laughed,and).
-acl:relcl(9,me,said).
-conj:and(9,laughed,said).
-root(10,ROOT,noticed).
-nsubjpass(10,noticed,it).
-aux(10,noticed,will).
-neg(10,noticed,not).
-auxpass(10,noticed,be).
-root(11,ROOT,her).
-nsubj(11,her,it).
-cop(11,her,is).
-case(11,her,because).
+cc(9,rebuke,and).
+conj:and(9,rebuke,punish).
+dobj(9,rebuke,I).
+nsubj(9,laugh,she).
+nsubj(9,say,she).
+acl:relcl(9,I,laugh).
+cc(9,laugh,and).
+acl:relcl(9,I,say).
+conj:and(9,laugh,say).
+% relations.
+%% it will not be noticed.
+% dependencies.
+root(10,root,notice).
+nsubjpass(10,notice,it).
+aux(10,notice,will).
+neg(10,notice,not).
+auxpass(10,notice,be).
+% relations.
+%% it is because of her that i am here to-day.
+% dependencies.
+root(11,root,she).
+nsubj(11,she,it).
+cop(11,she,be).
+case(11,she,because).
 mwe(11,because,of).
-dobj(11,to-day,her).
-ref(11,her,that).
+dobj(11,to-day,she).
+ref(11,she,that).
 nsubj(11,to-day,i).
-cop(11,to-day,am).
+cop(11,to-day,be).
 advmod(11,to-day,here).
-acl:relcl(11,her,to-day).
-am(11,i,here_to-day).
-am(11,i,to-day).
-root(12,ROOT,woman).
+acl:relcl(11,she,to-day).
+% relations.
+be(11,i,here_to-day).
+be(11,i,to-day).
+%% he is right woman.
+% dependencies.
+root(12,root,woman).
 nsubj(12,woman,he).
-cop(12,woman,is).
+cop(12,woman,be).
 amod(12,woman,right).
-is(12,he,woman).
-is(12,he,right_woman).
-root(13,ROOT,said).
+% relations.
+be(12,he,woman).
+be(12,he,right_woman).
+%% said the priest.
+% dependencies.
+root(13,root,say).
 det(13,priest,the).
-nsubj(13,said,priest).
-root(14,ROOT,hath).
+nsubj(13,say,priest).
+% relations.
+%% the lord hath said.
+% dependencies.
+root(14,root,have).
 det(14,lord,the).
-nsubj(14,hath,lord).
-ccomp(14,hath,said).
-root(15,ROOT,train).
+nsubj(14,have,lord).
+ccomp(14,have,say).
+% relations.
+%% train up a child in the way he should go.
+% dependencies.
+root(15,root,train).
 case(15,child,up).
 det(15,child,a).
 nmod:up(15,train,child).
@@ -213,14 +260,18 @@ nmod:in(15,child,way).
 nsubj(15,go,he).
 aux(15,go,should).
 acl:relcl(15,way,go).
-is_in(15,child,way).
-root(16,ROOT,old).
+% relations.
+be_in(15,child,way).
+%% and when he is old he will not depart therefrom.
+% dependencies.
+root(16,root,old).
 cc(16,old,and).
 advmod(16,old,when).
 nsubj(16,old,he).
-cop(16,old,is).
+cop(16,old,be).
 nsubj(16,depart,he).
 aux(16,depart,will).
 neg(16,depart,not).
 ccomp(16,old,depart).
 advmod(16,depart,therefrom).
+% relations.

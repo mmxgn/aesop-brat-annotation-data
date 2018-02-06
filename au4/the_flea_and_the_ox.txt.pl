@@ -1,40 +1,45 @@
-root(0,ROOT,questioned).
+%% a flea thus questioned an ox.
+% dependencies.
+root(0,root,question).
 det(0,flea,a).
-nsubj(0,questioned,flea).
-advmod(0,questioned,thus).
-det(0,ox,an).
-dobj(0,questioned,ox).
-thus_questioned(0,flea,ox).
-questioned(0,flea,ox).
-root(1,ROOT,huge).
-det(1,ails,what).
-dep(1,huge,ails).
+nsubj(0,question,flea).
+advmod(0,question,thus).
+det(0,ox,a).
+dobj(0,question,ox).
+% relations.
+thus_question(0,flea,ox).
+question(0,flea,ox).
+%% what ails you that being so huge and strong you submit to the wrongs you receive from men and slave for them day by day while i being so small a creature mercilessly feed on their flesh and drink their blood without stint.
+% dependencies.
+root(1,root,huge).
+det(1,ail,what).
+dep(1,huge,ail).
 dep(1,huge,you).
 dep(1,huge,that).
-cop(1,huge,being).
+cop(1,huge,be).
 advmod(1,huge,so).
 cc(1,huge,and).
 conj:and(1,huge,strong).
 nsubj(1,submit,you).
 ccomp(1,strong,submit).
-case(1,wrongs,to).
-det(1,wrongs,the).
-nmod:to(1,submit,wrongs).
+case(1,wrong,to).
+det(1,wrong,the).
+nmod:to(1,submit,wrong).
 nsubj(1,receive,you).
-acl:relcl(1,wrongs,receive).
-case(1,men,from).
-nmod:from(1,receive,men).
-cc(1,men,and).
+acl:relcl(1,wrong,receive).
+case(1,man,from).
+nmod:from(1,receive,man).
+cc(1,man,and).
 nmod:from(1,receive,slave).
-conj:and(1,men,slave).
-case(1,them,for).
-nmod:for(1,men,them).
+conj:and(1,man,slave).
+case(1,they,for).
+nmod:for(1,man,they).
 nmod:tmod(1,receive,day).
 mark(1,small,by).
 nsubj(1,small,day).
 case(1,i,while).
 nmod:while(1,day,i).
-cop(1,small,being).
+cop(1,small,be).
 advmod(1,small,so).
 advcl:by(1,receive,small).
 det(1,creature,a).
@@ -43,29 +48,35 @@ nsubj(1,drink,creature).
 advmod(1,feed,mercilessly).
 ccomp(1,small,feed).
 case(1,flesh,on).
-nmod:poss(1,flesh,their).
+nmod:poss(1,flesh,they).
 nmod:on(1,feed,flesh).
 cc(1,feed,and).
 ccomp(1,small,drink).
 conj:and(1,feed,drink).
-nmod:poss(1,blood,their).
+nmod:poss(1,blood,they).
 dobj(1,drink,blood).
 case(1,stint,without).
 nmod:without(1,drink,stint).
+% relations.
 receive_at_time(1,you,day).
-receive_from(1,you,men).
-drink(1,creature,their_blood).
-feed_on(1,creature,their_flesh).
-being(1,day,so_small).
-mercilessly_feed_on(1,creature,their_flesh).
-receive_from(1,you,men_for_them).
+receive_from(1,you,man).
+drink(1,creature,they_blood).
+feed_on(1,creature,they_flesh).
+be(1,day,so_small).
+mercilessly_feed_on(1,creature,they_flesh).
+receive_from(1,you,man_for_they).
 receive(1,you,small).
-being(1,day,small).
-root(2,ROOT,replied).
+be(1,day,small).
+%% ' the ox replied.
+% dependencies.
+root(2,root,reply).
 punct(2,ox,').
 det(2,ox,the).
-nsubj(2,replied,ox).
-root(3,ROOT,wish).
+nsubj(2,reply,ox).
+% relations.
+%% i do not wish to be ungrateful for i am loved and well cared for by men and they often pat my head and shoulders.
+% dependencies.
+root(3,root,wish).
 nsubj(3,wish,i).
 nsubj:xsubj(3,ungrateful,i).
 aux(3,wish,do).
@@ -73,49 +84,59 @@ neg(3,wish,not).
 mark(3,ungrateful,to).
 cop(3,ungrateful,be).
 xcomp(3,wish,ungrateful).
-mark(3,loved,for).
-nsubjpass(3,loved,i).
-nsubjpass(3,cared,i).
-auxpass(3,loved,am).
-advcl:for(3,ungrateful,loved).
-cc(3,loved,and).
-advmod(3,cared,well).
-advcl:for(3,ungrateful,cared).
-conj:and(3,loved,cared).
-case(3,men,for).
-case(3,men,by).
-nmod:for(3,cared,men).
-cc(3,loved,and).
+mark(3,love,for).
+nsubjpass(3,love,i).
+nsubjpass(3,care,i).
+auxpass(3,love,be).
+advcl:for(3,ungrateful,love).
+cc(3,love,and).
+advmod(3,care,well).
+advcl:for(3,ungrateful,care).
+conj:and(3,love,care).
+case(3,man,for).
+case(3,man,by).
+nmod:for(3,care,man).
+cc(3,love,and).
 nsubj(3,pat,they).
 advmod(3,pat,often).
 advcl:for(3,ungrateful,pat).
-conj:and(3,loved,pat).
+conj:and(3,love,pat).
 nmod:poss(3,head,my).
 dobj(3,pat,head).
 cc(3,head,and).
-dobj(3,pat,shoulders).
-conj:and(3,head,shoulders).
-root(4,ROOT,woe).
+dobj(3,pat,shoulder).
+conj:and(3,head,shoulder).
+% relations.
+%% woe 's me.
+% dependencies.
+root(4,root,woe).
 case(4,woe,'s).
-dep(4,woe,me).
-root(5,ROOT,said).
+dep(4,woe,I).
+% relations.
+%% said the flea.
+% dependencies.
+root(5,root,say).
 det(5,flea,the).
-nsubj(5,said,flea).
-root(6,ROOT,this).
+nsubj(5,say,flea).
+% relations.
+%% this very patting which you like whenever it happens to me brings with it my inevitable destruction.
+% dependencies.
+root(6,root,this).
 advmod(6,patting,very).
 dep(6,this,patting).
-dobj(6,brings,which).
-nsubj(6,brings,you).
-mark(6,happens,like).
-advmod(6,happens,whenever).
-nsubj(6,happens,it).
-acl:like(6,you,happens).
-case(6,me,to).
-nmod:to(6,happens,me).
-ccomp(6,patting,brings).
+dobj(6,bring,which).
+nsubj(6,bring,you).
+mark(6,happen,like).
+advmod(6,happen,whenever).
+nsubj(6,happen,it).
+acl:like(6,you,happen).
+case(6,I,to).
+nmod:to(6,happen,I).
+ccomp(6,patting,bring).
 case(6,it,with).
-nmod:with(6,brings,it).
+nmod:with(6,bring,it).
 nmod:poss(6,destruction,my).
 amod(6,destruction,inevitable).
 dep(6,it,destruction).
-happens_to(6,it,me).
+% relations.
+happen_to(6,it,I).

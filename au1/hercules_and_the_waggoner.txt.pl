@@ -1,121 +1,145 @@
-root(0,ROOT,driving).
+%% a waggoner was once driving a heavy load along a very muddy way.
+% dependencies.
+root(0,root,drive).
 det(0,waggoner,a).
-nsubj(0,driving,waggoner).
-aux(0,driving,was).
-advmod(0,driving,once).
+nsubj(0,drive,waggoner).
+aux(0,drive,be).
+advmod(0,drive,once).
 det(0,load,a).
 amod(0,load,heavy).
-dobj(0,driving,load).
+dobj(0,drive,load).
 case(0,way,along).
 det(0,way,a).
 advmod(0,muddy,very).
 amod(0,way,muddy).
 nmod:along(0,load,way).
-was_once_driving(0,waggoner,heavy_load_along_very_muddy_way).
-was_driving(0,waggoner,heavy_load).
-was_driving(0,waggoner,load_along_way).
-was_once_driving(0,waggoner,load_along_very_muddy_way).
-was_once_driving(0,waggoner,heavy_load).
-was_driving(0,waggoner,load).
-was_once_driving(0,waggoner,heavy_load_along_way).
-was_once_driving(0,waggoner,load_along_way).
-was_once_driving(0,waggoner,load).
-was_driving(0,waggoner,heavy_load_along_very_muddy_way).
-was_driving(0,waggoner,load_along_muddy_way).
-was_driving(0,waggoner,heavy_load_along_way).
-was_driving(0,waggoner,heavy_load_along_muddy_way).
-was_driving(0,waggoner,load_along_very_muddy_way).
-was_once_driving(0,waggoner,load_along_muddy_way).
-was_once_driving(0,waggoner,heavy_load_along_muddy_way).
-root(1,ROOT,came).
+% relations.
+be_once_drive(0,waggoner,heavy_load_along_very_muddy_way).
+be_drive(0,waggoner,heavy_load).
+be_drive(0,waggoner,load_along_way).
+be_once_drive(0,waggoner,load_along_very_muddy_way).
+be_once_drive(0,waggoner,heavy_load).
+be_drive(0,waggoner,load).
+be_once_drive(0,waggoner,heavy_load_along_way).
+be_once_drive(0,waggoner,load_along_way).
+be_once_drive(0,waggoner,load).
+be_drive(0,waggoner,heavy_load_along_very_muddy_way).
+be_drive(0,waggoner,load_along_muddy_way).
+be_drive(0,waggoner,heavy_load_along_way).
+be_drive(0,waggoner,heavy_load_along_muddy_way).
+be_drive(0,waggoner,load_along_very_muddy_way).
+be_once_drive(0,waggoner,load_along_muddy_way).
+be_once_drive(0,waggoner,heavy_load_along_muddy_way).
+%% at last he came to a part of the road where the wheels sank half-way into the mire and the more the horses pulled the deeper sank the wheels.
+% dependencies.
+root(1,root,come).
 case(1,last,at).
-nmod:at(1,came,last).
-nsubj(1,came,he).
+nmod:at(1,come,last).
+nsubj(1,come,he).
 case(1,part,to).
 det(1,part,a).
-nmod:to(1,came,part).
+nmod:to(1,come,part).
 case(1,road,of).
 det(1,road,the).
 nmod:of(1,part,road).
-advmod(1,sank,where).
-det(1,wheels,the).
-nsubj(1,sank,wheels).
-advcl(1,came,sank).
-dobj(1,sank,half-way).
+advmod(1,sink,where).
+det(1,wheel,the).
+nsubj(1,sink,wheel).
+advcl(1,come,sink).
+dobj(1,sink,half-way).
 case(1,mire,into).
 det(1,mire,the).
-nmod:into(1,sank,mire).
-cc(1,sank,and).
+nmod:into(1,sink,mire).
+cc(1,sink,and).
 det(1,more,the).
-dep(1,pulled,more).
-det(1,horses,the).
-nsubj(1,pulled,horses).
-advcl(1,came,pulled).
-conj:and(1,sank,pulled).
+dep(1,pull,more).
+det(1,horse,the).
+nsubj(1,pull,horse).
+advcl(1,come,pull).
+conj:and(1,sink,pull).
 det(1,deeper,the).
-nsubj(1,sank,deeper).
-ccomp(1,pulled,sank).
-det(1,wheels,the).
-dobj(1,sank,wheels).
-came_to(1,he,part_of_road).
-sank_half-way_into(1,wheels,mire).
-came_at(1,he,last).
-sank(1,deeper,wheels).
-came_to(1,he,part).
-sank(1,wheels,half-way).
-root(2,ROOT,threw).
-mark(2,threw,so).
+nsubj(1,sink,deeper).
+ccomp(1,pull,sink).
+det(1,wheel,the).
+dobj(1,sink,wheel).
+% relations.
+come_to(1,he,part_of_road).
+sink_half-way_into(1,wheel,mire).
+come_at(1,he,last).
+sink(1,deeper,wheel).
+come_to(1,he,part).
+sink(1,wheel,half-way).
+%% so the waggoner threw down his whip and knelt down and prayed to hercules the strong.
+% dependencies.
+root(2,root,throw).
+mark(2,throw,so).
 det(2,waggoner,the).
-nsubj(2,threw,waggoner).
-nsubj(2,knelt,waggoner).
-compound:prt(2,threw,down).
-nmod:poss(2,whip,his).
-dobj(2,threw,whip).
-cc(2,threw,and).
-conj:and(2,threw,knelt).
-advmod(2,knelt,down).
-cc(2,knelt,and).
-conj:and(2,threw,prayed).
-conj:and(2,knelt,prayed).
-mark(2,hercules,to).
-xcomp(2,prayed,hercules).
+nsubj(2,throw,waggoner).
+nsubj(2,kneel,waggoner).
+compound:prt(2,throw,down).
+nmod:poss(2,whip,he).
+dobj(2,throw,whip).
+cc(2,throw,and).
+conj:and(2,throw,kneel).
+advmod(2,kneel,down).
+cc(2,kneel,and).
+conj:and(2,throw,pray).
+conj:and(2,kneel,pray).
+mark(2,hercule,to).
+xcomp(2,pray,hercule).
 det(2,strong,the).
-dobj(2,hercules,strong).
-threw_down(2,waggoner,his_whip).
-root(3,ROOT,help).
-compound(3,hercules,o).
-nsubj(3,help,hercules).
-dobj(3,help,me).
+dobj(2,hercule,strong).
+% relations.
+throw_down(2,waggoner,he_whip).
+%% o hercules help me in this my hour of distress.
+% dependencies.
+root(3,root,help).
+compound(3,hercule,o).
+nsubj(3,help,hercule).
+dobj(3,help,I).
 case(3,hour,in).
 det(3,hour,this).
 nmod:poss(3,hour,my).
 nmod:in(3,help,hour).
 case(3,distress,of).
 nmod:of(3,hour,distress).
-help(3,o_hercules,me).
-root(4,ROOT,he).
+% relations.
+help(3,o_hercule,I).
+%% quoth he.
+% dependencies.
+root(4,root,he).
 case(4,he,quoth).
-root(5,ROOT,appeared).
-cc(5,appeared,but).
-nsubj(5,appeared,hercules).
-nsubj(5,said,hercules).
-case(5,him,to).
-nmod:to(5,appeared,him).
-cc(5,appeared,and).
-conj:and(5,appeared,said).
-appeared_to(5,hercules,him).
-root(6,ROOT,do).
+% relations.
+%% but hercules appeared to him and said.
+% dependencies.
+root(5,root,appear).
+cc(5,appear,but).
+nsubj(5,appear,hercule).
+nsubj(5,say,hercule).
+case(5,he,to).
+nmod:to(5,appear,he).
+cc(5,appear,and).
+conj:and(5,appear,say).
+% relations.
+appear_to(5,hercule,he).
+%% tut man do n't sprawl there.
+% dependencies.
+root(6,root,do).
 compound(6,man,tut).
 nsubj(6,do,man).
-neg(6,do,n't).
+neg(6,do,not).
 dobj(6,do,sprawl).
 advmod(6,do,there).
-root(7,ROOT,get).
+% relations.
+%% get up and put your shoulder to the wheel.
+% dependencies.
+root(7,root,get).
 compound:prt(7,get,up).
 cc(7,get,and).
 conj:and(7,get,put).
-nmod:poss(7,shoulder,your).
+nmod:poss(7,shoulder,you).
 dobj(7,put,shoulder).
 case(7,wheel,to).
 det(7,wheel,the).
 nmod:to(7,put,wheel).
+% relations.

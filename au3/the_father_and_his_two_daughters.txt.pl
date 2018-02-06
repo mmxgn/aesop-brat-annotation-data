@@ -1,64 +1,75 @@
-root(0,ROOT,had).
+%% a man had two daughters the one married to a gardener and the other to a tile-maker.
+% dependencies.
+root(0,root,have).
 det(0,man,a).
-nsubj(0,had,man).
-nummod(0,daughters,two).
-dobj(0,had,daughters).
+nsubj(0,have,man).
+nummod(0,daughter,two).
+dobj(0,have,daughter).
 det(0,one,the).
-nsubj(0,married,one).
-acl:relcl(0,daughters,married).
+nsubj(0,marry,one).
+acl:relcl(0,daughter,marry).
 case(0,gardener,to).
 det(0,gardener,a).
-nmod:to(0,married,gardener).
+nmod:to(0,marry,gardener).
 cc(0,gardener,and).
 det(0,other,the).
-nmod:to(0,married,other).
+nmod:to(0,marry,other).
 conj:and(0,gardener,other).
 case(0,tile-maker,to).
 det(0,tile-maker,a).
-nmod:to(0,married,tile-maker).
-married_to(0,one,tile-maker).
-married_to(0,one,gardener).
-root(1,ROOT,went).
+nmod:to(0,marry,tile-maker).
+% relations.
+marry_to(0,one,tile-maker).
+marry_to(0,one,gardener).
+%% after a time he went to the daughter who had married the gardener and inquired how she was and how all things went with her.
+% dependencies.
+root(1,root,go).
 case(1,time,after).
 det(1,time,a).
-nmod:after(1,went,time).
-nsubj(1,went,he).
-nsubj(1,inquired,he).
+nmod:after(1,go,time).
+nsubj(1,go,he).
+nsubj(1,inquire,he).
 case(1,daughter,to).
 det(1,daughter,the).
-nmod:to(1,went,daughter).
-nsubj(1,married,daughter).
+nmod:to(1,go,daughter).
+nsubj(1,marry,daughter).
 ref(1,daughter,who).
-aux(1,married,had).
-acl:relcl(1,daughter,married).
+aux(1,marry,have).
+acl:relcl(1,daughter,marry).
 det(1,gardener,the).
-dobj(1,married,gardener).
-cc(1,went,and).
-conj:and(1,went,inquired).
-advmod(1,was,how).
-nsubj(1,was,she).
-dep(1,inquired,was).
-cc(1,was,and).
-advmod(1,went,how).
-det(1,things,all).
-nsubj(1,went,things).
-dep(1,inquired,went).
-conj:and(1,was,went).
-case(1,her,with).
-nmod:with(1,went,her).
-went_after(1,he,time).
-went_with(1,things,her).
-root(2,ROOT,said).
-nsubj(2,said,she).
-root(3,ROOT,prospering).
-det(3,things,all).
-nsubj(3,prospering,things).
-aux(3,prospering,are).
-case(3,me,with).
-nmod:with(3,prospering,me).
-cc(3,prospering,and).
+dobj(1,marry,gardener).
+cc(1,go,and).
+conj:and(1,go,inquire).
+advmod(1,be,how).
+nsubj(1,be,she).
+dep(1,inquire,be).
+cc(1,be,and).
+advmod(1,go,how).
+det(1,thing,all).
+nsubj(1,go,thing).
+dep(1,inquire,go).
+conj:and(1,be,go).
+case(1,she,with).
+nmod:with(1,go,she).
+% relations.
+go_after(1,he,time).
+go_with(1,thing,she).
+%% she said.
+% dependencies.
+root(2,root,say).
+nsubj(2,say,she).
+% relations.
+%% all things are prospering with me and i have only one wish that there may be a heavy fall of rain in order that the plants may be well watered.
+% dependencies.
+root(3,root,prosper).
+det(3,thing,all).
+nsubj(3,prosper,thing).
+aux(3,prosper,be).
+case(3,I,with).
+nmod:with(3,prosper,I).
+cc(3,prosper,and).
 nsubj(3,have,i).
-conj:and(3,prospering,have).
+conj:and(3,prosper,have).
 advmod(3,wish,only).
 nummod(3,wish,one).
 dobj(3,have,wish).
@@ -73,47 +84,56 @@ case(3,rain,of).
 nmod:of(3,fall,rain).
 acl(3,rain,in).
 mwe(3,in,order).
-mark(3,watered,that).
-det(3,plants,the).
-nsubjpass(3,watered,plants).
-aux(3,watered,may).
-auxpass(3,watered,be).
-advmod(3,watered,well).
-ccomp(3,have,watered).
+mark(3,water,that).
+det(3,plant,the).
+nsubjpass(3,water,plant).
+aux(3,water,may).
+auxpass(3,water,be).
+advmod(3,water,well).
+ccomp(3,have,water).
+% relations.
 have(3,i,only_one_wish).
-are_prospering_with(3,things,me).
-be(3,plants,well_watered).
+be_prosper_with(3,thing,I).
+be(3,plant,well_water).
 have(3,i,one_wish).
-be(3,plants,watered).
-root(4,ROOT,long).
+be(3,plant,water).
+%% not long after he went to the daughter who had married the tilemaker and likewise inquired of her how she fared.
+% dependencies.
+root(4,root,long).
 dep(4,long,not).
-mark(4,went,after).
-nsubj(4,went,he).
-dep(4,long,went).
+mark(4,go,after).
+nsubj(4,go,he).
+dep(4,long,go).
 case(4,daughter,to).
 det(4,daughter,the).
-nmod:to(4,went,daughter).
-nsubj(4,married,daughter).
-nsubj(4,inquired,daughter).
+nmod:to(4,go,daughter).
+nsubj(4,marry,daughter).
+nsubj(4,inquire,daughter).
 ref(4,daughter,who).
-aux(4,married,had).
-acl:relcl(4,daughter,married).
+aux(4,marry,have).
+acl:relcl(4,daughter,marry).
 det(4,tilemaker,the).
-dobj(4,married,tilemaker).
-cc(4,married,and).
-advmod(4,inquired,likewise).
-acl:relcl(4,daughter,inquired).
-conj:and(4,married,inquired).
-case(4,her,of).
-nmod:of(4,inquired,her).
-advmod(4,fared,how).
-nsubj(4,fared,she).
-ccomp(4,went,fared).
-likewise_inquired_of(4,tilemaker,her).
-inquired_of(4,tilemaker,her).
-root(5,ROOT,replied).
-nsubj(5,replied,she).
-root(6,ROOT,want).
+dobj(4,marry,tilemaker).
+cc(4,marry,and).
+advmod(4,inquire,likewise).
+acl:relcl(4,daughter,inquire).
+conj:and(4,marry,inquire).
+case(4,she,of).
+nmod:of(4,inquire,she).
+advmod(4,fare,how).
+nsubj(4,fare,she).
+ccomp(4,go,fare).
+% relations.
+likewise_inquire_of(4,tilemaker,she).
+inquire_of(4,tilemaker,she).
+%% she replied.
+% dependencies.
+root(5,root,reply).
+nsubj(5,reply,she).
+% relations.
+%% i want for nothing and have only one wish that the dry weather may continue and the sun shine hot and bright so that the bricks might be dried.
+% dependencies.
+root(6,root,want).
 dep(6,want,i).
 case(6,nothing,for).
 nmod:for(6,want,nothing).
@@ -138,30 +158,36 @@ xcomp(6,shine,hot).
 cc(6,hot,and).
 xcomp(6,shine,bright).
 conj:and(6,hot,bright).
-mark(6,dried,so).
+mark(6,dry,so).
 mwe(6,so,that).
-det(6,bricks,the).
-nsubjpass(6,dried,bricks).
-aux(6,dried,might).
-auxpass(6,dried,be).
-advcl:so_that(6,shine,dried).
+det(6,brick,the).
+nsubjpass(6,dry,brick).
+aux(6,dry,might).
+auxpass(6,dry,be).
+advcl:so_that(6,shine,dry).
+% relations.
 want_for(6,wish,nothing).
 shine(6,sun,hot).
-might(6,bricks,might_dried).
-shine(6,sun,might_dried).
+might(6,brick,might_dry).
+shine(6,sun,might_dry).
 want_for(6,one_wish,nothing).
-root(7,ROOT,said).
-nsubj(7,said,he).
-case(7,her,to).
-nmod:to(7,said,her).
-said_to(7,he,her).
-root(8,ROOT,wishes).
-mark(8,wishes,if).
-nmod:poss(8,sister,your).
-nsubj(8,wishes,sister).
+%% he said to her.
+% dependencies.
+root(7,root,say).
+nsubj(7,say,he).
+case(7,she,to).
+nmod:to(7,say,she).
+% relations.
+say_to(7,he,she).
+%% if your sister wishes for rain and you for dry weather with which of the two am i to join my wishes.
+% dependencies.
+root(8,root,wish).
+mark(8,wish,if).
+nmod:poss(8,sister,you).
+nsubj(8,wish,sister).
 case(8,rain,for).
-nmod:for(8,wishes,rain).
-cc(8,wishes,and).
+nmod:for(8,wish,rain).
+cc(8,wish,and).
 nsubj(8,i,you).
 case(8,weather,for).
 amod(8,weather,dry).
@@ -171,11 +197,12 @@ nmod:with(8,weather,which).
 case(8,two,of).
 det(8,two,the).
 nmod:of(8,you,two).
-cop(8,i,am).
-conj:and(8,wishes,i).
+cop(8,i,be).
+conj:and(8,wish,i).
 mark(8,join,to).
 acl:to(8,i,join).
-nmod:poss(8,wishes,my).
-dobj(8,join,wishes).
-wishes_for(8,your_sister,rain).
+nmod:poss(8,wish,my).
+dobj(8,join,wish).
+% relations.
+wish_for(8,you_sister,rain).
 is_with(8,dry_weather,which).

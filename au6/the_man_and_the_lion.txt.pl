@@ -1,23 +1,28 @@
-root(0,ROOT,man).
+%% a man and a lion traveled together through the forest.
+% dependencies.
+root(0,root,man).
 det(0,man,a).
 cc(0,man,and).
 det(0,lion,a).
 conj:and(0,man,lion).
-acl(0,man,traveled).
-advmod(0,traveled,together).
+acl(0,man,travel).
+advmod(0,travel,together).
 case(0,forest,through).
 det(0,forest,the).
-nmod:through(0,traveled,forest).
-traveled_together_through(0,man,forest).
-traveled_through(0,man,forest).
-root(1,ROOT,began).
-nsubj(1,began,they).
+nmod:through(0,travel,forest).
+% relations.
+travel_together_through(0,man,forest).
+travel_through(0,man,forest).
+%% they soon began to boast of their respective superiority to each other in strength and prowess.
+% dependencies.
+root(1,root,begin).
+nsubj(1,begin,they).
 nsubj:xsubj(1,boast,they).
-advmod(1,began,soon).
+advmod(1,begin,soon).
 mark(1,boast,to).
-xcomp(1,began,boast).
+xcomp(1,begin,boast).
 case(1,superiority,of).
-nmod:poss(1,superiority,their).
+nmod:poss(1,superiority,they).
 amod(1,superiority,respective).
 nmod:of(1,boast,superiority).
 case(1,other,to).
@@ -28,100 +33,125 @@ nmod:in(1,other,strength).
 cc(1,strength,and).
 nmod:in(1,other,prowess).
 conj:and(1,strength,prowess).
-soon_began(1,they,boast).
-began(1,they,boast_of_their_superiority).
-began(1,they,boast_of_their_respective_superiority).
-began(1,they,boast).
-soon_began(1,they,boast_of_their_respective_superiority).
-soon_began(1,they,boast_of_their_superiority).
-boast_of(1,they,their_superiority).
-boast_of(1,they,their_respective_superiority).
-root(2,ROOT,disputing).
-mark(2,disputing,as).
-nsubj(2,disputing,they).
-aux(2,disputing,were).
-nsubj(2,passed,they).
-ccomp(2,disputing,passed).
+% relations.
+soon_begin(1,they,boast).
+begin(1,they,boast_of_they_superiority).
+begin(1,they,boast_of_they_respective_superiority).
+begin(1,they,boast).
+soon_begin(1,they,boast_of_they_respective_superiority).
+soon_begin(1,they,boast_of_they_superiority).
+boast_of(1,they,they_superiority).
+boast_of(1,they,they_respective_superiority).
+%% as they were disputing they passed a statue carved in stone which represented.
+% dependencies.
+root(2,root,dispute).
+mark(2,dispute,as).
+nsubj(2,dispute,they).
+aux(2,dispute,be).
+nsubj(2,pass,they).
+ccomp(2,dispute,pass).
 det(2,statue,a).
-nsubj(2,carved,statue).
-ccomp(2,passed,carved).
+nsubj(2,carve,statue).
+ccomp(2,pass,carve).
 case(2,stone,in).
-nmod:in(2,carved,stone).
-nsubj(2,represented,stone).
+nmod:in(2,carve,stone).
+nsubj(2,represent,stone).
 ref(2,stone,which).
-acl:relcl(2,stone,represented).
-root(3,ROOT,strangled).
+acl:relcl(2,stone,represent).
+% relations.
+%% a lion strangled by a man.
+% dependencies.
+root(3,root,strangle).
 det(3,lion,a).
-nsubj(3,strangled,lion).
+nsubj(3,strangle,lion).
 case(3,man,by).
 det(3,man,a).
-nmod:by(3,strangled,man).
-strangled_by(3,lion,man).
-root(4,ROOT,pointed).
+nmod:by(3,strangle,man).
+% relations.
+strangle_by(3,lion,man).
+%% the traveler pointed to it and said.
+% dependencies.
+root(4,root,point).
 det(4,traveler,the).
-nsubj(4,pointed,traveler).
-nsubj(4,said,traveler).
+nsubj(4,point,traveler).
+nsubj(4,say,traveler).
 case(4,it,to).
-nmod:to(4,pointed,it).
-cc(4,pointed,and).
-conj:and(4,pointed,said).
-pointed_to(4,traveler,it).
-root(5,ROOT,see).
+nmod:to(4,point,it).
+cc(4,point,and).
+conj:and(4,point,say).
+% relations.
+point_to(4,traveler,it).
+%% see there.
+% dependencies.
+root(5,root,see).
 advmod(5,see,there).
-root(6,ROOT,are).
+% relations.
+%% how strong we are and how we prevail over even the king of beasts.
+% dependencies.
+root(6,root,be).
 advmod(6,strong,how).
-dep(6,are,strong).
-nsubj(6,are,we).
-cc(6,are,and).
+dep(6,be,strong).
+nsubj(6,be,we).
+cc(6,be,and).
 advmod(6,prevail,how).
 nsubj(6,prevail,we).
-conj:and(6,are,prevail).
+conj:and(6,be,prevail).
 case(6,king,over).
 advmod(6,king,even).
 det(6,king,the).
 nmod:over(6,prevail,king).
-case(6,beasts,of).
-nmod:of(6,king,beasts).
+case(6,beast,of).
+nmod:of(6,king,beast).
+% relations.
 prevail_over(6,we,even_king).
 prevail_over(6,we,king).
-prevail_over(6,we,king_of_beasts).
-prevail_over(6,we,even_king_of_beasts).
-root(7,ROOT,replied).
+prevail_over(6,we,king_of_beast).
+prevail_over(6,we,even_king_of_beast).
+%% the lion replied.
+% dependencies.
+root(7,root,reply).
 det(7,lion,the).
-nsubj(7,replied,lion).
-root(8,ROOT,made).
+nsubj(7,reply,lion).
+% relations.
+%% this statue was made by one of you men.
+% dependencies.
+root(8,root,make).
 det(8,statue,this).
-nsubjpass(8,made,statue).
-auxpass(8,made,was).
+nsubjpass(8,make,statue).
+auxpass(8,make,be).
 case(8,one,by).
-nmod:agent(8,made,one).
-case(8,men,of).
-dep(8,men,you).
-nmod:of(8,one,men).
-was_made_by(8,statue,one_of_men).
-was_made_by(8,statue,one_men).
-was(8,statue,made).
-root(9,ROOT,knew).
-mark(9,knew,if).
-dep(9,lions,we).
-nsubj(9,knew,lions).
+nmod:agent(8,make,one).
+case(8,man,of).
+dep(8,man,you).
+nmod:of(8,one,man).
+% relations.
+be_make_by(8,statue,one_of_man).
+be_make_by(8,statue,one_man).
+be(8,statue,make).
+%% if we lions knew how to erect statues you would see the man placed under the paw of the lion.
+% dependencies.
+root(9,root,know).
+mark(9,know,if).
+dep(9,lion,we).
+nsubj(9,know,lion).
 advmod(9,erect,how).
 mark(9,erect,to).
-ccomp(9,knew,erect).
-dobj(9,erect,statues).
+ccomp(9,know,erect).
+dobj(9,erect,statue).
 nsubj(9,see,you).
 aux(9,see,would).
-acl:relcl(9,statues,see).
+acl:relcl(9,statue,see).
 det(9,man,the).
 dobj(9,see,man).
-acl(9,man,placed).
+acl(9,man,place).
 case(9,paw,under).
 det(9,paw,the).
-nmod:under(9,placed,paw).
+nmod:under(9,place,paw).
 case(9,lion,of).
 det(9,lion,the).
 nmod:of(9,paw,lion).
-would_see(9,you,man_placed_under_paw_of_lion).
-would_see(9,you,man_placed).
-would_see(9,you,man_placed_under_paw).
+% relations.
+would_see(9,you,man_place_under_paw_of_lion).
+would_see(9,you,man_place).
+would_see(9,you,man_place_under_paw).
 would_see(9,you,man).

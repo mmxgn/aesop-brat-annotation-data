@@ -1,78 +1,95 @@
-root(0,ROOT,complained).
+%% a tortoise lazily basking in the sun complained to the sea-birds of her hard fate that no one would teach her to fly.
+% dependencies.
+root(0,root,complain).
 det(0,tortoise,a).
-nsubj(0,complained,tortoise).
-advmod(0,basking,lazily).
-acl(0,tortoise,basking).
+nsubj(0,complain,tortoise).
+advmod(0,bask,lazily).
+acl(0,tortoise,bask).
 case(0,sun,in).
 det(0,sun,the).
-nmod:in(0,basking,sun).
-case(0,sea-birds,to).
-det(0,sea-birds,the).
-nmod:to(0,complained,sea-birds).
+nmod:in(0,bask,sun).
+case(0,sea-bird,to).
+det(0,sea-bird,the).
+nmod:to(0,complain,sea-bird).
 case(0,fate,of).
-nmod:poss(0,fate,her).
+nmod:poss(0,fate,she).
 amod(0,fate,hard).
-nmod:of(0,sea-birds,fate).
+nmod:of(0,sea-bird,fate).
 mark(0,teach,that).
 neg(0,one,no).
 nsubj(0,teach,one).
 aux(0,teach,would).
-ccomp(0,complained,teach).
-dobj(0,teach,her).
-nsubj:xsubj(0,fly,her).
+ccomp(0,complain,teach).
+dobj(0,teach,she).
+nsubj:xsubj(0,fly,she).
 mark(0,fly,to).
 xcomp(0,teach,fly).
-lazily_basking_in(0,tortoise,sun).
-basking_in(0,tortoise,sun).
-root(1,ROOT,eagle).
-det(1,eagle,an).
-dep(1,eagle,hovering).
-mark(1,heard,near).
-advcl:near(1,hovering,heard).
-nmod:poss(1,lamentation,her).
-dobj(1,heard,lamentation).
-cc(1,heard,and).
-advcl:near(1,hovering,demanded).
-conj:and(1,heard,demanded).
+% relations.
+lazily_bask_in(0,tortoise,sun).
+bask_in(0,tortoise,sun).
+%% an eagle hovering near heard her lamentation and demanded what reward she would give him if he would take her aloft and float her in the air.
+% dependencies.
+root(1,root,eagle).
+det(1,eagle,a).
+dep(1,eagle,hover).
+mark(1,hear,near).
+advcl:near(1,hover,hear).
+nmod:poss(1,lamentation,she).
+dobj(1,hear,lamentation).
+cc(1,hear,and).
+advcl:near(1,hover,demand).
+conj:and(1,hear,demand).
 dep(1,reward,what).
 dep(1,eagle,reward).
 nsubj(1,give,she).
 aux(1,give,would).
 acl:relcl(1,reward,give).
-dobj(1,give,him).
+dobj(1,give,he).
 mark(1,take,if).
 nsubj(1,take,he).
 nsubj(1,float,he).
 aux(1,take,would).
 advcl:if(1,give,take).
-dobj(1,take,her).
+dobj(1,take,she).
 advmod(1,take,aloft).
 cc(1,take,and).
 advcl:if(1,give,float).
 conj:and(1,take,float).
-dobj(1,float,her).
+dobj(1,float,she).
 case(1,air,in).
 det(1,air,the).
 nmod:in(1,float,air).
-would_take(1,he,her).
-would_take_aloft(1,he,her).
-float(1,he,her).
-would_give(1,she,him).
-root(2,ROOT,give).
+% relations.
+would_take(1,he,she).
+would_take_aloft(1,he,she).
+float(1,he,she).
+would_give(1,she,he).
+%% i will give you.
+% dependencies.
+root(2,root,give).
 nsubj(2,give,i).
 aux(2,give,will).
 dobj(2,give,you).
+% relations.
 will_give(2,i,you).
-root(3,ROOT,said).
-nsubj(3,said,she).
-root(4,ROOT,all).
+%% she said.
+% dependencies.
+root(3,root,say).
+nsubj(3,say,she).
+% relations.
+%% all the riches of the red sea.
+% dependencies.
+root(4,root,all).
 det(4,riches,the).
 dep(4,all,riches).
 case(4,sea,of).
 det(4,sea,the).
 amod(4,sea,red).
 nmod:of(4,riches,sea).
-root(5,ROOT,teach).
+% relations.
+%% i will teach you to fly then.
+% dependencies.
+root(5,root,teach).
 nsubj(5,teach,i).
 aux(5,teach,will).
 dobj(5,teach,you).
@@ -80,101 +97,120 @@ nsubj:xsubj(5,fly,you).
 mark(5,fly,to).
 xcomp(5,teach,fly).
 advmod(5,fly,then).
+% relations.
 will_teach(5,i,you).
-root(6,ROOT,said).
+%% said the eagle.
+% dependencies.
+root(6,root,say).
 det(6,eagle,the).
-nsubj(6,said,eagle).
-root(7,ROOT,carried).
-cc(7,carried,and).
-dep(7,carried,taking).
-dobj(7,taking,her).
-compound:prt(7,taking,up).
-case(7,talons,in).
-nmod:poss(7,talons,his).
-nmod:in(7,taking,talons).
-nsubj(7,carried,he).
-nsubj(7,let,her).
+nsubj(6,say,eagle).
+% relations.
+%% and taking her up in his talons he carried her almost to the clouds suddenly he let her go and she fell on a lofty mountain dashing her shell to pieces.
+% dependencies.
+root(7,root,carry).
+cc(7,carry,and).
+dep(7,carry,take).
+dobj(7,take,she).
+compound:prt(7,take,up).
+case(7,talon,in).
+nmod:poss(7,talon,he).
+nmod:in(7,take,talon).
+nsubj(7,carry,he).
+nsubj(7,let,she).
 dep(7,let,almost).
-case(7,clouds,to).
-det(7,clouds,the).
-nmod:to(7,almost,clouds).
+case(7,cloud,to).
+det(7,cloud,the).
+nmod:to(7,almost,cloud).
 advmod(7,let,suddenly).
 nsubj(7,let,he).
-xcomp(7,carried,let).
-nsubj(7,go,her).
+xcomp(7,carry,let).
+nsubj(7,go,she).
 ccomp(7,let,go).
-cc(7,carried,and).
-nsubj(7,fell,she).
-conj:and(7,carried,fell).
+cc(7,carry,and).
+nsubj(7,fall,she).
+conj:and(7,carry,fall).
 case(7,mountain,on).
 det(7,mountain,a).
 amod(7,mountain,lofty).
-nmod:on(7,fell,mountain).
-xcomp(7,fell,dashing).
-nmod:poss(7,shell,her).
-dobj(7,dashing,shell).
-case(7,pieces,to).
-nmod:to(7,dashing,pieces).
-fell_on(7,she,mountain).
-carried(7,he,her_suddenly_he_let).
-carried(7,he,her_suddenly_let).
-fell_on(7,she,lofty_mountain).
-carried(7,he,suddenly_he_let).
-carried(7,he,her_let).
-carried(7,he,he_let).
-dashing(7,she,her_shell).
-carried(7,he,her_he_let).
-root(8,ROOT,exclaimed).
+nmod:on(7,fall,mountain).
+xcomp(7,fall,dash).
+nmod:poss(7,shell,she).
+dobj(7,dash,shell).
+case(7,piece,to).
+nmod:to(7,dash,piece).
+% relations.
+fall_on(7,she,mountain).
+carry(7,he,she_suddenly_he_let).
+carry(7,he,she_suddenly_let).
+fall_on(7,she,lofty_mountain).
+carry(7,he,suddenly_he_let).
+carry(7,he,she_let).
+carry(7,he,he_let).
+dash(7,she,she_shell).
+carry(7,he,she_he_let).
+%% the tortoise exclaimed in the moment of death.
+% dependencies.
+root(8,root,exclaim).
 det(8,tortoise,the).
-nsubj(8,exclaimed,tortoise).
+nsubj(8,exclaim,tortoise).
 case(8,moment,in).
 det(8,moment,the).
-nmod:in(8,exclaimed,moment).
+nmod:in(8,exclaim,moment).
 case(8,death,of).
 nmod:of(8,moment,death).
-exclaimed_in(8,tortoise,moment).
-exclaimed_in(8,tortoise,moment_of_death).
-root(9,ROOT,deserved).
-nsubj(9,deserved,i).
-aux(9,deserved,have).
+% relations.
+exclaim_in(8,tortoise,moment).
+exclaim_in(8,tortoise,moment_of_death).
+%% i have deserved my present fate.
+% dependencies.
+root(9,root,deserve).
+nsubj(9,deserve,i).
+aux(9,deserve,have).
 nmod:poss(9,fate,my).
 amod(9,fate,present).
-dobj(9,deserved,fate).
-have_deserved(9,i,my_present_fate).
-have_deserved(9,i,my_fate).
-root(10,ROOT,had).
-mark(10,had,for).
-nsubj(10,had,what).
-dobj(10,had,i).
+dobj(9,deserve,fate).
+% relations.
+have_deserve(9,i,my_present_fate).
+have_deserve(9,i,my_fate).
+%% for what had i to do with wings and clouds who can with difficulty move about on the earth.
+% dependencies.
+root(10,root,have).
+mark(10,have,for).
+nsubj(10,have,what).
+dobj(10,have,i).
 mark(10,do,to).
-ccomp(10,had,do).
-case(10,wings,with).
-nmod:with(10,do,wings).
-nsubj(10,can,wings).
-cc(10,wings,and).
-nmod:with(10,do,clouds).
-conj:and(10,wings,clouds).
-nsubj(10,can,clouds).
-ref(10,wings,who).
-acl:relcl(10,wings,can).
+ccomp(10,have,do).
+case(10,wing,with).
+nmod:with(10,do,wing).
+nsubj(10,can,wing).
+cc(10,wing,and).
+nmod:with(10,do,cloud).
+conj:and(10,wing,cloud).
+nsubj(10,can,cloud).
+ref(10,wing,who).
+acl:relcl(10,wing,can).
 case(10,difficulty,with).
 nmod:with(10,can,difficulty).
-nmod:tmod(10,had,move).
+nmod:tmod(10,have,move).
 advmod(10,move,about).
 case(10,earth,on).
 det(10,earth,the).
 nmod:on(10,move,earth).
-root(11,ROOT,had).
-punct(11,had,').
-mark(11,had,if).
-nsubj(11,had,men).
-dobj(11,had,all).
-nsubj(11,wished,they).
-acl:relcl(11,all,wished).
-nsubjpass(11,ruined,they).
-aux(11,ruined,would).
-auxpass(11,ruined,be).
-advmod(11,ruined,often).
-ccomp(11,wished,ruined).
-be(11,they,often_ruined).
-be(11,they,ruined).
+% relations.
+%% ' if men had all they wished they would be often ruined.
+% dependencies.
+root(11,root,have).
+punct(11,have,').
+mark(11,have,if).
+nsubj(11,have,man).
+dobj(11,have,all).
+nsubj(11,wish,they).
+acl:relcl(11,all,wish).
+nsubjpass(11,ruin,they).
+aux(11,ruin,would).
+auxpass(11,ruin,be).
+advmod(11,ruin,often).
+ccomp(11,wish,ruin).
+% relations.
+be(11,they,often_ruin).
+be(11,they,ruin).

@@ -1,62 +1,76 @@
-root(0,ROOT,patty).
+%% patty the milkmaid was going to market carrying her milk in a pail on her head.
+% dependencies.
+root(0,root,patty).
 det(0,milkmaid,the).
-nsubj(0,going,milkmaid).
-aux(0,going,was).
-ccomp(0,patty,going).
+nsubj(0,go,milkmaid).
+aux(0,go,be).
+ccomp(0,patty,go).
 case(0,market,to).
-nmod:to(0,going,market).
-advcl(0,going,carrying).
-nmod:poss(0,milk,her).
-dobj(0,carrying,milk).
+nmod:to(0,go,market).
+advcl(0,go,carry).
+nmod:poss(0,milk,she).
+dobj(0,carry,milk).
 case(0,pail,in).
 det(0,pail,a).
-nmod:in(0,carrying,pail).
+nmod:in(0,carry,pail).
 case(0,head,on).
-nmod:poss(0,head,her).
+nmod:poss(0,head,she).
 nmod:on(0,pail,head).
-going_to(0,milkmaid,market).
-carrying(0,milkmaid,her_milk).
-root(1,ROOT,went).
-mark(1,went,as).
-nsubj(1,went,she).
-mark(1,began,along).
-nsubj(1,began,she).
-advcl:along(1,get,began).
-xcomp(1,began,calculating).
+% relations.
+go_to(0,milkmaid,market).
+carry(0,milkmaid,she_milk).
+%% as she went along she began calculating what she would do with the money she would get for the milk.
+% dependencies.
+root(1,root,go).
+mark(1,go,as).
+nsubj(1,go,she).
+mark(1,begin,along).
+nsubj(1,begin,she).
+advcl:along(1,get,begin).
+xcomp(1,begin,calculate).
 dobj(1,do,what).
 nsubj(1,do,she).
 aux(1,do,would).
-ccomp(1,calculating,do).
+ccomp(1,calculate,do).
 case(1,money,with).
 det(1,money,the).
 nmod:with(1,do,money).
 nsubj(1,get,she).
 aux(1,get,would).
-ccomp(1,went,get).
+ccomp(1,go,get).
 case(1,milk,for).
 det(1,milk,the).
 nmod:for(1,get,milk).
-get(1,she,she_began).
-began(1,she,calculating).
+% relations.
+get(1,she,she_begin).
+begin(1,she,calculate).
 get_for(1,she,milk).
-root(2,ROOT,buy).
+%% i 'll buy some fowls from farmer brown.
+% dependencies.
+root(2,root,buy).
 nsubj(2,buy,i).
-aux(2,buy,'ll).
-det(2,fowls,some).
-dobj(2,buy,fowls).
+aux(2,buy,will).
+det(2,fowl,some).
+dobj(2,buy,fowl).
 case(2,farmer,from).
 nmod:from(2,buy,farmer).
 amod(2,farmer,brown).
-ll_buy_fowls_from(2,i,farmer).
-ll_buy_fowls_from(2,i,farmer_brown).
-ll_buy(2,i,fowls).
-root(3,ROOT,said).
-nsubj(3,said,she).
-root(4,ROOT,lay).
+% relations.
+will_buy_fowl_from(2,i,farmer).
+will_buy_fowl_from(2,i,farmer_brown).
+will_buy(2,i,fowl).
+%% said she.
+% dependencies.
+root(3,root,say).
+nsubj(3,say,she).
+% relations.
+%% and they will lay eggs each morning which i will sell to the parson 's wife.
+% dependencies.
+root(4,root,lay).
 cc(4,lay,and).
 nsubj(4,lay,they).
 aux(4,lay,will).
-dobj(4,lay,eggs).
+dobj(4,lay,egg).
 det(4,morning,each).
 nmod:tmod(4,lay,morning).
 dobj(4,sell,which).
@@ -68,10 +82,13 @@ det(4,parson,the).
 nmod:poss(4,wife,parson).
 case(4,parson,'s).
 nmod:to(4,sell,wife).
+% relations.
 will_lay_at_time(4,they,morning).
 to(4,parson,wife).
-will_lay_eggs_at_time(4,they,morning).
-root(5,ROOT,money).
+will_lay_egg_at_time(4,they,morning).
+%% with the money that i get from the sale of these eggs i 'll buy myself a new dimity frock and a chip hat.
+% dependencies.
+root(5,root,money).
 case(5,money,with).
 det(5,money,the).
 dobj(5,get,money).
@@ -81,12 +98,12 @@ acl:relcl(5,money,get).
 case(5,sale,from).
 det(5,sale,the).
 nmod:from(5,get,sale).
-case(5,eggs,of).
-det(5,eggs,these).
-nmod:of(5,sale,eggs).
+case(5,egg,of).
+det(5,egg,these).
+nmod:of(5,sale,egg).
 nsubj(5,buy,i).
-aux(5,buy,'ll).
-acl:relcl(5,eggs,buy).
+aux(5,buy,will).
+acl:relcl(5,egg,buy).
 nsubj(5,frock,myself).
 det(5,frock,a).
 amod(5,frock,new).
@@ -97,97 +114,119 @@ det(5,hat,a).
 compound(5,hat,chip).
 xcomp(5,buy,hat).
 conj:and(5,frock,hat).
-ll_buy(5,i,myself_new_dimity_frock).
-ll_buy(5,i,myself_dimity_frock).
+% relations.
+will_buy(5,i,myself_new_dimity_frock).
+will_buy(5,i,myself_dimity_frock).
 get_from(5,i,sale).
-root(6,ROOT,go).
+%% and when i go to market wo n't all the young men come up and speak to me.
+% dependencies.
+root(6,root,go).
 cc(6,go,and).
 advmod(6,go,when).
 nsubj(6,go,i).
 nsubj(6,speak,i).
 case(6,market,to).
 nmod:to(6,go,market).
-acl:relcl(6,market,wo).
-neg(6,wo,n't).
-det:predet(6,men,all).
-det(6,men,the).
-amod(6,men,young).
-nsubj(6,come,men).
+acl:relcl(6,market,will).
+neg(6,will,not).
+det:predet(6,man,all).
+det(6,man,the).
+amod(6,man,young).
+nsubj(6,come,man).
 acl:relcl(6,market,come).
 advmod(6,come,up).
 cc(6,go,and).
 conj:and(6,go,speak).
-case(6,me,to).
-nmod:to(6,speak,me).
-speak_to(6,i,me).
-root(7,ROOT,shaw).
+case(6,I,to).
+nmod:to(6,speak,I).
+% relations.
+speak_to(6,i,I).
+%% polly shaw will be that jealous.
+% dependencies.
+root(7,root,shaw).
 dep(7,shaw,polly).
 dep(7,jealous,shaw).
 aux(7,jealous,will).
 cop(7,jealous,be).
 ref(7,shaw,that).
 acl:relcl(7,shaw,jealous).
-root(8,ROOT,care).
+% relations.
+%% but i do n't care.
+% dependencies.
+root(8,root,care).
 cc(8,care,but).
 nsubj(8,care,i).
 aux(8,care,do).
-neg(8,care,n't).
-root(9,ROOT,look).
+neg(8,care,not).
+% relations.
+%% i shall just look at her and toss my head like this.
+% dependencies.
+root(9,root,look).
 nsubj(9,look,i).
 nsubj(9,toss,i).
 aux(9,look,shall).
 advmod(9,look,just).
-case(9,her,at).
-nmod:at(9,look,her).
+case(9,she,at).
+nmod:at(9,look,she).
 cc(9,look,and).
 conj:and(9,look,toss).
 nmod:poss(9,head,my).
 dobj(9,toss,head).
 case(9,this,like).
 nmod:like(9,toss,this).
+% relations.
 toss(9,i,my_head).
-shall_just_look_at(9,i,her).
-shall_look_at(9,i,her).
-root(10,ROOT,spoke).
-mark(10,spoke,as).
-nsubj(10,spoke,she).
-nsubj(10,tossed,she).
-ccomp(10,spoke,tossed).
-nmod:poss(10,head,her).
-nsubj(10,fell,head).
+shall_just_look_at(9,i,she).
+shall_look_at(9,i,she).
+%% as she spoke she tossed her head back the pail fell off it and all the milk was spilt.
+% dependencies.
+root(10,root,speak).
+mark(10,speak,as).
+nsubj(10,speak,she).
+nsubj(10,toss,she).
+ccomp(10,speak,toss).
+nmod:poss(10,head,she).
+nsubj(10,fall,head).
 advmod(10,head,back).
 det(10,pail,the).
 nmod:npmod(10,back,pail).
-dep(10,tossed,fell).
-compound:prt(10,fell,off).
-dobj(10,fell,it).
-cc(10,fell,and).
+dep(10,toss,fall).
+compound:prt(10,fall,off).
+dobj(10,fall,it).
+cc(10,fall,and).
 det:predet(10,milk,all).
 det(10,milk,the).
-nsubjpass(10,spilt,milk).
-auxpass(10,spilt,was).
-dep(10,tossed,spilt).
-conj:and(10,fell,spilt).
-was(10,milk,spilt).
-root(11,ROOT,had).
-mark(11,had,so).
-nsubj(11,had,she).
+nsubjpass(10,spill,milk).
+auxpass(10,spill,be).
+dep(10,toss,spill).
+conj:and(10,fall,spill).
+% relations.
+be(10,milk,spill).
+%% so she had to go home and tell her mother what had occurred.
+% dependencies.
+root(11,root,have).
+mark(11,have,so).
+nsubj(11,have,she).
 nsubj:xsubj(11,go,she).
 nsubj:xsubj(11,tell,she).
 mark(11,go,to).
-xcomp(11,had,go).
+xcomp(11,have,go).
 dobj(11,go,home).
 cc(11,go,and).
-xcomp(11,had,tell).
+xcomp(11,have,tell).
 conj:and(11,go,tell).
-nmod:poss(11,mother,her).
+nmod:poss(11,mother,she).
 dobj(11,tell,mother).
-nsubj(11,occurred,mother).
+nsubj(11,occur,mother).
 ref(11,mother,what).
-aux(11,occurred,had).
-acl:relcl(11,mother,occurred).
+aux(11,occur,have).
+acl:relcl(11,mother,occur).
+% relations.
 go(11,she,home).
-had(11,she,go).
-root(12,ROOT,ah).
+have(11,she,go).
+%% ah my child.
+% dependencies.
+root(12,root,ah).
 nmod:poss(12,child,my).
 dobj(12,ah,child).
+% relations.

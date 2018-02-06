@@ -1,107 +1,133 @@
-root(0,ROOT,desired).
+%% a tortoise desired to change its place of residence so he asked an eagle to carry him to his new home promising her a rich reward for her trouble.
+% dependencies.
+root(0,root,desire).
 det(0,tortoise,a).
-nsubj(0,desired,tortoise).
+nsubj(0,desire,tortoise).
 nsubj:xsubj(0,change,tortoise).
 mark(0,change,to).
-xcomp(0,desired,change).
+xcomp(0,desire,change).
 nmod:poss(0,place,its).
 dobj(0,change,place).
 case(0,residence,of).
 nmod:of(0,place,residence).
-mark(0,asked,so).
-nsubj(0,asked,he).
-advcl:so(0,change,asked).
-det(0,eagle,an).
-dobj(0,asked,eagle).
+mark(0,ask,so).
+nsubj(0,ask,he).
+advcl:so(0,change,ask).
+det(0,eagle,a).
+dobj(0,ask,eagle).
 mark(0,carry,to).
 acl:to(0,eagle,carry).
-dobj(0,carry,him).
+dobj(0,carry,he).
 case(0,home,to).
-nmod:poss(0,home,his).
+nmod:poss(0,home,he).
 amod(0,home,new).
 nmod:to(0,carry,home).
-acl(0,home,promising).
-nsubj(0,reward,her).
+acl(0,home,promise).
+nsubj(0,reward,she).
 det(0,reward,a).
 amod(0,reward,rich).
-xcomp(0,promising,reward).
+xcomp(0,promise,reward).
 case(0,trouble,for).
-nmod:poss(0,trouble,her).
+nmod:poss(0,trouble,she).
 nmod:for(0,reward,trouble).
-reward_for(0,her,her_trouble).
+% relations.
+reward_for(0,she,she_trouble).
 change(0,tortoise,its_place_of_residence).
-rich_reward_for(0,her,her_trouble).
+rich_reward_for(0,she,she_trouble).
 change(0,tortoise,its_place).
-root(1,ROOT,agreed).
+%% the eagle agreed and seizing the tortoise by the shell with her talons soared aloft.
+% dependencies.
+root(1,root,agree).
 det(1,eagle,the).
-nsubj(1,agreed,eagle).
-cc(1,agreed,and).
-csubj(1,soared,seizing).
+nsubj(1,agree,eagle).
+cc(1,agree,and).
+csubj(1,soar,seize).
 det(1,tortoise,the).
-dobj(1,seizing,tortoise).
+dobj(1,seize,tortoise).
 case(1,shell,by).
 det(1,shell,the).
-nmod:by(1,seizing,shell).
-case(1,talons,with).
-nmod:poss(1,talons,her).
-nmod:with(1,shell,talons).
-conj:and(1,agreed,soared).
-advmod(1,soared,aloft).
-is_with(1,shell,her_talons).
-root(2,ROOT,met).
+nmod:by(1,seize,shell).
+case(1,talon,with).
+nmod:poss(1,talon,she).
+nmod:with(1,shell,talon).
+conj:and(1,agree,soar).
+advmod(1,soar,aloft).
+% relations.
+is_with(1,shell,she_talon).
+%% on their way they met a crow who said to the eagle.
+% dependencies.
+root(2,root,meet).
 case(2,way,on).
-nmod:poss(2,way,their).
-nmod:on(2,met,way).
-nsubj(2,met,they).
+nmod:poss(2,way,they).
+nmod:on(2,meet,way).
+nsubj(2,meet,they).
 det(2,crow,a).
-dobj(2,met,crow).
-nsubj(2,said,crow).
+dobj(2,meet,crow).
+nsubj(2,say,crow).
 ref(2,crow,who).
-acl:relcl(2,crow,said).
+acl:relcl(2,crow,say).
 case(2,eagle,to).
 det(2,eagle,the).
-nmod:to(2,said,eagle).
-root(3,ROOT,eating).
+nmod:to(2,say,eagle).
+% relations.
+%% tortoise is good eating.
+% dependencies.
+root(3,root,eating).
 nsubj(3,eating,tortoise).
-cop(3,eating,is).
+cop(3,eating,be).
 amod(3,eating,good).
-is(3,tortoise,good_eating).
-is(3,tortoise,eating).
-root(4,ROOT,hard).
+% relations.
+be(3,tortoise,good_eating).
+be(3,tortoise,eating).
+%% the shell is too hard.
+% dependencies.
+root(4,root,hard).
 det(4,shell,the).
 nsubj(4,hard,shell).
-cop(4,hard,is).
+cop(4,hard,be).
 advmod(4,hard,too).
-is(4,shell,hard).
-is(4,shell,too_hard).
-root(5,ROOT,said).
+% relations.
+be(4,shell,hard).
+be(4,shell,too_hard).
+%% said the eagle in reply.
+% dependencies.
+root(5,root,say).
 det(5,eagle,the).
-nsubj(5,said,eagle).
+nsubj(5,say,eagle).
 case(5,reply,in).
 nmod:in(5,eagle,reply).
-is_in(5,eagle,reply).
-root(6,ROOT,crack).
-det(6,rocks,the).
-nsubj(6,crack,rocks).
+% relations.
+be_in(5,eagle,reply).
+%% the rocks will soon crack the shell.
+% dependencies.
+root(6,root,crack).
+det(6,rock,the).
+nsubj(6,crack,rock).
 aux(6,crack,will).
 advmod(6,crack,soon).
 det(6,shell,the).
 dobj(6,crack,shell).
-will_soon_crack(6,rocks,shell).
-will_crack(6,rocks,shell).
-root(7,ROOT,was).
+% relations.
+will_soon_crack(6,rock,shell).
+will_crack(6,rock,shell).
+%% was the crow 's answer.
+% dependencies.
+root(7,root,be).
 det(7,crow,the).
 nmod:poss(7,answer,crow).
 case(7,crow,'s).
-nsubj(7,was,answer).
+nsubj(7,be,answer).
+% relations.
 has(7,crow,answer).
-root(8,ROOT,eagle).
+%% and the eagle taking the hint let fall the tortoise on a sharp rock and the two birds made a hearty meal of the tortoise.
+% dependencies.
+root(8,root,eagle).
 cc(8,eagle,and).
 det(8,eagle,the).
-csubj(8,made,taking).
+csubj(8,make,take).
 det(8,hint,the).
 nsubj(8,let,hint).
-ccomp(8,taking,let).
+ccomp(8,take,let).
 xcomp(8,let,fall).
 det(8,tortoise,the).
 dobj(8,fall,tortoise).
@@ -110,26 +136,27 @@ det(8,rock,a).
 amod(8,rock,sharp).
 nmod:on(8,fall,rock).
 cc(8,rock,and).
-det(8,birds,the).
-nummod(8,birds,two).
-nmod:on(8,fall,birds).
-conj:and(8,rock,birds).
-ccomp(8,eagle,made).
+det(8,bird,the).
+nummod(8,bird,two).
+nmod:on(8,fall,bird).
+conj:and(8,rock,bird).
+ccomp(8,eagle,make).
 det(8,meal,a).
 amod(8,meal,hearty).
-dobj(8,made,meal).
+dobj(8,make,meal).
 case(8,tortoise,of).
 det(8,tortoise,the).
 nmod:of(8,meal,tortoise).
+% relations.
 let(8,hint,fall_on_rock).
 let(8,hint,fall_on_sharp_rock).
 fall_tortoise_on(8,hint,sharp_rock).
-made(8,taking,hearty_meal).
+make(8,take,hearty_meal).
 fall_on(8,hint,rock).
-made(8,taking,meal_of_tortoise).
+make(8,take,meal_of_tortoise).
 fall_tortoise_on(8,hint,rock).
-made(8,taking,hearty_meal_of_tortoise).
+make(8,take,hearty_meal_of_tortoise).
 fall(8,hint,tortoise).
 let(8,hint,fall).
 fall_on(8,hint,sharp_rock).
-made(8,taking,meal).
+make(8,take,meal).

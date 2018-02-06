@@ -1,54 +1,62 @@
-root(0,ROOT,prowling).
+%% a famished wolf was prowling about in the morning in search of food.
+% dependencies.
+root(0,root,prowl).
 det(0,wolf,a).
 amod(0,wolf,famished).
-nsubj(0,prowling,wolf).
-aux(0,prowling,was).
-advmod(0,prowling,about).
+nsubj(0,prowl,wolf).
+aux(0,prowl,be).
+advmod(0,prowl,about).
 case(0,morning,in).
 det(0,morning,the).
-nmod:in(0,prowling,morning).
+nmod:in(0,prowl,morning).
 case(0,search,in).
 nmod:in(0,morning,search).
 case(0,food,of).
 nmod:of(0,search,food).
-was_prowling_in(0,famished_wolf,morning_in_search).
-was_prowling_in(0,famished_wolf,morning_in_search_of_food).
-was_prowling_in(0,wolf,morning).
+% relations.
+be_prowl_in(0,famished_wolf,morning_in_search).
+be_prowl_in(0,famished_wolf,morning_in_search_of_food).
+be_prowl_in(0,wolf,morning).
 is_in(0,morning,search_of_food).
-was_prowling_in(0,famished_wolf,morning).
-was_prowling_about_in(0,famished_wolf,morning).
-was_prowling_about_in(0,wolf,morning_in_search_of_food).
-was_prowling_in(0,wolf,morning_in_search_of_food).
-was_prowling_in(0,wolf,morning_in_search).
-was_prowling_about_in(0,famished_wolf,morning_in_search_of_food).
-was_prowling_about_in(0,wolf,morning).
-was_prowling_about_in(0,wolf,morning_in_search).
-was_prowling_about_in(0,famished_wolf,morning_in_search).
-root(1,ROOT,passed).
-mark(1,passed,as).
-nsubj(1,passed,he).
+be_prowl_in(0,famished_wolf,morning).
+be_prowl_about_in(0,famished_wolf,morning).
+be_prowl_about_in(0,wolf,morning_in_search_of_food).
+be_prowl_in(0,wolf,morning_in_search_of_food).
+be_prowl_in(0,wolf,morning_in_search).
+be_prowl_about_in(0,famished_wolf,morning_in_search_of_food).
+be_prowl_about_in(0,wolf,morning).
+be_prowl_about_in(0,wolf,morning_in_search).
+be_prowl_about_in(0,famished_wolf,morning_in_search).
+%% as he passed the door of a cottage built in the forest he heard a mother say to her child.
+% dependencies.
+root(1,root,pass).
+mark(1,pass,as).
+nsubj(1,pass,he).
 det(1,door,the).
-dobj(1,passed,door).
+dobj(1,pass,door).
 case(1,cottage,of).
 det(1,cottage,a).
 nmod:of(1,door,cottage).
-acl(1,cottage,built).
+acl(1,cottage,build).
 case(1,forest,in).
 det(1,forest,the).
-nmod:in(1,built,forest).
-nsubj(1,heard,he).
-acl:relcl(1,forest,heard).
+nmod:in(1,build,forest).
+nsubj(1,hear,he).
+acl:relcl(1,forest,hear).
 det(1,mother,a).
 nsubj(1,say,mother).
-ccomp(1,heard,say).
+ccomp(1,hear,say).
 case(1,child,to).
-nmod:poss(1,child,her).
+nmod:poss(1,child,she).
 nmod:to(1,say,child).
-passed(1,he,door_of_cottage_built).
-passed(1,he,door_of_cottage).
-passed(1,he,door).
-say_to(1,mother,her_child).
-root(2,ROOT,quiet).
+% relations.
+pass(1,he,door_of_cottage_build).
+pass(1,he,door_of_cottage).
+pass(1,he,door).
+say_to(1,mother,she_child).
+%% be quiet or i will throw you out of the window and the wolf shall eat you.
+% dependencies.
+root(2,root,quiet).
 cop(2,quiet,be).
 cc(2,quiet,or).
 conj:or(2,quiet,i).
@@ -66,37 +74,46 @@ conj:and(2,window,wolf).
 aux(2,eat,shall).
 acl:relcl(2,wolf,eat).
 dobj(2,eat,you).
-root(3,ROOT,sat).
+% relations.
+%% the wolf sat all day waiting at the door.
+% dependencies.
+root(3,root,sit).
 det(3,wolf,the).
-nsubj(3,sat,wolf).
+nsubj(3,sit,wolf).
 det(3,day,all).
-dobj(3,sat,day).
-acl(3,day,waiting).
+dobj(3,sit,day).
+acl(3,day,wait).
 case(3,door,at).
 det(3,door,the).
-nmod:at(3,waiting,door).
-sat(3,wolf,day_waiting_at_door).
-root(4,ROOT,heard).
+nmod:at(3,wait,door).
+% relations.
+sit(3,wolf,day_wait_at_door).
+%% in the evening he heard the same woman fondling her child and saying.
+% dependencies.
+root(4,root,hear).
 case(4,evening,in).
 det(4,evening,the).
-nmod:in(4,heard,evening).
-nsubj(4,heard,he).
+nmod:in(4,hear,evening).
+nsubj(4,hear,he).
 det(4,woman,the).
 amod(4,woman,same).
-dobj(4,heard,woman).
-dep(4,heard,fondling).
-nmod:poss(4,child,her).
-dobj(4,fondling,child).
-cc(4,fondling,and).
-dep(4,heard,saying).
-conj:and(4,fondling,saying).
-heard(4,he,same_woman).
-heard(4,he,woman).
-heard_woman_in(4,he,evening).
-fondling(4,he,her_child).
-root(5,ROOT,quiet).
+dobj(4,hear,woman).
+dep(4,hear,fondle).
+nmod:poss(4,child,she).
+dobj(4,fondle,child).
+cc(4,fondle,and).
+dep(4,hear,say).
+conj:and(4,fondle,say).
+% relations.
+hear(4,he,same_woman).
+hear(4,he,woman).
+hear_woman_in(4,he,evening).
+fondle(4,he,she_child).
+%% you are quiet now and if the wolf should come we will kill him.
+% dependencies.
+root(5,root,quiet).
 nsubj(5,quiet,you).
-cop(5,quiet,are).
+cop(5,quiet,be).
 advmod(5,quiet,now).
 cc(5,quiet,and).
 mark(5,come,if).
@@ -107,69 +124,85 @@ advcl:if(5,kill,come).
 nsubj(5,kill,we).
 aux(5,kill,will).
 conj:and(5,quiet,kill).
-dobj(5,kill,him).
-are(5,you,quiet_now).
-are(5,you,quiet).
-will_kill(5,we,him).
-root(6,ROOT,hearing).
+dobj(5,kill,he).
+% relations.
+be(5,you,quiet_now).
+be(5,you,quiet).
+will_kill(5,we,he).
+%% the wolf hearing these words went home gasping with cold and hunger.
+% dependencies.
+root(6,root,hearing).
 det(6,hearing,the).
 compound(6,hearing,wolf).
-det(6,words,these).
-nsubj(6,went,words).
-acl:relcl(6,hearing,went).
-dobj(6,went,home).
-acl(6,home,gasping).
+det(6,word,these).
+nsubj(6,go,word).
+acl:relcl(6,hearing,go).
+dobj(6,go,home).
+acl(6,home,gasp).
 case(6,cold,with).
-nmod:with(6,gasping,cold).
+nmod:with(6,gasp,cold).
 cc(6,cold,and).
-nmod:with(6,gasping,hunger).
+nmod:with(6,gasp,hunger).
 conj:and(6,cold,hunger).
-went(6,words,home).
-went(6,words,home_gasping).
-went(6,words,home_gasping_with_cold).
-root(7,ROOT,reached).
-advmod(7,reached,when).
-nsubj(7,reached,he).
-nmod:poss(7,wolf,his).
+% relations.
+go(6,word,home).
+go(6,word,home_gasp).
+go(6,word,home_gasp_with_cold).
+%% when he reached his den mistress wolf inquired of him why he returned wearied and supperless so contrary to his wont.
+% dependencies.
+root(7,root,reach).
+advmod(7,reach,when).
+nsubj(7,reach,he).
+nmod:poss(7,wolf,he).
 compound(7,wolf,den).
 compound(7,wolf,mistress).
-nsubj(7,inquired,wolf).
-ccomp(7,reached,inquired).
-case(7,him,of).
-nmod:of(7,inquired,him).
-advmod(7,returned,why).
-nsubj(7,returned,he).
-advcl(7,inquired,returned).
-xcomp(7,returned,wearied).
+nsubj(7,inquire,wolf).
+ccomp(7,reach,inquire).
+case(7,he,of).
+nmod:of(7,inquire,he).
+advmod(7,return,why).
+nsubj(7,return,he).
+advcl(7,inquire,return).
+xcomp(7,return,wearied).
 cc(7,wearied,and).
-xcomp(7,returned,supperless).
+xcomp(7,return,supperless).
 conj:and(7,wearied,supperless).
 advmod(7,contrary,so).
-advmod(7,returned,contrary).
+advmod(7,return,contrary).
 case(7,wont,to).
-nmod:poss(7,wont,his).
-nmod:to(7,returned,wont).
-returned(7,he,wearied).
-returned_to(7,he,his_wont).
-returned_contrary_to(7,he,his_wont).
-returned_contrary(7,he,wearied).
-inquired_of(7,his_den_mistress_wolf,him).
-returned_so_contrary(7,he,wearied).
-returned_so_contrary_to(7,he,his_wont).
-root(8,ROOT,replied).
-nsubj(8,replied,he).
-root(9,ROOT,why).
+nmod:poss(7,wont,he).
+nmod:to(7,return,wont).
+% relations.
+return(7,he,wearied).
+return_to(7,he,he_wont).
+return_contrary_to(7,he,he_wont).
+return_contrary(7,he,wearied).
+inquire_of(7,he_den_mistress_wolf,he).
+return_so_contrary(7,he,wearied).
+return_so_contrary_to(7,he,he_wont).
+%% he replied.
+% dependencies.
+root(8,root,reply).
+nsubj(8,reply,he).
+% relations.
+%% why forsooth.
+% dependencies.
+root(9,root,why).
 dep(9,why,forsooth).
-root(10,ROOT,use).
-nsubj(10,gave,i).
-acl:relcl(10,use,gave).
-dobj(10,gave,credence).
-case(10,words,to).
-det(10,words,the).
-nmod:to(10,gave,words).
+% relations.
+%% use i gave credence to the words of a woman.
+% dependencies.
+root(10,root,use).
+nsubj(10,give,i).
+acl:relcl(10,use,give).
+dobj(10,give,credence).
+case(10,word,to).
+det(10,word,the).
+nmod:to(10,give,word).
 case(10,woman,of).
 det(10,woman,a).
-nmod:of(10,words,woman).
-gave(10,i,credence).
-gave_credence_to(10,i,words_of_woman).
-gave_credence_to(10,i,words).
+nmod:of(10,word,woman).
+% relations.
+give(10,i,credence).
+give_credence_to(10,i,word_of_woman).
+give_credence_to(10,i,word).

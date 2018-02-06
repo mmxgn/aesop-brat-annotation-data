@@ -1,103 +1,124 @@
-root(0,ROOT,traveling).
+%% a fox and a monkey were traveling together on the same road.
+% dependencies.
+root(0,root,travel).
 det(0,fox,a).
-nsubj(0,traveling,fox).
+nsubj(0,travel,fox).
 cc(0,fox,and).
 det(0,monkey,a).
 conj:and(0,fox,monkey).
-nsubj(0,traveling,monkey).
-aux(0,traveling,were).
-advmod(0,traveling,together).
+nsubj(0,travel,monkey).
+aux(0,travel,be).
+advmod(0,travel,together).
 case(0,road,on).
 det(0,road,the).
 amod(0,road,same).
-nmod:on(0,traveling,road).
-were_traveling_on(0,fox,road).
-were_traveling_together_on(0,monkey,road).
-were_traveling_on(0,monkey,road).
-were_traveling_together_on(0,monkey,same_road).
-were_traveling_together_on(0,fox,same_road).
-were_traveling_on(0,monkey,same_road).
-were_traveling_on(0,fox,same_road).
-were_traveling_together_on(0,fox,road).
-root(1,ROOT,journeyed).
-mark(1,journeyed,as).
-nsubj(1,journeyed,they).
-nsubj(1,passed,they).
-ccomp(1,journeyed,passed).
+nmod:on(0,travel,road).
+% relations.
+be_travel_on(0,fox,road).
+be_travel_together_on(0,monkey,road).
+be_travel_on(0,monkey,road).
+be_travel_together_on(0,monkey,same_road).
+be_travel_together_on(0,fox,same_road).
+be_travel_on(0,monkey,same_road).
+be_travel_on(0,fox,same_road).
+be_travel_together_on(0,fox,road).
+%% as they journeyed they passed through a cemetery full of monuments.
+% dependencies.
+root(1,root,journey).
+mark(1,journey,as).
+nsubj(1,journey,they).
+nsubj(1,pass,they).
+ccomp(1,journey,pass).
 case(1,cemetery,through).
 det(1,cemetery,a).
-nmod:through(1,passed,cemetery).
-case(1,monuments,full).
-case(1,monuments,of).
-nmod:of(1,cemetery,monuments).
-passed_through(1,they,cemetery_full_of_monuments).
-passed_through(1,they,cemetery).
-root(2,ROOT,monuments).
-dep(2,monuments,all).
-det(2,monuments,these).
-dobj(2,see,monuments).
-ref(2,monuments,which).
+nmod:through(1,pass,cemetery).
+case(1,monument,full).
+case(1,monument,of).
+nmod:of(1,cemetery,monument).
+% relations.
+pass_through(1,they,cemetery_full_of_monument).
+pass_through(1,they,cemetery).
+%% all these monuments which you see.
+% dependencies.
+root(2,root,monument).
+dep(2,monument,all).
+det(2,monument,these).
+dobj(2,see,monument).
+ref(2,monument,which).
 nsubj(2,see,you).
-acl:relcl(2,monuments,see).
-root(3,ROOT,said).
+acl:relcl(2,monument,see).
+% relations.
+%% said the monkey.
+% dependencies.
+root(3,root,say).
 det(3,monkey,the).
-nsubj(3,said,monkey).
-root(4,ROOT,erected).
-auxpass(4,erected,are).
+nsubj(3,say,monkey).
+% relations.
+%% are erected in honor of my ancestors who were in their day freedmen and citizens of great renown.
+% dependencies.
+root(4,root,erect).
+auxpass(4,erect,be).
 case(4,honor,in).
-nmod:in(4,erected,honor).
+nmod:in(4,erect,honor).
 nsubj(4,day,honor).
-case(4,ancestors,of).
-nmod:poss(4,ancestors,my).
-nmod:of(4,honor,ancestors).
+case(4,ancestor,of).
+nmod:poss(4,ancestor,my).
+nmod:of(4,honor,ancestor).
 ref(4,honor,who).
-cop(4,day,were).
+cop(4,day,be).
 case(4,day,in).
-nmod:poss(4,day,their).
+nmod:poss(4,day,they).
 acl:relcl(4,honor,day).
-nsubjpass(4,erected,freedmen).
-cc(4,freedmen,and).
-nsubjpass(4,erected,citizens).
-conj:and(4,freedmen,citizens).
+nsubjpass(4,erect,freedman).
+cc(4,freedman,and).
+nsubjpass(4,erect,citizen).
+conj:and(4,freedman,citizen).
 case(4,renown,of).
 amod(4,renown,great).
-nmod:of(4,freedmen,renown).
-are(4,freedmen,erected).
-root(5,ROOT,replied).
+nmod:of(4,freedman,renown).
+% relations.
+be(4,freedman,erect).
+%% the fox replied.
+% dependencies.
+root(5,root,reply).
 det(5,fox,the).
-nsubj(5,replied,fox).
-root(6,ROOT,chosen).
-nsubj(6,chosen,you).
-aux(6,chosen,have).
+nsubj(5,reply,fox).
+% relations.
+%% you have chosen a most appropriate subject for your falsehoods as i am sure none of your ancestors will be able to contradict you.
+% dependencies.
+root(6,root,choose).
+nsubj(6,choose,you).
+aux(6,choose,have).
 det(6,subject,a).
 advmod(6,appropriate,most).
 amod(6,subject,appropriate).
-dobj(6,chosen,subject).
-case(6,falsehoods,for).
-nmod:poss(6,falsehoods,your).
-nmod:for(6,subject,falsehoods).
+dobj(6,choose,subject).
+case(6,falsehood,for).
+nmod:poss(6,falsehood,you).
+nmod:for(6,subject,falsehood).
 mark(6,sure,as).
 nsubj(6,sure,i).
-cop(6,sure,am).
-advcl:as(6,chosen,sure).
+cop(6,sure,be).
+advcl:as(6,choose,sure).
 nsubj(6,able,none).
 nsubj:xsubj(6,contradict,none).
-case(6,ancestors,of).
-nmod:poss(6,ancestors,your).
-nmod:of(6,none,ancestors).
+case(6,ancestor,of).
+nmod:poss(6,ancestor,you).
+nmod:of(6,none,ancestor).
 aux(6,able,will).
 cop(6,able,be).
 ccomp(6,sure,able).
 mark(6,contradict,to).
 xcomp(6,able,contradict).
 dobj(6,contradict,you).
-have_chosen(6,you,most_appropriate_subject).
-have_chosen(6,you,appropriate_subject_for_your_falsehoods).
-have_chosen_subject(6,you,sure).
-am(6,i,sure).
-have_chosen(6,you,subject_for_your_falsehoods).
-have_chosen(6,you,most_appropriate_subject_for_your_falsehoods).
-have_chosen(6,you,subject).
+% relations.
+have_choose(6,you,most_appropriate_subject).
+have_choose(6,you,appropriate_subject_for_you_falsehood).
+have_choose_subject(6,you,sure).
+be(6,i,sure).
+have_choose(6,you,subject_for_you_falsehood).
+have_choose(6,you,most_appropriate_subject_for_you_falsehood).
+have_choose(6,you,subject).
 be(6,none,able).
-have_chosen(6,you,appropriate_subject).
+have_choose(6,you,appropriate_subject).
 contradict(6,none,you).

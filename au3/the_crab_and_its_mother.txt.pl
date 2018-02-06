@@ -1,11 +1,16 @@
-root(0,ROOT,said).
+%% a crab said to her son.
+% dependencies.
+root(0,root,say).
 det(0,crab,a).
-nsubj(0,said,crab).
+nsubj(0,say,crab).
 case(0,son,to).
-nmod:poss(0,son,her).
-nmod:to(0,said,son).
-said_to(0,crab,her_son).
-root(1,ROOT,walk).
+nmod:poss(0,son,she).
+nmod:to(0,say,son).
+% relations.
+say_to(0,crab,she_son).
+%% why do you walk so one-sided my child.
+% dependencies.
+root(1,root,walk).
 advmod(1,walk,why).
 aux(1,walk,do).
 nsubj(1,walk,you).
@@ -13,42 +18,54 @@ advmod(1,child,so).
 amod(1,child,one-sided).
 nmod:poss(1,child,my).
 dobj(1,walk,child).
+% relations.
 do_walk(1,you,my_child).
 do_walk(1,you,so_my_child).
 do_walk(1,you,one-sided_my_child).
 do_walk(1,you,so_one-sided_my_child).
-root(2,ROOT,becoming).
-nsubj(2,becoming,it).
+%% it is far more becoming to go straight forward.
+% dependencies.
+root(2,root,become).
+nsubj(2,become,it).
 nsubj:xsubj(2,go,it).
-aux(2,becoming,is).
+aux(2,become,be).
 advmod(2,more,far).
-advmod(2,becoming,more).
+advmod(2,become,more).
 mark(2,go,to).
-xcomp(2,becoming,go).
+xcomp(2,become,go).
 dobj(2,go,straight).
 advmod(2,go,forward).
-is_far_more_becoming(2,it,go_forward).
+% relations.
+be_far_more_become(2,it,go_forward).
 go_forward(2,it,straight).
-is_more_becoming(2,it,go_forward).
+be_more_become(2,it,go_forward).
 go(2,it,straight).
-is_far_more_becoming(2,it,go).
-is_becoming(2,it,go_forward).
-is_becoming(2,it,go).
-is_more_becoming(2,it,go).
-root(3,ROOT,replied).
+be_far_more_become(2,it,go).
+be_become(2,it,go_forward).
+be_become(2,it,go).
+be_more_become(2,it,go).
+%% the young crab replied.
+% dependencies.
+root(3,root,reply).
 det(3,crab,the).
 amod(3,crab,young).
-nsubj(3,replied,crab).
-root(4,ROOT,true).
+nsubj(3,reply,crab).
+% relations.
+%% quite true dear mother.
+% dependencies.
+root(4,root,true).
 advmod(4,true,quite).
 amod(4,true,dear).
 dep(4,true,mother).
-root(5,ROOT,show).
+% relations.
+%% and if you will show me the straight way i will promise to walk in it.
+% dependencies.
+root(5,root,show).
 cc(5,show,and).
 mark(5,show,if).
 nsubj(5,show,you).
 aux(5,show,will).
-iobj(5,show,me).
+iobj(5,show,I).
 det(5,way,the).
 amod(5,way,straight).
 dobj(5,show,way).
@@ -60,27 +77,31 @@ mark(5,walk,to).
 xcomp(5,promise,walk).
 case(5,it,in).
 nmod:in(5,walk,it).
-will_show(5,you,me).
+% relations.
+will_show(5,you,I).
 will_promise(5,i,walk).
 will_promise(5,i,walk_in_it).
 walk_in(5,i,it).
-root(6,ROOT,tried).
+%% the mother tried in vain and submitted without remonstrance to the reproof of her child.
+% dependencies.
+root(6,root,try).
 det(6,mother,the).
-nsubj(6,tried,mother).
-nsubj(6,submitted,mother).
+nsubj(6,try,mother).
+nsubj(6,submit,mother).
 case(6,vain,in).
-nmod:in(6,tried,vain).
-cc(6,tried,and).
-conj:and(6,tried,submitted).
+nmod:in(6,try,vain).
+cc(6,try,and).
+conj:and(6,try,submit).
 case(6,remonstrance,without).
-nmod:without(6,submitted,remonstrance).
+nmod:without(6,submit,remonstrance).
 case(6,reproof,to).
 det(6,reproof,the).
-nmod:to(6,submitted,reproof).
+nmod:to(6,submit,reproof).
 case(6,child,of).
-nmod:poss(6,child,her).
+nmod:poss(6,child,she).
 nmod:of(6,reproof,child).
-tried_in(6,mother,vain).
-submitted_to(6,mother,reproof).
-submitted_without(6,mother,remonstrance).
-submitted_to(6,mother,reproof_of_her_child).
+% relations.
+try_in(6,mother,vain).
+submit_to(6,mother,reproof).
+submit_without(6,mother,remonstrance).
+submit_to(6,mother,reproof_of_she_child).

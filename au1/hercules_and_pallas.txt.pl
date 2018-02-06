@@ -1,131 +1,145 @@
-root(0,ROOT,came).
-nsubj(0,came,hercules).
-advmod(0,journeying,once).
-acl(0,hercules,journeying).
+%% hercules once journeying along a narrow roadway came across a strange-looking animal that reared its head and threatened him.
+% dependencies.
+root(0,root,come).
+nsubj(0,come,hercule).
+advmod(0,journey,once).
+acl(0,hercule,journey).
 case(0,roadway,along).
 det(0,roadway,a).
 amod(0,roadway,narrow).
-nmod:along(0,journeying,roadway).
+nmod:along(0,journey,roadway).
 case(0,animal,across).
 det(0,animal,a).
 amod(0,animal,strange-looking).
-nmod:across(0,came,animal).
-nsubj(0,reared,animal).
-nsubj(0,threatened,animal).
+nmod:across(0,come,animal).
+nsubj(0,rear,animal).
+nsubj(0,threaten,animal).
 ref(0,animal,that).
-acl:relcl(0,animal,reared).
+acl:relcl(0,animal,rear).
 nmod:poss(0,head,its).
-dobj(0,reared,head).
-cc(0,reared,and).
-acl:relcl(0,animal,threatened).
-conj:and(0,reared,threatened).
-dobj(0,threatened,him).
-once_journeying_along(0,hercules,narrow_roadway).
-once_journeying_along(0,hercules,roadway).
-journeying_along(0,hercules,narrow_roadway).
-journeying_along(0,hercules,roadway).
-threatened(0,its_head,him).
-root(1,ROOT,daunted).
-nsubj(1,daunted,nothing).
+dobj(0,rear,head).
+cc(0,rear,and).
+acl:relcl(0,animal,threaten).
+conj:and(0,rear,threaten).
+dobj(0,threaten,he).
+% relations.
+once_journey_along(0,hercule,narrow_roadway).
+once_journey_along(0,hercule,roadway).
+journey_along(0,hercule,narrow_roadway).
+journey_along(0,hercule,roadway).
+threaten(0,its_head,he).
+%% nothing daunted the hero gave him a few lusty blows with his club and thought to have gone on his way.
+% dependencies.
+root(1,root,daunt).
+nsubj(1,daunt,nothing).
 det(1,hero,the).
-nsubj(1,gave,hero).
-nsubj(1,thought,hero).
-nsubj:xsubj(1,gone,hero).
-ccomp(1,daunted,gave).
-iobj(1,gave,him).
-det(1,blows,a).
-amod(1,blows,few).
-amod(1,blows,lusty).
-dobj(1,gave,blows).
+nsubj(1,give,hero).
+nsubj(1,think,hero).
+nsubj:xsubj(1,go,hero).
+ccomp(1,daunt,give).
+iobj(1,give,he).
+det(1,blow,a).
+amod(1,blow,few).
+amod(1,blow,lusty).
+dobj(1,give,blow).
 case(1,club,with).
-nmod:poss(1,club,his).
-nmod:with(1,blows,club).
-cc(1,gave,and).
-ccomp(1,daunted,thought).
-conj:and(1,gave,thought).
-mark(1,gone,to).
-aux(1,gone,have).
-xcomp(1,thought,gone).
+nmod:poss(1,club,he).
+nmod:with(1,blow,club).
+cc(1,give,and).
+ccomp(1,daunt,think).
+conj:and(1,give,think).
+mark(1,go,to).
+aux(1,go,have).
+xcomp(1,think,go).
 case(1,way,on).
-nmod:poss(1,way,his).
-nmod:on(1,gone,way).
-is_with(1,few_lusty_blows,his_club).
-thought(1,hero,have_gone).
-few_lusty_blows_with(1,hero,his_club).
-gave(1,hero,few_blows_with_his_club).
-few_blows_with(1,hero,his_club).
-gave(1,hero,few_lusty_blows).
-gave(1,hero,lusty_blows_with_his_club).
-gave(1,hero,blows).
-lusty_blows_with(1,hero,his_club).
-gave(1,hero,blows_with_his_club).
-gave(1,hero,few_blows).
-gave(1,hero,lusty_blows).
-gave(1,hero,him).
-blows_with(1,hero,his_club).
-gave(1,hero,few_lusty_blows_with_his_club).
-thought(1,hero,have_gone_on_his_way).
-root(2,ROOT,was).
+nmod:poss(1,way,he).
+nmod:on(1,go,way).
+% relations.
+is_with(1,few_lusty_blow,he_club).
+think(1,hero,have_go).
+few_lusty_blow_with(1,hero,he_club).
+give(1,hero,few_blow_with_he_club).
+few_blow_with(1,hero,he_club).
+give(1,hero,few_lusty_blow).
+give(1,hero,lusty_blow_with_he_club).
+give(1,hero,blow).
+lusty_blow_with(1,hero,he_club).
+give(1,hero,blow_with_he_club).
+give(1,hero,few_blow).
+give(1,hero,lusty_blow).
+give(1,hero,he).
+blow_with(1,hero,he_club).
+give(1,hero,few_lusty_blow_with_he_club).
+think(1,hero,have_go_on_he_way).
+%% the monster however much to the astonishment of hercules was now three times as big as it was before and of a still more threatening aspect.
+% dependencies.
+root(2,root,be).
 det(2,monster,the).
-nsubj(2,was,monster).
+nsubj(2,be,monster).
 advmod(2,much,however).
 amod(2,monster,much).
 case(2,astonishment,to).
 det(2,astonishment,the).
 nmod:to(2,much,astonishment).
-case(2,hercules,of).
-nmod:of(2,astonishment,hercules).
-advmod(2,was,now).
-nummod(2,times,three).
-nmod:npmod(2,now,times).
+case(2,hercule,of).
+nmod:of(2,astonishment,hercule).
+advmod(2,be,now).
+nummod(2,time,three).
+nmod:npmod(2,now,time).
 case(2,big,as).
 advcl:as(2,now,big).
-mark(2,was,as).
-nsubj(2,was,it).
-advcl:as(2,now,was).
+mark(2,be,as).
+nsubj(2,be,it).
+advcl:as(2,now,be).
 advmod(2,and,before).
-advmod(2,was,and).
+advmod(2,be,and).
 case(2,aspect,of).
 det(2,aspect,a).
 advmod(2,threatening,still).
 advmod(2,threatening,more).
 amod(2,aspect,threatening).
 conj(2,and,aspect).
+% relations.
 however_much_to(2,monster,astonishment).
-however_much_to(2,monster,astonishment_of_hercules).
-much_to(2,monster,astonishment_of_hercules).
+however_much_to(2,monster,astonishment_of_hercule).
+much_to(2,monster,astonishment_of_hercule).
 much_to(2,monster,astonishment).
-root(3,ROOT,redoubled).
-nsubj(3,redoubled,he).
-nsubj(3,laid,he).
-advmod(3,redoubled,thereupon).
-nmod:poss(3,blows,his).
-dobj(3,redoubled,blows).
-cc(3,redoubled,and).
-conj:and(3,redoubled,laid).
-case(3,him,about).
-nmod:about(3,laid,him).
-advmod(3,laid,fast).
+%% he thereupon redoubled his blows and laid about him fast and furiously.
+% dependencies.
+root(3,root,redouble).
+nsubj(3,redouble,he).
+nsubj(3,lay,he).
+advmod(3,redouble,thereupon).
+nmod:poss(3,blow,he).
+dobj(3,redouble,blow).
+cc(3,redouble,and).
+conj:and(3,redouble,lay).
+case(3,he,about).
+nmod:about(3,lay,he).
+advmod(3,lay,fast).
 cc(3,fast,and).
-advmod(3,laid,furiously).
+advmod(3,lay,furiously).
 conj:and(3,fast,furiously).
-laid_fast_and_furiously_about(3,he,him).
-redoubled(3,he,his_blows).
-laid_about(3,he,him).
-thereupon_redoubled(3,he,his_blows).
-laid_fast_about(3,he,him).
-root(4,ROOT,grew).
-case(4,strokes,but).
-det(4,strokes,the).
-amod(4,strokes,harder).
+% relations.
+lay_fast_and_furiously_about(3,he,he).
+redouble(3,he,he_blow).
+lay_about(3,he,he).
+thereupon_redouble(3,he,he_blow).
+lay_fast_about(3,he,he).
+%% but the harder and quicker the strokes of the club the bigger and more frightful grew the monster and now completely filled up the road.
+% dependencies.
+root(4,root,grow).
+case(4,stroke,but).
+det(4,stroke,the).
+amod(4,stroke,harder).
 cc(4,harder,and).
 conj:and(4,harder,quicker).
-amod(4,strokes,quicker).
-det(4,strokes,the).
-nmod:but(4,grew,strokes).
+amod(4,stroke,quicker).
+det(4,stroke,the).
+nmod:but(4,grow,stroke).
 case(4,club,of).
 det(4,club,the).
-nmod:of(4,strokes,club).
+nmod:of(4,stroke,club).
 dep(4,bigger,the).
 amod(4,club,bigger).
 cc(4,bigger,and).
@@ -133,49 +147,67 @@ advmod(4,frightful,more).
 amod(4,club,frightful).
 conj:and(4,bigger,frightful).
 det(4,monster,the).
-nsubj(4,grew,monster).
+nsubj(4,grow,monster).
 cc(4,monster,and).
-nsubj(4,grew,now).
+nsubj(4,grow,now).
 conj:and(4,monster,now).
-advmod(4,filled,completely).
-acl(4,now,filled).
+advmod(4,fill,completely).
+acl(4,now,fill).
 case(4,road,up).
 det(4,road,the).
-nmod:up(4,filled,road).
-grew_but(4,monster,strokes_of_club).
-grew_but(4,monster,harder_strokes_of_club).
-grew_but(4,now,strokes_of_club).
-grew_but(4,now,strokes_of_club_bigger).
-grew_but(4,now,harder_strokes_of_club_bigger).
-grew_but(4,now,harder_strokes_of_club).
-grew_but(4,monster,strokes).
-grew_but(4,monster,harder_strokes_of_club_bigger).
-grew_but(4,now,strokes).
-grew_but(4,monster,harder_strokes).
-grew_but(4,now,harder_strokes).
-grew_but(4,monster,strokes_of_club_bigger).
-root(5,ROOT,pallas).
-advmod(5,appeared,then).
-dep(5,pallas,appeared).
+nmod:up(4,fill,road).
+% relations.
+grow_but(4,monster,stroke_of_club).
+grow_but(4,monster,harder_stroke_of_club).
+grow_but(4,now,stroke_of_club).
+grow_but(4,now,stroke_of_club_bigger).
+grow_but(4,now,harder_stroke_of_club_bigger).
+grow_but(4,now,harder_stroke_of_club).
+grow_but(4,monster,stroke).
+grow_but(4,monster,harder_stroke_of_club_bigger).
+grow_but(4,now,stroke).
+grow_but(4,monster,harder_stroke).
+grow_but(4,now,harder_stroke).
+grow_but(4,monster,stroke_of_club_bigger).
+%% pallas then appeared upon the scene.
+% dependencies.
+root(5,root,pallas).
+advmod(5,appear,then).
+dep(5,pallas,appear).
 case(5,scene,upon).
 det(5,scene,the).
-nmod:upon(5,appeared,scene).
-root(6,ROOT,stop).
-dobj(6,stop,hercules).
-root(7,ROOT,said).
-nsubj(7,said,she).
-root(8,ROOT,cease).
-nmod:poss(8,blows,your).
-dobj(8,cease,blows).
-root(9,ROOT,strife).
+nmod:upon(5,appear,scene).
+% relations.
+%% stop hercules.
+% dependencies.
+root(6,root,stop).
+dobj(6,stop,hercule).
+% relations.
+%% said she.
+% dependencies.
+root(7,root,say).
+nsubj(7,say,she).
+% relations.
+%% cease your blows.
+% dependencies.
+root(8,root,cease).
+nmod:poss(8,blow,you).
+dobj(8,cease,blow).
+% relations.
+%% the monster 's name is strife.
+% dependencies.
+root(9,root,strife).
 det(9,monster,the).
 nmod:poss(9,name,monster).
 case(9,monster,'s).
 nsubj(9,strife,name).
-cop(9,strife,is).
+cop(9,strife,be).
+% relations.
 has(9,monster,name).
-is(9,monster_s_name,strife).
-root(10,ROOT,let).
+be(9,monster_'s_name,strife).
+%% let it alone and it will soon become as little as it was at first.
+% dependencies.
+root(10,root,let).
 dep(10,alone,it).
 dep(10,let,alone).
 cc(10,alone,and).
@@ -188,6 +220,7 @@ advmod(10,little,as).
 xcomp(10,become,little).
 mark(10,first,as).
 nsubj(10,first,it).
-cop(10,first,was).
+cop(10,first,be).
 case(10,first,at).
 advcl:at(10,become,first).
+% relations.

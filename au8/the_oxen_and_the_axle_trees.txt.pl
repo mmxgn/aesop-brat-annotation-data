@@ -1,62 +1,79 @@
-root(0,ROOT,dragged).
+%% a heavy wagon was being dragged along a country lane by a team of oxen.
+% dependencies.
+root(0,root,drag).
 det(0,wagon,a).
 amod(0,wagon,heavy).
-nsubjpass(0,dragged,wagon).
-aux(0,dragged,was).
-auxpass(0,dragged,being).
+nsubjpass(0,drag,wagon).
+aux(0,drag,be).
+auxpass(0,drag,be).
 case(0,lane,along).
 det(0,lane,a).
 compound(0,lane,country).
-nmod:along(0,dragged,lane).
+nmod:along(0,drag,lane).
 case(0,team,by).
 det(0,team,a).
-nmod:agent(0,dragged,team).
+nmod:agent(0,drag,team).
 case(0,oxen,of).
 nmod:of(0,team,oxen).
-was(0,wagon,was_dragged_by_team).
-was(0,heavy_wagon,was_dragged_along_country_lane).
-was(0,heavy_wagon,was_dragged_along_country_lane_by_team).
-was(0,wagon,was_dragged_along_country_lane).
-was(0,wagon,was_dragged_along_country_lane_by_team_of_oxen).
-was(0,wagon,was_dragged_by_team_of_oxen).
-was(0,heavy_wagon,was_dragged_by_team_of_oxen).
-was(0,heavy_wagon,was_dragged_by_team).
-was(0,wagon,was_dragged_along_country_lane_by_team).
-was(0,heavy_wagon,was_dragged_along_country_lane_by_team_of_oxen).
-was(0,heavy_wagon,was_dragged).
-was(0,wagon,was_dragged).
-root(1,ROOT,groaned).
-det(1,axle-trees,the).
-nsubj(1,groaned,axle-trees).
-nsubj(1,creaked,axle-trees).
-cc(1,groaned,and).
-conj:and(1,groaned,creaked).
-advmod(1,creaked,terribly).
-root(2,ROOT,whereupon).
+% relations.
+be(0,wagon,be_drag_by_team).
+be(0,heavy_wagon,be_drag_along_country_lane).
+be(0,heavy_wagon,be_drag_along_country_lane_by_team).
+be(0,wagon,be_drag_along_country_lane).
+be(0,wagon,be_drag_along_country_lane_by_team_of_oxen).
+be(0,wagon,be_drag_by_team_of_oxen).
+be(0,heavy_wagon,be_drag_by_team_of_oxen).
+be(0,heavy_wagon,be_drag_by_team).
+be(0,wagon,be_drag_along_country_lane_by_team).
+be(0,heavy_wagon,be_drag_along_country_lane_by_team_of_oxen).
+be(0,heavy_wagon,be_drag).
+be(0,wagon,be_drag).
+%% the axle-trees groaned and creaked terribly.
+% dependencies.
+root(1,root,groan).
+det(1,axle-tree,the).
+nsubj(1,groan,axle-tree).
+nsubj(1,creak,axle-tree).
+cc(1,groan,and).
+conj:and(1,groan,creak).
+advmod(1,creak,terribly).
+% relations.
+%% whereupon the oxen turning round thus addressed the wheels.
+% dependencies.
+root(2,root,whereupon).
 det(2,oxen,the).
-nsubj(2,addressed,oxen).
-acl(2,oxen,turning).
-dobj(2,turning,round).
-advmod(2,turning,thus).
-acl:relcl(2,whereupon,addressed).
-det(2,wheels,the).
-dobj(2,addressed,wheels).
-turning(2,oxen,round).
-addressed(2,oxen,wheels).
-turning_thus(2,oxen,round).
-root(3,ROOT,hullo).
+nsubj(2,address,oxen).
+acl(2,oxen,turn).
+dobj(2,turn,round).
+advmod(2,turn,thus).
+acl:relcl(2,whereupon,address).
+det(2,wheel,the).
+dobj(2,address,wheel).
+% relations.
+turn(2,oxen,round).
+address(2,oxen,wheel).
+turn_thus(2,oxen,round).
+%% hullo there.
+% dependencies.
+root(3,root,hullo).
 dep(3,hullo,there).
-root(4,ROOT,make).
+% relations.
+%% why do you make so much noise.
+% dependencies.
+root(4,root,make).
 advmod(4,make,why).
 aux(4,make,do).
 nsubj(4,make,you).
 advmod(4,much,so).
 amod(4,noise,much).
 dobj(4,make,noise).
+% relations.
 do_make(4,you,so_much_noise).
 do_make(4,you,much_noise).
 do_make(4,you,noise).
-root(5,ROOT,bear).
+%% we bear all the labor and we not you ought to cry out.
+% dependencies.
+root(5,root,bear).
 nsubj(5,bear,we).
 dep(5,labor,all).
 det(5,labor,the).
@@ -71,5 +88,6 @@ dep(5,bear,ought).
 mark(5,cry,to).
 xcomp(5,ought,cry).
 compound:prt(5,cry,out).
+% relations.
 bear(5,we,labor).
 bear(5,we,we).
