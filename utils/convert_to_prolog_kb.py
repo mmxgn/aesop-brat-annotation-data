@@ -39,7 +39,6 @@ if __name__ == "__main__":
             text.replace('\'', '')
         return "_".join([lemmatize(s) for s in text.split()])
     
-    
     # Knowledge base to store
     KB = []
     for sent_no, sent in enumerate(sents):
@@ -75,7 +74,6 @@ if __name__ == "__main__":
                                       normalize(rel['subject']),
                                       normalize(rel['object']))
             )
-
 
     # Save KB data
     output_file = args.input_file + '.pl'

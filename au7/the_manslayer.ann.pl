@@ -1,0 +1,11 @@
+character(man).
+sound_effect(pursue).
+sound_effect(climb).
+sound_effect(afraid).
+sound_effect(alarmed).
+sound_effect(throw).
+causedby(pursue,man). 
+causedby(climb,man). 
+causedby(afraid,man). 
+causedby(alarmed,man). 
+causedby(throw,man). 

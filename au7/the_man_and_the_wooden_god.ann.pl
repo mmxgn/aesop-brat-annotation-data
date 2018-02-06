@@ -1,0 +1,9 @@
+character(man).
+sound_effect(blow).
+object(idol).
+sound_effect(break).
+object(coin).
+sound_effect(fly).
+causedby(blow,man). 
+causedby(break,idol). 
+causedby(fly,coin). 
