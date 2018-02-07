@@ -1,0 +1,11 @@
+T1	Character 0 18	patty the milkmaid
+A1	Gender T1 Female
+T2	Says 218 222	said
+E1	Says:T2 WHAT:T3 WHO:T1 WHAT2:T4 WHAT3:T5 WHAT4:T6 WHAT5:T7 WHAT6:T8 WHAT7:T9
+T3	Character_Line 179 217	i 'll buy some fowls from farmer brown
+T4	Character_Line 227 302	and they will lay eggs each morning which i will sell to the parson 's wife
+T5	Character_Line 303 407	with the money that i get from the sale of these eggs i 'll buy myself a new dimity frock and a chip hat
+T6	Character_Line 408 480	and when i go to market wo n't all the young men come up and speak to me
+T7	Character_Line 481 512	polly shaw will be that jealous
+T8	Character_Line 513 530	but i do n't care
+T9	Character_Line 531 582	i shall just look at her and toss my head like this
