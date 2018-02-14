@@ -14,3 +14,17 @@ A5	Gender T6 Female
 T7	Says 777 781	said
 E2	Says:T7 WHO:T6 WHAT:T8
 T8	Character_Line 784 800	I have to refuse
+T9	Character 364 367	boy
+A6	Gender T9 Male
+A7	Age T9 Young
+T10	Says 368 372	said
+E3	Says:T10 WHAT:T11 WHO:T9
+T11	Character_Line 375 394	I do not know, Sir!
+T12	Character 805 814	Annabelle
+A8	Gender T12 Female
+T13	Character 829 832	she
+*	RefersToCharacter T13 T12 T14
+T14	Character 848 851	She
+T15	Says 852 856	said
+E4	Says:T15 WHAT:T16 WHO:T14
+T16	Character_Line 859 875	I have to refuse

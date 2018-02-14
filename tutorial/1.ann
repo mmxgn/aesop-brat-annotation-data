@@ -16,10 +16,6 @@ E3	Sound_Effect:T8 CausedBy:T9
 T9	Object 851 862	cellar-door
 T10	Sound_Effect 880 893	booming sound
 E4	Sound_Effect:T10 CausedBy:E3
-T11	Character 342 346	bull
-T12	Sound_Effect 351 358	feeding
-E5	Sound_Effect:T12 CausedBy:T11 HappensIn:T13
-T13	Place 364 370	meadow
 T14	Character 586 589	Ann
 A5	Gender T14 Female
 A6	Age T14 Young
@@ -34,3 +30,7 @@ T19	Sound_Effect 913 922	flew open
 E7	Sound_Effect:T19 CausedBy:T18
 T20	Sound_Effect 930 943	booming sound
 E8	Sound_Effect:T20 CausedBy:E7
+T11	Character 342 346	bull
+T12	Place 364 370	meadow
+T13	Sound_Effect 351 358	feeding
+E5	Sound_Effect:T13 CausedBy:T11 HappensIn:T12

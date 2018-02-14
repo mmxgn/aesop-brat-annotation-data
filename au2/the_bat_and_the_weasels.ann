@@ -1,0 +1,22 @@
+T1	Character 2 5	bat
+T2	Sound_Effect 10 30	fell upon the ground
+E1	Sound_Effect:T2 CausedBy:T1
+T3	Character 51 57	weasel
+T4	Character 79 82	his
+*	RefersToCharacter T4 T1 T6 T7 T10 T11 T14 T16
+T5	Character 92 98	weasel
+*	RefersToCharacter T5 T3 T8
+T6	Character 163 166	bat
+T7	Character 259 262	bat
+T8	Character 119 121	he
+T9	Character 314 320	weasel
+T10	Character 326 328	he
+T11	Character 359 362	him
+T12	Character 367 373	weasel
+*	RefersToCharacter T12 T9 T13 T15
+T13	Character 384 386	he
+T14	Character 423 426	bat
+T15	Character 435 438	him
+T16	Character 444 446	he
+T17	Sound_Effect 269 287	fell to the ground
+E2	Sound_Effect:T17 CausedBy:T7
