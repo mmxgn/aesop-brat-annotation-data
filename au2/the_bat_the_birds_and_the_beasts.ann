@@ -1,0 +1,24 @@
+T1	Character 120 123	bat
+T2	Character 170 173	his
+*	RefersToCharacter T2 T1 T6 T12 T13 T20
+T3	Character 152 157	birds
+T4	Character_Line 185 197	come with us
+T5	Says 180 184	said
+E1	Says:T5 WHAT:T4 WHO:T3
+T6	Character 202 204	he
+T7	Character_Line 210 222	i am a beast
+T8	Says 205 209	said
+E2	Says:T8 WHAT:T7 WHO:T6
+T9	Character_Line 295 307	come with us
+T10	Says 290 294	said
+E3	Says:T10 WHO:T11 WHAT:T9
+T11	Character 237 243	beasts
+T12	Character 272 275	him
+T13	Character 312 314	he
+T14	Says 315 319	said
+E4	Says:T14 WHAT:T15 WHO:T13
+T15	Character_Line 320 331	i am a bird
+T18	Character_Line 621 623	ah
+T19	Says 624 628	said
+E6	Says:T19 WHO:T20 WHAT:T18
+T20	Character 633 636	bat
